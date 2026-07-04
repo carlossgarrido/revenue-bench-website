@@ -1,0 +1,25 @@
+Resend DNS records for revenuebench.io (region us-east-1), generated 2026-06-21.
+Add at GoDaddy. Leave the existing apex A (@ -> 75.2.60.5) and www CNAME untouched.
+TTL: GoDaddy default (1 Hour) is fine everywhere.
+
+1. DKIM  — TXT
+   Name:  resend._domainkey
+   Value: p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxAuIk9NzgVwjmLVywQC69ADPpDSO+OR+TyuVVUbVGoIowCNjwZ8QBlhk6JfW45WzW/zIMQ9uE5P3kWH43KSC6b3Ugz+ZsgpUlFB723B7goQHzIErF/PDgqBMmClnz2szJVbgcCVPWFUYSdY3f1ltmhlg+/maHYNENv+bgLbaaNwIDAQAB
+
+2. SPF (sending) — MX
+   Name:     send
+   Value:    feedback-smtp.us-east-1.amazonses.com
+   Priority: 10
+
+3. SPF (sending) — TXT
+   Name:  send
+   Value: v=spf1 include:amazonses.com ~all
+
+4. Inbound (receiving) — MX
+   Name:     @   (root)
+   Value:    inbound-smtp.us-east-1.amazonaws.com
+   Priority: 10
+
+Notes:
+- Root @ already has an A record (Netlify, 75.2.60.5). Adding an MX on @ is fine; MX and A coexist.
+- DMARC (optional, recommended later): TXT  _dmarc  ->  v=DMARC1; p=none;

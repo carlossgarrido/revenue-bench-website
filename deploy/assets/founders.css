@@ -1,0 +1,64 @@
+:root{--cream:#FAF7F2;--parchment:#F0EAE0;--navy:#0C1826;--navy-mid:#142236;--navy-light:#1E3352;--gold:#C8912A;--gold-light:#E4B96A;--gold-pale:#F5E9D0;--gold-deep:#9C6F1E;--ink:#1A1A1A;--ink-mid:#3A3A3A;--ink-soft:#6A6A6A;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;align-items:center;justify-content:center;}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);}
+.fwrap{max-width:1000px;margin:0 auto;padding:80px 48px;}
+.fhead{margin-bottom:44px;}
+.fhead .eyebrow{display:block;margin-bottom:14px;}
+.frule{width:54px;height:2px;background:var(--gold);margin:14px 0 22px;}
+.fhead h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--navy);font-size:46px;line-height:1.08;letter-spacing:-.01em;}
+.fhead .fsub{font-size:18px;color:var(--ink-mid);max-width:580px;margin-top:14px;line-height:1.6;}
+.ftitle{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);}
+.fname{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;}
+.bio p{margin-bottom:10px;} .bio p:last-child{margin-bottom:0;}
+.fstats{display:flex;gap:26px;}
+.fstat .n{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;line-height:1;}
+.fstat .l{font-size:11px;line-height:1.4;margin-top:6px;}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--navy-mid);}
+.ph .mono{font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--gold-light);}
+.pcap{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;}
+body.f1{background:var(--cream);}
+.f1 .founder{display:grid;grid-template-columns:128px 1fr;gap:38px;padding:38px 0;align-items:start;}
+.f1 .founder + .founder{border-top:1px solid rgba(12,24,38,.1);}
+.f1 .portrait,.f1 .ph{width:128px;height:128px;border-radius:10px;overflow:hidden;border:1px solid rgba(200,145,42,.55);}
+.f1 .ph .mono{font-size:40px;}
+.f1 .fname{font-size:30px;color:var(--navy);}
+.f1 .ftitle{margin:5px 0 16px;}
+.f1 .bio{font-size:15px;color:var(--ink-mid);line-height:1.7;max-width:640px;}
+.f1 .fstats{margin-top:20px;}
+.f1 .fstat .n{font-size:26px;color:var(--gold-deep);}
+.f1 .fstat .l{color:var(--ink-soft);}
+.f1 .pcap{margin-top:8px;text-align:center;}
+body.f2{background:var(--parchment);}
+.f2 .fhead{text-align:center;}
+.f2 .frule{margin:14px auto 22px;}
+.f2 .fhead .fsub{margin:14px auto 0;}
+.f2 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.f2 .card{background:#fff;border:1px solid rgba(12,24,38,.08);border-radius:16px;padding:38px 34px;box-shadow:0 20px 44px -30px rgba(12,24,38,.4);}
+.f2 .portrait,.f2 .ph{width:104px;height:104px;border-radius:50%;overflow:hidden;border:2px solid var(--gold);margin-bottom:18px;}
+.f2 .ph .mono{font-size:34px;}
+.f2 .fname{font-size:26px;color:var(--navy);}
+.f2 .ftitle{margin:5px 0 18px;}
+.f2 .bio{font-size:14px;color:var(--ink-mid);line-height:1.7;}
+.f2 .divider{height:1px;background:rgba(12,24,38,.1);margin:22px 0;}
+.f2 .fstats{gap:18px;}
+.f2 .fstat .n{font-size:23px;color:var(--gold-deep);}
+.f2 .fstat .l{color:var(--ink-soft);}
+.f2 .pcap{margin-top:-8px;margin-bottom:14px;}
+body.f3{background:var(--navy);}
+.f3 .fhead .eyebrow{color:var(--gold-light);}
+.f3 .fhead h2{color:#fff;}
+.f3 .fhead .fsub{color:rgba(255,255,255,.6);}
+.f3 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:54px;}
+.f3 .portrait,.f3 .ph{width:112px;height:112px;border-radius:50%;overflow:hidden;border:2px solid var(--gold);margin-bottom:22px;}
+.f3 .ph{background:var(--navy-light);}
+.f3 .ph .mono{font-size:36px;}
+.f3 .fname{font-size:28px;color:#fff;}
+.f3 .ftitle{color:var(--gold-light);margin:5px 0 18px;}
+.f3 .bio{font-size:14px;color:rgba(255,255,255,.64);line-height:1.7;}
+.f3 .fstats{margin-top:22px;}
+.f3 .fstat .n{font-size:25px;color:var(--gold-light);}
+.f3 .fstat .l{color:rgba(255,255,255,.42);}
+.f3 .pcap{color:rgba(255,255,255,.42);}
+@media(max-width:820px){.f2 .fgrid,.f3 .fgrid{grid-template-columns:1fr;gap:28px;}.f1 .founder{grid-template-columns:1fr;gap:18px;}}

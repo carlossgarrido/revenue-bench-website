@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ9Z9HNDWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MQ9Z9HNDWV');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<title>Contact | Revenue Bench</title>
+<meta name="description" content="Tell us about the role you are filling, or tell us you want on the bench. We reply within one business day, and the first conversation is about what good looks like in the role." />
+<link rel="canonical" href="https://revenuebench.io/contact" />
+<meta property="og:title" content="Contact | Revenue Bench" />
+<meta property="og:description" content="Reach the founders directly. Tell us about the role you are filling, or that you want on the bench. We reply within one business day." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="assets/site.css" rel="stylesheet" />
+<style>
+  .next{display:flex;flex-direction:column;gap:14px;margin-top:30px;}
+  .next .row{display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:start;}
+  .next .num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;color:var(--gold-light);line-height:1;}
+  .next .tx{font-size:15px;color:rgba(255,255,255,.74);line-height:1.6;}
+  .next .tx b{color:#fff;font-weight:600;}
+  .form-sent{text-align:center;padding:22px 6px;}
+  .form-sent-mark{width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin:0 auto 16px;}
+  .form-sent h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--ink);margin:0 0 8px;}
+  .form-sent p{font-size:15px;line-height:1.6;color:var(--ink-soft);margin:0;}
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="nav">
+  <a href="index.html" class="wordmark">REVENUE <b>BENCH</b><span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="for-employers.html">For Employers</a>
+    <a href="for-candidates.html">For Candidates</a>
+    <a href="private-equity.html">Private Equity</a>
+    <a href="guides.html">Insights</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="btn btn-navy nav-cta">Find your next hire</a>
+  </nav>
+  <button class="nav-burger" aria-label="Menu" id="burger">&#9776;</button>
+</header>
+
+<!-- spacer so fixed nav does not overlap the dark section -->
+<div style="height:74px;background:var(--navy);"></div>
+
+<!-- CONTACT -->
+<section class="section cta-band" id="contact">
+  <div class="container cta-grid">
+    <div class="reveal">
+      <div class="eyebrow">Let's talk</div>
+      <div class="rule"></div>
+      <h2>Tell us about the role, or tell us you want on the bench.</h2>
+      <p class="lead">You are filling a revenue role, or you want to be placed into one. Either way, start here. The message goes straight to the founders, and every conversation begins with what good actually looks like in the role.</p>
+      <div class="next">
+        <div class="row"><div class="num">1</div><div class="tx"><b>We reply within one business day.</b> A real person, not an auto-responder.</div></div>
+        <div class="row"><div class="num">2</div><div class="tx"><b>The first conversation is about the role.</b> What good looks like in the role, the motion, and the outcome you need.</div></div>
+        <div class="row"><div class="num">3</div><div class="tx"><b>We move at your pace.</b> If you are hiring, we scope the search. If you want on the bench, we line up the assessment.</div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="form" id="rbForm">
+        <div class="field">
+          <label for="intent">I'm here to</label>
+          <select id="intent" name="intent">
+            <option value="I'm recruiting">I'm recruiting</option>
+            <option value="I want on your bench">I want on your bench</option>
+          </select>
+        </div>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Company or current employer"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@company.com" required></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="The role you're filling, or a line about you."></textarea></div>
+        <input type="text" name="company_website" id="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+        <button type="submit" class="btn btn-gold">Send <span class="arrow">&rarr;</span></button>
+        <div class="form-note">Goes straight to the founders. We reply within one business day.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="wordmark">REVENUE <b>BENCH</b><span class="dot" style="color:var(--gold-light);">.</span></div>
+        <p class="note" style="margin-top:10px;max-width:300px;">Specialized recruitment for the revenue engine. Sellers, leaders, enablement, and RevOps.</p>
+      </div>
+      <div class="footer-links">
+        <a href="for-employers.html">For Employers</a>
+        <a href="for-candidates.html">For Candidates</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="private-equity.html">Private Equity</a>
+        <a href="guides.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>A founder-led firm. Sister to Performance Edge, Swanston Growth Advisors, and <a href="https://bestsalesteamtraining.com">Best Sales Team Training</a>.</p>
+      <p>&copy; 2026 Revenue Bench. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Contact | Revenue Bench","description":"Contact Revenue Bench. Tell us about the role you are filling, or that you want on the bench. We reply within one business day, and the first conversation is about what good looks like in the role.","url":"https://revenuebench.io/contact","publisher":{"@type":"Organization","name":"Revenue Bench"}}
+</script>
+
+<script>
+  document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open');});
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+  if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  (function(){
+    var form=document.getElementById('rbForm');
+    if(!form) return;
+    var btn=form.querySelector('button[type="submit"]');
+    var note=form.querySelector('.form-note');
+    function collect(){
+      return {
+        intent:(document.getElementById('intent')||{}).value||'',
+        name:(document.getElementById('name')||{}).value||'',
+        company:(document.getElementById('company')||{}).value||'',
+        email:(document.getElementById('email')||{}).value||'',
+        message:(document.getElementById('message')||{}).value||'',
+        company_website:(document.getElementById('company_website')||{}).value||'',
+        source_page:location.pathname
+      };
+    }
+    function mailtoFallback(d){
+      var subject='Revenue Bench enquiry: '+d.intent;
+      var body='Intent: '+d.intent+'\nName: '+d.name+'\nCompany: '+d.company+'\nEmail: '+d.email+'\n\n'+d.message;
+      window.location.href='mailto:carlos.garrido@sandler.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    }
+    function showSuccess(){
+      form.innerHTML='<div class="form-sent"><div class="form-sent-mark">&#10003;</div><h3>Thank you. Your message is in.</h3><p>A founder will reply within one business day. We start with what good looks like in the role.</p></div>';
+    }
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var d=collect();
+      if(!d.email){return;}
+      if(btn){btn.dataset.label=btn.innerHTML;btn.disabled=true;btn.innerHTML='Sending&hellip;';}
+      fetch('/api/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+        .then(function(res){if(!res.ok){throw new Error('status '+res.status);}return res.json();})
+        .then(function(){showSuccess();})
+        .catch(function(){
+          if(note){note.textContent='Opening your email app so your message still reaches us…';}
+          if(btn){btn.disabled=false;btn.innerHTML=btn.dataset.label||'Send';}
+          mailtoFallback(d);
+        });
+    });
+  })();
+</script>
+</body>
+</html>

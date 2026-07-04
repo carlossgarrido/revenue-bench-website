@@ -1,0 +1,7 @@
+# Revenue Bench website — repo-local ignores
+node_modules/
+.netlify/
+.DS_Store
+
+# Stray source asset (deploy/assets/steve.png is the used copy)
+steveswanston.png

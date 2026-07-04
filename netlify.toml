@@ -1,0 +1,36 @@
+# Netlify configuration for revenuebench.io
+#
+# Static site lives in deploy/, serverless functions in netlify/functions/.
+# Deploy from THIS directory (01_Domains/Revenue Bench/Website):
+#   npm install        # first run, or whenever dependencies change
+#   netlify deploy --prod --site=85bfbea1-12ad-401d-ac61-d4edd3b66f7e
+#
+# Functions read these env vars (set in the Netlify dashboard, never in code):
+#   RESEND_API_KEY          shared Resend key (same account as Best Sales Team Training)
+#   DATABASE_URL            Neon Postgres connection string (lead storage)
+#   LEAD_NOTIFY_EMAIL       where new-lead emails are sent (default carlos.garrido@sandler.com)
+#   LEAD_FROM               from address for lead emails (default "Revenue Bench <hello@revenuebench.io>")
+#   RESEND_WEBHOOK_SECRET   Svix signing secret for the inbound webhook (whsec_...)
+#   INBOUND_FORWARD_TO      where inbound hello@revenuebench.io mail is forwarded
+#   INBOUND_FROM            from address for forwarded mail (default "Revenue Bench <hello@revenuebench.io>")
+
+[build]
+  publish = "deploy"
+  functions = "netlify/functions"
+  command = "npm install"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Friendly /api/* paths in front of the functions. Rewrite (200) preserves POST method + body.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+# Serve the web app manifest with the correct content type (Netlify defaults .webmanifest to octet-stream).
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"

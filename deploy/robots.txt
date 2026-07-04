@@ -1,0 +1,7 @@
+# robots.txt for revenuebench.io
+# Allow all search and answer engines to crawl the site.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://revenuebench.io/sitemap.xml
