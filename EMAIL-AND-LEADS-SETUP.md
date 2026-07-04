@@ -73,16 +73,21 @@ verified for sending.)
    `revenue_bench_leads`; a notification email). Email `hello@revenuebench.io` and confirm it
    forwards to `INBOUND_FORWARD_TO`.
 
-## Deploy command (changed — functions need it)
+## Deploying (changed 2026-07-04 — auto-deploy is live)
 
-The static-only `--dir` deploy no longer covers functions. Deploy from the `Website` directory
-so `netlify.toml` (publish=`deploy`, functions=`netlify/functions`) is read:
+**Primary: push to `main`.** `Website/` is a git repo → github.com/carlossgarrido/revenue-bench-website
+(public). Every push to `main` triggers a Netlify build + production deploy (deploy key + webhook;
+`netlify.toml` governs: publish=`deploy`, functions=`netlify/functions`).
+
+Manual fallback (webhook down, or deploying uncommitted work):
 
 ```
 cd "01_Domains/Revenue Bench/Website"
 npm install        # first run, or when dependencies change
 netlify deploy --prod --site=85bfbea1-12ad-401d-ac61-d4edd3b66f7e
 ```
+
+**Never** use the old `--dir="Website/deploy"` form — it drops the serverless functions.
 
 ## Notes / future
 
