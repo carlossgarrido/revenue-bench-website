@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://revenuebench.io/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -44,55 +44,61 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://revenuebench.io/guides/why-sales-hires-fail</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://revenuebench.io/guides/cost-of-a-bad-sales-hire</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/the-6-percent-problem</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/how-to-assess-a-salesperson</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/how-to-hire-a-vp-of-sales</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/90-day-sales-onboarding-plan</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/building-a-sales-talent-bench</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/sales-compensation-benchmarks-2026</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/sales-recruiter-vs-in-house</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
