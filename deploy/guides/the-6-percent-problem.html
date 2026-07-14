@@ -36,6 +36,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+  .datatable{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:14.5px;}
+  .datatable caption{caption-side:top;text-align:left;font-weight:600;color:var(--navy);font-size:15px;letter-spacing:.01em;padding:0 0 10px;}
+  .datatable th,.datatable td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+  .datatable th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .datatable td:first-child{font-weight:600;color:var(--navy);}
+  .datatable td:nth-child(2){white-space:nowrap;font-weight:600;color:var(--gold-deep);}
+  .datatable td:last-child{color:var(--ink-soft);font-size:13.5px;}
+  .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
+  .method h3{font-size:19px;margin-bottom:10px;}
+  .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+  .method p:last-child{margin-bottom:0;}
+  @media(max-width:640px){.datatable td:nth-child(2){white-space:normal;}}
+</style>
 </head>
 <body>
 
@@ -58,7 +72,7 @@
     <div class="eyebrow">Sales talent data</div>
     <h1>The 6% problem: what the data says about sales talent</h1>
     <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>Across the largest database of assessed salespeople, only 6% are elite and half are weak.</strong> That single distribution explains why most sales teams underperform, why hiring on instinct fails so often, and why the usual fixes do not work. The problem is rarely effort. It is that the traits which actually predict selling are rare, invisible in an interview, and easy to confuse with the ones that do not matter.</p>
+    <p class="deck"><strong>In OMG's evaluation data, only 6% of salespeople are elite and about 74% are ineffective to some degree.</strong> That distribution, not a lack of effort, is why most sales teams underperform and why hiring on instinct fails so often. The odds are the real problem: the traits that actually predict selling are rare, invisible in an interview, and easy to confuse with the ones that do not matter. A sales-specific assessment beats the interview at reading those odds, which is what the rest of this guide is about.</p>
   </div>
 </section>
 
@@ -68,11 +82,11 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>The talent curve is steep: 6% elite, 11% strong, 33% serviceable, 50% weak. Most teams are staffed from the bottom two tiers without knowing it.</li>
-        <li>Effort is rarely the constraint. Most salespeople want to win and handle rejection well. The gap is in sales DNA, where 88% carry beliefs that quietly cap them.</li>
-        <li>Interviews cannot see any of this. A hiring manager's read alone picks a top performer only about 20% of the time.</li>
-        <li>What predicts performance is measurable: 21 sales-specific competencies, around 95% validity, and 72% of recommended hires reaching the top half within a year.</li>
-        <li>The hiring move is to screen with a sales-specific assessment, hire for drive, and train the skill.</li>
+        <li>In OMG's data, the talent curve is steep: 6% elite, 11% strong, 33% serviceable, 50% weak. Most teams are staffed from the bottom two tiers without knowing it.</li>
+        <li>Effort is rarely the constraint. In OMG's data, most salespeople want to win and handle rejection well; the gap sits in sales DNA, where 88% carry beliefs that quietly cap them.</li>
+        <li>Interviews cannot see any of this. Hiring-manager intuition identifies a future top performer only about 20% of the time, OMG-cited.</li>
+        <li>What predicts performance is measurable, and in OMG's 2024 validation data 72% of recommended hires reach the top half of the team within a year.</li>
+        <li>The hiring move follows from the data: screen with a sales-specific assessment, hire for drive, and train the skill.</li>
       </ul>
     </div>
 
@@ -84,40 +98,45 @@
         <li><a href="#interview">Why interviews miss the 6%</a></li>
         <li><a href="#predicts">What actually predicts performance</a></li>
         <li><a href="#hiring">What this means for hiring</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
       </ol>
     </div>
 
     <div class="prose">
       <h2 id="distribution">The distribution: 6, 11, 33, 50</h2>
-      <p>Objective Management Group has assessed nearly 2.4 million salespeople, and the shape of that data has held for years. Sorted by selling ability, the population breaks into four tiers, and the curve is steeper than almost any leader expects.</p>
-      <div class="omgband">
-        <div class="o"><div class="n">6%</div><div class="l">Elite. The sellers who carry a team and beat plan in a hard market.</div></div>
-        <div class="o"><div class="n">11%</div><div class="l">Strong. Reliable performers who hit quota in most conditions.</div></div>
-        <div class="o"><div class="n">33%</div><div class="l">Serviceable. Capable in the right seat, exposed in the wrong one.</div></div>
-        <div class="o"><div class="n">50%</div><div class="l">Weak. Half the profession, in roles they are not built to win.</div></div>
-      </div>
-      <p class="note" style="margin-top:14px;">Distribution across OMG's database of assessed salespeople. Objective Management Group (OMG).</p>
-      <p>Read it plainly and the implication is uncomfortable. Only about one in six salespeople is genuinely strong, and half are in the wrong job. If you hire from the open market without a way to tell the tiers apart, the base rate is working against you. You are far more likely to draw from the bottom half than the top, which is exactly what the typical mis-hire rate reflects.</p>
+      <p>Objective Management Group has assessed nearly 2.4 million salespeople as of 2023, and the shape of that data has held for years. Sorted by measured selling ability, the population breaks into four tiers, and the curve is steeper than almost any leader expects.</p>
+      <table class="datatable">
+        <caption>The distribution, in OMG's data</caption>
+        <thead><tr><th>Segment</th><th>Share of salespeople</th><th>What it means for a hiring manager</th></tr></thead>
+        <tbody>
+          <tr><td>Elite</td><td>6%</td><td>The people who carry a number in a hard market. The tier you are actually hiring for, and the scarcest.</td></tr>
+          <tr><td>Strong</td><td>11%</td><td>Dependable quota-hitters in most conditions. With the elite tier, the roughly 17% worth competing hard to land.</td></tr>
+          <tr><td>Serviceable</td><td>33%</td><td>Effective in the right seat and system, exposed in the wrong one. Safe only when the selling motion fits.</td></tr>
+          <tr><td>Weak</td><td>50%</td><td>Half the assessed population, in roles they are not built to win. The base rate every open-market hire fights.</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:6px;">Share of assessed salespeople in each tier. Objective Management Group (OMG), 2023.</p>
+      <p>Read it plainly and the implication is uncomfortable. Only about one in six salespeople is genuinely strong, and half are in the wrong job. If you hire from the open market without a way to tell the tiers apart, the base rate is working against you. You are far more likely to draw from the bottom half than the top, which is the quiet engine behind most failed hires, a pattern we trace end to end in <a href="why-sales-hires-fail.html">why sales hires fail</a>.</p>
       <p>This is the 6% problem. The talent you actually want is scarce, the talent you do not is abundant, and the two are very hard to tell apart in the moment you most need to.</p>
 
       <h2 id="misread">Why most teams misread it</h2>
-      <p>Faced with an underperforming team, most leaders reach for the wrong explanation. They assume the problem is effort, so they push harder: more activity, more pressure, a bigger number on the wall. The data says effort is rarely the constraint. About 86% of salespeople have Desire, the wanting, and about 88% Handle Rejection well. Most sellers show up and take the hits. Wanting it is almost never what separates the 6% from the 50%.</p>
-      <p>The real gap sits in a place a manager cannot see by watching activity: sales DNA, the set of underlying beliefs and instincts that either support selling or quietly sabotage it. Here the numbers invert. Only 12% of salespeople are strong on supportive beliefs, which means 88% carry beliefs that hold them back, often without knowing it. A seller who believes price is the issue, or who needs to be liked, or who is uncomfortable talking about money, will undermine themselves in ways no amount of effort fixes.</p>
+      <p>Faced with an underperforming team, most leaders reach for the wrong explanation. They assume the problem is effort, so they push harder: more activity, more pressure, a bigger number on the wall. OMG's data says effort is rarely the constraint. About 86% of salespeople have Desire, the wanting, and about 88% handle rejection well, in OMG's data. Most sellers show up and take the hits. Wanting it is almost never what separates the 6% from the 50%.</p>
+      <p>The real gap sits in a place a manager cannot see by watching activity: sales DNA, the set of underlying beliefs and instincts that either support selling or quietly sabotage it. Here the numbers invert. In OMG's data, only 12% of salespeople are strong on supportive beliefs, which means 88% carry beliefs that hold them back, often without knowing it. A seller who believes price is the issue, or who needs to be liked, or who is uncomfortable talking about money, will undermine themselves in ways no amount of effort fixes.</p>
       <p>So the team is misread twice. The trait that looks like the problem, effort, is usually fine. The trait that is the problem, sales DNA, is invisible to the naked eye. Leaders end up coaching the wrong thing harder, and the curve does not move.</p>
 
       <h2 id="interview">Why interviews miss the 6%</h2>
-      <p>If the distribution is this steep, the interview should be the place you catch it. It is the opposite. A hiring manager's interview read alone picks a top performer only about 20% of the time, which is worse than it sounds, because it comes paired with high confidence.</p>
-      <p>The reason is structural. Selling and interviewing use the same muscles: rapport, storytelling, reading the other person, and handling objections. A strong interviewer can be a weak closer, and a quiet, methodical closer can interview poorly. The interview rewards polish and presence, which are the very things a weak seller with high need for approval performs best. The 6% do not always show up as the most impressive in the room, and the 50% sometimes do.</p>
+      <p>If the distribution is this steep, the interview should be the place you catch it. It is the opposite. Hiring-manager intuition identifies a future top performer only about 20% of the time, an OMG-cited figure, which is worse than it sounds, because it comes paired with high confidence.</p>
+      <p>The reason is structural. Selling and interviewing use the same muscles: rapport, storytelling, reading the other person, and handling objections. A strong interviewer can be a weak closer, and a quiet, methodical closer can interview poorly. The interview rewards polish and presence, which are the very things a weak seller with high need for approval performs best. The 6% do not always present as the strongest candidate, and the 50% sometimes do.</p>
       <p>It gets worse with pattern matching. Interviewers favor candidates who remind them of sellers they have known, which feels like judgment but is just familiarity. The result is a process that filters for confidence and likeness, neither of which predicts quota, and a steep talent curve that the interview is structurally unable to climb.</p>
 
       <h2 id="predicts">What actually predicts performance</h2>
-      <p>The good news is that selling ability is measurable, and far more precisely than instinct allows. An objective, sales-specific assessment looks at 21 competencies across more than 400 data points per candidate, grouped into three questions: does the person want it, what is quietly holding them back, and can they do the work.</p>
+      <p>The good news is that selling ability is measurable, and far more precisely than instinct allows. OMG's objective, sales-specific assessment looks at 21 competencies across more than 400 data points per candidate, grouped into three questions: does the person want it, what is quietly holding them back, and can they do the work. We walk through how to run that read in <a href="how-to-assess-a-salesperson.html">how to assess a salesperson beyond the resume</a>.</p>
       <ul>
         <li><strong>Will to Sell.</strong> Desire, Commitment, Motivation, Responsibility, and Outlook. The engine, and the one group you cannot install later.</li>
         <li><strong>Sales DNA.</strong> Comfort Discussing Money, Need for Approval, controlling emotions and staying in the moment, supportive beliefs, a supportive buy cycle, and how the person handles rejection. The hidden layer, and usually where the real gap lives.</li>
         <li><strong>Tactical Selling.</strong> Hunting, reaching decision makers, relationship building, consultative selling, selling value, qualifying, presentation approach, closing, sales process, and sales technology. The skills of the job itself.</li>
       </ul>
-      <p>Measured this way, the signal is strong where the interview is weak. OMG carries around 95% predictive validity, and 72% of the candidates it recommends reach the top half of the team within 12 months. The reverse holds too: 100% of candidates it flagged as not recommended, who were hired anyway, landed in the bottom half. First-year turnover tells the same story, 9% for recommended hires against 33% for those not recommended. This is what it looks like to actually see the 6%.</p>
+      <p>Measured this way, the signal is strong where the interview is weak. OMG's documentation puts the assessment's predictive validity in the 95 percent range, and in OMG's 2024 validation data, 72% of the candidates it recommends reach the top half of the team within 12 months. The reverse holds too: 100% of candidates it flagged as not recommended, who were hired anyway, landed in the bottom half. First-year turnover in that data tells the same story, 9% for recommended hires against 33% for those not recommended. This is what it looks like to actually see the 6%.</p>
       <p>It also matters that this is sales-specific. Personality and behavioral-style tests such as DISC describe general working style and are not predictive of on-the-job sales performance. They were adapted for hiring, not built for it. An assessment built for selling from the ground up is what turns a steep, invisible talent curve into something you can read on the page.</p>
 
       <h2 id="hiring">What this means for hiring</h2>
@@ -125,17 +144,27 @@
       <ol>
         <li><strong>Screen with a sales-specific assessment.</strong> Put it at the front of the process, not the end. It is the only step that reliably separates the 6% and the 11% from the half of the market you do not want, before an interview talks you into the wrong call.</li>
         <li><strong>Hire for drive and sales DNA.</strong> These are the traits you are stuck with. A candidate with real will to sell and clean sales DNA, even with coachable tactical gaps, is a far safer bet than a polished closer running on weak drive.</li>
-        <li><strong>Train the skill after.</strong> Tactical competencies respond well to coaching. After training, OMG sees Closing jump 55% and Comfort Discussing Money 66%, while Will to Sell barely moves, between 0% and 6%. You can teach the skill. You cannot install the drive. Training lifts a seller's overall percentile by about 30%, the difference between under 70% of quota and over 90%, but only when the drive was there to begin with.</li>
+        <li><strong>Train the skill after.</strong> Tactical competencies respond well to coaching. In OMG's training data, Closing jumps 55% and Comfort Discussing Money 66% after training, while Will to Sell barely moves, between 0% and 6%. You can teach the skill. You cannot install the drive. That same OMG data puts the overall lift at roughly 30 percentile points, but only when the drive was there to begin with.</li>
       </ol>
-      <p>The 6% problem is really a measurement problem. The talent is rare, but it is not hidden once you stop relying on the one tool that cannot find it. This is the process Revenue Bench runs on every search. We assess each candidate with Objective Management Group, screen for drive before skill, and coach the hire through the first 90 days, so the people we put forward come from the right end of the curve and stay there.</p>
+      <p>There is a multiplier on all of this, and it is the manager. In OMG's data, managers strong in all three coaching qualities produce 80% more elite salespeople, yet only 9% of managers have all three. The top of the curve is partly made, not just found, which is why who you hire to lead the team matters as much as who you hire to sell.</p>
+      <p>The 6% problem is really a measurement problem. The talent is rare, but it is not hidden once you stop relying on the one tool that cannot find it. This is the process Revenue Bench runs on every search. We assess each candidate with Objective Management Group, screen for drive before skill, and coach the hire through the first 90 days, so the people we put forward come from the right end of the curve and stay there. It is the whole of what we do <a href="../for-employers.html">for employers</a>.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <div class="method">
+        <h3>How to read these numbers</h3>
+        <p>Every figure in this guide is Objective Management Group's (OMG) data, drawn from a dataset of nearly 2.4 million salespeople assessed as of 2023, each measured on 21 sales-specific competencies across more than 400 data points. The four tiers, 6% elite, 11% strong, 33% serviceable, and 50% weak, sort that assessed population by measured selling ability. Each percentage is the share of assessed salespeople in that tier, not a forecast for any single team.</p>
+        <p>What the distribution does not claim matters as much as what it does. This is OMG's own dataset, analyzed here by an OMG Certified Partner firm. It is not independent, peer-reviewed research, and we label it as OMG's data throughout rather than present it as a neutral third-party study. Predictive validity "in the 95 percent range" is OMG's published accuracy metric for its assessment and is distinct from the outcome figures. The outcome numbers, 72% of recommended hires reaching the top half and 9% versus 33% first-year turnover, are from OMG's 2024 validation data, the current and more conservative of OMG's two outcome eras.</p>
+        <p>Revenue Bench is a founder-led firm, and both founders assess candidates with OMG as Certified Partners. We publish these figures as OMG's evidence, clearly attributed, so a hiring team can weigh them for exactly what they are.</p>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
-      <div class="faq-item"><h3>What is the 6% problem in sales?</h3><p>Across the largest database of assessed salespeople, only 6% are elite, 11% strong, 33% serviceable, and 50% weak. The talent you want is scarce and the talent you do not is abundant, and the two are hard to tell apart when hiring. That steep, hard-to-read distribution is the 6% problem.</p></div>
-      <div class="faq-item"><h3>If most salespeople want to win, why do teams underperform?</h3><p>Because effort is rarely the constraint. About 86% of salespeople have desire and about 88% handle rejection well. The real gap is in sales DNA, where only 12% are strong on supportive beliefs, so 88% carry beliefs that quietly cap their performance. Leaders push harder on effort and miss the trait that actually holds the team back.</p></div>
-      <div class="faq-item"><h3>Can an interview identify a top salesperson?</h3><p>Rarely. A hiring manager's interview read alone picks a top performer only about 20% of the time, because selling and interviewing use the same skills and the interview rewards polish over substance. An objective, sales-specific assessment with around 95% predictive validity is the reliable way to see selling ability.</p></div>
+      <div class="faq-item"><h3>What is the 6% problem in sales?</h3><p>In OMG's data, only 6% of salespeople are elite, 11% strong, 33% serviceable, and 50% weak. The talent you want is scarce and the talent you do not is abundant, and the two are hard to tell apart when hiring. That steep, hard-to-read distribution is the 6% problem.</p></div>
+      <div class="faq-item"><h3>If most salespeople want to win, why do teams underperform?</h3><p>Because effort is rarely the constraint. In OMG's data, about 86% of salespeople have desire and about 88% handle rejection well. The real gap is in sales DNA, where only 12% are strong on supportive beliefs, so 88% carry beliefs that quietly cap their performance. Leaders push harder on effort and miss the trait that actually holds the team back.</p></div>
+      <div class="faq-item"><h3>Can an interview identify a top salesperson?</h3><p>Rarely. Hiring-manager intuition identifies a future top performer only about 20% of the time, OMG-cited, because selling and interviewing use the same surface skills and the interview rewards polish over substance. An objective, sales-specific assessment, with predictive validity in the 95 percent range per OMG's documentation, is the reliable way to see selling ability.</p></div>
+      <div class="faq-item"><h3>Why does a sales-specific assessment beat an interview?</h3><p>Because the interview measures the wrong thing. Selling and interviewing reward the same surface skills, so a weak seller with high need for approval often interviews best. A sales-specific assessment measures the 21 competencies that predict selling directly, and in OMG's 2024 validation data 72% of its recommended hires reached the top half of the team within a year while 100% of overridden "not recommended" hires landed in the bottom half.</p></div>
       <div class="faq-item"><h3>How do you hire against the distribution?</h3><p>Screen with a sales-specific assessment at the front of the process, hire for drive and sales DNA because those cannot be installed later, and train the tactical skills after, since those respond well to coaching. That order is how you draw from the top of the curve instead of the bottom.</p></div>
     </div>
 
@@ -185,13 +214,14 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The 6% Problem: What the Data Says About Sales Talent","description":"Across the largest database of assessed salespeople, only 6% are elite and half are weak. What the distribution means, why teams misread it, and how to hire against it.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors; Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-19","dateModified":"2026-06-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/the-6-percent-problem"}}
+{"@context":"https://schema.org","@type":"Article","headline":"The 6% Problem: What the Data Says About Sales Talent","description":"Across the largest database of assessed salespeople, only 6% are elite and half are weak. What the distribution means, why teams misread it, and how to hire against it.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors; Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-19","dateModified":"2026-07-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/the-6-percent-problem"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is the 6% problem in sales?","acceptedAnswer":{"@type":"Answer","text":"Across the largest database of assessed salespeople, only 6% are elite, 11% strong, 33% serviceable, and 50% weak. The talent you want is scarce and the talent you do not is abundant, and the two are hard to tell apart when hiring. That steep, hard-to-read distribution is the 6% problem."}},
-{"@type":"Question","name":"If most salespeople want to win, why do teams underperform?","acceptedAnswer":{"@type":"Answer","text":"Because effort is rarely the constraint. About 86% of salespeople have desire and about 88% handle rejection well. The real gap is in sales DNA, where only 12% are strong on supportive beliefs, so 88% carry beliefs that quietly cap their performance. Leaders push harder on effort and miss the trait that actually holds the team back."}},
-{"@type":"Question","name":"Can an interview identify a top salesperson?","acceptedAnswer":{"@type":"Answer","text":"Rarely. A hiring manager's interview read alone picks a top performer only about 20% of the time, because selling and interviewing use the same skills and the interview rewards polish over substance. An objective, sales-specific assessment with around 95% predictive validity is the reliable way to see selling ability."}},
+{"@type":"Question","name":"What is the 6% problem in sales?","acceptedAnswer":{"@type":"Answer","text":"In OMG's data, only 6% of salespeople are elite, 11% strong, 33% serviceable, and 50% weak. The talent you want is scarce and the talent you do not is abundant, and the two are hard to tell apart when hiring. That steep, hard-to-read distribution is the 6% problem."}},
+{"@type":"Question","name":"If most salespeople want to win, why do teams underperform?","acceptedAnswer":{"@type":"Answer","text":"Because effort is rarely the constraint. In OMG's data, about 86% of salespeople have desire and about 88% handle rejection well. The real gap is in sales DNA, where only 12% are strong on supportive beliefs, so 88% carry beliefs that quietly cap their performance. Leaders push harder on effort and miss the trait that actually holds the team back."}},
+{"@type":"Question","name":"Can an interview identify a top salesperson?","acceptedAnswer":{"@type":"Answer","text":"Rarely. Hiring-manager intuition identifies a future top performer only about 20% of the time, OMG-cited, because selling and interviewing use the same surface skills and the interview rewards polish over substance. An objective, sales-specific assessment, with predictive validity in the 95 percent range per OMG's documentation, is the reliable way to see selling ability."}},
+{"@type":"Question","name":"Why does a sales-specific assessment beat an interview?","acceptedAnswer":{"@type":"Answer","text":"Because the interview measures the wrong thing. Selling and interviewing reward the same surface skills, so a weak seller with high need for approval often interviews best. A sales-specific assessment measures the 21 competencies that predict selling directly, and in OMG's 2024 validation data 72% of its recommended hires reached the top half of the team within a year while 100% of overridden 'not recommended' hires landed in the bottom half."}},
 {"@type":"Question","name":"How do you hire against the distribution?","acceptedAnswer":{"@type":"Answer","text":"Screen with a sales-specific assessment at the front of the process, hire for drive and sales DNA because those cannot be installed later, and train the tactical skills after, since those respond well to coaching. That order is how you draw from the top of the curve instead of the bottom."}}
 ]}
 </script>
