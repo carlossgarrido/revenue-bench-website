@@ -25,6 +25,12 @@
 <meta property="og:title" content="Contact | Revenue Bench" />
 <meta property="og:description" content="Reach the founders directly. Tell us about the role you are filling, or that you want on the bench. We reply within one business day." />
 <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://revenuebench.io/og/contact.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Contact Revenue Bench | Revenue Bench">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://revenuebench.io/og/contact.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -159,7 +165,7 @@
       if(btn){btn.dataset.label=btn.innerHTML;btn.disabled=true;btn.innerHTML='Sending&hellip;';}
       fetch('/api/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
         .then(function(res){if(!res.ok){throw new Error('status '+res.status);}return res.json();})
-        .then(function(){showSuccess();})
+        .then(function(){if(typeof gtag==='function'){gtag('event','generate_lead',{form_location:'contact'});}showSuccess();})
         .catch(function(){
           if(note){note.textContent='Opening your email app so your message still reaches us…';}
           if(btn){btn.disabled=false;btn.innerHTML=btn.dataset.label||'Send';}
