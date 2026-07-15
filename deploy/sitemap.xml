@@ -44,13 +44,19 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/why-sales-hires-fail</loc>
     <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://revenuebench.io/guides/should-you-promote-your-best-rep</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

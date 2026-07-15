@@ -5,7 +5,3 @@ node_modules/
 
 # Stray source asset (deploy/assets/steve.png is the used copy)
 steveswanston.png
-
-# HOLD until Steve approves his byline piece (remove these two lines to ship it)
-deploy/guides/should-you-promote-your-best-rep.html
-deploy/og/should-you-promote-your-best-rep.png
