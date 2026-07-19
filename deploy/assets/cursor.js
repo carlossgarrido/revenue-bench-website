@@ -16,15 +16,15 @@
     '.rb-cursor.is-visible { opacity: 1; }' +
     '.rb-cursor-ring { position: absolute; width: 32px; height: 32px;' +
     '  margin: -16px 0 0 -16px; border-radius: 50%;' +
-    '  border: 1px solid rgba(200, 145, 42, 0.7);' +
-    '  background: rgba(200, 145, 42, 0); opacity: 0.55;' +
+    '  border: 1.5px solid rgba(156, 111, 30, 0.9);' +
+    '  background: rgba(156, 111, 30, 0); opacity: 0.8;' +
     '  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),' +
     '    opacity 0.25s, background-color 0.25s; }' +
     '.rb-cursor-dot { position: absolute; width: 6px; height: 6px;' +
-    '  margin: -3px 0 0 -3px; border-radius: 50%; background: #C8912A;' +
+    '  margin: -3px 0 0 -3px; border-radius: 50%; background: #9C6F1E;' +
     '  transition: transform 0.15s, opacity 0.15s; }' +
     '.rb-cursor.is-hover .rb-cursor-ring { transform: scale(1.6); opacity: 1;' +
-    '  background: rgba(200, 145, 42, 0.12); }' +
+    '  background: rgba(156, 111, 30, 0.14); }' +
     '.rb-cursor.is-hover .rb-cursor-dot { opacity: 0; }' +
     '.rb-cursor.is-down .rb-cursor-ring { transform: scale(0.8); }' +
     '.rb-cursor.is-down .rb-cursor-dot { transform: scale(0.5); }';
