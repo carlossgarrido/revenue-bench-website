@@ -28,6 +28,11 @@ netlify deploy --prod --site=85bfbea1-12ad-401d-ac61-d4edd3b66f7e
 ## Notes
 
 - GA4: `G-MQ9Z9HNDWV` on all 16 pages.
+- Custom cursor: `deploy/assets/cursor.js`, a gold dot + spring-trailing ring. Desktop pointer
+  devices only, respects reduced-motion, self-contained (injects its own CSS), one
+  `<script defer src="assets/cursor.js">` per page, live sitewide (every page except the GSC
+  verification stub). This is the drop-in reference implementation for catalog element **EL-36**
+  in `04_Reference Library/Design Inspiration/Design-Elements-Catalog.md`; keep the two in sync.
 - Env vars (`DATABASE_URL`, `RESEND_API_KEY`, `RESEND_WEBHOOK_SECRET`) are set in the
   Netlify dashboard, never in this repo.
 - The canonical working copy lives in Carlos OS at `01_Domains/Revenue Bench/Website/`
