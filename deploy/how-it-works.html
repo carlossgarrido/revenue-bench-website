@@ -20,22 +20,25 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>How It Works | Revenue Bench</title>
-<meta name="description" content="A six-step search built to find revenue. We define the role, source from a pre-vetted bench, assess with OMG, present a true shortlist, place and train, then coach for 90 days. Every placement includes an onboarding coach and a 90-day replacement guarantee." />
+<meta name="description" content="See Revenue Bench's six-step hiring process, typical search timeline, OMG assessment, training, 90-day coaching, and replacement guarantee." />
 <link rel="canonical" href="https://revenuebench.io/how-it-works" />
 <meta property="og:title" content="How It Works | Revenue Bench" />
 <meta property="og:description" content="A search built to find revenue. Six steps from defining the role to coaching the first 90 days, with assessment, training, and a 90-day replacement guarantee built in." />
 <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://revenuebench.io/og/how-it-works.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="How It Works | Revenue Bench">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://revenuebench.io/og/how-it-works.png">
+<meta property="og:image" content="https://revenuebench.io/og/how-it-works.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How It Works | Revenue Bench">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://revenuebench.io/og/how-it-works.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="assets/site.css" rel="stylesheet" />
+<link href="assets/article.css" rel="stylesheet" />
 <style>
+  html{scroll-behavior:smooth;}
+  section[id]{scroll-margin-top:88px;}
   .stepblock{display:grid;grid-template-columns:120px 1fr;gap:30px;align-items:start;background:var(--white);border:1px solid var(--line-soft);border-radius:16px;padding:32px 34px;box-shadow:var(--shadow);}
   .stepblock + .stepblock{margin-top:18px;}
   .stepblock .num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:58px;color:var(--gold);line-height:.9;}
@@ -50,7 +53,40 @@
   .faq-item:first-child{border-top:0;}
   .faq-item h3{font-size:20px;margin-bottom:8px;}
   .faq-item p{font-size:15.5px;color:var(--ink-mid);line-height:1.7;}
-  @media(max-width:620px){.stepblock{grid-template-columns:1fr;gap:8px;}.stepblock .num{font-size:46px;}}
+  .overview-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:54px;align-items:start;}
+  .overview-grid .takeaways,.overview-grid .toc-inline{margin:0;}
+  .overview-grid .toc-inline{padding-top:4px;}
+  .toc-inline h2.toc-title{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px;}
+  .overview-grid .toc-inline ol{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;}
+  .table-scroll{overflow-x:auto;margin-top:42px;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
+  .datatable{width:100%;min-width:1120px;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px;line-height:1.55;}
+  .datatable th,.datatable td{text-align:left;vertical-align:top;padding:18px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+  .datatable th:last-child,.datatable td:last-child{border-right:0;}
+  .datatable tbody tr:last-child td{border-bottom:0;}
+  .datatable th{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;}
+  .datatable td{color:var(--ink-mid);}
+  .datatable td:first-child{width:16%;color:var(--navy);}
+  .datatable td:nth-child(2){width:25%;}
+  .datatable td:nth-child(3){width:16%;}
+  .datatable td:nth-child(4){width:16%;}
+  .datatable td:nth-child(5){width:27%;}
+  .datatable td strong{display:block;color:var(--navy);font-size:14.5px;margin-bottom:4px;}
+  .datatable caption{caption-side:bottom;text-align:left;padding:15px 2px 0;color:var(--ink-soft);font-size:13.5px;line-height:1.6;}
+  .method{background:var(--parchment);border:1px solid var(--line);border-radius:14px;padding:26px 30px;}
+  .method h2{font-size:22px;margin-bottom:9px;}
+  .method p{font-size:14.5px;color:var(--ink-mid);line-height:1.7;}
+  .section-intro{max-width:760px;}
+  .section-intro .lead{margin-top:14px;}
+  .source-note{margin-top:14px;font-size:13px;color:var(--ink-soft);line-height:1.6;}
+  @media(max-width:820px){
+    .overview-grid{grid-template-columns:1fr;gap:34px;}
+  }
+  @media(max-width:620px){
+    .stepblock{grid-template-columns:1fr;gap:8px;padding:26px 24px;}
+    .stepblock .num{font-size:46px;}
+    .overview-grid .toc-inline ol{grid-template-columns:1fr;}
+    .method{padding:24px;}
+  }
 </style>
 </head>
 <body>
@@ -75,12 +111,40 @@
     <div class="maxw-680 reveal">
       <div class="eyebrow">How it works</div>
       <h1 style="margin-top:18px;font-size:clamp(40px,5vw,60px);">Find <span class="gold">revenue</span>, not resumes.</h1>
-      <p class="lead" style="margin:24px 0 30px;max-width:620px;">Most searches end at the offer. Ours is built to end at performance. Every step removes a different source of risk, from defining the real selling environment, to objective assessment, to coaching the hire through the first 90 days. Here is exactly how a Revenue Bench search runs.</p>
+      <p class="lead" style="margin:24px 0 30px;max-width:650px;">Revenue Bench runs the search through hiring, training, and the first 90 days. Each stage has a clear owner, a typical timeframe, and a standard that must be met before the work advances.</p>
       <div class="btn-row">
         <a href="contact.html" class="btn btn-navy">Find your next hire <span class="arrow">&rarr;</span></a>
         <a href="#steps" class="btn btn-ghost">See the six steps</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- EXPECTATIONS AND CONTENTS -->
+<section class="section bg-cream" id="expect">
+  <div class="container overview-grid">
+    <div class="takeaways reveal">
+      <h2>What to expect</h2>
+      <ul>
+        <li>A written success profile approved before sourcing begins.</li>
+        <li>A shortlist of people we would hire ourselves, commonly within 1 to 2 weeks when the bench covers the role.</li>
+        <li>Every candidate assessed with OMG and screened by a sales operator before you meet them.</li>
+        <li>A two-day program plus a dedicated 90-day onboarding coach on every placement.</li>
+        <li>A 90-day replacement guarantee if the hire leaves or is not performing.</li>
+      </ul>
+    </div>
+    <nav class="toc-inline reveal" aria-label="On this page">
+      <h2 class="toc-title">On this page</h2>
+      <ol>
+        <li><a href="#steps">The six steps</a></li>
+        <li><a href="#timeline">Search timeline</a></li>
+        <li><a href="#first90">The first 90 days</a></li>
+        <li><a href="#assessment">Assessment</a></li>
+        <li><a href="#bench">The bench</a></li>
+        <li><a href="#guarantee">Guarantee</a></li>
+        <li><a href="#faq">Common questions</a></li>
+      </ol>
+    </nav>
   </div>
 </section>
 
@@ -90,8 +154,8 @@
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">The process</div>
       <div class="rule"></div>
-      <h2 class="h-lg">Six steps, one outcome: a hire who performs.</h2>
-      <p class="lead" style="margin-top:14px;">No part of this is left to chance. Each step has a clear standard and a clear owner, and the work does not stop at placement.</p>
+      <h2 class="h-lg">Six steps from role definition through day 90.</h2>
+      <p class="lead" style="margin-top:14px;">The written success profile governs the search. Each stage produces the evidence or alignment needed to begin the next one.</p>
     </div>
     <div class="reveal" style="margin-top:50px;">
       <div class="stepblock">
@@ -99,8 +163,8 @@
         <div>
           <div class="eyebrow">Step 01</div>
           <h3 style="margin-top:10px;">Define the role and selling environment</h3>
-          <p>We start with the actual job, not a job description. We map your buyer, sales motion, deal size, sales cycle, and the way your team already wins, then translate that into the profile that will succeed inside it.</p>
-          <p>The output is a written standard for what good looks like in this role. That standard governs every later step, so sourcing, assessment, and the shortlist all point at the same target.</p>
+          <p>We map your buyer, sales motion, deal size, sales cycle, manager expectations, and the way your team wins. The work becomes a written success profile for the person who can perform inside that environment.</p>
+          <p>That profile keeps sourcing, assessment, interviews, and the final decision pointed at the same standard. It also gives <a href="private-equity.html">private equity operating partners</a> a consistent basis for hiring across a portfolio.</p>
         </div>
       </div>
       <div class="stepblock">
@@ -108,8 +172,8 @@
         <div>
           <div class="eyebrow">Step 02</div>
           <h3 style="margin-top:10px;">Source from the bench and targeted search</h3>
-          <p>We start from our pre-vetted bench of revenue talent, so qualified candidates are often in front of you within days, not weeks. Where the bench does not cover the role, we run a targeted search to fill the gaps.</p>
-          <p>You are not waiting on us to build a pipeline from zero. The result is a faster, deeper slate that already fits your selling environment.</p>
+          <p>We match the role against our pre-vetted bench first. Where the bench does not cover the role, we run a targeted search for the experience, market, or selling motion the profile requires.</p>
+          <p>The bench means qualified candidates are often in front of you within days, and the slate already fits your selling environment.</p>
         </div>
       </div>
       <div class="stepblock">
@@ -117,8 +181,8 @@
         <div>
           <div class="eyebrow">Step 03</div>
           <h3 style="margin-top:10px;">Assess with OMG and an operator screen</h3>
-          <p>Every candidate is run through Objective Management Group, the most validated sales-specific assessment available. We measure will to sell, sales DNA, and whether someone can actually execute inside your process, before you spend time in interviews.</p>
-          <p>On top of the data, an operator who has built and run sales teams screens each candidate. We test for fit with your motion, not for who interviews well.</p>
+          <p>Every candidate completes the Objective Management Group sales assessment. It measures will to sell, sales DNA, and whether someone can execute inside your process before you spend time in interviews.</p>
+          <p>An operator who has built and run sales teams then screens each candidate against the success profile, the selling motion, and the demands of the role.</p>
         </div>
       </div>
       <div class="stepblock">
@@ -126,8 +190,8 @@
         <div>
           <div class="eyebrow">Step 04</div>
           <h3 style="margin-top:10px;">Present a true shortlist</h3>
-          <p>You see a short list of people we would hire ourselves, each one assessed and screened against the written standard. No stack of resumes to wade through, no volume for the sake of volume.</p>
-          <p>Every profile arrives with the assessment findings and a clear point of view on fit, so your interview time goes to a decision, not a first filter.</p>
+          <p>You receive a short list of people we would hire ourselves. Every candidate has been assessed and screened against the written success profile.</p>
+          <p>Each profile comes with assessment findings and our view on fit, giving your interviews a focused decision purpose from the start.</p>
         </div>
       </div>
       <div class="stepblock">
@@ -135,8 +199,8 @@
         <div>
           <div class="eyebrow">Step 05</div>
           <h3 style="margin-top:10px;">Place and train</h3>
-          <p>When you choose, we place. The hire does not arrive cold. Reps get a two-day sales skills program, and leaders get a leadership refresher, delivered through Performance Edge and Sandler.</p>
-          <p>From day one the hire is aligned to a method and a shared language, which means the ramp starts on common ground instead of from scratch.</p>
+          <p>After offer and acceptance, reps complete a two-day sales skills program and leaders complete a leadership refresher through Performance Edge and Sandler.</p>
+          <p>The hire begins with a shared method, shared language, and clear expectations for how work moves through your sales process.</p>
         </div>
       </div>
       <div class="stepblock">
@@ -144,10 +208,80 @@
         <div>
           <div class="eyebrow">Step 06</div>
           <h3 style="margin-top:10px;">Coach for 90 days</h3>
-          <p>A dedicated onboarding coach works with the new hire weekly and the hiring manager weekly for the first 90 days. <a href="guides/90-day-sales-onboarding-plan.html">Onboarding is where hires are won or lost</a>, so we stay in the work until the hire is performing in the role.</p>
-          <p>The result is a faster ramp, fewer early exits, and far less onboarding load on your team. We do not hand off and hope.</p>
+          <p>A dedicated onboarding coach meets the new hire weekly and the hiring manager weekly for the first 90 days. The cadence follows a structured <a href="guides/90-day-sales-onboarding-plan.html">sales onboarding plan</a>.</p>
+          <p>The coach keeps expectations, manager feedback, sales method, pipeline work, and deal execution connected through day 90. This addresses the onboarding and management patterns behind many <a href="guides/why-sales-hires-fail.html">sales hiring failures</a>.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH TIMELINE -->
+<section class="section bg-cream" id="timeline">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="eyebrow">Typical timing</div>
+      <div class="rule"></div>
+      <h2 class="h-lg">The search timeline, step by step.</h2>
+      <p class="lead">These are typical ranges for how a Revenue Bench search runs. The standard in the final column must be cleared before the search advances.</p>
+    </div>
+    <div class="table-scroll reveal">
+      <table class="datatable">
+        <thead>
+          <tr>
+            <th scope="col">Stage</th>
+            <th scope="col">What happens</th>
+            <th scope="col">Typical duration</th>
+            <th scope="col">Who owns it</th>
+            <th scope="col">The standard cleared before it advances</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Step 1</strong>Define the role and selling environment</td>
+            <td>Intake with the hiring manager, map the buyer, motion, deal size, and cycle, then write the success profile.</td>
+            <td>3 to 5 business days</td>
+            <td>Revenue Bench with the hiring manager</td>
+            <td>A written success profile both sides sign off on.</td>
+          </tr>
+          <tr>
+            <td><strong>Step 2</strong>Source from the bench and targeted search</td>
+            <td>Match against the pre-vetted bench first, then run targeted search where the bench does not cover the role.</td>
+            <td>Bench matches often within days. Targeted search takes 1 to 3 weeks.</td>
+            <td>Revenue Bench</td>
+            <td>A slate that fits the written profile.</td>
+          </tr>
+          <tr>
+            <td><strong>Step 3</strong>Assess with OMG and an operator screen</td>
+            <td>Run every candidate through the Objective Management Group sales assessment, then screen each person with an operator who has built sales teams.</td>
+            <td>2 to 4 business days per slate</td>
+            <td>Revenue Bench</td>
+            <td>Assessment evidence and a fit view on every candidate presented.</td>
+          </tr>
+          <tr>
+            <td><strong>Step 4</strong>Present a true shortlist</td>
+            <td>Present a short list of people we would hire ourselves, each with findings and a point of view.</td>
+            <td>Commonly within 1 to 2 weeks of kickoff when the bench covers the role. Longer for a pure targeted search.</td>
+            <td>Revenue Bench, then the hiring manager decides</td>
+            <td>Every candidate assessed and screened against the written profile.</td>
+          </tr>
+          <tr>
+            <td><strong>Step 5</strong>Place and train</td>
+            <td>Complete offer and acceptance, then deliver a two-day sales skills program for reps or a leadership refresher for leaders before day one.</td>
+            <td>From acceptance to start date, then training at or before day one</td>
+            <td>Revenue Bench with the client</td>
+            <td>The hire starts aligned to a shared method and language.</td>
+          </tr>
+          <tr>
+            <td><strong>Step 6</strong>Coach for 90 days</td>
+            <td>A dedicated onboarding coach meets the hire weekly and the hiring manager weekly.</td>
+            <td>The first 90 days from start</td>
+            <td>Revenue Bench onboarding coach</td>
+            <td>The hire is performing in the role by day 90, backed by the replacement guarantee.</td>
+          </tr>
+        </tbody>
+        <caption>Kickoff to shortlist is commonly 2 to 4 weeks when the bench covers the role, then 90 days of coaching after the hire starts. Timing varies by role, seniority, and how much targeted search a role needs beyond the bench. The bench is what compresses the front half.</caption>
+      </table>
     </div>
   </div>
 </section>
@@ -156,10 +290,10 @@
 <section class="section bg-cream" id="first90">
   <div class="container spot-grid">
     <div class="reveal">
-      <div class="eyebrow">The First 90</div>
+      <div class="eyebrow">The first 90</div>
       <div class="rule"></div>
       <h2 class="h-lg">An onboarding coach on every hire.</h2>
-      <p class="lead" style="margin:16px 0 22px;">Every placement comes with a dedicated coach for the first 90 days. One weekly call with the new hire. One weekly call with the hiring manager. Two conversations a week, aimed at one thing: getting the hire to performance faster, with less risk of an early exit.</p>
+      <p class="lead" style="margin:16px 0 22px;">Every placement comes with a dedicated coach for the first 90 days. One weekly call with the new hire and one with the hiring manager keep expectations, feedback, and execution aligned.</p>
       <div class="twocall">
         <span class="tagchip">Weekly with the hire</span>
         <span class="tagchip">Weekly with the manager</span>
@@ -168,91 +302,122 @@
     </div>
     <div class="reveal">
       <div class="cadence">
-        <div class="cad"><div class="w">Weeks<br>1&ndash;2</div><div class="d">Role clarity, expectations, and manager alignment. The hire knows exactly what good looks like from day one.</div></div>
-        <div class="cad"><div class="w">Weeks<br>3&ndash;6</div><div class="d">Method, pipeline build, and CRM discipline. We reinforce the system the hire was trained on before they started.</div></div>
-        <div class="cad"><div class="w">Weeks<br>7&ndash;13</div><div class="d">Deal execution, quota ramp, and independence. By day 90 the hire is performing in the role, not still settling in.</div></div>
+        <div class="cad"><div class="w">Weeks<br>1 to 2</div><div class="d">Role clarity, expectations, and manager alignment. The hire knows what good performance requires from day one.</div></div>
+        <div class="cad"><div class="w">Weeks<br>3 to 6</div><div class="d">Method, pipeline development, and CRM discipline. Coaching reinforces the system introduced before the start date.</div></div>
+        <div class="cad"><div class="w">Weeks<br>7 to 13</div><div class="d">Deal execution, quota ramp, and independence. Coaching shifts toward performance in the role and the manager's plan beyond day 90.</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ASSESSMENT -->
-<section class="section bg-parchment">
+<section class="section bg-parchment" id="assessment">
   <div class="container">
     <div class="grid-2" style="align-items:center;gap:56px;">
       <div class="reveal">
-        <div class="eyebrow">Assessment, not impressions</div>
+        <div class="eyebrow">Assessment evidence</div>
         <div class="rule"></div>
-        <h2 class="h-lg">We measure the hire before you make the offer.</h2>
+        <h2 class="h-lg">Measure the hire before making the offer.</h2>
       </div>
       <div class="reveal">
-        <p class="lead" style="margin-bottom:16px;"><a href="guides/how-to-assess-a-salesperson.html">Interviewing well is not the same as performing in a quota-carrying role</a>, so selection does not run on gut feel. Every candidate is evaluated with Objective Management Group, the most validated sales-specific assessment in the world, around 95% predictive validity and built on nearly 2.4 million salespeople assessed since 1990.</p>
+        <p class="lead" style="margin-bottom:16px;"><a href="guides/how-to-assess-a-salesperson.html">Interview performance does not predict quota performance on its own</a>. Every candidate is evaluated with Objective Management Group. OMG reports predictive validity in the 95 percent range and nearly 2.4 million salespeople assessed since 1990, based on its 2023 figure.</p>
         <ul class="spotlist">
-          <li><b>Will to sell:</b> the drive, commitment, and desire the role demands. Training barely moves this, so we screen for it at the door.</li>
-          <li><b>Sales DNA:</b> the beliefs that support, or quietly sabotage, performance once the pressure is on.</li>
-          <li><b>Tactical skill:</b> whether the candidate can actually execute inside your motion, not just any motion.</li>
+          <li><b>Will to sell:</b> the drive, commitment, and desire the role demands.</li>
+          <li><b>Sales DNA:</b> the beliefs that support or undermine performance once the pressure is on.</li>
+          <li><b>Tactical skill:</b> whether the candidate can execute inside your selling motion and process.</li>
         </ul>
       </div>
     </div>
     <div class="reveal">
       <div class="omgband">
-        <div class="o"><div class="n">21</div><div class="l">Sales-specific competencies measured, across 400+ data points per candidate.</div></div>
-        <div class="o"><div class="n">~95%</div><div class="l">Predictive validity. Voted the #1 sales assessment tool 11 years running.</div></div>
-        <div class="o"><div class="n">72%</div><div class="l">Of recommended hires reach the top half of the team within 12 months.</div></div>
-        <div class="o"><div class="n">9% / 33%</div><div class="l">First-year turnover: recommended hires versus not recommended.</div></div>
+        <div class="o"><div class="n">21</div><div class="l">OMG data: sales-specific competencies across 400+ data points per candidate.</div></div>
+        <div class="o"><div class="n">~95%</div><div class="l">OMG data: predictive validity in the 95 percent range, its accuracy metric.</div></div>
+        <div class="o"><div class="n">72%</div><div class="l">OMG 2024 validation survey: recommended hires reach the top half of the team within 12 months.</div></div>
+        <div class="o"><div class="n">9% / 33%</div><div class="l">OMG 2024 validation survey: first-year turnover for recommended hires versus not-recommended hires.</div></div>
       </div>
+      <p class="source-note">All figures in this strip are Objective Management Group data.</p>
     </div>
   </div>
 </section>
 
 <!-- THE BENCH -->
-<section class="section bg-navy">
+<section class="section bg-navy" id="bench">
   <div class="container grid-2" style="align-items:center;gap:56px;">
     <div class="reveal">
       <div class="eyebrow">The bench</div>
       <div class="rule"></div>
-      <h2 class="h-lg" style="color:#fff;">Pre-vetted talent, ready to deploy.</h2>
+      <h2 class="h-lg" style="color:#fff;">A standing source of assessed revenue talent.</h2>
     </div>
     <div class="reveal">
-      <p class="lead" style="margin-bottom:16px;">Most companies start every search from zero. Our clients start from <a href="guides/building-a-sales-talent-bench.html">a bench of revenue talent</a> we have already sourced, assessed, and vetted. When you need a role filled, the shortlist often already exists.</p>
+      <p class="lead" style="margin-bottom:16px;">Revenue Bench sources, assesses, and screens talent continuously. This <a href="guides/building-a-sales-talent-bench.html">sales talent bench</a> gives each new search an informed starting point and can shorten the path to a relevant slate.</p>
       <ul class="spotlist">
-        <li>Sellers, leaders, enablement, and RevOps, sourced continuously.</li>
-        <li>Already assessed with OMG and screened by an operator.</li>
-        <li>Matched to your selling environment, so the slate is fast and relevant.</li>
+        <li>Sellers, leaders, enablement, and RevOps talent sourced continuously.</li>
+        <li>Candidates assessed with OMG and screened by an operator.</li>
+        <li>Matches based on the written selling environment and success profile.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- GUARANTEE -->
-<section class="section bg-cream">
+<section class="section bg-cream" id="guarantee">
   <div class="container">
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">The 90-day replacement guarantee</div>
       <div class="rule"></div>
-      <h2 class="h-lg">We are paid to be right, and we stand behind it.</h2>
-      <p class="lead" style="margin-top:14px;">Every step of this process exists to remove the risk of the hire. The guarantee is how we put our name on the outcome, and the assessment is why we can: recommended hires turn over at 9% against 33% for the candidates an assessment would have screened out.</p>
+      <h2 class="h-lg">Ninety days from the hire's start date.</h2>
+      <p class="lead" style="margin-top:14px;">The guarantee runs for the first 90 days from the hire's start date, the same window the onboarding coach is in the work. The full terms are set out in our guide to <a href="guides/placement-guarantees-explained.html">placement guarantees</a>, and agreed before the search begins.</p>
     </div>
     <div class="guarantee reveal">
       <div class="seal">90-day replacement guarantee</div>
-      <div class="g">If a hire leaves or is not performing within the first 90 days, we run the search again at no additional fee. We win when the hire works.</div>
+      <div class="g">If a hire leaves or is not performing within the first 90 days from the start date, we run the search again at no additional fee. One free re-run, the client's call.</div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section bg-parchment">
+<section class="section bg-parchment" id="faq">
   <div class="container maxw-680 mx-auto">
     <div class="center reveal">
       <div class="eyebrow">Common questions</div>
       <div class="rule"></div>
-      <h2 class="h-lg">The process, answered.</h2>
+      <h2 class="h-lg">Questions about the search process.</h2>
     </div>
     <div class="reveal" style="margin-top:40px;">
-      <div class="faq-item"><h3>How long does a search take?</h3><p>Because we start from a pre-vetted bench, a shortlist often exists within days rather than weeks. When a role needs targeted search beyond the bench, timelines depend on the role, but you are never waiting on us to build a pipeline from zero.</p></div>
-      <div class="faq-item"><h3>What does the assessment actually measure?</h3><p>Every candidate is evaluated with Objective Management Group, the most validated sales-specific assessment available. It measures will to sell, sales DNA, and whether the candidate can execute inside your specific process, so the decision rests on evidence, not interview impressions.</p></div>
-      <div class="faq-item"><h3>How does the 90-day guarantee work?</h3><p>If a hire leaves or is not performing within the first 90 days, we run the search again at no additional fee. The onboarding coach and the training are built in to make that outcome rare, and the guarantee covers you if it happens.</p></div>
-      <div class="faq-item"><h3>What is included after the hire starts?</h3><p>Every placement includes a two-day skills program for reps or a leadership refresher for leaders, plus a dedicated onboarding coach who meets the hire and the manager weekly for 90 days. The work continues until the hire is performing in the role.</p></div>
+      <div class="faq-item">
+        <h3>How long does it take to hire a salesperson through Revenue Bench?</h3>
+        <p>When the bench covers the role, a true shortlist is commonly ready within 1 to 2 weeks of kickoff. End to end, kickoff to shortlist is commonly 2 to 4 weeks, followed by 90 days of coaching after the hire starts. A pure targeted search can take longer. Timing varies by role, seniority, and how much search is needed beyond the bench.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens in the first week?</h3>
+        <p>Revenue Bench and the hiring manager map the buyer, sales motion, deal size, cycle, manager expectations, and success measures. Both sides approve a written success profile, then bench matching and targeted sourcing begin against that standard.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the assessment measure?</h3>
+        <p>OMG measures 21 sales-specific competencies across 400+ data points, including will to sell, sales DNA, and tactical skill. Revenue Bench applies it through co-founder Steve Swanston's OMG Certified Partner firm, then adds an operator screen against the written success profile.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does the 90-day guarantee work?</h3>
+        <p>If a hire leaves or is not performing within the first 90 days, Revenue Bench runs the search again at no additional fee. The terms are agreed before the search begins.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is included after the hire starts?</h3>
+        <p>Every placement includes a two-day skills program for reps or a leadership refresher for leaders, plus a dedicated onboarding coach who meets the hire and the hiring manager weekly for 90 days.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if the bench does not have the right candidate?</h3>
+        <p>Revenue Bench runs a targeted search for the experience, market, or selling motion the written profile requires. A pure targeted search usually extends the front half of the timeline beyond the ranges available when the bench covers the role.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="section bg-cream" id="methodology" style="padding-top:56px;padding-bottom:56px;">
+  <div class="container maxw-680 mx-auto">
+    <div class="method reveal">
+      <h2>Methodology note</h2>
+      <p>The durations above are typical ranges for how a Revenue Bench search runs and vary by role, seniority, and how much targeted search is needed beyond the bench. OMG figures cited on this page are OMG's own published data, applied here through co-founder Steve Swanston's OMG Certified Partner firm. Predictive validity in the 95 percent range is OMG's accuracy metric.</p>
     </div>
   </div>
 </section>
@@ -263,7 +428,7 @@
     <div class="eyebrow">Let's talk</div>
     <div class="rule"></div>
     <h2 style="color:#fff;font-size:clamp(32px,4vw,48px);">Find your next revenue hire.</h2>
-    <p class="lead" style="margin:16px auto 28px;">Tell us about the role and the selling environment. We will come back quickly, with a view on what good looks like in the role.</p>
+    <p class="lead" style="margin:16px auto 28px;">Tell us about the role and the selling environment. We will respond with an initial view of the success profile and how the search would run.</p>
     <a href="contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -293,15 +458,83 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How It Works","description":"A six-step search built to find revenue: define the role, source from the bench, assess with OMG, present a true shortlist, place and train, and coach for 90 days, backed by a 90-day replacement guarantee.","author":{"@type":"Organization","name":"Revenue Bench"},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/how-it-works"}}
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How It Works",
+  "description": "Revenue Bench's six-step hiring process with a stage-by-stage search timeline, OMG assessment, training, 90-day coaching, and replacement guarantee.",
+  "author": {
+    "@type": "Organization",
+    "name": "Revenue Bench"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Revenue Bench",
+    "url": "https://revenuebench.io"
+  },
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-07-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://revenuebench.io/how-it-works"
+  }
+}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How long does a search take?","acceptedAnswer":{"@type":"Answer","text":"Because Revenue Bench starts from a pre-vetted bench, a shortlist often exists within days rather than weeks. When a role needs targeted search beyond the bench, timelines depend on the role, but clients are never waiting on a pipeline to be built from zero."}},
-{"@type":"Question","name":"What does the assessment actually measure?","acceptedAnswer":{"@type":"Answer","text":"Every candidate is evaluated with Objective Management Group, the most validated sales-specific assessment available. It measures will to sell, sales DNA, and whether the candidate can execute inside the client's specific sales process, so the decision rests on evidence rather than interview impressions."}},
-{"@type":"Question","name":"How does the 90-day guarantee work?","acceptedAnswer":{"@type":"Answer","text":"If a hire leaves or is not performing within the first 90 days, Revenue Bench runs the search again at no additional fee. The onboarding coach and training are built in to make that outcome rare, and the guarantee covers the client if it happens."}},
-{"@type":"Question","name":"What is included after the hire starts?","acceptedAnswer":{"@type":"Answer","text":"Every placement includes a two-day skills program for reps or a leadership refresher for leaders, plus a dedicated onboarding coach who meets the hire and the manager weekly for 90 days, continuing until the hire is performing in the role."}}
-]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to hire a salesperson through Revenue Bench?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the bench covers the role, a true shortlist is commonly ready within 1 to 2 weeks of kickoff. End to end, kickoff to shortlist is commonly 2 to 4 weeks, followed by 90 days of coaching after the hire starts. A pure targeted search can take longer. Timing varies by role, seniority, and how much search is needed beyond the bench."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens in the first week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Revenue Bench and the hiring manager map the buyer, sales motion, deal size, cycle, manager expectations, and success measures. Both sides approve a written success profile, then bench matching and targeted sourcing begin against that standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the assessment measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OMG measures 21 sales-specific competencies across 400+ data points, including will to sell, sales DNA, and tactical skill. Revenue Bench applies it through co-founder Steve Swanston's OMG Certified Partner firm, then adds an operator screen against the written success profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 90-day guarantee work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a hire leaves or is not performing within the first 90 days, Revenue Bench runs the search again at no additional fee. The terms are agreed before the search begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included after the hire starts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every placement includes a two-day skills program for reps or a leadership refresher for leaders, plus a dedicated onboarding coach who meets the hire and the hiring manager weekly for 90 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the bench does not have the right candidate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Revenue Bench runs a targeted search for the experience, market, or selling motion the written profile requires. A pure targeted search usually extends the front half of the timeline beyond the ranges available when the bench covers the role."
+      }
+    }
+  ]
+}
 </script>
 
 <script>
