@@ -37,12 +37,20 @@
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
 <style>
-  .datatable{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:14.5px;}
-  .datatable th,.datatable td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
-  .datatable th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
-  .datatable td:first-child{font-weight:600;color:var(--navy);}
-  .datatable td:nth-child(2){white-space:nowrap;font-weight:600;color:var(--gold-deep);}
-  .datatable td:last-child{color:var(--ink-soft);font-size:13.5px;}
+  .table-scroll{overflow-x:auto;margin:10px 0 6px;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
+  .datatable{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px;line-height:1.55;}
+  .datatable th,.datatable td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+  .datatable th:last-child,.datatable td:last-child{border-right:0;}
+  .datatable tbody tr:last-child td{border-bottom:0;}
+  .datatable th{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;}
+  .datatable td{color:var(--ink-mid);}
+  .datatable td:first-child{width:11%;font-weight:600;color:var(--navy);}
+  .datatable td:nth-child(2){width:19%;}
+  .datatable td:nth-child(3){width:20%;}
+  .datatable td:nth-child(4){width:13%;}
+  .datatable td:nth-child(5){width:17%;}
+  .datatable td:last-child{width:20%;color:var(--ink-soft);}
+  .source-note{margin-top:14px;font-size:13px;color:var(--ink-soft);line-height:1.6;}
   .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
   .method h3{font-size:19px;margin-bottom:10px;}
   .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
@@ -115,8 +123,8 @@
 
       <h2 id="comparison">The fee-structure risk comparison</h2>
       <p>The billing model changes more than timing. It determines who funds the search, how much exclusivity the recruiter receives, and which outcome the commercial incentive rewards.</p>
-      <div class="table-scroll" style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 6px;">
-        <table class="datatable" style="min-width:900px;">
+      <div class="table-scroll">
+        <table class="datatable">
           <thead>
             <tr>
               <th>Fee model</th>
