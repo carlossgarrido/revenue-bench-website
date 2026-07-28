@@ -20,31 +20,38 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>How Placement Guarantees Work in Sales Recruitment | Revenue Bench</title>
-<meta name="description" content="How placement guarantees work in sales recruitment: the three guarantee types, the standard 90-day window, the fine print that voids coverage, and Revenue Bench's own published terms. Read the terms before the number of days." />
+<meta name="description" content="How placement guarantees work in sales recruitment: the three guarantee types, the standard 90-day window, the fine print that voids coverage, what happens step by step when a guarantee is used, and Revenue Bench's own published terms." />
 <link rel="canonical" href="https://revenuebench.io/guides/placement-guarantees-explained" />
 <meta property="og:title" content="How Placement Guarantees Work in Sales Recruitment" />
 <meta property="og:description" content="The three guarantee types, the standard 90-day window, the fine print that voids coverage, and Revenue Bench's own published terms." />
 <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://revenuebench.io/og/placement-guarantees-explained.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="How Placement Guarantees Work in Sales Recruitment | Revenue Bench">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://revenuebench.io/og/placement-guarantees-explained.png">
+<meta property="og:image" content="https://revenuebench.io/og/placement-guarantees-explained.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How Placement Guarantees Work in Sales Recruitment | Revenue Bench">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://revenuebench.io/og/placement-guarantees-explained.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
 <style>
-  .datatable{width:100%;min-width:660px;border-collapse:collapse;margin:0;font-size:14px;}
-  .datatable th,.datatable td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top;}
-  .datatable th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
-  .datatable td:first-child{font-weight:600;color:var(--navy);width:19%;}
-  .datatable td:nth-child(2){color:var(--ink-mid);width:31%;}
-  .datatable td:nth-child(3){color:var(--gold-deep);font-weight:600;width:27%;}
-  .datatable td:last-child{color:var(--ink-soft);width:23%;}
-  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border:1px solid var(--line-soft);border-radius:12px;}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1080px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;border:1px solid var(--line-soft);border-radius:12px;}
+  .datatable{width:100%;min-width:1000px;border-collapse:collapse;margin:0;background:var(--white);font-size:14px;line-height:1.55;}
+  .datatable th,.datatable td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+  .datatable th:last-child,.datatable td:last-child{border-right:0;}
+  .datatable tbody tr:last-child td{border-bottom:0;}
+  .datatable th{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;}
+  .datatable td{color:var(--ink-mid);}
+  .datatable th:first-child,.datatable td:first-child{width:14%;}
+  .datatable th:nth-child(2),.datatable td:nth-child(2){width:24%;}
+  .datatable th:nth-child(3),.datatable td:nth-child(3){width:15%;}
+  .datatable th:nth-child(4),.datatable td:nth-child(4){width:12%;}
+  .datatable th:nth-child(5),.datatable td:nth-child(5){width:35%;}
+  .datatable td:first-child{font-weight:600;color:var(--navy);}
+  .datatable td:last-child{color:var(--gold-deep);font-weight:600;}
+  .table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
   .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
   .method h3{font-size:19px;margin-bottom:10px;}
   .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
@@ -53,6 +60,14 @@
   .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  .tablewrap-narrow{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border:1px solid var(--line-soft);border-radius:12px;}
+  .datatable-narrow{width:100%;min-width:660px;border-collapse:collapse;margin:0;font-size:14px;}
+  .datatable-narrow th,.datatable-narrow td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top;}
+  .datatable-narrow th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .datatable-narrow td:first-child{font-weight:600;color:var(--navy);width:19%;}
+  .datatable-narrow td:nth-child(2){color:var(--ink-mid);width:31%;}
+  .datatable-narrow td:nth-child(3){color:var(--gold-deep);font-weight:600;width:27%;}
+  .datatable-narrow td:last-child{color:var(--ink-soft);width:23%;}
 </style>
 </head>
 <body>
@@ -75,8 +90,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>How placement guarantees work</span></div>
     <div class="eyebrow">Buyer's guide &middot; Guarantee terms</div>
     <h1>How Placement Guarantees Work in Sales Recruitment</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>A placement guarantee is the recruiter's written commitment about what happens if a hire does not work out inside a stated window, and the market's most common window is 90 days.</strong> What matters far more than the length is the terms: whether the remedy is a replacement search or a refund, and the conditions that void it. A firm can advertise six months and hedge it with fine print that cancels coverage the moment anything on your side changes. A 90-day window with a clean, readable replacement clause can protect you more. Read the terms before you read the number of days.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>11 min read</span></div>
+    <p class="deck"><strong>A placement guarantee is the recruiter's written commitment about what happens if a hire does not work out inside a stated window, and the market's most common window is 90 days.</strong> The terms determine whether the remedy is a replacement search, a refund, or a credit, and which conditions cancel coverage. Read the terms before you read the number of days. This guide also follows Revenue Bench's re-run from the client's decision through the replacement hire's first day, with the owner, cost, and limit at each stage.</p>
   </div>
 </section>
 
@@ -88,9 +103,10 @@
       <ul>
         <li>The most common guarantee window is 90 days, per TopEchelon's survey of recruiting firms, but the window length tells you the least about how well you are covered.</li>
         <li>Guarantees come in three forms: a free replacement search, a fee refund (full or prorated), or a fee credit toward a future search. Ask which one you are getting.</li>
-        <li>The void conditions are the real terms. A role change, a comp change, a new manager, a skipped onboarding step, a late notification, or an unpaid invoice can each cancel coverage. Get the list in writing before you sign.</li>
-        <li>A longer window hedged with conditions can protect you less than a short window with a clean replacement clause. Read the terms, then the number.</li>
+        <li>The void conditions define the coverage. A role change, a comp change, a new manager, a skipped onboarding step, a late notification, or an unpaid invoice can each cancel coverage. Get the list in writing before you sign.</li>
+        <li>A longer window hedged with conditions can protect you less than a short window with a clean replacement clause. Weigh the terms before the number of days.</li>
         <li>Revenue Bench publishes its own: a 90-day replacement guarantee on every placement, one free re-run of the search if the hire is not working, no conditions.</li>
+        <li>Using Revenue Bench's guarantee involves six stages, from the client's call through a second search, training, and the replacement hire's first 90 days of coaching.</li>
       </ul>
     </div>
 
@@ -101,7 +117,9 @@
         <li><a href="#period">What is the standard guarantee period?</a></li>
         <li><a href="#types">The three guarantee types</a></li>
         <li><a href="#voids">What voids a typical guarantee?</a></li>
+        <li><a href="#limits">What a guarantee does not do</a></li>
         <li><a href="#writing">What should you demand in writing?</a></li>
+        <li><a href="#firing">Using the guarantee: the re-run, step by step</a></li>
         <li><a href="#terms">Revenue Bench's terms, published</a></li>
         <li><a href="#sources">Where these figures come from</a></li>
       </ol>
@@ -109,23 +127,41 @@
 
     <div class="prose">
       <h2 id="definition">What is a placement guarantee?</h2>
-      <p>A placement guarantee is a clause in a recruiter's agreement that sets out what the firm will do if a hire leaves or is let go inside a defined period after the start date. It is the recruiter putting something at risk behind the placement. In practice that promise takes one of three forms: the firm runs the search again at no additional fee, it returns some or all of the fee, or it credits the fee against a future search. The guarantee is where a recruiter tells you, in writing, how much of the outcome they are willing to stand behind. Everything useful about it lives in the specifics, not the headline number. A guarantee also shifts the economics of the fee itself, which is part of how <a href="sales-recruiter-fees.html">recruiter fee structures allocate search risk</a>.</p>
+      <p>A placement guarantee is a clause in a recruiter's agreement that sets out what the firm will do if a hire leaves or is let go inside a defined period after the start date. It is the recruiter putting something at risk behind the placement. In practice that promise takes one of three forms: the firm runs the search again at no additional fee, it returns some or all of the fee, or it credits the fee against a future search. The guarantee is where a recruiter tells you, in writing, how much of the outcome they are willing to stand behind. The specifics carry the meaning, and the headline number does not. A guarantee also shifts the economics of the fee itself, which is part of how <a href="sales-recruiter-fees.html">recruiter fee structures allocate search risk</a>.</p>
 
       <h2 id="period">What is the standard guarantee period?</h2>
       <p>There is a market default, and it is 90 days. In TopEchelon's survey of recruiting firms, 90 days is the most common guarantee length, chosen by roughly 45 percent of firms. Thirty-day and 60-day windows are common at the shorter end, and some firms sell six-month or one-year guarantees at the longer end.</p>
-      <p>A longer window reads as more protection, and sometimes it is. A longer promise can also carry more conditions, because the firm is covering a longer stretch of time during which more can change on your side. The length of the window and the strength of the coverage are two separate measurements, so read them separately. A firm that offers 90 clean days can be standing behind more than a firm that offers a year hedged with fine print.</p>
+      <p>A longer window reads as more protection, and sometimes it is. A longer promise can also carry more conditions, because the firm is covering a longer stretch of time during which more can change on your side. Window length and strength of coverage are separate measurements. Read them separately. A firm that offers 90 clean days can be standing behind more than a firm that offers a year hedged with fine print.</p>
 
       <h2 id="types">The three guarantee types</h2>
-      <p>Guarantees come in three shapes. They protect you differently, and the difference is worth knowing before you compare two offers side by side. The table below is the whole comparison on one row each.</p>
-      <div class="tablewrap">
-      <table class="datatable">
-        <thead><tr><th>Type</th><th>What you get</th><th>What to check</th></tr></thead>
-        <tbody>
-          <tr><td>Free replacement search</td><td>The firm runs the search again at no additional fee, up to the number of re-runs the agreement states (often one).</td><td>Whether there is a cap on the number of replacements, and how long the firm has to deliver one.</td></tr>
-          <tr><td>Fee refund (full or prorated)</td><td>Some or all of the fee comes back if the hire leaves inside the window.</td><td>Whether it is full or prorated, how fast it is paid, and that you still carry the open seat.</td></tr>
-          <tr><td>Fee credit</td><td>The fee is credited toward a future search rather than returned as money.</td><td>Whether the credit expires, and whether it obligates you to run another search to use it.</td></tr>
-        </tbody>
-      </table>
+      <p>Guarantees come in three shapes. They protect you differently, and the difference is worth knowing before you compare two offers side by side. The table gives you the remedy and the contract terms to check for each type.</p>
+      <div class="tablewrap-narrow">
+        <table class="datatable-narrow">
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+              <th scope="col">What you get</th>
+              <th scope="col">What to check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Free replacement search</td>
+              <td>The firm runs the search again at no additional fee, up to the number of re-runs the agreement states.</td>
+              <td>The cap on the number of replacements and any delivery terms.</td>
+            </tr>
+            <tr>
+              <td>Fee refund (full or prorated)</td>
+              <td>Some or all of the fee comes back if the hire leaves inside the window.</td>
+              <td>Whether it is full or prorated, when it is paid, and how you will fill the open role.</td>
+            </tr>
+            <tr>
+              <td>Fee credit</td>
+              <td>The fee is credited toward a future search rather than returned as money.</td>
+              <td>Whether the credit expires, and whether it obligates you to run another search to use it.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <h2 id="voids">What voids a typical guarantee?</h2>
@@ -137,7 +173,13 @@
         <li><strong>The invoice is unpaid.</strong> Many agreements make the coverage contingent on the fee being settled. A late or disputed payment can suspend the coverage.</li>
         <li><strong>A notification window was missed.</strong> Guarantees often require you to report a departure inside a set number of days. Miss it and the claim can be denied.</li>
       </ul>
-      <p>None of these is unreasonable on its own. The problem is finding out about them after a hire has already fallen through. When a placement fails and the guarantee does not cover it, you carry <a href="cost-of-a-bad-sales-hire.html">the full cost of a bad sales hire</a>: the open seat, the lost pipeline, and the months it takes to start over. Get the full list before you sign, so the guarantee you are counting on is the one written in the contract.</p>
+      <p>None of these is unreasonable on its own. The problem is finding out about them after a hire has already fallen through. When a placement fails and the guarantee does not cover it, you carry <a href="cost-of-a-bad-sales-hire.html">the full cost of a bad sales hire</a>: the open role, the lost pipeline, and the months it takes to start over. Get the full list before you sign, so the guarantee you are counting on is the one written in the contract.</p>
+
+      <h2 id="limits">What a guarantee does not do</h2>
+      <p>A replacement guarantee returns a search. If you need the fee back, a refund guarantee is a different instrument, and the three-type table above is where to check which one you have been sold.</p>
+      <p>The re-run count is finite. Revenue Bench provides one, stated in the agreement, and a buyer should get that number from any firm in writing.</p>
+      <p>The window runs 90 days from the hire's first day. A guarantee that starts at the signed offer covers less calendar than one that starts on day one, which is why the start date is one of the six questions below. Whether a replacement placement starts its own guarantee period is a separate term set in the agreement, so confirm it with any firm, including this one, before you sign.</p>
+      <p>No guarantee returns the months. A re-run replaces the search. It does not replace the quarter the open role cost you. DePaul's survey of 435-plus organizations puts <a href="cost-of-a-bad-sales-hire.html">the fully loaded cost of sales turnover at about $115,000</a>, and Revenue Bench's own working figure for a revenue-role mis-hire is $200,000 to $250,000. The pipeline that did not get built sits on top of either number. The figure argues for getting selection right the first time rather than extending the window. If a hire is failing and you are weighing the re-run, this guide explains <a href="sales-hire-not-working-out.html">what to do when a sales hire is not working out</a>.</p>
 
       <h2 id="writing">What should you demand in writing?</h2>
       <p>You do not need a lawyer to read a guarantee well. You need a short list of questions and the discipline to get the answers on paper. Ask for these six before you sign:</p>
@@ -151,22 +193,88 @@
       </ul>
       <p>If a firm cannot answer these on paper, that is your answer. A guarantee that lives in a conversation is not a guarantee you can hold anyone to. These six questions are one part of a wider set worth asking any firm: the full <a href="how-to-evaluate-a-sales-recruitment-agency.html">agency evaluation scorecard</a> covers assessment method, specialization, and fee structure alongside the guarantee.</p>
 
+      <div class="eyebrow" style="margin-top:44px;">Re-run walkthrough</div>
+      <h2 id="firing" style="margin-top:10px;">Using the guarantee: the re-run, step by step</h2>
+      <p>Under Revenue Bench's standard agreement, the client makes the call inside the 90-day window and tells us the guarantee is being used. The stages below follow that decision through to the replacement hire's first day.</p>
+
+      <div class="tablewrap">
+        <table class="datatable">
+          <thead>
+            <tr>
+              <th scope="col">Stage</th>
+              <th scope="col">What happens</th>
+              <th scope="col">Who owns it</th>
+              <th scope="col">What it costs you</th>
+              <th scope="col">The limit worth knowing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The client's call</td>
+              <td>The hiring manager decides the hire is not working inside the first 90 days from the hire's start date. Revenue Bench asks for no evidence to open the claim, because whether the hire is working is the client's judgment.</td>
+              <td>The hiring manager</td>
+              <td>Nothing</td>
+              <td>The decision has to fall inside the 90 days. The window runs from the hire's first day rather than from the signed offer.</td>
+            </tr>
+            <tr>
+              <td>Notice to Revenue Bench</td>
+              <td>The client tells us the guarantee is being used.</td>
+              <td>The hiring manager</td>
+              <td>Nothing</td>
+              <td>The decision itself has to fall inside the 90 days. Earlier notice starts the re-run earlier.</td>
+            </tr>
+            <tr>
+              <td>What the coach contributes</td>
+              <td>Weekly meetings with the hire and weekly meetings with the hiring manager have run since the start date, so the hiring manager reaches the decision with the coach already close to the work. The cadence follows the structure in our <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding plan</a>.</td>
+              <td>The Revenue Bench onboarding coach</td>
+              <td>Included in every placement</td>
+              <td>The coach reports to the hiring manager. The coach's view informs the decision and does not gate it because the decision is the client's.</td>
+            </tr>
+            <tr>
+              <td>The profile is revisited</td>
+              <td>We read the written success profile that governed the first search against what the first hire showed about the role and the selling environment, then restart the search from that profile.</td>
+              <td>Revenue Bench with the hiring manager</td>
+              <td>Included</td>
+              <td>A change on the client's side to comp, territory, or the reporting manager does not void the guarantee. That is what "no conditions" means, and it is where our terms differ from the market's standard void list.</td>
+            </tr>
+            <tr>
+              <td>The re-run search</td>
+              <td>Revenue Bench runs the search again at no additional fee through the same <a href="../how-it-works.html#timeline">published process</a>. We start with the <a href="building-a-sales-talent-bench.html">bench</a>, run targeted search where the bench does not cover the role, apply the Objective Management Group assessment and an operator screen to every candidate, then present a shortlist.</td>
+              <td>Revenue Bench</td>
+              <td>No additional fee</td>
+              <td>Timing follows the published search timeline. A shortlist commonly comes within 1 to 2 weeks of the re-run kickoff when the bench covers the role, and longer for a pure targeted search. Offer, acceptance, and training follow the shortlist.</td>
+            </tr>
+            <tr>
+              <td>The replacement hire starts</td>
+              <td>Offer and acceptance come first, followed by the two-day sales skills program for reps or the leadership refresher for leaders, then a dedicated onboarding coach for the first 90 days.</td>
+              <td>Revenue Bench with the client</td>
+              <td>Included</td>
+              <td>The agreement provides one free re-run. Buyers should ask every firm how many re-runs they get and have the number stated in writing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The guarantee claim and the employment decision are two separate things. Ending someone's employment follows the client's own documentation, HR process, and counsel under the employment law that applies, and nothing in the guarantee changes that. If a hire is struggling and you are weighing the options before a re-run, start with <a href="sales-hire-not-working-out.html">what to do when a sales hire is not working out</a>.</p>
+      <p class="table-caption">This walkthrough describes Revenue Bench's own published terms and process. Market practice varies firm by firm, and the six questions in the "what should you demand in writing?" section provide a way to check any other firm's version.</p>
+
       <h2 id="terms">Revenue Bench's terms, published</h2>
-      <p>Here are ours, in full.</p>
-      <p>Every Revenue Bench placement carries a 90-day replacement guarantee. If the hire is not working inside the first 90 days from their start date, we run the search again. One free re-run, no conditions. The window starts on the candidate's first day, and nothing on your side voids it. Whether the hire is working is your call to make.</p>
-      <p>Every placement also includes a 90-day onboarding coach. The coach meets weekly with the placed candidate and reports to the hiring manager, a third party whose only job is making the onboarding phase work. Coaching cadence moves performance: in OMG's data, reps coached several times a week gain 17 percentile points, and only about 10 percent of reps get that cadence. That figure measures a higher frequency than our weekly rhythm, and the direction is the point: coaching frequency moves performance. The coach is a standing part of <a href="../how-it-works.html">how we work</a>, and it is there so the guarantee rarely has to be used.</p>
+      <p>Revenue Bench's standard agreement states the following terms.</p>
+      <p>Every Revenue Bench placement carries a 90-day replacement guarantee. If the hire is not working inside the first 90 days from their start date, we run the search again at no additional fee. One free re-run. No conditions. The window starts on the candidate's first day. Whether the hire is working is your call to make. The <a href="#firing">re-run walkthrough</a> shows what using those terms involves stage by stage.</p>
+      <p>Every placement also includes a 90-day onboarding coach. The coach meets weekly with the placed hire, meets the hiring manager weekly, and reports to the hiring manager. Coaching cadence moves performance. In OMG's data, reps coached weekly gain 9 percentile points against reps coached never, and only about 20 percent of reps get weekly coaching. Coaching several times a week gains 17 points in the same data, a higher frequency than our weekly rhythm, so the weekly figure is the one that matches what we run. The coach is a standing part of <a href="../how-it-works.html">how we work</a>.</p>
       <div class="stat-strip">
-        <div class="stat-cell"><div class="num">17 pts</div><div class="lab">Percentile-point gain for reps coached several times a week, in OMG's data.</div></div>
-        <div class="stat-cell"><div class="num">~10%</div><div class="lab">Share of reps who get coaching at that cadence, in OMG's data.</div></div>
+        <div class="stat-cell"><div class="num">9 pts</div><div class="lab">Percentile-point gain for reps coached weekly against reps coached never, in OMG's data.</div></div>
+        <div class="stat-cell"><div class="num">~20%</div><div class="lab">Share of reps who get weekly coaching, in OMG's data.</div></div>
         <div class="stat-cell"><div class="num">90 days</div><div class="lab">Replacement guarantee on every Revenue Bench placement, with an onboarding coach behind it.</div></div>
       </div>
-      <p>We publish the terms for a plain reason. A guarantee a buyer cannot read is marketing, and this one is short enough to read. If you want to hold us to it, the whole of it is above.</p>
+      <p>We publish the terms so a buyer can read them. The terms stated above apply as of July 2026 under our standard agreement.</p>
 
       <h2 id="sources">Where these figures come from</h2>
       <div class="method">
         <h3>About these figures</h3>
         <p>The 90-day standard comes from TopEchelon's survey of recruiting firms, where 90 days is the most common guarantee length at roughly 45 percent of firms. That figure is TopEchelon's survey data.</p>
-        <p>The coaching figures are OMG's own data. <a href="https://www.objectivemanagement.com" target="_blank" rel="noopener">Objective Management Group</a>, which has assessed sales talent since 1990, reports that reps coached several times a week gain 17 percentile points, and that only about 10 percent of reps get that cadence. We label those as OMG's numbers, analyzed here rather than independent peer-reviewed research.</p>
+        <p>The coaching figures are OMG's own data. <a href="https://www.objectivemanagement.com" target="_blank" rel="noopener">Objective Management Group</a>, which has assessed sales talent since 1990, reports that reps coached weekly gain 9 percentile points against reps coached never, that coaching several times a week gains 17 points, and that about 20 percent of reps are coached weekly while about 10 percent are coached several times a week. We label those as OMG's numbers, analyzed here rather than independent peer-reviewed research.</p>
+        <p>The fully loaded sales-turnover figure comes from the DePaul Center for Sales Leadership's survey of 435-plus organizations. Its average cost of sales turnover was about $49,508 and rose to about $115,000 fully loaded.</p>
+        <p>The re-run walkthrough follows Revenue Bench's own published terms and process. Market practice varies firm by firm, so buyers should verify another firm's window, remedy, re-run count, void conditions, decision authority, and support in writing.</p>
         <p>Revenue Bench's guarantee and onboarding terms are stated as of July 2026 and apply to placements made under our standard agreement.</p>
       </div>
 
@@ -188,6 +296,10 @@
       <div class="faq-item"><h3>When does the guarantee window start?</h3><p>It depends on the agreement, and the difference matters. Some guarantees start the clock on the signed offer, others on the candidate's first day of work. Those can be weeks apart. Ask which date your guarantee uses and get it in writing, because a window that starts at signing gives you less coverage than one that starts on day one.</p></div>
       <div class="faq-item"><h3>What voids a placement guarantee?</h3><p>Common void conditions include a change to the role or compensation after the start date, a change of manager, skipped onboarding steps the agreement required, an unpaid invoice, and a missed notification window for reporting the departure. None is unusual, but many firms keep the list in the contract rather than the marketing. Ask for the full list in writing before you sign.</p></div>
       <div class="faq-item"><h3>What are Revenue Bench's guarantee terms?</h3><p>A 90-day replacement guarantee on every placement: if the hire is not working inside the first 90 days from their start date, one free re-run of the search, no conditions, and whether it is working is the client's call. Every placement also includes a 90-day onboarding coach who meets the hire weekly and reports to the hiring manager. Terms as stated in July 2026.</p></div>
+      <div class="faq-item"><h3>What happens when a placement guarantee is used?</h3><p>Under Revenue Bench's published terms, the client decides the hire is not working inside the first 90 days from the hire's start date and tells Revenue Bench the guarantee is being used. Revenue Bench revisits the written success profile and runs the search again at no additional fee. One free re-run applies, with no conditions, and whether the hire is working is the client's call.</p></div>
+      <div class="faq-item"><h3>How long does a replacement search take?</h3><p>When the bench covers the role, a true shortlist is commonly ready within 1 to 2 weeks of the re-run kickoff. End to end, kickoff to shortlist is commonly 2 to 4 weeks, and a pure targeted search takes longer. Offer, acceptance, training, and the replacement hire's start follow the shortlist.</p></div>
+      <div class="faq-item"><h3>Does a placement guarantee refund the fee?</h3><p>A replacement guarantee returns a search rather than money. Under Revenue Bench's published terms, we run the search again at no additional fee, with one free re-run and no conditions. A fee refund is a different guarantee type, so buyers should confirm the remedy in writing.</p></div>
+      <div class="faq-item"><h3>How many times will a recruiter re-run a search?</h3><p>The agreement sets the number of re-runs, and buyers should get that number in writing before signing. Revenue Bench's standard agreement provides one free re-run at no additional fee, with no conditions. Market practice varies by firm.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -196,6 +308,7 @@
       <div class="related">
         <a class="rel" href="how-to-evaluate-a-sales-recruitment-agency.html"><div class="k">Evaluation</div><div class="t">How to evaluate a sales recruitment agency</div></a>
         <a class="rel" href="cost-of-a-bad-sales-hire.html"><div class="k">Hiring risk</div><div class="t">The true cost of a bad sales hire</div></a>
+        <a class="rel" href="sales-hire-not-working-out.html"><div class="k">Recovery</div><div class="t">What to do when a sales hire is not working out</div></a>
         <a class="rel" href="90-day-sales-onboarding-plan.html"><div class="k">Onboarding</div><div class="t">The first 90 days: a sales onboarding plan</div></a>
         <a class="rel" href="private-equity-sales-hiring-playbook.html"><div class="k">For operating partners</div><div class="t">The private equity operating partner's sales-hiring playbook</div></a>
       </div>
@@ -240,7 +353,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How Placement Guarantees Work in Sales Recruitment","description":"How placement guarantees work in sales recruitment: the three guarantee types, the standard 90-day window, the fine print that voids coverage, and Revenue Bench's own published terms.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"30 years in sales and sales leadership; client companies reaching $6B+ in exits and $3B+ in built revenue.","affiliation":{"@type":"Organization","name":"Revenue Bench"}},"publisher":{"@type":"Organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-14","dateModified":"2026-07-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/placement-guarantees-explained"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How Placement Guarantees Work in Sales Recruitment","description":"How placement guarantees work in sales recruitment: the three guarantee types, the standard 90-day window, the fine print that voids coverage, a step-by-step re-run walkthrough, and Revenue Bench's own published terms.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"30 years in sales and sales leadership; client companies reaching $6B+ in exits and $3B+ in built revenue.","affiliation":{"@type":"Organization","name":"Revenue Bench"}},"publisher":{"@type":"Organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-14","dateModified":"2026-07-28","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/placement-guarantees-explained"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -249,8 +362,60 @@
 {"@type":"Question","name":"Is a longer guarantee better?","acceptedAnswer":{"@type":"Answer","text":"Not on its own. Length matters less than whether the remedy is a replacement or a refund and what conditions void the coverage. A clean 90-day replacement can protect you more than a hedged six-month promise, but only if the terms say so in writing. Read the conditions before you weigh the number of days."}},
 {"@type":"Question","name":"When does the guarantee window start?","acceptedAnswer":{"@type":"Answer","text":"It depends on the agreement, and the difference matters. Some guarantees start the clock on the signed offer, others on the candidate's first day of work. Those can be weeks apart. Ask which date your guarantee uses and get it in writing, because a window that starts at signing gives you less coverage than one that starts on day one."}},
 {"@type":"Question","name":"What voids a placement guarantee?","acceptedAnswer":{"@type":"Answer","text":"Common void conditions include a change to the role or compensation after the start date, a change of manager, skipped onboarding steps the agreement required, an unpaid invoice, and a missed notification window for reporting the departure. None is unusual, but many firms keep the list in the contract rather than the marketing. Ask for the full list in writing before you sign."}},
-{"@type":"Question","name":"What are Revenue Bench's guarantee terms?","acceptedAnswer":{"@type":"Answer","text":"A 90-day replacement guarantee on every placement: if the hire is not working inside the first 90 days from their start date, one free re-run of the search, no conditions, and whether it is working is the client's call. Every placement also includes a 90-day onboarding coach who meets the hire weekly and reports to the hiring manager. Terms as stated in July 2026."}}
+{"@type":"Question","name":"What are Revenue Bench's guarantee terms?","acceptedAnswer":{"@type":"Answer","text":"A 90-day replacement guarantee on every placement: if the hire is not working inside the first 90 days from their start date, one free re-run of the search, no conditions, and whether it is working is the client's call. Every placement also includes a 90-day onboarding coach who meets the hire weekly and reports to the hiring manager. Terms as stated in July 2026."}},
+{"@type":"Question","name":"What happens when a placement guarantee is used?","acceptedAnswer":{"@type":"Answer","text":"Under Revenue Bench's published terms, the client decides the hire is not working inside the first 90 days from the hire's start date and tells Revenue Bench the guarantee is being used. Revenue Bench revisits the written success profile and runs the search again at no additional fee. One free re-run applies, with no conditions, and whether the hire is working is the client's call."}},
+{"@type":"Question","name":"How long does a replacement search take?","acceptedAnswer":{"@type":"Answer","text":"When the bench covers the role, a true shortlist is commonly ready within 1 to 2 weeks of the re-run kickoff. End to end, kickoff to shortlist is commonly 2 to 4 weeks, and a pure targeted search takes longer. Offer, acceptance, training, and the replacement hire's start follow the shortlist."}},
+{"@type":"Question","name":"Does a placement guarantee refund the fee?","acceptedAnswer":{"@type":"Answer","text":"A replacement guarantee returns a search rather than money. Under Revenue Bench's published terms, we run the search again at no additional fee, with one free re-run and no conditions. A fee refund is a different guarantee type, so buyers should confirm the remedy in writing."}},
+{"@type":"Question","name":"How many times will a recruiter re-run a search?","acceptedAnswer":{"@type":"Answer","text":"The agreement sets the number of re-runs, and buyers should get that number in writing before signing. Revenue Bench's standard agreement provides one free re-run at no additional fee, with no conditions. Market practice varies by firm."}}
 ]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Using the Revenue Bench placement guarantee: the re-run, step by step",
+  "description": "The six stages from the client's decision to use the guarantee through the replacement hire's first day.",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The client's call",
+      "description": "The hiring manager decides inside the first 90 days from the hire's start date whether the hire is working."
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Notice to Revenue Bench",
+      "description": "The hiring manager tells Revenue Bench that the guarantee is being used. Earlier notice starts the re-run earlier."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What the coach contributes",
+      "description": "The onboarding coach has met the hire weekly and the hiring manager weekly since the start date, so the decision is reached with the coach close to the work."
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "The profile is revisited",
+      "description": "Revenue Bench and the hiring manager read the written success profile against what the first hire showed about the role and selling environment."
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "The re-run search",
+      "description": "Revenue Bench runs the search again at no additional fee through the same published sourcing, assessment, screening, and shortlist process."
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "The replacement hire starts",
+      "description": "Offer and acceptance lead to training and a dedicated onboarding coach for the replacement hire's first 90 days."
+    }
+  ]
+}
 </script>
 
 <script>

@@ -29,6 +29,8 @@
 .prose h3{font-size:21px;margin:28px 0 10px;}
 .prose p{font-size:16.5px;line-height:1.75;color:var(--ink-mid);margin-bottom:16px;}
 .prose p strong{color:var(--navy);}
+.prose p a,.prose li a,.prose td a{color:var(--gold-deep);border-bottom:1px solid rgba(138,96,20,.32);transition:border-color .18s ease,color .18s ease;}
+.prose p a:hover,.prose li a:hover,.prose td a:hover{color:var(--navy);border-bottom-color:var(--navy);}
 .prose ul,.prose ol{margin:6px 0 18px 0;padding-left:0;list-style:none;display:grid;gap:10px;}
 .prose ul li{position:relative;padding-left:24px;font-size:16px;color:var(--ink-mid);line-height:1.6;}
 .prose ul li::before{content:'';position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--gold);}
