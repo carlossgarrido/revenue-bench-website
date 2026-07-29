@@ -44,13 +44,13 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/why-sales-hires-fail</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides/how-to-assess-a-salesperson</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -153,6 +153,12 @@
   <url>
     <loc>https://revenuebench.io/guides/first-100-days-portfolio-sales-team</loc>
     <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://revenuebench.io/guides/sales-assessment-vs-interview</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
