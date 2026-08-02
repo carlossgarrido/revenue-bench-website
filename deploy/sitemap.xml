@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -98,13 +98,13 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides/how-to-assess-a-salesperson</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/how-to-hire-a-vp-of-sales</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -158,7 +158,7 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides/sales-assessment-vs-interview</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -176,7 +176,13 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides/account-executive-interview-scorecard</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://revenuebench.io/guides/reference-checks-for-sales-hires</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
