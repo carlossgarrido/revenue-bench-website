@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>The True Cost of a Bad Sales Hire (and How to Avoid It) | Revenue Bench</title>
-<meta name="description" content="A bad sales hire costs a company $200,000 to $250,000 once you count base, draw, stalled pipeline, the replacement search, and management time. Here is the full breakdown and how to cut the risk before and after you hire." />
+<meta name="description" content="A revenue-role mis-hire costs $200,000 to $250,000 by Revenue Bench's own working figure. Use the vacancy ledger to compute the cost of an open sales territory from your own quota, pipeline, ramp, and team inputs." />
 <link rel="canonical" href="https://revenuebench.io/guides/cost-of-a-bad-sales-hire" />
 <meta property="og:title" content="The True Cost of a Bad Sales Hire" />
 <meta property="og:description" content="What a mis-hire really costs, why interviews miss it, and how to reduce the risk." />
@@ -36,6 +36,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 6px;}
+  .datatable{width:100%;min-width:680px;border-collapse:collapse;font-size:14.5px;}
+  .datatable th,.datatable td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+  .datatable th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .datatable th:first-child,.datatable td:first-child{width:26%;}
+  .datatable th:last-child,.datatable td:last-child{width:74%;}
+  .datatable td:first-child{font-weight:600;color:var(--navy);}
+  .datatable td{color:var(--ink-mid);line-height:1.55;}
+  .source-note{margin-top:14px;font-size:13px;color:var(--ink-soft);line-height:1.6;}
+  .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
+  .method h3{font-size:19px;margin-bottom:10px;}
+  .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+  .method p:last-child{margin-bottom:0;}
+</style>
 </head>
 <body>
 
@@ -57,8 +72,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>The true cost of a bad sales hire</span></div>
     <div class="eyebrow">Hiring risk</div>
     <h1>The true cost of a bad sales hire, and how to avoid it</h1>
-    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>A bad sales hire costs a company $200,000 to $250,000.</strong> That figure counts base salary, commission draw, the pipeline that stalled while the role underperformed, the cost of the replacement search, and the management time spent coaching someone out. At the leadership level it runs higher, because a weak sales manager quietly caps an entire team.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span></div>
+    <p class="deck"><strong>$200,000 to $250,000</strong> is Revenue Bench's own working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. An open role starts a second cost clock: in the illustration below, a $1.2M annual quota leaves $100,000 of revenue responsibility without an owner each month during a 90-day vacancy.</p>
   </div>
 </section>
 
@@ -68,70 +83,134 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>The visible cost of a mis-hire is the salary. The real cost is the lost pipeline, the management drag, and the months you cannot get back.</li>
-        <li>Interviews reward confidence, which does not predict quota performance. Objective assessment does.</li>
-        <li>Most early exits are onboarding failures, not hiring failures. The first 90 days decide whether a good hire works.</li>
-        <li>You can move the risk off your plan with assessment, real work samples, structured references, and a coached ramp.</li>
+        <li>Divide annual quota by 12 to find the monthly revenue responsibility attached to an open territory, then account for pipeline that will arrive one sales cycle late.</li>
+        <li>Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire after compensation, stalled pipeline, the replacement search, and management time are counted.</li>
+        <li>Vacancy and mis-hire costs run on separate clocks. A disciplined search run quickly controls both without lowering the selection standard.</li>
+        <li>Sales-specific assessment, work samples, pointed references, and structured onboarding reduce risk before and after the offer.</li>
       </ul>
     </div>
 
     <div class="toc-inline">
       <h4>In this guide</h4>
       <ol>
-        <li><a href="#breakdown">What a bad sales hire actually costs</a></li>
+        <li><a href="#vacancy">What an open revenue role costs per month</a></li>
+        <li><a href="#breakdown">What a bad sales hire costs</a></li>
+        <li><a href="#honest">What the vacancy ledger does not say</a></li>
         <li><a href="#why">Why the interview misses it</a></li>
-        <li><a href="#hidden">The hidden costs nobody budgets for</a></li>
-        <li><a href="#before">How to cut the risk before you hire</a></li>
-        <li><a href="#after">How to cut the risk after you hire</a></li>
+        <li><a href="#before">Cutting the risk before the hire</a></li>
+        <li><a href="#after">Cutting the risk after the hire</a></li>
       </ol>
     </div>
 
     <div class="prose">
-      <h2 id="breakdown">What a bad sales hire actually costs</h2>
-      <p>The number most leaders quote is the salary, because it is the only line that shows up cleanly in a budget. It is the smallest part of the bill. A mis-hire in a quota-carrying role carries at least five real costs, and only one of them is the comp you paid.</p>
+      <h2 id="vacancy">What an open revenue role costs per month</h2>
+      <p>Divide the annual quota for the role by 12 to find the monthly revenue responsibility that has no owner. The vacancy ledger starts there, then adds delayed pipeline, ramp productivity, the load transferred to the team, and the cost of running the ledger again after a mis-hire.</p>
+      <p>The illustration used through the ledger is an account executive with a $1.2M annual quota and a 90-day vacancy, which leaves $100,000 of revenue responsibility without an owner each month. It is an illustration, not a market average.</p>
+
+      <div class="table-scroll">
+        <table class="datatable">
+          <thead>
+            <tr>
+              <th scope="col">What it counts</th>
+              <th scope="col">How to compute it from your own numbers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Uncovered quota</td>
+              <td>Divide the annual quota for the role by 12. The result is the monthly revenue responsibility that has no owner while the role remains open. In the illustration, the account executive's $1.2M annual quota leaves $100,000 without an owner each month of the 90-day vacancy.</td>
+            </tr>
+            <tr>
+              <td>Pipeline not built</td>
+              <td>Multiply months vacant by the pipeline dollars the role is expected to create per month, derived from the company's own coverage ratio and the monthly quota responsibility. Revenue in a future quarter traces to pipeline built now, so the largest vacancy cost can arrive one sales cycle after the role is filled.</td>
+            </tr>
+            <tr>
+              <td>The ramp discount</td>
+              <td>Multiply the expected months to full productivity by the share of full productivity the company does not expect during ramp, then by the monthly revenue responsibility from the first row. CSO Insights, a third-party source, reports that 40% of companies say a new rep needs 10 or more months to reach full productivity.</td>
+            </tr>
+            <tr>
+              <td>Load on the remaining team</td>
+              <td>Estimate the hours spent redistributing accounts, covering customer work, managing the gap, and supervising the eventual handoff. This is an unbudgeted load measured from the company's own operating records.</td>
+            </tr>
+            <tr>
+              <td>The re-run multiplier</td>
+              <td>If the role is then mis-hired, run the full ledger again and add the mis-hire cost itself. Revenue Bench uses $200,000 to $250,000 as its working figure, while DePaul supplies the third-party range discussed below. When the hire has already failed, use the <a href="sales-hire-not-working-out.html">recovery path for a sales hire who is not working out</a>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The vacancy ledger is arithmetic on the company's own numbers, not a research finding; the labeled research figures on this page are listed in the methodology note.</p>
+      <p>Pipeline lag deserves special attention because the vacancy can appear contained while a future quarter is losing coverage. As one of Carlos Garrido's 11 Golden Rules of Sales Leadership puts it, <strong>"Pipeline coverage is the only insurance policy your quota needs."</strong></p>
+
+      <h2 id="breakdown">What a bad sales hire costs</h2>
+      <p>Revenue Bench uses a working figure of $200,000 to $250,000 for a revenue-role mis-hire. That estimate counts base compensation, draw, stalled pipeline, the replacement search, and management time.</p>
+      <p>DePaul University's Center for Sales Leadership, a third-party source that surveyed more than 435 organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded. Its research says a bad hire costs 30% to 200% of first-year salary, and 33% of entry-level sales hires leave within 12 months.</p>
+      <p>SBI Growth, a separate third-party source, reports that sales first-year turnover runs about 30%, roughly 2.5 times the 13% rate for employees overall. The DePaul and SBI Growth claims describe different populations and remain separate.</p>
+
+      <h3>The five-cost breakdown</h3>
       <ul>
-        <li><strong>Direct compensation.</strong> Base, draw, and benefits for the months the person was in the role, often six to nine before the decision is made.</li>
-        <li><strong>The replacement search.</strong> Agency fees or the internal hours to source, screen, and hire again, plus the second onboarding.</li>
-        <li><strong>Stalled pipeline.</strong> The territory or accounts that went uncovered or were worked badly. This is usually the largest number and the one nobody writes down.</li>
-        <li><strong>Management time.</strong> The hours a manager spends coaching, documenting, and eventually exiting a hire who should not have been made.</li>
-        <li><strong>Momentum.</strong> Six to twelve months of a ramp window that you do not get back, on a clock that does not stop.</li>
+        <li><strong>Direct compensation.</strong> Base compensation, draw, benefits, and other employment costs accumulate while the person remains in the role.</li>
+        <li><strong>Stalled pipeline.</strong> Weak prospecting, qualification, and follow-through leave future revenue without enough coverage. For many quota-carrying roles, this creates the largest exposure.</li>
+        <li><strong>The replacement search.</strong> The company pays for sourcing, screening, selection, and onboarding again through agency spend or internal time.</li>
+        <li><strong>Management time.</strong> Leaders spend hours coaching, reviewing work, documenting performance, reallocating accounts, and managing the eventual exit.</li>
+        <li><strong>Commercial disruption.</strong> Forecast confidence falls, customer continuity weakens, strong team members carry extra work, and a weak leader can spread poor hiring and sales practices across the team.</li>
       </ul>
-      <p>Add them up and $200,000 to $250,000 is conservative for an account executive. For a VP of Sales or CRO, the damage compounds, because the wrong leader hires the wrong reps and sets the wrong process before anyone notices.</p>
+      <p>The hidden costs live across operating lines rather than on one invoice. Managers lose time, accounts move between owners, forecasts become less dependable, and the strongest sellers absorb work that competes with their own quota. These costs belong in the decision even when the finance system records them under different categories.</p>
 
       <div class="omgband">
-        <div class="o"><div class="n">~20%</div><div class="l">of the time, a hiring manager's interview read alone picks a top performer.</div></div>
-        <div class="o"><div class="n">33%</div><div class="l">of sales hires leave within 12 months, about 2.5 times the rate for other roles.</div></div>
-        <div class="o"><div class="n">9% vs 33%</div><div class="l">first-year turnover for recommended hires versus those a sales-specific assessment flagged as not recommended.</div></div>
-        <div class="o"><div class="n">~$115K</div><div class="l">fully loaded cost of a single mis-hire on conservative third-party estimates.</div></div>
+        <div class="o"><div class="n">~$49,508</div><div class="l">DePaul average sales-turnover cost.</div></div>
+        <div class="o"><div class="n">~$115K</div><div class="l">DePaul fully loaded sales-turnover cost.</div></div>
+        <div class="o"><div class="n">9% vs 33%</div><div class="l">OMG 2024 first-year turnover, recommended hires versus candidates advised against.</div></div>
+        <div class="o"><div class="n">~20%</div><div class="l">Interview read alone identifies a top performer, Big Swift Kick research.</div></div>
       </div>
-      <p class="note" style="margin-top:14px;">Turnover and cost figures: DePaul Center for Sales Leadership. Assessment figures: Objective Management Group (OMG).</p>
+      <p class="source-note">The ~$49,508 average and ~$115K fully loaded figures come from DePaul University's Center for Sales Leadership. The 9% versus 33% comparison is OMG's own 2024 validation data for recommended hires and candidates OMG advised against who were hired anyway. The ~20% figure comes from research circulated in OMG's partner network by the firm Big Swift Kick; it is not an OMG published study.</p>
+
+      <h2 id="honest">What the vacancy ledger does not say</h2>
+      <p>The vacancy ledger prices risk exposure, not guaranteed loss. Uncovered quota is not the same as lost revenue because a strong team can absorb part of an open territory for a while. Absorption thins with time as managers and sellers divide attention across their existing responsibilities.</p>
+      <p>The honest reading treats the monthly quota figure as exposed responsibility. Pipeline gaps, customer coverage, ramp assumptions, and transferred work determine how much of that exposure becomes economic damage.</p>
+      <p>The answer to vacancy cost is never a rushed hire. The mis-hire figures on this page show the downside: DePaul places a bad hire at 30% to 200% of first-year salary, while Revenue Bench uses a $200,000 to $250,000 working figure for a revenue-role mis-hire.</p>
+      <p>The vacancy clock calls for urgency. The mis-hire record is the reason urgency cannot lower the selection standard, so a disciplined search run quickly beats both a long vacancy and rushed selection. Revenue Bench publishes <a href="../how-it-works.html">how its search, assessment, onboarding, and guarantee work together</a> without treating speed as permission to skip evidence. A recruiter fee should be evaluated against this full risk base, as the guide to <a href="sales-recruiter-fees.html">sales recruiter fees and search economics</a> explains.</p>
 
       <h2 id="why">Why the interview misses it</h2>
-      <p>The interview is the least reliable part of the hiring process, and sales is the worst place to rely on it. Selling and interviewing use the same muscles: rapport, storytelling, reading the buyer, and handling objections. A strong interviewer can be a weak closer, and a quiet closer can interview poorly. You are measuring the wrong thing and feeling confident about it.</p>
-      <p>The numbers bear this out. A hiring manager's interview read alone picks a top performer only about 20% of the time, which is close to a coin toss with worse odds. What predicts performance is not how someone presents for an hour. It is their will to sell, their coachability, their qualification discipline, and whether they can execute inside your specific sales motion. None of those reliably surface in a conversation, which is why hiring on gut feel produces a mis-hire rate that would be unacceptable in any other part of the business. We break down the recurring reasons in <a href="why-sales-hires-fail.html">why sales hires fail</a>.</p>
+      <p>A hiring manager's interview read alone identifies a top performer about 20% of the time. That figure comes from research circulated in OMG's partner network by the firm Big Swift Kick, not an OMG published study.</p>
+      <p>Sales candidates can use rapport, storytelling, objection handling, and buyer awareness during an interview. Those surface skills can create confidence without showing will to sell, coachability, qualification discipline, or fit with the company's selling motion. The recurring failure patterns are covered in <a href="why-sales-hires-fail.html">why sales hires fail</a>.</p>
+      <p>OMG's own 2024 validation data provides a separate outcome record: 72% of the candidates it recommended reached the top half of their sales force within 12 months. First-year turnover was 9% for recommended hires versus 33% for candidates OMG advised against who were hired anyway.</p>
+      <p>OMG's assessment documents state predictive validity in the 95 percent range. That is OMG's accuracy metric and remains distinct from the top-half outcome figure.</p>
 
-      <h2 id="hidden">The hidden costs nobody budgets for</h2>
-      <p>Beyond the direct math, a bad hire taxes the people around them. A struggling rep absorbs a disproportionate share of a manager's week. A bad leader pushes good reps toward the door, and the strongest are the easiest to lose because they have options. Forecasts built on a shaky role are wrong, and a board forgives a miss far more easily than it forgives a surprise.</p>
-      <p>These costs are real even though they never appear on an invoice. They are also the reason the cheapest hire is rarely the least expensive one.</p>
-
-      <h2 id="before">How to cut the risk before you hire</h2>
-      <p>You reduce mis-hire risk by changing what you measure and by refusing to skip steps under time pressure.</p>
+      <h2 id="before">Cutting the risk before the hire</h2>
+      <p>Sales-specific assessment, work samples, role definition, and pointed references reduce the chance of selecting an impressive interviewer for the wrong selling problem.</p>
       <ol>
-        <li><strong>Assess objectively.</strong> Use <a href="how-to-assess-a-salesperson.html">a validated, sales-specific assessment</a> to measure sales DNA and will to sell, not a generic personality test. Objective Management Group, the instrument we run, reports predictive validity in the 95 percent range, and in OMG's 2024 validation data 72% of the candidates it recommended reached the top half of the team within 12 months. It is the strongest screen we know.</li>
-        <li><strong>Use a work sample.</strong> A mock discovery call or a real-deal role-play shows you how someone actually sells. It is worth more than any answer to a behavioral question.</li>
-        <li><strong>Run references that ask the real question.</strong> Skip the soft ones. Ask whether the candidate's own reps would join them again, and whether the manager would rehire them to lead a team.</li>
+        <li><strong>Define the selling motion.</strong> Write down the buyer, sales cycle, prospecting demand, account model, manager expectations, and evidence of success before reviewing candidates.</li>
+        <li><strong>Assess sales capability.</strong> Use <a href="how-to-assess-a-salesperson.html">a validated, sales-specific assessment</a> to measure will to sell, Sales DNA, tactical skill, and role fit. Revenue Bench applies OMG through co-founder Steve Swanston's OMG Certified Partner firm.</li>
+        <li><strong>Use a work sample.</strong> A mock discovery call or deal review shows how the candidate asks questions, qualifies, responds to resistance, and advances an opportunity.</li>
+        <li><strong>Run pointed references.</strong> Ask former managers about the candidate's prospecting consistency, forecast discipline, coachability, and fit for the selling motion under consideration.</li>
+        <li><strong>Evaluate the search process.</strong> Use the <a href="how-to-evaluate-a-sales-recruitment-agency.html">sales recruitment agency scorecard</a> to compare evidence, process, guarantee terms, and commercial alignment.</li>
       </ol>
 
-      <h2 id="after">How to cut the risk after you hire</h2>
-      <p>Even a strong hire fails without a landing. Most early departures are onboarding failures, not selection failures, and they are preventable. A structured first 90 days, with weekly coaching for both the new hire and their manager, turns a promising hire into a performing one. This is exactly why every Revenue Bench placement includes a 90-day onboarding coach, and why we stand behind it with a replacement guarantee. When the risk of the hire sits with the firm that made it, the incentives finally point the right way. A replacement guarantee is one of the checks in <a href="how-to-evaluate-a-sales-recruitment-agency.html">how to evaluate a sales recruitment agency</a>.</p>
+      <h2 id="after">Cutting the risk after the hire</h2>
+      <p>A structured 90-day onboarding plan protects a sound selection while the new hire learns the market, method, accounts, and manager expectations. The vacancy clock continues through ramp because the start date does not mark full productivity.</p>
+      <p>CSO Insights, a third-party source, reports that 40% of companies say a new rep needs 10 or more months to reach full productivity. That finding supports active ramp management rather than a start-date handoff.</p>
+      <p>The <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding plan</a> gives the hire and manager a shared operating cadence. Every Revenue Bench placement includes a 90-day onboarding coach who works with the hire and hiring manager, plus a 90-day replacement guarantee. If the hire leaves or is not performing within the first 90 days from the hire's start date, Revenue Bench runs the search again at no additional fee. One free re-run, the client's call.</p>
+
+      <h2>Methodology and sources</h2>
+      <div class="method">
+        <h3>How to read these figures</h3>
+        <p>The vacancy ledger is arithmetic on the reader's own annual quota, pipeline coverage, ramp assumptions, and team hours. Its worked example uses an account executive with a $1.2M annual quota and a 90-day vacancy as an illustration, not a research claim or market average.</p>
+        <p>Cost and turnover figures attributed to DePaul University's Center for Sales Leadership, SBI Growth, and CSO Insights are third-party research. DePaul surveyed more than 435 organizations. The SBI Growth first-year turnover comparison and DePaul entry-level turnover figure describe separate claims.</p>
+        <p>The 72% outcome and 9% versus 33% first-year turnover figures are OMG's own 2024 validation data. OMG's assessment documents state predictive validity in the 95 percent range as a separate accuracy metric.</p>
+        <p>The interview-read figure comes from research circulated in OMG's partner network by the firm Big Swift Kick. It is not an OMG published study.</p>
+        <p>Revenue Bench's OMG methodology is applied through Swanston Growth Advisors, a Certified Partner of Objective Management Group. Revenue Bench labels its $200,000 to $250,000 revenue-role mis-hire estimate as its own working figure.</p>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
-      <div class="faq-item"><h3>How much does a bad sales hire cost?</h3><p>Typically $200,000 to $250,000 for an account executive, counting base, draw, stalled pipeline, the replacement search, and management time. It is higher for a sales leader, because a weak manager caps the entire team.</p></div>
-      <div class="faq-item"><h3>What is the biggest part of that cost?</h3><p>Usually the stalled pipeline. The salary is visible, but the revenue that went unworked while the role underperformed is larger and rarely measured.</p></div>
-      <div class="faq-item"><h3>How do I reduce the risk of a mis-hire?</h3><p>Assess objectively with a sales-specific instrument, add a work sample, run pointed reference checks, and then coach the first 90 days. Selection lowers the odds of a bad hire; onboarding protects a good one.</p></div>
+      <div class="faq-item"><h3>How much does a bad sales hire cost?</h3><p>Revenue Bench's own working figure for a revenue-role mis-hire is $200,000 to $250,000, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University places a bad hire at 30% to 200% of first-year salary.</p></div>
+      <div class="faq-item"><h3>What is the biggest part of that cost?</h3><p>Stalled pipeline often carries the greatest exposure because weak coverage affects revenue after the performance problem begins. A company can compute that exposure from its own quota, pipeline coverage, and sales cycle.</p></div>
+      <div class="faq-item"><h3>How do I reduce the risk of a mis-hire?</h3><p>Use a sales-specific assessment, add a work sample, run pointed reference checks, and manage a structured 90-day onboarding plan. Selection reduces hiring risk, while onboarding protects a sound hire through ramp.</p></div>
+      <div class="faq-item"><h3>What does an open sales territory cost per month?</h3><p>Divide the role's annual quota by 12, then add the pipeline lag created while the role remains open. For illustration, a $1.2M annual quota leaves $100,000 of revenue responsibility without an owner each month, while a 90-day vacancy also delays the pipeline that would have supported a future period.</p></div>
+      <div class="faq-item"><h3>Is it better to leave a sales role open than to hire fast?</h3><p>A disciplined search run quickly beats both a long vacancy and a rushed hire. Computing open-role exposure from the company's own quota and pipeline shows the cost of waiting, while DePaul University's 30% to 200% of first-year salary range shows the downside of lowering the hiring standard.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -139,7 +218,7 @@
       <div class="rule"></div>
       <div class="related">
         <a class="rel" href="how-to-assess-a-salesperson.html"><div class="k">Selection</div><div class="t">How to assess a salesperson beyond the resume</div></a>
-        <a class="rel" href="how-to-hire-a-vp-of-sales.html"><div class="k">Leadership</div><div class="t">How to hire a VP of Sales or sales manager</div></a>
+        <a class="rel" href="sales-hire-not-working-out.html"><div class="k">Recovery</div><div class="t">What to do when a sales hire is not working out</div></a>
         <a class="rel" href="90-day-sales-onboarding-plan.html"><div class="k">Onboarding</div><div class="t">The 90-day onboarding plan that reaches quota</div></a>
       </div>
     </div>
@@ -180,13 +259,15 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The True Cost of a Bad Sales Hire (and How to Avoid It)","description":"A bad sales hire costs $200,000 to $250,000 once you count base, draw, stalled pipeline, the replacement search, and management time. The full breakdown and how to cut the risk.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/cost-of-a-bad-sales-hire"}}
+{"@context":"https://schema.org","@type":"Article","headline":"The True Cost of a Bad Sales Hire (and How to Avoid It)","description":"A revenue-role mis-hire costs $200,000 to $250,000 by Revenue Bench's own working figure. The vacancy ledger shows companies how to compute open-role exposure from their own quota, pipeline, ramp, and team inputs.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-04","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/cost-of-a-bad-sales-hire"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How much does a bad sales hire cost?","acceptedAnswer":{"@type":"Answer","text":"Typically $200,000 to $250,000 for an account executive, counting base, draw, stalled pipeline, the replacement search, and management time. It is higher for a sales leader because a weak manager caps the entire team."}},
-{"@type":"Question","name":"What is the biggest part of the cost of a bad sales hire?","acceptedAnswer":{"@type":"Answer","text":"Usually the stalled pipeline. The salary is visible, but the revenue that went unworked while the role underperformed is larger and rarely measured."}},
-{"@type":"Question","name":"How do I reduce the risk of a mis-hire?","acceptedAnswer":{"@type":"Answer","text":"Assess objectively with a sales-specific instrument, add a work sample, run pointed reference checks, then coach the first 90 days. Selection lowers the odds of a bad hire; onboarding protects a good one."}}
+{"@type":"Question","name":"How much does a bad sales hire cost?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench's own working figure for a revenue-role mis-hire is $200,000 to $250,000, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University places a bad hire at 30% to 200% of first-year salary."}},
+{"@type":"Question","name":"What is the biggest part of that cost?","acceptedAnswer":{"@type":"Answer","text":"Stalled pipeline often carries the greatest exposure because weak coverage affects revenue after the performance problem begins. A company can compute that exposure from its own quota, pipeline coverage, and sales cycle."}},
+{"@type":"Question","name":"How do I reduce the risk of a mis-hire?","acceptedAnswer":{"@type":"Answer","text":"Use a sales-specific assessment, add a work sample, run pointed reference checks, and manage a structured 90-day onboarding plan. Selection reduces hiring risk, while onboarding protects a sound hire through ramp."}},
+{"@type":"Question","name":"What does an open sales territory cost per month?","acceptedAnswer":{"@type":"Answer","text":"Divide the role's annual quota by 12, then add the pipeline lag created while the role remains open. For illustration, a $1.2M annual quota leaves $100,000 of revenue responsibility without an owner each month, while a 90-day vacancy also delays the pipeline that would have supported a future period."}},
+{"@type":"Question","name":"Is it better to leave a sales role open than to hire fast?","acceptedAnswer":{"@type":"Answer","text":"A disciplined search run quickly beats both a long vacancy and a rushed hire. Computing open-role exposure from the company's own quota and pipeline shows the cost of waiting, while DePaul University's 30% to 200% of first-year salary range shows the downside of lowering the hiring standard."}}
 ]}
 </script>
 
