@@ -171,6 +171,9 @@ h1,h2,h3,h4,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:
 
 /* contact / CTA */
 .cta-band{background:var(--navy);color:#fff;border-radius:0;}
+.cta-band .lead{color:rgba(255,255,255,.66);}
+.cta-band .note{color:rgba(255,255,255,.45);}
+.cta-band .muted{color:rgba(255,255,255,.55);}
 .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
 .cta-grid h2{color:#fff;font-size:clamp(34px,4vw,50px);}
 .cta-grid .lead{color:rgba(255,255,255,.7);margin-top:16px;}
