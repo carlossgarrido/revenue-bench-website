@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -194,13 +194,19 @@
   </url>
   <url>
     <loc>https://revenuebench.io/guides/choosing-a-sales-leadership-model</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://revenuebench.io/guides/founders-first-sales-hires</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://revenuebench.io/guides/hiring-revenue-operations-and-enablement</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
