@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Sales Compensation Benchmarks for 2026 | Revenue Bench</title>
-<meta name="description" content="Sales comp in 2026 has two anchors: market OTE for the role and what you can afford, roughly 15 to 25 percent of new revenue as total sales cost. Benchmark OTE table by role, base and variable mix, quota, and accelerators." />
+<meta name="description" content="Build sales pay from two anchors, a worked plan ledger, a role-design table, and the sources behind real compensation benchmark data." />
 <link rel="canonical" href="https://revenuebench.io/guides/sales-compensation-benchmarks-2026" />
 <meta property="og:title" content="Sales Compensation Benchmarks for 2026" />
-<meta property="og:description" content="OTE benchmarks by role, base and variable mix logic, quota setting, accelerators, draws, and clawbacks for 2026." />
+<meta property="og:description" content="Build sales pay from two anchors, a worked plan ledger, a role-design table, and the sources behind real compensation benchmark data." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/sales-compensation-benchmarks-2026.png">
   <meta property="og:image:width" content="1200">
@@ -36,6 +36,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1140px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
+  .decision-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px;line-height:1.55;}
+  .decision-table th,.decision-table td{text-align:left;vertical-align:top;padding:16px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+  .decision-table th:last-child,.decision-table td:last-child{border-right:0;}
+  .decision-table tbody tr:last-child td{border-bottom:0;}
+  .decision-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
+  .decision-table td{color:var(--ink-mid);}
+  .decision-table td:first-child{font-weight:600;color:var(--navy);}
+  .ledger-table{min-width:900px;}
+  .ledger-table td:first-child{width:8%;}
+  .ledger-table td:nth-child(2){width:27%;}
+  .ledger-table td:nth-child(3){width:42%;}
+  .ledger-table td:last-child{width:23%;font-weight:600;color:var(--gold-deep);}
+  .role-table{min-width:1080px;}
+  .role-table td:first-child{width:15%;}
+  .role-table td:nth-child(2){width:25%;}
+  .role-table td:nth-child(3){width:25%;font-weight:600;color:var(--gold-deep);}
+  .role-table td:last-child{width:35%;color:var(--ink-soft);}
+  .artifact-label{margin:12px 0 8px;font-size:13.5px;font-weight:600;color:var(--gold-deep);}
+  .table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+  .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  .table-scroll:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:28px;}
+  .method h3{font-size:19px;margin-bottom:10px;}
+  .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+  .method p:last-child{margin-bottom:0;}
+  .author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+  .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+  .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  @media(max-width:640px){
+    .table-scroll{width:calc(100vw - 24px);}
+    .author-box{align-items:flex-start;}
+  }
+</style>
 </head>
 <body>
 
@@ -57,8 +93,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales compensation benchmarks for 2026</span></div>
     <div class="eyebrow">Compensation</div>
     <h1>Sales compensation benchmarks for 2026</h1>
-    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>To attract top revenue talent, pay a competitive on-target earning and keep the plan simple enough that a rep can do the math in their head.</strong> Every plan sits on two anchors: the market OTE for the role, and what you can afford, roughly 15 to 25 percent of new revenue as total sales cost. Get those two right and the rest of the plan follows.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>9 min read</span></div>
+    <p class="deck"><strong>Every sales compensation plan rests on two numbers: the market rate for the role and what the company can afford per dollar of new revenue.</strong> This guide shows where each number comes from and how to build the plan from them. The page does not publish a salary table because a benchmark without a source, a sample, and a date is decoration. <a href="pe-sales-leader-compensation.html">Sales-leader packages in sponsor-owned companies are a different market with their own guide</a>.</p>
   </div>
 </section>
 
@@ -68,10 +104,10 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>Anchor every plan on two numbers: market OTE for the role and total sales cost at roughly 15 to 25 percent of new revenue.</li>
-        <li>Weight base toward retention roles and variable toward new-logo hunting. The mix should match the job.</li>
-        <li>Set quota so the median rep can reach 70 to 80 percent of plan, not only the star.</li>
-        <li>Pay accelerators above 100 percent and do not cap. A cap quietly tells your best reps to stop.</li>
+        <li>Anchor every plan on two numbers: the market rate for the role and total sales cost as a share of new revenue. Revenue Bench's working range is 15 to 25 percent.</li>
+        <li>Derive the market number from sourced data and your own offer history rather than a published table. A live search is the freshest read of what the role costs.</li>
+        <li>Match the base-variable mix to what the person directly controls.</li>
+        <li>Set quota the median performer can meaningfully reach, and pay accelerators above 100 percent of plan with no cap.</li>
       </ul>
     </div>
 
@@ -79,60 +115,193 @@
       <h4>In this guide</h4>
       <ol>
         <li><a href="#anchors">The two anchors</a></li>
-        <li><a href="#benchmarks">OTE benchmarks by role</a></li>
-        <li><a href="#mix">Base and variable mix by role</a></li>
-        <li><a href="#quota">Setting quota the right way</a></li>
+        <li><a href="#market">Where the market number comes from</a></li>
+        <li><a href="#ledger">Decision artifact #1: The plan ledger, worked</a></li>
+        <li><a href="#mix">Decision artifact #2: The role-design table</a></li>
+        <li><a href="#quota">Setting quota</a></li>
         <li><a href="#accelerators">Accelerators, draws, and clawbacks</a></li>
+        <li><a href="#behavior">What the plan cannot do</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
       </ol>
     </div>
 
     <div class="prose">
       <h2 id="anchors">The two anchors</h2>
-      <p>A sales comp plan can get complicated fast, but it always rests on two numbers. The first is the market OTE for the role. If you pay below what comparable companies pay, your best candidates take other offers and your strongest reps get recruited away. The second is what you can afford per dollar of bookings. As a rule of thumb, total sales cost, meaning fully loaded comp across the selling team, lands around 15 to 25 percent of new revenue.</p>
-      <p>Those two anchors pull against each other, and that tension is the whole job. Market OTE tells you what you have to pay to compete. Affordability tells you what the model can sustain. A good plan sits where a competitive number and a healthy cost ratio overlap. Everything else, the mix, the quota, the accelerators, is detail layered on top of that foundation.</p>
+      <p>The market rate tells you what a qualified person can command for the role you have defined. Against that sits affordability: how much the selling model can carry for each dollar of new revenue. Revenue Bench's working range for total sales cost, meaning fully loaded selling expense across the team, is 15 to 25 percent of new revenue.</p>
+      <p>The tension between those anchors is the design job: pay enough to win the person the role needs, inside a cost the model can sustain. The mix, quota, and payout mechanics need to fit inside the overlap.</p>
 
-      <h2 id="benchmarks">OTE benchmarks by role</h2>
-      <p>The table below shows indicative on-target earnings by role, split into base, variable, and the resulting pay mix. Use it as a starting reference, then adjust for your geography, sales motion, and deal size.</p>
-      <table class="otable">
-        <thead><tr><th>Role</th><th>Base</th><th>Variable</th><th>OTE</th><th>Mix</th></tr></thead>
-        <tbody>
-          <tr><td>SDR / BDR</td><td>$55k</td><td>$20k</td><td>$75k</td><td>73/27</td></tr>
-          <tr><td>AE, SMB</td><td>$65k</td><td>$55k</td><td>$120k</td><td>54/46</td></tr>
-          <tr><td>AE, Mid-market</td><td>$85k</td><td>$70k</td><td>$155k</td><td>55/45</td></tr>
-          <tr><td>AE, Enterprise</td><td>$130k</td><td>$130k</td><td>$260k</td><td>50/50</td></tr>
-          <tr><td>Sales Manager</td><td>$120k</td><td>$60k</td><td>$180k</td><td>67/33</td></tr>
-          <tr><td>VP Sales</td><td>$180k</td><td>$120k</td><td>$300k</td><td>60/40</td></tr>
-        </tbody>
-      </table>
-      <p class="note" style="margin-top:0;">Ranges are indicative US growth-stage figures. Adjust for geography, motion, and deal size.</p>
+      <h2 id="market">Where the market number comes from</h2>
+      <p>Use three sources, moving from broad published direction toward evidence from the live role.</p>
+      <ol>
+        <li><strong>Published compensation guides from recruiters and compensation-data platforms.</strong> They offer useful direction, but each reflects its publisher's client base, sample, and cutoff date. Figures vary widely between sources, and a table without those three things attached cannot price your role.</li>
+        <li><strong>The company's offer-and-decline history.</strong> What candidates accepted, declined, and countered over the last year is benchmark data nobody else has. It reveals where the company's role, story, and offer meet the market.</li>
+        <li><strong>The live market during a search.</strong> Qualified candidates in your geography and selling motion show what they will accept this quarter. This is the freshest benchmark there is, and it arrives as a byproduct of running the search itself. The company reads that evidence and sets its own number.</li>
+      </ol>
+      <p>Offer history and live candidate response show what the market cleared. The role's range is still built from job-related criteria: scope, selling motion, and plan responsibility. Hold the same range for every candidate considered, and disclose it, at minimum where the jurisdiction requires disclosure. A candidate's current or prior compensation does not enter the calculation; salary-history inquiries are restricted in numerous US states and cities, and counsel should confirm the requirements that apply to the search.</p>
+      <p>That is why this page teaches the method instead of printing a table: the table a buyer needs is the one built from their own plan, and the next section builds it.</p>
 
-      <h2 id="mix">Base and variable mix by role</h2>
-      <p>The split between base and variable is not arbitrary. It should track how much of the outcome the rep actually controls. The more a role is about pure new-logo hunting, the more pay should sit in variable, because the rep drives the result and a bigger upside sharpens the incentive. The more a role is about retention, coverage, or relationship work, the more pay should sit in base, because the outcome depends on factors the rep does not fully own.</p>
-      <p>That is why the mix tightens toward base as you move up and toward retention work, and loosens toward variable for front-line hunting roles. A new-logo enterprise AE often sits near a 50/50 split, while <a href="how-to-hire-a-vp-of-sales.html">a sales manager</a> or a retention-heavy role carries a higher base share. Match the mix to the job, and the plan rewards the behavior you actually want.</p>
+      <h2 id="ledger">Decision artifact #1: The plan ledger, worked</h2>
+      <p>The plan ledger builds the affordability anchor from the company's own numbers. Start with planned new revenue, choose a point inside the working cost range, and test whether headcount, pay, quota, margin, and sales-cycle assumptions hold together.</p>
+      <p class="artifact-label">Worked illustration on stated assumptions</p>
+      <div class="table-scroll" role="region" aria-label="Worked sales compensation plan ledger" tabindex="0">
+        <table class="decision-table ledger-table">
+          <caption class="vh">Worked illustration of a sales compensation plan ledger using stated assumptions</caption>
+          <thead>
+            <tr>
+              <th scope="col">Step</th>
+              <th scope="col">The question</th>
+              <th scope="col">The arithmetic</th>
+              <th scope="col">The result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>What new revenue is planned for the year?</td>
+              <td>The company's own plan</td>
+              <td>$3,000,000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>What can selling cost?</td>
+              <td>$3,000,000 x 20 percent, the midpoint of the 15-to-25 working range</td>
+              <td>$600,000 fully loaded</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>How does the envelope split?</td>
+              <td>Three sellers at $160,000 OTE, the rest to the management share of selling cost, tools, and recruiting</td>
+              <td>$480,000 + $120,000</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>What quota does that imply?</td>
+              <td>$3,000,000 across three sellers</td>
+              <td>$1,000,000 per seller</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Does the plan hold together?</td>
+              <td>Quota at $1,000,000 against $160,000 OTE, a 6.25x ratio; check it against your gross margin and sales cycle</td>
+              <td>The plan fits the envelope; gross margin and cycle length decide whether it holds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">The ledger is one worked illustration on stated assumptions. Every dollar figure in it exists to show the arithmetic, and none of them is a market benchmark. Most companies also assign total quota above the revenue target so the plan absorbs misses; the illustration keeps the two equal for clarity.</p>
 
-      <h2 id="quota">Setting quota the right way</h2>
-      <p>Quota is where most plans quietly break. The common mistake is to set the number so only a star can reach it, which looks ambitious on a spreadsheet and demoralizes everyone else in practice. The right target is reachable by the middle of the team. Set quota so the median rep can realistically reach 70 to 80 percent of plan, not only the top performer.</p>
-      <p>That standard matters for two reasons. First, a quota the median rep can hit keeps the team motivated, because effort visibly pays off rather than feeling futile. Second, it keeps your forecast honest, because a plan built on numbers most reps will miss produces a pipeline that overstates what will actually close. A reachable quota is both a retention tool and a planning tool.</p>
+      <h2 id="mix">Decision artifact #2: The role-design table</h2>
+      <p>The base-variable mix is a design decision that follows what the person directly controls. The decision requires no dollar figures.</p>
+      <div class="table-scroll" role="region" aria-label="Base-variable role-design table" tabindex="0">
+        <table class="decision-table role-table">
+          <caption class="vh">Role-design table for setting base-variable mix by direct control</caption>
+          <thead>
+            <tr>
+              <th scope="col">Role</th>
+              <th scope="col">What the person directly controls</th>
+              <th scope="col">Where the mix leans</th>
+              <th scope="col">The failure pattern when it is set wrong</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SDR / BDR</td>
+              <td>Activity volume and meeting quality, rather than deal outcomes</td>
+              <td>Base-heavy, with variable pay on qualified meetings held</td>
+              <td>Paying on booked-but-not-held meetings buys calendar spam.</td>
+            </tr>
+            <tr>
+              <td>AE, new-logo</td>
+              <td>The deal from first meeting to close</td>
+              <td>The loosest mix on the team, approaching an even split as deal control rises</td>
+              <td>A base-heavy plan pays for effort while the pipeline stalls.</td>
+            </tr>
+            <tr>
+              <td>AE / AM, retention-heavy</td>
+              <td>Shared outcomes with product, service, and success teams</td>
+              <td>Base-heavy, with variable pay on retention plus expansion</td>
+              <td>A hunter mix on a farmer role pays for churn nobody caused and rewards discounting to hold logos.</td>
+            </tr>
+            <tr>
+              <td><a href="how-to-hire-a-vp-of-sales.html">Front-line sales manager</a></td>
+              <td>Coaching, pipeline discipline, and hiring, rather than individual deals</td>
+              <td>Base-heavy, with variable pay on team attainment</td>
+              <td>A manager paid on personal deals competes with their own reps.</td>
+            </tr>
+            <tr>
+              <td>VP / Head of Sales</td>
+              <td>The system: process, hiring, and forecast</td>
+              <td>Base-heavy, with variable pay on the operating plan the board reviews</td>
+              <td>An all-commission leader optimizes this quarter and starves next year's foundation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For the added structure around equity, exit terms, and sponsor timing, <a href="pe-sales-leader-compensation.html">sales-leader packages in sponsor-owned companies</a> are covered in their own guide.</p>
+
+      <h2 id="quota">Setting quota</h2>
+      <p>The common failure is a number only the star reaches. It looks ambitious in a plan and demoralizes everyone else when sustained effort has little chance of producing meaningful payout.</p>
+      <p>Revenue Bench's working test is that the median performer can meaningfully reach 70 to 80 percent of plan. That standard protects motivation because effort visibly pays. It also improves forecast honesty, since a plan most of the team will miss overstates the pipeline.</p>
 
       <h2 id="accelerators">Accelerators, draws, and clawbacks</h2>
-      <p>Above 100 percent of plan, pay accelerators. When a rep blows past quota, the commission rate on the overage should go up, not stay flat and never get capped. A cap quietly tells your best reps to stop selling once they hit the ceiling, which is the opposite of what you want from the people who can carry the number. The reps who can overperform are exactly the ones you should be paying more, not less, at the margin.</p>
-      <p>Two other mechanics round out a plan. A draw is guaranteed pay against future commission, usually used to <a href="90-day-sales-onboarding-plan.html">bridge a new hire through ramp</a> before their pipeline matures, and it can be recoverable or non-recoverable depending on how much risk you want the rep to carry early. A clawback recovers commission already paid when a deal is later cancelled or refunded, which keeps reps honest about deal quality rather than chasing bookings that do not stick. Use both sparingly and state them plainly, so the plan stays simple enough for a rep to trust.</p>
+      <p>Above 100 percent of plan, the rate on the overage rises and is never capped. A cap prices the marginal effort of the exact people who can carry the number at zero and gives them a stopping point.</p>
+      <p>A draw can <a href="90-day-sales-onboarding-plan.html">bridge a new hire through ramp</a> while the person builds a working pipeline. State in writing whether the draw is recoverable, and have counsel review the wage terms of a recoverable draw before offering it.</p>
+      <p>A clawback recovers paid commission when revenue reverses. Define the trigger events and the look-back window in the plan document, then have counsel review those terms as well. Clear recovery rules connect payout to revenue quality without leaving either party to interpret the plan after a reversal.</p>
+
+      <h2 id="behavior">What the plan cannot do</h2>
+      <p>One of Carlos Garrido's operating philosophies reads, "Your compensation model shapes your sales behavior and outcome." The plan steers the people you have; every plan encourages some behaviors and discourages others, so the design question is which.</p>
+      <p>OMG's data shows most salespeople are intrinsically motivated, and only about a quarter are extrinsically motivated. A richer plan alone will not move most of a team, and pay cannot install drive that did not arrive with the person. Treat <a href="will-to-sell.html">drive as a hiring decision</a>.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <div class="method">
+        <p>The working ranges on this page, the 15-to-25-percent envelope and the quota test, are Revenue Bench's own working guidance from sales hiring and selection work rather than survey findings. The OMG figure is OMG's research.</p>
+        <p>Candidate assessment runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group. Revenue Bench does not design, set, benchmark, or approve compensation; the company and its advisers own those decisions.</p>
+      </div>
+
+      <div class="author-box">
+        <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+        <div>
+          <div class="an">Carlos Garrido</div>
+          <div class="at">An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+        </div>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
-      <div class="faq-item"><h3>How much should I pay a salesperson in 2026?</h3><p>Pay a competitive on-target earning for the role and market, from roughly $75k OTE for an SDR to $300k for a VP of Sales, and keep total sales cost around 15 to 25 percent of new revenue. Set quota so the median rep can realistically reach 70 to 80 percent of plan.</p></div>
-      <div class="faq-item"><h3>What is a good base-to-variable mix for sales roles?</h3><p>Match the mix to how much the rep controls the outcome. New-logo hunting roles lean toward variable, often near 50/50 for an enterprise AE, while retention and management roles carry a higher base share. The split should reward the behavior the role is actually responsible for.</p></div>
-      <div class="faq-item"><h3>How should I set sales quota?</h3><p>Set quota so the median rep can reach 70 to 80 percent of plan, not only the star. A reachable target keeps the whole team motivated and keeps your forecast honest, because a quota most reps will miss produces a pipeline that overstates what will close.</p></div>
-      <div class="faq-item"><h3>Should I cap sales commission?</h3><p>No. Pay accelerators above 100 percent of plan instead. A cap quietly tells your best reps to stop selling once they hit the ceiling. The people who can overperform are the ones you want to pay more at the margin, not less.</p></div>
+
+      <div class="faq-item">
+        <h3>How much should I pay a salesperson in 2026?</h3>
+        <p>Anchor on two numbers: the market rate for the role, from sourced compensation data, your own offer history, and live candidate response, and affordability, using Revenue Bench's working range of 15 to 25 percent of new revenue as total sales cost. A single published dollar figure cannot price your role without your geography, motion, and deal size attached.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is a good base-to-variable mix for sales roles?</h3>
+        <p>The mix follows what the person directly controls. New-logo roles run the loosest mix on the team; retention, management, and leadership roles carry a higher base share.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How should I set sales quota?</h3>
+        <p>Revenue Bench's working test is that the median performer can meaningfully reach 70 to 80 percent of plan. That level keeps effort visibly connected to pay and keeps the forecast honest, because a plan most of the team will miss overstates the pipeline.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Should I cap sales commission?</h3>
+        <p>No. Pay accelerators above 100 percent of plan. A cap prices the marginal effort of your best performers at zero and tells them when to stop selling.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Where can I find sales compensation benchmark data?</h3>
+        <p>Use published guides from recruiters and compensation platforms for direction, with their sample and date caveats attached, then add your own offer-and-decline history. The live market during a search is the freshest read of what a role costs this quarter.</p>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
       <div class="eyebrow">Related guides</div>
       <div class="rule"></div>
       <div class="related">
-        <a class="rel" href="how-to-hire-a-vp-of-sales.html"><div class="k">Leadership</div><div class="t">How to hire a VP of Sales or sales manager</div></a>
+        <a class="rel" href="pe-sales-leader-compensation.html"><div class="k">Private equity</div><div class="t">Sales-leader compensation in a PE-backed company</div></a>
         <a class="rel" href="cost-of-a-bad-sales-hire.html"><div class="k">Hiring risk</div><div class="t">The true cost of a bad sales hire</div></a>
         <a class="rel" href="90-day-sales-onboarding-plan.html"><div class="k">Onboarding</div><div class="t">The 90-day onboarding plan that reaches quota</div></a>
       </div>
@@ -141,12 +310,12 @@
   </div>
 </section>
 
-<section class="section cta-band">
+<section class="section cta-band bg-navy">
   <div class="container center maxw-680 mx-auto reveal">
-    <div class="eyebrow">Pay to attract the best</div>
+    <div class="eyebrow">Hire people the plan can pay</div>
     <div class="rule"></div>
-    <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">Building a plan that attracts top sellers?</h2>
-    <p class="lead" style="margin:16px auto 28px;">We help you set a competitive, affordable plan, then assess and match talent from a pre-vetted bench and coach the hire through the first 90 days.</p>
+    <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">The plan pays for behavior. The hire brings it.</h2>
+    <p class="lead" style="margin:16px auto 28px;">Revenue Bench finds the people compensation plans are built to pay. Every candidate is assessed through co-founder Steve Swanston's OMG Certified Partner firm before presentation, matched to the company's motion, and coached through the first 90 days. Every placement carries a 90-day replacement guarantee from the hire's start date, with one free re-run of the search, the client's call. Compensation design remains with the company and its advisers; Revenue Bench does not design compensation plans.</p>
     <a href="../contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -174,14 +343,15 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Sales Compensation Benchmarks for 2026","description":"Sales comp in 2026 has two anchors: market OTE for the role and total sales cost at roughly 15 to 25 percent of new revenue. Benchmark OTE by role, mix logic, quota, and accelerators.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Sales Compensation Benchmarks for 2026","description":"Build sales pay from two anchors, a worked plan ledger, a role-design table, and the sources behind real compensation benchmark data.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-12","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How much should I pay a salesperson in 2026?","acceptedAnswer":{"@type":"Answer","text":"Pay a competitive on-target earning for the role and market, from roughly $75k OTE for an SDR to $300k for a VP of Sales, and keep total sales cost around 15 to 25 percent of new revenue. Set quota so the median rep can realistically reach 70 to 80 percent of plan."}},
-{"@type":"Question","name":"What is a good base-to-variable mix for sales roles?","acceptedAnswer":{"@type":"Answer","text":"Match the mix to how much the rep controls the outcome. New-logo hunting roles lean toward variable, often near 50/50 for an enterprise AE, while retention and management roles carry a higher base share. The split should reward the behavior the role is actually responsible for."}},
-{"@type":"Question","name":"How should I set sales quota?","acceptedAnswer":{"@type":"Answer","text":"Set quota so the median rep can reach 70 to 80 percent of plan, not only the star. A reachable target keeps the whole team motivated and keeps your forecast honest, because a quota most reps will miss produces a pipeline that overstates what will close."}},
-{"@type":"Question","name":"Should I cap sales commission?","acceptedAnswer":{"@type":"Answer","text":"No. Pay accelerators above 100 percent of plan instead. A cap quietly tells your best reps to stop selling once they hit the ceiling. The people who can overperform are the ones you want to pay more at the margin, not less."}}
+{"@type":"Question","name":"How much should I pay a salesperson in 2026?","acceptedAnswer":{"@type":"Answer","text":"Anchor on two numbers: the market rate for the role, from sourced compensation data, your own offer history, and live candidate response, and affordability, using Revenue Bench's working range of 15 to 25 percent of new revenue as total sales cost. A single published dollar figure cannot price your role without your geography, motion, and deal size attached."}},
+{"@type":"Question","name":"What is a good base-to-variable mix for sales roles?","acceptedAnswer":{"@type":"Answer","text":"The mix follows what the person directly controls. New-logo roles run the loosest mix on the team; retention, management, and leadership roles carry a higher base share."}},
+{"@type":"Question","name":"How should I set sales quota?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench's working test is that the median performer can meaningfully reach 70 to 80 percent of plan. That level keeps effort visibly connected to pay and keeps the forecast honest, because a plan most of the team will miss overstates the pipeline."}},
+{"@type":"Question","name":"Should I cap sales commission?","acceptedAnswer":{"@type":"Answer","text":"No. Pay accelerators above 100 percent of plan. A cap prices the marginal effort of your best performers at zero and tells them when to stop selling."}},
+{"@type":"Question","name":"Where can I find sales compensation benchmark data?","acceptedAnswer":{"@type":"Answer","text":"Use published guides from recruiters and compensation platforms for direction, with their sample and date caveats attached, then add your own offer-and-decline history. The live market during a search is the freshest read of what a role costs this quarter."}}
 ]}
 </script>
 
