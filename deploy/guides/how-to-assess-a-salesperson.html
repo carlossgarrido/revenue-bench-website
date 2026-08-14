@@ -36,6 +36,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1140px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
+.decision-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px;line-height:1.55;}
+.decision-table th,.decision-table td{text-align:left;vertical-align:top;padding:16px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+.decision-table th:last-child,.decision-table td:last-child{border-right:0;}
+.decision-table tbody tr:last-child td{border-bottom:0;}
+.decision-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
+.decision-table td{color:var(--ink-mid);}
+.decision-table td:first-child{font-weight:600;color:var(--navy);}
+.matrix-table{min-width:1020px;}
+.author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+.author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+.author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+.author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+@media(max-width:640px){.table-scroll{width:calc(100vw - 24px);}.author-box{align-items:flex-start;}}
+</style>
 </head>
 <body>
 
@@ -57,8 +73,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>How to assess a salesperson beyond the resume</span></div>
     <div class="eyebrow">Selection</div>
     <h1>How to assess a salesperson beyond the resume</h1>
-    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>The interview is the least reliable part of sales hiring.</strong> Strong candidates present well and still miss quota, because the traits that win an interview are not the traits that close deals under pressure. To predict performance, measure four things: will to sell, coachability, qualification discipline, and whether the candidate can execute inside your specific sales motion. Then test for them with an objective assessment, a real work sample, and reference checks that ask the hard question.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>9 min read</span></div>
+    <p class="deck"><strong>The interview is the least reliable part of sales hiring.</strong> Because selling and interviewing draw on many of the same presentation skills, a polished interview tells you little about closing under pressure. To predict performance, measure four things: will to sell, coachability, qualification discipline, and whether the candidate can execute inside your specific sales motion. Then test for them with an objective assessment, a real work sample, and reference checks that ask the hard questions.</p>
   </div>
 </section>
 
@@ -69,8 +85,8 @@
       <h2>Key takeaways</h2>
       <ul>
         <li>Four traits predict sales performance: will to sell, coachability, qualification discipline, and process fit. A resume shows none of them.</li>
-        <li>Interviewing and selling use the same skills, so a polished candidate is not the same as a strong closer. You are measuring the wrong thing.</li>
-        <li>An objective, sales-specific assessment measures sales DNA in a way a conversation cannot. It is the single strongest screen available.</li>
+        <li>Because interviewing and selling use similar presentation skills, polish can conceal weak selling discipline.</li>
+        <li>A sales-specific assessment measures sales DNA and selling ability beyond what a conversation can surface.</li>
         <li>A work sample, a written rubric, and pointed reference checks turn a gut decision into an evidence-based one.</li>
       </ul>
     </div>
@@ -79,69 +95,138 @@
       <h4>In this guide</h4>
       <ol>
         <li><a href="#traits">The four traits that predict performance</a></li>
+        <li><a href="#matrix">The trait-evidence matrix</a></li>
+        <li><a href="#altitude">The selling-altitude screen</a></li>
         <li><a href="#why">Why interviews are unreliable for sales</a></li>
         <li><a href="#assessment">The role of an objective assessment</a></li>
         <li><a href="#competencies">What a sales-specific assessment measures</a></li>
         <li><a href="#trainvshire">Train the skill, hire the drive</a></li>
         <li><a href="#worksample">Use a real work sample</a></li>
         <li><a href="#rubric">Score with a rubric, and check references that matter</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
       </ol>
     </div>
 
     <div class="prose">
       <h2 id="traits">The four traits that predict performance</h2>
-      <p>A resume tells you where someone has been. It does not tell you whether they will sell for you. Quota attainment at a prior company can reflect a hot market, a strong product, inherited accounts, or a generous comp plan as easily as it reflects the person. To predict performance in your role, stop reading history and start measuring four traits.</p>
+      <p>A resume tells you where someone has been. It does not tell you whether they will sell for you. Quota attainment at a prior company can reflect a strong market, an established product, inherited accounts, or a generous compensation plan as easily as it reflects the person. To predict performance in your role, measure four traits.</p>
       <ul>
-        <li><strong>Will to sell.</strong> The drive to pursue revenue, the comfort with rejection, and the desire to win. This is the engine. Without it, skill and training go nowhere, because a seller who does not want it will not do the hard parts of the job when no one is watching.</li>
-        <li><strong>Coachability.</strong> The willingness to be wrong, take feedback, and change. A coachable B player will outgrow a defensive A player inside a year. This trait, more than raw talent, decides who improves after they are hired.</li>
-        <li><strong>Qualification discipline.</strong> The habit of qualifying hard and walking away from deals that will not close. Weak sellers chase everything and forecast on hope. Strong sellers protect their time and tell you the truth about the pipeline.</li>
-        <li><strong>Process fit.</strong> Whether the person can execute inside your specific motion. A short-cycle transactional closer often stalls in a six-month enterprise sale, and a consultative enterprise seller can be too slow for high-velocity SMB. Match the motion, not just the title.</li>
+        <li><strong>Will to sell.</strong> The drive to pursue revenue, the comfort with rejection, and the desire to win. Without it, skill and training go nowhere because the seller will avoid the hard parts of the job when no one is watching.</li>
+        <li><strong>Coachability.</strong> The willingness to accept feedback and change behavior. Watch what the candidate does with coaching during an exercise, since an agreeable answer about feedback costs nothing to give.</li>
+        <li><strong>Qualification discipline.</strong> The habit of qualifying hard and walking away from deals that will not close. Strong sellers protect their time and report the pipeline based on evidence.</li>
+        <li><strong>Process fit.</strong> The ability to execute inside your specific sales motion. A transactional closer can stall in a long enterprise sale, while an enterprise seller may move too slowly for a high-velocity SMB motion. Match the sales history to the role.</li>
       </ul>
-      <p>None of these four reliably shows up on paper, and none of them surfaces on its own in a friendly conversation. That is <a href="why-sales-hires-fail.html">the core problem with how most companies hire sellers</a>.</p>
+      <p>These traits rarely surface on paper or emerge on their own in a friendly conversation. That is <a href="why-sales-hires-fail.html">the core problem with how most companies hire sellers</a>.</p>
+
+      <h2 id="matrix">The trait-evidence matrix</h2>
+      <p>Every trait on this page comes with evidence that counts, a false positive interviews keep accepting, and a screen that measures it honestly. The matrix is the whole guide in one table.</p>
+      <div class="table-scroll">
+        <table class="decision-table matrix-table">
+          <thead>
+            <tr>
+              <th scope="col">Trait</th>
+              <th scope="col">The question it settles</th>
+              <th scope="col">Evidence that counts</th>
+              <th scope="col">The false positive interviews accept</th>
+              <th scope="col">Where the evidence comes from</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Will to sell</td>
+              <td>Will this person do the hard parts when no one is watching?</td>
+              <td>Assessment-measured drive across Desire, Commitment, Motivation, Responsibility, and Outlook, confirmed by the candidate's behavior when the prospect pushes back.</td>
+              <td>Interview enthusiasm, energy, and confidence, which candidates can perform on demand.</td>
+              <td>The sales-specific assessment, confirmed in the work sample.</td>
+            </tr>
+            <tr>
+              <td>Coachability</td>
+              <td>Will this person take feedback and change?</td>
+              <td>Response to live coaching inside the work sample. Deliver the same pre-scripted coaching prompt to every candidate for the role, then score whether the next attempt changes.</td>
+              <td>Agreeable answers about loving feedback, which cost nothing to say.</td>
+              <td>The work sample, plus references asked how the person responded to coaching.</td>
+            </tr>
+            <tr>
+              <td>Qualification discipline</td>
+              <td>Will the pipeline be real?</td>
+              <td>How the candidate handles a scenario designed to be walked away from, including whether they ask disqualifying questions in the mock discovery call.</td>
+              <td>Stories about big wins, which reveal nothing about deals the candidate should have dropped.</td>
+              <td>The mock discovery call, scored on the rubric.</td>
+            </tr>
+            <tr>
+              <td>Process fit</td>
+              <td>Can this person execute in our specific motion?</td>
+              <td>Selling history with a comparable cycle length, deal size, and buyer level, verified in references, plus the selling-altitude answer below.</td>
+              <td>A strong track record in a different motion, which can make a mismatched hire look credible.</td>
+              <td>The structured interview and reference checks, measured against the written role profile.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The matrix is Revenue Bench's summary of its own selection guidance rather than a survey finding.</p>
+
+      <h3 id="altitude">The selling-altitude screen</h3>
+      <p>Before you hire, establish who the candidate has sold to, C-level, VP, director, or manager, and compare that level with who buys from you. A rep who has only sold to procurement managers will struggle in a sale your buyers expect to run at CEO level. The reverse mismatch wastes a senior seller on a transactional motion.</p>
+      <p>Ask two direct questions in the structured interview: who did you sell to in your last role, and who decided. Verify both answers through the examples the candidate gives and through reference checks.</p>
+      <p>Carlos Garrido teaches this screen in his Building a Scalable Sales Team masterclass: establish the level a candidate sells at before you hire them, because a mismatch with your buyer surfaces after the start date, when it is most expensive.</p>
 
       <h2 id="why">Why interviews are unreliable for sales</h2>
-      <p>The interview is the least reliable part of any hiring process, and sales is the worst place to lean on it. Selling and interviewing draw on the same skills: rapport, storytelling, reading the other person, and handling objections. A great interviewer can be a weak closer, and a quiet, methodical closer can interview poorly. You walk out feeling confident about a signal that does not predict the outcome you care about.</p>
-      <p>There is a second trap. Interviewers reward people who look and sound like sellers they have known, which is pattern matching, not assessment. It filters for polish and confidence, the two things sales candidates are best at performing. The result is a mis-hire rate that would be unacceptable in any other part of the business, paired with a false sense of certainty about each decision. The fix is not to interview harder or longer. It is to add <a href="sales-assessment-vs-interview.html">objective signal the interview cannot give you</a>.</p>
+      <p>The interview is the least reliable part of a sales hiring process. Selling and interviewing draw on the same skills: rapport, storytelling, reading the other person, and handling objections. Because candidates can apply those skills directly to the interview, polished presentation can conceal weak qualification, inconsistent follow-through, or poor closing discipline. A methodical closer may also present with less energy while bringing stronger sales habits.</p>
+      <p>There is another trap. Interviewers reward people who look and sound like sellers they have known. That pattern matching favors polish and confidence, which sales candidates know how to perform. The result is a hiring decision built on familiarity instead of evidence. Add <a href="sales-assessment-vs-interview.html">objective signal the interview cannot give you</a>, then use the interview to test role-specific evidence.</p>
 
       <h2 id="assessment">The role of an objective assessment</h2>
-      <p>A validated, sales-specific assessment measures the traits above directly, without the candidate's interview performance getting in the way. It is not a generic personality test, and it is not a culture quiz. It is built to predict selling behavior: will to sell, the hidden weaknesses that hold a seller back, and whether the person can do the job in your kind of sale.</p>
-      <p>At Revenue Bench, every candidate is run through Objective Management Group, the most validated sales assessment available. OMG separates the candidate's selling ability from how well they present, which is exactly the separation a hiring manager cannot make alone. It will flag the confident-but-wrong before they cost you a year, and it will surface the quiet candidate whose sales DNA is stronger than their interview suggests. Treat the result as the single strongest screen in the process, not as a tiebreaker at the end. The same instrument works on a team already in place, which is how a buyer builds evidence on a target's sales organization during <a href="sales-team-due-diligence.html">sales-team due diligence before the deal closes</a>.</p>
+      <p>A validated, sales-specific assessment measures selling ability and sales DNA without allowing interview performance to dominate the result. It is built to predict selling behavior, including will to sell, the hidden weaknesses that hold a seller back, and fit with the demands of a specific sales role.</p>
+      <p>At Revenue Bench, candidates for selling and sales-leadership roles are assessed with Objective Management Group, and every candidate is screened by a sales operator against the written success profile. Candidate assessment runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group. OMG publishes predictive validity in the 95 percent range for its sales-specific instrument, its own accuracy metric. That validity figure is distinct from the hiring-outcome figures below.</p>
+      <p>The assessment separates selling ability from presentation and gives the hiring team evidence before the offer. The same instrument can evaluate a team already in place, helping a buyer assess a target's sales organization during <a href="sales-team-due-diligence.html">sales-team due diligence before the deal closes</a>.</p>
 
       <div class="omgband">
         <div class="o"><div class="n">21</div><div class="l">sales-specific competencies measured, across more than 400 data points per candidate.</div></div>
-        <div class="o"><div class="n">~95%</div><div class="l">predictive validity, the strongest of any sales assessment on the market.</div></div>
-        <div class="o"><div class="n">72%</div><div class="l">of recommended hires reach the top half of the team within 12 months.</div></div>
-        <div class="o"><div class="n">88%</div><div class="l">of salespeople are weak on supportive beliefs, a hidden ceiling an interview never sees.</div></div>
+        <div class="o"><div class="n">95%</div><div class="l">range of OMG's published predictive validity, its accuracy metric for the assessment itself.</div></div>
+        <div class="o"><div class="n">72%</div><div class="l">of recommended hires reached the top half of the sales force within 12 months, in OMG's 2024 validation survey.</div></div>
+        <div class="o"><div class="n">88%</div><div class="l">of salespeople are weak on Supportive Beliefs in OMG's 2022-to-2025 data, a ceiling an interview never sees.</div></div>
       </div>
-      <p class="note" style="margin-top:14px;">Figures: Objective Management Group (OMG).</p>
+      <p class="note" style="margin-top:14px;">Figures: Objective Management Group (OMG). Validity is OMG's accuracy metric, distinct from the 2024 hiring-outcome figures.</p>
 
       <h2 id="competencies">What a sales-specific assessment measures</h2>
-      <p>It helps to see what an objective assessment looks at, because it is far more specific than a personality profile. OMG measures 21 sales competencies across more than 400 data points, organized in three groups. Together they answer three different questions: does the candidate want it, what is holding them back, and can they do the work.</p>
+      <p>OMG measures 21 sales-specific competencies across more than 400 data points. The competencies cover the candidate's drive, the beliefs and tendencies that support or limit selling, and the tactical skills required to execute.</p>
       <ul>
-        <li><strong>Will to Sell.</strong> The drive behind the role, measured across Desire, Commitment, Motivation, Responsibility, and Outlook. This is the engine. It is also the one group you cannot install later, so it matters most before the offer.</li>
-        <li><strong>Sales DNA.</strong> The hidden strengths and weaknesses that either support selling or sabotage it: Comfort Discussing Money, Need for Approval, Controls Emotions and Stays in the Moment, Supportive Beliefs, a Supportive Buy Cycle, and how the person Handles Rejection. This is the group an interview cannot see, and it is usually where the real gap lives.</li>
-        <li><strong>Tactical Selling.</strong> The ten skills of the job itself: Hunting, Reaching Decision Makers, Relationship Building, Consultative Selling, Selling Value, Qualifying, Presentation Approach, Closing, Sales Process, and Sales Technology.</li>
+        <li><strong>Will to Sell.</strong> The drive behind the role, measured across Desire, Commitment, Motivation, Responsibility, and Outlook. Screen it before the offer because training has little effect on this group.</li>
+        <li><strong>Sales DNA.</strong> The strengths and weaknesses that support or interfere with selling: Comfort Discussing Money, Need for Approval, Controls Emotions and Stays in the Moment, Supportive Beliefs, a Supportive Buy Cycle, and Handles Rejection. An interview rarely exposes these factors.</li>
+        <li><strong>Tactical Selling.</strong> The skills of the job itself: Hunting, Reaching Decision Makers, Relationship Building, Consultative Selling, Selling Value, Qualifying, Presentation Approach, Closing, Sales Process, and Sales Technology.</li>
       </ul>
-      <p>The data inside these groups is humbling. <a href="the-6-percent-problem.html">Only 12% of salespeople are strong on Supportive Beliefs</a>, so 88% carry beliefs that cap them. Only 11% to 15% are strong at Consultative Selling, and only 16% are proficient with sales technology. Meanwhile about 88% Handle Rejection well and 86% have Desire, which means those two traits do not separate top performers, even though they are the ones an interview tends to reward. The signal is in the competencies a conversation never reaches.</p>
+      <p><a href="the-6-percent-problem.html">OMG's 2022-to-2025 data shows only 12 percent of salespeople are strong on Supportive Beliefs, so 88 percent carry beliefs that cap them</a>. OMG also reports only 11 to 15 percent strong in Consultative Selling and only 16 percent proficient in Sales Technology in 2025. In the other direction, Handles Rejection is strong in 88 to 89 percent of salespeople and Desire in 86 percent, so those common strengths separate candidates less effectively than the competencies an interview fails to reach.</p>
 
       <h2 id="trainvshire">Train the skill, hire the drive</h2>
-      <p>This is the most useful thing the data tells you about who to hire. Tactical skills respond well to training. After coaching, OMG sees Closing jump 55%, Reaching Decision Makers 43%, Consultative Selling 28%, Selling Value 24%, and Qualifying 20%, with Comfort Discussing Money up 66%. Training lifts a seller's overall percentile by about 30%, which is the difference between a rep stuck under 70% of quota and one clearing 90%.</p>
-      <p>Will to Sell barely moves. Across the same training, drive shifts between 0% and 6%. You can teach someone to close, to qualify, and to talk about money. You cannot teach them to want it. So screen for drive and sales DNA before you hire, because those are the things you are stuck with, and train the tactical skills after, because those are the things you can change. Hiring a polished closer with weak drive is the expensive mistake. Hiring raw drive with coachable gaps is how strong teams get built.</p>
-      <p>This is also why personality and behavioral-style tests are the wrong tool for a sales hire. DISC and similar instruments describe how someone tends to behave, and they are not predictive of on-the-job sales performance. They were built to map general working style, then adapted for hiring. A sales-specific assessment is built for selling from the ground up, which is why it predicts what a personality quiz only guesses at.</p>
+      <p>OMG studied 5,331 salespeople measured before and after training by a certified OMG partner. After training, OMG measured Closing up 55 percent, Reaching Decision Makers up 43 percent, Consultative Selling up 28 percent, Selling Value up 24 percent, and Qualifying up 20 percent, with Comfort Discussing Money up 66 percent. Training lifted overall sales percentile by about 30 percent, which OMG translates as the gap between a rep under 70 percent of quota and one over 90 percent.</p>
+      <p>Will to Sell moves between 0 and 6 percent across the same training. Hire for drive and coachability, then train tactical gaps. Coaching is covered in a separate OMG study, and <a href="will-to-sell.html">Will to Sell explains what coaching does and does not reach</a>.</p>
+      <p>Carlos Garrido poses a direct question in his Building a Scalable Sales Team masterclass: "Did you hire them like that, or did you make them like that?" His point is that a team's performance ceiling is set at hiring time more often than leaders admit. Assess before the offer so leaders do not depend on coaching to repair a selection mistake.</p>
+      <p>Behavioral-style instruments such as DISC describe general working style. They were built for that purpose and later adapted for hiring, and they are not designed to predict on-the-job sales performance. A sales-specific assessment is built to predict selling behavior.</p>
 
       <h2 id="worksample">Use a real work sample</h2>
-      <p>The single best predictor of whether someone can do a job is watching them do a version of it. For sellers, that means a live work sample, not another behavioral question. Replace the third interview with one of these.</p>
+      <p>A live work sample shows how someone handles a version of the job. For sellers, use an exercise that reflects the sales motion and exposes the traits in the matrix.</p>
       <ol>
-        <li><strong>A mock discovery call.</strong> Give the candidate a realistic buyer scenario and have a team member play the prospect. Watch how they open, how they qualify, the questions they ask, and whether they listen or talk. Discovery is where most deals are won or lost, so this is the most revealing exercise you can run.</li>
-        <li><strong>A real-deal role-play.</strong> Hand the candidate an actual deal from your pipeline, give them prep time, and ask them to work it forward. You learn how they think about a sale, handle an objection, and plan a next step, all in the context of your business.</li>
-        <li><strong>A short written or live plan.</strong> For senior roles, ask the candidate to outline how they would attack a territory or advance a stalled opportunity. You are testing judgment and process, not slide design.</li>
+        <li><strong>A mock discovery call.</strong> Give the candidate a realistic buyer scenario and have a team member play the prospect. Watch how they open, qualify, ask questions, and listen. Include information that should lead a disciplined seller to disqualify the opportunity.</li>
+        <li><strong>A real-deal role-play.</strong> Give the candidate a deal from your pipeline, allow preparation, and ask them to move it forward. Strip client names and confidential terms from any pipeline deal used in a role-play, since the candidate is an outside party.</li>
+        <li><strong>A short written or live plan.</strong> For senior roles, ask the candidate to outline how they would approach a territory or advance a stalled opportunity. Score judgment and process rather than presentation design.</li>
       </ol>
-      <p>A work sample is worth more than any answer to "tell me about a time you handled a tough customer." Talk is cheap and rehearsed. Watching someone sell is neither.</p>
+      <p>Prepared interview answers provide limited evidence because candidates can rehearse them. A work sample shows how the person sells, responds to pressure, and applies feedback. Keep each exercise short and time-boxed, and do not put a candidate's plan or deal strategy to commercial use. The exercise exists to produce hiring evidence, and the work product belongs to the candidate.</p>
 
       <h2 id="rubric">Score with a rubric, and check references that matter</h2>
-      <p>Even good signal gets wasted if every interviewer judges by feel. Two people can watch the same mock call and walk away with opposite reads, because they were grading against different unspoken standards. A <a href="account-executive-interview-scorecard.html">written rubric</a> fixes that. Before anyone interviews, define what you are scoring, will to sell, coachability, qualification, and process fit, and write out what a weak, solid, and strong answer looks like for each. Have every interviewer score on the same scale, then compare numbers, not impressions. The conversation about a candidate becomes evidence-based instead of a contest of who felt strongest.</p>
-      <p>Finish with reference checks run on the candidate's consent. For an individual contributor, ask the former manager whether they would put this person back on their team today, and why, and where the candidate ranked against peers. Expect some employers to limit what a reference confirms, and record a policy-limited answer as unavailable rather than as evidence against the candidate. The full consent sequence and question protocol are in <a href="reference-checks-for-sales-hires.html">reference checks for sales hires</a>.</p>
-      <p>Put it together and the picture is clear: four traits to measure, an objective assessment to measure them honestly, a work sample to see them in action, and a rubric and references to keep the decision disciplined. This is the process Revenue Bench runs on every search, and it is why the candidates we put forward perform once they are in the role.</p>
+      <p>Even useful evidence gets wasted when every interviewer judges by feel. A <a href="account-executive-interview-scorecard.html">written account executive rubric</a> defines the evidence expected for will to sell, coachability, qualification discipline, and process fit. <a href="sales-leader-interview-scorecard.html">Sales-leader roles get their own scorecard</a> because leadership evidence differs from individual selling evidence. Define weak, solid, and strong performance for each criterion before interviews begin, then compare recorded evidence.</p>
+      <p>Use the same exercises and the same rubric for every candidate in the role, keep both unchanged for the length of the search, record the evidence behind each score, and have counsel review the loop, since a scored selection process is a selection procedure.</p>
+      <p>Finish with reference checks run with the candidate's consent. For an individual contributor, ask the former manager whether they would put this person back on their team today and why, how the candidate responded to coaching, and where the candidate ranked against peers. For process fit, verify cycle length, deal size, buyer level, and who made the final decision. Some employers limit what a reference can confirm, so record a policy-limited answer as unavailable instead of treating it as evidence against the candidate. The full consent sequence and question protocol are in <a href="reference-checks-for-sales-hires.html">reference checks for sales hires</a>.</p>
+      <p>The assessment and operator screen are the part Revenue Bench runs. The work sample, rubric, and reference protocol are the employer's half of the loop, and the linked scorecards make those steps concrete.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <p>The four traits, the matrix, and the selling-altitude screen are Revenue Bench's own selection guidance, drawn from the founders' operating and hiring work. All assessment statistics are Objective Management Group's published research figures, labeled where they appear. Candidate assessment runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group.</p>
+
+      <div class="author-box">
+        <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+        <div>
+          <div class="an">Carlos Garrido</div>
+          <div class="at">An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+        </div>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
@@ -149,10 +234,10 @@
       <div class="rule"></div>
       <div class="faq-item"><h3>How do you assess a salesperson before hiring?</h3><p>Measure four traits that predict performance: will to sell, coachability, qualification discipline, and process fit. Combine an objective, sales-specific assessment with a real work sample such as a mock discovery call, score every interviewer against a written rubric, and confirm with pointed reference checks. Interviews alone are the least reliable signal.</p></div>
       <div class="faq-item"><h3>Why are interviews unreliable for sales roles?</h3><p>Selling and interviewing use the same skills, so a candidate can win the interview and miss quota. Interviews reward polish and confidence, which sellers are trained to perform, and they encourage pattern matching rather than measurement. You leave feeling certain about a signal that does not predict the outcome.</p></div>
-      <div class="faq-item"><h3>What is a sales assessment and which one should I use?</h3><p>A sales assessment is a validated instrument that measures selling ability and sales DNA directly, separate from how the candidate presents. Revenue Bench uses Objective Management Group, the most validated sales-specific assessment available, because it predicts selling behavior rather than general personality.</p></div>
-      <div class="faq-item"><h3>What work sample should I use to test a salesperson?</h3><p>A mock discovery call is the most revealing, since discovery is where most deals are won or lost. A real-deal role-play using an actual opportunity from your pipeline is a strong second, and for senior roles, a short territory or deal plan tests judgment. Watching someone sell beats any behavioral question.</p></div>
-      <div class="faq-item"><h3>Should I hire for skill or for drive?</h3><p>Hire for drive, train the skill. OMG data shows tactical skills respond well to coaching, with Closing rising 55% and Comfort Discussing Money 66% after training, while Will to Sell barely moves, between 0% and 6%. You can teach someone to close and qualify, but you cannot install the desire to do the hard parts of the job. Screen for sales DNA and drive before the offer, then develop the tactical skills after.</p></div>
-      <div class="faq-item"><h3>Are DISC or personality tests good for hiring salespeople?</h3><p>No. DISC and similar behavioral-style tests describe general working style and are not predictive of on-the-job sales performance. They were adapted for hiring rather than built for it. A sales-specific assessment such as Objective Management Group is built to predict selling behavior, which is why it carries around 95% predictive validity where a personality quiz does not.</p></div>
+      <div class="faq-item"><h3>What is a sales assessment and which one should I use?</h3><p>A sales assessment is a validated instrument that measures selling ability and sales DNA directly, separate from how the candidate presents. Revenue Bench assesses candidates for selling and sales-leadership roles with Objective Management Group, a sales-specific instrument with predictive validity in the 95 percent range, OMG's published accuracy metric, because it is built to predict selling behavior rather than general personality.</p></div>
+      <div class="faq-item"><h3>What work sample should I use to test a salesperson?</h3><p>A mock discovery call is the most revealing, since discovery is where most deals are won or lost. A real-deal role-play using an actual opportunity from your pipeline is a strong second, and for senior roles, a short territory or deal plan tests judgment. A live selling exercise provides evidence that a behavioral answer cannot.</p></div>
+      <div class="faq-item"><h3>Should I hire for skill or for drive?</h3><p>Hire for drive, train the skill. OMG data shows tactical skills respond well to training, with Closing rising 55 percent and Comfort Discussing Money 66 percent after training, while Will to Sell moves between 0 and 6 percent across the same training. You can teach someone to close and qualify, but you cannot install the desire to do the hard parts of the job. Screen for sales DNA and drive before the offer, then develop the tactical skills after.</p></div>
+      <div class="faq-item"><h3>Are DISC or personality tests good for hiring salespeople?</h3><p>Behavioral-style tests such as DISC describe general working style. They were built for that purpose and later adapted for hiring, and they are not designed to predict on-the-job sales performance. A sales-specific assessment is built to predict selling behavior, and OMG publishes predictive validity in the 95 percent range for its instrument, its own accuracy metric.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -173,7 +258,7 @@
     <div class="eyebrow">Assess before you offer</div>
     <div class="rule"></div>
     <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">See how a candidate sells, before you bet a role on them.</h2>
-    <p class="lead" style="margin:16px auto 28px;">Every candidate we put forward is assessed with Objective Management Group, tested on a live work sample, and reference-checked against the questions that matter. You see the evidence, not just the resume.</p>
+    <p class="lead" style="margin:16px auto 28px;">Candidates for selling and sales-leadership roles are assessed with Objective Management Group and screened by an operator who has built sales teams. You see the evidence, not just the resume.</p>
     <a href="../contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -201,16 +286,16 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Assess a Salesperson Beyond the Resume","description":"The four traits that predict sales performance, why interviews miss them, and how to test for them with an objective assessment, a work sample, a rubric, and reference checks.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/how-to-assess-a-salesperson"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How to Assess a Salesperson Beyond the Resume","description":"The four traits that predict sales performance, why interviews miss them, and how to test for them with an objective assessment, a work sample, a rubric, and reference checks.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/how-to-assess-a-salesperson"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"How do you assess a salesperson before hiring?","acceptedAnswer":{"@type":"Answer","text":"Measure four traits that predict performance: will to sell, coachability, qualification discipline, and process fit. Combine an objective, sales-specific assessment with a real work sample such as a mock discovery call, score every interviewer against a written rubric, and confirm with pointed reference checks. Interviews alone are the least reliable signal."}},
 {"@type":"Question","name":"Why are interviews unreliable for sales roles?","acceptedAnswer":{"@type":"Answer","text":"Selling and interviewing use the same skills, so a candidate can win the interview and miss quota. Interviews reward polish and confidence, which sellers are trained to perform, and they encourage pattern matching rather than measurement. You leave feeling certain about a signal that does not predict the outcome."}},
-{"@type":"Question","name":"What is a sales assessment and which one should I use?","acceptedAnswer":{"@type":"Answer","text":"A sales assessment is a validated instrument that measures selling ability and sales DNA directly, separate from how the candidate presents. Revenue Bench uses Objective Management Group, the most validated sales-specific assessment available, because it predicts selling behavior rather than general personality."}},
-{"@type":"Question","name":"What work sample should I use to test a salesperson?","acceptedAnswer":{"@type":"Answer","text":"A mock discovery call is the most revealing, since discovery is where most deals are won or lost. A real-deal role-play using an actual opportunity from your pipeline is a strong second, and for senior roles, a short territory or deal plan tests judgment. Watching someone sell beats any behavioral question."}},
-{"@type":"Question","name":"Should I hire for skill or for drive?","acceptedAnswer":{"@type":"Answer","text":"Hire for drive, train the skill. OMG data shows tactical skills respond well to coaching, with Closing rising 55% and Comfort Discussing Money 66% after training, while Will to Sell barely moves, between 0% and 6%. You can teach someone to close and qualify, but you cannot install the desire to do the hard parts of the job. Screen for sales DNA and drive before the offer, then develop the tactical skills after."}},
-{"@type":"Question","name":"Are DISC or personality tests good for hiring salespeople?","acceptedAnswer":{"@type":"Answer","text":"No. DISC and similar behavioral-style tests describe general working style and are not predictive of on-the-job sales performance. They were adapted for hiring rather than built for it. A sales-specific assessment such as Objective Management Group is built to predict selling behavior, which is why it carries around 95% predictive validity where a personality quiz does not."}}
+{"@type":"Question","name":"What is a sales assessment and which one should I use?","acceptedAnswer":{"@type":"Answer","text":"A sales assessment is a validated instrument that measures selling ability and sales DNA directly, separate from how the candidate presents. Revenue Bench assesses candidates for selling and sales-leadership roles with Objective Management Group, a sales-specific instrument with predictive validity in the 95 percent range, OMG's published accuracy metric, because it is built to predict selling behavior rather than general personality."}},
+{"@type":"Question","name":"What work sample should I use to test a salesperson?","acceptedAnswer":{"@type":"Answer","text":"A mock discovery call is the most revealing, since discovery is where most deals are won or lost. A real-deal role-play using an actual opportunity from your pipeline is a strong second, and for senior roles, a short territory or deal plan tests judgment. A live selling exercise provides evidence that a behavioral answer cannot."}},
+{"@type":"Question","name":"Should I hire for skill or for drive?","acceptedAnswer":{"@type":"Answer","text":"Hire for drive, train the skill. OMG data shows tactical skills respond well to training, with Closing rising 55 percent and Comfort Discussing Money 66 percent after training, while Will to Sell moves between 0 and 6 percent across the same training. You can teach someone to close and qualify, but you cannot install the desire to do the hard parts of the job. Screen for sales DNA and drive before the offer, then develop the tactical skills after."}},
+{"@type":"Question","name":"Are DISC or personality tests good for hiring salespeople?","acceptedAnswer":{"@type":"Answer","text":"Behavioral-style tests such as DISC describe general working style. They were built for that purpose and later adapted for hiring, and they are not designed to predict on-the-job sales performance. A sales-specific assessment is built to predict selling behavior, and OMG publishes predictive validity in the 95 percent range for its instrument, its own accuracy metric."}}
 ]}
 </script>
 
