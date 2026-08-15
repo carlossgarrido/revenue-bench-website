@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>The 90-Day Onboarding Plan That Reaches Quota | Revenue Bench</title>
-<meta name="description" content="A new sales hire should produce pipeline by day 30 and carry real quota by day 90. Here is the weeks 1-2, 3-6, 7-13 cadence, the two weekly coaching calls, the 30/60/90 milestones, and why most early exits are onboarding failures, not hiring failures." />
+<meta name="description" content="Five ramp gates, coaching cadence, and 30/60/90 milestones for a sales hire, with evidence and corrections when the ramp slips." />
 <link rel="canonical" href="https://revenuebench.io/guides/90-day-sales-onboarding-plan" />
 <meta property="og:title" content="The 90-Day Onboarding Plan That Reaches Quota" />
-<meta property="og:description" content="The cadence, coaching, and milestones that turn a new sales hire into a producing one, and why onboarding decides whether a good hire works." />
+<meta property="og:description" content="Five ramp gates, coaching cadence, and clear corrections for running a new sales hire's first 90 days." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/90-day-sales-onboarding-plan.png">
   <meta property="og:image:width" content="1200">
@@ -36,6 +36,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1140px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
+.decision-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px;line-height:1.55;}
+.decision-table th,.decision-table td{text-align:left;vertical-align:top;padding:16px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+.decision-table th:last-child,.decision-table td:last-child{border-right:0;}
+.decision-table tbody tr:last-child td{border-bottom:0;}
+.decision-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
+.decision-table td{color:var(--ink-mid);}
+.decision-table td:first-child{font-weight:600;color:var(--navy);}
+.gate-table{min-width:1080px;}
+.gate-table td:first-child{width:13%;}
+.gate-table td:nth-child(2){width:20%;}
+.gate-table td:nth-child(3){width:20%;}
+.gate-table td:nth-child(4){width:22%;}
+.gate-table td:last-child{width:25%;color:var(--ink-soft);}
+.artifact-label{margin:12px 0 8px;font-size:13.5px;font-weight:600;color:var(--gold-deep);}
+.table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+.method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:28px;}
+.method h3{font-size:19px;margin-bottom:10px;}
+.method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+.method p:last-child{margin-bottom:0;}
+.author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+.author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+.author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+.author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+@media(max-width:640px){.table-scroll{width:calc(100vw - 24px);}.author-box{align-items:flex-start;}}
+</style>
 </head>
 <body>
 
@@ -57,8 +84,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>The 90-day onboarding plan that reaches quota</span></div>
     <div class="eyebrow">Onboarding</div>
     <h1>The 90-day onboarding plan that reaches quota</h1>
-    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>A new sales hire should produce pipeline by day 30 and carry real quota by day 90.</strong> Most companies stop at a week of product training and hope. Onboarding is where hires are won or lost, and a structured first 90 days, with a coach beside the new hire and the manager, is the single highest-return investment you can make in a new seller.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>9 min read</span></div>
+    <p class="deck"><strong>A new sales hire should produce pipeline by day 30 and carry real quota by day 90.</strong> Companies often stop at a week of product training and hope. Onboarding is where hires are won or lost, and a structured first 90 days, with a coach beside the new hire and the manager, is where the return on the whole search is protected.</p>
   </div>
 </section>
 
@@ -68,73 +95,154 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>Set the bar at output, not activity. A good hire builds pipeline by day 30 and carries real quota by day 90.</li>
-        <li>Run a clear cadence: weeks 1 to 2 for role clarity, weeks 3 to 6 for method and pipeline, weeks 7 to 13 for deal execution and the quota ramp.</li>
-        <li>Hold two weekly coaching calls, one with the new hire and one with the manager, so the ramp does not rest on a busy manager alone.</li>
-        <li>Most early exits are onboarding failures, not hiring failures. The first 90 days decide whether a strong hire works.</li>
+        <li>Set the bar at output. A good hire builds pipeline by day 30 and carries real quota by day 90.</li>
+        <li>Five ramp gates, each with an exit condition, the evidence that counts, and the correction that still works at that point.</li>
+        <li>Run a clear phase cadence and hold two weekly coaching calls, one with the new hire and one with the manager.</li>
+        <li>Many early exits are onboarding failures rather than hiring failures. The first 90 days decide whether a strong hire works.</li>
       </ul>
     </div>
 
     <div class="toc-inline">
       <h4>In this guide</h4>
       <ol>
-        <li><a href="#bar">Set the bar at output, not activity</a></li>
-        <li><a href="#cadence">The weeks 1-2, 3-6, 7-13 cadence</a></li>
-        <li><a href="#coaching">Two weekly coaching calls</a></li>
+        <li><a href="#bar">Set the bar at output</a></li>
+        <li><a href="#gates">The five ramp gates</a></li>
+        <li><a href="#cadence">The weeks 1 to 2, 3 to 6, and 7 to 13 cadence</a></li>
+        <li><a href="#coaching">Weekly coaching for the hire and manager</a></li>
         <li><a href="#milestones">The 30/60/90 milestones</a></li>
-        <li><a href="#failures">Why most early exits are onboarding failures</a></li>
+        <li><a href="#after90">What day 90 does not finish</a></li>
+        <li><a href="#failures">Why many early exits are onboarding failures</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
       </ol>
     </div>
 
     <div class="prose">
-      <h2 id="bar">Set the bar at output, not activity</h2>
-      <p>Most onboarding plans measure the wrong thing. They track whether the new hire finished the product modules, shadowed enough calls, and read the playbook. Those are inputs. They tell you the person showed up, not that they can sell. A real plan is built around output, and the bar is simple: the hire generates pipeline by day 30 and carries real quota by day 90.</p>
-      <p>That bar sounds aggressive only because the usual approach sets none. When a new seller knows from day one that they are expected to build pipeline in the first month, the whole ramp orients toward selling instead of studying. Product knowledge still matters, but it is learned in service of working real deals, not as a substitute for them. The reinforcement is what makes it stick. As the stat strip below shows, training fades fast without it, and the hires who get steady coaching pull ahead of the ones who do not.</p>
+      <h2 id="bar">Set the bar at output</h2>
+      <p>Onboarding plans often measure the wrong things. They track whether the new hire finished the product modules, shadowed calls, and read the playbook. Those inputs confirm participation. A working plan measures whether the hire can sell. The bar is clear: the hire generates pipeline by day 30 and carries real quota by day 90.</p>
+      <p>When a new seller knows from day one that pipeline is expected in the first month, the ramp orients toward selling instead of extended study. Product knowledge still matters, learned in service of working real deals rather than as a substitute for them. Weekly coaching gives the hire a steady place to apply the method, review evidence, and correct drift.</p>
 
       <div class="stat-strip">
-        <div class="stat-cell"><div class="num">84%</div><div class="lab">of sales training is forgotten within 90 days without reinforcement. Sales Readiness Group.</div></div>
-        <div class="stat-cell"><div class="num">3+ hrs</div><div class="lab">reps who get three or more hours of coaching a month outperform peers by about 17%. CSO Insights.</div></div>
+        <div class="stat-cell"><div class="num">+9</div><div class="lab">Sales Percentile points for salespeople coached weekly vs never coached, and only 20% get weekly coaching. OMG's coaching study, n=11,078.</div></div>
+        <div class="stat-cell"><div class="num">40%</div><div class="lab">of companies say a new rep needs 10 or more months to reach full productivity. CSO Insights, third-party research.</div></div>
         <div class="stat-cell"><div class="num">90 days</div><div class="lab">Revenue Bench places a coach beside every hire and their manager for the full ramp.</div></div>
       </div>
 
-      <h2 id="cadence">The weeks 1-2, 3-6, 7-13 cadence</h2>
-      <p>A 90-day ramp works best in three phases, each with a clear job. Trying to do everything at once overwhelms a new hire. Moving in order builds the foundation before the pressure arrives.</p>
-      <ul>
-        <li><strong>Weeks 1 to 2: role clarity and alignment.</strong> Set expectations in writing, walk <a href="sales-compensation-benchmarks-2026.html">the comp plan</a> and the sales process, introduce the team and the tools, and make sure the hire and the manager agree on what good looks like. The goal of this phase is certainty, not output.</li>
-        <li><strong>Weeks 3 to 6: method and pipeline build.</strong> Teach the selling method against real accounts, get the hire prospecting and booking discovery, and build CRM discipline from the first deal. By the end of this phase the hire should have pipeline they sourced, not just accounts they were handed.</li>
-        <li><strong>Weeks 7 to 13: deal execution and quota ramp.</strong> Shift to working live deals forward, coaching against real opportunities, and moving the hire toward independence. By day 90 the hire carries real quota and can run a deal without a hand on the wheel.</li>
-      </ul>
-      <p>Each phase has an exit condition, not just a calendar date. If a hire is not building pipeline by the end of week six, that is a signal to coach harder now, while there is still time to correct it.</p>
+      <h2 id="gates">The five ramp gates</h2>
+      <p>A calendar only tells you time has passed, while a gate tells you whether the ramp is on track, and each gate has a correction that still works at that point.</p>
+      <p>In Carlos Garrido's <em>Building a Scalable Sales Team</em> masterclass, the onboarding standard for a company hiring its first sellers is contact with the market inside two weeks.</p>
+      <div class="artifact-label">The rep-side ramp instrument</div>
+      <div class="table-scroll" tabindex="0">
+        <table class="decision-table gate-table">
+          <thead>
+            <tr>
+              <th>Gate</th>
+              <th>The exit condition</th>
+              <th>Evidence that counts</th>
+              <th>What a miss points to</th>
+              <th>The correction that works now</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>End of week 2. Market contact.</td>
+              <td>The hire has had live contact with the market, real prospects or real customers, not only internal sessions.</td>
+              <td>Calls or meetings on the calendar with names on them; the comp plan and expectations agreed in writing.</td>
+              <td>An onboarding plan built around content consumption rather than selling.</td>
+              <td>Put the hire in front of live calls this week, shadowing forward rather than backward; the market teaches faster than the playbook.</td>
+            </tr>
+            <tr>
+              <td>Day 30. First self-sourced pipeline.</td>
+              <td>Opportunities the hire sourced are in the CRM.</td>
+              <td>Pipeline entries with the hire's name on the source field, first discovery calls run.</td>
+              <td>Prospecting is being deferred in favor of study, or territory and lead flow were never handed over.</td>
+              <td>Diagnose which half it is, effort or setup; the fix for one does nothing for the other. The company's misses count here too: no defined territory, no lead flow, no working CRM instance is a company miss rather than a hire miss.</td>
+            </tr>
+            <tr>
+              <td>End of week 6. Method on live deals.</td>
+              <td>The hire runs the company's selling method on real accounts without a script in hand.</td>
+              <td>Call reviews against the method, deal notes that follow the qualification stages.</td>
+              <td>Activity is fine but conversations do not convert to next steps.</td>
+              <td>Coach harder now, on live calls recorded under the company's call-recording notice and consent practice, rather than role-play alone; this is the last gate where a method problem is cheap to fix.</td>
+            </tr>
+            <tr>
+              <td>Day 60. Independent execution.</td>
+              <td>Discovery runs without a chaperone, deals advance, the CRM is clean enough to forecast from.</td>
+              <td>Stage progression on the hire's deals, a pipeline that supports a path to quota.</td>
+              <td>Pipeline exists but stalls in the same stage every time.</td>
+              <td>Work the stall stage specifically in the weekly coaching call; a stage-specific stall is a skill gap rather than a talent verdict.</td>
+            </tr>
+            <tr>
+              <td>Day 90. Real quota.</td>
+              <td>The hire carries real quota, runs deals end to end with light coaching, and forecasts honestly.</td>
+              <td>Closed or near-closed first revenue, a forecast the manager trusts.</td>
+              <td>If the earlier gates were green and this one is not, the bar may have been mis-set; if the earlier gates were already amber, the miss was visible for weeks.</td>
+              <td>This is where triage begins rather than blame; see the <a href="sales-hire-not-working-out.html">triage guide</a>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">This table is the rep-side instrument at phase level; the leader role has its own employer-side instrument, the <a href="sales-leader-30-60-90-scorecard.html">30-60-90 sales-leader scorecard</a> with fifteen milestones and gate reviews.</p>
 
-      <h2 id="coaching">Two weekly coaching calls</h2>
-      <p>The mistake most companies make is handing the entire ramp to the new hire's manager, who already has a team, a forecast, and a number of their own. The ramp slips because the manager is busy, and a promising hire stalls for reasons that have nothing to do with talent, which is why companies past a certain size move delivery of the plan onto <a href="hiring-revenue-operations-and-enablement.html">a dedicated sales enablement owner</a>. A coached onboarding solves this with two standing calls every week.</p>
+      <h2 id="cadence">The weeks 1 to 2, 3 to 6, and 7 to 13 cadence</h2>
+      <p>A 90-day ramp works in three phases, each with a clear job. Moving in order builds the foundation before the pressure arrives.</p>
+      <ul>
+        <li><strong>Weeks 1 to 2: role clarity and alignment.</strong> Set expectations in writing, walk <a href="sales-compensation-benchmarks-2026.html">the comp plan</a> and the sales process, introduce the team and the tools, and make sure the hire and the manager agree on what good looks like. The goal of this phase is certainty before output.</li>
+        <li><strong>Weeks 3 to 6: method and pipeline build.</strong> Teach the selling method against real accounts, get the hire prospecting and booking discovery, and build CRM discipline from the first deal. By the end of this phase, the hire should have pipeline they sourced rather than accounts they were handed.</li>
+        <li><strong>Weeks 7 to 13: deal execution and quota ramp.</strong> Shift to working live deals forward, coaching against real opportunities, and moving the hire toward independence. By day 90, the hire carries real quota and can run a deal end to end with light coaching.</li>
+      </ul>
+      <p>Each phase has an exit condition. If the hire misses one, read the evidence, identify whether the miss belongs to the hire or the company, and apply the correction while it can still change the trajectory.</p>
+
+      <h2 id="coaching">Weekly coaching for the hire and manager</h2>
+      <p>Companies often hand the entire ramp to the new hire's manager, who already owns a team, a forecast, and a number. The ramp can slip when the manager is busy, and a promising hire can stall for reasons unrelated to talent. Companies with a dedicated owner can move delivery of the plan to <a href="hiring-revenue-operations-and-enablement.html">sales enablement</a>. Revenue Bench supports the ramp through two standing coaching calls every week.</p>
       <ol>
-        <li><strong>A weekly call with the new hire.</strong> Work real deals, review calls, sharpen discovery and qualification, and remove whatever is blocking the hire that week. This is where method turns into habit, which is exactly the reinforcement that keeps training from fading.</li>
-        <li><strong>A weekly call with the manager.</strong> Keep the manager aligned on the plan, surface any drift early, and make sure expectations and coaching are consistent. The manager stays the owner of the relationship, with support rather than the whole load.</li>
+        <li><strong>A weekly call with the new hire.</strong> Work real deals, review calls, sharpen discovery and qualification, and remove whatever is blocking the hire that week. This is where the method becomes a working habit.</li>
+        <li><strong>A weekly call with the manager.</strong> Keep the manager aligned on the plan, surface drift early, and keep expectations and coaching consistent. The manager owns the relationship, with a coach supporting the ramp.</li>
       </ol>
-      <p>Two calls a week clears the three-hour monthly coaching mark that separates the reps who outperform from the ones who plateau. It also catches a struggling ramp in week three instead of month four, when the cost of a miss is far higher.</p>
+      <p>In Carlos Garrido's <em>Building a Scalable Sales Team</em> masterclass, the reinforcement layer is a set of standing rituals: daily role-play, morning huddles, weekly training, commitment calls, pipeline reviews, and power hours. A company does not need all six in the first 90 days. The two weekly coaching calls are the minimum cadence, and the rituals are what the cadence grows into as the team scales.</p>
+      <p>In Objective Management Group's coaching study of 11,078 salespeople and their managers, salespeople coached weekly scored 9 Sales Percentile points higher than those never coached, and only 20 percent of salespeople get weekly coaching. Weekly is the cadence Revenue Bench runs.</p>
 
       <h2 id="milestones">The 30/60/90 milestones</h2>
-      <p>Define success at three checkpoints before the hire starts, so the ramp is measured, not assumed. Written milestones give the hire a target and give the manager an honest, early read. The leader seat has its own employer-side instrument for the same window, the <a href="sales-leader-30-60-90-scorecard.html">30-60-90 sales-leader scorecard</a>.</p>
+      <p>Define success at three checkpoints before the hire starts, so the ramp is measured rather than assumed. Written milestones give the hire a target and give the manager an early read.</p>
       <ul>
         <li><strong>By day 30.</strong> The hire knows the product, the process, the comp plan, and the ideal customer, and has begun prospecting and generating pipeline. The first self-sourced opportunities are in the system.</li>
         <li><strong>By day 60.</strong> The hire is running discovery calls independently, advancing real deals, keeping the CRM clean, and has a building pipeline that supports a path to quota.</li>
         <li><strong>By day 90.</strong> The hire carries real quota, runs deals end to end with light coaching, forecasts honestly, and has closed or is close to closing first revenue.</li>
       </ul>
-      <p>If a hire misses the day-30 markers, that is an early warning to act on, not a number to explain away later. The milestones turn a vague sense of "are they ramping" into a clear conversation about what was agreed.</p>
+      <p>If a hire misses the day-30 markers, treat that as an early warning and act on it. The milestones turn a vague sense of whether the hire is ramping into a clear conversation about what was agreed, what the evidence shows, and which correction comes next.</p>
 
-      <h2 id="failures">Why most early exits are onboarding failures</h2>
-      <p>When a new hire does not work out in the first six months, the instinct is to blame the hire. Usually the real cause is the landing. Most early exits are onboarding failures, not hiring failures, and they are preventable. An unmanaged first 90 days is the fifth pattern in <a href="why-sales-hires-fail.html">why sales hires fail</a>. A capable seller dropped into a week of product training and left to figure out the rest will look like <a href="cost-of-a-bad-sales-hire.html">a bad hire</a> long before they were ever given the chance to be a good one.</p>
-      <p>This is why Revenue Bench places a coach beside every hire and their manager for the full 90 days. We do not hand over a candidate and walk away. We carry the ramp with you, with structured milestones and two coaching calls a week, and we stand behind it with <a href="placement-guarantees-explained.html">a replacement guarantee</a>. When the firm that made the hire also owns the landing, a strong candidate becomes a producing one, and the risk you used to carry alone finally sits where it belongs.</p>
+      <h2 id="after90">What day 90 does not finish</h2>
+      <p>Carrying quota at day 90 is not the same as full productivity; CSO Insights, a third-party source, reports that 40% of companies say a new rep needs 10 or more months to reach full productivity.</p>
+      <p>The 90-day plan decides the trajectory, and the months after it decide the altitude; the cadence that ran the ramp, the weekly deal coaching and the manager rhythm, is the same cadence that carries the hire from quota-ready to fully productive. No plan can promise that any hire reaches full productivity on a particular date.</p>
+
+      <h2 id="failures">Why many early exits are onboarding failures</h2>
+      <p>When a new hire does not work out early, the instinct is to blame the hire. Often the real cause is the landing. Many early exits are onboarding failures rather than hiring failures. An unmanaged first 90 days is the fifth pattern in <a href="why-sales-hires-fail.html">why sales hires fail</a>. A capable seller given a week of product training and left to figure out the rest can look like <a href="cost-of-a-bad-sales-hire.html">a bad hire</a> before the employer has tested the ramp conditions.</p>
+      <p>Every Revenue Bench placement includes a dedicated onboarding coach who meets the hire weekly and the hiring manager weekly for the first 90 days. Structured milestones keep the evidence visible, and <a href="placement-guarantees-explained.html">the replacement guarantee</a> defines what happens when the placement is not working.</p>
+
+      <div class="method">
+        <h2 id="method">Methodology and sources</h2>
+        <p>OMG coaching figures are OMG's own research (n=11,078), reported by OMG and repeated by its partners rather than independently peer-reviewed.</p>
+        <p>The ramp figure is CSO Insights, third-party industry research of a different vintage, quoted as an order of magnitude.</p>
+        <p>The ramp gates and the two-week market-contact standard are Revenue Bench's own operating instrument and Carlos Garrido's teaching rather than research findings.</p>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
-      <div class="faq-item"><h3>How long should sales onboarding take?</h3><p>Plan for a 90-day ramp. A structured hire generates pipeline by day 30 and carries real quota by day 90. Weekly coaching through that window is the highest-return investment in a new hire, since most early exits are onboarding failures rather than hiring failures.</p></div>
+      <div class="faq-item"><h3>How long should sales onboarding take?</h3><p>Plan for a 90-day ramp. A structured hire generates pipeline by day 30 and carries real quota by day 90. Weekly coaching through that window protects the return on the search. Many early exits are onboarding failures rather than hiring failures.</p></div>
       <div class="faq-item"><h3>What does a 30/60/90 sales onboarding plan look like?</h3><p>By day 30 the hire knows the product, process, and ideal customer and is generating pipeline. By day 60 they run discovery independently and advance real deals with a clean CRM. By day 90 they carry real quota, run deals end to end with light coaching, and forecast honestly.</p></div>
-      <div class="faq-item"><h3>Why do new sales hires fail in the first 90 days?</h3><p>Usually because of the landing, not the selection. Most early exits are onboarding failures. A capable seller given a week of product training and left to figure out the rest looks like a bad hire long before they had a fair chance, and training fades fast without reinforcement.</p></div>
-      <div class="faq-item"><h3>How much coaching does a new sales hire need?</h3><p>Two weekly coaching calls during the ramp, one with the hire to work real deals and one with the manager to stay aligned. That clears the three-or-more hours of coaching a month that separate reps who outperform from those who plateau, and it catches a struggling ramp early.</p></div>
+      <div class="faq-item"><h3>Why do new sales hires fail in the first 90 days?</h3><p>Often because of the landing rather than the selection. Many early exits are onboarding failures rather than hiring failures. A capable seller given a week of product training and left to figure out the rest can look like a bad hire before the employer has tested the ramp conditions.</p></div>
+      <div class="faq-item"><h3>How much coaching does a new sales hire need?</h3><p>Use two weekly coaching calls during the ramp, one with the hire to work real deals and one with the manager to stay aligned. Revenue Bench provides a dedicated onboarding coach who meets the hire weekly and the hiring manager weekly for the first 90 days.</p></div>
+      <div class="faq-item"><h3>What should a new sales hire do in the first two weeks?</h3><p>Expectations and the comp plan agreed in writing, the team and tools introduced, and live contact with the market inside two weeks, real prospects or customers rather than internal sessions only. That standard comes from Carlos Garrido's Building a Scalable Sales Team masterclass. Certainty first, output next.</p></div>
+      <div class="faq-item"><h3>What happens if a new sales hire's ramp slips?</h3><p>Read the gate that was missed. A week-2 miss is a plan problem, a day-30 miss is effort or setup, a week-6 miss is method, a day-60 miss is a stage-specific skill gap. Each has a correction that works at that point, and a day-90 miss is a triage decision rather than an automatic exit. Employment decisions belong to the employer, and any separation decision belongs with employment counsel before it is communicated.</p></div>
+    </div>
+
+    <div class="author-box">
+      <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+      <div>
+        <div class="an">Carlos Garrido</div>
+        <div class="at">An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
@@ -156,7 +264,7 @@
     <div class="eyebrow">Protect the hire</div>
     <div class="rule"></div>
     <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">A good hire still needs a landing. We coach the first 90 days.</h2>
-    <p class="lead" style="margin:16px auto 28px;">Every Revenue Bench placement includes a 90-day onboarding coach beside the hire and the manager, with structured milestones and two coaching calls a week. If it is not working, we run the search again at no additional fee.</p>
+    <p class="lead" style="margin:16px auto 28px;">Every Revenue Bench placement includes a 90-day onboarding coach who meets the hire weekly and the hiring manager weekly, with structured milestones from day one. If the hire is not working inside the first 90 days from their start date, we run the search again at no additional fee. One free re-run. No conditions. Whether the hire is working is your call to make.</p>
     <a href="../contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -184,14 +292,16 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The 90-Day Onboarding Plan That Reaches Quota","description":"A new sales hire should produce pipeline by day 30 and carry real quota by day 90. The cadence, the two weekly coaching calls, the 30/60/90 milestones, and why onboarding decides whether a good hire works.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/90-day-sales-onboarding-plan"}}
+{"@context":"https://schema.org","@type":"Article","headline":"The 90-Day Onboarding Plan That Reaches Quota","description":"Five ramp gates, coaching cadence, and clear corrections for running a new sales hire's first 90 days.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/90-day-sales-onboarding-plan"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How long should sales onboarding take?","acceptedAnswer":{"@type":"Answer","text":"Plan for a 90-day ramp. A structured hire generates pipeline by day 30 and carries real quota by day 90. Weekly coaching through that window is the highest-return investment in a new hire, since most early exits are onboarding failures rather than hiring failures."}},
+{"@type":"Question","name":"How long should sales onboarding take?","acceptedAnswer":{"@type":"Answer","text":"Plan for a 90-day ramp. A structured hire generates pipeline by day 30 and carries real quota by day 90. Weekly coaching through that window protects the return on the search. Many early exits are onboarding failures rather than hiring failures."}},
 {"@type":"Question","name":"What does a 30/60/90 sales onboarding plan look like?","acceptedAnswer":{"@type":"Answer","text":"By day 30 the hire knows the product, process, and ideal customer and is generating pipeline. By day 60 they run discovery independently and advance real deals with a clean CRM. By day 90 they carry real quota, run deals end to end with light coaching, and forecast honestly."}},
-{"@type":"Question","name":"Why do new sales hires fail in the first 90 days?","acceptedAnswer":{"@type":"Answer","text":"Usually because of the landing, not the selection. Most early exits are onboarding failures. A capable seller given a week of product training and left to figure out the rest looks like a bad hire long before they had a fair chance, and training fades fast without reinforcement."}},
-{"@type":"Question","name":"How much coaching does a new sales hire need?","acceptedAnswer":{"@type":"Answer","text":"Two weekly coaching calls during the ramp, one with the hire to work real deals and one with the manager to stay aligned. That clears the three-or-more hours of coaching a month that separate reps who outperform from those who plateau, and it catches a struggling ramp early."}}
+{"@type":"Question","name":"Why do new sales hires fail in the first 90 days?","acceptedAnswer":{"@type":"Answer","text":"Often because of the landing rather than the selection. Many early exits are onboarding failures rather than hiring failures. A capable seller given a week of product training and left to figure out the rest can look like a bad hire before the employer has tested the ramp conditions."}},
+{"@type":"Question","name":"How much coaching does a new sales hire need?","acceptedAnswer":{"@type":"Answer","text":"Use two weekly coaching calls during the ramp, one with the hire to work real deals and one with the manager to stay aligned. Revenue Bench provides a dedicated onboarding coach who meets the hire weekly and the hiring manager weekly for the first 90 days."}},
+{"@type":"Question","name":"What should a new sales hire do in the first two weeks?","acceptedAnswer":{"@type":"Answer","text":"Expectations and the comp plan agreed in writing, the team and tools introduced, and live contact with the market inside two weeks, real prospects or customers rather than internal sessions only. That standard comes from Carlos Garrido's Building a Scalable Sales Team masterclass. Certainty first, output next."}},
+{"@type":"Question","name":"What happens if a new sales hire's ramp slips?","acceptedAnswer":{"@type":"Answer","text":"Read the gate that was missed. A week-2 miss is a plan problem, a day-30 miss is effort or setup, a week-6 miss is method, a day-60 miss is a stage-specific skill gap. Each has a correction that works at that point, and a day-90 miss is a triage decision rather than an automatic exit. Employment decisions belong to the employer, and any separation decision belongs with employment counsel before it is communicated."}}
 ]}
 </script>
 
