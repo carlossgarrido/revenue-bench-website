@@ -36,6 +36,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1140px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
+.decision-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px;line-height:1.55;}
+.decision-table th,.decision-table td{text-align:left;vertical-align:top;padding:16px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+.decision-table th:last-child,.decision-table td:last-child{border-right:0;}
+.decision-table tbody tr:last-child td{border-bottom:0;}
+.decision-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
+.decision-table td{color:var(--ink-mid);}
+.decision-table td:first-child{font-weight:600;color:var(--navy);}
+.conditions-table{min-width:980px;}
+.conditions-table td:first-child{width:16%;}
+.conditions-table td:nth-child(2){width:28%;}
+.conditions-table td:nth-child(3){width:26%;}
+.conditions-table td:last-child{width:30%;}
+.environment-list{display:grid;grid-template-columns:minmax(150px,190px) 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:24px 0;background:var(--white);}
+.environment-list dt,.environment-list dd{margin:0;padding:14px 16px;border-bottom:1px solid var(--line-soft);}
+.environment-list dt{font-weight:600;color:var(--navy);background:var(--parchment);}
+.environment-list dd{color:var(--ink-mid);font-size:14.5px;line-height:1.65;}
+.environment-list dt:last-of-type,.environment-list dd:last-of-type{border-bottom:0;}
+.method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:28px;}
+.method h2{font-size:19px;margin-bottom:10px;}
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+.method p:last-child{margin-bottom:0;}
+.author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+.author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+.author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+.author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+@media(max-width:640px){.table-scroll{width:calc(100vw - 24px);}.author-box{align-items:flex-start;}.environment-list{grid-template-columns:1fr;}.environment-list dt{border-bottom:0;}}
+</style>
 </head>
 <body>
 
@@ -57,8 +87,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales recruitment partner vs in-house</span></div>
     <div class="eyebrow">Recruiting strategy</div>
     <h1>When to use a sales recruitment partner vs in-house</h1>
-    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>7 min read</span></div>
-    <p class="deck"><strong>Use a specialist partner when the role is revenue-critical and the cost of getting it wrong is high.</strong> In-house recruiting is fine for volume roles you fill often. It struggles with sales, because a generalist cannot assess selling ability, and a single mis-hire erases any saving on fees. The real question is not recruiter versus in-house. It is whether the role can afford a mistake.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>9 min read</span></div>
+    <p class="deck"><strong>Use a specialist when the role is revenue-critical and a mis-hire is expensive.</strong> Volume roles can stay in-house where repetition supports a current scorecard, productive sourcing channels, and a trained selection team. Borderline cases belong in the five-conditions test, which shows whether your internal process can manage the risk.</p>
   </div>
 </section>
 
@@ -68,10 +98,10 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>Go specialist when the role is revenue-critical and a mis-hire is expensive. Keep volume roles in-house.</li>
-        <li>A specialist earns its fee three ways: a pre-vetted bench, assessment that screens out the confident-but-wrong, and post-placement coaching.</li>
-        <li>Weigh a placement fee against the $200,000-plus cost of a mis-hire, not against a job-board post.</li>
-        <li>AE, sales manager, VP Sales, CRO, RevOps, and enablement roles almost always justify a specialist.</li>
+        <li>Use a specialist for a revenue-critical, senior, confidential, or rarely filled role. Keep repeatable volume hiring in-house.</li>
+        <li>An in-house process is defensible when all five conditions are present: repetition, a sales-specific screen, a live bench, an environment match, and a structured landing.</li>
+        <li>The selling-environment match tests whether prior success transfers across buyer altitude, deal size, cycle length, competition, and price position.</li>
+        <li>Compare recruiting cost with labeled mis-hire and turnover estimates instead of comparing it only with a job post.</li>
       </ul>
     </div>
 
@@ -80,54 +110,206 @@
       <ol>
         <li><a href="#decision">The decision in one line</a></li>
         <li><a href="#inhouse">When in-house is the right call</a></li>
+        <li><a href="#conditions">The five conditions test</a></li>
+        <li><a href="#environment">The selling-environment match</a></li>
         <li><a href="#fee">The three ways a specialist earns its fee</a></li>
-        <li><a href="#cost">A simple cost framing</a></li>
+        <li><a href="#cost">The cost framing</a></li>
         <li><a href="#roles">Which roles justify a specialist</a></li>
+        <li><a href="#keep">If you keep it in-house, run it like this</a></li>
+        <li><a href="#run">How Revenue Bench runs this</a></li>
+        <li><a href="#method">Where this guide comes from</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
       </ol>
     </div>
 
     <div class="prose">
       <h2 id="decision">The decision in one line</h2>
-      <p>Most teams frame this as a cost question. They compare <a href="sales-recruiter-fees.html">a recruiter's fee</a> against the salary of an internal sourcer or the price of a job-board post, and the in-house option always looks cheaper on paper. That framing misses the point, because the largest number in any sales hire is not the cost of finding the person. It is the cost of finding the wrong one.</p>
-      <p>The better frame is risk. When a role is revenue-critical, a mis-hire stalls a territory, drags on a manager for months, and resets a ramp clock that does not stop. When a role is easy to fill and cheap to replace, none of that applies. So the decision is simple. Match the method to what the role can afford to get wrong.</p>
+      <p>Match the recruiting method to the financial and operating risk of a miss. Comparing <a href="sales-recruiter-fees.html">a recruiter's fee</a> with an internal sourcer or a job-board post leaves out the largest exposure: selecting someone who cannot perform in the role.</p>
+      <p>A revenue-critical hire can stall a territory, consume management time, weaken the forecast, and restart the ramp clock. A repeatable volume role carries a different risk profile because the company can improve its process through frequent hiring. The safer route depends on what the role can afford to get wrong and whether the internal recruiting system is ready.</p>
 
       <h2 id="inhouse">When in-house is the right call</h2>
-      <p>In-house recruiting works well for high-volume roles. If you hire the same profile every month, your team already knows the scorecard, the sourcing channels, and the questions that matter. Repetition builds a real screen, and the per-hire cost of an internal process drops as volume rises. A large SDR class, a high-turnover field role, or any role you fill a dozen times a year is a strong candidate for in-house.</p>
-      <p>The pattern breaks with sales roles you fill rarely and cannot afford to miss. A generalist recruiter, internal or external, is good at matching a resume to a job description. They are not equipped to judge whether someone can sell, because selling ability does not show up cleanly on paper and does not surface in a friendly interview. That gap is where a specialist earns its place. For a founder-led company, the stakes concentrate further: <a href="founders-first-sales-hires.html">the founder's first sales hires</a> covers the preconditions and sequence for hires #1 through #3, where one weak hire is a large share of the team.</p>
+      <p>In-house recruiting works when volume creates repetition. A team that fills the same profile often can keep its scorecard current, learn which sourcing channels produce interviews, and train people to run the same screens consistently. The economics improve because the process serves a continuing hiring need.</p>
+      <p>Steady SDR cohorts, recurring field roles, and other repeatable profiles can fit this model. Founder-led companies should first confirm that the role itself is ready to hire; <a href="founders-first-sales-hires.html">the founder's first sales hires</a> explains the sequence and operating conditions behind that decision.</p>
+      <p>Roles filled infrequently receive little benefit from repetition. Each search rebuilds market knowledge, candidate flow, and evaluation discipline while the seat remains open. The five conditions below separate a working internal function from an improvised search.</p>
+
+      <h2 id="conditions">The five conditions test</h2>
+      <p>Use this table before choosing the search model. It tests whether an in-house process has the operating capacity to manage a revenue hire.</p>
+
+      <div class="table-scroll" role="region" aria-label="The build-or-buy conditions table" tabindex="0">
+        <table class="decision-table conditions-table">
+          <caption class="vh">Five conditions for deciding whether to run a sales search in-house or engage a specialist</caption>
+          <thead>
+            <tr>
+              <th scope="col">The condition</th>
+              <th scope="col">The signal you have it</th>
+              <th scope="col">What its absence costs</th>
+              <th scope="col">The check before you decide</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Volume and repetition.</strong></td>
+              <td>You fill this profile often enough to hold a live scorecard and sourcing channels that produce interviews this quarter.</td>
+              <td>Every search starts from zero while the seat sits open.</td>
+              <td>Count the hires of this exact profile in the last 12 months; fewer than three is not repetition.</td>
+            </tr>
+            <tr>
+              <td><strong>A sales-specific screen.</strong></td>
+              <td>A validated sales-specific assessment sits in the loop before the final interview, and someone owns reading it.</td>
+              <td>The decision rests on interview impressions, which reward rehearsed interviewing rather than selling.</td>
+              <td>Name the instrument and the person who reads it; a personality test does not qualify.</td>
+            </tr>
+            <tr>
+              <td><strong>A live bench.</strong></td>
+              <td>Assessed candidates for this profile exist before the role opens and contact is recent. <a href="building-a-sales-talent-bench.html">The sales talent bench guide</a> publishes the coverage model.</td>
+              <td>Weeks of lost coverage while sourcing catches up, and a field narrowed to whoever is available this month.</td>
+              <td>Count the assessed, recently contacted candidates you could call today.</td>
+            </tr>
+            <tr>
+              <td><strong>The selling-environment match.</strong></td>
+              <td>The process verifies the candidate's selling history against your altitude, deal size, cycle length, competition, and price position, the five dimensions in the section below.</td>
+              <td>A hire who succeeded in a different selling environment and cannot transfer.</td>
+              <td>The interview kit contains the five environment questions with the role's answers written next to them.</td>
+            </tr>
+            <tr>
+              <td><strong>A structured landing.</strong></td>
+              <td>Onboarding runs on ramp gates with an owner, and the first weeks put the hire in front of the market.</td>
+              <td>A sound selection that still fails in the first quarter.</td>
+              <td>The 90-day plan exists in writing before the offer goes out.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>All five present makes in-house defensible for that profile. Missing one or two argues for closing the gap or engaging a specialist for that search. A senior, confidential, or rarely filled role argues for a specialist regardless, because repetition can never accumulate; the <a href="confidential-vp-of-sales-replacement.html">confidential VP of Sales replacement guide</a> covers that case.</p>
+
+      <h2 id="environment">The selling-environment match</h2>
+      <p>The selling-environment match decides whether a candidate's sales history transfers to the open role. It is the screen a generalist process usually misses because a title, industry match, and quota claim do not establish that the candidate has sold under comparable conditions. The five dimensions come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass; the name and the arrangement are Revenue Bench's.</p>
+
+      <dl class="environment-list">
+        <dt>Selling altitude</dt>
+        <dd>Who the candidate sold to, C-level down to manager, against who buys from you. The masterclass teaches asking this before the hire, because a candidate who sold at a different level than the role requires is a known failure pattern. Deep treatment lives in the <a href="how-to-assess-a-salesperson.html">how-to-assess guide's selling-altitude screen</a>.</dd>
+
+        <dt>Average order size</dt>
+        <dd>The deal size the candidate has closed, against the role's.</dd>
+
+        <dt>Sell-cycle length</dt>
+        <dd>Three months, nine months, a year, multi-year.</dd>
+
+        <dt>Competition intensity</dt>
+        <dd>From none through moderate to heavy.</dd>
+
+        <dt>Price position</dt>
+        <dd>Whether they sold as the high-price leader, middle of the road, or on lowest price.</dd>
+      </dl>
+
+      <p>A rep who won small deals in short cycles on lowest price is a different athlete from one who won large deals in year-long cycles as the high-price leader; both can be excellent, and neither history proves the other.</p>
 
       <h2 id="fee">The three ways a specialist earns its fee</h2>
-      <p>A specialist partner is not just a faster way to source resumes. It earns its fee in three distinct ways, and each one maps to a cost that an in-house process tends to absorb invisibly.</p>
+      <p>A specialist earns its fee through candidate readiness, sales-specific selection, and support after the hire. Each capability addresses a cost that an internal team otherwise has to build and maintain.</p>
       <ol>
-        <li><strong>A pre-vetted bench that compresses time to shortlist.</strong> A specialist recruits and assesses continuously, so when a role opens, qualified candidates already exist. Instead of starting a search from zero, you start from a shortlist, and the weeks of lost coverage shrink to days.</li>
-        <li><strong>Assessment that screens out the confident-but-wrong.</strong> The traits that win an interview are not the traits that close deals under pressure. A specialist runs candidates through <a href="how-to-assess-a-salesperson.html">a validated, sales-specific assessment</a> that measures will to sell and sales DNA, catching the polished candidate who would have missed quota.</li>
-        <li><strong>Post-placement coaching that protects the hire.</strong> A good hire still fails without a landing. Many early exits are onboarding failures rather than selection failures. A specialist that coaches the first 90 days protects the placement after the offer is signed, which is where the value actually compounds.</li>
+        <li>
+          <strong>A pre-vetted bench that compresses time to shortlist.</strong>
+          A specialist that recruits and assesses continuously holds qualified candidates before the role opens, so the search starts from a shortlist rather than from zero while the seat sits uncovered.
+        </li>
+        <li>
+          <strong>A sales-specific screen before the shortlist.</strong>
+          A specialist puts a validated sales-specific assessment in front of the shortlist decision. Research circulated through OMG's partner network reports that hiring-manager intuition identifies a top performer about 20 percent of the time, so the screen carries the part of the decision an interview cannot.
+        </li>
+        <li>
+          <strong>Post-placement coaching that protects the landing.</strong>
+          Many early exits are onboarding failures rather than selection failures. The <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding guide</a> shows the ramp gates, ownership, and market exposure that protect the hire after the offer.
+        </li>
       </ol>
-      <p>An in-house team can do any one of these. Few do all three well at the same time, and the combination is what moves the odds.</p>
+      <p>An in-house team can build these capabilities when recurring volume supports the investment. A specialist supplies them for searches where the company has not developed the same operating system.</p>
 
-      <h2 id="cost">A simple cost framing</h2>
-      <p>Hold a placement fee next to <a href="cost-of-a-bad-sales-hire.html">the cost of a mis-hire</a> and the math becomes clear. A mis-hire in a quota-carrying role runs $200,000 or more once you count base, draw, the stalled pipeline, the replacement search, and the management time spent coaching someone out. A specialist's fee is a fraction of that, and it buys a materially lower chance of paying the larger bill.</p>
-      <p>So the comparison that matters is not fee versus job post. It is fee versus the expected cost of getting the hire wrong. When the role is revenue-critical, the specialist is usually the cheaper option once you price the downside honestly, even though its line item looks larger up front.</p>
+      <h2 id="cost">The cost framing</h2>
+      <p>Compare a placement fee with the expected downside of a failed hire instead of comparing it only with the price of posting the role. The relevant cost includes compensation, missed production, replacement work, and management time.</p>
+      <p><strong>Revenue Bench working estimate.</strong> Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time.</p>
+      <p><strong>Third-party turnover benchmark.</strong> DePaul University's Center for Sales Leadership, third-party research surveying more than 435 organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded.</p>
+      <p>The figures describe different objects. Revenue Bench estimates the broader cost of a failed revenue hire, while the DePaul research measures sales turnover. The full component model appears in <a href="cost-of-a-bad-sales-hire.html">the cost of a bad sales hire</a>.</p>
 
       <h2 id="roles">Which roles justify a specialist</h2>
-      <p>Use this as a quick filter. The more a role carries revenue, sets strategy, or shapes other hires, the stronger the case for a specialist.</p>
+      <p>The case strengthens as the role carries more revenue, shapes more hiring decisions, or requires a search the company rarely repeats.</p>
       <ul>
-        <li><strong>Account executive.</strong> Carries a number directly. A mis-hire costs a full territory and a ramp window.</li>
-        <li><strong>Sales manager.</strong> A weak manager quietly caps an entire team, so the damage multiplies.</li>
-        <li><strong>VP Sales.</strong> Sets process, hires the reps, and owns the forecast. The wrong leader compounds for a year.</li>
-        <li><strong>CRO.</strong> Shapes the entire revenue engine. The hardest role to fill and the most expensive to miss.</li>
-        <li><strong>RevOps.</strong> Specialized and scarce, with skills that a generalist cannot assess.</li>
-        <li><strong>Enablement.</strong> Touches every rep's ramp, so the right hire lifts the whole team.</li>
+        <li><strong>Account executive.</strong> The role owns a territory and a quota, so a miss interrupts coverage and restarts ramp.</li>
+        <li><strong>Sales manager.</strong> The manager affects selection, coaching, inspection, and the performance of the full team.</li>
+        <li><strong>VP Sales.</strong> The leader sets process, hires sellers, and owns the forecast, so a wrong choice compounds across the team for a year or more.</li>
+        <li><strong>CRO.</strong> The role connects sales, marketing, customer growth, and the operating plan, which makes transfer risk central to the search.</li>
+        <li><strong>RevOps.</strong> The role requires careful scoping across systems, process, data, and operating ownership.</li>
+        <li><strong>Enablement.</strong> The role needs a defined mandate across ramp, manager support, content, and field execution.</li>
       </ul>
-      <p>For these roles, the question answers itself. Volume roles can stay in-house. Anything where one bad hire resets a quarter belongs with a partner who can assess, match from a bench, and coach the landing. Before you choose one, know <a href="how-to-evaluate-a-sales-recruitment-agency.html">how to evaluate a sales recruitment agency</a>. This is exactly the work Revenue Bench is built to do, and every placement comes with a 90-day onboarding coach and a replacement guarantee, so the risk of the hire sits with the firm that made it.</p>
+      <p>For RevOps and enablement, the scoping decision lives in the <a href="hiring-revenue-operations-and-enablement.html">RevOps-and-enablement hiring guide</a>. Before engaging any partner, use the criteria in <a href="how-to-evaluate-a-sales-recruitment-agency.html">how to evaluate a sales recruitment agency</a> to inspect its process, evidence, and post-placement support.</p>
+
+      <h2 id="keep">If you keep it in-house, run it like this</h2>
+      <p>Keeping the search in-house can be the right operating choice. Build the five conditions as a maintained system:</p>
+      <ol>
+        <li><strong>Make repetition useful.</strong> Keep the profile scorecard current and record which channels produce qualified interviews for that exact role.</li>
+        <li><strong>Install a sales-specific screen.</strong> Use the instruments in <a href="how-to-assess-a-salesperson.html">how to assess a salesperson</a>, then assign decision rights with <a href="sales-assessment-vs-interview.html">sales assessment versus interview</a> so each stage has a defined purpose.</li>
+        <li><strong>Maintain a live bench.</strong> Follow <a href="building-a-sales-talent-bench.html">the sales talent bench guide</a> to assess candidates before demand becomes urgent and keep contact current.</li>
+        <li><strong>Verify environment transfer.</strong> Write the five environment answers for the role, test the candidate against them, and use <a href="reference-checks-for-sales-hires.html">structured reference checks for sales hires</a> to verify the evidence.</li>
+        <li><strong>Own the landing.</strong> Put the ramp gates, manager, and market exposure from the <a href="90-day-sales-onboarding-plan.html">90-day onboarding plan</a> in writing before the offer.</li>
+      </ol>
+      <p>A company that builds all five has built a recruiting function, which is the right outcome when volume justifies it.</p>
+
+      <h2 id="run">How Revenue Bench runs this</h2>
+      <p>Revenue Bench sources continuously and maintains a pre-vetted bench of sellers and sales leaders, so a search begins from assessed coverage rather than from an empty pipeline. Kickoff to shortlist is commonly 2 to 4 weeks when the bench covers the role.</p>
+      <p>Candidates for selling and sales-leadership roles are assessed with Objective Management Group's sales-specific assessment before they reach a shortlist. In OMG's 2024 validation survey, 72% of recommended hires reached the top half of their sales force within 12 months, and first-year turnover ran 9% for recommended hires against 33% for candidates OMG advised against who were hired anyway.</p>
+      <p>Senior and confidential searches run as an engaged, retained-style search, where depth and discretion decide the outcome.</p>
+      <p>Every placement carries a 90-day replacement guarantee: if the hire is not working inside the first 90 days from their start date, one free re-run of the search, no conditions, and whether the hire is working is your call to make. Every placement also includes a 90-day onboarding coach who meets the hire weekly and reports to the hiring manager.</p>
+      <p>See <a href="../how-it-works.html">how Revenue Bench works</a> for the full sequence from role definition through onboarding.</p>
+
+      <div class="method">
+        <h2 id="method">Where this guide comes from</h2>
+        <p>The build-or-buy conditions table is Revenue Bench's own instrument.</p>
+        <p>The five dimensions of the selling-environment match come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, credited in the section where it appears. The name and the arrangement are Revenue Bench's.</p>
+        <p>The mis-hire working figure is Revenue Bench's own estimate; the DePaul figures are third-party research; OMG figures are OMG's own research data and are labeled as such; the hiring-manager intuition figure comes from research circulated through OMG's partner network, including the firm Big Swift Kick, and is not an OMG published study.</p>
+        <p>Assessment records kept on candidates before a role exists are employment decisions and data-handling decisions. Run them through your own HR process, counsel, and candidate consent under the law that applies. The <a href="reference-checks-for-sales-hires.html">reference-checks guide</a> publishes the consent standard Revenue Bench applies to its own screens.</p>
+        <p>Whether to run a search in-house is an operating decision; this guide gives the conditions test so the reader can make it either way, and the linked guides publish the instruments an in-house process needs.</p>
+      </div>
     </div>
 
-    <div style="margin-top:48px;">
+    <div id="faq" style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
-      <div class="faq-item"><h3>When should I use a sales recruitment partner instead of hiring in-house?</h3><p>Use a specialist when the role is revenue-critical and a mis-hire is expensive: account executives, sales managers, VP Sales, CRO, RevOps, and enablement. Keep high-volume roles you fill often in-house, where repetition makes your internal process efficient.</p></div>
-      <div class="faq-item"><h3>How does a specialist sales recruiter earn its fee?</h3><p>Three ways. A pre-vetted bench compresses time to shortlist, sales-specific assessment screens out confident-but-wrong candidates, and post-placement coaching protects the hire through the first 90 days. An in-house team can do one of these. Few do all three at once.</p></div>
-      <div class="faq-item"><h3>Is a recruiter fee worth it compared to posting the job myself?</h3><p>Compare the fee to the cost of a mis-hire, not to a job post. A mis-hire in a revenue role runs $200,000 or more. A specialist's fee is a fraction of that and buys a lower chance of paying the larger bill, so for revenue-critical roles it is usually the cheaper option.</p></div>
-      <div class="faq-item"><h3>Which roles can I safely keep in-house?</h3><p>High-volume roles you fill regularly, such as a large SDR class or a high-turnover field role. When you hire the same profile often, your team already knows the scorecard and channels, and the per-hire cost falls as volume rises.</p></div>
+
+      <div class="faq-item">
+        <h3>When should I use a sales recruitment partner instead of hiring in-house?</h3>
+        <p>Use a specialist when the role is revenue-critical and a mis-hire is expensive, or when the search is senior, confidential, or rarely repeated. Keep a repeatable volume role in-house when all five conditions are present: volume and repetition, a sales-specific screen, a live bench, the selling-environment match, and a structured landing.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which sales roles can I safely keep in-house?</h3>
+        <p>Keep sales roles in-house when you fill the exact profile often enough to maintain a current scorecard, productive sourcing channels, assessed candidates, trained screen owners, and a written landing plan. Steady SDR cohorts and recurring field roles can fit this model when the five conditions remain active.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does an in-house sales hiring process need before it is safe for revenue roles?</h3>
+        <p>It needs five operating conditions: volume and repetition, a validated sales-specific assessment with an owner, a live bench of assessed candidates, a selling-environment match, and structured onboarding built around ramp gates. Missing one or two calls for closing the gap or using a specialist for that search.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the selling-environment match?</h3>
+        <p>The selling-environment match tests whether a candidate's sales history transfers across five dimensions: selling altitude, average order size, sell-cycle length, competition intensity, and price position. The five dimensions come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass; the name and the arrangement are Revenue Bench's.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does a specialist sales recruiter earn its fee?</h3>
+        <p>A specialist earns its fee through a pre-vetted bench, sales-specific assessment, and post-placement coaching. Research circulated through OMG's partner network reports that hiring-manager intuition identifies a top performer about 20 percent of the time. It is not an OMG published study. In OMG's 2024 validation survey, 72% of recommended hires reached the top half of their sales force within 12 months, and first-year turnover ran 9% for recommended hires against 33% for candidates OMG advised against who were hired anyway.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is a recruiter fee worth it compared to posting the job myself?</h3>
+        <p>Compare the fee with the expected cost of a failed hire instead of comparing it only with a job post. Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University's Center for Sales Leadership, third-party research surveying more than 435 organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded.</p>
+      </div>
+    </div>
+
+    <div class="author-box">
+      <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+      <div>
+        <div class="an">Carlos Garrido</div>
+        <div class="at">An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
@@ -148,7 +330,8 @@
     <div class="eyebrow">Match the method to the role</div>
     <div class="rule"></div>
     <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">Got a revenue role you cannot afford to miss?</h2>
-    <p class="lead" style="margin:16px auto 28px;">We assess every candidate objectively, match from a pre-vetted bench, and coach the hire through the first 90 days. If it is not working, we run the search again at no additional fee.</p>
+    <p class="lead" style="margin:16px auto 14px;">Every placement carries a 90-day replacement guarantee: if the hire is not working inside the first 90 days from their start date, one free re-run of the search, no conditions, and whether the hire is working is your call to make.</p>
+    <p class="lead" style="margin:0 auto 28px;">Every placement also includes a 90-day onboarding coach who meets the hire weekly and reports to the hiring manager.</p>
     <a href="../contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -176,15 +359,86 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"When to Use a Sales Recruitment Partner vs In-House","description":"Use a specialist sales recruiter when the role is revenue-critical and a mis-hire is costly. How a specialist earns its fee and which roles justify one.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-recruiter-vs-in-house"}}
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"When to Use a Sales Recruitment Partner vs In-House",
+  "description":"Use a specialist sales recruiter when the role is revenue-critical and a mis-hire is costly. How a specialist earns its fee and which roles justify one.",
+  "image":"https://revenuebench.io/og/sales-recruiter-vs-in-house.png",
+  "author":{
+    "@type":"Person",
+    "name":"Carlos Garrido",
+    "jobTitle":"Co-Founder, Revenue Bench",
+    "description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"Revenue Bench",
+    "url":"https://revenuebench.io"
+  },
+  "datePublished":"2026-06-14",
+  "dateModified":"2026-08-17",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://revenuebench.io/guides/sales-recruiter-vs-in-house"
+  }
+}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"When should I use a sales recruitment partner instead of hiring in-house?","acceptedAnswer":{"@type":"Answer","text":"Use a specialist when the role is revenue-critical and a mis-hire is expensive: account executives, sales managers, VP Sales, CRO, RevOps, and enablement. Keep high-volume roles you fill often in-house, where repetition makes your internal process efficient."}},
-{"@type":"Question","name":"How does a specialist sales recruiter earn its fee?","acceptedAnswer":{"@type":"Answer","text":"Three ways. A pre-vetted bench compresses time to shortlist, sales-specific assessment screens out confident-but-wrong candidates, and post-placement coaching protects the hire through the first 90 days. An in-house team can do one of these. Few do all three at once."}},
-{"@type":"Question","name":"Is a recruiter fee worth it compared to posting the job myself?","acceptedAnswer":{"@type":"Answer","text":"Compare the fee to the cost of a mis-hire, not to a job post. A mis-hire in a revenue role runs $200,000 or more. A specialist's fee is a fraction of that and buys a lower chance of paying the larger bill, so for revenue-critical roles it is usually the cheaper option."}},
-{"@type":"Question","name":"Which roles can I safely keep in-house?","acceptedAnswer":{"@type":"Answer","text":"High-volume roles you fill regularly, such as a large SDR class or a high-turnover field role. When you hire the same profile often, your team already knows the scorecard and channels, and the per-hire cost falls as volume rises."}}
-]}
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"When should I use a sales recruitment partner instead of hiring in-house?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Use a specialist when the role is revenue-critical and a mis-hire is expensive, or when the search is senior, confidential, or rarely repeated. Keep a repeatable volume role in-house when all five conditions are present: volume and repetition, a sales-specific screen, a live bench, the selling-environment match, and a structured landing."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Which sales roles can I safely keep in-house?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Keep sales roles in-house when you fill the exact profile often enough to maintain a current scorecard, productive sourcing channels, assessed candidates, trained screen owners, and a written landing plan. Steady SDR cohorts and recurring field roles can fit this model when the five conditions remain active."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What does an in-house sales hiring process need before it is safe for revenue roles?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"It needs five operating conditions: volume and repetition, a validated sales-specific assessment with an owner, a live bench of assessed candidates, a selling-environment match, and structured onboarding built around ramp gates. Missing one or two calls for closing the gap or using a specialist for that search."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is the selling-environment match?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The selling-environment match tests whether a candidate's sales history transfers across five dimensions: selling altitude, average order size, sell-cycle length, competition intensity, and price position. The five dimensions come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass; the name and the arrangement are Revenue Bench's."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How does a specialist sales recruiter earn its fee?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A specialist earns its fee through a pre-vetted bench, sales-specific assessment, and post-placement coaching. Research circulated through OMG's partner network reports that hiring-manager intuition identifies a top performer about 20 percent of the time. It is not an OMG published study. In OMG's 2024 validation survey, 72% of recommended hires reached the top half of their sales force within 12 months, and first-year turnover ran 9% for recommended hires against 33% for candidates OMG advised against who were hired anyway."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is a recruiter fee worth it compared to posting the job myself?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Compare the fee with the expected cost of a failed hire instead of comparing it only with a job post. Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University's Center for Sales Leadership, third-party research surveying more than 435 organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded."
+      }
+    }
+  ]
+}
 </script>
 
 <script>
