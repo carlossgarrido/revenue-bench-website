@@ -18,7 +18,7 @@
 .takeaways li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold);}
 
 .toc-inline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin:36px 0;}
-.toc-inline h4{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px;}
+.toc-inline h4,.toc-inline .toc-title{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px;margin-top:0;}
 .toc-inline ol{list-style:none;counter-reset:t;display:grid;gap:8px;}
 .toc-inline li{counter-increment:t;font-size:15px;}
 .toc-inline li::before{content:counter(t,decimal-leading-zero);color:var(--gold);font-family:'Cormorant Garamond',serif;font-weight:700;margin-right:10px;}
