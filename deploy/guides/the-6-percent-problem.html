@@ -48,6 +48,13 @@
   .method h3{font-size:19px;margin-bottom:10px;}
   .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
   .method p:last-child{margin-bottom:0;}
+  .author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+  .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+  .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  @media(max-width:640px){
+    .author-box{align-items:flex-start;}
+  }
   @media(max-width:640px){.datatable td:nth-child(2){white-space:normal;}}
 </style>
 </head>
@@ -156,6 +163,14 @@
         <p>What the distribution does not claim matters as much as what it does. This is OMG's own dataset, analyzed here by an OMG Certified Partner firm. It is not independent, peer-reviewed research, and we label it as OMG's data throughout rather than present it as a neutral third-party study. Predictive validity "in the 95 percent range" is OMG's published accuracy metric for its assessment and is distinct from the outcome figures. The outcome numbers, 72% of recommended hires reaching the top half and 9% versus 33% first-year turnover, are from OMG's 2024 validation data, the current and more conservative of OMG's two outcome eras.</p>
         <p>Revenue Bench is a founder-led firm and assesses candidates for selling and sales-leadership roles with OMG through co-founder Steve Swanston's Certified Partner firm, Swanston Growth Advisors. We publish these figures as OMG's evidence, clearly attributed, so a hiring team can weigh them for exactly what they are.</p>
       </div>
+
+      <div class="author-box">
+        <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+        <div>
+          <div class="an">Carlos Garrido</div>
+          <div class="at">Co-Founder, Revenue Bench. An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+        </div>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
@@ -214,7 +229,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The 6% Problem: What the Data Says About Sales Talent","description":"Across the largest database of assessed salespeople, only 6% are elite and half are weak. What the distribution means, why teams misread it, and how to hire against it.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Performance Edge; owner of the Sandler Miami practice; Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-19","dateModified":"2026-07-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/the-6-percent-problem"}}
+{"@context":"https://schema.org","@type":"Article","headline":"The 6% Problem: What the Data Says About Sales Talent","description":"Across the largest database of assessed salespeople, only 6% are elite and half are weak. What the distribution means, why teams misread it, and how to hire against it.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-19","dateModified":"2026-08-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/the-6-percent-problem"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
