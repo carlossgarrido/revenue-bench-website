@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Insights &amp; Guides: Hiring and Ramping Sales Talent | Revenue Bench</title>
-<meta name="description" content="Field guides for hiring revenue talent: the true cost of a bad sales hire, how to assess a salesperson beyond the resume, how to hire a VP of Sales, the 90-day onboarding plan, and sales compensation benchmarks for 2026." />
+<meta name="description" content="Twenty-nine operator-written field guides on hiring revenue talent, routed by the decision in front of you: choosing how to run the search, judging a candidate past the resume, hiring or replacing a sales leader, and ramping a hire to quota." />
 <link rel="canonical" href="https://revenuebench.io/guides" />
 <meta property="og:title" content="Insights & Guides | Revenue Bench" />
-<meta property="og:description" content="Practical guides on hiring, assessing, onboarding, and paying revenue talent, written by operators." />
+<meta property="og:description" content="Twenty-nine operator-written guides on hiring, assessing, onboarding, and paying revenue talent, routed by the decision in front of you." />
 <meta property="og:type" content="website" />
   <meta property="og:image" content="https://revenuebench.io/og/guides.png">
   <meta property="og:image:width" content="1200">
@@ -38,12 +38,6 @@
 <style>
   .crumb{font-size:13px;color:var(--ink-soft);margin-bottom:20px;}
   .crumb a{color:var(--ink-mid);border-bottom:1px solid var(--line);}
-  .toc{background:var(--white);border:1px solid var(--line-soft);border-radius:16px;padding:28px 32px;box-shadow:var(--shadow);}
-  .toc h4{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px;}
-  .toc ol{list-style:none;counter-reset:t;display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;}
-  .toc li{counter-increment:t;font-size:15px;}
-  .toc li::before{content:counter(t,decimal-leading-zero);color:var(--gold);font-family:'Cormorant Garamond',serif;font-weight:700;margin-right:10px;}
-  .toc a{color:var(--navy);} .toc a:hover{color:var(--gold-deep);}
   .guide{border-top:1px solid var(--line);padding:52px 0;}
   .guide .tag{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);}
   .guide h2{font-size:clamp(26px,3vw,36px);margin:12px 0 16px;}
@@ -67,7 +61,30 @@
   .faq-item:first-child{border-top:0;}
   .faq-item h3{font-size:20px;margin-bottom:8px;}
   .faq-item p{font-size:15.5px;color:var(--ink-mid);line-height:1.7;}
-  @media(max-width:760px){.toc ol{grid-template-columns:1fr;}.stat-strip{grid-template-columns:1fr;}}
+  .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .router-group{margin-top:48px;}
+  .router-group + .router-group{margin-top:56px;}
+  .router-group h3{margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid var(--gold-deep);font-family:"Cormorant Garamond",serif;font-size:clamp(22px,2vw,24px);font-weight:600;line-height:1.2;color:var(--navy);}
+  .router-group .otable{width:100%;min-width:620px;}
+  .router-group .otable th,
+  .router-group .otable td{padding:14px 16px;}
+  .router-group .otable td{line-height:1.5;}
+  .router-group .otable td:nth-child(3){font-size:14px;color:var(--ink-soft);}
+  @media(max-width:760px){
+    .stat-strip{grid-template-columns:1fr;}
+    .router-group{margin-top:40px;}
+    .router-group + .router-group{margin-top:48px;}
+    .table-scroll{overflow-x:visible;}
+    .router-group .otable{min-width:0;}
+    .router-group .otable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    .router-group .otable tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    .router-group .otable tr:last-child{border-bottom:0;}
+    .router-group .otable td{display:block;padding:0 0 7px;border-bottom:0;}
+    .router-group .otable td:nth-child(2){font-size:15.5px;}
+    .router-group .otable td:nth-child(3){padding-bottom:0;}
+    .router-group .otable td:nth-child(3)::before{content:'Hands you: ';color:var(--gold-deep);}
+  }
 </style>
 </head>
 <body>
@@ -95,42 +112,266 @@
   </div>
 </section>
 
-<!-- TOC -->
+<!-- ROUTER -->
 <section class="section tight bg-cream" style="padding-top:0;">
-  <div class="container reveal">
-    <div class="toc">
-      <h4>In this library</h4>
-      <ol>
-        <li><a href="guides/why-sales-hires-fail.html">Why sales hires fail: what 2.4M assessments show</a></li>
-        <li><a href="guides/should-you-promote-your-best-rep.html">Should you promote your best rep into sales management?</a></li>
-        <li><a href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a></li>
-        <li><a href="guides/confidential-vp-of-sales-replacement.html">How to replace a VP of Sales confidentially</a></li>
-        <li><a href="guides/sales-recruiter-fees.html">Sales recruiter fees: contingency, retained, and what you pay for</a></li>
-        <li><a href="guides/sales-team-due-diligence.html">Sales-team due diligence before the deal closes</a></li>
-        <li><a href="guides/first-100-days-portfolio-sales-team.html">The first 100 days: rebuilding a portfolio company's sales team</a></li>
-        <li><a href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a></li>
-        <li><a href="guides/pe-sales-hiring-mistakes.html">The sales-hiring mistakes PE deal teams repeat</a></li>
-        <li><a href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency</a></li>
-        <li><a href="guides/placement-guarantees-explained.html">How placement guarantees work in sales recruitment</a></li>
-        <li><a href="guides/sales-hire-not-working-out.html">When a sales hire is not working out: cut, coach, or replace</a></li>
-        <li><a href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a></li>
-        <li><a href="guides/the-6-percent-problem.html">The 6% problem: what the data says about sales talent</a></li>
-        <li><a href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview: what each screen catches</a></li>
-        <li><a href="guides/will-to-sell.html">Will to Sell: why drive is a hiring decision</a></li>
-        <li><a href="guides/choosing-a-sales-leadership-model.html">CRO, VP of Sales, or fractional: choosing the sales leadership model</a></li>
-        <li><a href="guides/founders-first-sales-hires.html">The founder's first sales hires: #1 through #3</a></li>
-        <li><a href="guides/hiring-revenue-operations-and-enablement.html">Hiring the revenue operations layer: RevOps and sales enablement</a></li>
-        <li><a href="guides/sales-leader-interview-scorecard.html">The sales leader interview scorecard</a></li>
-        <li><a href="guides/account-executive-interview-scorecard.html">The account executive interview scorecard</a></li>
-        <li><a href="guides/reference-checks-for-sales-hires.html">Reference checks for sales hires: what to ask and what employers will confirm</a></li>
-        <li><a href="guides/how-to-assess-a-salesperson.html">How to assess a salesperson beyond the resume</a></li>
-        <li><a href="guides/how-to-hire-a-vp-of-sales.html">How to hire a VP of Sales or sales manager</a></li>
-        <li><a href="guides/sales-leader-30-60-90-scorecard.html">The 30-60-90 sales-leader scorecard</a></li>
-        <li><a href="guides/90-day-sales-onboarding-plan.html">The 90-day onboarding plan that reaches quota</a></li>
-        <li><a href="guides/sales-recruiter-vs-in-house.html">When to use a sales recruitment partner</a></li>
-        <li><a href="guides/building-a-sales-talent-bench.html">Building a sales talent bench</a></li>
-        <li><a href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a></li>
-      </ol>
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Start here</div>
+      <h2 class="h-lg">Find the guide that answers your decision</h2>
+      <p>Twenty-nine field guides, grouped by the decision in front of you. Each one ends in something you can use: a scorecard, a protocol, a checklist, or a table you can take into your next meeting.</p>
+    </div>
+
+    <div class="router-group reveal">
+      <h3>Choosing how to run the search</h3>
+      <div class="table-scroll">
+        <table class="otable">
+          <caption class="vh">Choosing how to run the search, the decision, the guide, and the artifact it hands you</caption>
+          <thead>
+            <tr>
+              <th scope="col">The decision you are facing</th>
+              <th scope="col">The guide</th>
+              <th scope="col">What it hands you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Should we run this search ourselves or bring in a partner?</td>
+              <td><a href="guides/sales-recruiter-vs-in-house.html">When to use a sales recruitment partner vs in-house</a></td>
+              <td>The five conditions an in-house search needs</td>
+            </tr>
+            <tr>
+              <td>How do we compare agencies, and what should we demand in writing?</td>
+              <td><a href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency</a></td>
+              <td>The eight-criteria evaluation scorecard</td>
+            </tr>
+            <tr>
+              <td>Which fee model puts the risk where it belongs?</td>
+              <td><a href="guides/sales-recruiter-fees.html">Sales recruiter fees: contingency, retained, and what you pay for</a></td>
+              <td>The fee-structure risk comparison</td>
+            </tr>
+            <tr>
+              <td>What does a placement guarantee cover, and when does it void?</td>
+              <td><a href="guides/placement-guarantees-explained.html">How placement guarantees work in sales recruitment</a></td>
+              <td>The three guarantee types and the terms to demand in writing</td>
+            </tr>
+            <tr>
+              <td>What does a mis-hire or an open role cost us?</td>
+              <td><a href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire, and how to avoid it</a></td>
+              <td>The vacancy ledger, with the formula for each line</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="router-group reveal">
+      <h3>Deciding who to hire</h3>
+      <div class="table-scroll">
+        <table class="otable">
+          <caption class="vh">Deciding who to hire, the decision, the guide, and the artifact it hands you</caption>
+          <thead>
+            <tr>
+              <th scope="col">The decision you are facing</th>
+              <th scope="col">The guide</th>
+              <th scope="col">What it hands you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>How do we judge a seller past the resume?</td>
+              <td><a href="guides/how-to-assess-a-salesperson.html">How to assess a salesperson beyond the resume</a></td>
+              <td>The trait-evidence matrix</td>
+            </tr>
+            <tr>
+              <td>Assessment or interview: what does each one catch?</td>
+              <td><a href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview: what each screen catches</a></td>
+              <td>The screen-by-screen table: what each catches and what it cannot see</td>
+            </tr>
+            <tr>
+              <td>Does this candidate have the drive the role needs?</td>
+              <td><a href="guides/will-to-sell.html">Will to Sell: why drive is a hiring decision</a></td>
+              <td>The five markers of Will to Sell</td>
+            </tr>
+            <tr>
+              <td>How do we score an account executive interview consistently?</td>
+              <td><a href="guides/account-executive-interview-scorecard.html">The account executive interview scorecard</a></td>
+              <td>The account executive scorecard, ready to run</td>
+            </tr>
+            <tr>
+              <td>How do we score a sales-leader interview consistently?</td>
+              <td><a href="guides/sales-leader-interview-scorecard.html">The sales leader interview scorecard</a></td>
+              <td>The leadership scorecard, ready to run</td>
+            </tr>
+            <tr>
+              <td>What will a reference confirm, and what will they withhold?</td>
+              <td><a href="guides/reference-checks-for-sales-hires.html">Reference checks for sales hires: what to ask and what employers will confirm</a></td>
+              <td>The consent-first question protocol</td>
+            </tr>
+            <tr>
+              <td>Why do candidates who interview well still fail?</td>
+              <td><a href="guides/why-sales-hires-fail.html">Why sales hires fail: what 2.4 million assessments show</a></td>
+              <td>Five failure patterns, each with its countermeasure</td>
+            </tr>
+            <tr>
+              <td>What does the sales talent pool look like before we start?</td>
+              <td><a href="guides/the-6-percent-problem.html">The 6% problem: what the data says about sales talent</a></td>
+              <td>OMG's 6, 11, 33, 50 distribution table</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="router-group reveal">
+      <h3>Hiring or replacing a sales leader</h3>
+      <div class="table-scroll">
+        <table class="otable">
+          <caption class="vh">Hiring or replacing a sales leader, the decision, the guide, and the artifact it hands you</caption>
+          <thead>
+            <tr>
+              <th scope="col">The decision you are facing</th>
+              <th scope="col">The guide</th>
+              <th scope="col">What it hands you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CRO, VP of Sales, or fractional: which one fits our stage?</td>
+              <td><a href="guides/choosing-a-sales-leadership-model.html">CRO, VP of Sales, or fractional: choosing the sales leadership model</a></td>
+              <td>The stage-to-model matrix</td>
+            </tr>
+            <tr>
+              <td>How do we run a VP of Sales or sales-manager hire?</td>
+              <td><a href="guides/how-to-hire-a-vp-of-sales.html">How to hire a VP of Sales or sales manager</a></td>
+              <td>The interview questions and the four red flags</td>
+            </tr>
+            <tr>
+              <td>Should we promote our best rep into management?</td>
+              <td><a href="guides/should-you-promote-your-best-rep.html">Should you promote your best rep into sales management?</a></td>
+              <td>What OMG's evaluation of 44,493 sales managers shows</td>
+            </tr>
+            <tr>
+              <td>How do we replace a leader without the market hearing about it?</td>
+              <td><a href="guides/confidential-vp-of-sales-replacement.html">How to replace a VP of Sales confidentially</a></td>
+              <td>The confidential replacement protocol</td>
+            </tr>
+            <tr>
+              <td>What do we hold a new leader to in the first 90 days?</td>
+              <td><a href="guides/sales-leader-30-60-90-scorecard.html">The 30-60-90 sales-leader scorecard</a></td>
+              <td>The 30-60-90 scorecard</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="router-group reveal">
+      <h3>Deciding what the team should look like</h3>
+      <div class="table-scroll">
+        <table class="otable">
+          <caption class="vh">Deciding what the team should look like, the decision, the guide, and the artifact it hands you</caption>
+          <thead>
+            <tr>
+              <th scope="col">The decision you are facing</th>
+              <th scope="col">The guide</th>
+              <th scope="col">What it hands you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Which sellers does a founder hire first?</td>
+              <td><a href="guides/founders-first-sales-hires.html">The founder's first sales hires: #1 through #3</a></td>
+              <td>The hiring-sequence map</td>
+            </tr>
+            <tr>
+              <td>When do we add revenue operations or enablement?</td>
+              <td><a href="guides/hiring-revenue-operations-and-enablement.html">Hiring the revenue operations layer: RevOps and sales enablement</a></td>
+              <td>Ownership mapped by type of work</td>
+            </tr>
+            <tr>
+              <td>How do we have candidates ready before a role opens?</td>
+              <td><a href="guides/building-a-sales-talent-bench.html">Building a sales talent bench</a></td>
+              <td>The bench coverage map</td>
+            </tr>
+            <tr>
+              <td>What do we pay to attract the seller we want?</td>
+              <td><a href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a></td>
+              <td>The plan ledger, worked</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="router-group reveal">
+      <h3>Hiring inside a deal or a portfolio company</h3>
+      <div class="table-scroll">
+        <table class="otable">
+          <caption class="vh">Hiring inside a deal or a portfolio company, the decision, the guide, and the artifact it hands you</caption>
+          <thead>
+            <tr>
+              <th scope="col">The decision you are facing</th>
+              <th scope="col">The guide</th>
+              <th scope="col">What it hands you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>How should a portfolio govern sales hiring?</td>
+              <td><a href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a></td>
+              <td>The portfolio hiring-governance model</td>
+            </tr>
+            <tr>
+              <td>What do we check on the sales team before we sign?</td>
+              <td><a href="guides/sales-team-due-diligence.html">Sales-team due diligence before the deal closes</a></td>
+              <td>The pre-LOI checklist</td>
+            </tr>
+            <tr>
+              <td>What happens to the sales team in the first 100 days after close?</td>
+              <td><a href="guides/first-100-days-portfolio-sales-team.html">The first 100 days: rebuilding a portfolio company's sales team</a></td>
+              <td>The 100-day sequence</td>
+            </tr>
+            <tr>
+              <td>What do we pay a sales leader working to an exit?</td>
+              <td><a href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a></td>
+              <td>The package-structure table</td>
+            </tr>
+            <tr>
+              <td>Which hiring mistakes do deal teams repeat?</td>
+              <td><a href="guides/pe-sales-hiring-mistakes.html">The sales-hiring mistakes PE deal teams repeat</a></td>
+              <td>The repeated-mistake ledger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="router-group reveal">
+      <h3>Fixing a hire that is already in place</h3>
+      <div class="table-scroll">
+        <table class="otable">
+          <caption class="vh">Fixing a hire that is already in place, the decision, the guide, and the artifact it hands you</caption>
+          <thead>
+            <tr>
+              <th scope="col">The decision you are facing</th>
+              <th scope="col">The guide</th>
+              <th scope="col">What it hands you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cut, coach, or replace: how long do we give this hire?</td>
+              <td><a href="guides/sales-hire-not-working-out.html">When a sales hire is not working out: cut, coach, or replace</a></td>
+              <td>The three-way triage table</td>
+            </tr>
+            <tr>
+              <td>How do we ramp a new hire to real quota?</td>
+              <td><a href="guides/90-day-sales-onboarding-plan.html">The 90-day onboarding plan that reaches quota</a></td>
+              <td>The five ramp gates</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -142,7 +383,7 @@
     <article class="guide reveal" id="why-fail">
       <div class="tag">Original analysis &middot; OMG dataset</div>
       <h2>Why sales hires fail: what 2.4 million assessments show</h2>
-      <p class="ans"><strong>New sales hires rarely fail for lack of effort. They fail in patterns that were visible before the offer.</strong> Our co-founder Steve Swanston, whose firm Swanston Growth Advisors is a Certified Partner of Objective Management Group, analyzed what the largest sales-specific dataset in existence says about failed hires: five patterns, each measurable, each with a countermeasure.</p>
+      <p class="ans"><strong>New sales hires rarely fail for lack of effort. They fail in patterns that were visible before the offer.</strong> Our co-founder Steve Swanston, whose firm Swanston Growth Advisors is a Certified Partner of Objective Management Group, analyzed what OMG's dataset, which OMG describes as the largest sales-specific dataset in existence, says about failed hires: five patterns, each measurable, each with a countermeasure.</p>
       <p>The pool is bottom-heavy, the failing traits are invisible in interviews, capable people land in the wrong roles, objective warnings get overridden, and the first 90 days go unmanaged. In OMG's 2024 validation survey, 100% of candidates flagged "not recommended" who were hired anyway landed in the bottom half of their team.</p>
       <ul class="keypoints">
         <li>Effort is not the cause: 86% of salespeople have desire, 88% handle rejection well.</li>
@@ -558,7 +799,62 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Insights & Guides: Hiring and Ramping Sales Talent","description":"Operator-written guides on hiring, assessing, onboarding, and paying revenue talent.","author":{"@type":"Organization","name":"Revenue Bench"},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides"}}
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Insights & Guides: Hiring and Ramping Sales Talent",
+  "description": "Operator-written guides on hiring, assessing, onboarding, and paying revenue talent, routed by the decision in front of the buyer.",
+  "url": "https://revenuebench.io/guides",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://revenuebench.io/guides"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Revenue Bench"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Revenue Bench"
+  },
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-08-23",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 29,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"When to use a sales recruitment partner vs in-house","url":"https://revenuebench.io/guides/sales-recruiter-vs-in-house"},
+      {"@type":"ListItem","position":2,"name":"How to evaluate a sales recruitment agency","url":"https://revenuebench.io/guides/how-to-evaluate-a-sales-recruitment-agency"},
+      {"@type":"ListItem","position":3,"name":"Sales recruiter fees: contingency, retained, and what you pay for","url":"https://revenuebench.io/guides/sales-recruiter-fees"},
+      {"@type":"ListItem","position":4,"name":"How placement guarantees work in sales recruitment","url":"https://revenuebench.io/guides/placement-guarantees-explained"},
+      {"@type":"ListItem","position":5,"name":"The true cost of a bad sales hire, and how to avoid it","url":"https://revenuebench.io/guides/cost-of-a-bad-sales-hire"},
+      {"@type":"ListItem","position":6,"name":"How to assess a salesperson beyond the resume","url":"https://revenuebench.io/guides/how-to-assess-a-salesperson"},
+      {"@type":"ListItem","position":7,"name":"Sales assessment vs interview: what each screen catches","url":"https://revenuebench.io/guides/sales-assessment-vs-interview"},
+      {"@type":"ListItem","position":8,"name":"Will to Sell: why drive is a hiring decision","url":"https://revenuebench.io/guides/will-to-sell"},
+      {"@type":"ListItem","position":9,"name":"The account executive interview scorecard","url":"https://revenuebench.io/guides/account-executive-interview-scorecard"},
+      {"@type":"ListItem","position":10,"name":"The sales leader interview scorecard","url":"https://revenuebench.io/guides/sales-leader-interview-scorecard"},
+      {"@type":"ListItem","position":11,"name":"Reference checks for sales hires: what to ask and what employers will confirm","url":"https://revenuebench.io/guides/reference-checks-for-sales-hires"},
+      {"@type":"ListItem","position":12,"name":"Why sales hires fail: what 2.4 million assessments show","url":"https://revenuebench.io/guides/why-sales-hires-fail"},
+      {"@type":"ListItem","position":13,"name":"The 6% problem: what the data says about sales talent","url":"https://revenuebench.io/guides/the-6-percent-problem"},
+      {"@type":"ListItem","position":14,"name":"CRO, VP of Sales, or fractional: choosing the sales leadership model","url":"https://revenuebench.io/guides/choosing-a-sales-leadership-model"},
+      {"@type":"ListItem","position":15,"name":"How to hire a VP of Sales or sales manager","url":"https://revenuebench.io/guides/how-to-hire-a-vp-of-sales"},
+      {"@type":"ListItem","position":16,"name":"Should you promote your best rep into sales management?","url":"https://revenuebench.io/guides/should-you-promote-your-best-rep"},
+      {"@type":"ListItem","position":17,"name":"How to replace a VP of Sales confidentially","url":"https://revenuebench.io/guides/confidential-vp-of-sales-replacement"},
+      {"@type":"ListItem","position":18,"name":"The 30-60-90 sales-leader scorecard","url":"https://revenuebench.io/guides/sales-leader-30-60-90-scorecard"},
+      {"@type":"ListItem","position":19,"name":"The founder's first sales hires: #1 through #3","url":"https://revenuebench.io/guides/founders-first-sales-hires"},
+      {"@type":"ListItem","position":20,"name":"Hiring the revenue operations layer: RevOps and sales enablement","url":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"},
+      {"@type":"ListItem","position":21,"name":"Building a sales talent bench","url":"https://revenuebench.io/guides/building-a-sales-talent-bench"},
+      {"@type":"ListItem","position":22,"name":"Sales compensation benchmarks for 2026","url":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"},
+      {"@type":"ListItem","position":23,"name":"The private equity operating partner's sales-hiring playbook","url":"https://revenuebench.io/guides/private-equity-sales-hiring-playbook"},
+      {"@type":"ListItem","position":24,"name":"Sales-team due diligence before the deal closes","url":"https://revenuebench.io/guides/sales-team-due-diligence"},
+      {"@type":"ListItem","position":25,"name":"The first 100 days: rebuilding a portfolio company's sales team","url":"https://revenuebench.io/guides/first-100-days-portfolio-sales-team"},
+      {"@type":"ListItem","position":26,"name":"Sales-leader compensation in a PE-backed company","url":"https://revenuebench.io/guides/pe-sales-leader-compensation"},
+      {"@type":"ListItem","position":27,"name":"The sales-hiring mistakes PE deal teams repeat","url":"https://revenuebench.io/guides/pe-sales-hiring-mistakes"},
+      {"@type":"ListItem","position":28,"name":"When a sales hire is not working out: cut, coach, or replace","url":"https://revenuebench.io/guides/sales-hire-not-working-out"},
+      {"@type":"ListItem","position":29,"name":"The 90-day onboarding plan that reaches quota","url":"https://revenuebench.io/guides/90-day-sales-onboarding-plan"}
+    ]
+  }
+}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
