@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ9Z9HNDWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MQ9Z9HNDWV');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<title>Keep, Coach, or Replace an Inherited Sales Leader | Revenue Bench</title>
+<meta name="description" content="A six-gate decision tree for evaluating an inherited sales leader after an acquisition or leadership change, with evidence-based routes to keep, keep with defined support, or replace." />
+<link rel="canonical" href="https://revenuebench.io/guides/inherited-sales-leader-keep-coach-replace" />
+<meta property="og:title" content="Keep, Coach, or Replace an Inherited Sales Leader" />
+<meta property="og:description" content="A six-gate decision tree for separating the leader from the inherited sales system and choosing keep, keep with defined support, or replace." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://revenuebench.io/og/inherited-sales-leader-keep-coach-replace.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Keep, Coach, or Replace an Inherited Sales Leader">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://revenuebench.io/og/inherited-sales-leader-keep-coach-replace.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="../assets/site.css" rel="stylesheet" />
+<link href="../assets/article.css" rel="stylesheet" />
+<style>
+  .datatable{width:100%;min-width:760px;border-collapse:collapse;margin:0;font-size:14px;background:var(--white);}
+  .datatable th,.datatable td{text-align:left;padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top;}
+  .datatable th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border:1px solid var(--line-soft);border-radius:12px;}
+  .tablewrap-gates{width:min(1280px,calc(100vw - 40px));margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
+  #gate-summary{min-width:1180px;line-height:1.55;}
+  #gate-summary th,#gate-summary td{padding:14px 15px;border-right:1px solid var(--line-soft);}
+  #gate-summary th:last-child,#gate-summary td:last-child{border-right:0;}
+  #gate-summary tbody tr:last-child td,#gate-summary tbody tr:last-child th{border-bottom:0;}
+  #gate-summary th:first-child,#gate-summary th[scope="row"]{width:8%;}
+  #gate-summary th:nth-child(2),#gate-summary td:nth-child(2){width:20%;}
+  #gate-summary th:nth-child(3),#gate-summary td:nth-child(3){width:34%;}
+  #gate-summary th:nth-child(4),#gate-summary td:nth-child(4){width:19%;}
+  #gate-summary th:nth-child(5),#gate-summary td:nth-child(5){width:19%;}
+  #gate-summary th[scope="row"]{color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;font-size:inherit;line-height:1.55;}
+  #gate-summary td:nth-child(3){color:var(--ink-mid);font-weight:400;}
+  #gate-summary td:nth-child(4),#gate-summary td:nth-child(5){color:var(--gold-deep);font-weight:600;}
+  .table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+  .gate{border:1px solid var(--line-soft);border-radius:12px;background:var(--white);padding:26px 28px;margin:22px 0;}
+  .gate h3{font-size:24px;line-height:1.25;margin:0 0 14px;color:var(--navy);}
+  .gate p:last-child{margin-bottom:0;}
+  .route-line{border-top:1px solid var(--line-soft);margin-top:18px;padding-top:15px;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+  .route-line span{display:block;margin-top:6px;}
+  .route-line strong{color:var(--navy);}
+  .compare-list{border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;margin:18px 0;}
+  .compare-head,.compare-row{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+  .compare-head{background:var(--parchment);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .compare-head div,.compare-row div{padding:12px 15px;}
+  .compare-head div:first-child,.compare-row div:first-child{border-right:1px solid var(--line-soft);}
+  .compare-row{border-top:1px solid var(--line-soft);font-size:14.5px;line-height:1.6;}
+  .support-test{border:2px solid var(--gold);border-radius:12px;background:var(--white);padding:26px 28px;margin:18px 0;}
+  .support-test h3{font-size:22px;margin:0 0 8px;}
+  .support-test dl{margin:18px 0 0;}
+  .support-test dt{font-weight:600;color:var(--navy);margin-top:14px;}
+  .support-test dd{margin:4px 0 0;color:var(--ink-mid);line-height:1.65;}
+  .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
+  .method h3{font-size:19px;margin-bottom:10px;}
+  .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+  .method p:last-child{margin-bottom:0;}
+  .author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+  .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+  .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  @media(max-width:760px){
+    .tablewrap-gates{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
+    #gate-summary{min-width:0;font-size:15px;}
+    #gate-summary thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #gate-summary tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    #gate-summary tr:last-child{border-bottom:0;}
+    #gate-summary td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;}
+    #gate-summary th[scope="row"]{display:block;width:auto;font-size:17px;padding:0 0 10px;border-bottom:0;}
+    #gate-summary td:nth-child(2)::before{content:'The question: ';color:var(--ink-soft);font-weight:400;}
+    #gate-summary td:nth-child(3)::before{content:'Evidence: ';color:var(--ink-soft);font-weight:400;}
+    #gate-summary td:nth-child(4)::before{content:'Where yes goes: ';color:var(--ink-soft);font-weight:400;}
+    #gate-summary td:nth-child(5)::before{content:'Where no goes: ';color:var(--ink-soft);font-weight:400;}
+    #gate-summary td:last-child{padding-bottom:0;}
+    .compare-head{display:none;}
+    .compare-row{display:block;padding:12px 15px;}
+    .compare-row div{padding:3px 0;}
+    .compare-row div:first-child{border-right:0;font-weight:600;color:var(--navy);}
+    .gate,.support-test{padding:22px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="nav">
+  <a href="../index.html" class="wordmark">REVENUE <b>BENCH</b><span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="../for-employers.html">For Employers</a>
+    <a href="../for-candidates.html">For Candidates</a>
+    <a href="../private-equity.html">Private Equity</a>
+    <a href="../guides.html">Insights</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html" class="btn btn-navy nav-cta">Find your next hire</a>
+  </nav>
+  <button class="nav-burger" aria-label="Menu" id="burger">&#9776;</button>
+</header>
+
+<section class="art-hero bg-cream">
+  <div class="container" style="max-width:820px;">
+    <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Inherited sales leader</span></div>
+    <div class="eyebrow">Sales leadership &middot; Post-close decision</div>
+    <h1>The sales leader you inherited: keep, coach, or replace</h1>
+    <div class="art-meta">
+      <span>By Carlos Garrido, Co-Founder, Revenue Bench</span>
+      <span class="dot"></span>
+      <span>22 min read</span>
+      <span class="dot"></span>
+      <span>August 26, 2026</span>
+    </div>
+    <p class="deck"><strong>The first sales decision after close is whether the inherited leader can run the value-creation plan.</strong> The prior number cannot answer that question by itself. This guide separates the person from the system they inherited, measures what can develop, and routes the evidence to keep, keep with defined support, or replace.</p>
+  </div>
+</section>
+
+<section class="section bg-cream" style="padding-top:24px;">
+  <div class="container" style="max-width:820px;">
+
+    <div class="takeaways">
+      <h2>Key takeaways</h2>
+      <ul>
+        <li>An inherited revenue result is evidence about the company and only partly evidence about the leader.</li>
+        <li>A missing management quality is an ordinary finding. The decision turns on whether the named gap moves when support is installed.</li>
+        <li>A leader who lacks a method can develop against a dated test. Declining to run a method already learned answers a different question.</li>
+        <li>Replacement carries a transition cost. Support without a review date spends the same period and gets no transition for it.</li>
+        <li>Keep with defined support means a written test, observable measures, a review no later than 60 days after it is written, and a stated decision at the end. The decision itself belongs in days 16 to 30 after close.</li>
+      </ul>
+    </div>
+
+    <div class="toc-inline">
+      <h2 class="toc-title">In this guide</h2>
+      <ol>
+        <li><a href="#decision">The decision in front of you</a></li>
+        <li><a href="#origin">How the leader you inherited ended up in the role</a></li>
+        <li><a href="#tree">The six-gate decision tree</a></li>
+        <li><a href="#support-test">The written support test</a></li>
+        <li><a href="#cost">The cost of getting it wrong in each direction</a></li>
+        <li><a href="#equity">When the leader owns rollover equity or an earnout</a></li>
+        <li><a href="#replace">If the answer is replace</a></li>
+        <li><a href="#limits">What this page does not decide</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
+        <li><a href="#faq">Questions about an inherited sales leader, answered</a></li>
+      </ol>
+    </div>
+
+    <div class="prose">
+      <h2 id="decision">The decision in front of you</h2>
+      <p>A private equity operating partner shortly after close, or a new CEO or CRO, inherits a sales leader they did not select. Every seller decision, hiring bar, quota, and management cadence below that leader depends on whether the leader stays. The sponsor's value-creation plan already carries dates, so waiting without a written test is also a decision.</p>
+      <p>The three routes are <strong>keep</strong>, <strong>keep with defined support</strong>, and <strong>replace</strong>. The middle route is usually called "coach" in the conversation. We use the site's own term, "keep with defined support," because it is the one that carries a written test and a date.</p>
+      <p>The parent <a href="first-100-days-portfolio-sales-team.html">first 100 days sequence</a> reconciles revenue math in days 1 to 15 and closes the sales leader decision in days 16 to 30. This page is the depth behind that second window. It does not repeat the sequence. The <a href="private-equity-sales-hiring-playbook.html">portfolio governance guide</a> carries the resulting hiring standard through the ownership period.</p>
+      <p>Revenue Bench is paid when a leader is replaced, so publishing the conditions under which the right answer is to keep the leader runs against our commercial interest.</p>
+      <p>This page handles the leader-level decision. The <a href="sales-hire-not-working-out.html">seller-level version of this decision</a> covers an individual sales hire.</p>
+
+      <h2 id="origin">How the leader you inherited ended up in the role</h2>
+      <p>Carlos Garrido's <em>Building a Scalable Sales Team</em> masterclass places a company's first dedicated sales leader at the stage where one manager is responsible for roughly five or eight sellers. Two hiring errors at that point can leave an acquirer with a leader whose title conceals the original mismatch. The company hired too junior, or it hired too corporate. The origin matters because the two patterns fail for different reasons.</p>
+      <ul>
+        <li><strong>Hired too junior.</strong> Carlos identifies cost, fear, and the founder's hero complex, the reluctance to hand selling over, as the three reasons. This leader usually has the want and lacks the method. That points toward the first door at gate 4.</li>
+        <li><strong>Hired too corporate.</strong> This leader learned inside a company with a marketing engine, an established brand, and a support structure that the current company does not have. The method may be sound under different conditions. That is a fit question, and it appears at gate 1.</li>
+      </ul>
+      <p>This is a diagnostic for the current decision. It is not a judgment about the history that produced the role.</p>
+
+      <h2 id="tree">The six-gate decision tree</h2>
+      <p>Enter at gate 1. Follow the stated route at the end of each gate. The sequence separates an inherited plan problem, a role-fit problem, a development case, and a replacement case before any search opens.</p>
+
+      <div class="gate">
+        <h3>Gate 1. Whose numbers are you looking at?</h3>
+        <p>An inherited leader arrives with a record produced under a different owner, a different compensation plan, a different target, and often a founder who still carried the largest opportunities. Those results are evidence about a company, and only partly evidence about a person.</p>
+        <p>Separate the number from the leader before treating attainment as a management verdict:</p>
+        <ol>
+          <li>Who set the target, and was it reconciled to quota-carrying capacity at the time it was set?</li>
+          <li>Who closed the largest opportunities in the last four quarters, the leader, the sellers, or the founder or previous owner?</li>
+          <li>What changed at close: the compensation plan, the pricing, the territory map, the ideal customer profile, or the reporting line?</li>
+          <li>What is in the pipeline that was built to be presented rather than to be closed, and what survives a stage-by-stage review against a written definition of each stage?</li>
+        </ol>
+        <p>Then read the attainment distribution across the team instead of relying on the total. Check whether the selling motion changed underneath the team. A total can conceal one founder-carried deal, one seller carrying the group, or a roster whose available capacity never supported the assigned target.</p>
+        <p>Carlos Garrido's <em>Building a Scalable Sales Team</em> masterclass adds a direct test: ask who runs the selling system today. In his stage model, the company moves from the founder being the system, to the founder teaching it, to the founder managing it, and then to the sales leader running it. If the founder or CEO still runs the system, the role has not been handed over. A leader measured on a system they do not control is being graded on work that is not theirs.</p>
+        <p class="note"><strong>Name this finding when it appears:</strong> the founder or CEO still runs the selling system, so the available result does not isolate the sales leader's management capability.</p>
+        <p>If the plan was never reconciled to capacity, or the selling motion changed underneath the team, the leader is being measured against a number nobody on that roster could reach. Fix the plan, restate the target, and reopen this decision at the end of the next full quarter. This is the branch where a replacement search buys the same result with a fee attached.</p>
+        <div class="route-line">
+          <span><strong>If yes, the number was reachable with the team as it stood:</strong> continue to gate 2.</span>
+          <span><strong>If no, the number was not reachable or the motion changed:</strong> fix the plan, restate the target, and reopen the decision at the end of the next full quarter.</span>
+        </div>
+      </div>
+
+      <div class="gate">
+        <h3>Gate 2. Does this person manage, or are they still the best seller?</h3>
+        <p>Read where the leader's hours go, their own opportunities against their people's opportunities. Identify who is on the largest open deals. Then ask whether the team's second-best seller has improved during the past year.</p>
+        <p>If the leader carries the number personally, the issue is role fit. It is often better to move the person into a senior selling role than to end their employment. The <a href="should-you-promote-your-best-rep.html">promotion analysis</a> carries the underlying management data, and the <a href="choosing-a-sales-leadership-model.html">sales-leadership model guide</a> handles the organization design.</p>
+        <div class="route-line">
+          <span><strong>If yes, they manage the team's selling:</strong> continue to gate 3.</span>
+          <span><strong>If no, they carry the number themselves:</strong> route to the promotion analysis and leadership-model guide, then decide the right role.</span>
+        </div>
+      </div>
+
+      <div class="gate">
+        <h3>Gate 3. Which of the three coaching qualities is missing?</h3>
+        <p>The evidence is a sales-management evaluation. In OMG's evaluation of 44,493 sales managers, only 9 percent were strong in all three key coaching qualities, and managers strong in all three produce 80 percent more elite salespeople, according to OMG's data.</p>
+        <p>The three qualities use the site's established definitions:</p>
+        <ul>
+          <li><strong>The ability to coach</strong>, meaning to watch someone sell and change how they do it through specific feedback.</li>
+          <li><strong>The ability to motivate</strong>, meaning to understand what drives each different person on the team rather than assuming everyone runs on what drives you.</li>
+          <li><strong>The discipline to develop a team through a steady cadence rather than sporadic heroics.</strong></li>
+        </ul>
+        <p>The 9 percent base rate means a leader missing one of the three is the ordinary case, and it is not a disqualification. A base rate is not a verdict on the person in front of you. It is the reason to measure rather than assume. The decision turns on which quality is missing.</p>
+
+        <div class="compare-list">
+          <div class="compare-head">
+            <div>What the performance history shows</div>
+            <div>What an evaluation reads that the history cannot</div>
+          </div>
+          <div class="compare-row">
+            <div>The history shows the number.</div>
+            <div>The evaluation reads whether the leader can develop another person's selling.</div>
+          </div>
+          <div class="compare-row">
+            <div>The history shows who closed.</div>
+            <div>The evaluation reads whether the leader recruits and selects.</div>
+          </div>
+          <div class="compare-row">
+            <div>The history shows activity.</div>
+            <div>The evaluation reads the beliefs underneath it.</div>
+          </div>
+          <div class="compare-row">
+            <div>The history shows a result under one set of conditions.</div>
+            <div>The evaluation reads capability against the conditions the plan now requires.</div>
+          </div>
+        </div>
+
+        <p>The evaluation input is an evaluation from Objective Management Group, applied through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors. The <a href="sales-assessment-vs-interview.html">assessment-versus-interview guide</a> explains what each screen catches. The site's <a href="should-you-promote-your-best-rep.html">promotion analysis</a> carries the data lineage for these management qualities.</p>
+        <div class="route-line">
+          <span><strong>If yes, all three qualities are strong:</strong> exit at keep. Management capability is not the constraint. Record the evidence, set the operating measures with the <a href="sales-leader-30-60-90-scorecard.html">sales-leader scorecard</a>, and take the remaining question back to the plan, the motion, or the role rather than to the person.</span>
+          <span><strong>If no, one or more qualities are missing:</strong> continue to gate 4 carrying the named gap.</span>
+        </div>
+      </div>
+
+      <div class="gate">
+        <h3>Gate 4. Does the missing piece move? The two doors.</h3>
+        <p>Carlos Garrido's sales-leadership teaching frames an underproducing leader through two doors. Behind the first door, the leader does not know the system. They were never taught the cadence, pipeline discipline, or coaching method. They have been running on personal effort and instinct.</p>
+        <p>Behind the second door, the leader knows the system and does not run it consistently. They have been trained. They can describe what good looks like. Under pressure, they return to old patterns.</p>
+        <p class="note"><strong>Carlos's judgment:</strong> the second door costs more than the first, because the leader knows what is possible and is choosing the comfortable path.</p>
+        <p>The first door is a development problem with a date on it. The second door is a want problem, and want is the thing this page will not promise to develop.</p>
+        <p>OMG measured 5,331 salespeople before and after training by a certified partner. Skills moved: closing 55 percent, reaching decision makers 43 percent, and consultative selling 28 percent. Beliefs moved: comfort discussing money 66 percent and buy cycle 48 percent. Drive barely moved: Will to Sell changed 0 to 6 percent. That study measured salespeople rather than sales managers. We found no published before-and-after study measuring the same on sales managers, so we read it as the shape of what development moves rather than as a manager figure.</p>
+        <p>A missing skill or belief can enter a coaching case. A missing want, including a leader who does not want the coaching part of the role, routes to replace. This site will not claim that development moves drive when the available evidence says it barely moves in a different population.</p>
+        <div class="route-line">
+          <span><strong>If yes, the gap is a skill or belief that can move:</strong> continue to gate 5 as a coaching case.</span>
+          <span><strong>If no, the gap is want:</strong> exit at replace, on the operating judgment rather than on the study.</span>
+        </div>
+      </div>
+
+      <div class="gate">
+        <h3>Gate 5. Is there a cadence, and did it change when it was asked for?</h3>
+        <p>Count coaching interactions for two weeks. This is observable without an instrument and is the cheapest evidence on the page.</p>
+        <p>In OMG's study of 11,078 salespeople and their managers, salespeople coached several times a week scored 17 percentile points higher than those never coached, weekly coaching scored 9 points higher, and quarterly, monthly, or bi-weekly coaching scored only 2 to 5 points higher. In the same data, 10 percent of salespeople are coached several times a week and 8 percent are not coached at all, which is OMG's data on frequency.</p>
+        <p>Carlos Garrido's sales-leadership teaching names coaching-versus-conversation as one of five beliefs that hold a sales manager back. Talking with the team regularly is not the same as coaching them. Daily conversation is usually reactive. Coaching is a scheduled conversation with a subject, aimed at a named skill, with the roadblocks written down. A leader who reports weekly one-to-ones may be reporting conversation rather than coaching. The two-week count separates them.</p>
+        <p>A leader who wants to coach and has no cadence is the most fixable case on this page. A leader who has been told the cadence, agreed to it, and has not run it thirty days later has answered the question about want.</p>
+        <div class="route-line">
+          <span><strong>If yes, the cadence changes when asked for:</strong> continue to gate 6 and exit at keep with defined support.</span>
+          <span><strong>If no, the cadence does not change:</strong> exit at replace.</span>
+        </div>
+      </div>
+
+      <div class="gate">
+        <h3>Gate 6. What does keep with defined support say in writing?</h3>
+        <p>A support decision that is not written down is an undisclosed runway, and the leader is the only person in the organization who does not know they are being reviewed.</p>
+        <p>The sequence guide places revenue-math reconciliation in days 1 to 15 and the sales leader decision in days 16 to 30 after close. The support test adds one date: its review occurs no later than 60 days after the test is written. One extension is permitted, and only for a stated reason.</p>
+        <p>The document names the gaps, the measures, the cadence, the observer, the review date, the people conducting the review, and the decision the review triggers. The leader receives a copy on the day it is written.</p>
+        <div class="route-line">
+          <span><strong>If yes, every field is written and shared:</strong> exit at keep with defined support and begin the dated test.</span>
+          <span><strong>If no, any field is missing:</strong> complete the written support test before calling the route keep with defined support.</span>
+        </div>
+      </div>
+
+      <h3>The six gates at a glance</h3>
+      <div class="tablewrap tablewrap-gates">
+        <table class="datatable" id="gate-summary">
+          <thead>
+            <tr>
+              <th>Gate</th>
+              <th>The question</th>
+              <th>The evidence that answers it</th>
+              <th>Where yes goes</th>
+              <th>Where no goes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Gate 1</th>
+              <td>Whose numbers are you looking at?</td>
+              <td>Capacity reconciliation, ownership of the largest opportunities, post-close changes, stage-tested pipeline, attainment distribution, motion changes, and who runs the selling system.</td>
+              <td>Gate 2, when the number was reachable with the team as it stood.</td>
+              <td>Fix the plan, restate the target, and reopen after the next full quarter.</td>
+            </tr>
+            <tr>
+              <th scope="row">Gate 2</th>
+              <td>Does this person manage, or are they still the best seller?</td>
+              <td>Time spent on their opportunities against the team's, ownership of large open deals, and improvement by the second-best seller.</td>
+              <td>Gate 3, when the leader manages the team's selling.</td>
+              <td>Role-fit and organization-design analysis.</td>
+            </tr>
+            <tr>
+              <th scope="row">Gate 3</th>
+              <td>Which of the three coaching qualities is missing?</td>
+              <td>A sales-management evaluation reading the ability to coach, the ability to motivate, and the discipline to develop through a steady cadence.</td>
+              <td>Keep. The constraint returns to the plan, the motion, or the role.</td>
+              <td>Gate 4 carrying the named gap.</td>
+            </tr>
+            <tr>
+              <th scope="row">Gate 4</th>
+              <td>Does the missing piece move? The two doors.</td>
+              <td>Whether the gap is an untaught skill or belief, or a want gap after the leader has learned the method.</td>
+              <td>Gate 5 for a skill or belief that can move.</td>
+              <td>Replace when the gap is want.</td>
+            </tr>
+            <tr>
+              <th scope="row">Gate 5</th>
+              <td>Is there a cadence, and did it change when it was asked for?</td>
+              <td>A two-week count of scheduled coaching interactions, plus whether the agreed cadence is running thirty days later.</td>
+              <td>Gate 6 when the cadence changes.</td>
+              <td>Replace when the cadence does not change.</td>
+            </tr>
+            <tr>
+              <th scope="row">Gate 6</th>
+              <td>What does keep with defined support say in writing?</td>
+              <td>Named gaps, measures, cadence, observer, review date, review participants, decision routes, and a copy given to the leader.</td>
+              <td>Keep with defined support.</td>
+              <td>Complete the test before naming the route.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">The gate sequence and route names are Revenue Bench's own decision instrument. The research cited within the gates supplies evidence inputs. It does not validate the sequence as a measured outcome model.</p>
+
+      <h2 id="support-test">The written support test</h2>
+      <p>The support test turns development into a decision with an owner and a date. Use three or four measures that can be read without interpreting intent. The <a href="sales-leader-30-60-90-scorecard.html">sales-leader scorecard guide</a> provides measure categories for the role.</p>
+
+      <div class="support-test">
+        <h3>Keep with defined support</h3>
+        <p>Write each field in one document and give the leader a copy on the day it is written.</p>
+        <dl>
+          <dt>The named gaps from the evaluation</dt>
+          <dd>State the specific coaching, motivation, development, skill, or belief gaps the test addresses.</dd>
+
+          <dt>The three or four measures that will be read</dt>
+          <dd>Choose observable measures tied to the named gaps, with the starting evidence recorded beside each one.</dd>
+
+          <dt>The cadence being installed and who observes it</dt>
+          <dd>Write the coaching schedule, its required subjects, and the person responsible for confirming that it ran.</dd>
+
+          <dt>The review date</dt>
+          <dd>Set the review no later than 60 days after this test is written.</dd>
+
+          <dt>Who sits in the review</dt>
+          <dd>Name the operating owner, the leader, and each other person who has decision authority or direct evidence.</dd>
+
+          <dt>The decision the review triggers</dt>
+          <dd>State the routes as keep, extend once with a stated reason, or replace.</dd>
+        </dl>
+      </div>
+
+      <h2 id="cost">The cost of getting it wrong in each direction</h2>
+      <h3>The cost of replacing on a hunch</h3>
+      <p><a href="https://hbr.org/2024/10/the-high-costs-of-chief-revenue-officer-turnover" target="_blank" rel="noopener">Harvard Business Review published research by Nick Toman, Bryan Kurey, and Dave Lingebach in October 2024</a> reporting that the average tenure of a chief revenue officer is roughly 25 months, among the shortest in the C-suite, and that 62 percent of companies see their revenue growth rate decline or stay flat in the fiscal year following a change of chief revenue officer. The research measures what follows a change. It does not establish whether the change was the right call, since a leader replaced for cause and a leader replaced on a hunch both sit inside the 62 percent. It measures the chief revenue officer role, which is not identical to every sales-leadership role. Read it as the size of the transition cost. On that evidence a replacement is followed by a flat or declining growth year more often than not, which is more than a hunch should be allowed to spend.</p>
+
+      <h3>The cost of support without an end</h3>
+      <p>A support decision that runs past its review date spends the same year without a transition. The sellers with options are the ones a competitor can reach. In a sales organization, the leader often holds the relationships, so the leader's exit and the exits that follow it are one event rather than two.</p>
+      <p>DePaul Center for Sales Leadership's survey of more than 435 organizations puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded. Those figures measure sales turnover generally and are not a sales-leader replacement figure. We publish no figure for the cost of replacing a sales leader because we have not found a defensible one.</p>
+
+      <h2 id="equity">When the leader owns rollover equity or an earnout</h2>
+      <p>A sales leader who came with the company may also be a seller of it, holding rollover equity or sitting inside an earnout period. The person's role may be defined in the transaction documents instead of an offer letter. The decision can affect the earnout calculation, and the conversation involves people who were counterparties in a negotiation weeks earlier. The assessment runs the same way because the evidence does not change with the cap table. The decision that follows belongs with counsel and the deal team before it belongs with anyone else.</p>
+
+      <h2 id="replace">If the answer is replace</h2>
+      <ol>
+        <li><strong>Separate the decision dates.</strong> The decision to replace and the decision to tell the team are separate decisions with separate dates.</li>
+        <li><strong>Run the search under a confidentiality protocol.</strong> A search that runs while the leader still holds the role follows the site's <a href="confidential-vp-of-sales-replacement.html">confidential replacement protocol</a>.</li>
+        <li><strong>Treat the replacement as a selection problem.</strong> Use the <a href="how-to-hire-a-vp-of-sales.html">VP of Sales selection standard</a> instead of restating it here.</li>
+      </ol>
+      <p>Revenue Bench runs assessment-led searches under a 90-day replacement guarantee from the hire's start date, one free re-run of the search, the client's call. The process is published in <a href="../how-it-works.html">how Revenue Bench works</a>.</p>
+
+      <h2 id="limits">What this page does not decide</h2>
+      <p>This page does not decide compensation. It does not decide the organization design. It also cannot substitute for the employment-law advice a separation requires. That work belongs with counsel.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <div class="method">
+        <h3>How to read the evidence</h3>
+        <p><strong>Sales-manager coaching qualities.</strong> The figures come from Objective Management Group's evaluation of 44,493 sales managers. The figures used here are the 9 percent strong in all three qualities and the 80 percent greater production of elite salespeople under managers strong in all three, according to OMG's data. Revenue Bench uses an evaluation from Objective Management Group, applied through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors.</p>
+        <p><strong>Coaching frequency.</strong> The figures come from Objective Management Group's study of 11,078 salespeople and their managers. The figures used here are 17 percentile points for coaching several times a week, 9 for weekly coaching, 2 to 5 for quarterly, monthly, or bi-weekly coaching, 10 percent coached several times a week, and 8 percent not coached at all. These are OMG's figures on association and frequency.</p>
+        <p><strong>Training before and after.</strong> Objective Management Group measured 5,331 salespeople before and after training by a certified partner. It reported closing at 55 percent, reaching decision makers at 43 percent, consultative selling at 28 percent, comfort discussing money at 66 percent, buy cycle at 48 percent, and Will to Sell at 0 to 6 percent. The population was salespeople. We found no published before-and-after study measuring the same on sales managers, so the page uses the study only as the shape of what development moves.</p>
+        <p><strong>Chief revenue officer transition.</strong> Harvard Business Review published the Nick Toman, Bryan Kurey, and Dave Lingebach research in October 2024. The population is companies following a chief revenue officer change. The figures used here are average tenure of roughly 25 months and 62 percent with revenue growth declining or staying flat in the following fiscal year. The Harvard Business Review figures used here are the ones published outside that publisher's paywall. No paywalled sample details or outcome figures are used.</p>
+        <p><strong>Sales turnover cost.</strong> DePaul Center for Sales Leadership's survey covered more than 435 organizations. It placed average sales turnover cost near $49,508 and roughly $115,000 fully loaded. The population is sales turnover across participating organizations. It is not a sales-leader replacement study.</p>
+        <p><strong>Carlos Garrido's teaching.</strong> The two-door framing, the stage model for handing the selling system from founder to sales leader, the coaching-versus-conversation distinction, and the rough one-manager-to-five-or-eight-sellers stage rule come from Carlos Garrido's <em>Building a Scalable Sales Team</em> and sales-leadership teaching, used in this guide. The intended population is scaling founder-led sales organizations. These are operating frameworks rather than population studies.</p>
+        <p><strong>Revenue Bench instruments.</strong> The six-gate sequence and the written support test are Revenue Bench's own instruments. The post-close timing comes from Revenue Bench's 2026 first 100 days sequence guide. The support review date is the operating standard published on this page. No measured performance result is claimed for either instrument.</p>
+      </div>
+
+      <div class="author-box">
+        <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+        <div>
+          <div class="an">Carlos Garrido</div>
+          <div class="at">Co-Founder, Revenue Bench. An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="faq" style="margin-top:48px;">
+      <div class="eyebrow">Frequently asked</div>
+      <div class="rule"></div>
+      <h2>Questions about an inherited sales leader, answered</h2>
+
+      <div class="faq-item">
+        <h3>How do you evaluate a sales leader you did not hire?</h3>
+        <p>Evaluate an inherited sales leader by separating the number from the person, then measuring management capability and behavior. Reconcile the plan to quota-carrying capacity, identify who ran the selling system, review attainment distribution, and test whether the leader manages the team's selling. Next, name the missing coaching quality and watch whether a written cadence changes the behavior. The route is keep, keep with defined support, or replace. The evidence at each gate prevents prior ownership conditions from becoming a verdict on one person.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long should a new owner give an inherited sales leader?</h3>
+        <p>Give the decision a defined window instead of an open runway. The site's post-close sequence reconciles revenue math in days 1 to 15 and closes the sales leader decision in days 16 to 30. If the evidence supports keep with defined support, write the test and review it no later than 60 days after it is written. One extension is permitted only for a stated reason. The leader receives the measures, review date, participants, and possible decisions when the test begins.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>When should you replace a sales leader after an acquisition?</h3>
+        <p>Replace the leader when the evidence identifies a want gap or when an agreed coaching cadence does not run after the leader has been given the method and thirty days to apply it. Do not replace because an inherited total missed a target that the available roster could never reach. First reconcile the plan, isolate who controlled the selling system, and test role fit. If the route is replace, separate the replacement decision from the date the team is told and use a confidentiality protocol while the leader remains in the role.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do you tell whether the sales leader or the sales system is the constraint?</h3>
+        <p>Start by identifying who controls the selling system and whether the target matched quota-carrying capacity. Review who closed the largest opportunities, what changed at close, which pipeline stages survive written definitions, and how attainment is distributed across the team. If the founder or CEO still controls the cadence, process, and major deals, the result does not isolate the leader. If the number was reachable and the leader controls the system, evaluate whether they coach, motivate, and develop the team through a steady cadence.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does keep with defined support mean in practice?</h3>
+        <p>Keep with defined support means the leader stays under a written development test with observable measures and a review date. The document names the evaluation gaps, the three or four measures that will be read, the cadence being installed, who observes it, who sits in the review, and the decision the review triggers. The review occurs no later than 60 days after the test is written. Its routes are keep, extend once for a stated reason, or replace. The leader receives a copy on the day it is written.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What if the inherited sales leader holds rollover equity or sits inside an earnout?</h3>
+        <p>Run the same assessment, because the evidence does not change with the cap table. What changes is that the person's role may be defined in the transaction documents rather than in an offer letter, the decision can affect the earnout calculation, and the conversation involves people who were counterparties in a negotiation weeks earlier. Complete the six gates first, then take the decision to counsel and the deal team before taking it anywhere else. If the route is keep with defined support, the test is written the same way and carries the same review date.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;">
+      <div class="eyebrow">Related guides</div>
+      <div class="rule"></div>
+      <div class="related">
+        <a class="rel" href="first-100-days-portfolio-sales-team.html">
+          <div class="k">Post-close sequence</div>
+          <div class="t">The first 100 days with a portfolio company's sales team</div>
+        </a>
+        <a class="rel" href="should-you-promote-your-best-rep.html">
+          <div class="k">Management evidence</div>
+          <div class="t">Should you promote your best rep into sales management?</div>
+        </a>
+        <a class="rel" href="confidential-vp-of-sales-replacement.html">
+          <div class="k">Replacement route</div>
+          <div class="t">How to replace a VP of Sales confidentially</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section cta-band bg-navy">
+  <div class="container center maxw-680 mx-auto reveal">
+    <div class="eyebrow">Make the leader decision on evidence</div>
+    <div class="rule"></div>
+    <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">Know whether the plan, the role, or the leader is the constraint.</h2>
+    <p class="lead" style="margin:16px auto 28px;">Revenue Bench helps owners assess the role, define the support test, and run the replacement search when the evidence points there.</p>
+    <a href="../contact.html" class="btn btn-gold">Discuss the sales leader decision <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="wordmark">REVENUE <b>BENCH</b><span class="dot" style="color:var(--gold-light);">.</span></div>
+        <p class="note" style="margin-top:10px;max-width:300px;">Specialized recruitment for the revenue engine. Sellers, leaders, enablement, and RevOps.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../for-employers.html">For Employers</a>
+        <a href="../for-candidates.html">For Candidates</a>
+        <a href="../private-equity.html">Private Equity</a>
+        <a href="../guides.html">Insights</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>A founder-led firm. Sister to Performance Edge, Swanston Growth Advisors, and <a href="https://bestsalesteamtraining.com">Best Sales Team Training</a>.</p>
+      <p>&copy; 2026 Revenue Bench. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"The sales leader you inherited: keep, coach, or replace",
+  "description":"A six-gate decision tree for evaluating an inherited sales leader and choosing keep, keep with defined support, or replace.",
+  "image":"https://revenuebench.io/og/inherited-sales-leader-keep-coach-replace.png",
+  "author":{
+    "@type":"Person",
+    "name":"Carlos Garrido",
+    "jobTitle":"Co-Founder, Revenue Bench",
+    "description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.",
+    "affiliation":{
+      "@type":"Organization",
+      "name":"Revenue Bench"
+    }
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"Revenue Bench",
+    "url":"https://revenuebench.io"
+  },
+  "datePublished":"2026-08-26",
+  "dateModified":"2026-08-26",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://revenuebench.io/guides/inherited-sales-leader-keep-coach-replace"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How do you evaluate a sales leader you did not hire?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Evaluate an inherited sales leader by separating the number from the person, then measuring management capability and behavior. Reconcile the plan to quota-carrying capacity, identify who ran the selling system, review attainment distribution, and test whether the leader manages the team's selling. Next, name the missing coaching quality and watch whether a written cadence changes the behavior. The route is keep, keep with defined support, or replace. The evidence at each gate prevents prior ownership conditions from becoming a verdict on one person."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How long should a new owner give an inherited sales leader?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Give the decision a defined window instead of an open runway. The site's post-close sequence reconciles revenue math in days 1 to 15 and closes the sales leader decision in days 16 to 30. If the evidence supports keep with defined support, write the test and review it no later than 60 days after it is written. One extension is permitted only for a stated reason. The leader receives the measures, review date, participants, and possible decisions when the test begins."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"When should you replace a sales leader after an acquisition?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Replace the leader when the evidence identifies a want gap or when an agreed coaching cadence does not run after the leader has been given the method and thirty days to apply it. Do not replace because an inherited total missed a target that the available roster could never reach. First reconcile the plan, isolate who controlled the selling system, and test role fit. If the route is replace, separate the replacement decision from the date the team is told and use a confidentiality protocol while the leader remains in the role."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do you tell whether the sales leader or the sales system is the constraint?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Start by identifying who controls the selling system and whether the target matched quota-carrying capacity. Review who closed the largest opportunities, what changed at close, which pipeline stages survive written definitions, and how attainment is distributed across the team. If the founder or CEO still controls the cadence, process, and major deals, the result does not isolate the leader. If the number was reachable and the leader controls the system, evaluate whether they coach, motivate, and develop the team through a steady cadence."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What does keep with defined support mean in practice?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Keep with defined support means the leader stays under a written development test with observable measures and a review date. The document names the evaluation gaps, the three or four measures that will be read, the cadence being installed, who observes it, who sits in the review, and the decision the review triggers. The review occurs no later than 60 days after the test is written. Its routes are keep, extend once for a stated reason, or replace. The leader receives a copy on the day it is written."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What if the inherited sales leader holds rollover equity or sits inside an earnout?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Run the same assessment, because the evidence does not change with the cap table. What changes is that the person's role may be defined in the transaction documents rather than in an offer letter, the decision can affect the earnout calculation, and the conversation involves people who were counterparties in a negotiation weeks earlier. Complete the six gates first, then take the decision to counsel and the deal team before taking it anywhere else. If the route is keep with defined support, the test is written the same way and carries the same review date."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"The six-gate decision tree",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Gate 1. Whose numbers are you looking at?"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Gate 2. Does this person manage, or are they still the best seller?"
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"Gate 3. Which of the three coaching qualities is missing?"
+    },
+    {
+      "@type":"ListItem",
+      "position":4,
+      "name":"Gate 4. Does the missing piece move? The two doors."
+    },
+    {
+      "@type":"ListItem",
+      "position":5,
+      "name":"Gate 5. Is there a cadence, and did it change when it was asked for?"
+    },
+    {
+      "@type":"ListItem",
+      "position":6,
+      "name":"Gate 6. What does keep with defined support say in writing?"
+    }
+  ]
+}
+</script>
+
+<script>
+  document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+</script>
+<script defer src="../assets/cursor.js"></script>
+</body>
+</html>
