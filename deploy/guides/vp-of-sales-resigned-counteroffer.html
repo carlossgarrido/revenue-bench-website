@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ9Z9HNDWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MQ9Z9HNDWV');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<title>Your VP of Sales Resigned: Should You Counteroffer? | Revenue Bench</title>
+<meta name="description" content="A decision framework for CEOs, founders, and operating partners deciding whether to counteroffer a VP of Sales who has resigned." />
+<link rel="canonical" href="https://revenuebench.io/guides/vp-of-sales-resigned-counteroffer" />
+<meta property="og:title" content="Your VP of Sales resigned: should you counteroffer?" />
+<meta property="og:description" content="Treat the counteroffer as a hiring decision priced at a premium, then test it against the standard the replacement search would use." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://revenuebench.io/og/vp-of-sales-resigned-counteroffer.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your VP of Sales resigned: should you counteroffer?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://revenuebench.io/og/vp-of-sales-resigned-counteroffer.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="../assets/site.css" rel="stylesheet" />
+<link href="../assets/article.css" rel="stylesheet" />
+<style>
+  .datatable{width:100%;min-width:980px;border-collapse:collapse;margin:0;font-size:14px;background:var(--white);line-height:1.55;}
+  .datatable caption{text-align:left;padding:16px 18px 10px;font-weight:600;color:var(--navy);font-size:15px;}
+  .datatable th,.datatable td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);vertical-align:top;}
+  .datatable th:last-child,.datatable td:last-child{border-right:0;}
+  .datatable tbody tr:last-child td,.datatable tbody tr:last-child th{border-bottom:0;}
+  .datatable thead th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .datatable tbody th{color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;font-size:inherit;line-height:1.55;}
+  .datatable td{color:var(--ink-mid);}
+  .datatable td:nth-child(3){color:var(--navy);}
+  .datatable td:nth-child(4){color:var(--gold-deep);}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 8px;border:1px solid var(--line-soft);border-radius:12px;}
+  .tablewrap-wide{width:min(1280px,calc(100vw - 40px));margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
+  #decision-table{min-width:1240px;}
+  #decision-table th:first-child,#decision-table tbody th{width:20%;}
+  #decision-table th:nth-child(2),#decision-table td:nth-child(2){width:18%;}
+  #decision-table th:nth-child(3),#decision-table td:nth-child(3){width:20%;}
+  #decision-table th:nth-child(4),#decision-table td:nth-child(4){width:20%;}
+  #decision-table th:nth-child(5),#decision-table td:nth-child(5){width:22%;}
+  #instrument-table{min-width:1050px;}
+  #instrument-table th:first-child,#instrument-table tbody th{width:16%;}
+  #instrument-table th:nth-child(2),#instrument-table td:nth-child(2){width:20%;}
+  #instrument-table th:nth-child(3),#instrument-table td:nth-child(3){width:22%;}
+  #instrument-table th:nth-child(4),#instrument-table td:nth-child(4){width:22%;}
+  #instrument-table th:nth-child(5),#instrument-table td:nth-child(5){width:20%;}
+  .table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+  .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
+  .method h3{font-size:19px;margin-bottom:10px;}
+  .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+  .method p:last-child{margin-bottom:0;}
+  .author-box{display:flex;gap:16px;align-items:center;background:var(--parchment);border-radius:12px;padding:18px 20px;margin-top:34px;}
+  .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
+  .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  @media(max-width:760px){
+    .tablewrap-wide{width:auto;margin-left:0;transform:none;}
+    .datatable{font-size:13.5px;}
+    .datatable th,.datatable td{padding:11px 12px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="nav">
+  <a href="../index.html" class="wordmark">REVENUE <b>BENCH</b><span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="../for-employers.html">For Employers</a>
+    <a href="../for-candidates.html">For Candidates</a>
+    <a href="../private-equity.html">Private Equity</a>
+    <a href="../guides.html">Insights</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html" class="btn btn-navy nav-cta">Find your next hire</a>
+  </nav>
+  <button class="nav-burger" aria-label="Menu" id="burger">&#9776;</button>
+</header>
+
+<section class="art-hero bg-cream">
+  <div class="container" style="max-width:820px;">
+    <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>VP of Sales counteroffer</span></div>
+    <div class="eyebrow">Sales leadership &middot; Retention decision</div>
+    <h1>Your VP of Sales resigned: should you counteroffer?</h1>
+    <div class="art-meta">
+      <span>By Carlos Garrido, Co-Founder, Revenue Bench</span>
+      <span class="dot"></span>
+      <span>19 min read</span>
+      <span class="dot"></span>
+      <span>August 27, 2026</span>
+    </div>
+    <p class="deck"><strong>A counteroffer is a hiring decision priced at a premium.</strong> You are choosing to rehire a sales leader who has already decided once to leave, at a new number, while the forecast, the team, and the largest customer relationships remain exposed. Use the same standard you would apply to the replacement search.</p>
+  </div>
+</section>
+
+<section class="section bg-cream" style="padding-top:24px;">
+  <div class="container" style="max-width:820px;">
+
+    <div class="takeaways">
+      <h2>Key takeaways</h2>
+      <ul>
+        <li>Counter only if you would hire this leader today at the new number, knowing everything the resignation revealed.</li>
+        <li>Money can answer a specific outside pull. It can only postpone a condition inside the company that pushed the leader away.</li>
+        <li>A salary-only counteroffer buys the person on open-ended terms. A retention agreement can buy a named transition period instead.</li>
+        <li>The decision must name who validates the forecast, holds the largest accounts, and carries team confidence for the next two quarters.</li>
+        <li>Whichever answer you choose, prepare the replacement scorecard, role definition, and candidate bench while the resignation is still closely held.</li>
+      </ul>
+    </div>
+
+    <div class="toc-inline">
+      <h2 class="toc-title">In this guide</h2>
+      <ol>
+        <li><a href="#decision">The decision in front of you</a></li>
+        <li><a href="#reading">What the resignation is telling you</a></li>
+        <li><a href="#table">The counteroffer decision table</a></li>
+        <li><a href="#buying">What a counteroffer buys</a></li>
+        <li><a href="#costs">The costs that never appear on the salary line</a></li>
+        <li><a href="#evidence">What the research says about counteroffers</a></li>
+        <li><a href="#window">The period before the resignation is known</a></li>
+        <li><a href="#letgo">If the answer is to accept the resignation</a></li>
+        <li><a href="#limits">What this page does not decide</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
+        <li><a href="#faq">Questions about a sales leader's resignation, answered</a></li>
+      </ol>
+    </div>
+
+    <div class="prose">
+      <h2 id="decision">The decision in front of you</h2>
+      <p>You have days. The leader may need to answer another employer, and the sales organization still needs a forecast owner on Monday. The deadline is short. The standard is the one the replacement search would use.</p>
+      <p>Frame the choice as a new hire. Would you appoint this person today, at the counteroffer number, after reviewing their record, the reason for leaving, the process they ran, and the change required to keep them? If the answer is yes, the premium may protect continuity. If the answer is no, salary cannot turn that person into the leader you would select through a search.</p>
+      <p>Revenue Bench is paid to run the replacement search, so our incentive on this page runs toward accepting the resignation. Some counteroffers are the right call, and the table below names the conditions under which this is one of them. A recruiter declaring that every counteroffer fails would give you no useful decision standard.</p>
+      <p>This case begins with a resignation. No replacement decision had been made beforehand. That is the opposite of the incumbent-resigns-during-search case covered in the <a href="confidential-vp-of-sales-replacement.html">confidential VP of Sales replacement guide</a>. Revenue Bench's assessment-led search process is published in <a href="../how-it-works.html">how Revenue Bench works</a>.</p>
+
+      <h2 id="reading">What the resignation is telling you</h2>
+      <p>Start by separating a pull from a push. A pull is a specific competing opportunity. It may offer more pay, broader scope, a different title, or a defined career step. Money can answer the pay part of a pull when the current role still works.</p>
+      <p>A push is a condition inside the company. It can be the plan, the reporting relationship, the role definition, the resources, or the direction of the business. Money cannot answer that condition. It can pay the leader to remain beside it for a period.</p>
+      <p>Hold the resignation conversation before discussing a number. Ask what would have needed to be different six months ago for the leader never to have taken the outside conversation. Ask when the outside process began, how many stages it involved, and whether the first contact was inbound. Ask what changes on Monday if they stay. Then ask which of those changes they raised before another offer existed.</p>
+      <p>The order matters because presenting a number first changes the conversation. The leader begins evaluating the offer you made instead of explaining the decision already made. You need the unpriced account of why they left before compensation becomes the subject.</p>
+      <p>From Carlos Garrido's <em>Building a Scalable Sales Team</em> masterclass, one question locates responsibility on both sides: "Did you hire them like that, or did you make them like that?" The resignation conversation is where you learn whether the company is being asked to correct a hiring gap, a management gap, or a price gap.</p>
+
+      <h2 id="table">The counteroffer decision table</h2>
+      <p>Three of the seven decide most cases, and they are worth answering before the rest. First, would you hire this person into the role today at the new number. Second, is the reason they are leaving a pull from outside, which money can answer, or a push from inside, which it cannot. Third, what changes on Monday if they stay. A company that would not hire the person today, or that can name no change beyond the salary, has its answer, and the remaining four questions do not overturn it.</p>
+
+      <p>Answer each row before authorizing a number. Use written evidence available today, and assign an owner where the evidence concerns the next two quarters.</p>
+
+      <div class="tablewrap tablewrap-wide">
+        <table class="datatable" id="decision-table">
+          <caption>Seven questions for deciding whether to counteroffer a VP of Sales</caption>
+          <thead>
+            <tr>
+              <th scope="col">The question you have to answer</th>
+              <th scope="col">Why it decides the case</th>
+              <th scope="col">What points toward a counteroffer</th>
+              <th scope="col">What points toward accepting the resignation</th>
+              <th scope="col">The evidence that settles it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Would you hire this person into this role today, at the new number, knowing what you know now?</th>
+              <td>A counteroffer is a hiring decision priced at a premium.</td>
+              <td>You would run a search and hope it produced this person.</td>
+              <td>You would run a search hoping it produced someone better.</td>
+              <td>The scorecard you would use for the replacement search, applied to the person already in the role.</td>
+            </tr>
+            <tr>
+              <th scope="row">Were they pulled or pushed?</th>
+              <td>Money answers a pull. It does not answer a push, it postpones it.</td>
+              <td>A specific outside opportunity, with no standing complaint about the role, the plan, or the company.</td>
+              <td>A reason that names the role, the plan, the manager, or the direction of the business.</td>
+              <td>What they raised before they had another offer. The last two one-to-ones and the last review.</td>
+            </tr>
+            <tr>
+              <th scope="row">Is the reason they gave the reason?</th>
+              <td>Money is the easiest reason to give and the hardest to argue with, which is why the reason offered and the reason held can differ.</td>
+              <td>The stated reason and the record agree.</td>
+              <td>The stated reason is money, and the record shows something else was raised and never resolved.</td>
+              <td>Ask what would have had to be different six months ago, and judge the answer by how specific it is.</td>
+            </tr>
+            <tr>
+              <th scope="row">Did they run a search, or did a search find them?</th>
+              <td>Effort spent is intent revealed. A leader who ran a process has already made this decision once, deliberately.</td>
+              <td>An inbound approach they did not pursue.</td>
+              <td>A process they ran over weeks while carrying your number.</td>
+              <td>How long it took and how many stages it had. Ask.</td>
+            </tr>
+            <tr>
+              <th scope="row">What changes on Monday if they stay?</th>
+              <td>If nothing changes except the salary, the company bought time and told the leader its price.</td>
+              <td>A defined change in scope, plan, support, or reporting line that the company would have made anyway.</td>
+              <td>Nothing changes except the number.</td>
+              <td>Write the change down before the conversation. A change that cannot be written down does not exist.</td>
+            </tr>
+            <tr>
+              <th scope="row">What does the new number do to the rest of the pay band?</th>
+              <td>A sales leader's number sets the ceiling for everyone under it, and a sales team finds out.</td>
+              <td>The increase closes a gap to market the company can defend to every person below it.</td>
+              <td>The increase is a premium paid for the resignation itself, and cannot be explained to anyone else on that basis.</td>
+              <td>The current band, and what the increase does to the next two people in it.</td>
+            </tr>
+            <tr>
+              <th scope="row">Who owns the forecast, the largest accounts, and the team's confidence for the next two quarters, either way?</th>
+              <td>This is the only question that carries the same weight in both directions.</td>
+              <td>Continuity carries value here, no successor exists, and the agreement names the successor work to be complete by a stated date.</td>
+              <td>Coverage exists, or can be named this week.</td>
+              <td>Name the interim owner and the date before the decision is made.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">The table is Revenue Bench's decision instrument. It combines hiring evidence, resignation evidence, compensation consequences, and operating continuity. It has not been validated as a measured outcome model.</p>
+      <p>Do not total the rows into a score. One answer can decide the case. A company that answers question five with "nothing" has answered the whole table because it is proposing a permanent price change for an unchanged role.</p>
+
+      <h2 id="buying">What a counteroffer buys</h2>
+      <p>The available choices are different instruments. Price each one against the period and control it creates.</p>
+
+      <div class="tablewrap tablewrap-wide">
+        <table class="datatable" id="instrument-table">
+          <caption>Three instruments available after a sales leader resigns</caption>
+          <thead>
+            <tr>
+              <th scope="col">The instrument</th>
+              <th scope="col">What it buys</th>
+              <th scope="col">What it costs</th>
+              <th scope="col">What the team reads from it</th>
+              <th scope="col">How it ends</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">The counteroffer</th>
+              <td>The person, on open-ended terms.</td>
+              <td>The new number permanently, plus its effect on the band.</td>
+              <td>The route to a raise is an offer letter from somewhere else.</td>
+              <td>It does not end. It becomes the new baseline, and the question returns at the next review.</td>
+            </tr>
+            <tr>
+              <th scope="row">The retention agreement</th>
+              <td>A named period and a named scope, such as a transition.</td>
+              <td>A stay bonus with a date on it, and a direct acknowledgment to the leader that they are leaving.</td>
+              <td>The company is managing a transition.</td>
+              <td>It ends on the stated date, by design.</td>
+            </tr>
+            <tr>
+              <th scope="row">The accepted resignation with a managed transition</th>
+              <td>Control of the sequence, the notice period, and the handover.</td>
+              <td>The vacancy and the transition cost that follows any leadership change.</td>
+              <td>The decision belonged to the company.</td>
+              <td>It ends when the successor starts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">The distinctions describe what each agreement is designed to purchase. Legal terms, tax treatment, and enforceability belong with counsel.</p>
+      <p>The retention agreement is the least used of the three and the one worth constructing properly. It names a period tied to a real event, usually the successor's start or the close of a defined transition, rather than an open-ended raise. It states what must be complete before that date: the account handovers, the forecast and pipeline in a state someone else can run, the team introductions, and any customer relationships held personally. It carries a payment contingent on reaching the date with that work done. And it requires the chief executive to say directly what a counteroffer leaves unsaid, that the leader is leaving and both sides are managing the exit. Scott and McMullen's respondents rated a cash retention bonus a typical element of a counteroffer to a great or very great extent 17 percent of the time, against 72 percent for a salary increase in the same job, so the instrument is in use and it is used far less.</p>
+
+      <p>The familiar argument about counteroffers concerns the first instrument, a permanent salary increase in an unchanged job. The second instrument prices a defined period instead. That distinction lets the company buy a handover without pretending the resignation has been withdrawn.</p>
+
+      <h2 id="costs">The costs that never appear on the salary line</h2>
+
+      <h3>Pay-band compression</h3>
+      <p>The new number changes the comparison for every leader and seller below it. Record the current band, the proposed position within it, and the explanation the company could give the next two people affected. A premium paid because someone resigned is a precedent even when the agreement remains private.</p>
+
+      <h3>Forecast integrity</h3>
+      <p>A leader who resigns and then stays still owns the number, the pipeline review, and the calls that decide the quarter. Name who validates the forecast for the next two quarters before making the decision. That person needs access to stage evidence, large-deal assumptions, and seller-level coverage rather than a second copy of the leader's forecast.</p>
+
+      <h3>The leader's standing with the team</h3>
+      <p>The team now knows, or may soon learn, that the company was prepared to lose its leader. The leader must return with a clear mandate and a change the team can observe. A larger number without a changed mandate can leave authority weaker even while compensation is higher.</p>
+
+      <h3>The second resignation</h3>
+      <p>The company has bought a period rather than a permanent answer. State which period the agreement is intended to protect and what must be complete by its end. Carlos Garrido's leadership teaching names the underlying exposure: "If you call someone indispensable, that is not a strength to protect. It is a development gap to fix, and a real risk if they leave."</p>
+      <p>As Carlos Garrido puts it in his 11 Golden Rules of Sales Leadership, "Systems beat natural talent, that superstar on the team is the problem. A team that depends on one heroic performer is not a team. It is a liability. Systems enable average people to produce extraordinary results consistently." Carlos Garrido also puts it in four words: "Talent doesn't scale. Systems do."</p>
+      <p>The case for keeping the leader rests on the cost of transition. Nick Toman, Bryan Kurey, and Dave Lingebach <a href="https://hbr.org/2024/10/the-high-costs-of-chief-revenue-officer-turnover" target="_blank" rel="noopener">reported in <em>Harvard Business Review</em> in October 2024</a> that a chief revenue officer holds the role for roughly 25 months on average, and that 62 percent of companies record revenue growth that declines or stays flat in the fiscal year after a chief revenue officer changes. Those figures describe what follows a change. They do not establish that any particular change was the wrong call, since a leader replaced for cause and a leader replaced in haste both sit inside the 62 percent. The role measured is chief revenue officer, which is not identical to every sales-leadership title. Only the figures published outside that publisher's paywall are used here. Read them as the size of the transition, which is the strongest argument a counteroffer has.</p>
+
+      <h2 id="evidence">What the research says about counteroffers</h2>
+      <p>The strongest evidence begins with governance. <a href="https://ecommons.luc.edu/business_facpubs/104/" target="_blank" rel="noopener">Dow Scott and Thomas D. McMullen's "Current Thinking on Counteroffers: A Survey of Rewards and HR Professionals"</a> surveyed 120 rewards and human resources professionals at mid-sized to large organizations in April 2017. The survey was administered by Korn Ferry Hay Group and published in the <em>WorldatWork Journal</em>, volume 26, number 3, in Fall 2017.</p>
+      <p>Among those 120 professionals, 93 percent said their organizations make counteroffers at some frequency, 4 percent said they never do, and 3 percent did not know. The authors summarize it as virtually all employers extending counteroffers. Only 3 percent reported a formal counteroffer policy, 84 percent said cases were decided on their merits, and only 3 percent said managers were well-versed in the policy that existed. Nearly every organization in the sample makes counteroffers. Almost none governs them with a written policy. The table above supplies the decision discipline that record lacks.</p>
+      <p>The respondents also judged their own organizations' practices. Seventy-three percent rated those practices not effective or marginally effective. These are HR and rewards professionals reporting impressions of their own organizations. They are not measured retention outcomes, and the 2017 sample of 120 cannot establish what will happen to the sales leader in front of you.</p>
+      <p>When asked what happens after a counteroffer is accepted, 23 percent said the employee seldom leaves within three years, 30 percent said the employee may leave, 20 percent said the employee is likely to leave, and 27 percent said the employee usually leaves within three years. Those response categories record professional judgment. They do not track a cohort of employees through three years.</p>
+      <p>One limitation runs against this page directly. The same survey reports that respondents extend counteroffers most readily to executives, rated a great or very great element by 50 percent, and least readily to sales roles, at 19 percent, with 20 percent saying not at all. A VP of Sales sits across both categories, and the survey reports nothing for sales leadership specifically. That is one more reason to decide this case on its own evidence rather than on prevailing practice.</p>
+
+      <p>The relationship finding deserves equal weight. Fifty-nine percent said the working relationship usually did not change after acceptance, 16 percent said it improved, and 12 percent said it worsened. That contradicts the standard line in recruiting content about a counteroffer poisoning the relationship. Revenue Bench benefits commercially from replacement searches, so the contradictory finding belongs here.</p>
+      <p>The survey also identified a mismatch between reasons and remedies. Seventy-two percent rated an increase in base salary in the same job as a typical element of a counteroffer, to a very great or great extent. Asked why employees consider outside offers, respondents rated promotion or increased job responsibility highest at 79 percent, career development next at 73 percent, and base pay third at 72 percent, each to a very great or great extent. The authors call this mismatch incongruent. Their account also says a counteroffer must be made quickly, often within one to two days, to work.</p>
+      <p>The widely repeated claim that a large share of employees who accept a counteroffer leave within six to twelve months does not resolve to a published study. The <a href="confidential-vp-of-sales-replacement.html#counteroffer">documented citation trail appears in the confidential replacement guide</a>; it is not repeated here.</p>
+      <p>The figures circulating around that claim come from recruiting firms and jobs sites. Employer guidance from <a href="https://www.paycor.com/resource-center/guides-white-papers/how-to-know-when-to-counter-a-resignation/" target="_blank" rel="noopener">Paycor, updated in October 2025</a>, puts replacement at roughly $4,000 and three months for an employee in general. That does not describe a sales leader whose forecast and customer relationships can move the quarter. Revenue Bench uses $200,000 to $250,000 as its own working figure for a revenue-role mis-hire, counting compensation, stalled pipeline, the replacement search, and management time. That is an internal working estimate rather than published research. The <a href="cost-of-a-bad-sales-hire.html">true cost of a bad sales hire guide</a> provides arithmetic a company can run using its own compensation, ramp, quota, and vacancy assumptions.</p>
+
+      <h2 id="window">The period before the resignation is known</h2>
+      <p>When the resignation first lands, the fact may be known only to the leader, the chief executive, and one other person. That period allows search preparation to begin before the team, customers, candidates, or market know a vacancy may exist.</p>
+      <p>A counteroffer spends that period. If the leader accepts and stays through the period the company needs, the time served its purpose. If the agreement does not hold, the company can restart later with the resignation known, the leader's authority changed, and the search visible. The argument does not depend on a failure rate. It follows from the sequence. The <a href="confidential-vp-of-sales-replacement.html">confidential replacement protocol</a> covers the controls required once a live search begins.</p>
+      <p>Prepare now without deciding the outcome in advance. Write the role definition against the next operating plan. Apply the <a href="sales-leader-interview-scorecard.html">sales leader interview scorecard</a> to the incumbent and any successor. Identify the people already known to the company who could meet that standard.</p>
+      <p>As Carlos Garrido puts it in his 11 Golden Rules of Sales Leadership, "Recruitment is the leader's prospecting. Do as much recruiting as you want your team to do prospecting. The pipeline for people is as important as the pipeline for revenue." The <a href="building-a-sales-talent-bench.html">sales talent bench guide</a> turns that principle into a maintained operating practice.</p>
+      <p>If losing one leader breaks the number, the resignation revealed a dependency that existed before the letter arrived. A counteroffer can buy time to transfer accounts, document the forecast, install management cadence, and build successor coverage. The agreement should name those deliverables and the date by which each must be complete.</p>
+
+      <h2 id="letgo">If the answer is to accept the resignation</h2>
+      <ol>
+        <li><strong>Name interim coverage with an end date.</strong> Assign one owner with explicit authority and tie the end date to the successor's start. The <a href="confidential-vp-of-sales-replacement.html#counteroffer">confidential replacement guide</a> sets out the scope that owner needs.</li>
+        <li><strong>Transfer the largest relationships.</strong> List the customers, open opportunities, executive contacts, commitments, and next actions that require a handover before the notice period ends.</li>
+        <li><strong>Choose whether the search is open or confidential.</strong> Use the <a href="confidential-vp-of-sales-replacement.html">confidential search guide</a> for that decision without recreating its protocol here.</li>
+        <li><strong>Open the standing bench.</strong> Review the candidates maintained through the <a href="building-a-sales-talent-bench.html">sales talent bench process</a>, then apply the selection standard in <a href="how-to-hire-a-vp-of-sales.html">How to hire a VP of Sales or sales manager</a>.</li>
+      </ol>
+      <p>Accepting the resignation can still include a paid, managed transition. Put the scope, authority, customer handovers, end date, and treatment of confidential information in writing with counsel.</p>
+
+      <h2 id="limits">What this page does not decide</h2>
+      <p>This page does not set compensation design. Use the <a href="pe-sales-leader-compensation.html">private equity sales leader compensation guide</a> to model base pay, variable pay, equity, and ownership-period incentives. It does not decide organization design or determine whether the role should remain VP of Sales, become chief revenue officer, or split across functions.</p>
+      <p>Any separation, retention agreement, restrictive covenant, notice arrangement, or treatment of earned compensation requires employment counsel. Where the leader holds equity, rollover equity, or sits inside an earnout, the controlling terms may live in transaction documents instead of an offer letter. Counsel and the deal team own that work. The <a href="inherited-sales-leader-keep-coach-replace.html">inherited sales leader guide</a> covers the operating decision when ownership has recently changed.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <div class="method">
+        <h3>How to read the evidence</h3>
+        <p><strong>Counteroffer practices.</strong> Dow Scott and Thomas D. McMullen, "Current Thinking on Counteroffers: A Survey of Rewards and HR Professionals," <em>WorldatWork Journal</em>, volume 26, number 3, Fall 2017. Korn Ferry Hay Group administered the survey in April 2017. The population was 120 rewards and human resources professionals at mid-sized to large organizations. All figures on practice, policy, manager knowledge, perceived effectiveness, post-acceptance outcomes, relationship changes, counteroffer elements, and reasons for leaving come from those respondents, and several are rated on a very great or great extent scale rather than counted as a share of counteroffers made. The findings are self-reported impressions and organizational practices, rather than measured employee retention outcomes. The survey's role breakdown places executives among the roles most likely to receive counteroffers and sales roles among the least likely, and it reports no figures for sales leadership specifically.</p>
+        <p><strong>Chief revenue officer transition.</strong> Harvard Business Review published research by Nick Toman, Bryan Kurey, and Dave Lingebach in October 2024. The figures used are average chief revenue officer tenure of roughly 25 months and 62 percent of companies with revenue growth declining or staying flat in the fiscal year after a chief revenue officer change. The population is companies following a chief revenue officer change. The research does not establish whether each change was the right decision, and the chief revenue officer role is not identical to every sales-leadership role. Only figures published outside the publisher's paywall are used.</p>
+        <p><strong>General replacement estimate.</strong> Paycor's employer guidance, updated in October 2025, states roughly $4,000 and three months to hire, recruit, and onboard a new employee. Its population is employees in general. It is not a sales-leader cost study and does not price revenue exposure, executive search, account transfer, or forecast disruption.</p>
+        <p><strong>Unsupported retention claims.</strong> Revenue Bench reviewed the citation trail behind the recurring claim about employees leaving after accepting counteroffers and found no published primary study supporting it. The trail is documented in the confidential VP of Sales replacement guide. No counteroffer retention percentage from recruiting firms or jobs sites is published on this page.</p>
+        <p><strong>Carlos Garrido's teaching.</strong> Golden Rules 1 and 5, the statement on indispensability, "Talent doesn't scale. Systems do.", and "Did you hire them like that, or did you make them like that?" come from Carlos Garrido's 11 Golden Rules of Sales Leadership, leadership teaching, and <em>Building a Scalable Sales Team</em> masterclass. These are operating frameworks for founder-led and scaling sales organizations. They are not population studies and no measured outcome is claimed for them.</p>
+        <p><strong>Revenue Bench instruments.</strong> The seven-question decision table and the three-instrument comparison are Revenue Bench operating frameworks. They organize evidence available during the resignation window. They have not been validated as predictive models, and no client outcome is claimed.</p>
+      </div>
+
+      <div class="author-box">
+        <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
+        <div>
+          <div class="an">Carlos Garrido</div>
+          <div class="at">Co-Founder, Revenue Bench. An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="faq" style="margin-top:48px;">
+      <div class="eyebrow">Frequently asked</div>
+      <div class="rule"></div>
+      <h2>Questions about a sales leader's resignation, answered</h2>
+
+      <div class="faq-item">
+        <h3>Should you counteroffer a VP of Sales who resigns?</h3>
+        <p>Counteroffer only if you would hire the leader today at the new number, the resignation arose from an addressable pull, and something defined changes beyond salary. Accept the resignation when you would use a search to find a stronger leader, the reason concerns the role or company, or the proposed offer buys no operating change. Name forecast and account coverage before choosing either route.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What should you say when a sales leader hands in their resignation?</h3>
+        <p>Acknowledge the decision, avoid presenting a number, and request one direct conversation before responding. Ask what would have needed to be different six months earlier, when the outside process began, whether it was inbound, and what must change if the leader stays. Record the answers, confirm the decision deadline, and tell the leader when the company will respond.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long should you take to decide on a counteroffer?</h3>
+        <p>Decide within the deadline attached to the outside offer and prepare to act within one to two days. Use that time to complete the resignation conversation, apply the replacement scorecard to the incumbent, price the effect on the pay band, define any role change, and name forecast coverage. Speed matters, but an immediate salary match without those answers creates a permanent cost from incomplete evidence.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is there reliable data on whether counteroffers work?</h3>
+        <p>There is reliable survey data on employer practices, but no defensible universal retention rate. A 2017 survey of 120 rewards and human resources professionals reports policies, perceived effectiveness, expected departures, and relationship changes in their own organizations. Those responses are self-reported impressions rather than tracked retention outcomes. Use them to understand governance gaps rather than to predict one VP of Sales.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does a counteroffer cost beyond the salary increase?</h3>
+        <p>The costs include pay-band compression, the precedent created for the team, independent validation of the forecast, possible weakening of the leader's authority, and preparation for another resignation. The increase also becomes the permanent compensation baseline. Price the alternative transition cost beside those items, including vacancy, account handover, search, ramp, and the operating risk that follows a leadership change.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What do you do if your VP of Sales resigns and there is no successor?</h3>
+        <p>Name one interim owner with explicit authority and an end date tied to the successor's start. The confidential replacement guide sets out the scope that owner needs. Transfer the largest account relationships during the notice period. Write the replacement scorecard and role definition immediately, decide whether the search must remain confidential, and open the existing candidate bench. A retention agreement can purchase a defined handover period when both sides agree.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;">
+      <div class="eyebrow">Related guides</div>
+      <div class="rule"></div>
+      <div class="related">
+        <a class="rel" href="confidential-vp-of-sales-replacement.html">
+          <div class="k">Confidential search</div>
+          <div class="t">How to replace a VP of Sales confidentially</div>
+        </a>
+        <a class="rel" href="sales-leader-interview-scorecard.html">
+          <div class="k">Selection standard</div>
+          <div class="t">The sales leader interview scorecard</div>
+        </a>
+        <a class="rel" href="building-a-sales-talent-bench.html">
+          <div class="k">Succession readiness</div>
+          <div class="t">How to build a sales talent bench</div>
+        </a>
+        <a class="rel" href="cost-of-a-bad-sales-hire.html">
+          <div class="k">Cost model</div>
+          <div class="t">The cost of a bad sales hire</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section cta-band bg-navy">
+  <div class="container center maxw-680 mx-auto reveal">
+    <div class="eyebrow">Make the leader decision on evidence</div>
+    <div class="rule"></div>
+    <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">Decide whether to retain the leader or begin the replacement search.</h2>
+    <p class="lead" style="margin:16px auto 28px;">Revenue Bench helps CEOs, founders, and operating partners define the role, assess the evidence, and run the search when the decision points to replacement.</p>
+    <a href="../contact.html" class="btn btn-gold">Discuss the sales leader decision <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="wordmark">REVENUE <b>BENCH</b><span class="dot" style="color:var(--gold-light);">.</span></div>
+        <p class="note" style="margin-top:10px;max-width:300px;">Specialized recruitment for the revenue engine. Sellers, leaders, enablement, and RevOps.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../for-employers.html">For Employers</a>
+        <a href="../for-candidates.html">For Candidates</a>
+        <a href="../private-equity.html">Private Equity</a>
+        <a href="../guides.html">Insights</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>A founder-led firm. Sister to Performance Edge, Swanston Growth Advisors, and <a href="https://bestsalesteamtraining.com">Best Sales Team Training</a>.</p>
+      <p>&copy; 2026 Revenue Bench. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Your VP of Sales resigned: should you counteroffer?",
+  "description":"A decision framework for CEOs, founders, and operating partners deciding whether to counteroffer a VP of Sales who has resigned.",
+  "image":"https://revenuebench.io/og/vp-of-sales-resigned-counteroffer.png",
+  "author":{
+    "@type":"Person",
+    "name":"Carlos Garrido",
+    "jobTitle":"Co-Founder, Revenue Bench",
+    "description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.",
+    "affiliation":{
+      "@type":"Organization",
+      "name":"Revenue Bench"
+    }
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"Revenue Bench",
+    "url":"https://revenuebench.io"
+  },
+  "datePublished":"2026-08-27",
+  "dateModified":"2026-08-27",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://revenuebench.io/guides/vp-of-sales-resigned-counteroffer"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Should you counteroffer a VP of Sales who resigns?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Counteroffer only if you would hire the leader today at the new number, the resignation arose from an addressable pull, and something defined changes beyond salary. Accept the resignation when you would use a search to find a stronger leader, the reason concerns the role or company, or the proposed offer buys no operating change. Name forecast and account coverage before choosing either route."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What should you say when a sales leader hands in their resignation?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Acknowledge the decision, avoid presenting a number, and request one direct conversation before responding. Ask what would have needed to be different six months earlier, when the outside process began, whether it was inbound, and what must change if the leader stays. Record the answers, confirm the decision deadline, and tell the leader when the company will respond."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How long should you take to decide on a counteroffer?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Decide within the deadline attached to the outside offer and prepare to act within one to two days. Use that time to complete the resignation conversation, apply the replacement scorecard to the incumbent, price the effect on the pay band, define any role change, and name forecast coverage. Speed matters, but an immediate salary match without those answers creates a permanent cost from incomplete evidence."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is there reliable data on whether counteroffers work?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"There is reliable survey data on employer practices, but no defensible universal retention rate. A 2017 survey of 120 rewards and human resources professionals reports policies, perceived effectiveness, expected departures, and relationship changes in their own organizations. Those responses are self-reported impressions rather than tracked retention outcomes. Use them to understand governance gaps rather than to predict one VP of Sales."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What does a counteroffer cost beyond the salary increase?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The costs include pay-band compression, the precedent created for the team, independent validation of the forecast, possible weakening of the leader's authority, and preparation for another resignation. The increase also becomes the permanent compensation baseline. Price the alternative transition cost beside those items, including vacancy, account handover, search, ramp, and the operating risk that follows a leadership change."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What do you do if your VP of Sales resigns and there is no successor?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Name one interim owner with explicit authority and an end date tied to the successor's start. The confidential replacement guide sets out the scope that owner needs. Transfer the largest account relationships during the notice period. Write the replacement scorecard and role definition immediately, decide whether the search must remain confidential, and open the existing candidate bench. A retention agreement can purchase a defined handover period when both sides agree."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://revenuebench.io/guides/vp-of-sales-resigned-counteroffer",
+  "url":"https://revenuebench.io/guides/vp-of-sales-resigned-counteroffer",
+  "name":"Your VP of Sales Resigned: Should You Counteroffer? | Revenue Bench",
+  "datePublished":"2026-08-27",
+  "dateModified":"2026-08-27",
+  "breadcrumb":{
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"Home",
+        "item":"https://revenuebench.io/"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"Insights",
+        "item":"https://revenuebench.io/guides"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"VP of Sales counteroffer",
+        "item":"https://revenuebench.io/guides/vp-of-sales-resigned-counteroffer"
+      }
+    ]
+  }
+}
+</script>
+
+<script>
+  document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+</script>
+<script defer src="../assets/cursor.js"></script>
+</body>
+</html>
