@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>How to Evaluate a Sales Recruitment Agency | Revenue Bench</title>
-<meta name="description" content="How to evaluate a sales recruitment agency: an eight-point scorecard covering assessment method, guarantee terms in writing, specialization, who does the work, and how the fee maps to outcomes. Criteria you can check beat rankings you cannot." />
+<meta name="description" content="Use a scored eight-criterion scorecard to compare sales recruitment agencies by assessment, guarantee, specialization, search owner, fee, and references." />
 <link rel="canonical" href="https://revenuebench.io/guides/how-to-evaluate-a-sales-recruitment-agency" />
 <meta property="og:title" content="How to Evaluate a Sales Recruitment Agency" />
-<meta property="og:description" content="An eight-point scorecard: assessment method, guarantee terms in writing, specialization, who does the work, and how the fee maps to outcomes." />
+<meta property="og:description" content="Score competing sales recruitment agencies on eight criteria, with a document test for every answer." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/how-to-evaluate-a-sales-recruitment-agency.png">
   <meta property="og:image:width" content="1200">
@@ -37,14 +37,50 @@
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
 <style>
-  .datatable{width:100%;min-width:660px;border-collapse:collapse;margin:0;font-size:14px;}
-  .datatable th,.datatable td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top;}
-  .datatable th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
-  .datatable td:first-child{font-weight:600;color:var(--navy);width:19%;}
-  .datatable td:nth-child(2){color:var(--ink-mid);width:31%;}
-  .datatable td:nth-child(3){color:var(--gold-deep);font-weight:600;width:27%;}
-  .datatable td:last-child{color:var(--ink-soft);width:23%;}
-  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border:1px solid var(--line-soft);border-radius:12px;}
+  .prose{min-width:0;}
+  .prose a{overflow-wrap:anywhere;}
+  .datatable{width:100%;min-width:920px;border-collapse:collapse;margin:0;font-size:14px;background:var(--white);line-height:1.55;}
+  .datatable th,.datatable td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);vertical-align:top;}
+  .datatable th:last-child,.datatable td:last-child{border-right:0;}
+  .datatable tbody tr:last-child th,.datatable tbody tr:last-child td{border-bottom:0;}
+  .datatable thead th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .datatable tbody th{font-size:14px;letter-spacing:0;text-transform:none;color:var(--navy);font-weight:600;line-height:1.55;}
+  .datatable td{color:var(--ink-mid);}
+  .datatable td strong{color:var(--navy);}
+  .tablewrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border:1px solid var(--line-soft);border-radius:12px;}
+  .table-caption{margin:10px 0 20px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+  #scorecard-table{min-width:710px;}
+  #scorecard-table th:first-child,#scorecard-table tbody th{width:17%;}
+  #scorecard-table th:nth-child(2),#scorecard-table td:nth-child(2){width:31%;}
+  #scorecard-table th:nth-child(3),#scorecard-table td:nth-child(3){width:43%;}
+  #scorecard-table th:last-child,#scorecard-table td.scorecell{width:9%;text-align:center;background:var(--white);}
+  #comparison-table{min-width:660px;}
+  #comparison-table th:first-child,#comparison-table tbody th{width:40%;}
+  #comparison-table th:not(:first-child),#comparison-table td{width:20%;text-align:center;}
+  #comparison-table td{height:46px;background:var(--white);}
+  #comparison-table .total-row th,#comparison-table .total-row td{border-top:2px solid var(--navy);font-weight:700;}
+  #dodges-table{min-width:700px;}
+  #dodges-table th:first-child,#dodges-table tbody th{width:18%;}
+  #dodges-table th:nth-child(2),#dodges-table td:nth-child(2){width:36%;}
+  #dodges-table th:nth-child(3),#dodges-table td:nth-child(3){width:46%;}
+  #guarantee-table{min-width:1080px;}
+  #guarantee-table th:first-child,#guarantee-table tbody th{width:14%;}
+  #guarantee-table th:nth-child(2),#guarantee-table td:nth-child(2){width:34%;}
+  #guarantee-table th:nth-child(3),#guarantee-table td:nth-child(3){width:29%;}
+  #guarantee-table th:nth-child(4),#guarantee-table td:nth-child(4){width:23%;}
+  #fee-table{min-width:960px;}
+  #fee-table th:first-child,#fee-table tbody th{width:16%;}
+  #fee-table th:nth-child(2),#fee-table td:nth-child(2){width:28%;}
+  #fee-table th:nth-child(3),#fee-table td:nth-child(3){width:28%;}
+  #fee-table th:nth-child(4),#fee-table td:nth-child(4){width:28%;}
+  .score-bands{margin:8px 0 26px;padding-left:22px;}
+  .score-bands li{margin-bottom:10px;padding-left:5px;}
+  .disqualifier{background:var(--parchment);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:18px 20px;margin:12px 0;}
+  .disqualifier p{margin:0;}
+  .self-score{padding-left:22px;}
+  .self-score li{margin-bottom:15px;padding-left:5px;}
+  .question-list{padding-left:24px;}
+  .question-list li{margin-bottom:12px;padding-left:5px;}
   .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
   .method h3{font-size:19px;margin-bottom:10px;}
   .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
@@ -53,6 +89,26 @@
   .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  .stat-strip .stat-cell{flex:1;}
+  @media print{
+    .site-nav,.nav-burger,.cta-band,.footer,.crumb,.author-box,.related,.method{display:none !important;}
+    body{background:#fff;}
+    .art-hero{padding:0 0 6px;}
+    .tablewrap{overflow:visible;border:1px solid #ccc;page-break-inside:auto;}
+    .datatable{min-width:0 !important;width:100% !important;font-size:9.5pt;}
+    .datatable th,.datatable td{padding:6px 8px;}
+    #comparison-table td{height:30px;}
+    h1{font-size:22pt;}
+    h2,h3{page-break-after:avoid;}
+    tr{page-break-inside:avoid;}
+    a{text-decoration:none;color:inherit;}
+  }
+  @media(max-width:760px){
+    .datatable{font-size:13.5px;}
+    .datatable th,.datatable td{padding:11px 12px;}
+    .method{padding:22px 20px;}
+    .author-box{align-items:flex-start;}
+  }
 </style>
 </head>
 <body>
@@ -75,8 +131,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>How to evaluate a sales recruitment agency</span></div>
     <div class="eyebrow">Buyer's guide &middot; Evaluation criteria</div>
     <h1>How to Evaluate a Sales Recruitment Agency</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>9 min read</span></div>
-    <p class="deck"><strong>Evaluating a sales recruitment agency comes down to five checkable things, not a feeling about who sounded best on a call.</strong> How they assess candidates, meaning the method they use rather than the adjectives they reach for. What their guarantee covers in writing. Whether they specialize in sales roles or fill everything. Who does the work once the contract is signed. And how their fee maps to the outcome that matters, which is a hire still performing a year later. Each one is a question you can ask and an answer you can verify before you commit. The scorecard below expands these five themes into eight checkable criteria.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>25 min read</span></div>
+    <p class="deck"><strong>This page gives you a scored instrument for choosing among sales recruitment agencies.</strong> Its eight criteria cover assessment method, guarantee terms, sales specialization, the person running the search, the candidate bench, support after the hire starts, fee structure, and references from placements that lasted. Every row requires a document, clause, or other artifact you can inspect before signing.</p>
   </div>
 </section>
 
@@ -86,104 +142,428 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>Judge method, not adjectives. Ask how an agency assesses a candidate. A validated, sales-specific assessment predicts performance. Resumes and interviews on their own do not.</li>
-        <li>Read the guarantee before you sign. The length, whether it is a replacement search or a refund, and the conditions that void it matter more than the headline number of days.</li>
-        <li>Specialization is a filter. An agency that fills every kind of role rarely knows the sales one well enough to screen for it.</li>
-        <li>Criteria you can check beat rankings you cannot. Most "best agency" lists are published by the agencies on them.</li>
-        <li>The honest answer to "are you always the right fit" is no. A good agency will tell you when a faster, higher-volume shop serves you better.</li>
+        <li>Ask every firm the same eight questions during the same meeting week, record a score for each answer, and total the scores that day.</li>
+        <li>A spoken answer earns one point at best. Two points require the document, clause, report, count, plan, or introduction named in the scorecard.</li>
+        <li>The guarantee and fee belong together because the fee clause states when the money is earned, and the guarantee clause governs what that money is worth if the hire leaves.</li>
+        <li>Two answers disqualify a firm despite a high total: a guarantee that ordinary employer-controlled changes can void, or an engagement letter that leaves the search owner unnamed.</li>
+        <li>Revenue Bench applies this scorecard to itself. The firm opened in June 2026 and cannot yet earn full marks for a reference to a placement that has remained in role for twelve months.</li>
       </ul>
     </div>
 
     <div class="toc-inline">
       <h2 class="toc-title">In this guide</h2>
       <ol>
-        <li><a href="#lists">Why "best agency" lists mislead</a></li>
-        <li><a href="#scorecard">The evaluation scorecard</a></li>
-        <li><a href="#assess">How should an agency assess a candidate?</a></li>
-        <li><a href="#guarantee">What should a placement guarantee cover?</a></li>
-        <li><a href="#specialize">Does sales specialization matter?</a></li>
-        <li><a href="#who">Who will run your search?</a></li>
-        <li><a href="#bench">Does the agency know candidates before you call?</a></li>
-        <li><a href="#onboarding">What happens after the hire is made?</a></li>
-        <li><a href="#fee">How should a recruiter's fee be structured?</a></li>
-        <li><a href="#references">Which references are worth asking for?</a></li>
-        <li><a href="#numbers">What the numbers say about method</a></li>
+        <li><a href="#scorecard">The eight-criterion scorecard</a></li>
+        <li><a href="#dodges">The answers that sound right and score zero</a></li>
+        <li><a href="#rigor">Why the scorecard goes in front of the decision</a></li>
+        <li><a href="#assess">What to ask about assessment method</a></li>
+        <li><a href="#guarantee">The guarantee, and the four terms that decide coverage</a></li>
+        <li><a href="#fee">The fee, and who carries the search risk</a></li>
+        <li><a href="#specialize">Specialization, who does the work, and the bench</a></li>
+        <li><a href="#after">What runs after the hire starts</a></li>
+        <li><a href="#references">The references worth asking for</a></li>
+        <li><a href="#lists">Who published this guide</a></li>
+        <li><a href="#questions">The eight questions, in one list</a></li>
+        <li><a href="#numbers">What the evidence says about method</a></li>
         <li><a href="#notfit">When Revenue Bench is not the fit</a></li>
-        <li><a href="#answer">How we answer the same scorecard</a></li>
+        <li><a href="#answer">How Revenue Bench scores on its own scorecard</a></li>
+        <li><a href="#limits">What this scorecard does not decide</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
+        <li><a href="#faq">Questions about choosing a sales recruitment agency, answered</a></li>
       </ol>
     </div>
 
     <div class="prose">
-      <h2 id="lists">Why "best sales recruitment agency" lists mislead</h2>
-      <p>Search for the best sales recruitment agency and you will find ranked lists. Read the fine print and a pattern shows up fast: many of the rankings that surface first are published by the agencies themselves, and the agency doing the ranking tends to place itself first. A list you cannot audit is marketing dressed as research.</p>
-      <p>The fix is not to hunt for a more trustworthy list. It is to stop outsourcing the judgment. Criteria you can check beat rankings you cannot. So this guide gives you eight of them, written as questions you can ask any agency, with the strong answer and the weak answer next to each. Ask all eight and the pattern across the answers tells you more than any single reply, and far more than where a firm ranks itself.</p>
+      <h2 id="scorecard">The eight-criterion scorecard</h2>
+      <p>Ask all eight questions in one meeting. Write each score down during the call, then total the scores on the same day while the answers and documents remain easy to connect.</p>
+      <p>Every row scores the same way. <strong>Two points if they show you the document. One point if the answer is right and nothing is in writing. Zero if the answer is vague or the firm offers nothing to inspect.</strong> Score two only when every element named in the proof column is present. A document missing one of the elements it names scores one. That rule holds every row to the same standard. A document can be an assessment report, a contractual clause, a placement count, an engagement letter, a dated bench record, an onboarding plan, an invoice schedule, or a client introduction. The format changes with the criterion. The proof still has to exist outside the conversation.</p>
 
-      <h2 id="scorecard">The evaluation scorecard</h2>
-      <p>Here is the whole evaluation on one page. Ask each question. Write down what you hear. Then read the answers together.</p>
       <div class="tablewrap">
-      <table class="datatable">
-        <thead><tr><th>Criterion</th><th>What to ask</th><th>Strong answer</th><th>Weak answer</th></tr></thead>
-        <tbody>
-          <tr><td>Assessment method</td><td>How do you evaluate a candidate's actual ability to sell?</td><td>A validated, sales-specific assessment on every candidate for a selling or sales-leadership role, before you meet them.</td><td>Resume screening and interviews, described with words like gut and instinct.</td></tr>
-          <tr><td>Guarantee in writing</td><td>What does your guarantee cover, and what voids it?</td><td>A defined period, a free replacement search, conditions stated in the contract.</td><td>A verbal promise, or conditions you only discover after a hire fails.</td></tr>
-          <tr><td>Sales specialization</td><td>What share of your placements are sales and revenue roles?</td><td>Sales and revenue roles only. It is the whole business.</td><td>Sales is one vertical among many, from finance to IT.</td></tr>
-          <tr><td>Who does the work</td><td>Who runs my search, and will I work with them directly?</td><td>The person you meet does the sourcing, screening, and shortlisting.</td><td>A senior name wins the work; a junior sourcer runs the search.</td></tr>
-          <tr><td>Bench vs cold search</td><td>Do you already know candidates for a role like mine?</td><td>A maintained bench of assessed sellers, known before you called.</td><td>Every search starts cold, from a job post and a database pull.</td></tr>
-          <tr><td>Onboarding support</td><td>What happens in the first 90 days after I hire?</td><td>A structured onboarding plan and a coach for the hire and the manager.</td><td>The relationship ends the moment the offer is signed.</td></tr>
-          <tr><td>Fee structure</td><td>How is your fee calculated, and when is it earned?</td><td>One clear percentage or flat fee, tied to a start date and the guarantee.</td><td>Layered fees, vague triggers, or charges that survive a failed hire.</td></tr>
-          <tr><td>Lasting references</td><td>Can I speak to clients whose hires are still there after a year?</td><td>References to placements that lasted 12 or more months, offered readily.</td><td>Testimonials only, or references who hired just weeks ago.</td></tr>
-        </tbody>
-      </table>
+        <table class="datatable" id="scorecard-table">
+          <thead>
+            <tr>
+              <th scope="col">The criterion</th>
+              <th scope="col">Ask this</th>
+              <th scope="col">What proves the answer</th>
+              <th scope="col">Your score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Assessment method</th>
+              <td>What assessment instrument do you run on candidates for selling and sales-leadership roles, and when do you run it?</td>
+              <td>The name of the assessment and a sample report from a completed candidate assessment with the candidate's identity removed. The report should show that the instrument produces findings you can inspect.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Guarantee terms</th>
+              <td>What does your guarantee cover, when does its window start, and what voids it?</td>
+              <td>The guarantee clause from the agreement. It should state the remedy, the number of days, the date that starts the window, the number of re-runs, and every event that voids coverage.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Sales specialization</th>
+              <td>What share of your placements in the last twelve months were sales and revenue roles?</td>
+              <td>A count of placements from the last twelve months, separated by role type. The count should let you identify how much of the firm's completed work involved sales and revenue positions.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Who does the work</th>
+              <td>Who will run my search, and who will I speak with week by week?</td>
+              <td>The engagement letter naming the person who owns sourcing, screening, shortlisting, and the weekly client conversation. A team description without the person's name leaves this row incomplete.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Bench or cold start</th>
+              <td>How many candidates do you already know for this role, when were they assessed, and can you describe three before opening a new search?</td>
+              <td>A written, dated summary of how many candidates fit the role and when each was assessed, with three described by role, selling motion, and fit, identities withheld. Candidate records themselves stay with the firm.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">What runs after the hire starts</th>
+              <td>What runs during the first 90 days after the hire starts, and who is accountable for it?</td>
+              <td>The onboarding plan and the named owner, carried into the agreement. The document should state what the hire receives, what the hiring manager receives, and who reports progress.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Fee structure</th>
+              <td>How is your fee calculated, when is it earned, and what happens to it if the hire does not last?</td>
+              <td>The fee clause with its calculation base, earning trigger, invoice schedule, and connection to the guarantee remedy. The trigger should identify the event that makes each invoice due.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">References that lasted</th>
+              <td>Will you introduce me to a client whose placement is still in the role and provide the placement's start date?</td>
+              <td>The client introduction and the placement's start date. Two points require a start date twelve months old or more. One point where the introduction comes with a shorter-tenured placement. Zero where you are offered testimonials in place of an introduction.</td>
+            <td class="scorecell">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <h2 id="assess">How should an agency assess a candidate?</h2>
-      <p>This is the question that separates a real process from a resume service. Ask whether there is a validated, sales-specific assessment applied to every candidate before you meet them, or whether the screen is a resume and a conversation. Interviews reward the same skills selling rewards: rapport, storytelling, reading a buyer, handling objections. A strong interviewer can be a weak closer. A method built to measure sales-specific traits corrects for that. The words driven and hungry do not.</p>
+      <h3>Scoring more than one firm</h3>
+      <p>Score each firm during the same meeting week, using the same eight questions, then compare the totals instead of relying on the impressions left by separate conversations.</p>
+      <div class="tablewrap">
+        <table class="datatable" id="comparison-table">
+          <thead>
+            <tr>
+              <th scope="col">Criterion</th>
+              <th scope="col">Firm A</th>
+              <th scope="col">Firm B</th>
+              <th scope="col">Firm C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Assessment method</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">Guarantee terms</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">Sales specialization</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">Who does the work</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">Bench or cold start</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">What runs after the hire starts</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">Fee structure</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><th scope="row">References that lasted</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr class="total-row"><th scope="row">Total out of 16</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A spread of two points or fewer between two firms carries no decision weight, so the reference conversation decides. Print this page to score a meeting on paper.</p>
 
-      <h2 id="guarantee">What should a placement guarantee cover?</h2>
-      <p>Read three things before you sign: the length, whether it is a replacement or a refund, and <a href="placement-guarantees-explained.html">the conditions that void it</a>. A replacement guarantee means the agency runs the search again at no fee if the hire does not work inside the window. A refund returns money but leaves you with the open seat and lost months. Watch for conditions that cancel the guarantee, such as any change to the role or a missed check-in. A guarantee you cannot read line by line is not a guarantee. The <a href="placement-guarantees-explained.html#writing">seven placement guarantee terms, compared</a> sets each one against the market figures and against what Revenue Bench publishes.</p>
+      <h3>The total, and how to read it</h3>
+      <ul class="score-bands">
+        <li><strong>13 to 16:</strong> the firm can evidence its process. Read the two disqualifying answers below before you sign on the terms.</li>
+        <li><strong>9 to 12:</strong> the process is probably sound and the paperwork is behind it. Ask for the missing documents while you are still deciding.</li>
+        <li><strong>8 or below:</strong> you are buying a relationship and a hope. That can still be the right call, and you should know that is the call you are making.</li>
+      </ul>
+      <p>A band reads correctly only when no row scores zero. Read any zero on the guarantee, the search owner, or the fee separately from the total, because a strong score elsewhere does not compensate for a term you cannot see.</p>
 
-      <h2 id="specialize">Does sales specialization matter?</h2>
-      <p>It does, because screening a seller well requires knowing what good selling looks like inside a specific motion. An agency that fills sales, finance, engineering, and operations roles is generalist by design. Ask what share of its placements are sales and revenue roles. If the honest answer is a fraction, the sales-specific knowledge is a fraction too, and it will show in the shortlist.</p>
+      <h3>Two disqualifying answers</h3>
+      <p>A strong total cannot rescue either answer below. A firm can show you every document, score sixteen, and still fail the first test, because that test reads what the clause says rather than whether you were shown it. Each one leaves a central part of the engagement under the firm's control after you sign.</p>
 
-      <h2 id="who">Who will run your search?</h2>
-      <p>Agencies sometimes send a senior partner to win the work, then hand the search to a junior sourcer you never meet. Ask who does the sourcing, screening, and shortlisting, and whether you will speak with that person directly. In a founder-led firm, the founders do the work. That is not a small detail. The person judging your candidates should be the person you trusted enough to hire in the first place.</p>
+      <div class="disqualifier">
+        <p><strong>The guarantee voids on a change the employer controls.</strong> If a change to the role, the compensation, or the reporting manager cancels the guarantee, the coverage is written to be cancellable by ordinary events inside a growing company.</p>
+      </div>
 
-      <h2 id="bench">Does the agency know candidates before you call?</h2>
-      <p>There is a real difference between an agency that maintains a bench of assessed sellers and one that starts every search cold from a job post. A bench means some of the screening already happened, so the first shortlist arrives faster and stronger. Ask whether they already know people for a role like yours. "We will start looking" is a different service than "we know three people, and here is why each fits."</p>
+      <div class="disqualifier">
+        <p><strong>Nobody will name the person who runs the search in the engagement letter.</strong> A firm that will not write the name down is reserving the right to change it.</p>
+      </div>
 
-      <h2 id="onboarding">What happens after the hire is made?</h2>
-      <p>Plenty of early exits are onboarding failures rather than selection failures. A good hire still fails without a landing. Ask what the agency does in the first 90 days: is there a structured onboarding plan, and does someone coach the new hire and the manager, or does the relationship end at the signed offer? When support ends at the offer, a placement that struggles in month five gets filed as a bad hire when it was an unmanaged one.</p>
+      <h2 id="dodges">The answers that sound right and score zero</h2>
+      <p>A polished answer can carry nothing you are able to check. The follow-up question tells you whether a polished sentence is backed by something you can inspect.</p>
 
-      <h2 id="fee">How should a recruiter's fee be structured?</h2>
-      <p>You want one clear number and one clear trigger. Ask how the fee is calculated, when it is earned, and what happens to it if the hire does not last. A clean structure is a single percentage or a flat fee, tied to a start date and standing behind the guarantee. Layered fees and vague triggers make true costs hard to compare across firms. Clarity here also tells you something about how the firm will treat you after the invoice. For the full comparison of contingency, retained, and container models by who carries the risk, see <a href="sales-recruiter-fees.html">how sales recruiter fees are structured</a>.</p>
+      <div class="tablewrap">
+        <table class="datatable" id="dodges-table">
+          <thead>
+            <tr>
+              <th scope="col">The criterion</th>
+              <th scope="col">What a non-answer sounds like</th>
+              <th scope="col">What to say next</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Assessment method</th>
+              <td>"We have a rigorous multi-step evaluation process."</td>
+              <td>What is the assessment called, when do you run it, and can you show an identity-removed report from a completed candidate assessment?</td>
+            </tr>
+            <tr>
+              <th scope="row">Guarantee terms</th>
+              <td>"We stand behind every placement."</td>
+              <td>Can you open the agreement to the guarantee clause and show me the remedy, start date, window, re-run count, and full void list?</td>
+            </tr>
+            <tr>
+              <th scope="row">Sales specialization</th>
+              <td>"Sales is a core vertical for us."</td>
+              <td>How many placements did you complete in the last twelve months, and how many were sales and revenue roles?</td>
+            </tr>
+            <tr>
+              <th scope="row">Who does the work</th>
+              <td>"You will have a dedicated team on this."</td>
+              <td>Who owns the search day to day, who joins the weekly call, and where will that person's name appear in the engagement letter?</td>
+            </tr>
+            <tr>
+              <th scope="row">Bench or cold start</th>
+              <td>"We have a deep network in your space."</td>
+              <td>How many people on that bench fit this role, when were they assessed, and can you describe three before opening a new search?</td>
+            </tr>
+            <tr>
+              <th scope="row">What runs after the hire starts</th>
+              <td>"We stay close through the onboarding."</td>
+              <td>What happens during the first 90 days, who owns each step, and where does the agreement state those commitments?</td>
+            </tr>
+            <tr>
+              <th scope="row">Fee structure</th>
+              <td>"Our pricing is competitive and transparent."</td>
+              <td>What base determines the fee, which event earns it, when are the invoices due, and what happens to the fee if the hire leaves?</td>
+            </tr>
+            <tr>
+              <th scope="row">References that lasted</th>
+              <td>"Our clients love us, and we can share testimonials."</td>
+              <td>Will you introduce me to a client whose placement remains in the role and provide the placement's start date before the call?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2 id="references">Which references are worth asking for?</h2>
-      <p>Testimonials are written to flatter. References are where you ask the real question. Ask to speak with clients whose placements are still in the role after a year, not clients who hired last month and cannot yet know how it went. A placement that lasted twelve months is the strongest proof that the method worked, because twelve months is well past the point where a mis-hire would already have surfaced.</p>
+      <h2 id="rigor">Why the scorecard goes in front of the decision</h2>
+      <p>Carlos Garrido, the author of this page and a sales trainer, teaches sales teams: "The sale is forged in emotion. But it then has to survive the intellectual rigors of their buying process."</p>
+      <p>He also teaches: "Post-rationalization is the path all buyers follow." That line describes the employer choosing among recruiting firms after several good conversations. It describes the Revenue Bench sale with equal force.</p>
+      <p>The scorecard moves scrutiny ahead of the signature. Your favorable impression stays part of the decision, and the documents fix what the firm has committed to deliver.</p>
 
-      <h2 id="numbers">What the numbers say about method</h2>
-      <p>Method is not a matter of taste. It shows up in outcomes. In Objective Management Group's 2024 validation data, 72% of the candidates it recommended reached the top half of their sales team within 12 months, and 100% of the candidates it advised against, who were hired anyway, landed in the bottom half. First-year turnover was 9% for recommended hires against 33% for the not-recommended. All of those figures are OMG's own data, from a group that has assessed sales talent since 1990.</p>
+      <h2 id="assess">What to ask about assessment method</h2>
+      <p>Start with the name of the instrument. The phrase assessment process can cover a resume review, an interview sequence, a reference call, or a scored diagnostic. The first row asks the firm to identify the instrument used for selling and sales-leadership roles and the stage at which it runs.</p>
+      <p>Timing matters because an assessment used after the shortlist has little power to shape that shortlist. Ask whether the instrument runs before the candidate is presented. The answer tells you whether assessment informs selection or becomes supporting material after the firm has formed its opinion.</p>
+      <p>The sample report turns the method into evidence. You should be able to see what the report contains, how its findings are organized, and whether its output gives the recruiter and employer something specific to discuss. The candidate's identity can be removed. The report itself should remain complete enough to show how the method operates.</p>
+      <p>Ask who interprets the report and how the interpretation reaches you. An instrument can produce a detailed document while the search team uses only a summary label. The useful answer connects the report to screening, candidate presentation, and the questions used in your interview process.</p>
+      <p>An interview rewards the skills selling rewards, rapport, storytelling, and handling objections, so a candidate who presents well can read as a candidate who sells well. A sales-specific instrument measures the selling behaviors separately. The report also gives you a comparison point across firms. One firm may show a named sales-specific instrument with a completed report. Another may describe an internal interview rubric in writing. Score each against the same rule. The document earns two points. A conversation with nothing behind it earns one.</p>
+      <p>Revenue Bench uses an Objective Management Group assessment on candidates for selling and sales-leadership roles before presentation, and that assessment work runs through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors. Every candidate also receives an operator screen. The evidence section below separates OMG's published outcome figures from Revenue Bench's description of how it uses the instrument.</p>
+
+      <h2 id="guarantee">The guarantee, and the four terms that decide coverage</h2>
+      <p>The number of days is one part of the guarantee. Coverage also depends on the date that starts the clock, the remedy available when a claim opens, and the conditions that can void it. Read all four in the agreement before assigning the score.</p>
+
+      <div class="tablewrap">
+        <table class="datatable" id="guarantee-table">
+          <thead>
+            <tr>
+              <th scope="col">The term</th>
+              <th scope="col">What the market does</th>
+              <th scope="col">Revenue Bench's published answer</th>
+              <th scope="col">How to check it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">The window</th>
+              <td>90 days is the most common at 44.9 percent of firms in Top Echelon's 2019 survey of its recruiting-network members. 30 days is 20.3 percent and 60 days is 20.0 percent.</td>
+              <td>90 days.</td>
+              <td>Take the number of days from the agreement rather than the marketing page.</td>
+            </tr>
+            <tr>
+              <th scope="row">When the window starts</th>
+              <td>This term was not measured in any public survey. The clock can start at the signed offer or on the hire's first day, and those dates can sit weeks apart.</td>
+              <td>The hire's first day.</td>
+              <td>Ask which date starts the clock and have that date written into the agreement.</td>
+            </tr>
+            <tr>
+              <th scope="row">The remedy</th>
+              <td>Replacement with no money back is the majority at 61.4 percent in Top Echelon's 2019 survey of its recruiting-network members. A prorated refund is 17.6 percent, a full refund is 8.4 percent, and other remedies account for 10.9 percent.</td>
+              <td>A replacement search, run again at no additional fee, with one free re-run.</td>
+              <td>Confirm whether you are buying a replacement, a prorated refund, or a full refund, since the word guarantee covers all three.</td>
+            </tr>
+            <tr>
+              <th scope="row">What voids coverage</th>
+              <td>This term was not measured in any public survey. An agreement can name a change to the role or compensation, a change of manager, skipped onboarding steps, an unpaid invoice, or a missed notification window.</td>
+              <td>No conditions. Whether the hire is working is the client's call, and Revenue Bench asks for no evidence to open the claim.</td>
+              <td>Ask for the full void list in writing before you sign rather than after a claim.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Top Echelon's 2019 survey of its recruiting-network members also found that 95.9 percent of the recruiters surveyed offered a guarantee of some kind and 4.1 percent offered none. The remedy distribution gives the word guarantee its commercial meaning.</p>
+      <p>A buyer who hears that money will be returned is being offered the least common of the three named remedies. Pin down whether refund means a prorated refund or a full refund before signing, then check whether the agreement attaches conditions to it.</p>
+      <p>Top Echelon's survey was published in 2019, its respondents were members of Top Echelon's own recruiting network with an average tenure of about 15 years, and corporate recruiters were excluded.</p>
+      <p>Under the standard agreement as of July 2026, Revenue Bench provides a 90-day replacement guarantee on every placement, running from the hire's first day; one free re-run of the search; no conditions; whether the hire is working is the client's call and Revenue Bench asks for no evidence to open the claim; every placement also includes a 90-day onboarding coach who meets the hire weekly and the hiring manager weekly and reports to the hiring manager.</p>
+      <p>The sibling guide covers all seven <a href="placement-guarantees-explained.html">placement guarantee terms</a> and follows a claim through the free re-run.</p>
+
+      <h2 id="fee">The fee, and who carries the search risk</h2>
+      <p>The fee model determines when cash moves and which party funds the search before a placement occurs. The agreement then states when the fee becomes earned. Read the model, earning trigger, invoice schedule, and guarantee as one commercial arrangement.</p>
+
+      <div class="tablewrap">
+        <table class="datatable" id="fee-table">
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">How and when you pay</th>
+              <th scope="col">Who carries the search risk</th>
+              <th scope="col">What it fits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Contingency</th>
+              <td>A percentage of first-year compensation, due only when a hire starts. There is no cost if no hire is made.</td>
+              <td>The recruiter carries the risk entirely until a placement is made. The employer risks time and a rushed shortlist instead of cash.</td>
+              <td>High-volume or individual-contributor roles where the market is deep and speed decides.</td>
+            </tr>
+            <tr>
+              <th scope="row">Container or engaged</th>
+              <td>A fixed engagement fee is paid up front, with the balance due on placement. The search is usually exclusive for a set period.</td>
+              <td>The risk is shared. The employer funds part of the search and the recruiter carries the rest.</td>
+              <td>Director and VP roles, or any search where a committed partner matters.</td>
+            </tr>
+            <tr>
+              <th scope="row">Retained</th>
+              <td>The fee is billed in stages regardless of outcome, commonly in thirds across kickoff, shortlist, and placement.</td>
+              <td>The employer carries the risk up front in exchange for depth and exclusivity.</td>
+              <td>Senior, confidential, or scarce roles such as CRO and VP of Sales.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Contingency and direct-hire pricing</h3>
+      <p>The most common direct-hire fee is 20 percent of salary, reported by 42 percent of staffing firms, and 20 percent is also the median across all segments, according to Staffing Industry Analysts, from its North America Staffing Company Survey 2021. The survey year is 2021.</p>
+      <p>The same Staffing Industry Analysts North America Staffing Company Survey 2021 reports segment midranges of 15 to 20 percent for commercial staffing, 18 to 22 percent for professional staffing, and 20 to 25 percent for direct-hire firms. These figures give you a market reference for the percentage while the agreement supplies the base against which that percentage is applied.</p>
+      <p>Ask whether salary means base salary, cash compensation, or another defined amount. The percentage can match the market reference while the calculation base produces a different fee. The clause should name the base and the date on which the fee becomes earned.</p>
+
+      <h3>Container or engaged search</h3>
+      <p>The container mechanism places a fixed fee up front and the balance on placement, usually with exclusivity for a set period. The initial payment funds part of the work and confirms that one firm has the assignment for the stated period.</p>
+      <p>No independent research organization publishes a benchmark for container or engaged search pricing. Published percentages come from firms that sell the model, so this page gives no percentage benchmark for it. Compare the initial fee, placement balance, exclusivity period, earning trigger, and guarantee clause in the agreement.</p>
+
+      <h3>Retained and executive search</h3>
+      <p>The retained standard is approximately one third of the estimated first-year compensation for the position being filled, plus a percentage for engagement expenses. Korn Ferry's annual report for the fiscal year ended April 2025 and Heidrick and Struggles' annual report for the year ended December 2024 both describe this as the standard structure.</p>
+      <p>Those are executive search figures. That one-third description is limited to executive search and cannot be applied as the going rate for a mid-market account-executive search. The role level, confidentiality, and search mechanism establish the relevant comparison.</p>
+
+      <h3>How the guarantee determines what the fee buys</h3>
+      <p>The model tells you who carries the search risk. The clause that decides what the fee is worth states what happens to the fee if the hire does not last. That clause is the guarantee, which is why the guarantee row and the fee row are scored together in practice.</p>
+      <p>The percentage shows where a firm sits against the market. The guarantee clause determines whether the fee buys another search, a prorated refund, a full refund, or no remedy after the covered window or conditions are applied.</p>
+      <p>Revenue Bench charges a single percentage of the hire's first-year compensation, earned on a start date, standing behind the 90-day replacement guarantee; senior and confidential searches run as an engaged, retained-style search; individual-contributor roles can run on contingency. The percentage itself is not published on the site.</p>
+      <p>The full sibling guide compares the models and their risk allocation in more depth: <a href="sales-recruiter-fees.html">sales recruiter fees</a>.</p>
+
+      <h2 id="specialize">Specialization, who does the work, and the bench</h2>
+      <p>These three criteria describe the operating team behind the proposal. Together they tell you what the firm has done, who will make candidate judgments, and how much candidate knowledge exists when the engagement begins.</p>
+
+      <h3>Sales specialization</h3>
+      <p>Ask for the count of placements completed during the last twelve months, separated by role type. A percentage without the underlying count gives you less information than the document test requires. The count should let you identify the sales and revenue roles among the firm's completed placements.</p>
+      <p>Role labels deserve attention. Sales and revenue roles can include sellers, sales leaders, revenue operations, and enablement. Ask the firm to use its own placement records and group the roles in a way you can follow. The score depends on a written count rather than a broad description of sectors served.</p>
+      <p>Specialization tells you where the firm's recent repetition sits. Your specific search still requires a separate discussion about market knowledge, role level, sales motion, and location. The scorecard's limits section keeps those questions outside the arithmetic.</p>
+
+      <h3>Who does the work</h3>
+      <p>The person named in the engagement letter should own the search and appear in the weekly client conversation. Ask which parts of sourcing, screening, and shortlisting that person performs, then ask who can change the assignment.</p>
+      <p>A team structure can support the named search owner. The document test still needs one accountable person. Titles and organizational charts provide context. The engagement letter is what makes the commitment scoreable.</p>
+      <p>Read the engagement letter beside the meeting roster. If the person whose judgment informed your decision will run the search, the name should be easy to add. If staffing may change, the agreement can state how a replacement search owner will be approved.</p>
+
+      <h3>Bench or cold start</h3>
+      <p>A bench claim needs a date. Ask how many candidates fit the role, when the firm last assessed them, and whether the firm can describe three before new sourcing starts. The description should address the role under discussion rather than a broad network category.</p>
+      <p>The bench record should distinguish a known candidate from a name in a database. The assessment date gives you one indication of how current the knowledge is. A written note about role fit gives you material to test during kickoff.</p>
+      <p>A cold start can still serve a search. Score it according to the answer and the artifact instead of treating a bench as a universal requirement. The value of this row is how much the firm knows before the engagement starts.</p>
+
+      <h2 id="after">What runs after the hire starts</h2>
+      <p>Criterion 6 asks for the plan that begins on the hire's first day. The plan should identify the work, its cadence, the person accountable for it, and the way the hiring manager receives progress.</p>
+      <p>Place the onboarding plan in the agreement instead of relying on the proposal. A proposal describes the intended service before terms are settled. The agreement records the commitment you can enforce after the hire begins.</p>
+      <p>Ask what the hire receives during the first 90 days. Then ask what the hiring manager receives and who reports to that manager. A coaching program with no named accountability leaves the employer to infer whether meetings occurred or whether problems reached the person who could address them.</p>
+      <p>The guarantee and onboarding plan should also be read together. The guarantee states the remedy if the placement ends within the covered window. The onboarding plan states what the firm will run during that window. The guarantee handles the claim after an exit. The onboarding plan is what runs while the hire is settling in.</p>
+      <p>Revenue Bench includes a two-day skills program for sellers or a leadership refresher for sales leaders, followed by a 90-day onboarding coach. The coach meets weekly with the hire, meets weekly with the hiring manager, and reports to the hiring manager. The agreement is the document that should carry those commitments.</p>
+
+      <h2 id="references">The references worth asking for</h2>
+      <p>Ask for an introduction to a client whose placement remains in the role. Request the placement's start date before the call so you can see how long the result has run.</p>
+      <p>The date changes the value of the conversation. A client can describe the search process soon after a placement starts. A longer-running placement allows the client to discuss how the candidate performed after onboarding and whether the original role definition remained accurate.</p>
+      <p>Use the reference to check the same process the firm described to you. Ask who ran the search, how the shortlist matched the role, what assessment material the client received, what happened after the start date, and how the firm responded when the client raised a concern.</p>
+      <p>The introduction itself is the artifact for the scorecard. A testimonial can help you identify a client worth speaking with, but it gives you no opportunity to ask follow-up questions. The start date lets you place the client's account in time.</p>
+      <p>A strong paper score still needs this conversation. Documents show what the firm commits to do and how it records its process. The client tells you how the engagement felt when decisions, delays, and candidate judgments moved through that process.</p>
+
+      <h2 id="lists">Who published this guide</h2>
+      <p>Every buyer's guide to choosing a recruiting firm has an author with a commercial interest, so check who published it and what they sell before weighing the advice. Revenue Bench is a sales recruitment firm, and this page is published by a firm you might hire. The scorecard is built to be run on us. Apply the same question to any ranked list and ask what the ranking was measured on.</p>
+
+      <h2 id="questions">The eight questions, in one list</h2>
+      <p>Copy these questions into the agenda for every agency meeting.</p>
+      <ol class="question-list">
+        <li>What assessment instrument do you run on candidates for selling and sales-leadership roles, and when do you run it?</li>
+        <li>What does your guarantee cover, when does its window start, and what voids it?</li>
+        <li>What share of your placements in the last twelve months were sales and revenue roles?</li>
+        <li>Who will run my search, and who will I speak with week by week?</li>
+        <li>How many candidates do you already know for this role, when were they assessed, and can you describe three before opening a new search?</li>
+        <li>What runs during the first 90 days after the hire starts, and who is accountable for it?</li>
+        <li>How is your fee calculated, when is it earned, and what happens to it if the hire does not last?</li>
+        <li>Will you introduce me to a client whose placement is still in the role and provide the placement's start date?</li>
+      </ol>
+
+      <h2 id="numbers">What the evidence says about method</h2>
+      <p>OMG's own 2024 validation data reports that 72 percent of the candidates Objective Management Group recommended reached the top half of their sales team within 12 months. The same data reports that 100 percent of candidates OMG advised against, who were hired anyway, landed in the bottom half.</p>
+      <p>OMG's own 2024 validation data also reports first-year turnover of 9 percent for recommended hires against 33 percent for not-recommended hires. These are OMG's published outcomes and should be read with that source ownership in view.</p>
+
       <div class="stat-strip">
-        <div class="stat-cell"><div class="num">72%</div><div class="lab">of candidates OMG recommended reached the top half of their sales team within 12 months.</div></div>
-        <div class="stat-cell"><div class="num">9% / 33%</div><div class="lab">first-year turnover for OMG-recommended hires versus not-recommended hires.</div></div>
-        <div class="stat-cell"><div class="num">$49,508</div><div class="lab">average sales-turnover cost in DePaul University's research; fully loaded estimates near $115,000.</div></div>
+        <div class="stat-cell">
+          <div class="num">72 percent</div>
+          <div class="lab">of candidates OMG recommended reached the top half of their sales team within 12 months, according to OMG's own 2024 validation data.</div>
+        </div>
+        <div class="stat-cell">
+          <div class="num">9 / 33 percent</div>
+          <div class="lab">first-year turnover for OMG-recommended hires against not-recommended hires, according to OMG's own 2024 validation data.</div>
+        </div>
       </div>
-      <p>The cost of getting it wrong is documented too. DePaul University's sales-turnover research puts the average cost around $49,508, and fully loaded estimates run near $115,000. That is the price of the wrong method, and it is why the assessment question sits at the top of the scorecard rather than the bottom.</p>
-      <div class="method">
-        <h3>About these figures</h3>
-        <p>The performance and turnover figures here are OMG's own data. <a href="https://www.objectivemanagement.com" target="_blank" rel="noopener">Objective Management Group</a> has assessed sales talent since 1990, and the 72%, 100%, and 9% versus 33% figures come from its 2024 validation data. They are the group's published numbers, analyzed here rather than independent peer-reviewed research, and we label them that way.</p>
-        <p>The cost figures are third-party. DePaul University's Center for Sales Leadership puts the average cost of sales turnover near $49,508, with fully loaded estimates close to $115,000.</p>
-      </div>
+
+      <p>The figures support asking for an assessment method and its output. They do not determine whether a given candidate will succeed in your company. Your role definition, management environment, compensation plan, sales motion, and interview evidence still belong in the hiring decision.</p>
+      <p>Objective Management Group has assessed sales talent since 1990. Revenue Bench uses the assessment as one part of selection for selling and sales-leadership roles, with an operator screen on every candidate before presentation.</p>
 
       <h2 id="notfit">When Revenue Bench is not the fit</h2>
-      <p>Some searches are better served by another agency, and it is worth saying which ones.</p>
-      <p>If you need to fill ten similar seats in three weeks and speed matters more than precision, a high-volume contingency shop with a large database will serve you better than we will. Our process is built to be selective, and selective is slower by design.</p>
-      <p>If the role is not a sales or revenue role, we are the wrong call. We do not fill finance, engineering, or operations seats, and we would not pretend the assessment we run means anything outside sales.</p>
-      <p>And if what you want is a stack of resumes to work through yourself, an assessment-led process is friction you did not ask for. We put a screen in front of every candidate before you meet them, and we run a sales-specific assessment on candidates for selling and sales-leadership roles. For some buyers that is the entire point. For others it is a step they would rather skip, and those buyers are genuinely happier with a different kind of firm. We would rather say so now than take a search that is not ours to win.</p>
+      <p>A high-volume contingency firm can serve you better when you need many similar seats filled on a compressed schedule and speed carries more weight than selectivity. Our process is selective by design.</p>
+      <p>Revenue Bench fills sales and revenue roles. A search for finance, engineering, or operations belongs with a firm that specializes in those functions.</p>
+      <p>An employer seeking a stack of resumes to screen internally is also looking for a different service. We screen every candidate with an operator before presentation and run a sales-specific assessment on candidates for selling and sales-leadership roles.</p>
+      <p>The additional screen takes work before a candidate reaches you. Buyers who want that selection layer fit our process. Buyers who prefer to receive a broad set of resumes are better served by a firm built around that. We would rather say so now than take a search that is not ours to win.</p>
 
-      <h2 id="answer">How we answer the same scorecard</h2>
-      <p>Held to the same eight questions, here is where we stand.</p>
-      <p>We screen every candidate with a sales operator before we present them, and run an Objective Management Group assessment on candidates for selling and sales-leadership roles. We fill sales and revenue roles only. The founders do the sourcing and screening, so you work with us directly, not a junior sourcer you never met in the first meeting. We stand behind each placement with a 90-day replacement guarantee, and we include a 90-day onboarding coach who meets the new hire and the hiring manager weekly through the ramp. Our fee is a single clear percentage tied to a start date and the guarantee, and we will give you references to placements that are still in the role.</p>
-      <p>Use the scorecard on us. That is what it is for.</p>
+      <h2 id="answer">How Revenue Bench scores on its own scorecard</h2>
+      <p>The document rule applies to Revenue Bench. Below is our answer to every row and the artifact we hand you for it. Score us the way you score anyone else, which means awarding nothing until the named document reaches you.</p>
+
+      <ol class="self-score">
+        <li><strong>Assessment method.</strong> We run an Objective Management Group assessment on candidates for selling and sales-leadership roles before the candidate is presented, and every candidate receives an operator screen. That assessment work runs through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors. Ask for an identity-removed sample report before you award anything.</li>
+        <li><strong>Guarantee terms.</strong> Our standard agreement carries a 90-day replacement guarantee on every placement, running from the hire's first day. It provides one free re-run of the search at no additional fee, carries no conditions, and leaves the decision about whether the hire is working with the client. We ask for no evidence to open the claim. Ask us to open the agreement to that clause.</li>
+        <li><strong>Sales specialization.</strong> We fill sales and revenue roles only. We opened in June 2026, so our written count by role type covers the months we have been operating rather than a full twelve. Ask for it and read it against the twelve-month counts you get from older firms.</li>
+        <li><strong>Who does the work.</strong> The founders do the sourcing and screening, and we write the name of the founder who runs your search into the engagement letter. Withhold the points until you have read the name.</li>
+        <li><strong>Bench or cold start.</strong> Revenue Bench maintains a bench of assessed sellers. Ask us how many fit your role, when they were assessed, and whether we can describe three before we open new sourcing. We give you that as a written, dated summary with identities withheld.</li>
+        <li><strong>What runs after the hire starts.</strong> Every placement includes a two-day skills program for sellers or a leadership refresher for sales leaders, then a 90-day onboarding coach. The coach meets weekly with the hire, meets weekly with the hiring manager, and reports to the hiring manager. Ask to see those commitments in the agreement.</li>
+        <li><strong>Fee structure.</strong> We charge a single percentage of the hire's first-year compensation, earned on a start date, standing behind the 90-day replacement guarantee. Senior and confidential searches run as an engaged, retained-style search. Individual-contributor roles can run on contingency. The percentage is not published on this site, so the agreement supplies it with the earning trigger and the invoice schedule.</li>
+        <li><strong>References that lasted.</strong> Revenue Bench opened in June 2026, so no placement of ours has been in role for twelve months yet. Under this row that is a one rather than a two, and it stays a one until a placement reaches twelve months. We will introduce you to a client and give you the placement's start date so you can see how long it has run. Apply the same tenure test to every firm you are evaluating, including us.</li>
+      </ol>
+
+      <p>Revenue Bench itself holds no listing as an OMG Certified Partner. The OMG assessment work runs through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors.</p>
+      <p>No total appears here. Record each row only after the named evidence reaches you, then do the arithmetic on the same sheet you use for every other firm.</p>
+
+      <h2 id="limits">What this scorecard does not decide</h2>
+      <p>The scorecard tests whether a firm can evidence its process, while knowledge of your market sits outside the score. A firm can score well and still be wrong for a specific search. The bands and disqualifiers are a decision aid published by Revenue Bench rather than a validated instrument. A strong paper score leaves the reference conversation necessary. Your final decision should also account for the role, market, and people involved in the engagement.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <div class="method">
+        <h3>How to read these figures</h3>
+        <p>The score bands and the two disqualifiers are a decision aid published by Revenue Bench rather than a validated instrument. They organize a buying decision around documents and commitments. No outcome study established the cutoffs or tested the score against placement performance.</p>
+        <p>The assessment figures are OMG's own data, from its 2024 validation data. Objective Management Group reports that 72 percent of recommended candidates reached the top half of their sales team within 12 months, 100 percent of candidates advised against who were hired anyway reached the bottom half, and first-year turnover was 9 percent for recommended hires against 33 percent for not-recommended hires. The figures are source-owned validation results.</p>
+        <p>The guarantee distribution comes from Top Echelon's 2019 survey of its recruiting-network members. The survey reports 90 days at 44.9 percent, 30 days at 20.3 percent, and 60 days at 20.0 percent. It reports replacement with no money back at 61.4 percent, a prorated refund at 17.6 percent, a full refund at 8.4 percent, and other remedies at 10.9 percent. It also reports that 95.9 percent offered a guarantee of some kind and 4.1 percent offered none.</p>
+        <p>Top Echelon published the survey in 2019. Its respondents were members of its recruiting network with an average tenure of about 15 years, and corporate recruiters were excluded. We have found no survey of recruitment guarantee lengths or terms published since that one, so it is the only public distribution we can point to, and it is seven years old.</p>
+        <p>The direct-hire fee figures come from Staffing Industry Analysts, from its North America Staffing Company Survey 2021. The most common fee was 20 percent of salary, reported by 42 percent of staffing firms, and 20 percent was the median across all segments. Reported segment midranges were 15 to 20 percent for commercial staffing, 18 to 22 percent for professional staffing, and 20 to 25 percent for direct-hire firms.</p>
+        <p>The retained executive-search description comes from Korn Ferry's annual report for the fiscal year ended April 2025 and Heidrick and Struggles' annual report for the year ended December 2024. Both describe the standard structure as approximately one third of estimated first-year compensation plus a percentage for engagement expenses. The figure applies to executive search and cannot serve as a rate for a mid-market account-executive search.</p>
+        <p>No independent research organization publishes a pricing benchmark for container or engaged search. The page therefore describes the mechanism and gives no percentage for that model.</p>
+        <p>Revenue Bench's guarantee, fee, and onboarding terms apply under the standard agreement as of July 2026. The OMG assessment work for Revenue Bench placements runs through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors. Revenue Bench itself holds no listing as an OMG Certified Partner.</p>
+      </div>
 
       <div class="author-box">
         <img src="../assets/carlos.jpg" alt="Carlos Garrido" />
@@ -197,11 +577,37 @@
     <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
-      <div class="faq-item"><h3>What is a standard guarantee period for sales recruiters?</h3><p>In Top Echelon's 2019 survey of its recruiting-network members, 90 days was the most common guarantee length at 44.9 percent, and the length matters less than the terms. Ask whether the guarantee is a free replacement search or a refund, and get the conditions that void it in writing before you sign.</p></div>
-      <div class="faq-item"><h3>Are "best sales recruitment agency" lists trustworthy?</h3><p>Usually not. Most ranked lists of sales recruitment agencies are published by the agencies on them, and the publisher tends to rank itself first. Treat them as marketing, not research. You will learn more from a short set of checkable questions, about assessment method, guarantee terms, specialization, and references, than from any ranking you cannot audit.</p></div>
-      <div class="faq-item"><h3>How do I know if a recruiter really specializes in sales?</h3><p>Ask what share of their placements are sales and revenue roles. A true specialist fills those roles and little else, so the honest answer is most of them. If the agency also staffs finance, engineering, and operations, sales is one line of business among several, and the sales-specific judgment is spread thin.</p></div>
-      <div class="faq-item"><h3>Should a sales recruiter use an assessment?</h3><p>A sales-specific, validated assessment reads what interviews miss, because interviews reward the same skills selling rewards and reliably overrate strong presenters. Ask whether every candidate is assessed before you meet them, and with what instrument. A resume-and-interview process with no validated screen is guessing in a confident voice.</p></div>
-      <div class="faq-item"><h3>How much should a sales recruitment agency cost?</h3><p>Sales recruiters typically charge a percentage of first-year compensation, often in the range of 20 to 30 percent, or a flat fee for a defined search. The number matters less than the structure. Ask when the fee is earned and what happens to it if the hire does not last through the guarantee period.</p></div>
+      <h2 id="faq">Questions about choosing a sales recruitment agency, answered</h2>
+
+      <div class="faq-item">
+        <h3>How do you evaluate a sales recruitment agency?</h3>
+        <p>Evaluate the firm with the same eight questions you use for every other option, then score each answer from zero to two. Require evidence for assessment method, guarantee terms, specialization, search ownership, candidate bench, onboarding, fee structure, and lasting references. Ask the questions in one meeting, record the scores during the call, and total them that day.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What should you ask a sales recruiter before signing an agreement?</h3>
+        <p>Ask what assessment instrument they use, what the guarantee covers, how much recent work involved sales roles, who will run the search, which candidates they already know, what happens after the hire starts, how the fee is earned, and whether they can introduce a client whose placement remains in role. Request the supporting artifact for every answer.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does a sales recruiting agency need to show you in writing?</h3>
+        <p>The firm should show an identity-removed assessment report, the guarantee clause, placement counts by role, the named search owner, a dated bench record, the onboarding plan, the fee and invoice clauses, and a client introduction with the placement's start date. Written evidence earns two points. A sound spoken answer earns one point until the document arrives.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long should a sales recruiting guarantee last?</h3>
+        <p>90 days was the most common window at 44.9 percent in Top Echelon's 2019 survey of its recruiting-network members. The agreement also needs to state when the clock starts, which remedy applies, and what voids coverage. A longer window can carry narrow coverage, so read the start date and conditions beside the number of days.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How are sales recruitment fees structured?</h3>
+        <p>Fees use contingency, container or engaged, and retained models. Contingency is due when a hire starts. Container search places a fixed fee up front and the balance on placement. Retained search is billed in stages regardless of outcome. Read the earning trigger, invoice schedule, calculation base, and guarantee together because those clauses determine who carries the search risk.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can a new recruiting firm be evaluated on the same criteria as an established one?</h3>
+        <p>Yes. Apply the same document tests and record the age of the evidence. Revenue Bench opened in June 2026 and cannot yet score full marks for a reference to a placement that has remained in role for twelve months. We can offer a client introduction with the placement's start date. Use that same tenure test for every firm, including Revenue Bench.</p>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
@@ -222,7 +628,7 @@
     <div class="eyebrow">Run the scorecard on us</div>
     <div class="rule"></div>
     <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">Evaluate us with the same eight questions.</h2>
-    <p class="lead" style="margin:16px auto 28px;">Every candidate screened before you meet them, candidates for selling and sales-leadership roles assessed with OMG, the founders doing the work, and a 90-day guarantee with an onboarding coach behind it. See how we work with employers, then put us to the test.</p>
+    <p class="lead" style="margin:16px auto 28px;">Bring the scorecard to the meeting. We will answer each row and put the available documents in front of you before you decide.</p>
     <div class="btn-row" style="justify-content:center;">
       <a href="../contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
       <a href="../for-employers.html" class="btn btn-ghost">How we work with employers</a>
@@ -253,16 +659,90 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Evaluate a Sales Recruitment Agency","description":"An eight-point scorecard for evaluating a sales recruitment agency: assessment method, guarantee terms in writing, sales specialization, who does the work, fee structure, and references from lasting placements.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","name":"Revenue Bench"}},"publisher":{"@type":"Organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-14","dateModified":"2026-08-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/how-to-evaluate-a-sales-recruitment-agency"}}
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"How to Evaluate a Sales Recruitment Agency",
+  "description":"A scored eight-criterion instrument for evaluating sales recruitment agencies through assessment method, guarantee terms, specialization, search ownership, candidate bench, onboarding, fee structure, and lasting references.",
+  "author":{
+    "@type":"Person",
+    "name":"Carlos Garrido",
+    "jobTitle":"Co-Founder, Revenue Bench",
+    "description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.",
+    "affiliation":{
+      "@type":"Organization",
+      "name":"Revenue Bench"
+    }
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"Revenue Bench",
+    "url":"https://revenuebench.io"
+  },
+  "datePublished":"2026-07-14",
+  "dateModified":"2026-08-28",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://revenuebench.io/guides/how-to-evaluate-a-sales-recruitment-agency"
+  }
+}
 </script>
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is a standard guarantee period for sales recruiters?","acceptedAnswer":{"@type":"Answer","text":"In Top Echelon's 2019 survey of its recruiting-network members, 90 days was the most common guarantee length at 44.9 percent, and the length matters less than the terms. Ask whether the guarantee is a free replacement search or a refund, and get the conditions that void it in writing before you sign."}},
-{"@type":"Question","name":"Are 'best sales recruitment agency' lists trustworthy?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Most ranked lists of sales recruitment agencies are published by the agencies on them, and the publisher tends to rank itself first. Treat them as marketing, not research. You will learn more from a short set of checkable questions, about assessment method, guarantee terms, specialization, and references, than from any ranking you cannot audit."}},
-{"@type":"Question","name":"How do I know if a recruiter really specializes in sales?","acceptedAnswer":{"@type":"Answer","text":"Ask what share of their placements are sales and revenue roles. A true specialist fills those roles and little else, so the honest answer is most of them. If the agency also staffs finance, engineering, and operations, sales is one line of business among several, and the sales-specific judgment is spread thin."}},
-{"@type":"Question","name":"Should a sales recruiter use an assessment?","acceptedAnswer":{"@type":"Answer","text":"A sales-specific, validated assessment reads what interviews miss, because interviews reward the same skills selling rewards and reliably overrate strong presenters. Ask whether every candidate is assessed before you meet them, and with what instrument. A resume-and-interview process with no validated screen is guessing in a confident voice."}},
-{"@type":"Question","name":"How much should a sales recruitment agency cost?","acceptedAnswer":{"@type":"Answer","text":"Sales recruiters typically charge a percentage of first-year compensation, often in the range of 20 to 30 percent, or a flat fee for a defined search. The number matters less than the structure. Ask when the fee is earned and what happens to it if the hire does not last through the guarantee period."}}
-]}
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How do you evaluate a sales recruitment agency?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Evaluate the firm with the same eight questions you use for every other option, then score each answer from zero to two. Require evidence for assessment method, guarantee terms, specialization, search ownership, candidate bench, onboarding, fee structure, and lasting references. Ask the questions in one meeting, record the scores during the call, and total them that day."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What should you ask a sales recruiter before signing an agreement?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Ask what assessment instrument they use, what the guarantee covers, how much recent work involved sales roles, who will run the search, which candidates they already know, what happens after the hire starts, how the fee is earned, and whether they can introduce a client whose placement remains in role. Request the supporting artifact for every answer."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What does a sales recruiting agency need to show you in writing?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The firm should show an identity-removed assessment report, the guarantee clause, placement counts by role, the named search owner, a dated bench record, the onboarding plan, the fee and invoice clauses, and a client introduction with the placement's start date. Written evidence earns two points. A sound spoken answer earns one point until the document arrives."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How long should a sales recruiting guarantee last?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"90 days was the most common window at 44.9 percent in Top Echelon's 2019 survey of its recruiting-network members. The agreement also needs to state when the clock starts, which remedy applies, and what voids coverage. A longer window can carry narrow coverage, so read the start date and conditions beside the number of days."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How are sales recruitment fees structured?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Fees use contingency, container or engaged, and retained models. Contingency is due when a hire starts. Container search places a fixed fee up front and the balance on placement. Retained search is billed in stages regardless of outcome. Read the earning trigger, invoice schedule, calculation base, and guarantee together because those clauses determine who carries the search risk."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can a new recruiting firm be evaluated on the same criteria as an established one?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Apply the same document tests and record the age of the evidence. Revenue Bench opened in June 2026 and cannot yet score full marks for a reference to a placement that has remained in role for twelve months. We can offer a client introduction with the placement's start date. Use that same tenure test for every firm, including Revenue Bench."
+      }
+    }
+  ]
+}
 </script>
 
 <script>

@@ -5,3 +5,7 @@ node_modules/
 
 # Stray source asset (deploy/assets/steve.png is the used copy)
 steveswanston.png
+
+# QA probe output, never published
+_tmpgate/
+deploy/_tmpgate/
