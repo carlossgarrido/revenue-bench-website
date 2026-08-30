@@ -36,6 +36,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
+<style>
+  .table-scroll{overflow-x:auto;margin:10px 0 6px;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
+  .mandate-wrap{width:min(1280px,calc(100vw - 40px));margin-left:50%;transform:translateX(-50%);}
+  .datatable{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px;line-height:1.55;}
+  .datatable th,.datatable td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+  .datatable th:last-child,.datatable td:last-child{border-right:0;}
+  .datatable tbody tr:last-child td{border-bottom:0;}
+  .takeaways ol{list-style:none;counter-reset:s;display:grid;gap:10px;margin:0;padding:0;}
+  .takeaways ol li{counter-increment:s;position:relative;padding-left:34px;}
+  .takeaways ol li::before{content:counter(s);background:none;width:auto;height:auto;border-radius:0;top:-1px;left:0;position:absolute;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--gold-deep);font-size:18px;}
+  .takeaways > p{margin-top:14px;font-size:15.5px;line-height:1.55;color:var(--ink-mid);}
+  .datatable th[scope="row"]{background:var(--white);color:var(--navy);font-size:14px;font-weight:600;letter-spacing:0;text-transform:none;line-height:1.55;width:14%;}
+  .datatable th{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;}
+  .datatable td{color:var(--ink-mid);}
+  .datatable td:first-child{width:14%;font-weight:600;color:var(--navy);}
+  .datatable td:nth-child(2){width:22%;}
+  .datatable td:nth-child(3){width:25%;}
+  .datatable td:nth-child(4){width:19%;}
+  .datatable td:last-child{width:20%;color:var(--ink-soft);}
+  .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
+  .method h3{font-size:19px;margin-bottom:10px;}
+  .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
+  .method p:last-child{margin-bottom:0;}
+  @media(max-width:640px){.datatable td:nth-child(2){white-space:normal;}}
+
+  @media(max-width:1100px){
+    .mandate-wrap{width:auto;margin-left:0;transform:none;overflow-x:visible;}
+    #mandate-table{min-width:0;font-size:15px;border-radius:14px;}
+    #mandate-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #mandate-table tr{display:block;padding:16px 15px;border-bottom:1px solid var(--line);}
+    #mandate-table tr:last-child{border-bottom:0;}
+    #mandate-table td{display:block;width:auto!important;padding:0 0 10px;border-right:0;border-bottom:0;}
+    #mandate-table th[scope="row"]{display:block;width:auto;background:none;color:var(--navy);font-size:18px;font-weight:700;letter-spacing:0;text-transform:none;padding:0 0 12px;border-right:0;border-bottom:0;}
+    #mandate-table td:nth-child(2)::before{content:'The condition: ';color:var(--ink-soft);font-weight:400;}
+    #mandate-table td:nth-child(3)::before{content:'The evidence: ';color:var(--ink-soft);font-weight:400;}
+    #mandate-table td:nth-child(4)::before{content:'The first 90 days: ';color:var(--ink-soft);font-weight:400;}
+    #mandate-table td:nth-child(5)::before{content:'The mis-hire signature: ';color:var(--ink-soft);font-weight:400;}
+    #mandate-table td:last-child{padding-bottom:0;}
+  }
+</style>
 </head>
 <body>
 
@@ -57,8 +98,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>How to hire a VP of Sales or sales manager</span></div>
     <div class="eyebrow">Sales leadership</div>
     <h1>How to hire a VP of Sales or sales manager</h1>
-    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>9 min read</span></div>
-    <p class="deck"><strong>Do not default to promoting your top seller.</strong> The skills that make a great individual contributor, closing instinct and personal ownership of the deal, are not the skills that make a great manager: coaching, patience with underperformance, and the willingness to win through other people. Hiring a sales leader well means interviewing for evidence of developing people, watching for a short list of red flags, and defining how you will measure the first 90 days before the person starts.</p>
+    <div class="art-meta"><span>By Carlos Garrido &amp; Steve Swanston, Revenue Bench founders</span><span class="dot"></span><span>12 min read</span></div>
+    <p class="deck"><strong>Do not default to promoting your top seller.</strong> The skills that make a great individual contributor, closing instinct and personal ownership of the deal, are not the skills that make a great manager: coaching, patience with underperformance, and the willingness to win through other people. Hiring a sales leader well means interviewing for evidence of developing people, watching for a short list of red flags, and defining how you will measure the first 90 days before the person starts. It also settles which of four mandates the VP must carry, builder, scaler, fixer, or successor, before the search opens.</p>
   </div>
 </section>
 
@@ -68,6 +109,7 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
+        <li>Decide the mandate before the search opens: builder, scaler, fixer, or successor. Each calls for different evidence in selection and a different first 90 days.</li>
         <li>The top-rep promotion is the most common sales-leadership mistake. You can lose your best seller and gain a struggling manager in one move.</li>
         <li>Interview for evidence of developing people, not for war stories. Ask how they coached a specific rep, ran a one-on-one, and onboarded a new hire.</li>
         <li>Four red flags should stop a hire: no reps they can name developing, every win framed as their personal save, resistance to reference calls at final diligence, and manager-level job hopping.</li>
@@ -75,18 +117,80 @@
       </ul>
     </div>
 
+    <div class="takeaways">
+      <h2 id="settle">What to settle before the search opens</h2>
+      <ol>
+        <li><strong>The condition.</strong> Which of the four mandates the business is in, written down in a sentence.</li>
+        <li><strong>The mandate.</strong> What the leader is being hired to change in the first year, stated as an outcome rather than a set of responsibilities.</li>
+        <li><strong>The measure.</strong> The 30/60/90 scorecard, agreed at the offer stage rather than after the start date.</li>
+      </ol>
+      <p>A search that opens without these three produces a shortlist of strong sales leaders and no way to choose between them.</p>
+    </div>
+
     <div class="toc-inline">
       <h2 class="toc-title">In this guide</h2>
       <ol>
+        <li><a href="#settle">What to settle before the search opens</a></li>
+        <li><a href="#mandates">The four mandates, and how to tell which one you are hiring for</a></li>
         <li><a href="#promote">Why your top seller is not your next manager</a></li>
         <li><a href="#questions">Interview questions that reveal a real leader</a></li>
         <li><a href="#redflags">Four red flags that should stop a hire</a></li>
         <li><a href="#scorecard">Set a 30/60/90-day scorecard before day one</a></li>
         <li><a href="#references">Confirm the finalist with references</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
       </ol>
     </div>
 
     <div class="prose">
+      <div class="eyebrow" style="margin-top:44px;">Decision artifact</div>
+      <h2 id="mandates" style="margin-top:10px;">The four mandates, and how to tell which one you are hiring for</h2>
+      <p>This decision follows the choice of model. If the open question is still whether the role should be a VP of Sales, a CRO, or a fractional leader, start with the decision guide on <a href="choosing-a-sales-leadership-model.html">choosing the sales leadership model</a>, because some of the conditions below are better answered by a fractional leader or a player-coach than by a full-time VP. Once a full-time VP is the answer, start with the condition the business is in today. Then test each candidate for evidence that matches the required mandate and define the first 90 days around the same work.</p>
+
+      <div class="table-scroll mandate-wrap" role="region" aria-label="VP of Sales success profile by mandate" tabindex="0">
+        <table class="datatable" id="mandate-table">
+          <caption class="vh">The VP of Sales success profile, showing the condition, confirming evidence, first 90 days, and month-six mis-hire signature for four mandates</caption>
+          <thead>
+            <tr>
+              <th scope="col">The mandate</th>
+              <th scope="col">The condition that calls for it</th>
+              <th scope="col">The evidence that confirms the profile</th>
+              <th scope="col">The first 90 days</th>
+              <th scope="col">The mis-hire signature at month six</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">The builder</th>
+              <td>No repeatable process exists. Selling is founder-led or personality-led, every deal runs differently, the forecast is a guess, and there is no documented qualification standard.</td>
+              <td>Has written a sales process from nothing and got a team to run it, not inherited one. Ask for the artifacts they built: the qualification standard, the stage definitions, the first scorecard. A candidate who can only describe operating someone else's process has not built one, whatever the title said.</td>
+              <td>A documented process the team runs, a working forecast, and a qualification standard everyone applies the same way.</td>
+              <td>At month six there is a written process document and no adoption, or the leader has become the closer on every large deal by default because the process was never installed.</td>
+            </tr>
+            <tr>
+              <th scope="row">The scaler</th>
+              <td>The process works and produces predictable outcomes. The constraint is throughput: headcount, territory design, segmentation, or a second motion.</td>
+              <td>Has taken a working team from one size to a materially larger one and can describe what broke on the way, hiring pace, ramp times, span of control, and what they changed when it broke.</td>
+              <td>A hiring plan against a ramp model, territories or segments redrawn, and a management layer that does not route every decision through the leader.</td>
+              <td>At month six headcount is up and productivity per rep is down, because the leader added people to a system that was never redesigned to carry them.</td>
+            </tr>
+            <tr>
+              <th scope="row">The fixer</th>
+              <td>The team exists, the number is short, and the cause is not agreed. Attrition is elevated or performance is concentrated in one or two people.</td>
+              <td>Has diagnosed an underperforming team, named the cause with evidence rather than instinct, and carried out the consequences, including exits. Ask what they found, how they found it, and who they kept that everyone expected them to remove.</td>
+              <td>A documented read on every rep, expectations reset in writing, and the first performance decisions made rather than deferred.</td>
+              <td>At month six the whole team has turned over and the number has not moved, which means the leader replaced people instead of diagnosing the system they sat in.</td>
+            </tr>
+            <tr>
+              <th scope="row">The successor</th>
+              <td>The founder or CEO is still the best seller in the business and the top relationships sit with them. The risk sits in the handover rather than in the hire itself.</td>
+              <td>Has taken over a book or a function from a founder and can describe how the transfer of trust was staged with real customers. Ask what they did in the first 60 days that made the founder comfortable stepping back.</td>
+              <td>Named accounts transferred with the founder present and then absent, and a standing forum where the founder gives the leader the decision rather than taking it back.</td>
+              <td>At month six the founder is still in every important deal, and both parties describe the problem as the other one's behavior.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2 id="promote">Why your top seller is not your next manager</h2>
       <p>When a leadership role opens, the instinct is to reward the best rep with it. It feels fair, it is fast, and it looks like a safe bet. It is the most common mistake in sales leadership. The skills that make a great seller, personal closing instinct, competitiveness, and ownership of every deal, are not the skills that make a great manager. Management is coaching, patience with people who are still learning, the discipline to inspect a pipeline without taking it over, and the willingness to win through other people instead of yourself.</p>
       <p>Promote the wrong rep and you pay twice. You lose your best individual producer, the one whose number you were counting on, and you gain a frustrated manager who tries to close every deal for the team rather than build the team that closes them. The instinct to step in and save the deal, which made the person a great seller, is exactly what makes them a poor coach. Some top reps do become excellent leaders, but only the ones who want to develop people and show evidence of doing it. That evidence is what the interview is for. Strong sales managers are as scarce as the strong sellers mapped in <a href="the-6-percent-problem.html">the 6% problem</a>. Our co-founder's full analysis of the promotion decision, drawn from OMG's evaluation of 44,493 sales managers, is in <a href="should-you-promote-your-best-rep.html">should you promote your best rep into sales management</a>. And if the open question is what the role should be in the first place, a VP of Sales, a CRO, or a fractional leader, start with the decision guide on <a href="choosing-a-sales-leadership-model.html">choosing the sales leadership model</a>.</p>
@@ -129,6 +233,14 @@
       <h2 id="references">Confirm the finalist with references</h2>
       <p>References confirm or stop a leadership hire. Run the calls with the candidate's consent, off a list the candidate approves, and anchor them on one direct question: would you hire this person to lead a team again, and why. For a former rep, ask whether the person made them better and whether they would work for them again. The full consent sequence, the ten-question protocol, and what employers will and will not confirm are in <a href="reference-checks-for-sales-hires.html">reference-check questions for sales candidates</a>. Before the offer goes out, agree with the finalist what they will do if their current employer responds with a counteroffer, which is <a href="confidential-vp-of-sales-replacement.html#counteroffer">the counteroffer fork every senior search meets</a>.</p>
       <p>Put it together and hiring a sales leader stops being a gut call. You interview for evidence of developing people, you walk from the four red flags, you set a 30/60/90-day scorecard before day one, and you confirm with references that answer the only question that matters. This is the process Revenue Bench runs on every leadership search, and it is backed by <a href="how-to-assess-a-salesperson.html">assessment</a>, a coached ramp, and a replacement guarantee, so the risk of the hire sits with the firm that made it.</p>
+
+      <h2 id="method">Methodology and sources</h2>
+      <div class="method">
+        <h3>About the framework and the figures</h3>
+        <p>The four-mandate model is Revenue Bench's own framework, drawn from its search practice. It is not published research, and no statistic is attached to it. It is offered as a way to decide, and a reader should test it against their own situation.</p>
+        <p>The OMG figures cited elsewhere on the page are Objective Management Group's data. Revenue Bench works with that assessment through Swanston Growth Advisors, a Certified Partner of Objective Management Group, founded by Revenue Bench co-founder Steve Swanston.</p>
+        <p>The four mandates are not exclusive. A real business can sit between two, and naming them forces the choice into the open before candidates are seen while recognizing that the choice is not always clean.</p>
+      </div>
     </div>
 
     <div style="margin-top:48px;">
@@ -138,6 +250,8 @@
       <div class="faq-item"><h3>What should I ask when interviewing a VP of Sales?</h3><p>Ask for specifics about developing people, not war stories. Have them walk you through coaching a rep out of a slump, running a weekly one-on-one, onboarding a new account executive, and handling a quota-hitter who hurts the culture. Then ask what they dislike about managing and how they would measure their own first 90 days.</p></div>
       <div class="faq-item"><h3>What are the red flags when hiring a sales leader?</h3><p>Four stand out: the candidate cannot name reps they developed, they frame every win as their personal save, they resist providing references at final diligence, and they show a pattern of short manager-level stints. One warrants a hard look. Two together is usually a decline.</p></div>
       <div class="faq-item"><h3>How do I measure a new sales manager's first 90 days?</h3><p>Set a scorecard before day one. By day 30 they should know every rep, the pipeline, and the process. By day 60 they should have assessed each rep and reset expectations. By day 90 they should own the forecast and have lifted at least one rep through coaching rather than by closing the deal themselves.</p></div>
+      <div class="faq-item"><h3>What kind of VP of Sales do I need?</h3><p>Four mandates cover most situations. A builder, when no repeatable process exists. A scaler, when the process works and the constraint is throughput. A fixer, when the team is in place and the number is short. A successor, when the founder is still the best seller and the handover is the risk. Decide which condition the business is in before the first candidate is seen, because each mandate calls for different evidence in selection and a different first 90 days.</p></div>
+      <div class="faq-item"><h3>What should be written down before a sales leader search starts?</h3><p>Three things. The condition the business is in, stated in a sentence. The mandate, stated as what the leader is being hired to change in the first year rather than as a list of responsibilities. And the 30/60/90 scorecard, agreed at the offer stage rather than after the start date. A search that opens without these produces a shortlist of strong sales leaders and no way to choose between them.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -159,7 +273,7 @@
     <div class="eyebrow">Hire the right leader</div>
     <div class="rule"></div>
     <h2 style="color:#fff;font-size:clamp(30px,4vw,44px);">A weak sales leader caps the whole team. Hire one who builds it.</h2>
-    <p class="lead" style="margin:16px auto 28px;">We assess every leadership candidate objectively, interview for evidence of developing people, and coach the hire through the first 90 days. If it is not working, we run the search again at no additional fee.</p>
+    <p class="lead" style="margin:16px auto 28px;">We assess every leadership candidate objectively, interview for evidence of developing people, and coach the hire through the first 90 days. If the hire is not working within 90 days of their start date, we run the search again at no additional fee. One free re-run, the client's call.</p>
     <a href="../contact.html" class="btn btn-gold">Find your next hire <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -187,14 +301,16 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Hire a VP of Sales or Sales Manager","description":"Why promoting your top seller backfires, the interview questions that reveal a real manager, the four red flags to walk from, the 30/60/90-day scorecard, and a reference-check protocol.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-25","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/how-to-hire-a-vp-of-sales"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How to Hire a VP of Sales or Sales Manager","description":"The four-mandate VP of Sales success profile, builder, scaler, fixer, and successor, with the evidence that confirms each in selection. Why promoting your top seller backfires, the interview questions that reveal a real manager, the four red flags to walk from, the 30/60/90-day scorecard, and a reference-check protocol.","author":[{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group."}],"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/how-to-hire-a-vp-of-sales"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Should I promote my top rep to sales manager?","acceptedAnswer":{"@type":"Answer","text":"Not by default. The skills that make a great seller are not the skills that make a great manager, so promoting the wrong rep can cost you your best producer and hand you a struggling leader. Promote only if the person shows real evidence of coaching and developing others, and define a 30/60/90-day scorecard before they start."}},
 {"@type":"Question","name":"What should I ask when interviewing a VP of Sales?","acceptedAnswer":{"@type":"Answer","text":"Ask for specifics about developing people, not war stories. Have them walk you through coaching a rep out of a slump, running a weekly one-on-one, onboarding a new account executive, and handling a quota-hitter who hurts the culture. Then ask what they dislike about managing and how they would measure their own first 90 days."}},
 {"@type":"Question","name":"What are the red flags when hiring a sales leader?","acceptedAnswer":{"@type":"Answer","text":"Four stand out: the candidate cannot name reps they developed, they frame every win as their personal save, they resist providing references at final diligence, and they show a pattern of short manager-level stints. One warrants a hard look. Two together is usually a decline."}},
-{"@type":"Question","name":"How do I measure a new sales manager's first 90 days?","acceptedAnswer":{"@type":"Answer","text":"Set a scorecard before day one. By day 30 they should know every rep, the pipeline, and the process. By day 60 they should have assessed each rep and reset expectations. By day 90 they should own the forecast and have lifted at least one rep through coaching rather than by closing the deal themselves."}}
+{"@type":"Question","name":"How do I measure a new sales manager's first 90 days?","acceptedAnswer":{"@type":"Answer","text":"Set a scorecard before day one. By day 30 they should know every rep, the pipeline, and the process. By day 60 they should have assessed each rep and reset expectations. By day 90 they should own the forecast and have lifted at least one rep through coaching rather than by closing the deal themselves."}},
+{"@type":"Question","name":"What kind of VP of Sales do I need?","acceptedAnswer":{"@type":"Answer","text":"Four mandates cover most situations. A builder, when no repeatable process exists. A scaler, when the process works and the constraint is throughput. A fixer, when the team is in place and the number is short. A successor, when the founder is still the best seller and the handover is the risk. Decide which condition the business is in before the first candidate is seen, because each mandate calls for different evidence in selection and a different first 90 days."}},
+{"@type":"Question","name":"What should be written down before a sales leader search starts?","acceptedAnswer":{"@type":"Answer","text":"Three things. The condition the business is in, stated in a sentence. The mandate, stated as what the leader is being hired to change in the first year rather than as a list of responsibilities. And the 30/60/90 scorecard, agreed at the offer stage rather than after the start date. A search that opens without these produces a shortlist of strong sales leaders and no way to choose between them."}}
 ]}
 </script>
 
