@@ -19,16 +19,16 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<title>How to Evaluate a Sales Recruitment Agency | Revenue Bench</title>
-<meta name="description" content="Use a scored eight-criterion scorecard to compare sales recruitment agencies by assessment, guarantee, specialization, search owner, fee, and references." />
+<title>How to Evaluate a Sales Recruitment Agency for the Role You Are Filling | Revenue Bench</title>
+<meta name="description" content="Use two scored instruments to test agency process and role fit for SDR, AE, and VP of Sales searches, with proof required for every answer." />
 <link rel="canonical" href="https://revenuebench.io/guides/how-to-evaluate-a-sales-recruitment-agency" />
-<meta property="og:title" content="How to Evaluate a Sales Recruitment Agency" />
-<meta property="og:description" content="Score competing sales recruitment agencies on eight criteria, with a document test for every answer." />
+<meta property="og:title" content="How to Evaluate a Sales Recruitment Agency for the Role You Are Filling" />
+<meta property="og:description" content="Score agency process and search fit, then use the role-band table for SDR, AE, sales engineer, manager, and CRO hiring." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/how-to-evaluate-a-sales-recruitment-agency.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="How to Evaluate a Sales Recruitment Agency | Revenue Bench">
+  <meta property="og:image:alt" content="How to Evaluate a Sales Recruitment Agency for the Role You Are Filling | Revenue Bench">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://revenuebench.io/og/how-to-evaluate-a-sales-recruitment-agency.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -73,6 +73,27 @@
   #fee-table th:nth-child(2),#fee-table td:nth-child(2){width:28%;}
   #fee-table th:nth-child(3),#fee-table td:nth-child(3){width:28%;}
   #fee-table th:nth-child(4),#fee-table td:nth-child(4){width:28%;}
+  #fit-table{min-width:710px;}
+  #fit-table th:first-child,#fit-table tbody th{width:18%;}
+  #fit-table th:nth-child(2),#fit-table td:nth-child(2){width:30%;}
+  #fit-table th:nth-child(3),#fit-table td:nth-child(3){width:43%;}
+  #fit-table th:last-child,#fit-table td.scorecell{width:9%;text-align:center;background:var(--white);}
+  #band-table{min-width:1040px;}
+  #band-table th:first-child,#band-table tbody th{width:13%;}
+  #band-table th:nth-child(2),#band-table td:nth-child(2){width:21%;}
+  #band-table th:nth-child(3),#band-table td:nth-child(3){width:25%;}
+  #band-table th:nth-child(4),#band-table td:nth-child(4){width:18%;}
+  #band-table th:nth-child(5),#band-table td:nth-child(5){width:23%;}
+  @media print{
+    #fit-table,#band-table{min-width:0!important;table-layout:fixed;}
+    #fit-table th:first-child,#fit-table tbody th,#band-table th:first-child,#band-table tbody th{position:static;box-shadow:none;}
+  }
+  @media(max-width:760px){
+    #fit-table{min-width:710px;}
+    #band-table{min-width:1040px;}
+    #fit-table th:first-child,#fit-table tbody th,#band-table th:first-child,#band-table tbody th{position:sticky;left:0;z-index:1;background:var(--white);box-shadow:1px 0 0 var(--line-soft);}
+    #fit-table thead th:first-child,#band-table thead th:first-child{z-index:2;}
+  }
   .score-bands{margin:8px 0 26px;padding-left:22px;}
   .score-bands li{margin-bottom:10px;padding-left:5px;}
   .disqualifier{background:var(--parchment);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:18px 20px;margin:12px 0;}
@@ -128,11 +149,11 @@
 
 <section class="art-hero bg-cream">
   <div class="container" style="max-width:820px;">
-    <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>How to evaluate a sales recruitment agency</span></div>
+    <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>How to evaluate a sales recruitment agency for the role you are filling</span></div>
     <div class="eyebrow">Buyer's guide &middot; Evaluation criteria</div>
-    <h1>How to Evaluate a Sales Recruitment Agency</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>25 min read</span></div>
-    <p class="deck"><strong>This page gives you a scored instrument for choosing among sales recruitment agencies.</strong> Its eight criteria cover assessment method, guarantee terms, sales specialization, the person running the search, the candidate bench, support after the hire starts, fee structure, and references from placements that lasted. Every row requires a document, clause, or other artifact you can inspect before signing.</p>
+    <h1>How to Evaluate a Sales Recruitment Agency for the Role You Are Filling</h1>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>35 min read</span></div>
+    <p class="deck"><strong>Two scored instruments evaluate a sales recruitment agency.</strong> Eight criteria test whether a firm can evidence its process: assessment method, guarantee terms, sales specialization, who does the work, bench or cold start, what runs after the hire starts, fee structure, and references that lasted. Four fit questions then ask whether that process suits the search you are running, across role band, buyer and vertical, market and pool, and mechanism. Every row requires the named document, record, clause, or other artifact before it earns two points.</p>
   </div>
 </section>
 
@@ -147,6 +168,19 @@
         <li>The guarantee and fee belong together because the fee clause states when the money is earned, and the guarantee clause governs what that money is worth if the hire leaves.</li>
         <li>Two answers disqualify a firm despite a high total: a guarantee that ordinary employer-controlled changes can void, or an engagement letter that leaves the search owner unnamed.</li>
         <li>Revenue Bench applies this scorecard to itself. The firm opened in June 2026 and cannot yet earn full marks for a reference to a placement that has remained in role for twelve months.</li>
+        <li>Read the process scorecard and fit test separately. Never add them together, because whether the process is documented and whether it fits this search are different findings, and a combined total hides the one that failed.</li>
+        <li>A firm's record at the role band you are filling is a different question from its record in sales. Ask for a recent placement count at that band.</li>
+      </ul>
+    </div>
+
+    <div class="takeaways">
+      <h2>Evaluating a single firm</h2>
+      <p>When one named firm is in front of you, run the eight criteria on that firm, then run the four fit questions against the specific role. Read the two results separately, because evidence of a process does not establish fit for the search.</p>
+      <ul>
+        <li>Ask for a placement count at the role band you are filling.</li>
+        <li>Ask which recent placements sold to a buyer like yours.</li>
+        <li>Ask where the candidate pool sits and what recent work supports that market claim.</li>
+        <li>Ask for the proposed search mechanism and the reason it fits.</li>
       </ul>
     </div>
 
@@ -155,6 +189,8 @@
       <ol>
         <li><a href="#scorecard">The eight-criterion scorecard</a></li>
         <li><a href="#dodges">The answers that sound right and score zero</a></li>
+        <li><a href="#fit">The four-question fit test for a specific search</a></li>
+        <li><a href="#bands">What each sales role band requires</a></li>
         <li><a href="#rigor">Why the scorecard goes in front of the decision</a></li>
         <li><a href="#assess">What to ask about assessment method</a></li>
         <li><a href="#guarantee">The guarantee, and the four terms that decide coverage</a></li>
@@ -344,6 +380,136 @@
         </table>
       </div>
 
+      <h2 id="fit">The four-question fit test for a specific search</h2>
+      <p>A firm can score 16 out of 16 on the process scorecard and still be wrong for the search in front of you. Documents establish what the firm does and what it has committed to deliver, while fit depends on whether its recent work and proposed mechanism match this role.</p>
+      <p>Score each fit row by the same document rule. Two points if they show you the document. One point if the answer is right and nothing is in writing. Zero if the answer is vague or the firm offers nothing to inspect.</p>
+      <p>Read the two instruments separately and never add their totals together. The two totals measure different things, and combining them hides which one failed. The specialization row and the role-band row can be answered from the same placement record, read once for the share that was sales and again for the count at your band.</p>
+
+      <div class="tablewrap">
+        <table class="datatable" id="fit-table">
+          <thead>
+            <tr>
+              <th scope="col">The fit question</th>
+              <th scope="col">Ask this</th>
+              <th scope="col">What proves the answer</th>
+              <th scope="col">Your score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Role band</th>
+              <td>How many of your placements in the last twelve months were at the band I am filling?</td>
+              <td>A written count of placements completed in the last twelve months, separated by band, with role titles and completion dates. The count for the band you are filling must be visible.</td>
+              <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Buyer and vertical</th>
+              <td>Which of your recent placements sold into a buyer like mine, and what did they sell?</td>
+              <td>A written recent-placement record naming the role, buyer type, what the candidate sold, and the placement completion date. Client identities may remain private.</td>
+              <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Market and pool</th>
+              <td>Where does the candidate pool for this role sit, and what recent work have you done in that market?</td>
+              <td>A written market map locating the target pool, plus a count of recent placements in that market with the role, sourcing channel, and completion date.</td>
+              <td class="scorecell">&nbsp;</td>
+            </tr>
+            <tr>
+              <th scope="row">Mechanism</th>
+              <td>Which search mechanism will you run for this role, and why that one?</td>
+              <td>The engagement letter naming contingency, container or engaged, or retained search; why the mechanism fits the role; whether the search is exclusive; and the event that earns the fee.</td>
+              <td class="scorecell">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>The fit total, out of 8</h3>
+      <ul class="score-bands">
+        <li><strong>7 to 8:</strong> the firm has documented fit across all four fit questions. Resolve any missing artifact before treating the fit as established.</li>
+        <li><strong>4 to 6:</strong> part of the fit is evidenced and part remains a spoken answer. Identify which unresolved dimension could change the sourcing plan or candidate pool.</li>
+        <li><strong>0 to 3:</strong> the specific fit has little written support. A general record in sales cannot supply the missing evidence for this role, buyer, market, and mechanism.</li>
+      </ul>
+
+      <div class="disqualifier">
+        <p><strong>The firm will not separate its record by band, buyer, or market.</strong> The same general answer to all four questions leaves you unable to check where its relevant placements sit, which buyers they served, where the pool was found, or why the proposed mechanism fits this search.</p>
+      </div>
+
+      <h3>Why role band belongs in the test</h3>
+      <p>Clockwork Recruiting's Executive Search Performance Benchmark Report, published in October 2018, covered 23,970 anonymized search projects run January 2015 to August 2018 and filtered to retained projects only. The data came from Clockwork's own customer base, search firms using its applicant tracking system, rather than a random industry sample.</p>
+      <p>For the January 2015 to August 2018 projects, the average placement rate was 71%, with outcomes of 71% placed, 22% cancelled, and 6% internal hire. Average days to placement was 123. The placement rate was 60% at the least senior band against 78% for C-level searches. Among the public industry data used here, this is the only dataset with a stated sample, period, and inclusion criteria that shows outcome rates differing by seniority band. The report publishes no sales-specific figure, so no sales placement rate can be drawn from it.</p>
+
+      <p>The fit test assumes that the band being hired is already the right one for the business. Carlos Garrido's Scaling Revenue Model maps which sales roles a company needs at each stage of its growth, moving from founders selling, to a first repeatable team, to managers, to a leadership layer. Which band to fill follows from where the company sits, and a vacancy is a weaker signal than the stage is, because the constraint on growth is who leads and which systems exist rather than the number of sellers.</p>
+
+      <h2 id="bands">What each sales role band requires</h2>
+      <p>Role titles do not create interchangeable candidate pools. Each band changes where candidates come from, which evidence belongs in selection, which search mechanism fits, and what a specialization claim must document.</p>
+      <p>At every band, a sales-specific assessment contributes structured, comparable findings tied to sales work. That comparison is between candidates the assessment recommended and candidates it advised against, so it describes how selection was made rather than a measured effect on any hire.</p>
+
+      <div class="tablewrap">
+        <table class="datatable" id="band-table">
+          <thead>
+            <tr>
+              <th scope="col">The band</th>
+              <th scope="col">Where the candidates come from</th>
+              <th scope="col">What the sales assessment settles, and what it leaves open</th>
+              <th scope="col">The search mechanism that usually fits</th>
+              <th scope="col">Required evidence of sales specialization</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">SDR and BDR</th>
+              <td>Applicants arrive in volume at this band, alongside referrals and candidates reachable by outbound sourcing, most of them early in a selling career. Sourcing must screen volume for evidence of prospecting interest, learning pace, and comfort with repetition.</td>
+              <td>For an SDR or BDR search, the assessment covers the candidate's fit for outbound prospecting. Product learning, response to coaching, and willingness to sustain the required activity cadence remain for structured interviews and references.</td>
+              <td>Contingency usually fits a defined individual-contributor search with a broad pool. Container or engaged search fits when the employer wants one firm to screen that volume against a tighter profile.</td>
+              <td>A twelve-month placement count separated into SDR and BDR roles, with every entry labeled inbound, outbound, or mixed and dated by completion.</td>
+            </tr>
+            <tr>
+              <th scope="row">Account executive, mid-market</th>
+              <td>Most credible candidates are currently employed and matched on deal size, sales cycle, channel, and buyer experience. Sourcing starts from adjacent companies and verified selling motions rather than the title alone.</td>
+              <td>For a mid-market account executive, the assessment covers qualifying, consultative selling, and comfort discussing money. Quota history, ownership of prior deals, and command of the target buyer remain for structured interviews, a work sample, and references.</td>
+              <td>Contingency can fit an accessible pool and a standard brief. Container or engaged search fits when the assignment requires exclusive market mapping and a calibrated shortlist.</td>
+              <td>A written ledger separating mid-market account executive placements from other sellers, with the buyer, typical deal range, sales motion, and completion date recorded for each.</td>
+            </tr>
+            <tr>
+              <th scope="row">Enterprise seller and sales engineer</th>
+              <td>Supply narrows sharply here, and candidates are identified individually and approached through accounts with comparable product complexity, technical buyers, and long sales cycles. Enterprise sellers and sales engineers require different maps because their commercial and technical responsibilities differ.</td>
+              <td>In an enterprise seller or sales engineer search, the assessment covers the selling side only. Technical depth, architecture judgment, and seller-engineer collaboration remain for a technical work sample, panel interview, and references.</td>
+              <td>The engaged model buys the market mapping this band needs, because the shortlist has to be built rather than filtered. A retainer is worth it when the search must also stay confidential.</td>
+              <td>A placement record that separates enterprise sellers from sales engineers and records the buyer, product complexity, selling motion, sourcing origin, and completion date for each relevant placement.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sales manager</th>
+              <td>Both current managers and individual contributors ready for management belong in scope, and neither title establishes fit. Sourcing must match management span, selling motion, company stage, and whether the role is a player-coach or a full-time leader.</td>
+              <td>For a management candidate, the assessment reads the leadership profile rather than giving credit for title or individual production. The quality of prior coaching, forecast judgment, hiring decisions, and seller development remains for management cases and references.</td>
+              <td>Paying for calibration is the point at this band, since the first shortlist is where the employer learns what the role needs to be. A retainer follows when the incumbent is still in the role.</td>
+              <td>A placement count separated into sales-manager roles, with the management span, player-coach status, team mandate, selling motion, and completion date attached to every entry.</td>
+            </tr>
+            <tr>
+              <th scope="row">VP of Sales and CRO</th>
+              <td>Few credible candidates exist for a given company stage and mandate, most of them currently employed and reachable only one at a time. Sourcing requires confidential mapping across leaders who have operated at a comparable company stage, revenue mandate, and executive scope.</td>
+              <td>At VP of Sales and CRO level, the assessment reads the leadership profile and nothing above it. Board alignment, the operating plan, capital judgment, and performance through organizational change remain for executive cases and direct references.</td>
+              <td>Retained search usually fits because the pool is narrow, the work is senior, and confidentiality or succession risk may shape the outreach.</td>
+              <td>A recent executive-placement record separating VP of Sales from CRO searches, with company stage, mandate, buyer, selling motion, completion date, and a reference introduction recorded for each.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">This table is Revenue Bench's own operating description rather than a validated instrument or an industry study. The only external figures associated with it are the figures named in the methodology section.</p>
+
+      <h3>Vertical, buyer, and market</h3>
+      <p>Score a vertical claim, a buyer claim, and a city claim with the same kind of artifact used for a band claim: a written count of recent placements, with each record described by role, what the candidate sold, the buyer served, the market where the candidate pool sat, and the completion date. A broad category label does not identify which part of the claimed experience matches the search.</p>
+      <p>National reach is a claim about where the firm can recruit. Having relationships and market knowledge in one market is a separate claim, and a search can need either. The fit question asks where this candidate pool sits and what recent work supports the firm's answer in that market.</p>
+
+      <h3>How Revenue Bench answers the four fit questions</h3>
+      <p>The four rows test fit for a specific search, so no firm's website, including Revenue Bench's, can award a score on any of them.</p>
+      <ol class="self-score">
+        <li><strong>Role band.</strong> Revenue Bench fills sales and revenue roles only: sellers, sales leaders, revenue operations, and enablement. For a specific search, it will provide a written placement count separated by band, with role titles and completion dates. The firm opened in June 2026, so that count cannot yet cover twelve months.</li>
+        <li><strong>Buyer and vertical.</strong> Revenue Bench publishes that it fills sales and revenue roles only, which does not establish experience with any buyer or vertical. For the search, it will provide a written record identifying any relevant placement by role, buyer type, what the candidate sold, and completion date, or state that no such record exists.</li>
+        <li><strong>Market and pool.</strong> Revenue Bench recruits across the United States, is based in South Florida, works nationally rather than regionally, and maintains a bench of assessed sellers. For the search, it will provide a written market map locating the target pool and a written count of any recent placements in that market, with role, sourcing channel, and completion date. National reach and an assessed bench do not establish recent work in the market where a particular pool sits.</li>
+        <li><strong>Mechanism.</strong> Revenue Bench runs senior and confidential assignments as engaged, retained-style searches, while individual-contributor roles can run on contingency. The founders do the sourcing and screening, and the founder running the search is named in the engagement letter. For the specific search, that letter will name the selected mechanism, explain why it fits the role, state whether the search is exclusive, identify the event that earns the fee, and name the founder responsible. Until the letter records those terms for the role, the published operating choices do not establish search-specific fit.</li>
+      </ol>
+
       <h2 id="rigor">Why the scorecard goes in front of the decision</h2>
       <p>Carlos Garrido, the author of this page and a sales trainer, teaches sales teams: "The sale is forged in emotion. But it then has to survive the intellectual rigors of their buying process."</p>
       <p>He also teaches: "Post-rationalization is the path all buyers follow." That line describes the employer choosing among recruiting firms after several good conversations. It describes the Revenue Bench sale with equal force.</p>
@@ -373,7 +539,7 @@
           <tbody>
             <tr>
               <th scope="row">The window</th>
-              <td>90 days is the most common at 44.9% of firms in Top Echelon's 2019 survey of its recruiting-network members. 30 days is 20.3% and 60 days is 20.0%.</td>
+              <td>The most common window is 90 days, at 44.9% of firms in Top Echelon's 2019 survey of its recruiting-network members. 30 days is 20.3% and 60 days is 20.0%.</td>
               <td>90 days.</td>
               <td>Take the number of days from the agreement rather than the marketing page.</td>
             </tr>
@@ -509,13 +675,13 @@
       </ol>
 
       <h2 id="numbers">What the evidence says about method</h2>
-      <p>OMG's own 2024 validation survey reports that 72% of the candidates Objective Management Group recommended reached the top half of their sales team within 12 months. The same data reports that 100% of candidates OMG advised against, who were hired anyway, landed in the bottom half.</p>
+      <p>OMG's own 2024 validation survey reports that 72% of the candidates Objective Management Group recommended reached the top half of their sales force within 12 months. The same data reports that 100% of candidates OMG advised against, who were hired anyway, landed in the bottom half.</p>
       <p>OMG's own 2024 validation survey also reports first-year turnover of 9% for recommended hires against 33% for not-recommended hires. These are OMG's published outcomes and should be read with that source ownership in view.</p>
 
       <div class="stat-strip">
         <div class="stat-cell">
           <div class="num">72%</div>
-          <div class="lab">of candidates OMG recommended reached the top half of their sales team within 12 months, according to OMG's own 2024 validation survey.</div>
+          <div class="lab">of candidates OMG recommended reached the top half of their sales force within 12 months, according to OMG's own 2024 validation survey.</div>
         </div>
         <div class="stat-cell">
           <div class="num">9% / 33%</div>
@@ -556,11 +722,12 @@
       <div class="method">
         <h3>How to read these figures</h3>
         <p>The score bands and the two disqualifiers are a decision aid published by Revenue Bench rather than a validated instrument. They organize a buying decision around documents and commitments. No outcome study established the cutoffs or tested the score against placement performance.</p>
-        <p>The assessment figures are OMG's own data, from its 2024 validation survey. Objective Management Group reports that 72% of recommended candidates reached the top half of their sales team within 12 months, 100% of candidates advised against who were hired anyway reached the bottom half, and first-year turnover was 9% for recommended hires against 33% for not-recommended hires. The figures are source-owned validation results.</p>
+        <p>The assessment figures are OMG's own data, from its 2024 validation survey. Objective Management Group reports that 72% of recommended candidates reached the top half of their sales force within 12 months, 100% of candidates advised against who were hired anyway reached the bottom half, and first-year turnover was 9% for recommended hires against 33% for not-recommended hires. The figures are source-owned validation results.</p>
         <p>The guarantee distribution comes from Top Echelon's 2019 survey of its recruiting-network members. The survey reports 90 days at 44.9%, 30 days at 20.3%, and 60 days at 20.0%. It reports replacement with no money back at 61.4%, a prorated refund at 17.6%, a full refund at 8.4%, and other remedies at 10.9%. It also reports that 95.9% offered a guarantee of some kind and 4.1% offered none.</p>
         <p>Top Echelon published the survey in 2019. Its respondents were members of its recruiting network with an average tenure of about 15 years, and corporate recruiters were excluded. We have found no survey of recruitment guarantee lengths or terms published since that one, so it is the only public distribution we can point to, and it is seven years old.</p>
         <p>The direct-hire fee figures come from Staffing Industry Analysts, from its North America Staffing Company Survey 2021. The most common fee was 20% of salary, reported by 42% of staffing firms, and 20% was the median across all segments. Reported segment midranges were 15% to 20% for commercial staffing, 18% to 22% for professional staffing, and 20% to 25% for direct-hire firms.</p>
         <p>The retained executive-search description comes from Korn Ferry's annual report for the fiscal year ended April 2025 and Heidrick and Struggles' annual report for the year ended December 2024. Both describe the standard structure as approximately one third of estimated first-year compensation plus a percentage for engagement expenses. The figure applies to executive search and cannot serve as a rate for a mid-market account-executive search.</p>
+        <p>Clockwork Recruiting's Executive Search Performance Benchmark Report, published in October 2018, covers 23,970 anonymized search projects run January 2015 to August 2018 and filtered to retained projects only. Across that period, outcomes were 71% placed, 22% cancelled, and 6% internal hire; the average placement rate was 71%, average days to placement was 123, and the placement rate was 60% at the least senior band against 78% for C-level searches. The data comes from Clockwork's own customer base, search firms using its applicant tracking system, rather than a random industry sample. The report supplies no sales-specific figure, so it cannot support a sales placement rate.</p>
         <p>No independent research organization publishes a pricing benchmark for container or engaged search. The page therefore describes the mechanism and gives no percentage for that model. Every source cited above appears with its producer, sample and period in the <a href="../sources.html">provenance index</a>.</p>
         <p>Revenue Bench's guarantee, fee, and onboarding terms apply under the standard agreement as of July 2026. The OMG assessment work for Revenue Bench placements runs through co-founder Steve Swanston's OMG Certified Partner firm, Swanston Growth Advisors. Revenue Bench itself holds no listing as an OMG Certified Partner.</p>
       </div>
@@ -596,7 +763,7 @@
 
       <div class="faq-item">
         <h3>How long should a sales recruiting guarantee last?</h3>
-        <p>90 days was the most common window at 44.9% in Top Echelon's 2019 survey of its recruiting-network members. The agreement also needs to state when the clock starts, which remedy applies, and what voids coverage. A longer window can carry narrow coverage, so read the start date and conditions beside the number of days.</p>
+        <p>The most common window was 90 days, at 44.9% in Top Echelon's 2019 survey of its recruiting-network members. The agreement also needs to state when the clock starts, which remedy applies, and what voids coverage. A longer window can carry narrow coverage, so read the start date and conditions beside the number of days.</p>
       </div>
 
       <div class="faq-item">
@@ -607,6 +774,16 @@
       <div class="faq-item">
         <h3>Can a new recruiting firm be evaluated on the same criteria as an established one?</h3>
         <p>Yes. Apply the same document tests and record the age of the evidence. Revenue Bench opened in June 2026 and cannot yet score full marks for a reference to a placement that has remained in role for twelve months. We can offer a client introduction with the placement's start date. Use that same tenure test for every firm, including Revenue Bench.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do you evaluate a sales recruitment agency for SDR, AE, or sales engineer roles?</h3>
+        <p>Evaluate the agency twice: first on the eight process criteria, then on the four-question fit test. For the fit test, request recent placement counts at the role band, examples involving a buyer like yours, evidence of work in the market where the candidate pool sits, and a written reason for the proposed search mechanism. Read the two scores separately. A documented process does not establish fit for an SDR, AE, or sales engineer search.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does a sales recruitment agency need experience in my industry or my city?</h3>
+        <p>Experience in the relevant industry or city matters when it changes access to the buyer, candidate pool, or search plan. Score the claim with a written count of recent placements, each described by role, buyer, what the candidate sold, and the market where the pool sat. National reach and roots in one market are different claims, and either can fit. The evidence should connect the claimed experience to the specific search rather than a broad label.</p>
       </div>
     </div>
 
@@ -662,8 +839,8 @@
 {
   "@context":"https://schema.org",
   "@type":"Article",
-  "headline":"How to Evaluate a Sales Recruitment Agency",
-  "description":"A scored eight-criterion instrument for evaluating sales recruitment agencies through assessment method, guarantee terms, specialization, search ownership, candidate bench, onboarding, fee structure, and lasting references.",
+  "headline":"How to Evaluate a Sales Recruitment Agency for the Role You Are Filling",
+  "description":"A scored process-evidence scorecard, a separate four-question fit test, and a role-band table for evaluating a sales recruitment agency.",
   "author":{
     "@type":"Person",
     "name":"Carlos Garrido",
@@ -680,7 +857,7 @@
     "url":"https://revenuebench.io"
   },
   "datePublished":"2026-07-14",
-  "dateModified":"2026-08-29",
+  "dateModified":"2026-09-03",
   "mainEntityOfPage":{
     "@type":"WebPage",
     "@id":"https://revenuebench.io/guides/how-to-evaluate-a-sales-recruitment-agency"
@@ -722,7 +899,7 @@
       "name":"How long should a sales recruiting guarantee last?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"90 days was the most common window at 44.9% in Top Echelon's 2019 survey of its recruiting-network members. The agreement also needs to state when the clock starts, which remedy applies, and what voids coverage. A longer window can carry narrow coverage, so read the start date and conditions beside the number of days."
+        "text":"The most common window was 90 days, at 44.9% in Top Echelon's 2019 survey of its recruiting-network members. The agreement also needs to state when the clock starts, which remedy applies, and what voids coverage. A longer window can carry narrow coverage, so read the start date and conditions beside the number of days."
       }
     },
     {
@@ -739,6 +916,22 @@
       "acceptedAnswer":{
         "@type":"Answer",
         "text":"Yes. Apply the same document tests and record the age of the evidence. Revenue Bench opened in June 2026 and cannot yet score full marks for a reference to a placement that has remained in role for twelve months. We can offer a client introduction with the placement's start date. Use that same tenure test for every firm, including Revenue Bench."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do you evaluate a sales recruitment agency for SDR, AE, or sales engineer roles?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Evaluate the agency twice: first on the eight process criteria, then on the four-question fit test. For the fit test, request recent placement counts at the role band, examples involving a buyer like yours, evidence of work in the market where the candidate pool sits, and a written reason for the proposed search mechanism. Read the two scores separately. A documented process does not establish fit for an SDR, AE, or sales engineer search."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does a sales recruitment agency need experience in my industry or my city?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Experience in the relevant industry or city matters when it changes access to the buyer, candidate pool, or search plan. Score the claim with a written count of recent placements, each described by role, buyer, what the candidate sold, and the market where the pool sat. National reach and roots in one market are different claims, and either can fit. The evidence should connect the claimed experience to the specific search rather than a broad label."
       }
     }
   ]
