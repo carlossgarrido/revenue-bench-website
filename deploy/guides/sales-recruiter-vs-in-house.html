@@ -37,19 +37,17 @@
 <link href="../assets/site.css" rel="stylesheet" />
 <link href="../assets/article.css" rel="stylesheet" />
 <style>
-.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1140px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;}
-.decision-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px;line-height:1.55;}
-.decision-table th,.decision-table td{text-align:left;vertical-align:top;padding:16px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
-.decision-table th:last-child,.decision-table td:last-child{border-right:0;}
-.decision-table tbody tr:last-child td{border-bottom:0;}
-.decision-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
-.decision-table td{color:var(--ink-mid);}
-.decision-table td:first-child{font-weight:600;color:var(--navy);}
-.conditions-table{min-width:980px;}
-.conditions-table td:first-child{width:16%;}
-.conditions-table td:nth-child(2){width:28%;}
-.conditions-table td:nth-child(3){width:26%;}
-.conditions-table td:last-child{width:30%;}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;width:min(1080px,calc(100vw - 40px));margin:10px 0 8px;margin-left:50%;transform:translateX(-50%);padding-bottom:4px;border:1px solid var(--line-soft);border-radius:12px;}
+.datatable{width:100%;border-collapse:collapse;margin:0;font-size:14px;background:var(--white);line-height:1.55;}
+.tablewrap-conditions .datatable{min-width:980px;}
+.tablewrap-capacity .datatable{min-width:920px;}
+.datatable th,.datatable td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);vertical-align:top;}
+.datatable th:last-child,.datatable td:last-child{border-right:0;}
+.datatable tbody tr:last-child td,.datatable tbody tr:last-child th{border-bottom:0;}
+.datatable thead th{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.4;}
+.datatable tbody th{color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;font-size:inherit;line-height:1.55;}
+.datatable td{color:var(--ink-mid);}
+.table-caption{font-size:13.5px;line-height:1.6;color:var(--ink-soft);margin:8px 0 24px;}
 .environment-list{display:grid;grid-template-columns:minmax(150px,190px) 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:24px 0;background:var(--white);}
 .environment-list dt,.environment-list dd{margin:0;padding:14px 16px;border-bottom:1px solid var(--line-soft);}
 .environment-list dt{font-weight:600;color:var(--navy);background:var(--parchment);}
@@ -64,7 +62,26 @@
 .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
 .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
 .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
-@media(max-width:640px){.table-scroll{width:calc(100vw - 24px);}.author-box{align-items:flex-start;}.environment-list{grid-template-columns:1fr;}.environment-list dt{border-bottom:0;}}
+@media(max-width:640px){
+  .tablewrap{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;padding-bottom:0;}
+  .tablewrap-conditions .datatable,.tablewrap-capacity .datatable{min-width:0;width:100%;background:transparent;}
+  .datatable thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  .datatable tbody,.datatable tr,.datatable th,.datatable td{display:block;width:100%;box-sizing:border-box;}
+  .datatable tbody tr{margin:0 0 14px;border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;background:var(--white);}
+  .datatable tbody th{padding:14px;border:0;border-bottom:1px solid var(--line);background:var(--parchment);}
+  .datatable tbody td{padding:12px 14px;border:0;border-bottom:1px solid var(--line-soft);}
+  .datatable tbody tr:last-child td{border-bottom:1px solid var(--line-soft);}
+  .datatable tbody td:last-child{border-bottom:0;}
+  .datatable tbody td::before{display:block;margin-bottom:4px;color:var(--ink-soft);font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+  .tablewrap-conditions td:nth-child(2)::before{content:"The signal you have it";}
+  .tablewrap-conditions td:nth-child(3)::before{content:"What its absence costs";}
+  .tablewrap-conditions td:nth-child(4)::before{content:"The check before you decide";}
+  .tablewrap-capacity td:nth-child(2)::before{content:"How to read it from what you already have";}
+  .tablewrap-capacity td:nth-child(3)::before{content:"What it means for this search";}
+  .author-box{align-items:flex-start;}
+  .environment-list{grid-template-columns:1fr;}
+  .environment-list dt{border-bottom:0;}
+}
 </style>
 </head>
 <body>
@@ -87,8 +104,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales recruiter vs hiring in-house</span></div>
     <div class="eyebrow">Recruiting strategy</div>
     <h1>Sales recruiter vs hiring in-house: how to choose</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>9 min read</span></div>
-    <p class="deck"><strong>Use a specialist when the role is revenue-critical and a mis-hire is expensive.</strong> Volume roles can stay in-house where repetition supports a current scorecard, productive sourcing channels, and a trained selection team. Borderline cases belong in the five-conditions test, which shows whether your internal process can manage the risk.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>14 min read</span></div>
+    <p class="deck"><strong>Use a specialist when the role is revenue-critical and a mis-hire is expensive.</strong> Volume roles can stay in-house where repetition supports a current scorecard, productive sourcing channels, and a trained selection team. Borderline cases belong in the five conditions test, which shows whether your internal process has the capability, and the capacity check, which shows whether it can absorb this search now.</p>
   </div>
 </section>
 
@@ -99,30 +116,40 @@
       <h2>Key takeaways</h2>
       <ul>
         <li>Use a specialist for a revenue-critical, senior, confidential, or rarely filled role. Keep repeatable volume hiring in-house.</li>
-        <li>An in-house process is defensible when all five conditions are present: repetition, a sales-specific screen, a live bench, an environment match, and a structured landing.</li>
-        <li>The selling-environment match tests whether prior success transfers across buyer altitude, deal size, cycle length, competition, and price position.</li>
-        <li>Compare recruiting cost with labeled mis-hire and turnover estimates instead of comparing it only with a job post.</li>
+        <li>The five conditions test measures capability. The capacity check measures whether the team can absorb the search this quarter.</li>
+        <li>The selling-environment match tests whether prior success transfers across buyer level, deal size, cycle length, competition, and price position.</li>
+        <li>Both routes need quality-of-hire measurement before either can be graded after the fact.</li>
       </ul>
     </div>
 
     <div class="toc-inline">
       <h2 class="toc-title">In this guide</h2>
       <ol>
+        <li><a href="#answer">The answer first</a></li>
         <li><a href="#decision">The decision in one line</a></li>
         <li><a href="#inhouse">When in-house is the right call</a></li>
         <li><a href="#conditions">The five conditions test</a></li>
+        <li><a href="#capacity">Whether your recruiting function can absorb this search</a></li>
+        <li><a href="#measure">The measurement most of this decision is missing</a></li>
         <li><a href="#environment">The selling-environment match</a></li>
         <li><a href="#fee">The three ways a specialist earns its fee</a></li>
         <li><a href="#cost">The cost framing</a></li>
         <li><a href="#roles">Which roles justify a specialist</a></li>
         <li><a href="#keep">If you keep it in-house, run it like this</a></li>
         <li><a href="#run">How Revenue Bench runs this</a></li>
-        <li><a href="#method">Where this guide comes from</a></li>
-        <li><a href="#faq">Frequently asked questions</a></li>
+        <li><a href="#stake">What Revenue Bench has at stake in this answer</a></li>
+        <li><a href="#limits">What this page does not decide</a></li>
+        <li><a href="#method">Methodology and sources</a></li>
+        <li><a href="#faq">Questions about the recruiter versus in-house decision, answered</a></li>
       </ol>
     </div>
 
     <div class="prose">
+      <h2 id="answer">The answer first</h2>
+      <p>Use a specialist when a mis-hire on this seat is expensive and the internal recruiting function cannot absorb the search. Keep it in-house when the profile repeats often enough to support a live scorecard, productive sourcing channels, and a sales-specific screen, and the team has capacity this quarter.</p>
+      <p>Both routes are usually compared on price, and most companies have no measurement that would tell them which route worked.</p>
+      <p>A company that has filled this exact profile three or more times in the last 12 months is usually looking at an in-house search. A company that has not is usually looking at a specialist.</p>
+
       <h2 id="decision">The decision in one line</h2>
       <p>Match the recruiting method to the financial and operating risk of a miss. Comparing <a href="sales-recruiter-fees.html">a recruiter's fee</a> with an internal sourcer or a job-board post leaves out the largest exposure: selecting someone who cannot perform in the role.</p>
       <p>A revenue-critical hire can stall a territory, consume management time, weaken the forecast, and restart the ramp clock. A repeatable volume role carries a different risk profile because the company can improve its process through frequent hiring. The safer route depends on what the role can afford to get wrong and whether the internal recruiting system is ready.</p>
@@ -133,11 +160,11 @@
       <p>Roles filled infrequently receive little benefit from repetition. Each search rebuilds market knowledge, candidate flow, and evaluation discipline while the seat remains open. The five conditions below separate a working internal function from an improvised search.</p>
 
       <h2 id="conditions">The five conditions test</h2>
-      <p>Use this table before choosing the search model. It tests whether an in-house process has the operating capacity to manage a revenue hire.</p>
+      <p>The five conditions test asks whether the internal process has the capability. The <a href="#capacity">capacity check</a> asks whether it has the capacity, right now, to absorb this one search. A company can pass all five conditions and still be unable to absorb this search this quarter.</p>
 
-      <div class="table-scroll" role="region" aria-label="The build-or-buy conditions table" tabindex="0">
-        <table class="decision-table conditions-table">
-          <caption class="vh">Five conditions for deciding whether to run a sales search in-house or engage a specialist</caption>
+      <div class="tablewrap tablewrap-conditions" role="region" aria-label="The five conditions test" tabindex="0">
+        <table class="datatable" id="conditions-table">
+          <caption class="vh">Five conditions for deciding whether an internal sales hiring process has the capability to run a search</caption>
           <thead>
             <tr>
               <th scope="col">The condition</th>
@@ -148,93 +175,151 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Volume and repetition.</strong></td>
+              <th scope="row">Volume and repetition.</th>
               <td>You fill this profile often enough to hold a live scorecard and sourcing channels that produce interviews this quarter.</td>
-              <td>Every search starts from zero while the seat sits open.</td>
-              <td>Count the hires of this exact profile in the last 12 months; fewer than three is not repetition.</td>
+              <td>Every search starts from zero while the role remains open.</td>
+              <td>Count the hires of this exact profile in the last 12 months. Fewer than three is not repetition.</td>
             </tr>
             <tr>
-              <td><strong>A sales-specific screen.</strong></td>
-              <td>A validated sales-specific assessment sits in the loop before the final interview, and someone owns reading it.</td>
-              <td>The decision rests on interview impressions, which reward rehearsed interviewing rather than selling.</td>
-              <td>Name the instrument and the person who reads it; a personality test does not qualify.</td>
+              <th scope="row">A sales-specific screen.</th>
+              <td>A validated sales-specific assessment sits in the process before the final interview, and someone owns reading it.</td>
+              <td>The decision rests on interview impressions, which reward rehearsed interviewing in ways that selling does not.</td>
+              <td>Name the instrument and the person who reads it. A personality test does not qualify.</td>
             </tr>
             <tr>
-              <td><strong>A live bench.</strong></td>
+              <th scope="row">A live bench.</th>
               <td>Assessed candidates for this profile exist before the role opens and contact is recent. <a href="building-a-sales-talent-bench.html">The sales talent bench guide</a> publishes the coverage model.</td>
-              <td>Weeks of lost coverage while sourcing catches up, and a field narrowed to whoever is available this month.</td>
+              <td>Coverage stays vacant while sourcing catches up, and the field narrows to currently available candidates.</td>
               <td>Count the assessed, recently contacted candidates you could call today.</td>
             </tr>
             <tr>
-              <td><strong>The selling-environment match.</strong></td>
-              <td>The process verifies the candidate's selling history against your altitude, deal size, cycle length, competition, and price position, the five dimensions in the section below.</td>
-              <td>A hire who succeeded in a different selling environment and cannot transfer.</td>
-              <td>The interview kit contains the five environment questions with the role's answers written next to them.</td>
+              <th scope="row">The selling-environment match.</th>
+              <td>The process defines the profile through the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, then verifies the candidate's history across buyer level, deal size, cycle length, competition, and price position.</td>
+              <td>A hire can bring success from a different selling environment that does not transfer.</td>
+              <td>Write the company's answers before the search opens, then compare candidate evidence against them.</td>
             </tr>
             <tr>
-              <td><strong>A structured landing.</strong></td>
-              <td>Onboarding runs on ramp gates with an owner, and the first weeks put the hire in front of the market.</td>
-              <td>A sound selection that still fails in the first quarter.</td>
+              <th scope="row">A structured landing.</th>
+              <td>Onboarding runs on ramp gates with an owner, and the opening weeks put the hire in front of the market.</td>
+              <td>A sound selection can still fail during the landing.</td>
               <td>The 90-day plan exists in writing before the offer goes out.</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p class="table-caption">This is Revenue Bench's capability test. The next check covers current-quarter capacity, and this table makes no forecast about the outcome of a search.</p>
 
-      <p>All five present makes in-house defensible for that profile. Missing one or two argues for closing the gap or engaging a specialist for that search. A senior, confidential, or rarely filled role argues for a specialist regardless, because repetition can never accumulate; the <a href="confidential-vp-of-sales-replacement.html">confidential VP of Sales replacement guide</a> covers that case.</p>
+      <p>All five present makes in-house defensible for that profile. A missing condition argues for closing the gap or engaging a specialist for that search. A senior, confidential, or rarely filled role argues for a specialist because repetition cannot accumulate; the <a href="confidential-vp-of-sales-replacement.html">confidential VP of Sales replacement guide</a> covers that case.</p>
+
+      <h2 id="capacity">Whether your recruiting function can absorb this search</h2>
+      <p>The conditions test asks what the function can do. The capacity check asks what it can take on now. Every input below is a number the company already has.</p>
+
+      <div class="tablewrap tablewrap-capacity" role="region" aria-label="The recruiting capacity check" tabindex="0">
+        <table class="datatable" id="capacity-table">
+          <caption class="vh">Six inputs for checking whether a recruiting function can absorb a specific sales search</caption>
+          <thead>
+            <tr>
+              <th scope="col">The input</th>
+              <th scope="col">How to read it from what you already have</th>
+              <th scope="col">What it means for this search</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Requisitions the recruiter is already carrying.</th>
+              <td>Count the open roles assigned to whoever would run this search, sales and non-sales. Read that count against your own prior quarters.</td>
+              <td>A search added to a full load enters the queue behind other roles.</td>
+            </tr>
+            <tr>
+              <th scope="row">How long your last comparable search took, from kickoff to accepted offer.</th>
+              <td>Read it from the records of the most recent search at similar seniority.</td>
+              <td>That elapsed time is the window this search has to be resourced across. If no comparable search is on record, the window is being planned without evidence.</td>
+            </tr>
+            <tr>
+              <th scope="row">Whether the screen owner is free across this window.</th>
+              <td>Check the named reader's commitments across the window from the row above.</td>
+              <td>A screen nobody has time to read is a stage the process will skip under pressure.</td>
+            </tr>
+            <tr>
+              <th scope="row">Hiring-manager hours available across the search window.</th>
+              <td>Read the calendar of the person who must screen, interview, and debrief.</td>
+              <td>Compare those hours against the hours this manager gave the last search of similar seniority. Where that figure is unknown, the input is unanswerable, and the search is being planned without it.</td>
+            </tr>
+            <tr>
+              <th scope="row">Whether quality of hire is measured at all.</th>
+              <td>Ask what is recorded about hires made 12 months ago. The 2025 SHRM survey reports that only 20% of organizations track quality of hire.</td>
+              <td>Without it, neither route can be graded after the fact.</td>
+            </tr>
+            <tr>
+              <th scope="row">What the seat costs while it stays open.</th>
+              <td>Use the role's own quota and ramp assumptions.</td>
+              <td>The monthly figure sets what a slower search costs, and the <a href="cost-of-a-bad-sales-hire.html">vacancy ledger</a> prices that open seat, which is a separate object from the search itself.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">The capacity check is Revenue Bench's own instrument, built to be answered from the company's own records. It carries no benchmark figures because none with a stated sample and collection period was found for most of these inputs. On recruiter load specifically, one circulating figure is a practitioner range published without a sample and another is drawn from one software vendor's own customers, so the reliable comparison is the company's own prior quarters.</p>
+
+      <h2 id="measure">The measurement most of this decision is missing</h2>
+      <p>The 2025 SHRM Benchmarking Survey, an electronically fielded survey of a random sample of active SHRM members conducted between January 9 and March 3, 2025, to which 2,371 members responded, reports that only 20% of organizations track quality of hire.</p>
+      <p>A company that does not measure quality of hire cannot say afterwards whether the route it chose worked. The comparison then gets settled on cost, which is the one number both routes publish.</p>
+      <p>In the same survey, average cost per hire runs $5,475 for a nonexecutive hire and $35,879 for an executive hire.</p>
+      <p>The cost structure changes at seniority, so a build-or-buy answer that holds for an SDR cohort does not transfer to a VP search.</p>
+      <p>Measurement gives a sales-specific screen a defined place in the process. <a href="sales-assessment-vs-interview.html">Sales assessment versus interview</a> separates the evidence each stage can collect, while <a href="how-to-assess-a-salesperson.html">how to assess a salesperson</a> covers the buyer-level screen and the other transfer checks.</p>
 
       <h2 id="environment">The selling-environment match</h2>
-      <p>The selling-environment match decides whether a candidate's sales history transfers to the open role. It is the screen a generalist process usually misses because a title, industry match, and quota claim do not establish that the candidate has sold under comparable conditions. The five dimensions come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass; the name and the arrangement are Revenue Bench's.</p>
+      <p>The selling-environment match tests whether a candidate's sales history transfers to the open role. A title, industry match, and quota claim do not establish that the candidate has sold under comparable conditions. The five dimensions come from the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, which a company answers about its own market before the search opens. The names and the arrangement are Revenue Bench's.</p>
+      <p>Because these questions are answered about the company and are never put to the candidate, the answers are written down before the search starts and become the brief given to a specialist.</p>
 
       <dl class="environment-list">
-        <dt>Selling altitude</dt>
-        <dd>Who the candidate sold to, C-level down to manager, against who buys from you. The masterclass teaches asking this before the hire, because a candidate who sold at a different level than the role requires is a known failure pattern. Deep treatment lives in <a href="how-to-assess-a-salesperson.html">the selling-altitude screen in how to assess sales candidates</a>.</dd>
+        <dt>Buyer level</dt>
+        <dd>Compare the level the candidate sold at, from the C-suite to manager, against who buys from you. The masterclass asks companies to define this before hiring because success at a different buyer level may not transfer. Deep treatment lives in <a href="how-to-assess-a-salesperson.html#buyer-level">the buyer-level screen in how to assess sales candidates</a>.</dd>
 
         <dt>Average order size</dt>
-        <dd>The deal size the candidate has closed, against the role's.</dd>
+        <dd>Compare the deal size the candidate has closed with the role's.</dd>
 
         <dt>Sell-cycle length</dt>
-        <dd>Three months, nine months, a year, multi-year.</dd>
+        <dd>The bands are three months or less, six to nine months, a year, and two years or more.</dd>
 
         <dt>Competition intensity</dt>
-        <dd>From none through moderate to heavy.</dd>
+        <dd>Compare the candidate's experience across the competitive conditions the role faces.</dd>
 
         <dt>Price position</dt>
-        <dd>Whether they sold as the high-price leader, middle of the road, or on lowest price.</dd>
+        <dd>Identify whether the candidate sold as the high-price leader, in the middle of the market, or on lowest price.</dd>
       </dl>
 
-      <p>A rep who won small deals in short cycles on lowest price is a different athlete from one who won large deals in year-long cycles as the high-price leader; both can be excellent, and neither history proves the other.</p>
+      <p>A seller who won smaller deals in short cycles on lowest price has a different history from one who won larger deals in year-long cycles as the high-price leader. Either candidate may be excellent, and each history must be tested against the role.</p>
 
       <h2 id="fee">The three ways a specialist earns its fee</h2>
-      <p>A specialist earns its fee through candidate readiness, sales-specific selection, and support after the hire. Each capability addresses a cost that an internal team otherwise has to build and maintain.</p>
+      <p>A specialist earns its fee through candidate readiness, sales-specific selection, and support after the hire. Each capability addresses work that an internal team would have to build and maintain.</p>
       <ol>
         <li>
           <strong>A pre-vetted bench that compresses time to shortlist.</strong>
-          A specialist that recruits and assesses continuously holds qualified candidates before the role opens, so the search starts from a shortlist rather than from zero while the seat sits uncovered.
+          A specialist that recruits and assesses continuously holds qualified candidates before the role opens, so the search begins from assessed coverage and avoids rebuilding candidate flow from zero.
         </li>
         <li>
           <strong>A sales-specific screen before the shortlist.</strong>
-          A specialist puts a validated sales-specific assessment in front of the shortlist decision. Research circulated through OMG's partner network reports that hiring-manager intuition identifies a top performer about 20% of the time, so the screen carries the part of the decision an interview cannot.
+          A specialist puts a validated sales-specific assessment in front of the shortlist decision. Research circulated through OMG's partner network reports that hiring-manager intuition identifies a top performer about 20% of the time, so the screen carries the part of the decision an interview cannot. It is not an OMG published study.
         </li>
         <li>
           <strong>Post-placement coaching that protects the landing.</strong>
-          Many early exits are onboarding failures rather than selection failures. The <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding guide</a> shows the ramp gates, ownership, and market exposure that protect the hire after the offer.
+          Some early exits follow onboarding failures even when selection was sound. The <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding guide</a> shows the ramp gates, ownership, and market exposure that support the hire after the offer.
         </li>
       </ol>
       <p>An in-house team can build these capabilities when recurring volume supports the investment. A specialist supplies them for searches where the company has not developed the same operating system.</p>
 
       <h2 id="cost">The cost framing</h2>
-      <p>Compare a placement fee with the expected downside of a failed hire instead of comparing it only with the price of posting the role. The relevant cost includes compensation, missed production, replacement work, and management time.</p>
+      <p>Compare a placement fee with the expected downside of a failed hire, not only with the price of posting the role. The relevant cost includes compensation, missed production, replacement work, and management time.</p>
       <p><strong>Revenue Bench working estimate.</strong> Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time.</p>
       <p><strong>Third-party turnover benchmark.</strong> DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded.</p>
-      <p>The figures describe different objects. Revenue Bench estimates the broader cost of a failed revenue hire, while the DePaul research measures sales turnover. The full component model appears in <a href="cost-of-a-bad-sales-hire.html">the cost of a bad sales hire</a>.</p>
+      <p>The figures describe different objects. Revenue Bench estimates the broader cost of a failed revenue hire, while the DePaul research measures sales turnover. The full vacancy and mis-hire ledgers appear in <a href="cost-of-a-bad-sales-hire.html">the cost of a bad sales hire</a>.</p>
 
       <h2 id="roles">Which roles justify a specialist</h2>
       <p>The case strengthens as the role carries more revenue, shapes more hiring decisions, or requires a search the company rarely repeats.</p>
       <ul>
         <li><strong>Account executive.</strong> The role owns a territory and a quota, so a miss interrupts coverage and restarts ramp.</li>
         <li><strong>Sales manager.</strong> The manager affects selection, coaching, inspection, and the performance of the full team.</li>
-        <li><strong>VP Sales.</strong> The leader sets process, hires sellers, and owns the forecast, so a wrong choice compounds across the team for a year or more.</li>
+        <li><strong>VP Sales.</strong> The leader sets process, hires sellers, and owns the forecast, so a wrong choice compounds across the team.</li>
         <li><strong>CRO.</strong> The role connects sales, marketing, customer growth, and the operating plan, which makes transfer risk central to the search.</li>
         <li><strong>RevOps.</strong> The role requires careful scoping across systems, process, data, and operating ownership.</li>
         <li><strong>Enablement.</strong> The role needs a defined mandate across ramp, manager support, content, and field execution.</li>
@@ -250,28 +335,43 @@
         <li><strong>Verify environment transfer.</strong> Write the five environment answers for the role, test the candidate against them, and use <a href="reference-checks-for-sales-hires.html">structured reference-check questions for sales candidates</a> to verify the evidence.</li>
         <li><strong>Own the landing.</strong> Put the ramp gates, manager, and market exposure from the <a href="90-day-sales-onboarding-plan.html">90-day onboarding plan</a> in writing before the offer.</li>
       </ol>
-      <p>A company that builds all five has built a recruiting function, which is the right outcome when volume justifies it.</p>
+      <p>A company that builds all five has built a recruiting function, which is the right outcome when volume supports it.</p>
 
       <h2 id="run">How Revenue Bench runs this</h2>
-      <p>Revenue Bench sources continuously and maintains a pre-vetted bench of sellers and sales leaders, so a search begins from assessed coverage rather than from an empty pipeline. Kickoff to shortlist is commonly 2 to 4 weeks when the bench covers the role.</p>
+      <p>Revenue Bench sources continuously and maintains a pre-vetted bench of sellers and sales leaders, so a search begins from assessed coverage and an active candidate pipeline.</p>
       <p>Candidates for selling and sales-leadership roles are assessed with Objective Management Group's sales-specific assessment before they reach a shortlist. In OMG's 2024 validation survey, 72% of recommended hires reached the top half of their sales force within 12 months, and first-year turnover ran 9% for recommended hires against 33% for candidates OMG advised against who were hired anyway.</p>
       <p>Senior and confidential searches run as an engaged, retained-style search, where depth and discretion decide the outcome.</p>
       <p>Every placement carries a 90-day replacement guarantee: if the hire is not working inside the first 90 days from their start date, one free re-run of the search, no conditions, and whether the hire is working is your call to make. Every placement also includes a 90-day onboarding coach who meets the hire weekly and reports to the hiring manager.</p>
       <p>See <a href="../how-it-works.html">how Revenue Bench works</a> for the full sequence from role definition through onboarding.</p>
 
+      <h2 id="stake">What Revenue Bench has at stake in this answer</h2>
+      <p>Revenue Bench earns a placement fee, so the firm is paid when the answer on this page is to engage a specialist.</p>
+      <p>The firm's own test points to an internal search when the company filled the profile three or more times in the last 12 months, has a named sales-specific screen and a named reader, has a recruiter with spare capacity, and has a written landing plan. A company in that position is being asked to pay for capabilities it already operates.</p>
+      <p>Four figures circulate in this comparison, and none resolved to a document with a stated sample and collection period. None appears here: a bad-hire cost stated as a share of first-year earnings; an uplift in candidate quality and retention from using a specialist, which circulates in two different values; a faster time-to-hire figure that did not resolve to a document reporting a hiring outcome with a stated sample; and a recruiter-workload benchmark drawn from one software vendor's own customer base. All four would have pointed toward engaging a specialist, which is the direction Revenue Bench is already arguing, and that is a further reason to want a sample and a period behind them.</p>
+      <p>Revenue Bench publishes a figure when its sample and collection period are stated. The documentation standard appears in <a href="../sources.html">Revenue Bench's source notes</a>.</p>
+
+      <h2 id="limits">What this page does not decide</h2>
+      <p>Search pricing, fee percentages, and the role's profile sit outside this page. The comparison between specialist firms belongs in <a href="how-to-evaluate-a-sales-recruitment-agency.html">how to evaluate a sales recruitment agency</a>. The open seat and the mis-hire are priced in <a href="cost-of-a-bad-sales-hire.html">the cost of a bad sales hire</a>.</p>
+      <p>The capacity check reads a company's current state and makes no forecast about whether a given search will succeed.</p>
+
       <div class="method">
-        <h2 id="method">Where this guide comes from</h2>
-        <p>The build-or-buy conditions table is Revenue Bench's own instrument.</p>
-        <p>The five dimensions of the selling-environment match come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, credited in the section where it appears. The name and the arrangement are Revenue Bench's.</p>
-        <p>The mis-hire working figure is Revenue Bench's own estimate; the DePaul figures are third-party research; OMG figures are OMG's own research data and are labeled as such; the hiring-manager intuition figure comes from research circulated through OMG's partner network, including the firm Big Swift Kick, and is not an OMG published study.</p>
+        <h2 id="method">Methodology and sources</h2>
+        <p>The five-conditions table and the capacity check are Revenue Bench's own instruments.</p>
+        <p>The five dimensions come from the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, which a company answers about its own market before the search opens. The names and the arrangement are Revenue Bench's.</p>
+        <p>The 2025 SHRM Benchmarking Survey, an electronically fielded survey of a random sample of active SHRM members conducted between January 9 and March 3, 2025, to which 2,371 members responded, reports that only 20% of organizations track quality of hire. The figures are self-reported by SHRM members, the data are not weighted, members holding a vice president or higher position were deliberately oversampled, and respondents were not required to answer every metric, so the sample behind an individual figure varies.</p>
+        <p>Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time.</p>
+        <p>DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded.</p>
+        <p>In OMG's 2024 validation survey, 72% of recommended hires reached the top half of their sales force within 12 months, and first-year turnover ran 9% for recommended hires against 33% for candidates OMG advised against who were hired anyway.</p>
+        <p>Research circulated through OMG's partner network reports that hiring-manager intuition identifies a top performer about 20% of the time. It is not an OMG published study.</p>
         <p>Assessment records kept on candidates before a role exists are employment decisions and data-handling decisions. Run them through your own HR process, counsel, and candidate consent under the law that applies. The <a href="reference-checks-for-sales-hires.html">reference-checks guide</a> publishes the consent standard Revenue Bench applies to its own screens.</p>
-        <p>Whether to run a search in-house is an operating decision; this guide gives the conditions test so the reader can make it either way, and the linked guides publish the instruments an in-house process needs.</p>
+        <p>Whether to run a search in-house is an operating decision. This guide gives the conditions test and capacity check so the reader can make it either way, and the linked guides publish the instruments an in-house process needs.</p>
       </div>
     </div>
 
-    <div id="faq" style="margin-top:48px;">
+    <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
+      <h2 id="faq">Questions about the recruiter versus in-house decision, answered</h2>
 
       <div class="faq-item">
         <h3>When should I use a sales recruiter instead of hiring in-house?</h3>
@@ -285,12 +385,12 @@
 
       <div class="faq-item">
         <h3>What does an in-house sales hiring process need before it is safe for revenue roles?</h3>
-        <p>It needs five operating conditions: volume and repetition, a validated sales-specific assessment with an owner, a live bench of assessed candidates, a selling-environment match, and structured onboarding built around ramp gates. Missing one or two calls for closing the gap or using a specialist for that search.</p>
+        <p>It needs five operating conditions: volume and repetition, a validated sales-specific assessment with an owner, a live bench of assessed candidates, a selling-environment match, and structured onboarding built around ramp gates. Any missing condition calls for closing the gap or using a specialist for that search.</p>
       </div>
 
       <div class="faq-item">
         <h3>What is the selling-environment match?</h3>
-        <p>The selling-environment match tests whether a candidate's sales history transfers across five dimensions: selling altitude, average order size, sell-cycle length, competition intensity, and price position. The five dimensions come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass; the name and the arrangement are Revenue Bench's.</p>
+        <p>The selling-environment match tests whether a candidate's sales history transfers across five dimensions: buyer level, average order size, sell-cycle length, competition intensity, and price position. The five dimensions come from the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, which a company answers about its own market before the search opens. The names and the arrangement are Revenue Bench's.</p>
       </div>
 
       <div class="faq-item">
@@ -300,7 +400,22 @@
 
       <div class="faq-item">
         <h3>Is a recruiter fee worth it compared to posting the job myself?</h3>
-        <p>Compare the fee with the expected cost of a failed hire instead of comparing it only with a job post. Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University's Center for Sales Leadership, third-party research surveying 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded.</p>
+        <p>A job-post price covers publication, while the larger exposure is a failed hire. Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I know whether my team has capacity to run this search?</h3>
+        <p>Read the capacity check: current requisitions, how long your last comparable search took, whether the screen owner is free across that window, hiring-manager hours, quality-of-hire measurement, and the seat's vacancy cost. A company can pass the five conditions test for capability and still lack the capacity to absorb this search now.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Should we compare a recruiter's fee with the cost of hiring internally?</h3>
+        <p>The 2025 SHRM Benchmarking Survey, an electronically fielded survey of a random sample of active SHRM members conducted between January 9 and March 3, 2025, to which 2,371 members responded, reports that only 20% of organizations track quality of hire. Without that measurement, a company cannot grade either route after the fact, so cost becomes the comparison both routes can publish.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does the recruiter-versus-in-house answer change for a senior sales role?</h3>
+        <p>The 2025 SHRM Benchmarking Survey, an electronically fielded survey of a random sample of active SHRM members conducted between January 9 and March 3, 2025, to which 2,371 members responded, reports that only 20% of organizations track quality of hire. In the same survey, average cost per hire runs $5,475 for a nonexecutive hire and $35,879 for an executive hire. Senior and confidential searches rarely accumulate the repetition that supports an internal process.</p>
       </div>
     </div>
 
@@ -377,7 +492,7 @@
     "url":"https://revenuebench.io"
   },
   "datePublished":"2026-06-14",
-  "dateModified":"2026-08-29",
+  "dateModified":"2026-09-09",
   "mainEntityOfPage":{
     "@type":"WebPage",
     "@id":"https://revenuebench.io/guides/sales-recruiter-vs-in-house"
@@ -410,7 +525,7 @@
       "name":"What does an in-house sales hiring process need before it is safe for revenue roles?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"It needs five operating conditions: volume and repetition, a validated sales-specific assessment with an owner, a live bench of assessed candidates, a selling-environment match, and structured onboarding built around ramp gates. Missing one or two calls for closing the gap or using a specialist for that search."
+        "text":"It needs five operating conditions: volume and repetition, a validated sales-specific assessment with an owner, a live bench of assessed candidates, a selling-environment match, and structured onboarding built around ramp gates. Any missing condition calls for closing the gap or using a specialist for that search."
       }
     },
     {
@@ -418,7 +533,7 @@
       "name":"What is the selling-environment match?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"The selling-environment match tests whether a candidate's sales history transfers across five dimensions: selling altitude, average order size, sell-cycle length, competition intensity, and price position. The five dimensions come from the interview battery Carlos Garrido teaches in his Building a Scalable Sales Team masterclass; the name and the arrangement are Revenue Bench's."
+        "text":"The selling-environment match tests whether a candidate's sales history transfers across five dimensions: buyer level, average order size, sell-cycle length, competition intensity, and price position. The five dimensions come from the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, which a company answers about its own market before the search opens. The names and the arrangement are Revenue Bench's."
       }
     },
     {
@@ -434,10 +549,69 @@
       "name":"Is a recruiter fee worth it compared to posting the job myself?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Compare the fee with the expected cost of a failed hire instead of comparing it only with a job post. Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University's Center for Sales Leadership, third-party research surveying 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded."
+        "text":"A job-post price covers publication, while the larger exposure is a failed hire. Revenue Bench uses $200,000 to $250,000 as its working figure for a revenue-role mis-hire, counting base compensation, draw, stalled pipeline, the replacement search, and management time. DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do I know whether my team has capacity to run this search?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Read the capacity check: current requisitions, how long your last comparable search took, whether the screen owner is free across that window, hiring-manager hours, quality-of-hire measurement, and the seat's vacancy cost. A company can pass the five conditions test for capability and still lack the capacity to absorb this search now."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Should we compare a recruiter's fee with the cost of hiring internally?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The 2025 SHRM Benchmarking Survey, an electronically fielded survey of a random sample of active SHRM members conducted between January 9 and March 3, 2025, to which 2,371 members responded, reports that only 20% of organizations track quality of hire. Without that measurement, a company cannot grade either route after the fact, so cost becomes the comparison both routes can publish."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does the recruiter-versus-in-house answer change for a senior sales role?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The 2025 SHRM Benchmarking Survey, an electronically fielded survey of a random sample of active SHRM members conducted between January 9 and March 3, 2025, to which 2,371 members responded, reports that only 20% of organizations track quality of hire. In the same survey, average cost per hire runs $5,475 for a nonexecutive hire and $35,879 for an executive hire. Senior and confidential searches rarely accumulate the repetition that supports an internal process."
       }
     }
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://revenuebench.io/guides/sales-recruiter-vs-in-house",
+  "url":"https://revenuebench.io/guides/sales-recruiter-vs-in-house",
+  "name":"Sales Recruiter vs Hiring In-House: How to Choose | Revenue Bench",
+  "datePublished":"2026-06-14",
+  "dateModified":"2026-09-09",
+  "breadcrumb":{
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"Home",
+        "item":"https://revenuebench.io/"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"Insights",
+        "item":"https://revenuebench.io/guides"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"Sales recruiter vs hiring in-house",
+        "item":"https://revenuebench.io/guides/sales-recruiter-vs-in-house"
+      }
+    ]
+  }
 }
 </script>
 
