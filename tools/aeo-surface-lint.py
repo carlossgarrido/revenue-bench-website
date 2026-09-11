@@ -6,6 +6,13 @@ voice-lint.sh strips <script> blocks and every tag attribute before it scans, so
 descriptions, all og:/twitter: strings, img@alt and every JSON-LD string are never checked.
 Those are exactly the strings an answer engine lifts. This scans them.
 
+It also closes a second gap, found 2026-09-11 (day 49) with four live instances on the
+homepage and for-employers: voice-lint.sh does not decode HTML entities, so a banned
+CHARACTER written as an entity in ordinary body copy ("$200K&ndash;$250K") renders as the
+banned character in every browser while both lints see nothing. The body-text pass below
+decodes entities and applies the character-class bans only, deliberately narrow so it does
+not duplicate voice-lint.sh's word bans over the whole site.
+
 Usage:  python3 tools/aeo-surface-lint.py [path ...]      (default: deploy/)
 Exit 0 = clean. Exit 1 = at least one HARD hit.
 
@@ -32,6 +39,13 @@ HARD = [
 ]
 # An entity inside a word renders as the banned text while a grep over source sees nothing.
 INWORD_ENTITY = re.compile(r"[A-Za-z]&#[0-9a-fA-F]+;|&#[0-9a-fA-F]+;[A-Za-z]")
+
+# Character-class bans that an HTML entity can hide inside visible body copy.
+# Narrow on purpose: voice-lint.sh already scans body text for the word bans, and its
+# only blind spot is the entity encoding, so this pass decodes and checks characters.
+BODY_CHAR_HARD = [
+    ("em/en dash in body copy (entity-decoded)", r"[\u2014\u2013]"),
+]
 
 JSON_KEYS = ("headline", "name", "description", "text", "alternateName", "articleBody",
              "caption", "jobTitle", "slogan", "about")
@@ -69,6 +83,15 @@ def surfaces(path):
                     yield from walk(v, f"{trail}[{i}]")
         yield from walk(data)
 
+def body_text(path):
+    """Visible body copy with <style>/<script> and all tags removed, entities decoded."""
+    src = open(path, encoding="utf-8").read()
+    src = re.sub(r"<style[^>]*>.*?</style>", " ", src, flags=re.S | re.I)
+    src = re.sub(r"<script[^>]*>.*?</script>", " ", src, flags=re.S | re.I)
+    src = re.sub(r"<[^>]+>", " ", src)
+    return html.unescape(src)
+
+
 def main(argv):
     targets = argv[1:] or ["deploy"]
     files = []
@@ -85,7 +108,12 @@ def main(argv):
             for name, pat in HARD:
                 if re.search(pat, text, re.I if name != "transition adverbs" else 0):
                     print(f"[HARD] {name}  {f}  ({label})\n    {text.strip()[:160]}"); hard += 1
-    print(f"\n{len(files)} files scanned. {hard} HARD hit(s) on extraction surfaces.")
+        text = body_text(f)
+        for name, pat in BODY_CHAR_HARD:
+            for m in re.finditer(pat, text):
+                a, b = max(0, m.start() - 60), m.end() + 60
+                print(f"[HARD] {name}  {f}\n    ...{text[a:b].strip()}..."); hard += 1
+    print(f"\n{len(files)} files scanned. {hard} HARD hit(s) on extraction surfaces and in body copy.")
     return 1 if hard else 0
 
 if __name__ == "__main__":
