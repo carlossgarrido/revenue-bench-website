@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Sales Compensation Benchmarks for 2026 | Revenue Bench</title>
-<meta name="description" content="Build sales pay from two anchors, a worked plan ledger, a role-design table, and the sources behind real compensation benchmark data." />
+<meta name="description" content="US sales pay by percentile from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision." />
 <link rel="canonical" href="https://revenuebench.io/guides/sales-compensation-benchmarks-2026" />
 <meta property="og:title" content="Sales Compensation Benchmarks for 2026" />
-<meta property="og:description" content="Build sales pay from two anchors, a worked plan ledger, a role-design table, and the sources behind real compensation benchmark data." />
+<meta property="og:description" content="US sales pay by percentile from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/sales-compensation-benchmarks-2026.png">
   <meta property="og:image:width" content="1200">
@@ -45,6 +45,15 @@
   .decision-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
   .decision-table td{color:var(--ink-mid);}
   .decision-table td:first-child{font-weight:600;color:var(--navy);}
+  #bls-table{min-width:1080px;}
+  #bls-table td:first-child{width:34%;}
+  #bls-table td:nth-child(n+2){white-space:nowrap;}
+  #translate-table{min-width:1120px;}
+  #translate-table td:first-child{width:15%;}
+  #translate-table td:nth-child(2){width:27%;}
+  #translate-table td:nth-child(3){width:18%;}
+  #translate-table td:nth-child(4){width:19%;}
+  #translate-table td:last-child{width:21%;}
   .ledger-table{min-width:900px;}
   .ledger-table td:first-child{width:8%;}
   .ledger-table td:nth-child(2){width:27%;}
@@ -71,6 +80,60 @@
     .table-scroll{width:calc(100vw - 24px);}
     .author-box{align-items:flex-start;}
   }
+  @media(max-width:760px){
+    .table-scroll{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
+    #bls-table{min-width:0;font-size:15px;}
+    #bls-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #bls-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    #bls-table tr:last-child{border-bottom:0;}
+    #bls-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;white-space:normal;}
+    #bls-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #bls-table td:nth-child(2)::before{content:"Employed: ";}
+    #bls-table td:nth-child(3)::before{content:"10th percentile: ";}
+    #bls-table td:nth-child(4)::before{content:"25th percentile: ";}
+    #bls-table td:nth-child(5)::before{content:"Median: ";}
+    #bls-table td:nth-child(6)::before{content:"75th percentile: ";}
+    #bls-table td:nth-child(7)::before{content:"90th percentile: ";}
+    #bls-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #bls-table td:last-child{padding-bottom:0;}
+
+    #translate-table{min-width:0;font-size:15px;}
+    #translate-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #translate-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    #translate-table tr:last-child{border-bottom:0;}
+    #translate-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
+    #translate-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #translate-table td:nth-child(2)::before{content:"What it measures: ";}
+    #translate-table td:nth-child(3)::before{content:"Who reports it: ";}
+    #translate-table td:nth-child(4)::before{content:"The decision it can settle: ";}
+    #translate-table td:nth-child(5)::before{content:"Where it misleads: ";}
+    #translate-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #translate-table td:last-child{padding-bottom:0;}
+
+    #ledger-table{min-width:0;font-size:15px;}
+    #ledger-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #ledger-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    #ledger-table tr:last-child{border-bottom:0;}
+    #ledger-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
+    #ledger-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #ledger-table td:nth-child(2)::before{content:"The question: ";}
+    #ledger-table td:nth-child(3)::before{content:"The arithmetic: ";}
+    #ledger-table td:nth-child(4)::before{content:"The result: ";}
+    #ledger-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #ledger-table td:last-child{padding-bottom:0;}
+
+    #role-table{min-width:0;font-size:15px;}
+    #role-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #role-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    #role-table tr:last-child{border-bottom:0;}
+    #role-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
+    #role-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #role-table td:nth-child(2)::before{content:"What the person directly controls: ";}
+    #role-table td:nth-child(3)::before{content:"Where the mix leans: ";}
+    #role-table td:nth-child(4)::before{content:"The failure pattern when it is set wrong: ";}
+    #role-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #role-table td:last-child{padding-bottom:0;}
+  }
 </style>
 </head>
 <body>
@@ -93,8 +156,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales compensation benchmarks for 2026</span></div>
     <div class="eyebrow">Compensation</div>
     <h1>Sales compensation benchmarks for 2026</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>6 min read</span></div>
-    <p class="deck"><strong>Every sales compensation plan rests on two numbers: the market rate for the role and what the company can afford per dollar of new revenue.</strong> This guide shows where each number comes from and how to build the plan from them. The page does not publish a salary table because a benchmark without a source, a sample, and a date is decoration. <a href="pe-sales-leader-compensation.html">Sales-leader packages in sponsor-owned companies are a different market with their own guide</a>.</p>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>11 min read</span></div>
+    <p class="deck"><strong>Every sales compensation plan rests on two numbers: the market rate for the role and what the company can afford per dollar of new revenue.</strong> This guide shows where each number comes from and how to build the plan from them. The page publishes wage data that carries a stated sample, a stated period, and a published method. No vendor earnings table appears here, because a figure without those three cannot price a role. <a href="pe-sales-leader-compensation.html">Sales-leader packages in sponsor-owned companies are a different market with their own guide</a>.</p>
   </div>
 </section>
 
@@ -105,7 +168,8 @@
       <h2>Key takeaways</h2>
       <ul>
         <li>Anchor every plan on two numbers: the market rate for the role and total sales cost as a share of new revenue. Revenue Bench's working range is 15% to 25%.</li>
-        <li>Derive the market number from sourced data and your own offer history rather than a published table. A live search is the freshest read of what the role costs.</li>
+        <li>The federal wage table reports employer-reported pay received, with commission and incentive pay included. It does not report target earnings.</li>
+        <li>Use the company's offer-and-decline history and live candidate response to move from the published range to the number for the role. A live search is the freshest read of what the role costs.</li>
         <li>Match the base-variable mix to what the person directly controls.</li>
         <li>Set quota the median performer can meaningfully reach, and pay accelerators above 100% of plan with no cap.</li>
       </ul>
@@ -116,8 +180,10 @@
       <ol>
         <li><a href="#anchors">The two anchors</a></li>
         <li><a href="#market">Where the market number comes from</a></li>
-        <li><a href="#ledger">Decision artifact #1: The plan ledger, worked</a></li>
-        <li><a href="#mix">Decision artifact #2: The role-design table</a></li>
+        <li><a href="#bls">What the federal wage survey shows for sales roles</a></li>
+        <li><a href="#translate">Decision artifact #1: Which compensation number settles which decision</a></li>
+        <li><a href="#ledger">Decision artifact #2: The plan ledger, worked</a></li>
+        <li><a href="#mix">Decision artifact #3: The role-design table</a></li>
         <li><a href="#quota">Setting quota</a></li>
         <li><a href="#accelerators">Accelerators, draws, and clawbacks</a></li>
         <li><a href="#behavior">What the plan cannot do</a></li>
@@ -138,13 +204,151 @@
         <li><strong>The live market during a search.</strong> Qualified candidates in your geography and selling motion show what they will accept this quarter. This is the freshest benchmark there is, and it arrives as a byproduct of <a href="../how-it-works.html">running the search itself</a>. The company reads that evidence and sets its own number.</li>
       </ol>
       <p>Offer history and live candidate response show what the market cleared. The role's range is still built from job-related criteria: scope, selling motion, and plan responsibility. Hold the same range for every candidate considered, and disclose it, at minimum where the jurisdiction requires disclosure. A candidate's current or prior compensation does not enter the calculation; salary-history inquiries are restricted in numerous US states and cities, and counsel should confirm the requirements that apply to the search.</p>
-      <p>That is why this page teaches the method instead of printing a table: the table a buyer needs is the one built from their own plan, and the next section builds it.</p>
+      <p>The federal table below supplies broad occupational context. The company still builds the role's final range from its own plan and first-party evidence.</p>
 
-      <h2 id="ledger">Decision artifact #1: The plan ledger, worked</h2>
+      <h2 id="bls">What the federal wage survey shows for sales roles</h2>
+      <p>These pay figures carry a stated sample, a stated period, and a published collection method, and the agency that publishes them sells nothing in this market.</p>
+      <p class="artifact-label">The federal wage survey, US sales occupations, May 2025</p>
+      <div class="table-scroll" role="region" aria-label="US national annual wages for sales occupations" tabindex="0">
+        <table class="decision-table" id="bls-table">
+          <caption class="vh">US national annual wages for sales occupations, May 2025 Occupational Employment and Wage Statistics, by percentile</caption>
+          <thead>
+            <tr>
+              <th scope="col">Occupation, as the survey names it</th>
+              <th scope="col">Employed</th>
+              <th scope="col">10th</th>
+              <th scope="col">25th</th>
+              <th scope="col">Median</th>
+              <th scope="col">75th</th>
+              <th scope="col">90th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sales representatives of services, except advertising, insurance, financial services, and travel</td>
+              <td>1,256,010</td>
+              <td>$37,980</td>
+              <td>$47,670</td>
+              <td>$69,990</td>
+              <td>$100,480</td>
+              <td>$148,840</td>
+            </tr>
+            <tr>
+              <td>Sales representatives, wholesale and manufacturing, except technical and scientific products</td>
+              <td>1,238,190</td>
+              <td>$39,090</td>
+              <td>$50,470</td>
+              <td>$72,080</td>
+              <td>$99,640</td>
+              <td>$137,550</td>
+            </tr>
+            <tr>
+              <td>Sales representatives, wholesale and manufacturing, technical and scientific products</td>
+              <td>284,800</td>
+              <td>$52,600</td>
+              <td>$75,030</td>
+              <td>$104,920</td>
+              <td>$158,160</td>
+              <td>$200,440</td>
+            </tr>
+            <tr>
+              <td>Sales engineers</td>
+              <td>51,790</td>
+              <td>$73,870</td>
+              <td>$92,890</td>
+              <td>$124,900</td>
+              <td>$161,230</td>
+              <td>$195,270</td>
+            </tr>
+            <tr>
+              <td>First-line supervisors of non-retail sales workers</td>
+              <td>214,390</td>
+              <td>$50,320</td>
+              <td>$63,940</td>
+              <td>$87,520</td>
+              <td>$122,050</td>
+              <td>$164,070</td>
+            </tr>
+            <tr>
+              <td>Sales managers</td>
+              <td>637,080</td>
+              <td>$73,170</td>
+              <td>$100,360</td>
+              <td>$148,270</td>
+              <td>$207,340</td>
+              <td>$290,540</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">Source: the <a href="https://www.bls.gov/oes/2025/may/oes_stru.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics Occupational Employment and Wage Statistics program</a>, May 2025 estimates, released 15 May 2026 as USDL-26-0725. Annual wages, national, across all industries. Annual figures assume a full-time, year-round schedule of 2,080 hours.</p>
+
+      <h3>How to read the table</h3>
+      <p><strong>Which row fits which hire.</strong> Technical and scientific products is the closest survey category to a complex-cycle B2B seller. Services covers everything from a renewal desk to a consultative sale, so the category cannot serve as a screen. Sales managers is a broad management category that runs from a car dealership floor to a software VP. Those are the limits of occupational data. The same survey's figures for one metro area appear in the <a href="../sales-recruiters-miami.html" class="content-link">Miami sales recruiting guide</a>.</p>
+      <p><strong>The spread is the useful part, and the median is the least useful number in the row.</strong> The distance between the 25th and the 75th percentile inside one occupation is wider than the distance between two occupations' medians. Pricing a role means choosing a position in that spread and being able to say why.</p>
+      <p><strong>The 90th percentile is not a stretch target.</strong> It marks what the top tenth of people already in that occupation were paid. A plan that pays at the 90th only at full attainment is not paying at the 90th.</p>
+
+      <h2 id="translate">Decision artifact #1: Which compensation number settles which decision</h2>
+      <p>A buyer pricing a sales role meets five kinds of compensation number. They measure different things, and using one where another belongs produces a mis-set plan.</p>
+      <p class="artifact-label">The benchmark-translation table</p>
+      <div class="table-scroll" role="region" aria-label="Kinds of sales compensation benchmark and the decisions they can settle" tabindex="0">
+        <table class="decision-table" id="translate-table">
+          <caption class="vh">Kinds of sales compensation benchmark, what each measures, and the decision each can settle</caption>
+          <thead>
+            <tr>
+              <th scope="col">The number</th>
+              <th scope="col">What it measures</th>
+              <th scope="col">Who reports it</th>
+              <th scope="col">The decision it can settle</th>
+              <th scope="col">Where it misleads</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The federal wage survey, the table above</td>
+              <td>Straight-time gross pay, exclusive of premium pay. The survey's technical note defines the measure this way: base rate, cost-of-living allowances, guaranteed pay, hazardous-duty pay, incentive pay including commissions and production bonuses, and tips are included. Overtime pay, severance pay, shift differentials, non-production bonuses, employer cost for supplementary benefits, and tuition reimbursements are excluded. A draw is excluded because the survey defines it as payment based on expected future wages. The figure is what people were paid at whatever attainment they reached. Base salary and on-target earnings are different measures.</td>
+              <td>Employers, through a survey drawn from state unemployment-insurance records under a published method.</td>
+              <td>Whether a proposed range sits inside, above, or below what employers across the country are paying people doing that kind of work.</td>
+              <td>An occupation is not a job title, and the figure carries no company stage, deal size, selling motion, or equity. It also cannot be read as a trend. The statistical agency says its data are not built for comparison over time because each release pools six semiannual panels across three years.</td>
+            </tr>
+            <tr>
+              <td>A published on-target-earnings benchmark</td>
+              <td>Target earnings at 100% of plan. It records a design intention. No payment is measured.</td>
+              <td>Companies selling compensation software, recruiting services, or market data.</td>
+              <td>What a competitive offer is likely to look like on paper, if the sample behind it fits the role.</td>
+              <td>Most publish no sample size, collection period, or method, so the figure cannot be checked. Target earnings also overstate what was paid wherever attainment ran below plan.</td>
+            </tr>
+            <tr>
+              <td>A self-reported earnings panel</td>
+              <td>What people who chose to submit their own numbers say they earn.</td>
+              <td>The people doing the jobs, through a platform that collects the submissions.</td>
+              <td>What candidates in a segment believe the market pays, which is the number that appears in a negotiation.</td>
+              <td>Respondents select themselves, so the sample skews toward the engaged and the successful. Self-reported pay is usually reported at target.</td>
+            </tr>
+            <tr>
+              <td>The company's own offer-and-decline history</td>
+              <td>What this company offered, and what was accepted, countered or refused.</td>
+              <td>The company, from its own records.</td>
+              <td>Whether this company's package clears the market for this company's role, which no external table can answer.</td>
+              <td>The sample is small, it is a year or more old by the time it forms a pattern, and it records the market's answer to the role as it was written then.</td>
+            </tr>
+            <tr>
+              <td>Live candidate response during an open search</td>
+              <td>What qualified people will accept this quarter, for this role, in this geography.</td>
+              <td>The candidates, through the search.</td>
+              <td>The final number, because it is the only evidence produced by the actual role.</td>
+              <td>It arrives late, after the range has already been set, and the pool is whoever the search reached.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">The first three sources are external and get you a range. The last two are first-party and get you the number. Revenue Bench is paid to run searches, so publishing that the freshest benchmark arrives through a search aligns with the firm's commercial interest. The evidence in row 5 is the candidate's own answer. A company that reads it can set its own number without engaging anyone.</p>
+
+      <h2 id="ledger">Decision artifact #2: The plan ledger, worked</h2>
       <p>The plan ledger builds the affordability anchor from the company's own numbers. Start with planned new revenue, choose a point inside the working cost range, and test whether headcount, pay, quota, margin, and sales-cycle assumptions hold together.</p>
       <p class="artifact-label">Worked illustration on stated assumptions</p>
       <div class="table-scroll" role="region" aria-label="Worked sales compensation plan ledger" tabindex="0">
-        <table class="decision-table ledger-table">
+        <table class="decision-table ledger-table" id="ledger-table">
           <caption class="vh">Worked illustration of a sales compensation plan ledger using stated assumptions</caption>
           <thead>
             <tr>
@@ -164,7 +368,7 @@
             <tr>
               <td>2</td>
               <td>What can selling cost?</td>
-              <td>$3,000,000 x 20%, the midpoint of the 15-to-25 working range</td>
+              <td>$3,000,000 x 20%, the midpoint of the 15% to 25% working range</td>
               <td>$600,000 fully loaded</td>
             </tr>
             <tr>
@@ -190,10 +394,10 @@
       </div>
       <p class="table-caption">The ledger is one worked illustration on stated assumptions. Every dollar figure in it exists to show the arithmetic, and none of them is a market benchmark. Most companies also assign total quota above the revenue target so the plan absorbs misses; the illustration keeps the two equal for clarity.</p>
 
-      <h2 id="mix">Decision artifact #2: The role-design table</h2>
+      <h2 id="mix">Decision artifact #3: The role-design table</h2>
       <p>The base-variable mix is a design decision that follows what the person directly controls. The decision requires no dollar figures.</p>
       <div class="table-scroll" role="region" aria-label="Base-variable role-design table" tabindex="0">
-        <table class="decision-table role-table">
+        <table class="decision-table role-table" id="role-table">
           <caption class="vh">Role-design table for setting base-variable mix by direct control</caption>
           <thead>
             <tr>
@@ -254,7 +458,11 @@
 
       <h2 id="method">Methodology and sources</h2>
       <div class="method">
-        <p>The working ranges on this page, the 15-to-25-percent envelope and the quota test, are Revenue Bench's own working guidance from sales hiring and selection work rather than survey findings. The OMG figure is OMG's research.</p>
+        <p>The federal wage survey is a semiannual mail survey of non-farm establishments. Its sampling frame comes from the establishment lists that state workforce agencies maintain for unemployment-insurance purposes.</p>
+        <p>Each release combines six semiannual panels collected over three years. The May 2025 estimates use panels with reference dates of May 2025, November 2024, May 2024, November 2023, May 2023, and November 2022. Across those three years, the sample covers 1.1 million establishments, and sampled employment accounts for about 55% of total national employment for this release.</p>
+        <p>The response rate for this release was 66.2% of establishments and 67.2% of weighted sampled employment. The relative standard error on the wage estimates in the table runs from 0.4% to 1.2%, and the relative standard error on the employment estimates runs from 0.6% to 2.8%. Annual wages assume a full-time, year-round schedule of 2,080 hours. The release's <a href="https://www.bls.gov/news.release/ocwage.tn.htm" target="_blank" rel="noopener">technical note</a> carries the wage definition, sample, and response rate.</p>
+        <p>A percentile is a boundary inside the occupation. The median is the boundary between the highest-paid 50% and the lowest-paid 50% of people in that occupation, and it says nothing about a career path. The survey does not cover the self-employed, owners and partners in unincorporated firms, household workers, or unpaid family workers. Wage estimates exclude benefits entirely. Industry-level estimates are published at the national level only.</p>
+        <p>The working ranges on this page, the 15% to 25% envelope and the quota test, are Revenue Bench's own working guidance from sales hiring and selection work. They are not survey findings. The OMG figure is OMG's research. The <a href="../sources.html" class="content-link">Revenue Bench sources page</a> lists every figure on the site with its producer, sample, and period.</p>
         <p>Candidate assessment runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group. Revenue Bench does not design, set, benchmark, or approve compensation; the company and its advisers own those decisions.</p>
       </div>
 
@@ -273,7 +481,7 @@
 
       <div class="faq-item">
         <h3>How much should I pay a salesperson in 2026?</h3>
-        <p>Anchor on two numbers: the market rate for the role, from sourced compensation data, your own offer history, and live candidate response, and affordability, using Revenue Bench's working range of 15% to 25% of new revenue as total sales cost. A single published dollar figure cannot price your role without your geography, motion, and deal size attached.</p>
+        <p>The closest federal survey category for a complex-cycle B2B seller is sales representatives, wholesale and manufacturing, technical and scientific products. Its May 2025 median is $104,920, with a 25th-to-75th percentile spread of $75,030 to $158,160. The figure is pay people received, including commission and incentive pay. Target earnings measure a different thing. Anchor the plan on the market rate for the role, using sourced compensation data, the company's offer history, and live candidate response, plus affordability, using Revenue Bench's working range of 15% to 25% of new revenue as total sales cost.</p>
       </div>
 
       <div class="faq-item">
@@ -292,8 +500,18 @@
       </div>
 
       <div class="faq-item">
-        <h3>Where can I find sales compensation benchmark data?</h3>
-        <p>Use published guides from recruiters and compensation platforms for direction, with their sample and date caveats attached, then add your own offer-and-decline history. The live market during a search is the freshest read of what a role costs this quarter.</p>
+        <h3>Which sources should set a sales pay range?</h3>
+        <p>Read them in sequence. The federal wage survey sets the outside range for the occupation. A published earnings benchmark shows what a competitive offer looks like on paper, carrying its sample and date caveats. The company's own offer-and-decline history shows whether this company's package clears the market. Live candidate response during a search gives the freshest read of what the role costs this quarter.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Where can I find sales compensation data with a published sample and method?</h3>
+        <p>The federal wage survey provides it. The May 2025 estimates combine six semiannual panels collected over three years, with a sample of 1.1 million establishments covering about 55% of total national employment, and a response rate of 66.2% of establishments. The estimates are free and public.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is sales compensation benchmark data available by industry?</h3>
+        <p>Yes. The federal survey publishes occupational wage estimates by industry at the national level only, so there is no industry cut for a single city. One occupation code covers unlike businesses, so the same sales-manager code carries a software services manager and a car dealership manager. A business-to-business selling role also spans several industry codes, which narrows the sample without necessarily matching the job. Use the federal survey's own industry estimates with those limits attached.</p>
       </div>
     </div>
 
@@ -343,15 +561,17 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Sales Compensation Benchmarks for 2026","description":"Build sales pay from two anchors, a worked plan ledger, a role-design table, and the sources behind real compensation benchmark data.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-08-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Sales Compensation Benchmarks for 2026","description":"US sales pay by percentile from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-09-16","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How much should I pay a salesperson in 2026?","acceptedAnswer":{"@type":"Answer","text":"Anchor on two numbers: the market rate for the role, from sourced compensation data, your own offer history, and live candidate response, and affordability, using Revenue Bench's working range of 15% to 25% of new revenue as total sales cost. A single published dollar figure cannot price your role without your geography, motion, and deal size attached."}},
+{"@type":"Question","name":"How much should I pay a salesperson in 2026?","acceptedAnswer":{"@type":"Answer","text":"The closest federal survey category for a complex-cycle B2B seller is sales representatives, wholesale and manufacturing, technical and scientific products. Its May 2025 median is $104,920, with a 25th-to-75th percentile spread of $75,030 to $158,160. The figure is pay people received, including commission and incentive pay. Target earnings measure a different thing. Anchor the plan on the market rate for the role, using sourced compensation data, the company's offer history, and live candidate response, plus affordability, using Revenue Bench's working range of 15% to 25% of new revenue as total sales cost."}},
 {"@type":"Question","name":"What is a good base-to-variable mix for sales roles?","acceptedAnswer":{"@type":"Answer","text":"The mix follows what the person directly controls. New-logo roles run the loosest mix on the team; retention, management, and leadership roles carry a higher base share."}},
 {"@type":"Question","name":"How should I set sales quota?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench's working test is that the median performer can meaningfully reach 70% to 80% of plan. That level keeps effort visibly connected to pay and keeps the forecast honest, because a plan most of the team will miss overstates the pipeline."}},
 {"@type":"Question","name":"Should I cap sales commission?","acceptedAnswer":{"@type":"Answer","text":"No. Pay accelerators above 100% of plan. A cap prices the marginal effort of your best performers at zero and tells them when to stop selling."}},
-{"@type":"Question","name":"Where can I find sales compensation benchmark data?","acceptedAnswer":{"@type":"Answer","text":"Use published guides from recruiters and compensation platforms for direction, with their sample and date caveats attached, then add your own offer-and-decline history. The live market during a search is the freshest read of what a role costs this quarter."}}
+{"@type":"Question","name":"Which sources should set a sales pay range?","acceptedAnswer":{"@type":"Answer","text":"Read them in sequence. The federal wage survey sets the outside range for the occupation. A published earnings benchmark shows what a competitive offer looks like on paper, carrying its sample and date caveats. The company's own offer-and-decline history shows whether this company's package clears the market. Live candidate response during a search gives the freshest read of what the role costs this quarter."}},
+{"@type":"Question","name":"Where can I find sales compensation data with a published sample and method?","acceptedAnswer":{"@type":"Answer","text":"The federal wage survey provides it. The May 2025 estimates combine six semiannual panels collected over three years, with a sample of 1.1 million establishments covering about 55% of total national employment, and a response rate of 66.2% of establishments. The estimates are free and public."}},
+{"@type":"Question","name":"Is sales compensation benchmark data available by industry?","acceptedAnswer":{"@type":"Answer","text":"Yes. The federal survey publishes occupational wage estimates by industry at the national level only, so there is no industry cut for a single city. One occupation code covers unlike businesses, so the same sales-manager code carries a software services manager and a car dealership manager. A business-to-business selling role also spans several industry codes, which narrows the sample without necessarily matching the job. Use the federal survey's own industry estimates with those limits attached."}}
 ]}
 </script>
 

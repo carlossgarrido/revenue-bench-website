@@ -31,6 +31,11 @@
 .prose p strong{color:var(--navy);}
 .prose p a,.prose li a,.prose td a{color:var(--gold-deep);border-bottom:1px solid rgba(138,96,20,.32);transition:border-color .18s ease,color .18s ease;}
 .prose p a:hover,.prose li a:hover,.prose td a:hover{color:var(--navy);border-bottom-color:var(--navy);}
+/* .content-link: the site's classed body anchor. Defined here from 2026-09-16 (day 54) because it
+   existed only as an inline rule on four non-guide pages, so on a guide it worked inside .prose by
+   inheritance and rendered invisible anywhere else (a .faq-item, a caption). */
+.content-link{color:var(--navy);font-weight:600;border-bottom:1px solid var(--gold);}
+.bg-navy .content-link{color:var(--gold-light);border-bottom-color:var(--gold-light);}
 .prose ul,.prose ol{margin:6px 0 18px 0;padding-left:0;list-style:none;display:grid;gap:10px;}
 .prose ul li{position:relative;padding-left:24px;font-size:16px;color:var(--ink-mid);line-height:1.6;}
 .prose ul li::before{content:'';position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--gold);}
