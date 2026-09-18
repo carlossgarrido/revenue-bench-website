@@ -58,6 +58,9 @@
   .faq-item{border-top:1px solid var(--line);padding:24px 0;}
   .faq-item:first-child{border-top:0;}
   .faq-item h3{font-size:20px;margin-bottom:8px;}
+  .faq-item .stack-list{margin:12px 0 12px 20px;padding:0;}
+  .faq-item .stack-list li{margin-bottom:10px;padding-left:4px;}
+  .faq-item .stack-list li:last-child{margin-bottom:0;}
   .faq-item p{font-size:15.5px;color:var(--ink-mid);line-height:1.7;}
   .roles-table-wrap{margin-top:32px;border:1px solid rgba(255,255,255,.16);border-radius:16px;overflow:hidden;background:var(--white);}
   .roles-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:14px;line-height:1.55;}
@@ -71,10 +74,26 @@
   .roles-table td:nth-child(3){width:23%;}
   .roles-table td:nth-child(4){width:19%;}
   .roles-table td:last-child{width:23%;color:var(--gold-deep);}
+  .jump-nav{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .jump-nav-links{display:flex;align-items:center;justify-content:center;gap:24px;padding:18px 0;white-space:nowrap;}
+  .jump-nav-links a{color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.04em;border-bottom:1px solid transparent;padding-bottom:2px;}
+  .jump-nav-links a:hover{border-bottom-color:var(--gold);}
+  .stages-table-wrap{margin-top:32px;border:1px solid rgba(255,255,255,.16);border-radius:16px;overflow:hidden;background:var(--white);}
+  .stages-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:14px;line-height:1.55;}
+  .stages-table th,.stages-table td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);}
+  .stages-table th:last-child,.stages-table td:last-child{border-right:0;}
+  .stages-table tbody tr:last-child td{border-bottom:0;}
+  .stages-table thead th{background:var(--parchment);color:var(--ink-soft);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.4;}
+  .stages-table td{color:var(--ink-mid);}
+  .stages-table td:first-child{width:16%;font-weight:600;color:var(--navy);}
+  .stages-table td:nth-child(2){width:24%;}
+  .stages-table td:nth-child(3){width:28%;}
+  .stages-table td:last-child{width:32%;color:var(--gold-deep);}
   .content-link{color:var(--navy);font-weight:600;border-bottom:1px solid var(--gold);}
   .bg-navy .content-link{color:var(--gold-light);border-bottom-color:var(--gold-light);}
   .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   @media(max-width:699px){
+    .jump-nav-links{justify-content:flex-start;flex-wrap:wrap;gap:12px 20px;white-space:normal;}
     .roles-table-wrap{border:0;overflow:visible;background:transparent;}
     .roles-table{table-layout:auto;font-size:15px;}
     .roles-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
@@ -83,6 +102,14 @@
     .roles-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
     .roles-table td:last-child{padding-bottom:0;}
     .roles-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+    .stages-table-wrap{border:0;overflow:visible;background:transparent;}
+    .stages-table{table-layout:auto;font-size:15px;}
+    .stages-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    .stages-table tr{display:block;padding:18px 16px;margin-bottom:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--white);}
+    .stages-table tr:last-child{margin-bottom:0;}
+    .stages-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
+    .stages-table td:last-child{padding-bottom:0;}
+    .stages-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
   }
   .omgband{grid-template-columns:repeat(3,1fr);}
   @media(max-width:920px){.omgband{grid-template-columns:1fr;}.omgband .o{border-right:0;border-bottom:1px solid var(--line);}.omgband .o:last-child{border-bottom:0;}.bg-navy .omgband .o{border-bottom-color:var(--navy-light);}.bg-navy .omgband .o:last-child{border-bottom:0;}}
@@ -114,7 +141,7 @@
       <p class="lead" style="margin:0 0 30px;max-width:620px;">The returns moved, from the deal to the people who run it. For two decades, a good entry multiple and cheap debt did most of the work. That market is gone. What remains is the harder kind of value creation: getting the operating company to sell more, profitably, quarter after quarter. The shortest path to that growth runs through the revenue engine, and the revenue engine runs on the people in the roles. That is what we staff and ramp, across the portfolio.</p>
       <div class="btn-row">
         <a href="contact.html" class="btn btn-navy">Talk to the founders <span class="arrow">&rarr;</span></a>
-        <a href="#playbooks" class="btn btn-ghost">Read the playbooks</a>
+        <a href="#conversations" class="btn btn-ghost">Read the playbooks</a>
       </div>
     </div>
     <div class="reveal">
@@ -127,8 +154,24 @@
   </div>
 </section>
 
+<nav class="jump-nav" aria-label="On this page">
+  <div class="container">
+    <div class="jump-nav-links">
+      <a href="#thesis">The thesis</a>
+      <a href="#buyers">Who this is for</a>
+      <a href="#system">How it runs</a>
+      <a href="#scope">Roles we search</a>
+      <a href="#stages">Stage by stage</a>
+      <a href="#conversations">Playbooks</a>
+      <a href="#research">The evidence shelf</a>
+            <a href="#operators">Founders</a>
+      <a href="#faq">Questions</a>
+    </div>
+  </div>
+</nav>
+
 <!-- THE SHIFT -->
-<section class="section bg-parchment">
+<section class="section bg-parchment" id="thesis">
   <div class="container grid-2" style="align-items:center;gap:56px;">
     <div class="reveal">
       <div class="eyebrow">The shift</div>
@@ -143,7 +186,7 @@
 </section>
 
 <!-- CHOOSE YOUR SEAT -->
-<section class="section bg-cream">
+<section class="section bg-cream" id="buyers">
   <div class="container">
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">Choose your role</div>
@@ -175,7 +218,7 @@
 </section>
 
 <!-- WHAT WE DO FOR PE -->
-<section class="section bg-navy">
+<section class="section bg-navy" id="system">
   <div class="container">
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">What Revenue Bench does for the portfolio</div>
@@ -190,7 +233,7 @@
       <div class="card"><div class="idx">05</div><h3>Replacement guarantee</h3><p>If a hire leaves or is not performing within 90 days, we run the search again at no additional fee. The risk of the hire moves off your plan and onto us.</p></div>
       <div class="card" style="background:var(--navy-mid);border-color:var(--navy-light);"><div class="idx" style="color:var(--gold-light);">&#43;</div><h3 style="color:#fff;">Built by operators</h3><p style="color:rgba(255,255,255,.7);">Founded by people who have built and exited revenue teams in PE-backed companies. We speak EBITDA, hold periods, and exit readiness.</p></div>
     </div>
-    <section class="reveal" style="margin-top:64px;">
+    <section class="reveal" style="margin-top:64px;" id="scope">
       <div class="center maxw-680 mx-auto">
         <div class="eyebrow">What we are engaged for</div>
         <div class="rule"></div>
@@ -247,6 +290,53 @@
       </div>
       <p class="note" style="margin:16px auto 0;text-align:center;color:rgba(255,255,255,.65);">For role design, read <a class="content-link" href="guides/hiring-revenue-operations-and-enablement.html">what a RevOps hire owns and what sales enablement owns</a>. The diligence guide covers <a class="content-link" href="guides/sales-team-due-diligence.html">sales-team due diligence before the deal prices it in</a>. Fee structures for each of these searches are set out in our guide to <a class="content-link" href="guides/sales-recruiter-fees.html">sales recruiter fees and search-risk economics</a>.</p>
     </section>
+    <section class="reveal" style="margin-top:64px;" id="stages">
+      <div class="center maxw-680 mx-auto">
+        <div class="eyebrow">The hold-period stage map</div>
+        <div class="rule"></div>
+        <h2 class="h-lg" style="color:#fff;">When each revenue-talent decision arrives in the deal</h2>
+        <p class="lead" style="margin-top:14px;color:#fff;">The scope table answers which role. This table answers when in the deal the question arrives and what Revenue Bench does about it at that point.</p>
+      </div>
+      <div class="stages-table-wrap">
+        <table class="stages-table" id="stages-table">
+          <caption class="vh">Revenue-talent decisions across the private equity deal and hold period, with the work Revenue Bench performs at each stage.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Deal stage</th>
+              <th scope="col">The revenue-talent decision</th>
+              <th scope="col">What waiting costs</th>
+              <th scope="col">What Revenue Bench does at this stage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Deal stage">Before the deal closes</td>
+              <td data-label="The revenue-talent decision">Whether the sales team the model assumes can produce the plan, and what it would cost to fix if it cannot.</td>
+              <td data-label="What waiting costs">A gap found after close is the buyer's cost, and it is carried against a plan that was priced without it.</td>
+              <td data-label="What Revenue Bench does at this stage">No search runs at this stage. Between the LOI and close, with management's consent, a sales-specific assessment of the target's team can run inside the announced diligence workstream, as set out in the <a class="content-link" href="guides/sales-team-due-diligence.html">sales-team due diligence guide</a>. A search begins on a mandate after close.</td>
+            </tr>
+            <tr>
+              <td data-label="Deal stage">Close to day 100</td>
+              <td data-label="The revenue-talent decision">Whether the leadership in place is the leadership the value-creation plan needs, and which seats are filled first.</td>
+              <td data-label="What waiting costs">The hold-period clock starts at close, and a sales-leader search restarted from scratch costs two quarters before a shortlist exists. The <a class="content-link" href="guides/first-100-days-portfolio-sales-team.html">first 100 days</a> set the sequence.</td>
+              <td data-label="What Revenue Bench does at this stage">Matches the role against the pre-vetted bench first, on the timings set out in the <a class="content-link" href="#scope">scope table above</a>. Each leadership placement carries the assessment, the operator screen, the training before day one, the 90-day onboarding coach and the 90-day replacement guarantee.</td>
+            </tr>
+            <tr>
+              <td data-label="Deal stage">A leader departs mid-hold</td>
+              <td data-label="The revenue-talent decision">Whether to run the search while the incumbent remains, and how to keep it contained.</td>
+              <td data-label="What waiting costs">The role is empty against a plan that assumed it was filled, and an exposed search inside a portfolio company reaches the board, the team and the market faster than a replacement arrives.</td>
+              <td data-label="What Revenue Bench does at this stage">Runs the search as a <a class="content-link" href="guides/confidential-vp-of-sales-replacement.html">confidential replacement</a> where the incumbent remains, against a written success profile.</td>
+            </tr>
+            <tr>
+              <td data-label="Deal stage">Approaching exit</td>
+              <td data-label="The revenue-talent decision">Whether the revenue team is one a buyer can diligence without finding a dependency.</td>
+              <td data-label="What waiting costs">A team whose revenue depends on one or two people gives a buyer an exposure to quantify, and the arithmetic is published in the <a class="content-link" href="guides/sales-team-due-diligence.html">sales-team due diligence guide</a>. Building the depth that removes it takes longer than a diligence window.</td>
+              <td data-label="What Revenue Bench does at this stage">Runs searches that add depth in the roles the revenue base depends on, on the same bench and the same assessment standard. The <a class="content-link" href="guides/building-a-sales-talent-bench.html">bench guide</a> sets out how a company maps its own coverage against growth, attrition, concentration and succession.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
     <div class="reveal" style="margin-top:44px;">
       <p class="lead" style="color:#fff;text-align:center;max-width:680px;margin:0 auto;">Diligence stress-tested the contracts, the churn, and the concentration. It never tested the sales team, the asset your value-creation plan leans on hardest.</p>
       <div class="omgband">
@@ -260,7 +350,7 @@
 </section>
 
 <!-- PLAYBOOKS -->
-<section class="section bg-cream" id="playbooks">
+<section class="section bg-cream" id="conversations">
   <div class="container">
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">Playbooks</div>
@@ -279,7 +369,7 @@
 </section>
 
 <!-- EVIDENCE SHELF -->
-<section class="section bg-navy">
+<section class="section bg-navy" id="research">
   <div class="container">
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">The evidence shelf</div>
@@ -298,7 +388,7 @@
 </section>
 
 <!-- FOUNDERS -->
-<section class="section bg-cream" id="founders">
+<section class="section bg-cream" id="operators">
   <div class="container grid-2" style="gap:48px;align-items:start;">
     <div class="reveal">
       <div class="eyebrow">Who is behind this</div>
@@ -313,7 +403,7 @@
           <div class="portrait" style="width:84px;height:84px;margin-bottom:0;flex-shrink:0;"><img src="assets/carlos.jpg" alt="Carlos Garrido"></div>
           <div><div class="fname" style="font-size:23px;">Carlos Garrido</div><div class="ftitle" style="margin:4px 0 0;">Co-Founder · Sales Systems &amp; Performance</div></div>
         </div>
-        <p style="font-size:14px;color:var(--ink-mid);line-height:1.65;margin-top:16px;">An investment banker and growth advisor for more than 30 years. Founder of Performance Edge, owner of Sandler Miami, and a Vistage Chair, with more than a decade installing sales systems for founder-led and PE-backed companies. $3B+ in client revenue supported, $6B+ in client exits.</p>
+        <p style="font-size:14px;color:var(--ink-mid);line-height:1.65;margin-top:16px;">An investment banker and growth advisor for more than 30 years. Founder of Performance Edge, owner of Sandler Miami, and a Vistage Chair, with more than a decade installing sales systems for founder-led and PE-backed companies. $3B+ in client revenue, $6B+ in client exits.</p>
       </div>
       <div class="founder-card" style="padding:28px 28px;">
         <div style="display:flex;gap:18px;align-items:center;">
@@ -327,7 +417,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="section bg-parchment">
+<section class="section bg-parchment" id="faq">
   <div class="container maxw-680 mx-auto">
     <div class="center reveal">
       <div class="eyebrow">Questions PE leaders ask</div>
@@ -335,9 +425,18 @@
       <h2 class="h-lg">Talent and value creation, answered.</h2>
     </div>
     <div class="reveal" style="margin-top:40px;">
-      <div class="faq-item"><h3>How does sales talent create value in a PE-backed company?</h3><p>With multiple expansion gone, returns now come from operational EBITDA growth, and the fastest operational lever is the revenue engine. The right sales leadership and reps, ramped quickly and held to a system, move pipeline, conversion, and forecast accuracy, the metrics that lift both earnings and the exit multiple.</p></div>
+      <div class="faq-item">
+        <h3>How does sales talent create value in a PE-backed company?</h3>
+        <p>In Revenue Bench's operator experience, the three effects stack. Each one adds to the others.</p>
+        <ol class="stack-list">
+          <li><strong>Bigger earnings at exit.</strong> Faster growth lifts the absolute EBITDA the company is sold on.</li>
+          <li><strong>A higher multiple on those earnings.</strong> A faster-growing business is underwritten at a different multiple than a flat one, and the multiple effect can rival the earnings effect in dollar terms.</li>
+          <li><strong>More debt retired before exit.</strong> A faster-growing business generates more cash through the hold, and every dollar of buyout debt retired lands on equity.</li>
+        </ol>
+        <p>This is why the revenue engine is the operational lever a fund reaches for first when multiple expansion is gone.</p>
+      </div>
       <div class="faq-item"><h3>How fast can you fill a revenue role in a portfolio company?</h3><p>Because we keep a pre-vetted bench, a shortlist often exists before the search formally begins. That removes the two-quarter restart most portcos absorb when they recruit a sales leader from scratch.</p></div>
-      <div class="faq-item"><h3>How do you reduce the risk of a mis-hire?</h3><p>Selection runs on objective assessment rather than interviews alone: candidates for selling and sales-leadership roles are evaluated with Objective Management Group, and every candidate is screened by an operator for fit. Each placement then includes a 90-day onboarding coach, and a replacement guarantee if the hire is not working within that window.</p></div>
+      <div class="faq-item"><h3>How do you reduce the risk of a mis-hire in a portfolio company?</h3><p>Selection runs on objective assessment rather than interviews alone: candidates for selling and sales-leadership roles are evaluated with Objective Management Group, and every candidate is screened by an operator for fit. Each placement then includes a 90-day onboarding coach, and a replacement guarantee if the hire is not working within that window.</p></div>
       <div class="faq-item"><h3>Can you work across an entire portfolio?</h3><p>Yes. We standardize the assessment bar and the talent bench at fund level, then deploy per company, so an operating partner gets one comparable standard for revenue talent across every portco.</p></div>
       <div class="faq-item"><h3>We need to show EBITDA improvement at a portfolio company within 90 days. Who can we bring in?</h3><p>Inside 90 days the realistic move is a leader and a small number of sellers. A rebuilt team takes longer than one quarter. Because we keep a pre-vetted bench, a shortlist commonly reaches you 2 to 4 weeks from kickoff when the bench covers the role, which leaves the rest of the quarter for ramp. The 90-day onboarding coach is what compresses the ramp. Anything that depends on a full team turning over will land in the following quarter.</p></div>
       <div class="faq-item"><h3>How quickly can you find a sales leader after a VP of Sales departure at a portfolio company?</h3><p>A shortlist commonly arrives 2 to 4 weeks from kickoff when the bench covers the role. Where the incumbent is still in seat, or the departure is not yet known inside the company, the search runs <a class="content-link" href="guides/confidential-vp-of-sales-replacement.html">confidentially</a> under a written containment protocol.</p></div>
@@ -381,16 +480,16 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","@id":"https://revenuebench.io/private-equity","url":"https://revenuebench.io/private-equity","name":"Hire a Revenue Leader for a PE-Backed Portfolio Company | Revenue Bench","description":"Revenue Bench recruits, assesses, and ramps the sellers and sales leaders a value-creation plan assumes, across a PE-backed portfolio. Sales-specific assessment, training on arrival, a 90-day onboarding coach, and a 90-day replacement guarantee.","inLanguage":"en-US","datePublished":"2026-06-14","dateModified":"2026-09-15","publisher":{"@id":"https://revenuebench.io/#organization"},"about":{"@id":"https://revenuebench.io/#organization"},"primaryImageOfPage":"https://revenuebench.io/og/private-equity.png"}
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://revenuebench.io/private-equity","url":"https://revenuebench.io/private-equity","name":"Hire a Revenue Leader for a PE-Backed Portfolio Company | Revenue Bench","description":"Revenue Bench recruits, assesses, and ramps the sellers and sales leaders a value-creation plan assumes, across a PE-backed portfolio. Sales-specific assessment, training on arrival, a 90-day onboarding coach, and a 90-day replacement guarantee.","inLanguage":"en-US","datePublished":"2026-06-14","dateModified":"2026-09-18","publisher":{"@id":"https://revenuebench.io/#organization"},"about":{"@id":"https://revenuebench.io/#organization"},"primaryImageOfPage":"https://revenuebench.io/og/private-equity.png"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","@id":"https://revenuebench.io/private-equity#service","url":"https://revenuebench.io/private-equity","name":"Sales and revenue leadership recruitment for PE-backed portfolio companies","serviceType":"Sales recruitment","provider":{"@id":"https://revenuebench.io/#organization"},"areaServed":{"@type":"Country","name":"United States"},"audience":{"@type":"BusinessAudience","name":"Private equity firms and their portfolio companies"},"description":"Revenue Bench recruits, assesses and ramps sellers, sales leaders and the revenue operations layer for private-equity-backed portfolio companies across the United States, with sales-specific assessment, operator screening, a 90-day onboarding coach and a 90-day replacement guarantee."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How does sales talent create value in a PE-backed company?","acceptedAnswer":{"@type":"Answer","text":"With multiple expansion gone, returns now come from operational EBITDA growth, and the fastest operational lever is the revenue engine. The right sales leadership and reps, ramped quickly and held to a system, move pipeline, conversion, and forecast accuracy, the metrics that lift both earnings and the exit multiple."}},
+{"@type":"Question","name":"How does sales talent create value in a PE-backed company?","acceptedAnswer":{"@type":"Answer","text":"In Revenue Bench's operator experience, the three effects stack. First, bigger earnings at exit: faster growth lifts the absolute EBITDA the company is sold on. Second, a higher multiple on those earnings: a faster-growing business is underwritten at a different multiple than a flat one, and the multiple effect can rival the earnings effect in dollar terms. Third, more debt retired before exit: a faster-growing business generates more cash through the hold, and every dollar of buyout debt retired lands on equity. This is why the revenue engine is the operational lever a fund reaches for first when multiple expansion is gone."}},
 {"@type":"Question","name":"How fast can you fill a revenue role in a portfolio company?","acceptedAnswer":{"@type":"Answer","text":"Because we keep a pre-vetted bench, a shortlist often exists before the search formally begins. That removes the two-quarter restart most portcos absorb when they recruit a sales leader from scratch."}},
-{"@type":"Question","name":"How do you reduce the risk of a mis-hire?","acceptedAnswer":{"@type":"Answer","text":"Selection runs on objective assessment rather than interviews alone: candidates for selling and sales-leadership roles are evaluated with Objective Management Group, and every candidate is screened by an operator for fit. Each placement then includes a 90-day onboarding coach, and a replacement guarantee if the hire is not working within that window."}},
+{"@type":"Question","name":"How do you reduce the risk of a mis-hire in a portfolio company?","acceptedAnswer":{"@type":"Answer","text":"Selection runs on objective assessment rather than interviews alone: candidates for selling and sales-leadership roles are evaluated with Objective Management Group, and every candidate is screened by an operator for fit. Each placement then includes a 90-day onboarding coach, and a replacement guarantee if the hire is not working within that window."}},
 {"@type":"Question","name":"Can you work across an entire portfolio?","acceptedAnswer":{"@type":"Answer","text":"Yes. We standardize the assessment bar and the talent bench at fund level, then deploy per company, so an operating partner gets one comparable standard for revenue talent across every portco."}},
 {"@type":"Question","name":"We need to show EBITDA improvement at a portfolio company within 90 days. Who can we bring in?","acceptedAnswer":{"@type":"Answer","text":"Inside 90 days the realistic move is a leader and a small number of sellers. A rebuilt team takes longer than one quarter. Because we keep a pre-vetted bench, a shortlist commonly reaches you 2 to 4 weeks from kickoff when the bench covers the role, which leaves the rest of the quarter for ramp. The 90-day onboarding coach is what compresses the ramp. Anything that depends on a full team turning over will land in the following quarter."}},
 {"@type":"Question","name":"How quickly can you find a sales leader after a VP of Sales departure at a portfolio company?","acceptedAnswer":{"@type":"Answer","text":"A shortlist commonly arrives 2 to 4 weeks from kickoff when the bench covers the role. Where the incumbent is still in seat, or the departure is not yet known inside the company, the search runs confidentially under a written containment protocol."}},
