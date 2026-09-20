@@ -89,6 +89,19 @@
   .stages-table td:nth-child(2){width:24%;}
   .stages-table td:nth-child(3){width:28%;}
   .stages-table td:last-child{width:32%;color:var(--gold-deep);}
+  .boundary-table-wrap{margin-top:32px;border:1px solid rgba(255,255,255,.16);border-radius:16px;overflow:hidden;background:var(--white);}
+  .boundary-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:14px;line-height:1.55;}
+  .boundary-table th,.boundary-table td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);}
+  .boundary-table th:last-child,.boundary-table td:last-child{border-right:0;}
+  .boundary-table tbody tr:last-child td{border-bottom:0;}
+  .boundary-table thead th{background:var(--parchment);color:var(--ink-soft);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.4;}
+  .boundary-table td{color:var(--ink-mid);}
+  .boundary-table th:first-child,.boundary-table td:first-child{width:26%;}
+  .boundary-table td:first-child{font-weight:600;color:var(--navy);}
+  .boundary-table th:nth-child(2),.boundary-table td:nth-child(2){width:12%;}
+  .boundary-table th:nth-child(3),.boundary-table td:nth-child(3){width:40%;}
+  .boundary-table th:last-child,.boundary-table td:last-child{width:22%;}
+  .boundary-table td:last-child{color:var(--gold-deep);}
   .content-link{color:var(--navy);font-weight:600;border-bottom:1px solid var(--gold);}
   .bg-navy .content-link{color:var(--gold-light);border-bottom-color:var(--gold-light);}
   .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -110,6 +123,14 @@
     .stages-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
     .stages-table td:last-child{padding-bottom:0;}
     .stages-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+    .boundary-table-wrap{border:0;overflow:visible;background:transparent;}
+    .boundary-table{table-layout:auto;font-size:15px;}
+    .boundary-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    .boundary-table tr{display:block;padding:18px 16px;margin-bottom:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--white);}
+    .boundary-table tr:last-child{margin-bottom:0;}
+    .boundary-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
+    .boundary-table td:last-child{padding-bottom:0;}
+    .boundary-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
   }
   .omgband{grid-template-columns:repeat(3,1fr);}
   @media(max-width:920px){.omgband{grid-template-columns:1fr;}.omgband .o{border-right:0;border-bottom:1px solid var(--line);}.omgband .o:last-child{border-bottom:0;}.bg-navy .omgband .o{border-bottom-color:var(--navy-light);}.bg-navy .omgband .o:last-child{border-bottom:0;}}
@@ -162,9 +183,10 @@
       <a href="#system">How it runs</a>
       <a href="#scope">Roles we search</a>
       <a href="#stages">Stage by stage</a>
+      <a href="#provider-scope">Provider scope</a>
       <a href="#conversations">Playbooks</a>
       <a href="#research">The evidence shelf</a>
-            <a href="#operators">Founders</a>
+      <a href="#operators">Founders</a>
       <a href="#faq">Questions</a>
     </div>
   </div>
@@ -337,6 +359,72 @@
         </table>
       </div>
     </section>
+    <section class="reveal" style="margin-top:64px;" id="provider-scope">
+      <div class="center maxw-680 mx-auto">
+        <div class="eyebrow">Provider scope</div>
+        <div class="rule"></div>
+        <h2 class="h-lg" style="color:#fff;">What Revenue Bench supplies for a portfolio company</h2>
+        <p class="lead" style="margin-top:14px;color:#fff;">Revenue Bench searches for full-time revenue roles. It does not place fractional or interim sales leaders, turnaround CEOs, or post-merger integration leads. The table answers each request a buyer arrives with, row by row, with where the detail sits.</p>
+      </div>
+      <div class="boundary-table-wrap">
+        <table class="boundary-table" id="provider-scope-table">
+          <caption class="vh">Revenue Bench provider scope for private equity buyers, giving the answer for each requested role or assessment, what the answer means, and where the detail sits.</caption>
+          <thead>
+            <tr>
+              <th scope="col">What you are looking for</th>
+              <th scope="col">Revenue Bench</th>
+              <th scope="col">What that means</th>
+              <th scope="col">Where the detail sits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="What you are looking for">A full-time CRO or VP of Sales for a portfolio company</td>
+              <td data-label="Revenue Bench"><strong>Yes</strong></td>
+              <td data-label="What that means">An engaged, retained-style search against a written success profile, run confidentially where the incumbent is still in seat. Candidates carry the Objective Management Group sales-leadership assessment plus a screen by an operator who has built sales teams.</td>
+              <td data-label="Where the detail sits"><a class="content-link" href="#scope">The roles we search</a></td>
+            </tr>
+            <tr>
+              <td data-label="What you are looking for">A full-time sales manager, or sellers from SDR through enterprise AE</td>
+              <td data-label="Revenue Bench"><strong>Yes</strong></td>
+              <td data-label="What that means">Matched against the pre-vetted bench first, then targeted search where the bench does not cover the role.</td>
+              <td data-label="Where the detail sits"><a class="content-link" href="#scope">The roles we search</a></td>
+            </tr>
+            <tr>
+              <td data-label="What you are looking for">A permanent revenue-operations, enablement, customer success or GTM hire</td>
+              <td data-label="Revenue Bench"><strong>Yes</strong></td>
+              <td data-label="What that means">The same six-stage search process. These roles run as targeted search and are screened by an operator against the written profile. The OMG assessment is built for selling and sales-leadership roles and is not applied to these hires.</td>
+              <td data-label="Where the detail sits"><a class="content-link" href="guides/hiring-revenue-operations-and-enablement.html">What a RevOps hire owns</a></td>
+            </tr>
+            <tr>
+              <td data-label="What you are looking for">An assessment of a target company's sales team before the deal closes</td>
+              <td data-label="Revenue Bench"><strong>Yes</strong></td>
+              <td data-label="What that means">An assessment, run between the LOI and close with management's consent, inside the announced diligence workstream. The search itself begins on a mandate after close.</td>
+              <td data-label="Where the detail sits"><a class="content-link" href="guides/sales-team-due-diligence.html">Sales-team due diligence</a></td>
+            </tr>
+            <tr>
+              <td data-label="What you are looking for">A fractional or interim sales leader</td>
+              <td data-label="Revenue Bench"><strong>No</strong></td>
+              <td data-label="What that means">Revenue Bench places full-time revenue leaders and does not place fractional or interim leaders. The eight conditions under which a fractional engagement is the wrong instrument, and the four under which it is the right one, are set out in the guide, which also states the interest Revenue Bench has in that answer.</td>
+              <td data-label="Where the detail sits"><a class="content-link" href="guides/fractional-sales-leadership-wrong-call.html">When fractional is the wrong call</a></td>
+            </tr>
+            <tr>
+              <td data-label="What you are looking for">A turnaround CEO</td>
+              <td data-label="Revenue Bench"><strong>No</strong></td>
+              <td data-label="What that means">Revenue Bench does not place turnaround CEOs. A turnaround mandate covers the company itself, which sits outside the revenue-role searches Revenue Bench runs.</td>
+              <td data-label="Where the detail sits">Stated here. No other page on this site carries it.</td>
+            </tr>
+            <tr>
+              <td data-label="What you are looking for">A post-merger integration lead</td>
+              <td data-label="Revenue Bench"><strong>No</strong></td>
+              <td data-label="What that means">Revenue Bench does not place post-merger integration leads. Inside a transaction its work is the pre-close sales-team assessment above and the search for permanent revenue roles after close.</td>
+              <td data-label="Where the detail sits">Stated here. No other page on this site carries it.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin:16px auto 0;text-align:center;color:rgba(255,255,255,.65);">The searches in this table run on the six-stage process published in <a class="content-link" href="how-it-works.html">how Revenue Bench works</a>.</p>
+    </section>
     <div class="reveal" style="margin-top:44px;">
       <p class="lead" style="color:#fff;text-align:center;max-width:680px;margin:0 auto;">Diligence stress-tested the contracts, the churn, and the concentration. It never tested the sales team, the asset your value-creation plan leans on hardest.</p>
       <div class="omgband">
@@ -441,6 +529,7 @@
       <div class="faq-item"><h3>We need to show EBITDA improvement at a portfolio company within 90 days. Who can we bring in?</h3><p>Inside 90 days the realistic move is a leader and a small number of sellers. A rebuilt team takes longer than one quarter. Because we keep a pre-vetted bench, a shortlist commonly reaches you 2 to 4 weeks from kickoff when the bench covers the role, which leaves the rest of the quarter for ramp. The 90-day onboarding coach is what compresses the ramp. Anything that depends on a full team turning over will land in the following quarter.</p></div>
       <div class="faq-item"><h3>How quickly can you find a sales leader after a VP of Sales departure at a portfolio company?</h3><p>A shortlist commonly arrives 2 to 4 weeks from kickoff when the bench covers the role. Where the incumbent is still in seat, or the departure is not yet known inside the company, the search runs <a class="content-link" href="guides/confidential-vp-of-sales-replacement.html">confidentially</a> under a written containment protocol.</p></div>
       <div class="faq-item"><h3>Do you recruit revenue operations and enablement, or only sellers and sales leaders?</h3><p>Both. Customer Success, Sales Enablement, RevOps and GTM roles run through the same search process. The difference is the evidence: the Objective Management Group assessment is built for selling and sales-leadership roles, so those hires are screened by an operator against the written profile. Read more about <a class="content-link" href="guides/hiring-revenue-operations-and-enablement.html#portfolio">the revenue operations layer in a portfolio company</a>.</p></div>
+      <div class="faq-item"><h3>Does Revenue Bench place turnaround CEOs or post-merger integration leads?</h3><p>No to both. Revenue Bench does not place turnaround CEOs or post-merger integration leads. Its searches are for full-time revenue roles, and the row-by-row boundary is in <a class="content-link" href="#provider-scope">the provider scope table</a>. Inside a transaction it runs a sales-specific assessment of a target's team before close, with management's consent, and the search for permanent revenue roles after close.</p></div>
     </div>
   </div>
 </section>
@@ -480,7 +569,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","@id":"https://revenuebench.io/private-equity","url":"https://revenuebench.io/private-equity","name":"Hire a Revenue Leader for a PE-Backed Portfolio Company | Revenue Bench","description":"Revenue Bench recruits, assesses, and ramps the sellers and sales leaders a value-creation plan assumes, across a PE-backed portfolio. Sales-specific assessment, training on arrival, a 90-day onboarding coach, and a 90-day replacement guarantee.","inLanguage":"en-US","datePublished":"2026-06-14","dateModified":"2026-09-18","publisher":{"@id":"https://revenuebench.io/#organization"},"about":{"@id":"https://revenuebench.io/#organization"},"primaryImageOfPage":"https://revenuebench.io/og/private-equity.png"}
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://revenuebench.io/private-equity","url":"https://revenuebench.io/private-equity","name":"Hire a Revenue Leader for a PE-Backed Portfolio Company | Revenue Bench","description":"Revenue Bench recruits, assesses, and ramps the sellers and sales leaders a value-creation plan assumes, across a PE-backed portfolio. Sales-specific assessment, training on arrival, a 90-day onboarding coach, and a 90-day replacement guarantee.","inLanguage":"en-US","datePublished":"2026-06-14","dateModified":"2026-09-20","publisher":{"@id":"https://revenuebench.io/#organization"},"about":{"@id":"https://revenuebench.io/#organization"},"primaryImageOfPage":"https://revenuebench.io/og/private-equity.png"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","@id":"https://revenuebench.io/private-equity#service","url":"https://revenuebench.io/private-equity","name":"Sales and revenue leadership recruitment for PE-backed portfolio companies","serviceType":"Sales recruitment","provider":{"@id":"https://revenuebench.io/#organization"},"areaServed":{"@type":"Country","name":"United States"},"audience":{"@type":"BusinessAudience","name":"Private equity firms and their portfolio companies"},"description":"Revenue Bench recruits, assesses and ramps sellers, sales leaders and the revenue operations layer for private-equity-backed portfolio companies across the United States, with sales-specific assessment, operator screening, a 90-day onboarding coach and a 90-day replacement guarantee."}
@@ -493,7 +582,8 @@
 {"@type":"Question","name":"Can you work across an entire portfolio?","acceptedAnswer":{"@type":"Answer","text":"Yes. We standardize the assessment bar and the talent bench at fund level, then deploy per company, so an operating partner gets one comparable standard for revenue talent across every portco."}},
 {"@type":"Question","name":"We need to show EBITDA improvement at a portfolio company within 90 days. Who can we bring in?","acceptedAnswer":{"@type":"Answer","text":"Inside 90 days the realistic move is a leader and a small number of sellers. A rebuilt team takes longer than one quarter. Because we keep a pre-vetted bench, a shortlist commonly reaches you 2 to 4 weeks from kickoff when the bench covers the role, which leaves the rest of the quarter for ramp. The 90-day onboarding coach is what compresses the ramp. Anything that depends on a full team turning over will land in the following quarter."}},
 {"@type":"Question","name":"How quickly can you find a sales leader after a VP of Sales departure at a portfolio company?","acceptedAnswer":{"@type":"Answer","text":"A shortlist commonly arrives 2 to 4 weeks from kickoff when the bench covers the role. Where the incumbent is still in seat, or the departure is not yet known inside the company, the search runs confidentially under a written containment protocol."}},
-{"@type":"Question","name":"Do you recruit revenue operations and enablement, or only sellers and sales leaders?","acceptedAnswer":{"@type":"Answer","text":"Both. Customer Success, Sales Enablement, RevOps and GTM roles run through the same search process. The difference is the evidence: the Objective Management Group assessment is built for selling and sales-leadership roles, so those hires are screened by an operator against the written profile. Read more about the revenue operations layer in a portfolio company."}}
+{"@type":"Question","name":"Do you recruit revenue operations and enablement, or only sellers and sales leaders?","acceptedAnswer":{"@type":"Answer","text":"Both. Customer Success, Sales Enablement, RevOps and GTM roles run through the same search process. The difference is the evidence: the Objective Management Group assessment is built for selling and sales-leadership roles, so those hires are screened by an operator against the written profile. Read more about the revenue operations layer in a portfolio company."}},
+{"@type":"Question","name":"Does Revenue Bench place turnaround CEOs or post-merger integration leads?","acceptedAnswer":{"@type":"Answer","text":"No to both. Revenue Bench does not place turnaround CEOs or post-merger integration leads. Its searches are for full-time revenue roles, and the row-by-row boundary is in the provider scope table on this page. Inside a transaction it runs a sales-specific assessment of a target's team before close, with management's consent, and the search for permanent revenue roles after close."}}
 ]}
 </script>
 
