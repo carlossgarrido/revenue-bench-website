@@ -65,18 +65,22 @@
   .inherited-table td:nth-child(2){width:26%;}
   .inherited-table td:nth-child(3){width:27%;font-weight:600;color:var(--gold-deep);}
   .inherited-table td:last-child{width:27%;color:var(--ink-soft);}
+  .supply-table td:first-child{width:21%;}
+  .supply-table td:nth-child(2){width:26%;}
+  .supply-table td:nth-child(3){width:26%;font-weight:600;color:var(--gold-deep);}
+  .supply-table td:last-child{width:27%;color:var(--ink-soft);}
   @media(max-width:640px){
     .table-scroll{width:calc(100vw - 24px);}
     .author-box{align-items:flex-start;}
   }
   @media(max-width:760px){
     .table-scroll{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #scope-table,#maturity-table,#inherited-table{min-width:0;font-size:15px;}
-    #scope-table thead,#maturity-table thead,#inherited-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #scope-table tr,#maturity-table tr,#inherited-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
-    #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child{border-bottom:0;}
-    #scope-table td,#maturity-table td,#inherited-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
-    #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #scope-table,#maturity-table,#inherited-table,#supply-table{min-width:0;font-size:15px;}
+    #scope-table thead,#maturity-table thead,#inherited-table thead,#supply-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+    #scope-table tr,#maturity-table tr,#inherited-table tr,#supply-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+    #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child,#supply-table tr:last-child{border-bottom:0;}
+    #scope-table td,#maturity-table td,#inherited-table td,#supply-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
+    #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child,#supply-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
     #scope-table td:nth-child(2)::before{content:"Before a dedicated hire: ";}
     #scope-table td:nth-child(3)::before{content:"Condition: ";}
     #scope-table td:nth-child(4)::before{content:"Owner and failure pattern: ";}
@@ -86,8 +90,11 @@
     #inherited-table td:nth-child(2)::before{content:"Usually indicates: ";}
     #inherited-table td:nth-child(3)::before{content:"The move: ";}
     #inherited-table td:nth-child(4)::before{content:"Settles it: ";}
-    #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
-    #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child{padding-bottom:0;}
+    #supply-table td:nth-child(2)::before{content:"Buying: ";}
+    #supply-table td:nth-child(3)::before{content:"Answers to: ";}
+    #supply-table td:nth-child(4)::before{content:"Cannot settle: ";}
+    #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before,#supply-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child,#supply-table td:last-child{padding-bottom:0;}
   }
 </style>
 </head>
@@ -112,7 +119,7 @@
     <div class="eyebrow">Hiring guides</div>
     <h1>Hiring RevOps and sales enablement: scope and sequence</h1>
     <p class="deck"><strong>The revenue operations layer gives an established sales motion reliable data, process control and planning.</strong> Sales enablement makes the selling method teachable and keeps new sellers improving after onboarding. Either discipline earns a dedicated hire only after the work it operates or enables exists and has outgrown its current owner.</p>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 11, 2026</span><span class="dot"></span><span>9 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 11, 2026</span><span class="dot"></span><span>12 min read</span></div>
   </div>
 </section>
 
@@ -127,6 +134,7 @@
         <li>The next hire should follow the operating gap already affecting management, forecasting, onboarding, or seller performance.</li>
         <li>Neither function replaces a seller or a sales leader, and a combined role should split when either discipline demands sustained attention.</li>
         <li>A portfolio company usually inherits this layer, so the first question after close is what kind of gap the finding names. A gap in authority, governance, or sequence is closed before capacity is bought.</li>
+        <li>Where the capability comes from is a separate decision from whether it is needed. The routes differ most in who the capability answers to, which decides whose call holds when a definition is contested.</li>
       </ul>
     </div>
 
@@ -139,6 +147,7 @@
         <li><a href="#sequence-errors">Common sequencing errors</a></li>
         <li><a href="#portfolio">The layer in a portfolio company</a></li>
         <li><a href="#inherited">The inherited-layer diagnostic</a></li>
+        <li><a href="#supply">Who supplies the RevOps layer in a portfolio company</a></li>
         <li><a href="#boundary">The boundary with sales hiring</a></li>
         <li><a href="#questions">Questions about RevOps and enablement hiring</a></li>
       </ol>
@@ -353,6 +362,67 @@
 
       <p>An operating partner running this decision across several portfolio companies gets a comparable answer only if the scope definition and selection standard are set once at fund level and applied per company. The <a href="../private-equity.html" class="content-link">portfolio hiring route</a> should follow that shared standard.</p>
 
+      <div class="eyebrow" style="margin-top:44px;">Decision artifact</div>
+      <h2 id="supply" style="margin-top:10px;">Who supplies the RevOps layer in a portfolio company</h2>
+      <p>The routes below are not interchangeable. For a private equity operating partner deciding where the capability comes from, the largest difference between them is who it answers to. Cost is visible on a budget line. The reporting line determines whose decision holds when a definition is contested, and who carries the standard once the immediate work is finished.</p>
+      <p>Pick the route against the gap the diagnostic above identified. A route that supplies capacity does not close a gap in authority. Where nobody in the company has the standing to hold its definitions, adding someone to maintain the system leaves that question open, and the company has now paid for the answer to a different one.</p>
+
+      <div class="table-scroll" role="region" aria-label="Routes for supplying revenue operations and sales enablement capability to a portfolio company" tabindex="0">
+        <table class="sequence-table supply-table" id="supply-table">
+          <caption class="vh">Sources of revenue operations and sales enablement capability for a portfolio company, giving what each route supplies, who it answers to, and what it cannot settle.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Where the capability comes from</th>
+              <th scope="col">What the company is buying</th>
+              <th scope="col">Who it answers to</th>
+              <th scope="col">What this route cannot settle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A permanent hire inside the portfolio company</td>
+              <td>Continuous ownership of the definitions and the standard, with company-specific knowledge accruing across the hold period.</td>
+              <td>The company’s own commercial reporting line.</td>
+              <td>It cannot close a gap in sequence. A hire made before the selling method is settled inherits a discipline that has nothing to operate on.</td>
+            </tr>
+            <tr>
+              <td>A fund-level operating partner or portfolio operations team</td>
+              <td>A standard set once and applied across companies, with pattern recognition from companies that have already run the decision.</td>
+              <td>The fund, through its own operating or investment committee.</td>
+              <td>It cannot supply presence. The definitions still need an owner inside the company on the day they are contested.</td>
+            </tr>
+            <tr>
+              <td>A shared resource held centrally and deployed across companies</td>
+              <td>Coverage of several companies from one seat, at a lower cost per company than a permanent hire in each.</td>
+              <td>The fund, with each portfolio company effectively an internal client.</td>
+              <td>It cannot carry deep company-specific knowledge into every decision, and competing calls on its time are resolved above the company.</td>
+            </tr>
+            <tr>
+              <td>A project engagement with an outside specialist firm</td>
+              <td>A defined build delivered to an agreed scope and date: a CRM rebuild, a forecast model, an onboarding system.</td>
+              <td>A statement of work, and the sponsor who signed it.</td>
+              <td>It cannot hold a standard after the engagement ends. What was built still needs an owner, which is a separate decision the project does not make.</td>
+            </tr>
+            <tr>
+              <td>An internal promotion, usually a seller or an analyst already in the company</td>
+              <td>Company knowledge from day one, and a shorter path to being trusted by the people whose numbers the role governs.</td>
+              <td>The company’s commercial line, and often the person’s former manager.</td>
+              <td>It cannot supply the systems judgment the role needs if the company has never had the discipline, and old relationships can blunt the authority the role requires.</td>
+            </tr>
+            <tr>
+              <td>No separate owner, with the work left inside the sales leader’s remit</td>
+              <td>No purchase, with the work covered from the sales leader’s existing hours.</td>
+              <td>Nobody separately. It sits inside the sales leader’s existing accountability.</td>
+              <td>It cannot settle ownership. When the discipline fails there is no owner to hold and no capacity to add, because the hours came out of a week already committed.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">More than one route is often in use at once. The routes are unranked here because the right one follows the gap, and budget alone cannot establish the authority the work requires. A route chosen to supply capacity while the gap is authority leaves the company paying for the capacity and still holding the gap. The routes, and the column that reads them by reporting line, are Revenue Bench’s own framework, drawn from its search and assessment work. The framework carries no external statistic, and no independent measure of these routes’ outcomes is published here.</p>
+
+      <p>Revenue Bench recruits revenue operations and sales enablement roles into permanent, full-time seats through its searches across the revenue engine, run as targeted search and screened by an operator against the written profile, as the <a href="../private-equity.html#provider-scope" class="content-link">provider scope table</a> sets out. Where a company’s answer is one of the other routes in this table, Revenue Bench has published no position on it. The Objective Management Group assessment is reserved for selling and sales-leadership roles.</p>
+      <p>Revenue Bench is paid when a role is filled, and the first route in this table is the one it sells.</p>
+
       <h2 id="boundary">The boundary with sales hiring</h2>
       <p>RevOps and sales enablement are operating roles rather than selling roles, so they should be selected against the work and judgment their disciplines require. Revenue Bench recruits across the revenue engine, including enablement and RevOps roles, and applies the sales-specific assessment through co-founder Steve Swanston’s firm, Swanston Growth Advisors, a Certified Partner of Objective Management Group, where the instrument fits the job: selling and sales leadership roles.</p>
       <p>The distinction matters because assessment validity follows the job being measured. The <a href="sales-assessment-vs-interview.html">sales assessment and interview serve different selection questions</a>, while an operations or enablement search needs evidence tied to systems judgment, process design, teaching ability, stakeholder management, and work samples appropriate to that role.</p>
@@ -391,7 +461,7 @@
 
       <div class="faq-item">
         <h3>Where do private equity operating partners find revenue operations and enablement talent for portfolio companies?</h3>
-        <p>Both routes are in use and they answer different questions. A fund can place the capability inside the portfolio company as a hire, or hold it centrally as a shared resource deployed across companies. Revenue Bench recruits these roles as part of its searches across the revenue engine through the <a href="../private-equity.html" class="content-link">portfolio route</a>. Selection uses role-appropriate evidence. The sales assessment is reserved for selling and sales leadership roles, for the reason set out in <a href="#boundary" class="content-link">the boundary with sales hiring</a>.</p>
+        <p>Several routes are in use and the <a href="#supply" class="content-link">supply routes table</a> sets out what each one supplies, who it answers to, and what it leaves unsettled: a permanent hire inside the company, a fund-level operating partner or operations team, a shared resource held centrally, a project engagement with an outside specialist firm, an internal promotion, and the work absorbed by the sales leader. Revenue Bench recruits the permanent roles as part of its searches across the revenue engine through the <a href="../private-equity.html" class="content-link">portfolio route</a>. Selection uses role-appropriate evidence. The sales assessment is reserved for selling and sales leadership roles, for the reason set out in <a href="#boundary" class="content-link">the boundary with sales hiring</a>.</p>
       </div>
 
       <div class="faq-item">
@@ -401,7 +471,7 @@
 
       <div class="faq-item">
         <h3>Does a portfolio company need a revenue operations partner or a revenue operations hire?</h3>
-        <p>A hire provides continuous ownership of the standard, with company-specific knowledge accruing over time. A shared or external resource covers more companies and carries less of that company-specific knowledge into each decision. The deciding factor is whether the definitions need an owner who is present when they are contested.</p>
+        <p>Several routes are in use, and the choice is wider than a partner set against a hire. The <a href="#supply" class="content-link">supply routes table</a> covers permanent hires, fund-level teams, shared resources held centrally, specialist project engagements, internal promotions, and the work absorbed by the sales leader. The deciding factor is whether the definitions need an owner who is present when they are contested. Pick against the gap the diagnostic identifies, because added capacity does not establish who holds the standard.</p>
       </div>
     </div>
 
@@ -462,7 +532,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Hiring RevOps and Sales Enablement: Scope and Sequence","description":"What a RevOps hire owns, what sales enablement owns, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","name":"Revenue Bench"}},"publisher":{"@type":"Organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-11","dateModified":"2026-09-15","image":"https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Hiring RevOps and Sales Enablement: Scope and Sequence","description":"What a RevOps hire owns, what sales enablement owns, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","name":"Revenue Bench"}},"publisher":{"@type":"Organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-11","dateModified":"2026-09-21","image":"https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"}}
 </script>
 
 <script type="application/ld+json">
@@ -472,9 +542,9 @@
 {"@type":"Question","name":"What should a sales leader hand off to a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"A sales leader should hand off CRM governance, reporting mechanics, forecast administration, territory and quota administration, process documentation control, and tool administration under policies the leader approves. The leader retains ownership of the sales number, coaching, performance decisions, strategy, and the commercial judgment behind forecast calls."}},
 {"@type":"Question","name":"When does a dedicated sales enablement hire make sense?","acceptedAnswer":{"@type":"Answer","text":"A dedicated sales enablement hire makes sense when the company has a settled selling method and useful content, yet onboarding, skills reinforcement, and content adoption have outgrown the sales leader’s ability to run them consistently. The signal is repeated variation in how sellers learn and apply an established method, rather than the absence of a method."}},
 {"@type":"Question","name":"Can one person run both revenue operations and enablement?","acceptedAnswer":{"@type":"Answer","text":"Early on, one operations-minded hire often carries both disciplines, and the split comes when either discipline needs full-time attention. The tension is practical: RevOps rewards precision in systems and governance, while enablement requires teaching judgment and reinforcing behavior long after the training ends. A combined role becomes fragile when its owner must choose which discipline receives care."}},
-{"@type":"Question","name":"Where do private equity operating partners find revenue operations and enablement talent for portfolio companies?","acceptedAnswer":{"@type":"Answer","text":"Both routes are in use and they answer different questions. A fund can place the capability inside the portfolio company as a hire, or hold it centrally as a shared resource deployed across companies. Revenue Bench recruits these roles as part of its searches across the revenue engine through the portfolio route. Selection uses role-appropriate evidence. The sales assessment is reserved for selling and sales leadership roles, for the reason set out in the boundary with sales hiring."}},
+{"@type":"Question","name":"Where do private equity operating partners find revenue operations and enablement talent for portfolio companies?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use and the supply routes table sets out what each one supplies, who it answers to, and what it leaves unsettled: a permanent hire inside the company, a fund-level operating partner or operations team, a shared resource held centrally, a project engagement with an outside specialist firm, an internal promotion, and the work absorbed by the sales leader. Revenue Bench recruits the permanent roles as part of its searches across the revenue engine through the portfolio route. Selection uses role-appropriate evidence. The sales assessment is reserved for selling and sales leadership roles, for the reason set out in the boundary with sales hiring."}},
 {"@type":"Question","name":"Should a portfolio company hire revenue operations inside the first 100 days?","acceptedAnswer":{"@type":"Answer","text":"There is no default case for the hire. The answer depends on which finding in the diagnostic above is true. Where the finding is an authority or governance gap, assigning ownership and moving the function under the commercial line is the better first move and costs no headcount. Where the finding is genuine capacity, the sequencing argument in this guide still applies and is not suspended by the hold period. The portfolio sales team guide sets the post-close sequence for the leader and team decisions that come before it. Revenue Bench is paid when a role is filled, so publishing the findings where the right answer is to assign ownership and hire nobody runs against that interest."}},
-{"@type":"Question","name":"Does a portfolio company need a revenue operations partner or a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"A hire provides continuous ownership of the standard, with company-specific knowledge accruing over time. A shared or external resource covers more companies and carries less of that company-specific knowledge into each decision. The deciding factor is whether the definitions need an owner who is present when they are contested."}}
+{"@type":"Question","name":"Does a portfolio company need a revenue operations partner or a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use, and the choice is wider than a partner set against a hire. The supply routes table covers permanent hires, fund-level teams, shared resources held centrally, specialist project engagements, internal promotions, and the work absorbed by the sales leader. The deciding factor is whether the definitions need an owner who is present when they are contested. Pick against the gap the diagnostic identifies, because added capacity does not establish who holds the standard."}}
 ]}
 </script>
 
