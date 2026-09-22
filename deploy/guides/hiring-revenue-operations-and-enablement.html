@@ -74,25 +74,8 @@
     .author-box{align-items:flex-start;}
   }
   @media(max-width:760px){
-    .table-scroll{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #scope-table,#maturity-table,#inherited-table,#supply-table{min-width:0;font-size:15px;}
-    #scope-table thead,#maturity-table thead,#inherited-table thead,#supply-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #scope-table tr,#maturity-table tr,#inherited-table tr,#supply-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child,#supply-table tr:last-child{border-bottom:0;}
-    #scope-table td,#maturity-table td,#inherited-table td,#supply-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
     #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child,#supply-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #scope-table td:nth-child(2)::before{content:"Before a dedicated hire: ";}
-    #scope-table td:nth-child(3)::before{content:"Condition: ";}
-    #scope-table td:nth-child(4)::before{content:"Owner and failure pattern: ";}
-    #maturity-table td:nth-child(2)::before{content:"Revenue Operations: ";}
-    #maturity-table td:nth-child(3)::before{content:"Sales Enablement: ";}
-    #maturity-table td:nth-child(4)::before{content:"In practice: ";}
-    #inherited-table td:nth-child(2)::before{content:"Usually indicates: ";}
-    #inherited-table td:nth-child(3)::before{content:"The move: ";}
-    #inherited-table td:nth-child(4)::before{content:"Settles it: ";}
-    #supply-table td:nth-child(2)::before{content:"Buying: ";}
-    #supply-table td:nth-child(3)::before{content:"Answers to: ";}
-    #supply-table td:nth-child(4)::before{content:"Cannot settle: ";}
     #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before,#supply-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
     #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child,#supply-table td:last-child{padding-bottom:0;}
   }
@@ -163,8 +146,8 @@
       <h2 id="scope" style="margin-top:10px;">Ownership by type of work</h2>
       <p>The ownership decision begins with the work already happening. A dedicated role becomes defensible when an observable failure shows that the founder, sales leader, or informal owner can no longer carry the discipline without weakening another responsibility.</p>
 
-      <div class="table-scroll" role="region" aria-label="Scope split for revenue operations and sales enablement" tabindex="0">
-        <table class="sequence-table scope-table" id="scope-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Scope split for revenue operations and sales enablement" tabindex="0">
+        <table class="rb-table sequence-table scope-table" id="scope-table">
           <caption class="vh">Ownership conditions for revenue operations and sales enablement work</caption>
           <thead>
             <tr>
@@ -177,51 +160,51 @@
           <tbody>
             <tr>
               <td>Pipeline data and forecasting</td>
-              <td>The founder or sales leader defines stages, inspects deals, and assembles the forecast.</td>
-              <td>The sales leader spends forecast meetings reconciling definitions and records instead of testing deal judgment and coaching sellers.</td>
-              <td>RevOps owns data governance and forecast mechanics. On the wrong desk, the forecast becomes a recurring argument about inputs rather than a management instrument.</td>
+              <td data-label="Before a dedicated hire">The founder or sales leader defines stages, inspects deals, and assembles the forecast.</td>
+              <td data-label="Condition">The sales leader spends forecast meetings reconciling definitions and records instead of testing deal judgment and coaching sellers.</td>
+              <td data-label="Owner and failure pattern">RevOps owns data governance and forecast mechanics. On the wrong desk, the forecast becomes a recurring argument about inputs rather than a management instrument.</td>
             </tr>
             <tr>
               <td>CRM ownership and hygiene</td>
-              <td>The sales leader sets required fields and expectations, with administrative help where available.</td>
-              <td>Sellers use different fields for the same decision, reports require manual repair, and managers cannot trace a number to its source.</td>
-              <td>RevOps owns the CRM standard and its administration. On the wrong desk, cleanup becomes an occasional campaign and the data decays between requests.</td>
+              <td data-label="Before a dedicated hire">The sales leader sets required fields and expectations, with administrative help where available.</td>
+              <td data-label="Condition">Sellers use different fields for the same decision, reports require manual repair, and managers cannot trace a number to its source.</td>
+              <td data-label="Owner and failure pattern">RevOps owns the CRM standard and its administration. On the wrong desk, cleanup becomes an occasional campaign and the data decays between requests.</td>
             </tr>
             <tr>
               <td>Territory and quota administration</td>
-              <td>The founder or sales leader sets coverage rules with finance input.</td>
-              <td>Ownership disputes, exceptions, and account changes consume management attention and produce competing versions of assignments.</td>
-              <td>RevOps owns administration under leadership policy. On the wrong desk, exceptions become informal precedents and coverage decisions lose consistency.</td>
+              <td data-label="Before a dedicated hire">The founder or sales leader sets coverage rules with finance input.</td>
+              <td data-label="Condition">Ownership disputes, exceptions, and account changes consume management attention and produce competing versions of assignments.</td>
+              <td data-label="Owner and failure pattern">RevOps owns administration under leadership policy. On the wrong desk, exceptions become informal precedents and coverage decisions lose consistency.</td>
             </tr>
             <tr>
               <td>Process documentation</td>
-              <td>The sales leader documents the motion with input from sellers who apply it.</td>
-              <td>Stage meanings vary by seller, handoffs depend on memory, and managers coach from different process definitions.</td>
-              <td>RevOps owns process governance. On the wrong desk, the source of truth fragments across training files, CRM settings, and manager notes.</td>
+              <td data-label="Before a dedicated hire">The sales leader documents the motion with input from sellers who apply it.</td>
+              <td data-label="Condition">Stage meanings vary by seller, handoffs depend on memory, and managers coach from different process definitions.</td>
+              <td data-label="Owner and failure pattern">RevOps owns process governance. On the wrong desk, the source of truth fragments across training files, CRM settings, and manager notes.</td>
             </tr>
             <tr>
               <td>Onboarding delivery</td>
-              <td>The founder, sales leader, or experienced seller teaches the method from current materials and customer examples.</td>
-              <td>New sellers receive different instruction depending on who is available, and managers cannot tell which skills or knowledge have been demonstrated.</td>
-              <td>Enablement owns delivery against a documented <a href="90-day-sales-onboarding-plan.html">sales onboarding plan</a>. On the wrong desk, onboarding becomes system orientation without enough selling practice.</td>
+              <td data-label="Before a dedicated hire">The founder, sales leader, or experienced seller teaches the method from current materials and customer examples.</td>
+              <td data-label="Condition">New sellers receive different instruction depending on who is available, and managers cannot tell which skills or knowledge have been demonstrated.</td>
+              <td data-label="Owner and failure pattern">Enablement owns delivery against a documented <a href="90-day-sales-onboarding-plan.html">sales onboarding plan</a>. On the wrong desk, onboarding becomes system orientation without enough selling practice.</td>
             </tr>
             <tr>
               <td>Ongoing skills training</td>
-              <td>The sales leader coaches from deal reviews, call observation, and the company’s selling method.</td>
-              <td>The same skill gaps recur across coaching conversations, yet managers lack a shared curriculum and reinforcement process.</td>
-              <td>Enablement owns the learning system in partnership with sales leadership. On the wrong desk, training becomes disconnected from observed seller behavior.</td>
+              <td data-label="Before a dedicated hire">The sales leader coaches from deal reviews, call observation, and the company’s selling method.</td>
+              <td data-label="Condition">The same skill gaps recur across coaching conversations, yet managers lack a shared curriculum and reinforcement process.</td>
+              <td data-label="Owner and failure pattern">Enablement owns the learning system in partnership with sales leadership. On the wrong desk, training becomes disconnected from observed seller behavior.</td>
             </tr>
             <tr>
               <td>Sales content</td>
-              <td>Sellers, marketing, and the sales leader create material in response to active deals.</td>
-              <td>Sellers recreate common material, approved content is hard to find, and use in the sales process varies by person.</td>
-              <td>Enablement owns sales use, access, and reinforcement. On the wrong desk, content is measured by production rather than adoption in selling work.</td>
+              <td data-label="Before a dedicated hire">Sellers, marketing, and the sales leader create material in response to active deals.</td>
+              <td data-label="Condition">Sellers recreate common material, approved content is hard to find, and use in the sales process varies by person.</td>
+              <td data-label="Owner and failure pattern">Enablement owns sales use, access, and reinforcement. On the wrong desk, content is measured by production rather than adoption in selling work.</td>
             </tr>
             <tr>
               <td>Tool selection and administration</td>
-              <td>The founder or sales leader chooses tools, with technical and finance input as needed.</td>
-              <td>Tools duplicate workflows, ownership is unclear, and changes create conflicting fields, reports, or seller instructions.</td>
-              <td>RevOps owns requirements and administration under commercial policy. On the wrong desk, software choices follow local preferences instead of process needs.</td>
+              <td data-label="Before a dedicated hire">The founder or sales leader chooses tools, with technical and finance input as needed.</td>
+              <td data-label="Condition">Tools duplicate workflows, ownership is unclear, and changes create conflicting fields, reports, or seller instructions.</td>
+              <td data-label="Owner and failure pattern">RevOps owns requirements and administration under commercial policy. On the wrong desk, software choices follow local preferences instead of process needs.</td>
             </tr>
           </tbody>
         </table>
@@ -232,8 +215,8 @@
       <h2 id="sequence" style="margin-top:10px;">How the disciplines mature</h2>
       <p>The sequence begins with founder judgment, moves through repeatable management practices, and ends with specialized functions supporting a broader organization. The level name describes the operating model, while each capability cell describes the maturity expected inside it.</p>
 
-      <div class="table-scroll" role="region" aria-label="Revenue operations and sales enablement maturity sequence" tabindex="0">
-        <table class="sequence-table maturity-table" id="maturity-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Revenue operations and sales enablement maturity sequence" tabindex="0">
+        <table class="rb-table sequence-table maturity-table" id="maturity-table">
           <caption class="vh">Maturity sequence for revenue operations and sales enablement</caption>
           <thead>
             <tr>
@@ -246,39 +229,39 @@
           <tbody>
             <tr>
               <td>Founder-Led</td>
-              <td>Basic CRM (optional)</td>
-              <td>Domain Expertise</td>
-              <td>The founder holds the process knowledge, records only what helps manage active work, and teaches from direct customer experience.</td>
+              <td data-label="Revenue Operations">Basic CRM (optional)</td>
+              <td data-label="Sales Enablement">Domain Expertise</td>
+              <td data-label="In practice">The founder holds the process knowledge, records only what helps manage active work, and teaches from direct customer experience.</td>
             </tr>
             <tr>
               <td>Founder + First Rep</td>
-              <td>CRM discipline starting</td>
-              <td>Informal founder training</td>
-              <td>The founder begins turning personal judgment into shared fields, stage definitions, examples, and coaching language another seller can apply.</td>
+              <td data-label="Revenue Operations">CRM discipline starting</td>
+              <td data-label="Sales Enablement">Informal founder training</td>
+              <td data-label="In practice">The founder begins turning personal judgment into shared fields, stage definitions, examples, and coaching language another seller can apply.</td>
             </tr>
             <tr>
               <td>Founder-Led Team</td>
-              <td>CRM + reporting</td>
-              <td>Onboarding program</td>
-              <td>Common reporting exposes whether sellers follow the same process, while onboarding gives each new hire a consistent path into the method.</td>
+              <td data-label="Revenue Operations">CRM + reporting</td>
+              <td data-label="Sales Enablement">Onboarding program</td>
+              <td data-label="In practice">Common reporting exposes whether sellers follow the same process, while onboarding gives each new hire a consistent path into the method.</td>
             </tr>
             <tr>
               <td>First Sales Manager</td>
-              <td>RevOps function emerging</td>
-              <td>Formal enablement starting</td>
-              <td>The manager needs dependable definitions and a repeatable teaching system because ad hoc administration and training now displace coaching.</td>
+              <td data-label="Revenue Operations">RevOps function emerging</td>
+              <td data-label="Sales Enablement">Formal enablement starting</td>
+              <td data-label="In practice">The manager needs dependable definitions and a repeatable teaching system because ad hoc administration and training now displace coaching.</td>
             </tr>
             <tr>
               <td>Sales Organization</td>
-              <td>Dedicated RevOps team</td>
-              <td>Dedicated enablement team</td>
-              <td>Specialists maintain the operating and learning systems under sales leadership policy, allowing managers to focus on performance and decisions.</td>
+              <td data-label="Revenue Operations">Dedicated RevOps team</td>
+              <td data-label="Sales Enablement">Dedicated enablement team</td>
+              <td data-label="In practice">Specialists maintain the operating and learning systems under sales leadership policy, allowing managers to focus on performance and decisions.</td>
             </tr>
             <tr>
               <td>Multi-Engine</td>
-              <td>Advanced analytics + planning</td>
-              <td>Continuous learning system</td>
-              <td>Planning and learning adapt across distinct selling motions while preserving common definitions, standards, and management visibility.</td>
+              <td data-label="Revenue Operations">Advanced analytics + planning</td>
+              <td data-label="Sales Enablement">Continuous learning system</td>
+              <td data-label="In practice">Planning and learning adapt across distinct selling motions while preserving common definitions, standards, and management visibility.</td>
             </tr>
           </tbody>
         </table>
@@ -307,8 +290,8 @@
       <h2 id="inherited" style="margin-top:10px;">The inherited-layer diagnostic</h2>
       <p>Read the inherited layer through what diligence finds at close. Each finding identifies the type of gap and the move it supports during the remaining hold period.</p>
 
-      <div class="table-scroll" role="region" aria-label="Diagnostic for an inherited revenue operations and sales enablement layer" tabindex="0">
-        <table class="sequence-table inherited-table" id="inherited-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Diagnostic for an inherited revenue operations and sales enablement layer" tabindex="0">
+        <table class="rb-table sequence-table inherited-table" id="inherited-table">
           <caption class="vh">Post-close diagnostic for an inherited revenue operations and sales enablement layer</caption>
           <thead>
             <tr>
@@ -321,39 +304,39 @@
           <tbody>
             <tr>
               <td>Reporting exists and forecast calls are still argued</td>
-              <td>The data is published without governance because nobody owns the definitions. The gap is authority. Capacity is not the issue.</td>
-              <td>Assign ownership of the definitions before adding headcount.</td>
-              <td>Read consecutive forecast packs against the CRM and check whether a stage keeps the same meaning from pack to pack.</td>
+              <td data-label="Usually indicates">The data is published without governance because nobody owns the definitions. The gap is authority. Capacity is not the issue.</td>
+              <td data-label="The move">Assign ownership of the definitions before adding headcount.</td>
+              <td data-label="Settles it">Read consecutive forecast packs against the CRM and check whether a stage keeps the same meaning from pack to pack.</td>
             </tr>
             <tr>
               <td>A CRM with clean fields and no named owner</td>
-              <td>The layer was bought as a tool and was never scoped as a function. The gap is authority.</td>
-              <td>Scope the function and name the owner. Then judge whether the work supports a dedicated hire or a portion of one.</td>
-              <td>Ask who last changed a stage definition, and on whose authority.</td>
+              <td data-label="Usually indicates">The layer was bought as a tool and was never scoped as a function. The gap is authority.</td>
+              <td data-label="The move">Scope the function and name the owner. Then judge whether the work supports a dedicated hire or a portion of one.</td>
+              <td data-label="Settles it">Ask who last changed a stage definition, and on whose authority.</td>
             </tr>
             <tr>
               <td>An enablement library with no settled selling method</td>
-              <td>Content production ran ahead of the selling method. The gap is sequence.</td>
-              <td>Defer the enablement hire. The selling method is a leadership deliverable, and enablement cannot supply it.</td>
-              <td>Have managers describe the qualification standard separately and compare their answers.</td>
+              <td data-label="Usually indicates">Content production ran ahead of the selling method. The gap is sequence.</td>
+              <td data-label="The move">Defer the enablement hire. The selling method is a leadership deliverable, and enablement cannot supply it.</td>
+              <td data-label="Settles it">Have managers describe the qualification standard separately and compare their answers.</td>
             </tr>
             <tr>
               <td>One owner carrying both disciplines</td>
-              <td>The combined role has outgrown itself. The gap is capacity.</td>
-              <td>Split on the discipline that is failing. The <a href="#scope">ownership conditions</a> earlier on this page identify which one.</td>
-              <td>Check which of the disciplines has gone untouched for a quarter.</td>
+              <td data-label="Usually indicates">The combined role has outgrown itself. The gap is capacity.</td>
+              <td data-label="The move">Split on the discipline that is failing. The <a href="#scope">ownership conditions</a> earlier on this page identify which one.</td>
+              <td data-label="Settles it">Check which of the disciplines has gone untouched for a quarter.</td>
             </tr>
             <tr>
               <td>No layer, with the sales leader absorbing the work</td>
-              <td>The gap is capacity at the leadership level.</td>
-              <td>Decide what the remaining hold period needs more: the leader’s management time returned or additional selling capacity. These are different purchases with different payback periods.</td>
-              <td>Measure how much of the leader’s week goes to administration.</td>
+              <td data-label="Usually indicates">The gap is capacity at the leadership level.</td>
+              <td data-label="The move">Decide what the remaining hold period needs more: the leader’s management time returned or additional selling capacity. These are different purchases with different payback periods.</td>
+              <td data-label="Settles it">Measure how much of the leader’s week goes to administration.</td>
             </tr>
             <tr>
               <td>A layer reporting outside the commercial line</td>
-              <td>The function enforces a standard different from the one applied to the sales leader. The gap is governance.</td>
-              <td>Move the function under the commercial reporting line before judging the person in the role.</td>
-              <td>Establish whose approval a stage-definition change requires today.</td>
+              <td data-label="Usually indicates">The function enforces a standard different from the one applied to the sales leader. The gap is governance.</td>
+              <td data-label="The move">Move the function under the commercial reporting line before judging the person in the role.</td>
+              <td data-label="Settles it">Establish whose approval a stage-definition change requires today.</td>
             </tr>
           </tbody>
         </table>
@@ -367,8 +350,8 @@
       <p>The routes below are not interchangeable. For a private equity operating partner deciding where the capability comes from, the largest difference between them is who it answers to. Cost is visible on a budget line. The reporting line determines whose decision holds when a definition is contested, and who carries the standard once the immediate work is finished.</p>
       <p>Pick the route against the gap the diagnostic above identified. A route that supplies capacity does not close a gap in authority. Where nobody in the company has the standing to hold its definitions, adding someone to maintain the system leaves that question open, and the company has now paid for the answer to a different one.</p>
 
-      <div class="table-scroll" role="region" aria-label="Routes for supplying revenue operations and sales enablement capability to a portfolio company" tabindex="0">
-        <table class="sequence-table supply-table" id="supply-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Routes for supplying revenue operations and sales enablement capability to a portfolio company" tabindex="0">
+        <table class="rb-table sequence-table supply-table" id="supply-table">
           <caption class="vh">Sources of revenue operations and sales enablement capability for a portfolio company, giving what each route supplies, who it answers to, and what it cannot settle.</caption>
           <thead>
             <tr>
@@ -381,39 +364,39 @@
           <tbody>
             <tr>
               <td>A permanent hire inside the portfolio company</td>
-              <td>Continuous ownership of the definitions and the standard, with company-specific knowledge accruing across the hold period.</td>
-              <td>The company’s own commercial reporting line.</td>
-              <td>It cannot close a gap in sequence. A hire made before the selling method is settled inherits a discipline that has nothing to operate on.</td>
+              <td data-label="Buying">Continuous ownership of the definitions and the standard, with company-specific knowledge accruing across the hold period.</td>
+              <td data-label="Answers to">The company’s own commercial reporting line.</td>
+              <td data-label="Cannot settle">It cannot close a gap in sequence. A hire made before the selling method is settled inherits a discipline that has nothing to operate on.</td>
             </tr>
             <tr>
               <td>A fund-level operating partner or portfolio operations team</td>
-              <td>A standard set once and applied across companies, with pattern recognition from companies that have already run the decision.</td>
-              <td>The fund, through its own operating or investment committee.</td>
-              <td>It cannot supply presence. The definitions still need an owner inside the company on the day they are contested.</td>
+              <td data-label="Buying">A standard set once and applied across companies, with pattern recognition from companies that have already run the decision.</td>
+              <td data-label="Answers to">The fund, through its own operating or investment committee.</td>
+              <td data-label="Cannot settle">It cannot supply presence. The definitions still need an owner inside the company on the day they are contested.</td>
             </tr>
             <tr>
               <td>A shared resource held centrally and deployed across companies</td>
-              <td>Coverage of several companies from one seat, at a lower cost per company than a permanent hire in each.</td>
-              <td>The fund, with each portfolio company effectively an internal client.</td>
-              <td>It cannot carry deep company-specific knowledge into every decision, and competing calls on its time are resolved above the company.</td>
+              <td data-label="Buying">Coverage of several companies from one seat, at a lower cost per company than a permanent hire in each.</td>
+              <td data-label="Answers to">The fund, with each portfolio company effectively an internal client.</td>
+              <td data-label="Cannot settle">It cannot carry deep company-specific knowledge into every decision, and competing calls on its time are resolved above the company.</td>
             </tr>
             <tr>
               <td>A project engagement with an outside specialist firm</td>
-              <td>A defined build delivered to an agreed scope and date: a CRM rebuild, a forecast model, an onboarding system.</td>
-              <td>A statement of work, and the sponsor who signed it.</td>
-              <td>It cannot hold a standard after the engagement ends. What was built still needs an owner, which is a separate decision the project does not make.</td>
+              <td data-label="Buying">A defined build delivered to an agreed scope and date: a CRM rebuild, a forecast model, an onboarding system.</td>
+              <td data-label="Answers to">A statement of work, and the sponsor who signed it.</td>
+              <td data-label="Cannot settle">It cannot hold a standard after the engagement ends. What was built still needs an owner, which is a separate decision the project does not make.</td>
             </tr>
             <tr>
               <td>An internal promotion, usually a seller or an analyst already in the company</td>
-              <td>Company knowledge from day one, and a shorter path to being trusted by the people whose numbers the role governs.</td>
-              <td>The company’s commercial line, and often the person’s former manager.</td>
-              <td>It cannot supply the systems judgment the role needs if the company has never had the discipline, and old relationships can blunt the authority the role requires.</td>
+              <td data-label="Buying">Company knowledge from day one, and a shorter path to being trusted by the people whose numbers the role governs.</td>
+              <td data-label="Answers to">The company’s commercial line, and often the person’s former manager.</td>
+              <td data-label="Cannot settle">It cannot supply the systems judgment the role needs if the company has never had the discipline, and old relationships can blunt the authority the role requires.</td>
             </tr>
             <tr>
               <td>No separate owner, with the work left inside the sales leader’s remit</td>
-              <td>No purchase, with the work covered from the sales leader’s existing hours.</td>
-              <td>Nobody separately. It sits inside the sales leader’s existing accountability.</td>
-              <td>It cannot settle ownership. When the discipline fails there is no owner to hold and no capacity to add, because the hours came out of a week already committed.</td>
+              <td data-label="Buying">No purchase, with the work covered from the sales leader’s existing hours.</td>
+              <td data-label="Answers to">Nobody separately. It sits inside the sales leader’s existing accountability.</td>
+              <td data-label="Cannot settle">It cannot settle ownership. When the discipline fails there is no owner to hold and no capacity to add, because the hours came out of a week already committed.</td>
             </tr>
           </tbody>
         </table>

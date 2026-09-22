@@ -105,17 +105,7 @@
   section[id]{scroll-margin-top:90px;}
   @media(max-width:1170px){
     .toc-inline ol{grid-template-columns:1fr;}
-    .tablewrap{border:0;overflow-x:visible;}
-    .datatable{min-width:0;font-size:15px;}
-    .datatable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .datatable tbody tr{display:block;padding:18px 0;border-bottom:1px solid var(--line);}
     .datatable tbody tr:last-child{border-bottom:0;}
-    .datatable td{display:block;width:auto!important;padding:0 0 10px;border:0;}
-    .datatable th[scope="row"]{display:block;width:auto!important;font-size:18px;padding:0 0 12px;border:0;color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;line-height:1.35;}
-    #provenance-table td:nth-child(2)::before{content:'Who produced it: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #provenance-table td:nth-child(3)::before{content:'Sample and period: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #provenance-table td:nth-child(4)::before{content:'The figures drawn from it: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #provenance-table td:nth-child(5)::before{content:'What it cannot be used to say: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
     .datatable td:last-child{padding-bottom:0;}
   }
   @media(max-width:620px){
@@ -183,8 +173,8 @@
       <p>The Objective Management Group rows carry one fact in common: that group produced the figures and sells the assessment they describe, so they are its own published data rather than independent peer-reviewed research.</p>
     </div>
 
-    <div class="tablewrap" role="region" aria-label="Revenue Bench provenance index" tabindex="0">
-      <table class="datatable" id="provenance-table">
+    <div class="rb-table-wrap tablewrap" role="region" aria-label="Revenue Bench provenance index" tabindex="0">
+      <table class="rb-table datatable" id="provenance-table">
         <caption class="vh">Every source behind a figure published on revenuebench.io, with the party that produced it, the sample and period, the headline figures drawn from it, with the page that publishes the full set, and what it cannot be used to say. Revenue Bench's own engagement results and the founders' records sit on the track record page.</caption>
         <thead>
           <tr>
@@ -198,220 +188,220 @@
         <tbody>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.shrm.org/about/press-room/shrm-releases-2025-benchmarking-reports--how-does-your-organizat" target="_blank" rel="noopener">SHRM, 2025 Benchmarking Survey, Recruiting report</a></th>
-            <td>SHRM, a membership body for human resources professionals, which sells the full benchmarking reports to its members.</td>
-            <td>2,371 SHRM members responded to an electronically fielded survey of a random sample of active members, conducted between January 9 and March 3, 2025. The data are not weighted, members holding a vice president or higher position were deliberately oversampled, and respondents were not required to answer every metric, so the sample behind an individual figure varies.</td>
-            <td>Only 20% of organizations track quality of hire; and average cost per hire of $5,475 for a nonexecutive hire against $35,879 for an executive hire. Published on: <a class="content-link" href="guides/sales-recruiter-vs-in-house.html">Sales recruiter vs hiring in-house</a>.</td>
-            <td>What any single company spends or measures, and anything sales-specific. The respondents are SHRM members reporting on their own organizations rather than a random sample of employers, and the figures are self-reported.</td>
+            <td data-label="Who produced it">SHRM, a membership body for human resources professionals, which sells the full benchmarking reports to its members.</td>
+            <td data-label="Sample and period">2,371 SHRM members responded to an electronically fielded survey of a random sample of active members, conducted between January 9 and March 3, 2025. The data are not weighted, members holding a vice president or higher position were deliberately oversampled, and respondents were not required to answer every metric, so the sample behind an individual figure varies.</td>
+            <td data-label="The figures drawn from it">Only 20% of organizations track quality of hire; and average cost per hire of $5,475 for a nonexecutive hire against $35,879 for an executive hire. Published on: <a class="content-link" href="guides/sales-recruiter-vs-in-house.html">Sales recruiter vs hiring in-house</a>.</td>
+            <td data-label="What it cannot be used to say">What any single company spends or measures, and anything sales-specific. The respondents are SHRM members reporting on their own organizations rather than a random sample of employers, and the figures are self-reported.</td>
           </tr>
           <tr>
             <th scope="row">DePaul University's Center for Sales Leadership, 2011-2012 Sales Effectiveness Survey</th>
-            <td>DePaul University's Center for Sales Leadership, a university research center.</td>
-            <td>435 B2B sales organizations. 2011 data. The report is no longer served at its original address and survives on the Internet Archive.</td>
-            <td>The average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded; and 33% of all sales turnover happening in the first year of tenure. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>, and other guides.</td>
-            <td>The 33% figure counts a share of total turnover and never a share of hires. The study has not been repeated in that form.</td>
+            <td data-label="Who produced it">DePaul University's Center for Sales Leadership, a university research center.</td>
+            <td data-label="Sample and period">435 B2B sales organizations. 2011 data. The report is no longer served at its original address and survives on the Internet Archive.</td>
+            <td data-label="The figures drawn from it">The average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded; and 33% of all sales turnover happening in the first year of tenure. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>, and other guides.</td>
+            <td data-label="What it cannot be used to say">The 33% figure counts a share of total turnover and never a share of hires. The study has not been repeated in that form.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://ecommons.luc.edu/business_facpubs/104/" target="_blank" rel="noopener">Dow Scott and Thomas D. McMullen, "Current Thinking on Counteroffers", WorldatWork Journal, volume 26 number 3, Fall 2017</a></th>
-            <td>Two academic authors publishing in the WorldatWork Journal, with the survey administered by Korn Ferry Hay Group.</td>
-            <td>120 rewards and human resources professionals, surveyed in April 2017.</td>
-            <td>3% have a formal counteroffer policy, 84% decide case by case, and 73% rate their own counteroffer practices not effective or marginally effective. The full set of counteroffer-practice figures from the same survey, including the frequency, retention-impression and relationship findings, is published on <a class="content-link" href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
-            <td>What happens to people who accept a counteroffer. The answers are self-reported impressions of the respondents' own organizations rather than measured retention outcomes, and the survey's roles-counteroffered scale places sales at 19%.</td>
+            <td data-label="Who produced it">Two academic authors publishing in the WorldatWork Journal, with the survey administered by Korn Ferry Hay Group.</td>
+            <td data-label="Sample and period">120 rewards and human resources professionals, surveyed in April 2017.</td>
+            <td data-label="The figures drawn from it">3% have a formal counteroffer policy, 84% decide case by case, and 73% rate their own counteroffer practices not effective or marginally effective. The full set of counteroffer-practice figures from the same survey, including the frequency, retention-impression and relationship findings, is published on <a class="content-link" href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
+            <td data-label="What it cannot be used to say">What happens to people who accept a counteroffer. The answers are self-reported impressions of the respondents' own organizations rather than measured retention outcomes, and the survey's roles-counteroffered scale places sales at 19%.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://hbr.org/2024/10/the-high-costs-of-chief-revenue-officer-turnover" target="_blank" rel="noopener">Nick Toman, Bryan Kurey and Dave Lingebach, Harvard Business Review, October 2024</a></th>
-            <td>Three authors publishing in Harvard Business Review.</td>
-            <td>Not stated on this site. Only the figures readable outside the paywall are published, and the sample size and company-revenue range sit behind it.</td>
-            <td>Average chief revenue officer tenure of about 25 months, and 62% of companies see revenue growth decline or stay flat in the fiscal year following a chief revenue officer change. Published on: <a class="content-link" href="guides/inherited-sales-leader-keep-coach-replace.html">Keep, coach, or replace an inherited sales leader</a>, and <a class="content-link" href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
-            <td>Causation cannot be assigned to the chief revenue officer change. The figures describe what follows a change. A chief revenue officer role is also not identical to every sales-leadership role.</td>
+            <td data-label="Who produced it">Three authors publishing in Harvard Business Review.</td>
+            <td data-label="Sample and period">Not stated on this site. Only the figures readable outside the paywall are published, and the sample size and company-revenue range sit behind it.</td>
+            <td data-label="The figures drawn from it">Average chief revenue officer tenure of about 25 months, and 62% of companies see revenue growth decline or stay flat in the fiscal year following a chief revenue officer change. Published on: <a class="content-link" href="guides/inherited-sales-leader-keep-coach-replace.html">Keep, coach, or replace an inherited sales leader</a>, and <a class="content-link" href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
+            <td data-label="What it cannot be used to say">Causation cannot be assigned to the chief revenue officer change. The figures describe what follows a change. A chief revenue officer role is also not identical to every sales-leadership role.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.bls.gov/regions/southeast/news-release/occupationalemploymentandwages_miami.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics, Occupational Employment and Wage Statistics, Miami-Fort Lauderdale-West Palm Beach</a></th>
-            <td>The US Bureau of Labor Statistics.</td>
-            <td>News release 26-1152-ATL, published 7 July 2026, covering May 2025.</td>
-            <td>Sales and related occupations at 10.8% of local employment against 8.6% nationally, a location quotient of 1.25; sales engineers at a location quotient of 0.54 with 510 employed; technical and scientific product representatives at 0.92 with 4,730 employed. The full nine-occupation table, with employment, location quotient and mean annual wage for each, is published on <a class="content-link" href="sales-recruiters-miami.html">Sales recruiters in Miami</a>.</td>
-            <td>How many sellers are available to hire. The release counts employment in an occupation. Its annual wages are the hourly mean multiplied by 2,080 hours and exclude the self-employed.</td>
+            <td data-label="Who produced it">The US Bureau of Labor Statistics.</td>
+            <td data-label="Sample and period">News release 26-1152-ATL, published 7 July 2026, covering May 2025.</td>
+            <td data-label="The figures drawn from it">Sales and related occupations at 10.8% of local employment against 8.6% nationally, a location quotient of 1.25; sales engineers at a location quotient of 0.54 with 510 employed; technical and scientific product representatives at 0.92 with 4,730 employed. The full nine-occupation table, with employment, location quotient and mean annual wage for each, is published on <a class="content-link" href="sales-recruiters-miami.html">Sales recruiters in Miami</a>.</td>
+            <td data-label="What it cannot be used to say">How many sellers are available to hire. The release counts employment in an occupation. Its annual wages are the hourly mean multiplied by 2,080 hours and exclude the self-employed.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.bain.com/insights/topics/global-private-equity-report/" target="_blank" rel="noopener">Bain, McKinsey and Goldman Sachs, 2026 private markets research</a></th>
-            <td>Three firms publishing annual research on private equity. All three sell services to the industry they report on.</td>
-            <td>Annual reports published in 2026. Bain's Global Private Equity Report 2026, <a class="content-link" href="https://www.mckinsey.com/industries/private-capital/our-insights/global-private-markets-report" target="_blank" rel="noopener">McKinsey's Global Private Markets Report 2026</a>, and <a class="content-link" href="https://am.gs.com/en-us/institutions/insights/article/investment-outlook/private-markets-alternatives-2026" target="_blank" rel="noopener">Goldman Sachs' Private Markets Outlook 2026</a>.</td>
-            <td>The annual EBITDA growth a 2.5x now demands, given as 10% to 12% against roughly 5% in 2015; 16,000 buyout-backed businesses held past four years, 52% of global inventory; and Goldman Sachs' description of the earnings growth returns now require as low double digits, which the page publishes as the phrase because no numeral is given. Published on: <a class="content-link" href="private-equity.html">Hire a revenue leader for a PE-backed portfolio company</a>, <a class="content-link" href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a>, and <a class="content-link" href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a>.</td>
-            <td>Anything about sales hiring. These describe conditions across private equity, and the connection to a sales-leadership hire is Revenue Bench's argument rather than any report's finding.</td>
+            <td data-label="Who produced it">Three firms publishing annual research on private equity. All three sell services to the industry they report on.</td>
+            <td data-label="Sample and period">Annual reports published in 2026. Bain's Global Private Equity Report 2026, <a class="content-link" href="https://www.mckinsey.com/industries/private-capital/our-insights/global-private-markets-report" target="_blank" rel="noopener">McKinsey's Global Private Markets Report 2026</a>, and <a class="content-link" href="https://am.gs.com/en-us/institutions/insights/article/investment-outlook/private-markets-alternatives-2026" target="_blank" rel="noopener">Goldman Sachs' Private Markets Outlook 2026</a>.</td>
+            <td data-label="The figures drawn from it">The annual EBITDA growth a 2.5x now demands, given as 10% to 12% against roughly 5% in 2015; 16,000 buyout-backed businesses held past four years, 52% of global inventory; and Goldman Sachs' description of the earnings growth returns now require as low double digits, which the page publishes as the phrase because no numeral is given. Published on: <a class="content-link" href="private-equity.html">Hire a revenue leader for a PE-backed portfolio company</a>, <a class="content-link" href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a>, and <a class="content-link" href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a>.</td>
+            <td data-label="What it cannot be used to say">Anything about sales hiring. These describe conditions across private equity, and the connection to a sales-leadership hire is Revenue Bench's argument rather than any report's finding.</td>
           </tr>
           <tr>
             <th scope="row">CSO Insights, ramp time</th>
-            <td>CSO Insights, a sales-research firm.</td>
-            <td>None stated on this site. No sample size or collection period was found in the source material, so none is given.</td>
-            <td>40% of companies say a new rep needs 10 or more months to reach full productivity. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, and <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>.</td>
-            <td>How long a specific hire will take to ramp. No confidence interval can be attached to it, because no sample or period is published.</td>
+            <td data-label="Who produced it">CSO Insights, a sales-research firm.</td>
+            <td data-label="Sample and period">None stated on this site. No sample size or collection period was found in the source material, so none is given.</td>
+            <td data-label="The figures drawn from it">40% of companies say a new rep needs 10 or more months to reach full productivity. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, and <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>.</td>
+            <td data-label="What it cannot be used to say">How long a specific hire will take to ramp. No confidence interval can be attached to it, because no sample or period is published.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://chrismercer.net/the-key-person-discount-in-light-of-the-integrated-theory-of-business-valuation/" target="_blank" rel="noopener">Z. Christopher Mercer, The Key Person Discount in Light of the Integrated Theory of Business Valuation, May 10, 2021</a></th>
-            <td>Chris Mercer, Chairman of Mercer Capital, a business valuation firm.</td>
-            <td>None. This is a published argument by a named valuation practitioner, not a study, and it carries no sample or collection period.</td>
-            <td>One quoted sentence: there is no market evidence to provide a basis for assessing the reasonableness of a judgmental key person discount. Published on: <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>.</td>
-            <td>Anything about salespeople. The key person discount in that literature concerns senior executives, and the quotation is used only to record that no market evidence supports a flat percentage discount of this kind. It is one practitioner's position and is not a finding.</td>
+            <td data-label="Who produced it">Chris Mercer, Chairman of Mercer Capital, a business valuation firm.</td>
+            <td data-label="Sample and period">None. This is a published argument by a named valuation practitioner, not a study, and it carries no sample or collection period.</td>
+            <td data-label="The figures drawn from it">One quoted sentence: there is no market evidence to provide a basis for assessing the reasonableness of a judgmental key person discount. Published on: <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>.</td>
+            <td data-label="What it cannot be used to say">Anything about salespeople. The key person discount in that literature concerns senior executives, and the quotation is used only to record that no market evidence supports a flat percentage discount of this kind. It is one practitioner's position and is not a finding.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.bls.gov/news.release/tenure.t06.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics, Employee Tenure release, September 26, 2024</a></th>
-            <td>The US Bureau of Labor Statistics, a federal statistical agency.</td>
-            <td>Median years of tenure with the current employer by occupation, reference period January 2024, published 26 September 2024. BLS publishes no respondent count in the occupational table.</td>
-            <td>Median tenure in sales and related occupations of 3.3 years, against 3.9 years across all wage and salary workers. Published on: <a class="content-link" href="for-employers.html">For employers</a>, <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>, and <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>.</td>
-            <td>Any turnover rate, first-year or annual. It is a median tenure figure and BLS publishes no first-year rate for any occupation. The occupational group is also wider than B2B sales, so it describes a different population from the DePaul turnover figures and the two are never combined in one calculation.</td>
+            <td data-label="Who produced it">The US Bureau of Labor Statistics, a federal statistical agency.</td>
+            <td data-label="Sample and period">Median years of tenure with the current employer by occupation, reference period January 2024, published 26 September 2024. BLS publishes no respondent count in the occupational table.</td>
+            <td data-label="The figures drawn from it">Median tenure in sales and related occupations of 3.3 years, against 3.9 years across all wage and salary workers. Published on: <a class="content-link" href="for-employers.html">For employers</a>, <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>, and <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>.</td>
+            <td data-label="What it cannot be used to say">Any turnover rate, first-year or annual. It is a median tenure figure and BLS publishes no first-year rate for any occupation. The occupational group is also wider than B2B sales, so it describes a different population from the DePaul turnover figures and the two are never combined in one calculation.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.paycor.com/resource-center/guides-white-papers/how-to-know-when-to-counter-a-resignation/" target="_blank" rel="noopener">Paycor, employer guidance updated October 2025</a></th>
-            <td>Paycor, a payroll and human resources software company.</td>
-            <td>None published. Employer guidance rather than a study, updated in October 2025.</td>
-            <td>Replacement at roughly $4,000 and three months for an employee in general. Published on: <a class="content-link" href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
-            <td>What replacing a sales leader costs. The page that carries it states in the same passage that the figure describes an employee in general and is far below what a sales-leadership vacancy costs.</td>
+            <td data-label="Who produced it">Paycor, a payroll and human resources software company.</td>
+            <td data-label="Sample and period">None published. Employer guidance rather than a study, updated in October 2025.</td>
+            <td data-label="The figures drawn from it">Replacement at roughly $4,000 and three months for an employee in general. Published on: <a class="content-link" href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
+            <td data-label="What it cannot be used to say">What replacing a sales leader costs. The page that carries it states in the same passage that the figure describes an employee in general and is far below what a sales-leadership vacancy costs.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://topechelon.com/blog/recruiter-guarantees-once-i-am-paid-i-do-not-refund-any-money/" target="_blank" rel="noopener">Top Echelon, 2019 survey of its recruiting-network members</a></th>
-            <td>Top Echelon, a recruiting network, surveying its own members.</td>
-            <td>Members of Top Echelon's own recruiting network, independent third-party recruiters, average tenure about 15 years, corporate recruiters excluded. Published 18 March 2019. Top Echelon does not publish how many recruiters responded, so the survey carries no stated sample size.</td>
-            <td>90 days is the most common guarantee window at 44.9%, with 30 days at 20.3%, 60 days at 20.0%, other windows at 5.7%, six months at 2.4%, one year at 2.3%, 45 days at 1.9%, and no response at 2.5%; replacement with no money back is the majority remedy at 61.4%, with a prorated refund at 17.6%, other remedies at 10.9%, a full refund at 8.4%, and no response at 1.7%; and 95.9% of the recruiters surveyed offered a guarantee of some kind. Published on: <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>, and <a class="content-link" href="guides/placement-guarantees-explained.html">Placement guarantee terms</a>.</td>
-            <td>What employers received, and what retained executive search firms offer. Recruiters described the terms they offered, the respondents were drawn from one network, so the figures describe that network, the survey does not separate retained search from contingency search, and no respondent count is published.</td>
+            <td data-label="Who produced it">Top Echelon, a recruiting network, surveying its own members.</td>
+            <td data-label="Sample and period">Members of Top Echelon's own recruiting network, independent third-party recruiters, average tenure about 15 years, corporate recruiters excluded. Published 18 March 2019. Top Echelon does not publish how many recruiters responded, so the survey carries no stated sample size.</td>
+            <td data-label="The figures drawn from it">90 days is the most common guarantee window at 44.9%, with 30 days at 20.3%, 60 days at 20.0%, other windows at 5.7%, six months at 2.4%, one year at 2.3%, 45 days at 1.9%, and no response at 2.5%; replacement with no money back is the majority remedy at 61.4%, with a prorated refund at 17.6%, other remedies at 10.9%, a full refund at 8.4%, and no response at 1.7%; and 95.9% of the recruiters surveyed offered a guarantee of some kind. Published on: <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>, and <a class="content-link" href="guides/placement-guarantees-explained.html">Placement guarantee terms</a>.</td>
+            <td data-label="What it cannot be used to say">What employers received, and what retained executive search firms offer. Recruiters described the terms they offered, the respondents were drawn from one network, so the figures describe that network, the survey does not separate retained search from contingency search, and no respondent count is published.</td>
           </tr>
           <tr>
             <th scope="row">Revenue Bench, September 2026 sweep of search firm websites</th>
-            <td>Revenue Bench, reading the public websites of other search firms.</td>
-            <td>28 sales and executive search firm websites a United States buyer reaches through ordinary searches for a sales recruiting firm. 26 returned enough copy to read. Read on 7 September 2026.</td>
-            <td>11 of the 26 readable sites stated that a guarantee exists, 6 stated a period, 7 described the remedy in a sentence, 4 stated what voids coverage, and 1 stated the date the window runs from. Published on: <a class="content-link" href="guides/placement-guarantees-explained.html">Placement guarantee terms</a>.</td>
-            <td>What a buyer can establish about guarantee terms by reading firms' websites. The sample is neither random nor complete, and the list of firms is not published because this site does not name other firms in its category, a rule that covers competitors and not the third-party sources named elsewhere in this index, so the count cannot be audited from outside. It measures website disclosure and says nothing about the quality of any firm's guarantee or about what an agreement contains.</td>
+            <td data-label="Who produced it">Revenue Bench, reading the public websites of other search firms.</td>
+            <td data-label="Sample and period">28 sales and executive search firm websites a United States buyer reaches through ordinary searches for a sales recruiting firm. 26 returned enough copy to read. Read on 7 September 2026.</td>
+            <td data-label="The figures drawn from it">11 of the 26 readable sites stated that a guarantee exists, 6 stated a period, 7 described the remedy in a sentence, 4 stated what voids coverage, and 1 stated the date the window runs from. Published on: <a class="content-link" href="guides/placement-guarantees-explained.html">Placement guarantee terms</a>.</td>
+            <td data-label="What it cannot be used to say">What a buyer can establish about guarantee terms by reading firms' websites. The sample is neither random nor complete, and the list of firms is not published because this site does not name other firms in its category, a rule that covers competitors and not the third-party sources named elsewhere in this index, so the count cannot be audited from outside. It measures website disclosure and says nothing about the quality of any firm's guarantee or about what an agreement contains.</td>
           </tr>
           <tr>
             <th scope="row">Staffing Industry Analysts, North America Staffing Company Survey 2021</th>
-            <td>Staffing Industry Analysts, surveying staffing firms.</td>
-            <td>Staffing firms in North America. Survey year 2021. No respondent count is published.</td>
-            <td>The most common direct-hire fee is 20% of salary, reported by 42% of staffing firms, and 20% is also the median across all segments, with segment midranges of 15% to 20% for commercial staffing, 18% to 22% for professional staffing, and 20% to 25% for direct-hire firms. Published on: <a class="content-link" href="guides/sales-recruiter-fees.html">Sales recruiter fees</a>, and <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>.</td>
-            <td>What a sales search costs. The survey covers direct-hire staffing across segments, and 2021 is the collection year.</td>
+            <td data-label="Who produced it">Staffing Industry Analysts, surveying staffing firms.</td>
+            <td data-label="Sample and period">Staffing firms in North America. Survey year 2021. No respondent count is published.</td>
+            <td data-label="The figures drawn from it">The most common direct-hire fee is 20% of salary, reported by 42% of staffing firms, and 20% is also the median across all segments, with segment midranges of 15% to 20% for commercial staffing, 18% to 22% for professional staffing, and 20% to 25% for direct-hire firms. Published on: <a class="content-link" href="guides/sales-recruiter-fees.html">Sales recruiter fees</a>, and <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>.</td>
+            <td data-label="What it cannot be used to say">What a sales search costs. The survey covers direct-hire staffing across segments, and 2021 is the collection year.</td>
           </tr>
           <tr>
             <th scope="row">Korn Ferry and Heidrick and Struggles annual reports</th>
-            <td>Two listed executive-search firms, describing their own pricing in their filings.</td>
-            <td>Korn Ferry's annual report for the fiscal year ended April 2025, and Heidrick and Struggles' annual report.</td>
-            <td>The retained standard of approximately one third of the estimated first-year compensation for the position being filled, plus a percentage for engagement expenses. Published on: <a class="content-link" href="guides/sales-recruiter-fees.html">Sales recruiter fees</a>, and <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>.</td>
-            <td>What a retained sales search costs outside executive search. The description is scoped to executive search and comes from firms that sell it.</td>
+            <td data-label="Who produced it">Two listed executive-search firms, describing their own pricing in their filings.</td>
+            <td data-label="Sample and period">Korn Ferry's annual report for the fiscal year ended April 2025, and Heidrick and Struggles' annual report.</td>
+            <td data-label="The figures drawn from it">The retained standard of approximately one third of the estimated first-year compensation for the position being filled, plus a percentage for engagement expenses. Published on: <a class="content-link" href="guides/sales-recruiter-fees.html">Sales recruiter fees</a>, and <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>.</td>
+            <td data-label="What it cannot be used to say">What a retained sales search costs outside executive search. The description is scoped to executive search and comes from firms that sell it.</td>
           </tr>
           <tr>
             <th scope="row">Clockwork Recruiting, Executive Search Performance Benchmark Report, October 2018</th>
-            <td>Clockwork Recruiting, the applicant tracking system provider whose customer projects form the dataset.</td>
-            <td>23,970 anonymized search projects run January 2015 to August 2018 and filtered to retained projects only.</td>
-            <td>Across Clockwork's own customer base of search firms using its applicant tracking system, for projects run January 2015 to August 2018, the average placement rate was 71%; outcomes were 71% placed, 22% canceled, and 6% internal hire; average days to placement was 123; and placement rates were 60% at the least senior band against 78% for C-level searches. Published on: <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>.</td>
-            <td>An industry-wide placement rate, a causal effect of seniority, or an exact sales placement rate. The January 2015 to August 2018 data comes from Clockwork's own customer base rather than a random industry sample, and the report plots Sales near the global average without publishing an exact Sales figure.</td>
+            <td data-label="Who produced it">Clockwork Recruiting, the applicant tracking system provider whose customer projects form the dataset.</td>
+            <td data-label="Sample and period">23,970 anonymized search projects run January 2015 to August 2018 and filtered to retained projects only.</td>
+            <td data-label="The figures drawn from it">Across Clockwork's own customer base of search firms using its applicant tracking system, for projects run January 2015 to August 2018, the average placement rate was 71%; outcomes were 71% placed, 22% canceled, and 6% internal hire; average days to placement was 123; and placement rates were 60% at the least senior band against 78% for C-level searches. Published on: <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a>.</td>
+            <td data-label="What it cannot be used to say">An industry-wide placement rate, a causal effect of seniority, or an exact sales placement rate. The January 2015 to August 2018 data comes from Clockwork's own customer base rather than a random industry sample, and the report plots Sales near the global average without publishing an exact Sales figure.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://static1.squarespace.com/static/63fa5c9c44f8ef5193f53b4b/t/67782e1a415bb50bfe1de688/1735929378948/2024+State+of+Fractional+Sales+Leadership.pdf" target="_blank" rel="noopener">Vendux, 2024 State of Fractional Sales Leadership Report</a></th>
-            <td>Vendux, a marketplace that places fractional sales leaders, reporting on the market it sells into.</td>
-            <td>More than 1,000 assignments, self-reported by more than 900 fractional sales leaders on the publisher's roster and through open distribution, collected in December 2024 and merged with the publisher's own records.</td>
-            <td>An average assignment length a little under 8 months, an average of about 12 hours a week, and 4.3 assignments per leader per year. Published on: <a class="content-link" href="guides/fractional-sales-leadership-wrong-call.html">When fractional sales leadership is the wrong call</a>.</td>
-            <td>Any outcome, satisfaction, early-termination or conversion measure. Every respondent is a fractional leader and no client was surveyed, so the report describes the shape of an engagement and measures nothing about how engagements end. A 2025 edition exists, and its methodology sits behind a lead form, so this site cites the 2024 edition.</td>
+            <td data-label="Who produced it">Vendux, a marketplace that places fractional sales leaders, reporting on the market it sells into.</td>
+            <td data-label="Sample and period">More than 1,000 assignments, self-reported by more than 900 fractional sales leaders on the publisher's roster and through open distribution, collected in December 2024 and merged with the publisher's own records.</td>
+            <td data-label="The figures drawn from it">An average assignment length a little under 8 months, an average of about 12 hours a week, and 4.3 assignments per leader per year. Published on: <a class="content-link" href="guides/fractional-sales-leadership-wrong-call.html">When fractional sales leadership is the wrong call</a>.</td>
+            <td data-label="What it cannot be used to say">Any outcome, satisfaction, early-termination or conversion measure. Every respondent is a fractional leader and no client was surveyed, so the report describes the shape of an engagement and measures nothing about how engagements end. A 2025 edition exists, and its methodology sits behind a lead form, so this site cites the 2024 edition.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.mylance.co/blog/fractional-executive-engagement-structure" target="_blank" rel="noopener">Mylance, fractional executive engagement structure, August 2026</a></th>
-            <td>Mylance, which sells positioning tools to independent fractional operators, reporting engagements those operators submitted.</td>
-            <td>191 engagements from 152 independent operators, self-reported, collected over more than one year, with the publisher's own duplicate-removal notes stated in the article.</td>
-            <td>A median of 40 hours a month, and 13% of engagements running above 80 hours a month. Published on: <a class="content-link" href="guides/fractional-sales-leadership-wrong-call.html">When fractional sales leadership is the wrong call</a>.</td>
-            <td>Anything specific to sales leadership. The engagements span executive functions, so this site draws only the shape of the hours from it, and never a classification outcome or a sales-specific figure.</td>
+            <td data-label="Who produced it">Mylance, which sells positioning tools to independent fractional operators, reporting engagements those operators submitted.</td>
+            <td data-label="Sample and period">191 engagements from 152 independent operators, self-reported, collected over more than one year, with the publisher's own duplicate-removal notes stated in the article.</td>
+            <td data-label="The figures drawn from it">A median of 40 hours a month, and 13% of engagements running above 80 hours a month. Published on: <a class="content-link" href="guides/fractional-sales-leadership-wrong-call.html">When fractional sales leadership is the wrong call</a>.</td>
+            <td data-label="What it cannot be used to say">Anything specific to sales leadership. The engagements span executive functions, so this site draws only the shape of the hours from it, and never a classification outcome or a sales-specific figure.</td>
           </tr>
           <tr>
             <th scope="row">OMG's 2024 validation survey, selection outcomes</th>
-            <td><a class="content-link" href="https://www.objectivemanagement.com" target="_blank" rel="noopener">Objective Management Group</a>, from its own validation work on candidates its assessment screened.</td>
-            <td>This site does not give a sample size for the 2024 validation survey, because the source material cited does not publish one. The figures are the 2024 set.</td>
-            <td>72% of candidates OMG recommended reached the top half of their sales force within 12 months; first-year turnover of 9% for recommended hires against 33% for candidates OMG advised against; and 100% of candidates OMG advised against who were hired anyway landed in the bottom half. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, <a class="content-link" href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a>, and other guides.</td>
-            <td>Selection outcomes cannot be read as evidence that an assessment reduces turnover or improves a hire. The comparison sets candidates the assessment recommended against candidates it advised against, so it describes selection rather than a measured effect on any hire.</td>
+            <td data-label="Who produced it"><a class="content-link" href="https://www.objectivemanagement.com" target="_blank" rel="noopener">Objective Management Group</a>, from its own validation work on candidates its assessment screened.</td>
+            <td data-label="Sample and period">This site does not give a sample size for the 2024 validation survey, because the source material cited does not publish one. The figures are the 2024 set.</td>
+            <td data-label="The figures drawn from it">72% of candidates OMG recommended reached the top half of their sales force within 12 months; first-year turnover of 9% for recommended hires against 33% for candidates OMG advised against; and 100% of candidates OMG advised against who were hired anyway landed in the bottom half. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, <a class="content-link" href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a>, and other guides.</td>
+            <td data-label="What it cannot be used to say">Selection outcomes cannot be read as evidence that an assessment reduces turnover or improves a hire. The comparison sets candidates the assessment recommended against candidates it advised against, so it describes selection rather than a measured effect on any hire.</td>
           </tr>
           <tr>
             <th scope="row">OMG's predictive validity figure</th>
-            <td>Objective Management Group, stated in its assessment documentation rather than in a published study.</td>
-            <td>OMG's own assessment documentation. No sample is published for the validity figure.</td>
-            <td>Predictive validity in the 95 percent range. Published on: <a class="content-link" href="how-it-works.html">How it works</a>, <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>, and <a class="content-link" href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview</a>.</td>
-            <td>Instrument accuracy does not mean that 95% of candidates reached the top half of a sales force. This is the accuracy metric for the instrument and a separate measure from the 72% top-half figure. The two are never given together as one claim.</td>
+            <td data-label="Who produced it">Objective Management Group, stated in its assessment documentation rather than in a published study.</td>
+            <td data-label="Sample and period">OMG's own assessment documentation. No sample is published for the validity figure.</td>
+            <td data-label="The figures drawn from it">Predictive validity in the 95 percent range. Published on: <a class="content-link" href="how-it-works.html">How it works</a>, <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>, and <a class="content-link" href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview</a>.</td>
+            <td data-label="What it cannot be used to say">Instrument accuracy does not mean that 95% of candidates reached the top half of a sales force. This is the accuracy metric for the instrument and a separate measure from the 72% top-half figure. The two are never given together as one claim.</td>
           </tr>
           <tr>
             <th scope="row">OMG's assessment dataset, the talent distribution and the instrument</th>
-            <td>Objective Management Group, from the assessment records it has accumulated since 1990.</td>
-            <td>Nearly 2.4 million assessed salespeople as of 2023. No collection period is published for the distribution or the instrument.</td>
-            <td>The dataset itself, which OMG describes as the largest sales-specific dataset in existence; the distribution of 6% Elite, 11% Strong, 33% Serviceable and 50% Weak; OMG's shorthand that about 74% are ineffective to some degree; and the instrument itself, 21 sales-specific competencies across more than 400 data points and roughly 250 questions per candidate. Published on: <a class="content-link" href="guides/the-6-percent-problem.html">The 6% problem</a>, <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>, <a class="content-link" href="how-it-works.html">How it works</a>, and other guides.</td>
-            <td>Population figures cannot establish that the distribution holds inside one company. It describes the assessed population. The four-tier split and the 74% shorthand are two OMG framings of the same population and are never summed or set against each other. The superlative belongs to OMG and is attributed on every page that carries it.</td>
+            <td data-label="Who produced it">Objective Management Group, from the assessment records it has accumulated since 1990.</td>
+            <td data-label="Sample and period">Nearly 2.4 million assessed salespeople as of 2023. No collection period is published for the distribution or the instrument.</td>
+            <td data-label="The figures drawn from it">The dataset itself, which OMG describes as the largest sales-specific dataset in existence; the distribution of 6% Elite, 11% Strong, 33% Serviceable and 50% Weak; OMG's shorthand that about 74% are ineffective to some degree; and the instrument itself, 21 sales-specific competencies across more than 400 data points and roughly 250 questions per candidate. Published on: <a class="content-link" href="guides/the-6-percent-problem.html">The 6% problem</a>, <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>, <a class="content-link" href="how-it-works.html">How it works</a>, and other guides.</td>
+            <td data-label="What it cannot be used to say">Population figures cannot establish that the distribution holds inside one company. It describes the assessed population. The four-tier split and the 74% shorthand are two OMG framings of the same population and are never summed or set against each other. The superlative belongs to OMG and is attributed on every page that carries it.</td>
           </tr>
           <tr>
             <th scope="row">OMG's evaluation of 44,493 sales managers</th>
-            <td>Objective Management Group, from an evaluation of sales managers rather than salespeople.</td>
-            <td>44,493 sales managers. No collection period is published for it.</td>
-            <td>9% are strong in all three coaching qualities, and managers strong on all three have 80% more elite salespeople on their teams. Published on: <a class="content-link" href="guides/should-you-promote-your-best-rep.html">Should you promote your best rep into sales management?</a>, and <a class="content-link" href="guides/first-100-days-portfolio-sales-team.html">The first 100 days</a>.</td>
-            <td>Coaching qualities cannot be identified as the cause of the elite salespeople. The comparison is between managers who hold all three and managers who do not.</td>
+            <td data-label="Who produced it">Objective Management Group, from an evaluation of sales managers rather than salespeople.</td>
+            <td data-label="Sample and period">44,493 sales managers. No collection period is published for it.</td>
+            <td data-label="The figures drawn from it">9% are strong in all three coaching qualities, and managers strong on all three have 80% more elite salespeople on their teams. Published on: <a class="content-link" href="guides/should-you-promote-your-best-rep.html">Should you promote your best rep into sales management?</a>, and <a class="content-link" href="guides/first-100-days-portfolio-sales-team.html">The first 100 days</a>.</td>
+            <td data-label="What it cannot be used to say">Coaching qualities cannot be identified as the cause of the elite salespeople. The comparison is between managers who hold all three and managers who do not.</td>
           </tr>
           <tr>
             <th scope="row">OMG's coaching study</th>
-            <td>Objective Management Group, from an evaluation of salespeople alongside the managers who coached them.</td>
-            <td>11,078 salespeople and their managers. No collection period is published for it.</td>
-            <td>About 20% of salespeople are coached weekly and about 10% several times a week, and coaching several times a week gains 17 points of sales percentile against no coaching. Published on: <a class="content-link" href="guides/90-day-sales-onboarding-plan.html">The 90-day sales onboarding plan</a>, <a class="content-link" href="guides/sales-leader-30-60-90-scorecard.html">The 30-60-90 day scorecard</a>, and other guides.</td>
-            <td>The study cannot establish that adding coaching sessions produces 17 points. It compares groups at different cadences.</td>
+            <td data-label="Who produced it">Objective Management Group, from an evaluation of salespeople alongside the managers who coached them.</td>
+            <td data-label="Sample and period">11,078 salespeople and their managers. No collection period is published for it.</td>
+            <td data-label="The figures drawn from it">About 20% of salespeople are coached weekly and about 10% several times a week, and coaching several times a week gains 17 points of sales percentile against no coaching. Published on: <a class="content-link" href="guides/90-day-sales-onboarding-plan.html">The 90-day sales onboarding plan</a>, <a class="content-link" href="guides/sales-leader-30-60-90-scorecard.html">The 30-60-90 day scorecard</a>, and other guides.</td>
+            <td data-label="What it cannot be used to say">The study cannot establish that adding coaching sessions produces 17 points. It compares groups at different cadences.</td>
           </tr>
           <tr>
             <th scope="row">OMG's before-and-after training study</th>
-            <td>Objective Management Group, measuring salespeople before and after training delivered by one of its certified partners.</td>
-            <td>5,331 salespeople measured before and after training by a certified OMG partner. No collection period is published for it.</td>
-            <td>Will to Sell moved 0% to 6% after training, while tactical skills moved further, with closing up 55%, reaching decision makers up 43% and consultative selling up 28%. Published on: <a class="content-link" href="guides/will-to-sell.html">Will to Sell</a>, <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>, and <a class="content-link" href="guides/inherited-sales-leader-keep-coach-replace.html">Keep, coach, or replace an inherited sales leader</a>.</td>
-            <td>Anything about sales managers. The measured population was salespeople, and the pages that use it for a leadership argument state that limit.</td>
+            <td data-label="Who produced it">Objective Management Group, measuring salespeople before and after training delivered by one of its certified partners.</td>
+            <td data-label="Sample and period">5,331 salespeople measured before and after training by a certified OMG partner. No collection period is published for it.</td>
+            <td data-label="The figures drawn from it">Will to Sell moved 0% to 6% after training, while tactical skills moved further, with closing up 55%, reaching decision makers up 43% and consultative selling up 28%. Published on: <a class="content-link" href="guides/will-to-sell.html">Will to Sell</a>, <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>, and <a class="content-link" href="guides/inherited-sales-leader-keep-coach-replace.html">Keep, coach, or replace an inherited sales leader</a>.</td>
+            <td data-label="What it cannot be used to say">Anything about sales managers. The measured population was salespeople, and the pages that use it for a leadership argument state that limit.</td>
           </tr>
           <tr>
             <th scope="row">OMG's Sales DNA and competency prevalence data</th>
-            <td>Objective Management Group, from its evaluation population across the windows named in each figure.</td>
-            <td>OMG's evaluation population. Individual figures carry the windows their pages name: 27% strong on Sales DNA overall across more than 1,500 evaluations from 2023 to 2025; 12% strong and 88% weak on supportive beliefs across 2022 to 2025; 11% to 15% strong on consultative selling and 16% proficient in sales technology in 2025. The desire and rejection figures carry no window.</td>
-            <td>27% strong on Sales DNA overall; 12% strong and 88% weak on supportive beliefs; 86% strong on desire; 88% to 89% strong on handling rejection; 11% to 15% strong on consultative selling; 16% proficient in sales technology. Published on: <a class="content-link" href="guides/the-6-percent-problem.html">The 6% problem</a>, <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, and <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>.</td>
-            <td>Competency shares cannot predict one candidate's performance. These describe the assessed population and set the base rate a screen works against. The 88% figure carries two different meanings on this site, a strength on handling rejection and a weakness on supportive beliefs, so it is never quoted without naming the competency.</td>
+            <td data-label="Who produced it">Objective Management Group, from its evaluation population across the windows named in each figure.</td>
+            <td data-label="Sample and period">OMG's evaluation population. Individual figures carry the windows their pages name: 27% strong on Sales DNA overall across more than 1,500 evaluations from 2023 to 2025; 12% strong and 88% weak on supportive beliefs across 2022 to 2025; 11% to 15% strong on consultative selling and 16% proficient in sales technology in 2025. The desire and rejection figures carry no window.</td>
+            <td data-label="The figures drawn from it">27% strong on Sales DNA overall; 12% strong and 88% weak on supportive beliefs; 86% strong on desire; 88% to 89% strong on handling rejection; 11% to 15% strong on consultative selling; 16% proficient in sales technology. Published on: <a class="content-link" href="guides/the-6-percent-problem.html">The 6% problem</a>, <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>, and <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>.</td>
+            <td data-label="What it cannot be used to say">Competency shares cannot predict one candidate's performance. These describe the assessed population and set the base rate a screen works against. The 88% figure carries two different meanings on this site, a strength on handling rejection and a weakness on supportive beliefs, so it is never quoted without naming the competency.</td>
           </tr>
           <tr>
             <th scope="row">OMG's single-seller concentration figure</th>
-            <td>Objective Management Group, from a count of sales teams rather than individual salespeople.</td>
-            <td>318 sales teams. No collection period is published for it.</td>
-            <td>30% of sales teams rely on a single salesperson for more than half of revenue. Published on: <a class="content-link" href="guides/building-a-sales-talent-bench.html">Building a sales talent bench</a>, <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>, and other guides.</td>
-            <td>This measurement cannot show whether concentration is rising or falling. The figure is one measurement of one set of teams with no trend behind it.</td>
+            <td data-label="Who produced it">Objective Management Group, from a count of sales teams rather than individual salespeople.</td>
+            <td data-label="Sample and period">318 sales teams. No collection period is published for it.</td>
+            <td data-label="The figures drawn from it">30% of sales teams rely on a single salesperson for more than half of revenue. Published on: <a class="content-link" href="guides/building-a-sales-talent-bench.html">Building a sales talent bench</a>, <a class="content-link" href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a>, and other guides.</td>
+            <td data-label="What it cannot be used to say">This measurement cannot show whether concentration is rising or falling. The figure is one measurement of one set of teams with no trend behind it.</td>
           </tr>
           <tr>
             <th scope="row">OMG's motivation data</th>
-            <td>Objective Management Group, from its evaluation population of salespeople.</td>
-            <td>OMG's evaluation population of salespeople. No sample size or collection period is published for it.</td>
-            <td>Most salespeople are intrinsically motivated and about a quarter are extrinsically motivated. Published on: <a class="content-link" href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a>, and <a class="content-link" href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a>.</td>
-            <td>How a specific individual is motivated, or that the split holds for sales leaders. The measured population was salespeople.</td>
+            <td data-label="Who produced it">Objective Management Group, from its evaluation population of salespeople.</td>
+            <td data-label="Sample and period">OMG's evaluation population of salespeople. No sample size or collection period is published for it.</td>
+            <td data-label="The figures drawn from it">Most salespeople are intrinsically motivated and about a quarter are extrinsically motivated. Published on: <a class="content-link" href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a>, and <a class="content-link" href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a>.</td>
+            <td data-label="What it cannot be used to say">How a specific individual is motivated, or that the split holds for sales leaders. The measured population was salespeople.</td>
           </tr>
           <tr>
             <th scope="row">OMG's role-fit data</th>
-            <td>Objective Management Group, from its evaluation population, with no study named for these two figures.</td>
-            <td>OMG's evaluation population. No sample size or period is published for these two figures, and none is stated on this site.</td>
-            <td>57% of salespeople are in roles they are not suited for, and 64% of sales teams are significantly misaligned. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>.</td>
-            <td>A given team cannot be described as misaligned from these figures alone. The figures describe the assessed population.</td>
+            <td data-label="Who produced it">Objective Management Group, from its evaluation population, with no study named for these two figures.</td>
+            <td data-label="Sample and period">OMG's evaluation population. No sample size or period is published for these two figures, and none is stated on this site.</td>
+            <td data-label="The figures drawn from it">57% of salespeople are in roles they are not suited for, and 64% of sales teams are significantly misaligned. Published on: <a class="content-link" href="guides/why-sales-hires-fail.html">Why sales hires fail</a>.</td>
+            <td data-label="What it cannot be used to say">A given team cannot be described as misaligned from these figures alone. The figures describe the assessed population.</td>
           </tr>
           <tr>
             <th scope="row">Hiring-manager intuition, Big Swift Kick</th>
-            <td>The firm Big Swift Kick. The research was circulated in Objective Management Group's partner network and is not an OMG published study, which the pages that use it already state.</td>
-            <td>None published.</td>
-            <td>Hiring managers spot a top performer about 20% of the time. Published on: <a class="content-link" href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview</a>, and <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>.</td>
-            <td>An 80% interview-failure rate cannot be inferred from the figure. No sample or method is published for it, and every page that carries it names it as partner-network research.</td>
+            <td data-label="Who produced it">The firm Big Swift Kick. The research was circulated in Objective Management Group's partner network and is not an OMG published study, which the pages that use it already state.</td>
+            <td data-label="Sample and period">None published.</td>
+            <td data-label="The figures drawn from it">Hiring managers spot a top performer about 20% of the time. Published on: <a class="content-link" href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview</a>, and <a class="content-link" href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a>.</td>
+            <td data-label="What it cannot be used to say">An 80% interview-failure rate cannot be inferred from the figure. No sample or method is published for it, and every page that carries it names it as partner-network research.</td>
           </tr>
           <tr>
             <th scope="row">The mis-hire working figure</th>
-            <td>Revenue Bench. It is the firm's own working estimate and is labeled as such wherever it appears.</td>
-            <td>Revenue Bench labels it as an estimate rather than a measurement. No sample or period applies.</td>
-            <td>A revenue-role mis-hire costs $200,000 to $250,000, counting base compensation, draw, the pipeline that stalled while the role underperformed, the replacement search, and management time. Published on: <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>, and <a class="content-link" href="guides/sales-recruiter-vs-in-house.html">Sales recruiter vs hiring in-house</a>.</td>
-            <td>Research does not support the number. It is Revenue Bench's estimate, and the third-party figure on the same question is DePaul's, which is separate and lower because it counts different items.</td>
+            <td data-label="Who produced it">Revenue Bench. It is the firm's own working estimate and is labeled as such wherever it appears.</td>
+            <td data-label="Sample and period">Revenue Bench labels it as an estimate rather than a measurement. No sample or period applies.</td>
+            <td data-label="The figures drawn from it">A revenue-role mis-hire costs $200,000 to $250,000, counting base compensation, draw, the pipeline that stalled while the role underperformed, the replacement search, and management time. Published on: <a class="content-link" href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>, and <a class="content-link" href="guides/sales-recruiter-vs-in-house.html">Sales recruiter vs hiring in-house</a>.</td>
+            <td data-label="What it cannot be used to say">Research does not support the number. It is Revenue Bench's estimate, and the third-party figure on the same question is DePaul's, which is separate and lower because it counts different items.</td>
           </tr>
           <tr>
             <th scope="row"><a class="content-link" href="https://www.bls.gov/news.release/ocwage.tn.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics, Occupational Employment and Wage Statistics, national</a></th>
-            <td>The US Bureau of Labor Statistics. No commercial interest in the answer.</td>
-            <td>May 2025 estimates, released 15 May 2026 as USDL-26-0725. Six semiannual panels collected over three years, with reference dates of May 2025, November 2024, May 2024, November 2023, May 2023, and November 2022. The sample covers 1.1 million establishments and about 55% of total national employment, with a response rate of 66.2% of establishments and 67.2% of weighted sampled employment.</td>
-            <td>National annual wages at the 10th, 25th, 50th, 75th, and 90th percentiles for six sales occupations, with employment for each. Medians run from $69,990 for sales representatives of services to $148,270 for sales managers. Published on: <a class="content-link" href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a>.</td>
-            <td>What employers paid people doing that kind of work. The figures are straight-time gross pay, so commissions, incentive pay, and production bonuses are included, and a draw, overtime, non-production bonuses, year-end bonuses, equity, and benefits are excluded. They are neither base salary nor on-target earnings. An occupation is not a job title, annual figures assume 2,080 hours, the self-employed are excluded, and the agency states its data are not built for comparison over time.</td>
+            <td data-label="Who produced it">The US Bureau of Labor Statistics. No commercial interest in the answer.</td>
+            <td data-label="Sample and period">May 2025 estimates, released 15 May 2026 as USDL-26-0725. Six semiannual panels collected over three years, with reference dates of May 2025, November 2024, May 2024, November 2023, May 2023, and November 2022. The sample covers 1.1 million establishments and about 55% of total national employment, with a response rate of 66.2% of establishments and 67.2% of weighted sampled employment.</td>
+            <td data-label="The figures drawn from it">National annual wages at the 10th, 25th, 50th, 75th, and 90th percentiles for six sales occupations, with employment for each. Medians run from $69,990 for sales representatives of services to $148,270 for sales managers. Published on: <a class="content-link" href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a>.</td>
+            <td data-label="What it cannot be used to say">What employers paid people doing that kind of work. The figures are straight-time gross pay, so commissions, incentive pay, and production bonuses are included, and a draw, overtime, non-production bonuses, year-end bonuses, equity, and benefits are excluded. They are neither base salary nor on-target earnings. An occupation is not a job title, annual figures assume 2,080 hours, the self-employed are excluded, and the agency states its data are not built for comparison over time.</td>
           </tr>
           <tr>
             <th scope="row">The total sales cost range</th>
-            <td>Revenue Bench. It is a planning range the firm uses when sizing a sales budget, and it is labeled as such on the page that publishes it.</td>
-            <td>This is Revenue Bench's planning range rather than a benchmark. It carries no sample or period.</td>
-            <td>15% to 25% of new revenue as total sales cost. Published on: <a class="content-link" href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a>.</td>
-            <td>Industry benchmark status cannot be assigned to the range. The page labels it as the firm's own working figure, and the sourced wage figures it publishes come from the federal survey listed above.</td>
+            <td data-label="Who produced it">Revenue Bench. It is a planning range the firm uses when sizing a sales budget, and it is labeled as such on the page that publishes it.</td>
+            <td data-label="Sample and period">This is Revenue Bench's planning range rather than a benchmark. It carries no sample or period.</td>
+            <td data-label="The figures drawn from it">15% to 25% of new revenue as total sales cost. Published on: <a class="content-link" href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a>.</td>
+            <td data-label="What it cannot be used to say">Industry benchmark status cannot be assigned to the range. The page labels it as the firm's own working figure, and the sourced wage figures it publishes come from the federal survey listed above.</td>
           </tr>
         </tbody>
       </table>

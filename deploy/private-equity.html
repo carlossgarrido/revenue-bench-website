@@ -107,30 +107,12 @@
   .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   @media(max-width:699px){
     .jump-nav-links{justify-content:flex-start;flex-wrap:wrap;gap:12px 20px;white-space:normal;}
-    .roles-table-wrap{border:0;overflow:visible;background:transparent;}
-    .roles-table{table-layout:auto;font-size:15px;}
-    .roles-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .roles-table tr{display:block;padding:18px 16px;margin-bottom:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--white);}
     .roles-table tr:last-child{margin-bottom:0;}
-    .roles-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
     .roles-table td:last-child{padding-bottom:0;}
-    .roles-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
-    .stages-table-wrap{border:0;overflow:visible;background:transparent;}
-    .stages-table{table-layout:auto;font-size:15px;}
-    .stages-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .stages-table tr{display:block;padding:18px 16px;margin-bottom:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--white);}
     .stages-table tr:last-child{margin-bottom:0;}
-    .stages-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
     .stages-table td:last-child{padding-bottom:0;}
-    .stages-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
-    .boundary-table-wrap{border:0;overflow:visible;background:transparent;}
-    .boundary-table{table-layout:auto;font-size:15px;}
-    .boundary-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .boundary-table tr{display:block;padding:18px 16px;margin-bottom:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--white);}
     .boundary-table tr:last-child{margin-bottom:0;}
-    .boundary-table td{display:block;width:auto!important;padding:0 0 12px;border:0;}
     .boundary-table td:last-child{padding-bottom:0;}
-    .boundary-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--ink-soft);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
   }
   .omgband{grid-template-columns:repeat(3,1fr);}
   @media(max-width:920px){.omgband{grid-template-columns:1fr;}.omgband .o{border-right:0;border-bottom:1px solid var(--line);}.omgband .o:last-child{border-bottom:0;}.bg-navy .omgband .o{border-bottom-color:var(--navy-light);}.bg-navy .omgband .o:last-child{border-bottom:0;}}
@@ -262,8 +244,8 @@
         <h2 class="h-lg" style="color:#fff;">The revenue roles we run searches for in a portfolio</h2>
         <p class="lead" style="margin-top:14px;color:#fff;">This is the published scope of a Revenue Bench engagement for a private equity firm and its portfolio company. The timings below are the stages on the <a class="content-link" href="how-it-works.html">how it works page</a> and do not promise a result on any single search.</p>
       </div>
-      <div class="roles-table-wrap">
-        <table class="roles-table">
+      <div class="rb-table-wrap roles-table-wrap">
+        <table class="rb-table roles-table">
           <caption class="vh">Revenue roles Revenue Bench recruits for PE-backed portfolio companies, by search trigger, scope, typical time to shortlist, and assessment evidence.</caption>
           <thead>
             <tr>
@@ -319,8 +301,8 @@
         <h2 class="h-lg" style="color:#fff;">When each revenue-talent decision arrives in the deal</h2>
         <p class="lead" style="margin-top:14px;color:#fff;">The scope table answers which role. This table answers when in the deal the question arrives and what Revenue Bench does about it at that point.</p>
       </div>
-      <div class="stages-table-wrap">
-        <table class="stages-table" id="stages-table">
+      <div class="rb-table-wrap stages-table-wrap">
+        <table class="rb-table stages-table" id="stages-table">
           <caption class="vh">Revenue-talent decisions across the private equity deal and hold period, with the work Revenue Bench performs at each stage.</caption>
           <thead>
             <tr>
@@ -366,8 +348,8 @@
         <h2 class="h-lg" style="color:#fff;">What Revenue Bench supplies for a portfolio company</h2>
         <p class="lead" style="margin-top:14px;color:#fff;">Revenue Bench searches for full-time revenue roles. It does not place fractional or interim sales leaders, turnaround CEOs, or post-merger integration leads. The table answers each request a buyer arrives with, row by row, with where the detail sits.</p>
       </div>
-      <div class="boundary-table-wrap">
-        <table class="boundary-table" id="provider-scope-table">
+      <div class="rb-table-wrap boundary-table-wrap">
+        <table class="rb-table boundary-table" id="provider-scope-table">
           <caption class="vh">Revenue Bench provider scope for private equity buyers, giving the answer for each requested role or assessment, what the answer means, and where the detail sits.</caption>
           <thead>
             <tr>

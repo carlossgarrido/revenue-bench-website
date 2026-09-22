@@ -63,17 +63,7 @@
   @media(max-width:640px){.datatable td:nth-child(2){white-space:normal;}}
 
   @media(max-width:1100px){
-    .mandate-wrap{width:auto;margin-left:0;transform:none;overflow-x:visible;}
-    #mandate-table{min-width:0;font-size:15px;border-radius:14px;}
-    #mandate-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #mandate-table tr{display:block;padding:16px 15px;border-bottom:1px solid var(--line);}
     #mandate-table tr:last-child{border-bottom:0;}
-    #mandate-table td{display:block;width:auto!important;padding:0 0 10px;border-right:0;border-bottom:0;}
-    #mandate-table th[scope="row"]{display:block;width:auto;background:none;color:var(--navy);font-size:18px;font-weight:700;letter-spacing:0;text-transform:none;padding:0 0 12px;border-right:0;border-bottom:0;}
-    #mandate-table td:nth-child(2)::before{content:'The condition: ';color:var(--ink-soft);font-weight:400;}
-    #mandate-table td:nth-child(3)::before{content:'The evidence: ';color:var(--ink-soft);font-weight:400;}
-    #mandate-table td:nth-child(4)::before{content:'The first 90 days: ';color:var(--ink-soft);font-weight:400;}
-    #mandate-table td:nth-child(5)::before{content:'The mis-hire signature: ';color:var(--ink-soft);font-weight:400;}
     #mandate-table td:last-child{padding-bottom:0;}
   }
 </style>
@@ -146,8 +136,8 @@
       <h2 id="mandates" style="margin-top:10px;">The four mandates, and how to tell which one you are hiring for</h2>
       <p>This decision follows the choice of model. If the open question is still whether the role should be a VP of Sales, a CRO, or a fractional leader, start with the decision guide on <a href="choosing-a-sales-leadership-model.html">choosing the sales leadership model</a>, because some of the conditions below are better answered by a fractional leader or a player-coach than by a full-time VP. The eight conditions that point the other way are set out in <a href="fractional-sales-leadership-wrong-call.html">when fractional sales leadership is the wrong call</a>. Once a full-time VP is the answer, start with the condition the business is in today. Then test each candidate for evidence that matches the required mandate and define the first 90 days around the same work.</p>
 
-      <div class="table-scroll mandate-wrap" role="region" aria-label="VP of Sales success profile by mandate" tabindex="0">
-        <table class="datatable" id="mandate-table">
+      <div class="rb-table-wrap table-scroll mandate-wrap" role="region" aria-label="VP of Sales success profile by mandate" tabindex="0">
+        <table class="rb-table datatable" id="mandate-table">
           <caption class="vh">The VP of Sales success profile, showing the condition, confirming evidence, first 90 days, and month-six mis-hire signature for four mandates</caption>
           <thead>
             <tr>
@@ -161,31 +151,31 @@
           <tbody>
             <tr>
               <th scope="row">The builder</th>
-              <td>No repeatable process exists. Selling is founder-led or personality-led, every deal runs differently, the forecast is a guess, and there is no documented qualification standard.</td>
-              <td>Has written a sales process from nothing and got a team to run it, not inherited one. Ask for the artifacts they built: the qualification standard, the stage definitions, the first scorecard. A candidate who can only describe operating someone else's process has not built one, whatever the title said.</td>
-              <td>A documented process the team runs, a working forecast, and a qualification standard everyone applies the same way.</td>
-              <td>At month six there is a written process document and no adoption, or the leader has become the closer on every large deal by default because the process was never installed.</td>
+              <td data-label="The condition">No repeatable process exists. Selling is founder-led or personality-led, every deal runs differently, the forecast is a guess, and there is no documented qualification standard.</td>
+              <td data-label="The evidence">Has written a sales process from nothing and got a team to run it, not inherited one. Ask for the artifacts they built: the qualification standard, the stage definitions, the first scorecard. A candidate who can only describe operating someone else's process has not built one, whatever the title said.</td>
+              <td data-label="The first 90 days">A documented process the team runs, a working forecast, and a qualification standard everyone applies the same way.</td>
+              <td data-label="The mis-hire signature">At month six there is a written process document and no adoption, or the leader has become the closer on every large deal by default because the process was never installed.</td>
             </tr>
             <tr>
               <th scope="row">The scaler</th>
-              <td>The process works and produces predictable outcomes. The constraint is throughput: headcount, territory design, segmentation, or a second motion.</td>
-              <td>Has taken a working team from one size to a materially larger one and can describe what broke on the way, hiring pace, ramp times, span of control, and what they changed when it broke.</td>
-              <td>A hiring plan against a ramp model, territories or segments redrawn, and a management layer that does not route every decision through the leader.</td>
-              <td>At month six headcount is up and productivity per rep is down, because the leader added people to a system that was never redesigned to carry them.</td>
+              <td data-label="The condition">The process works and produces predictable outcomes. The constraint is throughput: headcount, territory design, segmentation, or a second motion.</td>
+              <td data-label="The evidence">Has taken a working team from one size to a materially larger one and can describe what broke on the way, hiring pace, ramp times, span of control, and what they changed when it broke.</td>
+              <td data-label="The first 90 days">A hiring plan against a ramp model, territories or segments redrawn, and a management layer that does not route every decision through the leader.</td>
+              <td data-label="The mis-hire signature">At month six headcount is up and productivity per rep is down, because the leader added people to a system that was never redesigned to carry them.</td>
             </tr>
             <tr>
               <th scope="row">The fixer</th>
-              <td>The team exists, the number is short, and the cause is not agreed. Attrition is high or performance is concentrated in one or two people.</td>
-              <td>Has diagnosed an underperforming team, named the cause with evidence rather than instinct, and carried out the consequences, including exits. Ask what they found, how they found it, and who they kept that everyone expected them to remove.</td>
-              <td>A documented read on every rep, expectations reset in writing, and the first performance decisions made.</td>
-              <td>At month six the whole team has turned over and the number has not moved, which means the leader replaced people instead of diagnosing the system they sat in.</td>
+              <td data-label="The condition">The team exists, the number is short, and the cause is not agreed. Attrition is high or performance is concentrated in one or two people.</td>
+              <td data-label="The evidence">Has diagnosed an underperforming team, named the cause with evidence rather than instinct, and carried out the consequences, including exits. Ask what they found, how they found it, and who they kept that everyone expected them to remove.</td>
+              <td data-label="The first 90 days">A documented read on every rep, expectations reset in writing, and the first performance decisions made.</td>
+              <td data-label="The mis-hire signature">At month six the whole team has turned over and the number has not moved, which means the leader replaced people instead of diagnosing the system they sat in.</td>
             </tr>
             <tr>
               <th scope="row">The successor</th>
-              <td>The founder or CEO is still the best seller in the business and the top relationships sit with them. The risk sits in the handover rather than in the hire itself.</td>
-              <td>Has taken over a book or a function from a founder and can describe how the transfer of trust was staged with real customers. Ask what they did in the first 60 days that made the founder comfortable stepping back.</td>
-              <td>Named accounts transferred with the founder present and then absent, and a standing forum where the founder gives the leader the decision rather than taking it back.</td>
-              <td>At month six the founder is still in every important deal, and both parties describe the problem as the other one's behavior.</td>
+              <td data-label="The condition">The founder or CEO is still the best seller in the business and the top relationships sit with them. The risk sits in the handover rather than in the hire itself.</td>
+              <td data-label="The evidence">Has taken over a book or a function from a founder and can describe how the transfer of trust was staged with real customers. Ask what they did in the first 60 days that made the founder comfortable stepping back.</td>
+              <td data-label="The first 90 days">Named accounts transferred with the founder present and then absent, and a standing forum where the founder gives the leader the decision rather than taking it back.</td>
+              <td data-label="The mis-hire signature">At month six the founder is still in every important deal, and both parties describe the problem as the other one's behavior.</td>
             </tr>
           </tbody>
         </table>

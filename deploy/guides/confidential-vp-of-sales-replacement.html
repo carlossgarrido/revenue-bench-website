@@ -60,16 +60,7 @@
   #leak-table td:last-child{color:var(--gold-deep);font-weight:600;}
   .table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
   @media(max-width:760px){
-    .tablewrap-leaks{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #leak-table{min-width:0;font-size:15px;}
-    #leak-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #leak-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #leak-table tr:last-child{border-bottom:0;}
-    #leak-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;}
-    #leak-table th[scope="row"]{display:block;width:auto;font-size:17px;padding:0 0 10px;border-bottom:0;}
-    #leak-table td:nth-child(2)::before{content:'How it starts: ';color:var(--ink-soft);font-weight:400;}
-    #leak-table td:nth-child(3)::before{content:'Early signal: ';color:var(--ink-soft);}
-    #leak-table td:nth-child(4)::before{content:'Containment move: ';color:var(--ink-soft);font-weight:400;}
     #leak-table td:last-child{padding-bottom:0;}
   }
   .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
@@ -140,8 +131,8 @@
       <div class="eyebrow" style="margin-top:44px;">Decision artifact</div>
       <h2 id="protocol" style="margin-top:10px;">The confidential replacement protocol</h2>
       <p>Confidentiality depends on controls applied at every stage. Each stage carries a specific risk, defines the people who are read in, and assigns a control that contains the information.</p>
-      <div class="tablewrap">
-        <table class="datatable">
+      <div class="rb-table-wrap tablewrap">
+        <table class="rb-table datatable">
           <thead>
             <tr>
               <th>Stage</th>
@@ -153,39 +144,39 @@
           <tbody>
             <tr>
               <td>Decision and mandate</td>
-              <td>A premature signal that leadership is unstable, before the decision is even final.</td>
-              <td>The CEO or operating partner, one board or ownership contact, and the search partner under a confidentiality agreement.</td>
-              <td>The search partner holds the mandate and role profile outside shared company systems.</td>
+              <td data-label="The risk to contain">A premature signal that leadership is unstable, before the decision is even final.</td>
+              <td data-label="Who is read in">The CEO or operating partner, one board or ownership contact, and the search partner under a confidentiality agreement.</td>
+              <td data-label="The control">The search partner holds the mandate and role profile outside shared company systems.</td>
             </tr>
             <tr>
               <td>Search scoping</td>
-              <td>Internal HR or the team inferring a replacement from job-description activity.</td>
-              <td>The search partner defines the role profile from the operating plan, without relying on an internal posting.</td>
-              <td>The role is scoped and carried outside the company's systems, without a public job posting, an internal recruiting record, or company-branded outreach.</td>
+              <td data-label="The risk to contain">Internal HR or the team inferring a replacement from job-description activity.</td>
+              <td data-label="Who is read in">The search partner defines the role profile from the operating plan, without relying on an internal posting.</td>
+              <td data-label="The control">The role is scoped and carried outside the company's systems, without a public job posting, an internal recruiting record, or company-branded outreach.</td>
             </tr>
             <tr>
               <td>Sourcing</td>
-              <td>Candidates or competitors reading a live public search as company distress.</td>
-              <td>The search partner approaches candidates directly. The company name is withheld until a candidate is under a confidentiality agreement.</td>
-              <td>A short, targeted list replaces a wide public funnel. Approaches are individual and confidential.</td>
+              <td data-label="The risk to contain">Candidates or competitors reading a live public search as company distress.</td>
+              <td data-label="Who is read in">The search partner approaches candidates directly. The company name is withheld until a candidate is under a confidentiality agreement.</td>
+              <td data-label="The control">A short, targeted list replaces a wide public funnel. Approaches are individual and confidential.</td>
             </tr>
             <tr>
               <td>Assessment and interviews</td>
-              <td>A visible interview loop across the company exposing the search.</td>
-              <td>A small, named panel only: the CEO or operating partner and at most one other decision-maker.</td>
-              <td>Assessment runs before interviews to keep the panel small and the shortlist short. Interviews happen offsite or remote.</td>
+              <td data-label="The risk to contain">A visible interview loop across the company exposing the search.</td>
+              <td data-label="Who is read in">A small, named panel only: the CEO or operating partner and at most one other decision-maker.</td>
+              <td data-label="The control">Assessment runs before interviews to keep the panel small and the shortlist short. Interviews happen offsite or remote.</td>
             </tr>
             <tr>
               <td>Offer and start</td>
-              <td>The gap between the incumbent's exit and the new leader's start leaving the team without direction.</td>
-              <td>The CEO, the incoming leader, and HR at the point of the formal transition.</td>
-              <td>The offer and start date are set before the incumbent transition begins, so the change is announced once, as a completed decision.</td>
+              <td data-label="The risk to contain">The gap between the incumbent's exit and the new leader's start leaving the team without direction.</td>
+              <td data-label="Who is read in">The CEO, the incoming leader, and HR at the point of the formal transition.</td>
+              <td data-label="The control">The offer and start date are set before the incumbent transition begins, so the change is announced once, as a completed decision.</td>
             </tr>
             <tr>
               <td>Incumbent transition</td>
-              <td>A departure handled in a way that damages the incumbent, the team's trust, or the customer relationships the incumbent held.</td>
-              <td>The CEO or operating partner, HR, and legal counsel.</td>
-              <td>A dignified, planned exit includes a clear internal message. Customer and team handovers follow a controlled sequence.</td>
+              <td data-label="The risk to contain">A departure handled in a way that damages the incumbent, the team's trust, or the customer relationships the incumbent held.</td>
+              <td data-label="Who is read in">The CEO or operating partner, HR, and legal counsel.</td>
+              <td data-label="The control">A dignified, planned exit includes a clear internal message. Customer and team handovers follow a controlled sequence.</td>
             </tr>
           </tbody>
         </table>
@@ -195,8 +186,8 @@
       <div class="eyebrow" style="margin-top:44px;">Containment artifact</div>
       <h2 id="failure" style="margin-top:10px;">How a confidential VP of Sales search gets exposed</h2>
       <p>The protocol above is the plan. Eight routes expose a confidential search in practice, and each one starts with ordinary behavior by someone acting reasonably. None of them requires sabotage.</p>
-      <div class="tablewrap tablewrap-leaks">
-        <table class="datatable" id="leak-table">
+      <div class="rb-table-wrap tablewrap tablewrap-leaks">
+        <table class="rb-table datatable" id="leak-table">
           <caption class="vh">Eight routes that can expose a confidential VP of Sales search, with the cause, early signal, and containment move for each.</caption>
           <thead>
             <tr>
@@ -209,51 +200,51 @@
           <tbody>
             <tr>
               <th scope="row">The board or investor update</th>
-              <td>A VP of Sales transition appears in a board deck or sponsor update that circulates beyond the named circle.</td>
-              <td>Someone at the sponsor who was never briefed asks about the change.</td>
-              <td>The sponsor contact briefs one named person directly and restricts distribution of that section of the board materials, rather than circulating the change in the full pack before the announcement.</td>
+              <td data-label="How it starts">A VP of Sales transition appears in a board deck or sponsor update that circulates beyond the named circle.</td>
+              <td data-label="Early signal">Someone at the sponsor who was never briefed asks about the change.</td>
+              <td data-label="Containment move">The sponsor contact briefs one named person directly and restricts distribution of that section of the board materials, rather than circulating the change in the full pack before the announcement.</td>
             </tr>
             <tr>
               <th scope="row">The requisition and the HR systems</th>
-              <td>An approved requisition, compensation band, or headcount line becomes visible to internal talent acquisition or HR business partners.</td>
-              <td>An internal recruiter offers to help with the role.</td>
-              <td>The CEO opens no internal requisition. The search partner carries the role outside company systems, while the headcount decision stays in the record used by the named circle.</td>
+              <td data-label="How it starts">An approved requisition, compensation band, or headcount line becomes visible to internal talent acquisition or HR business partners.</td>
+              <td data-label="Early signal">An internal recruiter offers to help with the role.</td>
+              <td data-label="Containment move">The CEO opens no internal requisition. The search partner carries the role outside company systems, while the headcount decision stays in the record used by the named circle.</td>
             </tr>
             <tr>
               <th scope="row">LinkedIn adjacency</th>
-              <td>Mutual contacts connect with a named search partner, leaders from one company receive repeated profile views, or a candidate's availability signal appears to shared contacts.</td>
-              <td>The incumbent or a team member asks why a search firm has viewed their profiles.</td>
-              <td>The search partner makes first approaches by phone or personal email, and the sourcing team does not cold-approach the incumbent's direct reports. Where an internal successor is a genuine candidate, the CEO raises it directly rather than through the search.</td>
+              <td data-label="How it starts">Mutual contacts connect with a named search partner, leaders from one company receive repeated profile views, or a candidate's availability signal appears to shared contacts.</td>
+              <td data-label="Early signal">The incumbent or a team member asks why a search firm has viewed their profiles.</td>
+              <td data-label="Containment move">The search partner makes first approaches by phone or personal email, and the sourcing team does not cold-approach the incumbent's direct reports. Where an internal successor is a genuine candidate, the CEO raises it directly rather than through the search.</td>
             </tr>
             <tr>
               <th scope="row">Reference checks run too early</th>
-              <td>One reference call reaches a contact who knows the incumbent.</td>
-              <td>A candidate reports market chatter about the role.</td>
-              <td>The hiring manager runs references at final diligence, on the list the candidate approved, with no off-list calls, which is the published <a href="reference-checks-for-sales-hires.html">reference-check standard</a>.</td>
+              <td data-label="How it starts">One reference call reaches a contact who knows the incumbent.</td>
+              <td data-label="Early signal">A candidate reports market chatter about the role.</td>
+              <td data-label="Containment move">The hiring manager runs references at final diligence, on the list the candidate approved, with no off-list calls, which is the published <a href="reference-checks-for-sales-hires.html">reference-check standard</a>.</td>
             </tr>
             <tr>
               <th scope="row">Candidate back-channel diligence</th>
-              <td>A serious candidate calls a friend inside the client company to check the role before committing.</td>
-              <td>An employee mentions an unusual call about the sales organization.</td>
-              <td>The search partner offers a diligence conversation with a named member of the circle before the candidate needs to improvise, and briefs that circle to expect an unscheduled call about the sales organization.</td>
+              <td data-label="How it starts">A serious candidate calls a friend inside the client company to check the role before committing.</td>
+              <td data-label="Early signal">An employee mentions an unusual call about the sales organization.</td>
+              <td data-label="Containment move">The search partner offers a diligence conversation with a named member of the circle before the candidate needs to improvise, and briefs that circle to expect an unscheduled call about the sales organization.</td>
             </tr>
             <tr>
               <th scope="row">Network overlap with the incumbent</th>
-              <td>Senior sales networks are small, and an approached candidate knows the incumbent personally.</td>
-              <td>The candidate names the incumbent as an acquaintance.</td>
-              <td>The search partner maps overlap during scoping and raises it at the point the company name is disclosed under agreement, then treats it as a sequencing constraint rather than a disqualification.</td>
+              <td data-label="How it starts">Senior sales networks are small, and an approached candidate knows the incumbent personally.</td>
+              <td data-label="Early signal">The candidate names the incumbent as an acquaintance.</td>
+              <td data-label="Containment move">The search partner maps overlap during scoping and raises it at the point the company name is disclosed under agreement, then treats it as a sequencing constraint rather than a disqualification.</td>
             </tr>
             <tr>
               <th scope="row">Interview logistics</th>
-              <td>A descriptive calendar entry, booked meeting space, visitor log, assistant, travel booking, candidate dinner expense, recording, or transcript exposes the purpose.</td>
-              <td>An assistant asks who the visitor is.</td>
-              <td>The panel meets offsite or remotely, uses entries with no role name, turns off recording and transcription, and books its own time.</td>
+              <td data-label="How it starts">A descriptive calendar entry, booked meeting space, visitor log, assistant, travel booking, candidate dinner expense, recording, or transcript exposes the purpose.</td>
+              <td data-label="Early signal">An assistant asks who the visitor is.</td>
+              <td data-label="Containment move">The panel meets offsite or remotely, uses entries with no role name, turns off recording and transcription, and books its own time.</td>
             </tr>
             <tr>
               <th scope="row">The circle expanding informally</th>
-              <td>One more person is briefed each week as a courtesy, with every addition appearing reasonable by itself.</td>
-              <td>Someone outside the named circle refers to the search.</td>
-              <td>The CEO records the circle at kickoff and approves every addition with a date and a reason.</td>
+              <td data-label="How it starts">One more person is briefed each week as a courtesy, with every addition appearing reasonable by itself.</td>
+              <td data-label="Early signal">Someone outside the named circle refers to the search.</td>
+              <td data-label="Containment move">The CEO records the circle at kickoff and approves every addition with a date and a reason.</td>
             </tr>
           </tbody>
         </table>

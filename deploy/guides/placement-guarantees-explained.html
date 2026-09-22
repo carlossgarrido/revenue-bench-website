@@ -92,39 +92,12 @@
   #support-table th[scope="row"]{background:transparent;color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;font-size:inherit;line-height:1.55;}
   #support-table td:last-child{color:var(--ink-mid);font-weight:400;}
   @media(max-width:760px){
-    .tablewrap-terms,.tablewrap-ladder,.tablewrap-model,.tablewrap-support{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #terms-table,#ladder-table,#model-table,#support-table{min-width:0;font-size:15px;}
-    #terms-table thead,#ladder-table thead,#model-table thead,#support-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #terms-table tr,#ladder-table tr,#model-table tr,#support-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #terms-table tr:last-child,#ladder-table tr:last-child,#model-table tr:last-child,#support-table tr:last-child{border-bottom:0;}
-    #terms-table td,#ladder-table td,#model-table td,#support-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
-    #terms-table th[scope="row"],#ladder-table th[scope="row"],#model-table th[scope="row"],#support-table th[scope="row"]{display:block;width:auto;font-size:17px;padding:0 0 10px;border-bottom:0;border-right:0;}
-    #terms-table td:nth-child(2)::before{content:'The market: ';color:var(--ink-soft);}
-    #terms-table td:nth-child(3)::before{content:'Revenue Bench: ';color:var(--ink-soft);font-weight:400;}
-    #terms-table td:nth-child(4)::before{content:'Check: ';color:var(--ink-soft);}
-    #ladder-table td:nth-child(2)::before{content:'Leaves out: ';color:var(--ink-soft);}
-    #ladder-table td:nth-child(3)::before{content:'Rate: ';color:var(--ink-soft);font-weight:400;}
-    #model-table td:nth-child(2)::before{content:'Fee falls due: ';color:var(--ink-soft);}
-    #model-table td:nth-child(3)::before{content:'Hire starts and fails: ';color:var(--ink-soft);}
-    #model-table td:nth-child(4)::before{content:'No hire: ';color:var(--ink-soft);}
     #terms-table td:last-child,#ladder-table td:last-child,#model-table td:last-child,#support-table td:last-child{padding-bottom:0;}
-    #support-table td:last-child::before{content:'Revenue Bench: ';color:var(--ink-soft);font-weight:400;}
   }
   @media(max-width:760px){
-    .tablewrap-publish,.tablewrap-rerun{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #publish-table,#rerun-table{min-width:0;font-size:15px;}
-    #publish-table thead,#rerun-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #publish-table tr,#rerun-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #publish-table tr:last-child,#rerun-table tr:last-child{border-bottom:0;}
-    #publish-table td,#rerun-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
-    #publish-table th[scope="row"]{display:block;width:auto!important;font-size:17px;padding:0 0 10px;border-bottom:0;border-right:0;}
     #rerun-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #publish-table td:nth-child(2)::before{content:'Sites that publish it: ';color:var(--ink-soft);font-weight:400;}
-    #publish-table td:last-child::before{content:'What its absence means: ';color:var(--ink-soft);font-weight:400;}
-    #rerun-table td:nth-child(2)::before{content:'What happens: ';color:var(--ink-soft);font-weight:400;}
-    #rerun-table td:nth-child(3)::before{content:'Who owns it: ';color:var(--ink-soft);font-weight:400;}
-    #rerun-table td:nth-child(4)::before{content:'What it costs you: ';color:var(--ink-soft);font-weight:400;}
-    #rerun-table td:last-child::before{content:'The limit worth knowing: ';color:var(--ink-soft);font-weight:400;}
     #publish-table td:last-child,#rerun-table td:last-child{padding-bottom:0;}
   }
   .tablewrap-narrow{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border:1px solid var(--line-soft);border-radius:12px;}
@@ -220,8 +193,8 @@
       <p>Offering a placement guarantee is close to universal, while the terms vary. Top Echelon's 2019 survey of members of its recruiting network found that 95.9% of the recruiters surveyed offered a guarantee of some kind and 4.1% offered none. The sample consists of recruiters in one network describing the terms they offered in 2019, so the finding reports what firms said they offered. It does not report what employers received. Top Echelon does not publish how many recruiters responded.</p>
       <p>In September 2026 Revenue Bench read the public websites of 28 sales and executive search firms that a United States buyer would reach through ordinary searches for a sales recruiting firm, and could read 26 of them. Among those 26 readable sites, 11 of 26 (42%) stated that a guarantee exists in any wording, 6 of 26 (23%) stated a specific period in days or months, 7 of 26 (27%) described the remedy in a sentence, 4 of 26 (15%) stated what voids the guarantee, and 1 of 26 (4%) stated when the clock starts. Revenue Bench counted a site in the 7 of 26 remedy total only when the site explained replacement, refund, or credit in a sentence. A further 4 firms used the phrase "replacement guarantee" and described the remedy nowhere, which raises the remedy count to 11 of 26 (42%) under the looser definition.</p>
 
-      <div class="tablewrap tablewrap-publish">
-        <table class="datatable" id="publish-table">
+      <div class="rb-table-wrap tablewrap tablewrap-publish">
+        <table class="rb-table datatable" id="publish-table">
           <caption class="vh">Placement guarantee terms published on the websites of sales and executive search firms in Revenue Bench's September 2026 disclosure sweep.</caption>
           <colgroup>
             <col style="width:24%;">
@@ -238,28 +211,28 @@
           <tbody>
             <tr>
               <th scope="row">Whether a guarantee exists at all</th>
-              <td>Revenue Bench's September 2026 sweep found that 11 of 26 readable public websites (42%) stated that a guarantee exists.</td>
-              <td>Where the website is silent, a buyer cannot confirm from public copy that an agreement contains a guarantee at all.</td>
+              <td data-label="Sites that publish it">Revenue Bench's September 2026 sweep found that 11 of 26 readable public websites (42%) stated that a guarantee exists.</td>
+              <td data-label="What its absence means">Where the website is silent, a buyer cannot confirm from public copy that an agreement contains a guarantee at all.</td>
             </tr>
             <tr>
               <th scope="row">How long the window runs</th>
-              <td>Revenue Bench's September 2026 sweep found that 6 of 26 readable public websites (23%) stated a specific period in days or months.</td>
-              <td>Coverage windows cannot be compared across firms before the agreements arrive.</td>
+              <td data-label="Sites that publish it">Revenue Bench's September 2026 sweep found that 6 of 26 readable public websites (23%) stated a specific period in days or months.</td>
+              <td data-label="What its absence means">Coverage windows cannot be compared across firms before the agreements arrive.</td>
             </tr>
             <tr>
               <th scope="row">Which remedy a claim produces</th>
-              <td>Under Revenue Bench's strict definition, the September 2026 sweep found that 7 of 26 readable public websites (27%) explained replacement, refund, or credit in a sentence. A further 4 sites only used the phrase "replacement guarantee," producing 11 of 26 (42%) under a looser definition.</td>
-              <td>The buyer cannot tell whether a claim produces a replacement search, a refund, or a credit until the clause is read.</td>
+              <td data-label="Sites that publish it">Under Revenue Bench's strict definition, the September 2026 sweep found that 7 of 26 readable public websites (27%) explained replacement, refund, or credit in a sentence. A further 4 sites only used the phrase "replacement guarantee," producing 11 of 26 (42%) under a looser definition.</td>
+              <td data-label="What its absence means">The buyer cannot tell whether a claim produces a replacement search, a refund, or a credit until the clause is read.</td>
             </tr>
             <tr>
               <th scope="row">The conditions that cancel cover</th>
-              <td>Revenue Bench's September 2026 sweep found that 4 of 26 readable public websites (15%) stated what voids the guarantee.</td>
-              <td>The events that cancel coverage stay unknown until the agreement arrives, which is after the shortlist is set.</td>
+              <td data-label="Sites that publish it">Revenue Bench's September 2026 sweep found that 4 of 26 readable public websites (15%) stated what voids the guarantee.</td>
+              <td data-label="What its absence means">The events that cancel coverage stay unknown until the agreement arrives, which is after the shortlist is set.</td>
             </tr>
             <tr>
               <th scope="row">The date the window runs from</th>
-              <td>Revenue Bench's September 2026 sweep found that 1 of 26 readable public websites (4%) stated when the guarantee clock starts.</td>
-              <td>A published window means little while the date it runs from is unstated, since an offer date and a first day can sit weeks apart.</td>
+              <td data-label="Sites that publish it">Revenue Bench's September 2026 sweep found that 1 of 26 readable public websites (4%) stated when the guarantee clock starts.</td>
+              <td data-label="What its absence means">A published window means little while the date it runs from is unstated, since an offer date and a first day can sit weeks apart.</td>
             </tr>
           </tbody>
         </table>
@@ -273,8 +246,8 @@
 
       <h2 id="types">The three guarantee types</h2>
       <p>Guarantees come in three shapes. They protect you differently, and the difference is worth knowing before you compare two offers side by side. The table gives you the remedy and the contract terms to check for each type.</p>
-      <div class="tablewrap-narrow">
-        <table class="datatable-narrow">
+      <div class="rb-table-wrap tablewrap-narrow">
+        <table class="rb-table datatable-narrow">
           <thead>
             <tr>
               <th scope="col">Type</th>
@@ -285,18 +258,18 @@
           <tbody>
             <tr>
               <td>Free replacement search</td>
-              <td>The firm runs the search again at no additional fee, up to the number of re-runs the agreement states.</td>
-              <td>The cap on the number of replacements and any delivery terms.</td>
+              <td data-label="What you get">The firm runs the search again at no additional fee, up to the number of re-runs the agreement states.</td>
+              <td data-label="What to check">The cap on the number of replacements and any delivery terms.</td>
             </tr>
             <tr>
               <td>Fee refund (full or prorated)</td>
-              <td>Some or all of the fee comes back if the hire leaves inside the window.</td>
-              <td>Whether it is full or prorated, when it is paid, and how you will fill the open role.</td>
+              <td data-label="What you get">Some or all of the fee comes back if the hire leaves inside the window.</td>
+              <td data-label="What to check">Whether it is full or prorated, when it is paid, and how you will fill the open role.</td>
             </tr>
             <tr>
               <td>Fee credit</td>
-              <td>The fee is credited toward a future search rather than returned as money.</td>
-              <td>Whether the credit expires, and whether it obligates you to run another search to use it.</td>
+              <td data-label="What you get">The fee is credited toward a future search rather than returned as money.</td>
+              <td data-label="What to check">Whether the credit expires, and whether it obligates you to run another search to use it.</td>
             </tr>
           </tbody>
         </table>
@@ -323,8 +296,8 @@
       <p>A guarantee and post-placement support answer different questions. An agreement can carry one without the other, so a buyer who has read the guarantee clause still does not know what happens in the first 90 days. Put the questions below to any firm, this one included, and record the answers next to the guarantee clause.</p>
 
       <h3>Buyer's post-placement support checklist</h3>
-      <div class="tablewrap tablewrap-support">
-        <table class="datatable" id="support-table">
+      <div class="rb-table-wrap tablewrap tablewrap-support">
+        <table class="rb-table datatable" id="support-table">
           <caption class="vh">Questions to put to a search firm about post-placement support, with Revenue Bench's published answer to each.</caption>
           <thead>
             <tr>
@@ -335,31 +308,31 @@
           <tbody>
           <tr>
             <th scope="row">Is the support separate from the guarantee?</th>
-            <td>The guarantee is the remedy when a hire fails. Post-placement support is the work done inside the window, before any claim arises. Both exist, and they answer different questions.</td>
+            <td data-label="Revenue Bench">The guarantee is the remedy when a hire fails. Post-placement support is the work done inside the window, before any claim arises. Both exist, and they answer different questions.</td>
           </tr>
           <tr>
             <th scope="row">Who meets the hire, and how often?</th>
-            <td>A dedicated onboarding coach meets the hire weekly for the first 90 days.</td>
+            <td data-label="Revenue Bench">A dedicated onboarding coach meets the hire weekly for the first 90 days.</td>
           </tr>
           <tr>
             <th scope="row">Who meets the hiring manager, and how often?</th>
-            <td>The same coach meets the hiring manager weekly for the first 90 days and reports to the hiring manager.</td>
+            <td data-label="Revenue Bench">The same coach meets the hiring manager weekly for the first 90 days and reports to the hiring manager.</td>
           </tr>
           <tr>
             <th scope="row">Does anything happen before day one?</th>
-            <td>A two-day sales skills program for reps, or a leadership refresher for leaders, at or before day one.</td>
+            <td data-label="Revenue Bench">A two-day sales skills program for reps, or a leadership refresher for leaders, at or before day one.</td>
           </tr>
           <tr>
             <th scope="row">Does the support window match the guarantee window?</th>
-            <td>Yes. The coach runs over the same 90 days the replacement guarantee covers, measured from the hire's start date.</td>
+            <td data-label="Revenue Bench">Yes. The coach runs over the same 90 days the replacement guarantee covers, measured from the hire's start date.</td>
           </tr>
           <tr>
             <th scope="row">Is the support a defined protocol or an intention?</th>
-            <td>The coach follows a defined protocol. Revenue Bench does not publish the protocol's contents, so a reader cannot audit it from this page.</td>
+            <td data-label="Revenue Bench">The coach follows a defined protocol. Revenue Bench does not publish the protocol's contents, so a reader cannot audit it from this page.</td>
           </tr>
           <tr>
             <th scope="row">What does the hiring manager get out of it?</th>
-            <td>A read on the hire's fit and aptitude inside the 90-day window.</td>
+            <td data-label="Revenue Bench">A read on the hire's fit and aptitude inside the 90-day window.</td>
           </tr>
           </tbody>
         </table>
@@ -371,8 +344,8 @@
 
       <h2 id="model">What the guarantee is worth under contingency, container, and retained search</h2>
       <p>A placement guarantee is triggered by a placement, so its remedy answers one failure: a hire who started and did not last. Whether that trigger is the accepted offer or the hire's first day is set in the agreement, and the difference decides whether a candidate who accepts and never starts is covered. When that happens, the full fee has fallen due under all <a href="sales-recruiter-fees.html">three fee models</a>, and the guarantee is the term the buyer holds under each. The difference between the models sits in the failure the guarantee never reaches.</p>
-      <div class="tablewrap tablewrap-model">
-        <table class="datatable" id="model-table">
+      <div class="rb-table-wrap tablewrap tablewrap-model">
+        <table class="rb-table datatable" id="model-table">
           <caption class="vh">What a placement guarantee reaches under each recruiting fee model, and the failure it does not reach.</caption>
           <colgroup>
             <col style="width:22%;">
@@ -391,21 +364,21 @@
           <tbody>
             <tr>
               <th scope="row">Contingency</th>
-              <td>Only when a candidate is hired and starts.</td>
-              <td>The full fee has fallen due. The guarantee's remedy applies.</td>
-              <td>No fee has fallen due, so no fee is at risk. The cost of the open role still sits with the buyer.</td>
+              <td data-label="Fee falls due">Only when a candidate is hired and starts.</td>
+              <td data-label="Hire starts and fails">The full fee has fallen due. The guarantee's remedy applies.</td>
+              <td data-label="No hire">No fee has fallen due, so no fee is at risk. The cost of the open role still sits with the buyer.</td>
             </tr>
             <tr>
               <th scope="row">Container or engaged</th>
-              <td>A fixed engagement fee up front, the balance when the hire starts.</td>
-              <td>The full fee has fallen due. The guarantee's remedy applies.</td>
-              <td>The engagement fee has fallen due. Where the guarantee is triggered by a hire who starts, it does not reach this outcome.</td>
+              <td data-label="Fee falls due">A fixed engagement fee up front, the balance when the hire starts.</td>
+              <td data-label="Hire starts and fails">The full fee has fallen due. The guarantee's remedy applies.</td>
+              <td data-label="No hire">The engagement fee has fallen due. Where the guarantee is triggered by a hire who starts, it does not reach this outcome.</td>
             </tr>
             <tr>
               <th scope="row">Retained</th>
-              <td>In stages across the search, often in three stages such as kickoff, shortlist, and placement, whether or not a hire is made.</td>
-              <td>The full fee has fallen due. The guarantee's remedy applies.</td>
-              <td>The stages already invoiced stay due. Where the guarantee is triggered by a hire who starts, it does not reach this outcome.</td>
+              <td data-label="Fee falls due">In stages across the search, often in three stages such as kickoff, shortlist, and placement, whether or not a hire is made.</td>
+              <td data-label="Hire starts and fails">The full fee has fallen due. The guarantee's remedy applies.</td>
+              <td data-label="No hire">The stages already invoiced stay due. Where the guarantee is triggered by a hire who starts, it does not reach this outcome.</td>
             </tr>
           </tbody>
         </table>
@@ -420,8 +393,8 @@
       <p>The one public search-performance dataset carrying a stated sample and period is Clockwork Recruiting's Executive Search Performance Benchmark Report. Published in October 2018, it covers 23,970 anonymized search projects run January 2015 to August 2018 and filtered to retained projects only, from Clockwork's own customer base of search firms using its applicant tracking system. It measures whether a search produced a hire. It reports nothing on how long a hire stayed. A retention rate shown to a buyer is therefore that firm's own figure, computed to that firm's own definitions, against no external standard.</p>
       <p>The definitions ladder below is an illustration with invented figures and no Revenue Bench data. It shows how five defensible readings of one placement record produce five rates.</p>
       <p>Take 20 placements, all made at least 24 months ago. Over those 24 months, 3 people resigned, 1 of them inside the first 12 months. Terminations for performance accounted for 2, 1 of them inside the first 12 months. A company-wide restructure cut 1. Another was promoted out of the sales role into a different function. The last was let go inside the guarantee window, the firm ran the search again at no additional fee, and that replacement is still in the role.</p>
-      <div class="tablewrap tablewrap-ladder">
-        <table id="ladder-table" class="datatable">
+      <div class="rb-table-wrap tablewrap tablewrap-ladder">
+        <table id="ladder-table" class="rb-table datatable">
           <caption class="vh">Illustration of five candidate retention rate definitions using invented figures and no Revenue Bench data.</caption>
           <thead>
             <tr>
@@ -433,28 +406,28 @@
           <tbody>
             <tr>
               <th scope="row">Every departure from the placed role</th>
-              <td>Nothing. All 8 departures count against the rate</td>
-              <td>12 of 20, or 60%</td>
+              <td data-label="Leaves out">Nothing. All 8 departures count against the rate</td>
+              <td data-label="Rate">12 of 20, or 60%</td>
             </tr>
             <tr>
               <th scope="row">Departures other than a restructure or an internal move</th>
-              <td>The 1 restructure and the 1 promotion into another function, on the reasoning that neither reflects selection</td>
-              <td>14 of 20, or 70%</td>
+              <td data-label="Leaves out">The 1 restructure and the 1 promotion into another function, on the reasoning that neither reflects selection</td>
+              <td data-label="Rate">14 of 20, or 70%</td>
             </tr>
             <tr>
               <th scope="row">Also excluding seats the firm refilled at its own cost</th>
-              <td>Those 2, plus the 1 guarantee re-run, on the reasoning that the firm delivered a working seat</td>
-              <td>15 of 20, or 75%</td>
+              <td data-label="Leaves out">Those 2, plus the 1 guarantee re-run, on the reasoning that the firm delivered a working seat</td>
+              <td data-label="Rate">15 of 20, or 75%</td>
             </tr>
             <tr>
               <th scope="row">Voluntary departures only</th>
-              <td>Those 3, plus the 2 terminations for performance, on the reasoning that the employer made those calls</td>
-              <td>17 of 20, or 85%</td>
+              <td data-label="Leaves out">Those 3, plus the 2 terminations for performance, on the reasoning that the employer made those calls</td>
+              <td data-label="Rate">17 of 20, or 85%</td>
             </tr>
             <tr>
               <th scope="row">Voluntary departures, read at 12 months</th>
-              <td>Those 5, plus the 2 resignations that fell after month 12</td>
-              <td>19 of 20, or 95%</td>
+              <td data-label="Leaves out">Those 5, plus the 2 resignations that fell after month 12</td>
+              <td data-label="Rate">19 of 20, or 95%</td>
             </tr>
           </tbody>
         </table>
@@ -474,8 +447,8 @@
 
       <h2 id="compare">The seven terms, compared</h2>
       <p>You do not need a lawyer to read a guarantee well. You need the seven terms below and the discipline to get every answer on paper before you sign.</p>
-      <div class="tablewrap tablewrap-terms">
-        <table class="datatable" id="terms-table">
+      <div class="rb-table-wrap tablewrap tablewrap-terms">
+        <table class="rb-table datatable" id="terms-table">
           <caption class="vh">The seven placement guarantee terms, with market figures, Revenue Bench's published answer, and the check to run against any agreement.</caption>
           <thead>
             <tr>
@@ -488,45 +461,45 @@
           <tbody>
             <tr>
               <th scope="row">The window</th>
-              <td>90 days is the most common, at 44.9% of firms in Top Echelon's 2019 survey of its recruiting-network members. 30 days is 20.3% and 60 days 20.0%. Six months is 2.4% and one year 2.3%.</td>
-              <td>90 days.</td>
-              <td>Take the number of days from the agreement rather than from the marketing page.</td>
+              <td data-label="The market">90 days is the most common, at 44.9% of firms in Top Echelon's 2019 survey of its recruiting-network members. 30 days is 20.3% and 60 days 20.0%. Six months is 2.4% and one year 2.3%.</td>
+              <td data-label="Revenue Bench">90 days.</td>
+              <td data-label="Check">Take the number of days from the agreement rather than from the marketing page.</td>
             </tr>
             <tr>
               <th scope="row">When the window starts</th>
-              <td>Not measured in any public survey. The clock starts either at the signed offer or on the hire's first day, and those dates can sit weeks apart.</td>
-              <td>The hire's first day.</td>
-              <td>Ask which date starts the clock and have that date written into the agreement.</td>
+              <td data-label="The market">Not measured in any public survey. The clock starts either at the signed offer or on the hire's first day, and those dates can sit weeks apart.</td>
+              <td data-label="Revenue Bench">The hire's first day.</td>
+              <td data-label="Check">Ask which date starts the clock and have that date written into the agreement.</td>
             </tr>
             <tr>
               <th scope="row">The remedy</th>
-              <td>Replacement with no money back is the majority at 61.4% in Top Echelon's 2019 survey. A prorated refund is 17.6% and a full refund 8.4%.</td>
-              <td>A replacement search, run again at no additional fee.</td>
-              <td>Confirm which of the three you are buying, since the word guarantee covers all three.</td>
+              <td data-label="The market">Replacement with no money back is the majority at 61.4% in Top Echelon's 2019 survey. A prorated refund is 17.6% and a full refund 8.4%.</td>
+              <td data-label="Revenue Bench">A replacement search, run again at no additional fee.</td>
+              <td data-label="Check">Confirm which of the three you are buying, since the word guarantee covers all three.</td>
             </tr>
             <tr>
               <th scope="row">The number of re-runs</th>
-              <td>Not measured in any public survey. An agreement can state a cap on re-runs, and that number sits in the contract rather than in the headline.</td>
-              <td>One, stated in the agreement.</td>
-              <td>Ask for the number and have it written down before you sign.</td>
+              <td data-label="The market">Not measured in any public survey. An agreement can state a cap on re-runs, and that number sits in the contract rather than in the headline.</td>
+              <td data-label="Revenue Bench">One, stated in the agreement.</td>
+              <td data-label="Check">Ask for the number and have it written down before you sign.</td>
             </tr>
             <tr>
               <th scope="row">What voids coverage</th>
-              <td>Not measured in any public survey. Contract clauses can name a role or compensation change, a change of manager, skipped onboarding steps, an unpaid invoice, or a missed notification window.</td>
-              <td>No conditions.</td>
-              <td>Ask for the full void list in writing before you sign rather than after a claim.</td>
+              <td data-label="The market">Not measured in any public survey. Contract clauses can name a role or compensation change, a change of manager, skipped onboarding steps, an unpaid invoice, or a missed notification window.</td>
+              <td data-label="Revenue Bench">No conditions.</td>
+              <td data-label="Check">Ask for the full void list in writing before you sign rather than after a claim.</td>
             </tr>
             <tr>
               <th scope="row">Who decides the hire is not working</th>
-              <td>Not measured in any public survey. Agreements range from the client's judgment to a clause the firm resolves.</td>
-              <td>The client's call. Revenue Bench asks for no evidence to open a claim.</td>
-              <td>Ask who determines whether the guarantee applies, and what evidence that decision requires.</td>
+              <td data-label="The market">Not measured in any public survey. Agreements range from the client's judgment to a clause the firm resolves.</td>
+              <td data-label="Revenue Bench">The client's call. Revenue Bench asks for no evidence to open a claim.</td>
+              <td data-label="Check">Ask who determines whether the guarantee applies, and what evidence that decision requires.</td>
             </tr>
             <tr>
               <th scope="row">What runs inside the window</th>
-              <td>Not measured in any public survey. Whether a firm does anything during the window, and whether that support sits in the agreement, varies firm by firm.</td>
-              <td>A 90-day onboarding coach on every placement, weekly with the hire and weekly with the hiring manager, reporting to the hiring manager.</td>
-              <td>Ask what the firm does inside the window and whether that support is written into the agreement.</td>
+              <td data-label="The market">Not measured in any public survey. Whether a firm does anything during the window, and whether that support sits in the agreement, varies firm by firm.</td>
+              <td data-label="Revenue Bench">A 90-day onboarding coach on every placement, weekly with the hire and weekly with the hiring manager, reporting to the hiring manager.</td>
+              <td data-label="Check">Ask what the firm does inside the window and whether that support is written into the agreement.</td>
             </tr>
           </tbody>
         </table>
@@ -538,8 +511,8 @@
       <h2 id="firing" style="margin-top:10px;">Using the guarantee: the re-run, step by step</h2>
       <p>Under Revenue Bench's standard agreement, the client makes the call inside the 90-day window and tells us the guarantee is being used. The stages below follow that decision through to the replacement hire's first day.</p>
 
-      <div class="tablewrap tablewrap-rerun">
-        <table class="datatable" id="rerun-table">
+      <div class="rb-table-wrap tablewrap tablewrap-rerun">
+        <table class="rb-table datatable" id="rerun-table">
           <thead>
             <tr>
               <th scope="col">Stage</th>
@@ -552,45 +525,45 @@
           <tbody>
             <tr>
               <td>The client's call</td>
-              <td>The hiring manager decides the hire is not working inside the first 90 days from the hire's start date. Revenue Bench asks for no evidence to open the claim, because whether the hire is working is the client's judgment.</td>
-              <td>The hiring manager</td>
-              <td>Nothing</td>
-              <td>The decision has to fall inside the 90 days. The window runs from the hire's first day rather than from the signed offer.</td>
+              <td data-label="What happens">The hiring manager decides the hire is not working inside the first 90 days from the hire's start date. Revenue Bench asks for no evidence to open the claim, because whether the hire is working is the client's judgment.</td>
+              <td data-label="Who owns it">The hiring manager</td>
+              <td data-label="What it costs you">Nothing</td>
+              <td data-label="The limit worth knowing">The decision has to fall inside the 90 days. The window runs from the hire's first day rather than from the signed offer.</td>
             </tr>
             <tr>
               <td>Notice to Revenue Bench</td>
-              <td>The client tells us the guarantee is being used.</td>
-              <td>The hiring manager</td>
-              <td>Nothing</td>
-              <td>The decision itself has to fall inside the 90 days. Earlier notice starts the re-run earlier.</td>
+              <td data-label="What happens">The client tells us the guarantee is being used.</td>
+              <td data-label="Who owns it">The hiring manager</td>
+              <td data-label="What it costs you">Nothing</td>
+              <td data-label="The limit worth knowing">The decision itself has to fall inside the 90 days. Earlier notice starts the re-run earlier.</td>
             </tr>
             <tr>
               <td>What the coach contributes</td>
-              <td>Weekly meetings with the hire and weekly meetings with the hiring manager have run since the start date, so the hiring manager reaches the decision with the coach already close to the work. The cadence follows the structure in our <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding plan</a>.</td>
-              <td>The Revenue Bench onboarding coach</td>
-              <td>Included in every placement</td>
-              <td>The coach reports to the hiring manager. The coach's view informs the decision and does not gate it because the decision is the client's.</td>
+              <td data-label="What happens">Weekly meetings with the hire and weekly meetings with the hiring manager have run since the start date, so the hiring manager reaches the decision with the coach already close to the work. The cadence follows the structure in our <a href="90-day-sales-onboarding-plan.html">90-day sales onboarding plan</a>.</td>
+              <td data-label="Who owns it">The Revenue Bench onboarding coach</td>
+              <td data-label="What it costs you">Included in every placement</td>
+              <td data-label="The limit worth knowing">The coach reports to the hiring manager. The coach's view informs the decision and does not gate it because the decision is the client's.</td>
             </tr>
             <tr>
               <td>The profile is revisited</td>
-              <td>We read the written success profile that governed the first search against what the first hire showed about the role and the selling environment, then restart the search from that profile.</td>
-              <td>Revenue Bench with the hiring manager</td>
-              <td>Included</td>
-              <td>A change on the client's side to comp, territory, or the reporting manager does not void the guarantee. That is what our published no-conditions term means. Whether another firm's agreement carries void conditions is a question to put to that firm in writing.</td>
+              <td data-label="What happens">We read the written success profile that governed the first search against what the first hire showed about the role and the selling environment, then restart the search from that profile.</td>
+              <td data-label="Who owns it">Revenue Bench with the hiring manager</td>
+              <td data-label="What it costs you">Included</td>
+              <td data-label="The limit worth knowing">A change on the client's side to comp, territory, or the reporting manager does not void the guarantee. That is what our published no-conditions term means. Whether another firm's agreement carries void conditions is a question to put to that firm in writing.</td>
             </tr>
             <tr>
               <td>The re-run search</td>
-              <td>Revenue Bench runs the search again at no additional fee through the same <a href="../how-it-works.html#timeline">published process</a>. We start with the <a href="building-a-sales-talent-bench.html">bench</a>, run targeted search where the bench does not cover the role, apply the Objective Management Group assessment to candidates for selling and sales-leadership roles, screen every candidate with an operator, then present a shortlist.</td>
-              <td>Revenue Bench</td>
-              <td>No additional fee</td>
-              <td>Timing follows the published search timeline. Kickoff to shortlist on the re-run is commonly 2 to 4 weeks when the bench covers the role, and longer for a pure targeted search. Offer, acceptance, and training follow the shortlist.</td>
+              <td data-label="What happens">Revenue Bench runs the search again at no additional fee through the same <a href="../how-it-works.html#timeline">published process</a>. We start with the <a href="building-a-sales-talent-bench.html">bench</a>, run targeted search where the bench does not cover the role, apply the Objective Management Group assessment to candidates for selling and sales-leadership roles, screen every candidate with an operator, then present a shortlist.</td>
+              <td data-label="Who owns it">Revenue Bench</td>
+              <td data-label="What it costs you">No additional fee</td>
+              <td data-label="The limit worth knowing">Timing follows the published search timeline. Kickoff to shortlist on the re-run is commonly 2 to 4 weeks when the bench covers the role, and longer for a pure targeted search. Offer, acceptance, and training follow the shortlist.</td>
             </tr>
             <tr>
               <td>The replacement hire starts</td>
-              <td>Offer and acceptance come first, followed by the two-day sales skills program for reps or the leadership refresher for leaders, then a dedicated onboarding coach for the first 90 days.</td>
-              <td>Revenue Bench with the client</td>
-              <td>Included</td>
-              <td>The agreement provides one free re-run. Buyers should ask every firm how many re-runs they get and have the number stated in writing.</td>
+              <td data-label="What happens">Offer and acceptance come first, followed by the two-day sales skills program for reps or the leadership refresher for leaders, then a dedicated onboarding coach for the first 90 days.</td>
+              <td data-label="Who owns it">Revenue Bench with the client</td>
+              <td data-label="What it costs you">Included</td>
+              <td data-label="The limit worth knowing">The agreement provides one free re-run. Buyers should ask every firm how many re-runs they get and have the number stated in writing.</td>
             </tr>
           </tbody>
         </table>

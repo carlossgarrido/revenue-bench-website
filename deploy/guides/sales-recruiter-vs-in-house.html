@@ -63,21 +63,11 @@
 .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
 .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
 @media(max-width:640px){
-  .tablewrap{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;padding-bottom:0;}
-  .tablewrap-conditions .datatable,.tablewrap-capacity .datatable{min-width:0;width:100%;background:transparent;}
-  .datatable thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-  .datatable tbody,.datatable tr,.datatable th,.datatable td{display:block;width:100%;box-sizing:border-box;}
   .datatable tbody tr{margin:0 0 14px;border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;background:var(--white);}
   .datatable tbody th{padding:14px;border:0;border-bottom:1px solid var(--line);background:var(--parchment);}
   .datatable tbody td{padding:12px 14px;border:0;border-bottom:1px solid var(--line-soft);}
   .datatable tbody tr:last-child td{border-bottom:1px solid var(--line-soft);}
   .datatable tbody td:last-child{border-bottom:0;}
-  .datatable tbody td::before{display:block;margin-bottom:4px;color:var(--ink-soft);font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
-  .tablewrap-conditions td:nth-child(2)::before{content:"The signal you have it";}
-  .tablewrap-conditions td:nth-child(3)::before{content:"What its absence costs";}
-  .tablewrap-conditions td:nth-child(4)::before{content:"The check before you decide";}
-  .tablewrap-capacity td:nth-child(2)::before{content:"How to read it from what you already have";}
-  .tablewrap-capacity td:nth-child(3)::before{content:"What it means for this search";}
   .author-box{align-items:flex-start;}
   .environment-list{grid-template-columns:1fr;}
   .environment-list dt{border-bottom:0;}
@@ -162,8 +152,8 @@
       <h2 id="conditions">The five conditions test</h2>
       <p>The five conditions test asks whether the internal process has the capability. The <a href="#capacity">capacity check</a> asks whether it has the capacity, right now, to absorb this one search. A company can pass all five conditions and still be unable to absorb this search this quarter.</p>
 
-      <div class="tablewrap tablewrap-conditions" role="region" aria-label="The five conditions test" tabindex="0">
-        <table class="datatable" id="conditions-table">
+      <div class="rb-table-wrap tablewrap tablewrap-conditions" role="region" aria-label="The five conditions test" tabindex="0">
+        <table class="rb-table datatable" id="conditions-table">
           <caption class="vh">Five conditions for deciding whether an internal sales hiring process has the capability to run a search</caption>
           <thead>
             <tr>
@@ -176,33 +166,33 @@
           <tbody>
             <tr>
               <th scope="row">Volume and repetition.</th>
-              <td>You fill this profile often enough to hold a live scorecard and sourcing channels that produce interviews this quarter.</td>
-              <td>Every search starts from zero while the role remains open.</td>
-              <td>Count the hires of this exact profile in the last 12 months. Fewer than three is not repetition.</td>
+              <td data-label="The signal you have it">You fill this profile often enough to hold a live scorecard and sourcing channels that produce interviews this quarter.</td>
+              <td data-label="What its absence costs">Every search starts from zero while the role remains open.</td>
+              <td data-label="The check before you decide">Count the hires of this exact profile in the last 12 months. Fewer than three is not repetition.</td>
             </tr>
             <tr>
               <th scope="row">A sales-specific screen.</th>
-              <td>A validated sales-specific assessment sits in the process before the final interview, and someone owns reading it.</td>
-              <td>The decision rests on interview impressions, which reward rehearsed interviewing in ways that selling does not.</td>
-              <td>Name the instrument and the person who reads it. A personality test does not qualify.</td>
+              <td data-label="The signal you have it">A validated sales-specific assessment sits in the process before the final interview, and someone owns reading it.</td>
+              <td data-label="What its absence costs">The decision rests on interview impressions, which reward rehearsed interviewing in ways that selling does not.</td>
+              <td data-label="The check before you decide">Name the instrument and the person who reads it. A personality test does not qualify.</td>
             </tr>
             <tr>
               <th scope="row">A live bench.</th>
-              <td>Assessed candidates for this profile exist before the role opens and contact is recent. <a href="building-a-sales-talent-bench.html">The sales talent bench guide</a> publishes the coverage model.</td>
-              <td>Coverage stays vacant while sourcing catches up, and the field narrows to currently available candidates.</td>
-              <td>Count the assessed, recently contacted candidates you could call today.</td>
+              <td data-label="The signal you have it">Assessed candidates for this profile exist before the role opens and contact is recent. <a href="building-a-sales-talent-bench.html">The sales talent bench guide</a> publishes the coverage model.</td>
+              <td data-label="What its absence costs">Coverage stays vacant while sourcing catches up, and the field narrows to currently available candidates.</td>
+              <td data-label="The check before you decide">Count the assessed, recently contacted candidates you could call today.</td>
             </tr>
             <tr>
               <th scope="row">The selling-environment match.</th>
-              <td>The process defines the profile through the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, then verifies the candidate's history across buyer level, deal size, cycle length, competition, and price position.</td>
-              <td>A hire can bring success from a different selling environment that does not transfer.</td>
-              <td>Write the company's answers before the search opens, then compare candidate evidence against them.</td>
+              <td data-label="The signal you have it">The process defines the profile through the role-definition questions Carlos Garrido teaches in his Building a Scalable Sales Team masterclass, then verifies the candidate's history across buyer level, deal size, cycle length, competition, and price position.</td>
+              <td data-label="What its absence costs">A hire can bring success from a different selling environment that does not transfer.</td>
+              <td data-label="The check before you decide">Write the company's answers before the search opens, then compare candidate evidence against them.</td>
             </tr>
             <tr>
               <th scope="row">A structured landing.</th>
-              <td>Onboarding runs on ramp gates with an owner, and the opening weeks put the hire in front of the market.</td>
-              <td>A sound selection can still fail during the landing.</td>
-              <td>The 90-day plan exists in writing before the offer goes out.</td>
+              <td data-label="The signal you have it">Onboarding runs on ramp gates with an owner, and the opening weeks put the hire in front of the market.</td>
+              <td data-label="What its absence costs">A sound selection can still fail during the landing.</td>
+              <td data-label="The check before you decide">The 90-day plan exists in writing before the offer goes out.</td>
             </tr>
           </tbody>
         </table>
@@ -214,8 +204,8 @@
       <h2 id="capacity">Whether your recruiting function can absorb this search</h2>
       <p>The conditions test asks what the function can do. The capacity check asks what it can take on now. Every input below is a number the company already has.</p>
 
-      <div class="tablewrap tablewrap-capacity" role="region" aria-label="The recruiting capacity check" tabindex="0">
-        <table class="datatable" id="capacity-table">
+      <div class="rb-table-wrap tablewrap tablewrap-capacity" role="region" aria-label="The recruiting capacity check" tabindex="0">
+        <table class="rb-table datatable" id="capacity-table">
           <caption class="vh">Six inputs for checking whether a recruiting function can absorb a specific sales search</caption>
           <thead>
             <tr>
@@ -227,33 +217,33 @@
           <tbody>
             <tr>
               <th scope="row">Requisitions the recruiter is already carrying.</th>
-              <td>Count the open roles assigned to whoever would run this search, sales and non-sales. Read that count against your own prior quarters.</td>
-              <td>A search added to a full load enters the queue behind other roles.</td>
+              <td data-label="How to read it from what you already have">Count the open roles assigned to whoever would run this search, sales and non-sales. Read that count against your own prior quarters.</td>
+              <td data-label="What it means for this search">A search added to a full load enters the queue behind other roles.</td>
             </tr>
             <tr>
               <th scope="row">How long your last comparable search took, from kickoff to accepted offer.</th>
-              <td>Read it from the records of the most recent search at similar seniority.</td>
-              <td>That elapsed time is the window this search has to be resourced across. If no comparable search is on record, the window is being planned without evidence.</td>
+              <td data-label="How to read it from what you already have">Read it from the records of the most recent search at similar seniority.</td>
+              <td data-label="What it means for this search">That elapsed time is the window this search has to be resourced across. If no comparable search is on record, the window is being planned without evidence.</td>
             </tr>
             <tr>
               <th scope="row">Whether the screen owner is free across this window.</th>
-              <td>Check the named reader's commitments across the window from the row above.</td>
-              <td>A screen nobody has time to read is a stage the process will skip under pressure.</td>
+              <td data-label="How to read it from what you already have">Check the named reader's commitments across the window from the row above.</td>
+              <td data-label="What it means for this search">A screen nobody has time to read is a stage the process will skip under pressure.</td>
             </tr>
             <tr>
               <th scope="row">Hiring-manager hours available across the search window.</th>
-              <td>Read the calendar of the person who must screen, interview, and debrief.</td>
-              <td>Compare those hours against the hours this manager gave the last search of similar seniority. Where that figure is unknown, the input is unanswerable, and the search is being planned without it.</td>
+              <td data-label="How to read it from what you already have">Read the calendar of the person who must screen, interview, and debrief.</td>
+              <td data-label="What it means for this search">Compare those hours against the hours this manager gave the last search of similar seniority. Where that figure is unknown, the input is unanswerable, and the search is being planned without it.</td>
             </tr>
             <tr>
               <th scope="row">Whether quality of hire is measured at all.</th>
-              <td>Ask what is recorded about hires made 12 months ago. The 2025 SHRM survey reports that only 20% of organizations track quality of hire.</td>
-              <td>Without it, neither route can be graded after the fact.</td>
+              <td data-label="How to read it from what you already have">Ask what is recorded about hires made 12 months ago. The 2025 SHRM survey reports that only 20% of organizations track quality of hire.</td>
+              <td data-label="What it means for this search">Without it, neither route can be graded after the fact.</td>
             </tr>
             <tr>
               <th scope="row">What the seat costs while it stays open.</th>
-              <td>Use the role's own quota and ramp assumptions.</td>
-              <td>The monthly figure sets what a slower search costs, and the <a href="cost-of-a-bad-sales-hire.html">vacancy ledger</a> prices that open seat, which is a separate object from the search itself.</td>
+              <td data-label="How to read it from what you already have">Use the role's own quota and ramp assumptions.</td>
+              <td data-label="What it means for this search">The monthly figure sets what a slower search costs, and the <a href="cost-of-a-bad-sales-hire.html">vacancy ledger</a> prices that open seat, which is a separate object from the search itself.</td>
             </tr>
           </tbody>
         </table>

@@ -76,19 +76,7 @@
   .calculation-row dd{color:var(--ink-mid);}
   .source-note{font-size:14px;line-height:1.7;color:var(--ink-soft);}
   @media(max-width:760px){
-    .tablewrap{width:auto;max-width:100%;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #checklist-table,#concentration-table{width:100%;min-width:0;font-size:15px;table-layout:auto;}
-    #checklist-table thead,#concentration-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #checklist-table tr,#concentration-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #checklist-table tr:last-child,#concentration-table tr:last-child{border-bottom:0;}
-    #checklist-table td,#concentration-table td{display:block;width:auto!important;padding:0 0 8px;border:0;}
-    #checklist-table th[scope="row"],#concentration-table th[scope="row"]{display:block;width:auto!important;font-size:17px;padding:0 0 10px;border:0;}
-    #checklist-table td:nth-child(2)::before{content:'Request or check: ';color:var(--ink-soft);font-weight:400;}
-    #checklist-table td:nth-child(3)::before{content:'What it tells you: ';color:var(--ink-soft);font-weight:400;}
-    #checklist-table td:nth-child(4)::before{content:'Red flag: ';color:var(--ink-soft);font-weight:400;}
-    #concentration-table td:nth-child(2)::before{content:'What to pull: ';color:var(--ink-soft);font-weight:400;}
-    #concentration-table td:nth-child(3)::before{content:'What it means: ';color:var(--ink-soft);font-weight:400;}
-    #concentration-table td:nth-child(4)::before{content:'Stop the deal team: ';color:var(--ink-soft);font-weight:400;}
     #checklist-table td:last-child,#concentration-table td:last-child{padding-bottom:0;}
     .calculation-row{display:block;}
     .calculation-row dt,.calculation-row dd{display:block;padding:12px 14px;}
@@ -156,8 +144,8 @@
       <h2 id="checklist" style="margin-top:10px;">The pre-LOI sales-team checklist</h2>
       <p>Everything on this list can be checked from the data room, public sources, and management meetings before exclusivity, with no access to the team.</p>
 
-      <div class="tablewrap" role="region" aria-label="Pre-LOI sales-team checklist" tabindex="0">
-        <table class="datatable" id="checklist-table">
+      <div class="rb-table-wrap tablewrap" role="region" aria-label="Pre-LOI sales-team checklist" tabindex="0">
+        <table class="rb-table datatable" id="checklist-table">
           <caption class="vh">The pre-LOI sales-team checklist, including the records to request, what each item reveals, and the reading that requires further work.</caption>
           <thead>
             <tr>
@@ -170,63 +158,63 @@
           <tbody>
             <tr>
               <th scope="row">Revenue concentration</th>
-              <td>Revenue by rep for the trailing 24 months</td>
-              <td>Whether the plan depends on one or two sellers</td>
-              <td>One seller carries more than a third of revenue. That threshold is Revenue Bench's own working figure for opening the transfer test below, not a published standard.</td>
+              <td data-label="Request or check">Revenue by rep for the trailing 24 months</td>
+              <td data-label="What it tells you">Whether the plan depends on one or two sellers</td>
+              <td data-label="Red flag">One seller carries more than a third of revenue. That threshold is Revenue Bench's own working figure for opening the transfer test below, not a published standard.</td>
             </tr>
             <tr>
               <th scope="row">Founder dependence</th>
-              <td>The founder's named accounts and role in the top 10 deals</td>
-              <td>Whether revenue transfers to a team, or leaves with the founder</td>
-              <td>The founder is the de facto top seller and the close plan has no transition owner</td>
+              <td data-label="Request or check">The founder's named accounts and role in the top 10 deals</td>
+              <td data-label="What it tells you">Whether revenue transfers to a team, or leaves with the founder</td>
+              <td data-label="Red flag">The founder is the de facto top seller and the close plan has no transition owner</td>
             </tr>
             <tr>
               <th scope="row">Sales leadership</th>
-              <td>The sales leader's tenure, background, and operating cadence: forecast, pipeline review, coaching rhythm</td>
-              <td>Whether a leader runs the team or the CEO does</td>
-              <td>No documented cadence; the CEO personally closes anything material</td>
+              <td data-label="Request or check">The sales leader's tenure, background, and operating cadence: forecast, pipeline review, coaching rhythm</td>
+              <td data-label="What it tells you">Whether a leader runs the team or the CEO does</td>
+              <td data-label="Red flag">No documented cadence; the CEO personally closes anything material</td>
             </tr>
             <tr>
               <th scope="row">Team turnover</th>
-              <td>Departures by role for 3 years, with hire date and tenure at departure, voluntary and managed out</td>
-              <td>The replacement spend the P&amp;L does not isolate</td>
-              <td>No departure records kept by role and tenure, or departures concentrated in the first year of tenure. In DePaul's 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, 33% of all sales turnover happened in the first year of tenure. Sales tenure also runs short across the economy: the US Bureau of Labor Statistics put median tenure in sales and related occupations at 3.3 years in January 2024, against 3.9 years across all wage and salary workers.</td>
+              <td data-label="Request or check">Departures by role for 3 years, with hire date and tenure at departure, voluntary and managed out</td>
+              <td data-label="What it tells you">The replacement spend the P&amp;L does not isolate</td>
+              <td data-label="Red flag">No departure records kept by role and tenure, or departures concentrated in the first year of tenure. In DePaul's 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, 33% of all sales turnover happened in the first year of tenure. Sales tenure also runs short across the economy: the US Bureau of Labor Statistics put median tenure in sales and related occupations at 3.3 years in January 2024, against 3.9 years across all wage and salary workers.</td>
             </tr>
             <tr>
               <th scope="row">Hiring history</th>
-              <td>The last 5 sales hires: source, ramp time, still employed or not</td>
-              <td>Whether the company can add capacity, or burns it</td>
-              <td>A majority of recent hires gone inside 18 months</td>
+              <td data-label="Request or check">The last 5 sales hires: source, ramp time, still employed or not</td>
+              <td data-label="What it tells you">Whether the company can add capacity, or burns it</td>
+              <td data-label="Red flag">A majority of recent hires gone inside 18 months</td>
             </tr>
             <tr>
               <th scope="row">Pipeline integrity</th>
-              <td>Pipeline by stage with entry criteria, plus win rates by stage</td>
-              <td>Whether the pipeline is a forecast or a wish list</td>
-              <td>No stage criteria; win rates unmeasured; coverage claims that move between meetings</td>
+              <td data-label="Request or check">Pipeline by stage with entry criteria, plus win rates by stage</td>
+              <td data-label="What it tells you">Whether the pipeline is a forecast or a wish list</td>
+              <td data-label="Red flag">No stage criteria; win rates unmeasured; coverage claims that move between meetings</td>
             </tr>
             <tr>
               <th scope="row">Compensation plan</th>
-              <td>Plan documents plus actual earnings by rep for 2 years, anonymized by employee ID</td>
-              <td>Whether pay drives the behavior the plan needs</td>
-              <td>Top earners paid on legacy accounts they no longer work</td>
+              <td data-label="Request or check">Plan documents plus actual earnings by rep for 2 years, anonymized by employee ID</td>
+              <td data-label="What it tells you">Whether pay drives the behavior the plan needs</td>
+              <td data-label="Red flag">Top earners paid on legacy accounts they no longer work</td>
             </tr>
             <tr>
               <th scope="row">Customer proof</th>
-              <td>Churn and expansion by cohort, referenceable accounts</td>
-              <td>Whether the motion produces customers who stay and grow</td>
-              <td>Logo churn offsetting new logos; references all pre-date the current team</td>
+              <td data-label="Request or check">Churn and expansion by cohort, referenceable accounts</td>
+              <td data-label="What it tells you">Whether the motion produces customers who stay and grow</td>
+              <td data-label="Red flag">Logo churn offsetting new logos; references all pre-date the current team</td>
             </tr>
             <tr>
               <th scope="row">Sales process</th>
-              <td>The documented process, CRM discipline, definition of a qualified opportunity</td>
-              <td>Whether results are repeatable or personal</td>
-              <td>The process exists only in the top seller's head</td>
+              <td data-label="Request or check">The documented process, CRM discipline, definition of a qualified opportunity</td>
+              <td data-label="What it tells you">Whether results are repeatable or personal</td>
+              <td data-label="Red flag">The process exists only in the top seller's head</td>
             </tr>
             <tr>
               <th scope="row">Quota and capacity</th>
-              <td>Quota attainment by rep, 2 years</td>
-              <td>How much of the team can carry the plan</td>
-              <td>Attainment concentrated in two or three reps while the median misses</td>
+              <td data-label="Request or check">Quota attainment by rep, 2 years</td>
+              <td data-label="What it tells you">How much of the team can carry the plan</td>
+              <td data-label="Red flag">Attainment concentrated in two or three reps while the median misses</td>
             </tr>
           </tbody>
         </table>
@@ -238,8 +226,8 @@
       <p>In OMG's data on 318 sales teams, 30% rely on a single salesperson for more than half of revenue. The sample counts teams, and OMG publishes no collection period. A high reading is a common condition. It remains an exposure that the buyer must test.</p>
       <p>Run the five gates in order. Reconcile each answer to the customer ledger before using it in the model.</p>
 
-      <div class="tablewrap" role="region" aria-label="Five-gate seller-concentration test" tabindex="0">
-        <table class="datatable" id="concentration-table">
+      <div class="rb-table-wrap tablewrap" role="region" aria-label="Five-gate seller-concentration test" tabindex="0">
+        <table class="rb-table datatable" id="concentration-table">
           <caption class="vh">The five-gate seller-concentration test for converting revenue carried by a seller into a tested enterprise-value exposure.</caption>
           <thead>
             <tr>
@@ -252,33 +240,33 @@
           <tbody>
             <tr>
               <th scope="row">Share</th>
-              <td>Trailing-12-month revenue by seller. Calculate the top seller's share and the top two sellers' combined share.</td>
-              <td>This establishes how much reported revenue passes through each concentrated seller before transfer is tested.</td>
-              <td>The seller report does not reconcile to trailing-12-month revenue, so no gate below can be run on a reliable base.</td>
+              <td data-label="What to pull">Trailing-12-month revenue by seller. Calculate the top seller's share and the top two sellers' combined share.</td>
+              <td data-label="What it means">This establishes how much reported revenue passes through each concentrated seller before transfer is tested.</td>
+              <td data-label="Stop the deal team">The seller report does not reconcile to trailing-12-month revenue, so no gate below can be run on a reliable base.</td>
             </tr>
             <tr>
               <th scope="row">Term</th>
-              <td>The contract schedule for each account in the seller's book, including counterparty, remaining term, renewal date, and at-will status.</td>
-              <td>Contract-bound revenue survives a departure for the remaining term. At-will revenue is exposed on the day of resignation.</td>
-              <td>The at-will share is material and the model treats the full book as continuing revenue past the resignation date.</td>
+              <td data-label="What to pull">The contract schedule for each account in the seller's book, including counterparty, remaining term, renewal date, and at-will status.</td>
+              <td data-label="What it means">Contract-bound revenue survives a departure for the remaining term. At-will revenue is exposed on the day of resignation.</td>
+              <td data-label="Stop the deal team">The at-will share is material and the model treats the full book as continuing revenue past the resignation date.</td>
             </tr>
             <tr>
               <th scope="row">Origination</th>
-              <td>CRM origination records, assignment history, predecessor records, and management confirmation for each account.</td>
-              <td>Assigned and inherited accounts usually transfer with the role. Personally sourced accounts often hold the buying relationship in the seller's name.</td>
-              <td>Personally sourced revenue is material to the case and the model gives it the same transfer assumption as an assigned account.</td>
+              <td data-label="What to pull">CRM origination records, assignment history, predecessor records, and management confirmation for each account.</td>
+              <td data-label="What it means">Assigned and inherited accounts usually transfer with the role. Personally sourced accounts often hold the buying relationship in the seller's name.</td>
+              <td data-label="Stop the deal team">Personally sourced revenue is material to the case and the model gives it the same transfer assumption as an assigned account.</td>
             </tr>
             <tr>
               <th scope="row">Succession</th>
-              <td>Meeting records for each concentrated account. Identify a second named company participant who met the buyer during the last two quarters.</td>
-              <td>An org chart does not satisfy this gate. The record must show another person with a current working relationship at the account.</td>
-              <td>Any concentrated account has zero qualifying meetings with a second company contact during the test period.</td>
+              <td data-label="What to pull">Meeting records for each concentrated account. Identify a second named company participant who met the buyer during the last two quarters.</td>
+              <td data-label="What it means">An org chart does not satisfy this gate. The record must show another person with a current working relationship at the account.</td>
+              <td data-label="Stop the deal team">Any concentrated account has zero qualifying meetings with a second company contact during the test period.</td>
             </tr>
             <tr>
               <th scope="row">Restraint</th>
-              <td>The seller's signed non-solicitation agreement and deal counsel's view of its value where the seller works.</td>
-              <td>Enforceability varies by jurisdiction and is a question for deal counsel. This page gives no legal advice.</td>
-              <td>No written agreement is available, or counsel cannot support the reliance the model places on it.</td>
+              <td data-label="What to pull">The seller's signed non-solicitation agreement and deal counsel's view of its value where the seller works.</td>
+              <td data-label="What it means">Enforceability varies by jurisdiction and is a question for deal counsel. This page gives no legal advice.</td>
+              <td data-label="Stop the deal team">No written agreement is available, or counsel cannot support the reliance the model places on it.</td>
             </tr>
           </tbody>
         </table>

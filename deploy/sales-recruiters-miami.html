@@ -114,20 +114,7 @@
   section[id]{scroll-margin-top:90px;}
   @media(max-width:1170px){
     .toc-inline ol{grid-template-columns:1fr;}
-    .tablewrap{border:0;overflow-x:visible;}
-    .datatable,#adjacent-table{min-width:0;font-size:15px;}
-    .datatable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .datatable tbody tr{display:block;padding:18px 0;border-bottom:1px solid var(--line);}
     .datatable tbody tr:last-child{border-bottom:0;}
-    .datatable td{display:block;width:auto!important;padding:0 0 10px;border:0;}
-    .datatable th[scope="row"]{display:block;width:auto!important;font-size:18px;padding:0 0 12px;border:0;color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;line-height:1.35;}
-    #pool-table td:nth-child(2)::before{content:'Miami metro employment: ';color:var(--ink-soft);font-weight:400;}
-    #pool-table td:nth-child(3)::before{content:'Concentration vs national: ';color:var(--ink-soft);font-weight:400;}
-    #pool-table td:nth-child(4)::before{content:'Mean annual wage: ';color:var(--ink-soft);font-weight:400;}
-    #pool-table td:nth-child(5)::before{content:'What it means for your search: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #adjacent-table td:nth-child(2)::before{content:'What transfers: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #adjacent-table td:nth-child(3)::before{content:'What does not: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #adjacent-table td:nth-child(4)::before{content:'What to test before you hire: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
     .datatable td:last-child{padding-bottom:0;}
     .split-lists{grid-template-columns:1fr;}
   }
@@ -209,8 +196,8 @@
       <p>The table keeps the BLS categories intact and adds Revenue Bench's search interpretation in the final column.</p>
     </div>
 
-    <div class="tablewrap" role="region" aria-label="Miami metro sales occupation table" tabindex="0">
-      <table class="datatable" id="pool-table">
+    <div class="rb-table-wrap tablewrap" role="region" aria-label="Miami metro sales occupation table" tabindex="0">
+      <table class="rb-table datatable" id="pool-table">
         <caption class="vh">Miami metro sales occupations, employment, national concentration, mean annual wage and Revenue Bench search interpretation</caption>
         <thead>
           <tr>
@@ -224,66 +211,66 @@
         <tbody>
           <tr>
             <th scope="row">Sales engineers</th>
-            <td>510</td>
-            <td>0.54</td>
-            <td>$139,910</td>
-            <td>A pool of 510 people across a three-county metro leaves a local-only sales engineer search almost nothing to work with, so the realistic paths are relocation, remote hiring or conversion.</td>
+            <td data-label="Miami metro employment">510</td>
+            <td data-label="Concentration vs national">0.54</td>
+            <td data-label="Mean annual wage">$139,910</td>
+            <td data-label="What it means for your search">A pool of 510 people across a three-county metro leaves a local-only sales engineer search almost nothing to work with, so the realistic paths are relocation, remote hiring or conversion.</td>
           </tr>
           <tr>
             <th scope="row">Sales representatives, wholesale and manufacturing, technical and scientific products</th>
-            <td>4,730</td>
-            <td>0.92</td>
-            <td>$119,980</td>
-            <td>This is the closest BLS match to a complex-cycle B2B seller, and its concentration sits below the national rate. It is the number most worth acting on when you set search geography and compensation.</td>
+            <td data-label="Miami metro employment">4,730</td>
+            <td data-label="Concentration vs national">0.92</td>
+            <td data-label="Mean annual wage">$119,980</td>
+            <td data-label="What it means for your search">This is the closest BLS match to a complex-cycle B2B seller, and its concentration sits below the national rate. It is the number most worth acting on when you set search geography and compensation.</td>
           </tr>
           <tr>
             <th scope="row">First-line supervisors of non-retail sales workers</th>
-            <td>4,690</td>
-            <td>1.21</td>
-            <td>$92,910</td>
-            <td>The above-national concentration provides a meaningful local leadership pool, though the category does not reveal whether an individual can coach or run a complex forecast.</td>
+            <td data-label="Miami metro employment">4,690</td>
+            <td data-label="Concentration vs national">1.21</td>
+            <td data-label="Mean annual wage">$92,910</td>
+            <td data-label="What it means for your search">The above-national concentration provides a meaningful local leadership pool, though the category does not reveal whether an individual can coach or run a complex forecast.</td>
           </tr>
           <tr>
             <th scope="row">Sales representatives of services</th>
-            <td>30,300</td>
-            <td>1.33</td>
-            <td>$75,070</td>
-            <td>Services selling carries the volume, and the title covers everything from a renewal desk to a consultative solution sale, so the title cannot serve as the screen.</td>
+            <td data-label="Miami metro employment">30,300</td>
+            <td data-label="Concentration vs national">1.33</td>
+            <td data-label="Mean annual wage">$75,070</td>
+            <td data-label="What it means for your search">Services selling carries the volume, and the title covers everything from a renewal desk to a consultative solution sale, so the title cannot serve as the screen.</td>
           </tr>
           <tr>
             <th scope="row">Sales representatives, wholesale and manufacturing, except technical and scientific products</th>
-            <td>30,740</td>
-            <td>1.37</td>
-            <td>$76,580</td>
-            <td>This is the largest of the nine pools here and the one closest to a field-sales motion, so it is where a Miami search most often finds volume, and where a structured screen earns its keep.</td>
+            <td data-label="Miami metro employment">30,740</td>
+            <td data-label="Concentration vs national">1.37</td>
+            <td data-label="Mean annual wage">$76,580</td>
+            <td data-label="What it means for your search">This is the largest of the nine pools here and the one closest to a field-sales motion, so it is where a Miami search most often finds volume, and where a structured screen earns its keep.</td>
           </tr>
           <tr>
             <th scope="row">Securities, commodities, and financial services sales agents</th>
-            <td>14,190</td>
-            <td>1.60</td>
-            <td>$93,900</td>
-            <td>A deep local pool used to regulated products and consequential buyer conversations. What it does not evidence is running a multi-stakeholder cycle to a forecast.</td>
+            <td data-label="Miami metro employment">14,190</td>
+            <td data-label="Concentration vs national">1.60</td>
+            <td data-label="Mean annual wage">$93,900</td>
+            <td data-label="What it means for your search">A deep local pool used to regulated products and consequential buyer conversations. What it does not evidence is running a multi-stakeholder cycle to a forecast.</td>
           </tr>
           <tr>
             <th scope="row">Insurance sales agents</th>
-            <td>14,160</td>
-            <td>1.63</td>
-            <td>$74,620</td>
-            <td>A deep local pool with prospecting volume and objection handling already built. The open question is diagnosis: whether the candidate can size an unfamiliar problem before presenting.</td>
+            <td data-label="Miami metro employment">14,160</td>
+            <td data-label="Concentration vs national">1.63</td>
+            <td data-label="Mean annual wage">$74,620</td>
+            <td data-label="What it means for your search">A deep local pool with prospecting volume and objection handling already built. The open question is diagnosis: whether the candidate can size an unfamiliar problem before presenting.</td>
           </tr>
           <tr>
             <th scope="row">Real estate sales agents</th>
-            <td>9,160</td>
-            <td>2.61</td>
-            <td>$84,400</td>
-            <td>The most concentrated pool in the metro, strong on negotiation and self-generated pipeline. Transaction work rarely builds forecast discipline or selling through a buying committee.</td>
+            <td data-label="Miami metro employment">9,160</td>
+            <td data-label="Concentration vs national">2.61</td>
+            <td data-label="Mean annual wage">$84,400</td>
+            <td data-label="What it means for your search">The most concentrated pool in the metro, strong on negotiation and self-generated pipeline. Transaction work rarely builds forecast discipline or selling through a buying committee.</td>
           </tr>
           <tr>
             <th scope="row">Travel agents</th>
-            <td>4,560</td>
-            <td>4.56</td>
-            <td>$55,940</td>
-            <td>The highest concentration on this table, and a background that transfers least readily to a complex B2B cycle.</td>
+            <td data-label="Miami metro employment">4,560</td>
+            <td data-label="Concentration vs national">4.56</td>
+            <td data-label="Mean annual wage">$55,940</td>
+            <td data-label="What it means for your search">The highest concentration on this table, and a background that transfers least readily to a complex B2B cycle.</td>
           </tr>
         </tbody>
       </table>
@@ -312,8 +299,8 @@
       <p style="color:rgba(255,255,255,.72);">Employment in the financial activities sector of the three-county Miami-Fort Lauderdale-West Palm Beach area, the same geography as the occupation table above, fell by 5,600 jobs, or 2.5%, in the year to June 2026, the largest sector decline in that area, according to the <a class="content-link" href="https://www.bls.gov/regions/southeast/summary/blssummary_miami.pdf">BLS Miami, FL, Area Economic Summary</a>, updated 3 August 2026. Financial activities covers finance, insurance and real estate together rather than securities selling alone. A sector decline is a supply signal rather than a measure of how many quota-carrying sellers are available.</p>
     </div>
 
-    <div class="tablewrap" role="region" aria-label="Revenue Bench adjacent Miami sales pool framework" tabindex="0">
-      <table class="datatable" id="adjacent-table">
+    <div class="rb-table-wrap tablewrap" role="region" aria-label="Revenue Bench adjacent Miami sales pool framework" tabindex="0">
+      <table class="rb-table datatable" id="adjacent-table">
         <caption class="vh">Revenue Bench framework for evaluating transferable skills from adjacent Miami sales pools</caption>
         <thead>
           <tr>
@@ -326,27 +313,27 @@
         <tbody>
           <tr>
             <th scope="row">Financial services sales agents</th>
-            <td>Comfort with regulated products, consequential buyer conversations and disciplined follow-up.</td>
-            <td>Success with a financial product does not establish ability to manage a complex operating problem or a longer buying process.</td>
-            <td>Give the candidate a business case and test discovery depth, access to decision makers and control of the next step.</td>
+            <td data-label="What transfers">Comfort with regulated products, consequential buyer conversations and disciplined follow-up.</td>
+            <td data-label="What does not">Success with a financial product does not establish ability to manage a complex operating problem or a longer buying process.</td>
+            <td data-label="What to test before you hire">Give the candidate a business case and test discovery depth, access to decision makers and control of the next step.</td>
           </tr>
           <tr>
             <th scope="row">Insurance agents</th>
-            <td>Prospecting discipline, objection handling and repeated pipeline activity can transfer.</td>
-            <td>A familiar policy sale or renewal motion may not prepare someone for a multi-stakeholder solution sale.</td>
-            <td>Test whether the candidate can diagnose an unfamiliar problem before presenting a solution.</td>
+            <td data-label="What transfers">Prospecting discipline, objection handling and repeated pipeline activity can transfer.</td>
+            <td data-label="What does not">A familiar policy sale or renewal motion may not prepare someone for a multi-stakeholder solution sale.</td>
+            <td data-label="What to test before you hire">Test whether the candidate can diagnose an unfamiliar problem before presenting a solution.</td>
           </tr>
           <tr>
             <th scope="row">Real estate agents</th>
-            <td>Local relationship building, negotiation and self-directed prospecting can transfer.</td>
-            <td>Individual transaction experience may not include forecast discipline or selling through an organizational buying process.</td>
-            <td>Test pipeline math and the candidate's response when buyer access stalls during a longer cycle.</td>
+            <td data-label="What transfers">Local relationship building, negotiation and self-directed prospecting can transfer.</td>
+            <td data-label="What does not">Individual transaction experience may not include forecast discipline or selling through an organizational buying process.</td>
+            <td data-label="What to test before you hire">Test pipeline math and the candidate's response when buyer access stalls during a longer cycle.</td>
           </tr>
           <tr>
             <th scope="row">Transactional wholesale and services reps</th>
-            <td>Prospecting, account coverage and closing habits may transfer when the buyer and economics are similar.</td>
-            <td>A high-volume transaction does not establish competence with technical discovery or a committee decision.</td>
-            <td>Recreate the employer's sales motion and test how the candidate handles discovery, internal alignment and commercial risk.</td>
+            <td data-label="What transfers">Prospecting, account coverage and closing habits may transfer when the buyer and economics are similar.</td>
+            <td data-label="What does not">A high-volume transaction does not establish competence with technical discovery or a committee decision.</td>
+            <td data-label="What to test before you hire">Recreate the employer's sales motion and test how the candidate handles discovery, internal alignment and commercial risk.</td>
           </tr>
         </tbody>
       </table>

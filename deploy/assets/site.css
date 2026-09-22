@@ -1,4 +1,4 @@
-/* ===== Revenue Bench — site design system (Style 2: warm light editorial, cards) ===== */
+/* ===== Revenue Bench site design system (Style 2: warm light editorial, cards) ===== */
 :root{
   --cream:#FAF7F2; --parchment:#F0EAE0; --white:#FFFFFF;
   --navy:#0C1826; --navy-mid:#142236; --navy-light:#1E3352;
@@ -230,4 +230,51 @@ h1,h2,h3,h4,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:
   .trust{grid-template-columns:1fr;} .trust .t{border-right:0;border-bottom:1px solid var(--line);}
   .statline{flex-direction:column;gap:14px;} .guarantee{flex-direction:column;align-items:flex-start;gap:14px;}
   .site-nav{padding:16px 22px;}
+}
+
+/* ---------------------------------------------------------------------------
+   Wide data tables: the house form (set 2026-09-22).
+   A table that needs a horizontal scroll wrapper on a desktop stacks on a
+   phone instead. The markup contract, which is all of it:
+     <div class="tablewrap rb-table-wrap"><table class="datatable rb-table">
+   with data-label on every cell after the first. The first cell of each row
+   becomes the row title and carries no label. tools/stack-tables.py --check
+   enforces it. Nothing here is keyed on an element id, so a new table stacks
+   without a line of new CSS.
+   The opt-out has to be declared. A table that must keep its grid on a phone
+   omits rb-table and its wrapper carries data-rb-scroll="keep", which --check
+   accepts. Comparison across columns is the reason to reach for it. No table on
+   the site needs it today.
+   The query says screen for a reason. A bare (max-width:760px) query also
+   matches a narrow print page box, which would hide every table header on A5
+   paper.
+   The declarations are !important on purpose. Each page's own <style> block
+   loads after this file and sets per-table widths, several through id
+   selectors, so an override layer that is merely specific enough today stops
+   being specific enough the next time somebody writes #some-table{min-width}.
+   Colour is the one thing it does not force: the .bg-navy contract below
+   carries the dark-section case, because forcing navy text on a navy section
+   is how this rule first shipped broken.
+   Desktop is untouched: everything below is inside the 760px query.
+--------------------------------------------------------------------------- */
+@media screen and (max-width:760px){
+  .rb-table-wrap{width:auto!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;transform:none!important;border:0!important;background:transparent!important;overflow-x:visible!important;padding-bottom:0!important;}
+  .rb-table{min-width:0!important;width:100%!important;table-layout:auto!important;font-size:15px!important;line-height:1.55;border-collapse:collapse!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;}
+  .rb-table thead{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+  .rb-table tbody tr{display:block!important;padding:16px 0!important;margin:0!important;border:0!important;border-bottom:1px solid var(--line)!important;background:transparent!important;}
+  .rb-table tbody tr:last-child{border-bottom:0!important;}
+  .rb-table tbody td,.rb-table tbody th{display:block!important;width:auto!important;padding:0 0 8px!important;border:0!important;white-space:normal!important;}
+  .rb-table tbody tr>:first-child{font-size:17px!important;line-height:1.4;color:var(--navy);font-weight:600!important;padding:0 0 10px!important;letter-spacing:0!important;text-transform:none!important;background:transparent!important;}
+  .rb-table tbody tr>:first-child::before{content:none!important;}
+  .rb-table tbody tr>:last-child{padding-bottom:0!important;}
+  .rb-table tbody [data-label]::before{content:attr(data-label) ": "!important;font-weight:700;color:var(--navy);}
+  .rb-table tbody th[scope="colgroup"]{font-size:12px!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--ink-soft)!important;font-weight:700!important;padding:6px 0 0!important;}
+
+  /* Dark sections: the stacked form inherits the section's background, so the
+     text has to come with it. */
+  .bg-navy .rb-table tbody td,.bg-navy .rb-table tbody th{color:rgba(255,255,255,.88);}
+  .bg-navy .rb-table tbody tr>:first-child{color:#fff;}
+  .bg-navy .rb-table tbody [data-label]::before{color:var(--gold-light);}
+  .bg-navy .rb-table tbody th[scope="colgroup"]{color:rgba(255,255,255,.7)!important;}
+  .bg-navy .rb-table tbody tr{border-bottom-color:rgba(255,255,255,.22)!important;}
 }

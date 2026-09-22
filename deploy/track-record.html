@@ -105,17 +105,7 @@
   section[id]{scroll-margin-top:90px;}
   @media(max-width:1170px){
     .toc-inline ol{grid-template-columns:1fr;}
-    .tablewrap{border:0;overflow-x:visible;}
-    .datatable{min-width:0;font-size:15px;}
-    .datatable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .datatable tbody tr{display:block;padding:18px 0;border-bottom:1px solid var(--line);}
     .datatable tbody tr:last-child{border-bottom:0;}
-    .datatable td{display:block;width:auto!important;padding:0 0 10px;border:0;}
-    .datatable th[scope="row"]{display:block;width:auto!important;font-size:18px;padding:0 0 12px;border:0;color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0;line-height:1.35;}
-    #ledger-table td:nth-child(2)::before{content:'Period it covers: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #ledger-table td:nth-child(3)::before{content:'Delivered through: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #ledger-table td:nth-child(4)::before{content:'What it establishes for a Revenue Bench search: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
-    #ledger-table td:nth-child(5)::before{content:'What it does not establish: ';display:block;color:var(--ink-soft);font-weight:400;margin-bottom:3px;}
     .datatable td:last-child{padding-bottom:0;}
   }
   @media(max-width:620px){
@@ -183,8 +173,8 @@
       <p>Each row names the result or credential, the period it covers, the vehicle that delivered it, and its limits for a Revenue Bench search.</p>
     </div>
 
-    <div class="tablewrap" role="region" aria-label="Revenue Bench attribution ledger" tabindex="0">
-      <table class="datatable" id="ledger-table">
+    <div class="rb-table-wrap tablewrap" role="region" aria-label="Revenue Bench attribution ledger" tabindex="0">
+      <table class="rb-table datatable" id="ledger-table">
         <caption class="vh">Revenue Bench attribution ledger: every result, credential and capability the firm claims for itself, with the period it covers, the firm that delivered it, what it establishes for a search and what it does not establish. Third-party research figures used elsewhere on the site carry their sources on the pages that use them.</caption>
         <thead>
           <tr>
@@ -198,59 +188,59 @@
         <tbody>
           <tr>
             <th scope="row">$12M in net-new revenue over nine months after rebuilding a nine-rep sales team at a manufacturer</th>
-            <td>Nine months</td>
-            <td>Performance Edge, Carlos Garrido's sales-effectiveness practice</td>
-            <td>The selection method. Every existing seat was assessed objectively and rehiring ran against the assessment rather than resumes, which is the same order of evidence a Revenue Bench search uses.</td>
-            <td>A Revenue Bench placement. The engagement was Performance Edge's. The client is not named and has not agreed to be named.</td>
+            <td data-label="Period it covers">Nine months</td>
+            <td data-label="Delivered through">Performance Edge, Carlos Garrido's sales-effectiveness practice</td>
+            <td data-label="What it establishes for a Revenue Bench search">The selection method. Every existing seat was assessed objectively and rehiring ran against the assessment rather than resumes, which is the same order of evidence a Revenue Bench search uses.</td>
+            <td data-label="What it does not establish">A Revenue Bench placement. The engagement was Performance Edge's. The client is not named and has not agreed to be named.</td>
           </tr>
           <tr>
             <th scope="row">200% growth in net-new sales in three months for a two-seller furniture brand under a new sales motion</th>
-            <td>Three months</td>
-            <td>Performance Edge</td>
-            <td>That an installed system and weekly live-deal coaching can move a small selling team without replacing it.</td>
-            <td>A Revenue Bench placement, and any claim about a larger team. Two sellers is a small base, the base the growth is measured against is not published, and the client is not named.</td>
+            <td data-label="Period it covers">Three months</td>
+            <td data-label="Delivered through">Performance Edge</td>
+            <td data-label="What it establishes for a Revenue Bench search">That an installed system and weekly live-deal coaching can move a small selling team without replacing it.</td>
+            <td data-label="What it does not establish">A Revenue Bench placement, and any claim about a larger team. Two sellers is a small base, the base the growth is measured against is not published, and the client is not named.</td>
           </tr>
           <tr>
             <th scope="row">120% and 119% top-line growth in year one and year two for an enterprise software team</th>
-            <td>Two consecutive years</td>
-            <td>Performance Edge</td>
-            <td>That the weekly sales-leadership routine held through a second year.</td>
-            <td>A Revenue Bench placement. Three sellers, and the client is not named.</td>
+            <td data-label="Period it covers">Two consecutive years</td>
+            <td data-label="Delivered through">Performance Edge</td>
+            <td data-label="What it establishes for a Revenue Bench search">That the weekly sales-leadership routine held through a second year.</td>
+            <td data-label="What it does not establish">A Revenue Bench placement. Three sellers, and the client is not named.</td>
           </tr>
           <tr>
             <th scope="row">Carlos Garrido: $3B+ in client revenue and $6B+ in client exits</th>
-            <td>A career of more than 30 years</td>
-            <td>Carlos's own career as an investment banker and growth advisor</td>
-            <td>The pattern recognition behind a search brief. He has valued businesses for a living.</td>
-            <td>Work performed by Revenue Bench, and any figure combined with Steve's. The two records are separate.</td>
+            <td data-label="Period it covers">A career of more than 30 years</td>
+            <td data-label="Delivered through">Carlos's own career as an investment banker and growth advisor</td>
+            <td data-label="What it establishes for a Revenue Bench search">The pattern recognition behind a search brief. He has valued businesses for a living.</td>
+            <td data-label="What it does not establish">Work performed by Revenue Bench, and any figure combined with Steve's. The two records are separate.</td>
           </tr>
           <tr>
             <th scope="row">Steve Swanston: built revenue teams inside companies that exited for more than $500 million</th>
-            <td>A 30-year operating career</td>
-            <td>Steve's operating roles, including chief operating officer, chief revenue officer, and acting president in private-equity-backed software, fintech, and technology companies</td>
-            <td>The hiring manager's perspective. He held the revenue roles the hires he made reported into.</td>
-            <td>Ownership of those exits. He built the revenue teams inside the companies that exited.</td>
+            <td data-label="Period it covers">A 30-year operating career</td>
+            <td data-label="Delivered through">Steve's operating roles, including chief operating officer, chief revenue officer, and acting president in private-equity-backed software, fintech, and technology companies</td>
+            <td data-label="What it establishes for a Revenue Bench search">The hiring manager's perspective. He held the revenue roles the hires he made reported into.</td>
+            <td data-label="What it does not establish">Ownership of those exits. He built the revenue teams inside the companies that exited.</td>
           </tr>
           <tr>
             <th scope="row">Objective Management Group figures: 72% of candidates OMG recommended reached the top half of their sales force within 12 months; first-year turnover of 9% for recommended hires against 33% for candidates OMG advised against; predictive validity in the 95 percent range, which is OMG's accuracy metric and a different measure from the top-half figure</th>
-            <td>OMG's 2024 validation survey, on a dataset of nearly 2.4 million assessed salespeople as of 2023</td>
-            <td>Objective Management Group. The assessment work runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group</td>
-            <td>The accuracy record of the instrument used on selling and sales-leadership candidates.</td>
-            <td>Independent research. These are Objective Management Group's own published figures. The outcome comparisons set candidates the assessment recommended against candidates it advised against, so they describe selection rather than a measured effect on a hire.</td>
+            <td data-label="Period it covers">OMG's 2024 validation survey, on a dataset of nearly 2.4 million assessed salespeople as of 2023</td>
+            <td data-label="Delivered through">Objective Management Group. The assessment work runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group</td>
+            <td data-label="What it establishes for a Revenue Bench search">The accuracy record of the instrument used on selling and sales-leadership candidates.</td>
+            <td data-label="What it does not establish">Independent research. These are Objective Management Group's own published figures. The outcome comparisons set candidates the assessment recommended against candidates it advised against, so they describe selection rather than a measured effect on a hire.</td>
           </tr>
           <tr>
             <th scope="row">A bench of pre-vetted sellers and sales leaders, sourced continuously, so a shortlist can start from people already assessed</th>
-            <td>Maintained since the firm opened in June 2026</td>
-            <td>Revenue Bench, with candidates for selling and sales-leadership roles assessed through Swanston Growth Advisors</td>
-            <td>That a search can open against people already assessed rather than starting cold.</td>
-            <td>A count. No bench number is published. Ask how many fit a specific role and when they were assessed, and the answer comes back as a written, dated summary with identities withheld.</td>
+            <td data-label="Period it covers">Maintained since the firm opened in June 2026</td>
+            <td data-label="Delivered through">Revenue Bench, with candidates for selling and sales-leadership roles assessed through Swanston Growth Advisors</td>
+            <td data-label="What it establishes for a Revenue Bench search">That a search can open against people already assessed rather than starting cold.</td>
+            <td data-label="What it does not establish">A count. No bench number is published. Ask how many fit a specific role and when they were assessed, and the answer comes back as a written, dated summary with identities withheld.</td>
           </tr>
           <tr>
             <th scope="row">Revenue Bench placements in role for twelve months</th>
-            <td>None. The firm opened in June 2026</td>
-            <td>Revenue Bench</td>
-            <td>Nothing yet.</td>
-            <td>Anything. This row changes when a Revenue Bench placement reaches twelve months in role.</td>
+            <td data-label="Period it covers">None. The firm opened in June 2026</td>
+            <td data-label="Delivered through">Revenue Bench</td>
+            <td data-label="What it establishes for a Revenue Bench search">Nothing yet.</td>
+            <td data-label="What it does not establish">Anything. This row changes when a Revenue Bench placement reaches twelve months in role.</td>
           </tr>
         </tbody>
       </table>

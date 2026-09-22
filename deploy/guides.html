@@ -75,15 +75,9 @@
     .stat-strip{grid-template-columns:1fr;}
     .router-group{margin-top:40px;}
     .router-group + .router-group{margin-top:48px;}
-    .table-scroll{overflow-x:visible;}
-    .router-group .otable{min-width:0;}
-    .router-group .otable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    .router-group .otable tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     .router-group .otable tr:last-child{border-bottom:0;}
-    .router-group .otable td{display:block;padding:0 0 7px;border-bottom:0;}
     .router-group .otable td:nth-child(2){font-size:15.5px;}
     .router-group .otable td:nth-child(3){padding-bottom:0;}
-    .router-group .otable td:nth-child(3)::before{content:'Hands you: ';color:var(--gold-deep);}
   }
 </style>
 </head>
@@ -123,8 +117,8 @@
 
     <div class="router-group reveal">
       <h3>Choosing how to run the search</h3>
-      <div class="table-scroll">
-        <table class="otable">
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table otable">
           <caption class="vh">Choosing how to run the search, the decision, the guide, and the artifact it hands you</caption>
           <thead>
             <tr>
@@ -136,33 +130,33 @@
           <tbody>
             <tr>
               <td>Should we run this search ourselves or bring in a partner?</td>
-              <td><a href="guides/sales-recruiter-vs-in-house.html">Sales recruiter vs hiring in-house: how to choose</a></td>
-              <td>The five conditions test and the six-input capacity check</td>
+              <td data-label="The guide"><a href="guides/sales-recruiter-vs-in-house.html">Sales recruiter vs hiring in-house: how to choose</a></td>
+              <td data-label="Hands you">The five conditions test and the six-input capacity check</td>
             </tr>
             <tr>
               <td>How do we evaluate one agency for the role we are filling, and what should we demand in writing?</td>
-              <td><a href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a></td>
-              <td>The eight-criterion process scorecard, scored out of 16, and the four-question fit test, scored out of 8</td>
+              <td data-label="The guide"><a href="guides/how-to-evaluate-a-sales-recruitment-agency.html">How to evaluate a sales recruitment agency for the role you are filling</a></td>
+              <td data-label="Hands you">The eight-criterion process scorecard, scored out of 16, and the four-question fit test, scored out of 8</td>
             </tr>
             <tr>
               <td>Which fee model puts the risk where it belongs?</td>
-              <td><a href="guides/sales-recruiter-fees.html">Sales recruiter fees: contingency, retained, and what you pay for</a></td>
-              <td>The fee-structure risk comparison</td>
+              <td data-label="The guide"><a href="guides/sales-recruiter-fees.html">Sales recruiter fees: contingency, retained, and what you pay for</a></td>
+              <td data-label="Hands you">The fee-structure risk comparison</td>
             </tr>
             <tr>
               <td>What does a placement guarantee cover, and when does it void?</td>
-              <td><a href="guides/placement-guarantees-explained.html">Sales recruiting placement guarantee terms, compared</a></td>
-              <td>The seven terms side by side, plus the retention-rate definitions ladder</td>
+              <td data-label="The guide"><a href="guides/placement-guarantees-explained.html">Sales recruiting placement guarantee terms, compared</a></td>
+              <td data-label="Hands you">The seven terms side by side, plus the retention-rate definitions ladder</td>
             </tr>
             <tr>
               <td>What does a mis-hire or an open role cost us?</td>
-              <td><a href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a></td>
-              <td>The vacancy ledger, with the formula for each line</td>
+              <td data-label="The guide"><a href="guides/cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a></td>
+              <td data-label="Hands you">The vacancy ledger, with the formula for each line</td>
             </tr>
             <tr>
               <td>Is the seller we need hireable in South Florida?</td>
-              <td><a href="sales-recruiters-miami.html">Sales recruiters in Miami: what the local B2B sales pool holds</a></td>
-              <td>The Miami sales-occupation table, nine pools by concentration</td>
+              <td data-label="The guide"><a href="sales-recruiters-miami.html">Sales recruiters in Miami: what the local B2B sales pool holds</a></td>
+              <td data-label="Hands you">The Miami sales-occupation table, nine pools by concentration</td>
             </tr>
           </tbody>
         </table>
@@ -171,8 +165,8 @@
 
     <div class="router-group reveal">
       <h3>Deciding who to hire</h3>
-      <div class="table-scroll">
-        <table class="otable">
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table otable">
           <caption class="vh">Deciding who to hire, the decision, the guide, and the artifact it hands you</caption>
           <thead>
             <tr>
@@ -184,43 +178,43 @@
           <tbody>
             <tr>
               <td>How do we judge a seller past the resume?</td>
-              <td><a href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a></td>
-              <td>The trait-evidence matrix</td>
+              <td data-label="The guide"><a href="guides/how-to-assess-a-salesperson.html">How to assess sales candidates before hiring</a></td>
+              <td data-label="Hands you">The trait-evidence matrix</td>
             </tr>
             <tr>
               <td>Assessment or interview: what does each one catch?</td>
-              <td><a href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview: what each screen catches</a></td>
-              <td>The screen-by-screen table: what each catches and what it cannot see</td>
+              <td data-label="The guide"><a href="guides/sales-assessment-vs-interview.html">Sales assessment vs interview: what each screen catches</a></td>
+              <td data-label="Hands you">The screen-by-screen table: what each catches and what it cannot see</td>
             </tr>
             <tr>
               <td>Does this candidate have the drive the role needs?</td>
-              <td><a href="guides/will-to-sell.html">Will to Sell: why drive is a hiring decision</a></td>
-              <td>The five markers of Will to Sell</td>
+              <td data-label="The guide"><a href="guides/will-to-sell.html">Will to Sell: why drive is a hiring decision</a></td>
+              <td data-label="Hands you">The five markers of Will to Sell</td>
             </tr>
             <tr>
               <td>How do we score an account executive interview consistently?</td>
-              <td><a href="guides/account-executive-interview-scorecard.html">The account executive interview scorecard</a></td>
-              <td>The account executive scorecard, ready to run</td>
+              <td data-label="The guide"><a href="guides/account-executive-interview-scorecard.html">The account executive interview scorecard</a></td>
+              <td data-label="Hands you">The account executive scorecard, ready to run</td>
             </tr>
             <tr>
               <td>How do we score a sales-leader interview consistently?</td>
-              <td><a href="guides/sales-leader-interview-scorecard.html">The sales leader interview scorecard</a></td>
-              <td>The leadership scorecard, ready to run</td>
+              <td data-label="The guide"><a href="guides/sales-leader-interview-scorecard.html">The sales leader interview scorecard</a></td>
+              <td data-label="Hands you">The leadership scorecard, ready to run</td>
             </tr>
             <tr>
               <td>What will a reference confirm, and what will they withhold?</td>
-              <td><a href="guides/reference-checks-for-sales-hires.html">Reference check questions for sales candidates: what to ask</a></td>
-              <td>The consent-first question protocol</td>
+              <td data-label="The guide"><a href="guides/reference-checks-for-sales-hires.html">Reference check questions for sales candidates: what to ask</a></td>
+              <td data-label="Hands you">The consent-first question protocol</td>
             </tr>
             <tr>
               <td>Why do candidates who interview well still fail?</td>
-              <td><a href="guides/why-sales-hires-fail.html">Why sales hires fail: what 2.4 million assessments show</a></td>
-              <td>Five failure patterns, each with its countermeasure</td>
+              <td data-label="The guide"><a href="guides/why-sales-hires-fail.html">Why sales hires fail: what 2.4 million assessments show</a></td>
+              <td data-label="Hands you">Five failure patterns, each with its countermeasure</td>
             </tr>
             <tr>
               <td>What does the sales talent pool look like before we start?</td>
-              <td><a href="guides/the-6-percent-problem.html">The 6% problem: what the data says about sales talent</a></td>
-              <td>OMG's 6, 11, 33, 50 distribution table</td>
+              <td data-label="The guide"><a href="guides/the-6-percent-problem.html">The 6% problem: what the data says about sales talent</a></td>
+              <td data-label="Hands you">OMG's 6, 11, 33, 50 distribution table</td>
             </tr>
           </tbody>
         </table>
@@ -229,8 +223,8 @@
 
     <div class="router-group reveal">
       <h3>Hiring or replacing a sales leader</h3>
-      <div class="table-scroll">
-        <table class="otable">
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table otable">
           <caption class="vh">Hiring or replacing a sales leader, the decision, the guide, and the artifact it hands you</caption>
           <thead>
             <tr>
@@ -242,43 +236,43 @@
           <tbody>
             <tr>
               <td>We inherited a sales leader with the company. Keep, coach, or replace?</td>
-              <td><a href="guides/inherited-sales-leader-keep-coach-replace.html">The sales leader you inherited: keep, coach, or replace</a></td>
-              <td>The six-gate decision tree, and the support test in writing</td>
+              <td data-label="The guide"><a href="guides/inherited-sales-leader-keep-coach-replace.html">The sales leader you inherited: keep, coach, or replace</a></td>
+              <td data-label="Hands you">The six-gate decision tree, and the support test in writing</td>
             </tr>
             <tr>
               <td>Our VP of Sales just resigned. Do we counteroffer?</td>
-              <td><a href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
-              <td>The seven-question decision table, and the three instruments</td>
+              <td data-label="The guide"><a href="guides/vp-of-sales-resigned-counteroffer.html">Your VP of Sales resigned: should you counteroffer?</a></td>
+              <td data-label="Hands you">The seven-question decision table, and the three instruments</td>
             </tr>
             <tr>
               <td>CRO, VP of Sales, or fractional: which one fits our stage?</td>
-              <td><a href="guides/choosing-a-sales-leadership-model.html">CRO, VP of Sales, or fractional: choosing the sales leadership model</a></td>
-              <td>The stage-to-model matrix</td>
+              <td data-label="The guide"><a href="guides/choosing-a-sales-leadership-model.html">CRO, VP of Sales, or fractional: choosing the sales leadership model</a></td>
+              <td data-label="Hands you">The stage-to-model matrix</td>
             </tr>
             <tr>
               <td>We are considering a fractional sales leader, or we have one and nothing has moved.</td>
-              <td><a href="guides/fractional-sales-leadership-wrong-call.html">When fractional sales leadership is the wrong call</a></td>
-              <td>The eight failure conditions, the six cost lines of unwinding, and the three-check read for a live engagement</td>
+              <td data-label="The guide"><a href="guides/fractional-sales-leadership-wrong-call.html">When fractional sales leadership is the wrong call</a></td>
+              <td data-label="Hands you">The eight failure conditions, the six cost lines of unwinding, and the three-check read for a live engagement</td>
             </tr>
             <tr>
               <td>What kind of VP of Sales do we need, and how do we run the hire?</td>
-              <td><a href="guides/how-to-hire-a-vp-of-sales.html">How to hire a VP of Sales or sales manager</a></td>
-              <td>The four mandates, the interview questions, and the four red flags</td>
+              <td data-label="The guide"><a href="guides/how-to-hire-a-vp-of-sales.html">How to hire a VP of Sales or sales manager</a></td>
+              <td data-label="Hands you">The four mandates, the interview questions, and the four red flags</td>
             </tr>
             <tr>
               <td>Should we promote our best rep into management?</td>
-              <td><a href="guides/should-you-promote-your-best-rep.html">Should you promote your best rep into sales management?</a></td>
-              <td>What OMG's evaluation of 44,493 sales managers shows</td>
+              <td data-label="The guide"><a href="guides/should-you-promote-your-best-rep.html">Should you promote your best rep into sales management?</a></td>
+              <td data-label="Hands you">What OMG's evaluation of 44,493 sales managers shows</td>
             </tr>
             <tr>
               <td>How do we replace a leader without the market hearing about it?</td>
-              <td><a href="guides/confidential-vp-of-sales-replacement.html">How to replace a VP of Sales confidentially</a></td>
-              <td>The confidential replacement protocol, plus the eight exposure routes</td>
+              <td data-label="The guide"><a href="guides/confidential-vp-of-sales-replacement.html">How to replace a VP of Sales confidentially</a></td>
+              <td data-label="Hands you">The confidential replacement protocol, plus the eight exposure routes</td>
             </tr>
             <tr>
               <td>What do we hold a new leader to in the first 90 days?</td>
-              <td><a href="guides/sales-leader-30-60-90-scorecard.html">The 30-60-90 day plan for a new sales leader, as a scorecard</a></td>
-              <td>The 30-60-90 scorecard</td>
+              <td data-label="The guide"><a href="guides/sales-leader-30-60-90-scorecard.html">The 30-60-90 day plan for a new sales leader, as a scorecard</a></td>
+              <td data-label="Hands you">The 30-60-90 scorecard</td>
             </tr>
           </tbody>
         </table>
@@ -287,8 +281,8 @@
 
     <div class="router-group reveal">
       <h3>Deciding what the team should look like</h3>
-      <div class="table-scroll">
-        <table class="otable">
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table otable">
           <caption class="vh">Deciding what the team should look like, the decision, the guide, and the artifact it hands you</caption>
           <thead>
             <tr>
@@ -300,23 +294,23 @@
           <tbody>
             <tr>
               <td>Which sellers does a founder hire first?</td>
-              <td><a href="guides/founders-first-sales-hires.html">The founder's first sales hires: #1 through #3</a></td>
-              <td>The hiring-sequence map</td>
+              <td data-label="The guide"><a href="guides/founders-first-sales-hires.html">The founder's first sales hires: #1 through #3</a></td>
+              <td data-label="Hands you">The hiring-sequence map</td>
             </tr>
             <tr>
               <td>When do we add revenue operations or enablement?</td>
-              <td><a href="guides/hiring-revenue-operations-and-enablement.html">Hiring RevOps and sales enablement: scope and sequence</a></td>
-              <td>Ownership by type of work, the inherited-layer diagnostic, and the supply routes</td>
+              <td data-label="The guide"><a href="guides/hiring-revenue-operations-and-enablement.html">Hiring RevOps and sales enablement: scope and sequence</a></td>
+              <td data-label="Hands you">Ownership by type of work, the inherited-layer diagnostic, and the supply routes</td>
             </tr>
             <tr>
               <td>How do we have candidates ready before a role opens?</td>
-              <td><a href="guides/building-a-sales-talent-bench.html">Building a sales talent bench</a></td>
-              <td>The bench coverage map</td>
+              <td data-label="The guide"><a href="guides/building-a-sales-talent-bench.html">Building a sales talent bench</a></td>
+              <td data-label="Hands you">The bench coverage map</td>
             </tr>
             <tr>
               <td>What do we pay to attract the seller we want?</td>
-              <td><a href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a></td>
-              <td>The benchmark-translation table</td>
+              <td data-label="The guide"><a href="guides/sales-compensation-benchmarks-2026.html">Sales compensation benchmarks for 2026</a></td>
+              <td data-label="Hands you">The benchmark-translation table</td>
             </tr>
           </tbody>
         </table>
@@ -325,8 +319,8 @@
 
     <div class="router-group reveal">
       <h3>Hiring inside a deal or a portfolio company</h3>
-      <div class="table-scroll">
-        <table class="otable">
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table otable">
           <caption class="vh">Hiring inside a deal or a portfolio company, the decision, the guide, and the artifact it hands you</caption>
           <thead>
             <tr>
@@ -338,28 +332,28 @@
           <tbody>
             <tr>
               <td>How should a portfolio govern sales hiring?</td>
-              <td><a href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a></td>
-              <td>The portfolio hiring-governance model</td>
+              <td data-label="The guide"><a href="guides/private-equity-sales-hiring-playbook.html">The private equity operating partner's sales-hiring playbook</a></td>
+              <td data-label="Hands you">The portfolio hiring-governance model</td>
             </tr>
             <tr>
               <td>What do we check on the sales team before we sign?</td>
-              <td><a href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a></td>
-              <td>The pre-LOI checklist, the five-gate seller-concentration test, and the exposure arithmetic</td>
+              <td data-label="The guide"><a href="guides/sales-team-due-diligence.html">Sales team due diligence for private equity buyers</a></td>
+              <td data-label="Hands you">The pre-LOI checklist, the five-gate seller-concentration test, and the exposure arithmetic</td>
             </tr>
             <tr>
               <td>What happens to the sales team in the first 100 days after close?</td>
-              <td><a href="guides/first-100-days-portfolio-sales-team.html">The first 100 days: rebuilding a portfolio company's sales team</a></td>
-              <td>The 100-day sequence</td>
+              <td data-label="The guide"><a href="guides/first-100-days-portfolio-sales-team.html">The first 100 days: rebuilding a portfolio company's sales team</a></td>
+              <td data-label="Hands you">The 100-day sequence</td>
             </tr>
             <tr>
               <td>What do we pay a sales leader working to an exit?</td>
-              <td><a href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a></td>
-              <td>The package-structure table</td>
+              <td data-label="The guide"><a href="guides/pe-sales-leader-compensation.html">Sales-leader compensation in a PE-backed company</a></td>
+              <td data-label="Hands you">The package-structure table</td>
             </tr>
             <tr>
               <td>Which hiring mistakes do deal teams repeat?</td>
-              <td><a href="guides/pe-sales-hiring-mistakes.html">The sales-hiring mistakes PE deal teams repeat</a></td>
-              <td>The repeated-mistake ledger</td>
+              <td data-label="The guide"><a href="guides/pe-sales-hiring-mistakes.html">The sales-hiring mistakes PE deal teams repeat</a></td>
+              <td data-label="Hands you">The repeated-mistake ledger</td>
             </tr>
           </tbody>
         </table>
@@ -368,8 +362,8 @@
 
     <div class="router-group reveal">
       <h3>Fixing a hire that is already in place</h3>
-      <div class="table-scroll">
-        <table class="otable">
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table otable">
           <caption class="vh">Fixing a hire that is already in place, the decision, the guide, and the artifact it hands you</caption>
           <thead>
             <tr>
@@ -381,13 +375,13 @@
           <tbody>
             <tr>
               <td>How long do we give a sales hire who is not working out?</td>
-              <td><a href="guides/sales-hire-not-working-out.html">How long should you give a sales hire who is not working out?</a></td>
-              <td>The seven-part fair-test audit</td>
+              <td data-label="The guide"><a href="guides/sales-hire-not-working-out.html">How long should you give a sales hire who is not working out?</a></td>
+              <td data-label="Hands you">The seven-part fair-test audit</td>
             </tr>
             <tr>
               <td>How do we ramp a new hire to real quota?</td>
-              <td><a href="guides/90-day-sales-onboarding-plan.html">The 90-day sales onboarding plan: ramp a new hire to quota</a></td>
-              <td>The five ramp gates</td>
+              <td data-label="The guide"><a href="guides/90-day-sales-onboarding-plan.html">The 90-day sales onboarding plan: ramp a new hire to quota</a></td>
+              <td data-label="Hands you">The five ramp gates</td>
             </tr>
           </tbody>
         </table>

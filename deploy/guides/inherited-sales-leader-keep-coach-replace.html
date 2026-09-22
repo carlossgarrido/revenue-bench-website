@@ -81,17 +81,7 @@
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
   @media(max-width:760px){
-    .tablewrap-gates{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #gate-summary{min-width:0;font-size:15px;}
-    #gate-summary thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #gate-summary tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #gate-summary tr:last-child{border-bottom:0;}
-    #gate-summary td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;}
-    #gate-summary th[scope="row"]{display:block;width:auto;font-size:17px;padding:0 0 10px;border-bottom:0;}
-    #gate-summary td:nth-child(2)::before{content:'The question: ';color:var(--ink-soft);font-weight:400;}
-    #gate-summary td:nth-child(3)::before{content:'Evidence: ';color:var(--ink-soft);font-weight:400;}
-    #gate-summary td:nth-child(4)::before{content:'Where yes goes: ';color:var(--ink-soft);font-weight:400;}
-    #gate-summary td:nth-child(5)::before{content:'Where no goes: ';color:var(--ink-soft);font-weight:400;}
     #gate-summary td:last-child{padding-bottom:0;}
     .compare-head{display:none;}
     .compare-row{display:block;padding:12px 15px;}
@@ -290,8 +280,8 @@
       </div>
 
       <h3>The six gates at a glance</h3>
-      <div class="tablewrap tablewrap-gates">
-        <table class="datatable" id="gate-summary">
+      <div class="rb-table-wrap tablewrap tablewrap-gates">
+        <table class="rb-table datatable" id="gate-summary">
           <thead>
             <tr>
               <th>Gate</th>
@@ -304,45 +294,45 @@
           <tbody>
             <tr>
               <th scope="row">Gate 1</th>
-              <td>Whose numbers are you looking at?</td>
-              <td>Capacity reconciliation, ownership of the largest opportunities, post-close changes, stage-tested pipeline, attainment distribution, motion changes, and who runs the selling system.</td>
-              <td>Gate 2, when the number was reachable with the team as it stood.</td>
-              <td>Fix the plan, restate the target, and reopen after the next full quarter.</td>
+              <td data-label="The question">Whose numbers are you looking at?</td>
+              <td data-label="Evidence">Capacity reconciliation, ownership of the largest opportunities, post-close changes, stage-tested pipeline, attainment distribution, motion changes, and who runs the selling system.</td>
+              <td data-label="Where yes goes">Gate 2, when the number was reachable with the team as it stood.</td>
+              <td data-label="Where no goes">Fix the plan, restate the target, and reopen after the next full quarter.</td>
             </tr>
             <tr>
               <th scope="row">Gate 2</th>
-              <td>Does this person manage, or are they still the best seller?</td>
-              <td>Time spent on their opportunities against the team's, ownership of large open deals, and improvement by the second-best seller.</td>
-              <td>Gate 3, when the leader manages the team's selling.</td>
-              <td>Role-fit and organization-design analysis.</td>
+              <td data-label="The question">Does this person manage, or are they still the best seller?</td>
+              <td data-label="Evidence">Time spent on their opportunities against the team's, ownership of large open deals, and improvement by the second-best seller.</td>
+              <td data-label="Where yes goes">Gate 3, when the leader manages the team's selling.</td>
+              <td data-label="Where no goes">Role-fit and organization-design analysis.</td>
             </tr>
             <tr>
               <th scope="row">Gate 3</th>
-              <td>Which of the three coaching qualities is missing?</td>
-              <td>A sales-management evaluation reading the ability to coach, the ability to motivate, and the discipline to develop through a steady cadence.</td>
-              <td>Keep. The constraint returns to the plan, the motion, or the role.</td>
-              <td>Gate 4 carrying the named gap.</td>
+              <td data-label="The question">Which of the three coaching qualities is missing?</td>
+              <td data-label="Evidence">A sales-management evaluation reading the ability to coach, the ability to motivate, and the discipline to develop through a steady cadence.</td>
+              <td data-label="Where yes goes">Keep. The constraint returns to the plan, the motion, or the role.</td>
+              <td data-label="Where no goes">Gate 4 carrying the named gap.</td>
             </tr>
             <tr>
               <th scope="row">Gate 4</th>
-              <td>Does the missing piece move? The two doors.</td>
-              <td>Whether the gap is an untaught skill or belief, or a want gap after the leader has learned the method.</td>
-              <td>Gate 5 for a skill or belief that can move.</td>
-              <td>Replace when the gap is want.</td>
+              <td data-label="The question">Does the missing piece move? The two doors.</td>
+              <td data-label="Evidence">Whether the gap is an untaught skill or belief, or a want gap after the leader has learned the method.</td>
+              <td data-label="Where yes goes">Gate 5 for a skill or belief that can move.</td>
+              <td data-label="Where no goes">Replace when the gap is want.</td>
             </tr>
             <tr>
               <th scope="row">Gate 5</th>
-              <td>Is there a cadence, and did it change when it was asked for?</td>
-              <td>A two-week count of scheduled coaching interactions, plus whether the agreed cadence is running thirty days later.</td>
-              <td>Gate 6 when the cadence changes.</td>
-              <td>Replace when the cadence does not change.</td>
+              <td data-label="The question">Is there a cadence, and did it change when it was asked for?</td>
+              <td data-label="Evidence">A two-week count of scheduled coaching interactions, plus whether the agreed cadence is running thirty days later.</td>
+              <td data-label="Where yes goes">Gate 6 when the cadence changes.</td>
+              <td data-label="Where no goes">Replace when the cadence does not change.</td>
             </tr>
             <tr>
               <th scope="row">Gate 6</th>
-              <td>What does keep with defined support say in writing?</td>
-              <td>Named gaps, measures, cadence, observer, review date, review participants, decision routes, and a copy given to the leader.</td>
-              <td>Keep with defined support.</td>
-              <td>Complete the test before naming the route.</td>
+              <td data-label="The question">What does keep with defined support say in writing?</td>
+              <td data-label="Evidence">Named gaps, measures, cadence, observer, review date, review participants, decision routes, and a copy given to the leader.</td>
+              <td data-label="Where yes goes">Keep with defined support.</td>
+              <td data-label="Where no goes">Complete the test before naming the route.</td>
             </tr>
           </tbody>
         </table>

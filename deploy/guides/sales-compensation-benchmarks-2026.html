@@ -81,56 +81,20 @@
     .author-box{align-items:flex-start;}
   }
   @media(max-width:760px){
-    .table-scroll{width:auto;margin-left:0;transform:none;border:0;overflow-x:visible;}
-    #bls-table{min-width:0;font-size:15px;}
-    #bls-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #bls-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #bls-table tr:last-child{border-bottom:0;}
-    #bls-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;white-space:normal;}
     #bls-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #bls-table td:nth-child(2)::before{content:"Employed: ";}
-    #bls-table td:nth-child(3)::before{content:"10th percentile: ";}
-    #bls-table td:nth-child(4)::before{content:"25th percentile: ";}
-    #bls-table td:nth-child(5)::before{content:"Median: ";}
-    #bls-table td:nth-child(6)::before{content:"75th percentile: ";}
-    #bls-table td:nth-child(7)::before{content:"90th percentile: ";}
     #bls-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
     #bls-table td:last-child{padding-bottom:0;}
-
-    #translate-table{min-width:0;font-size:15px;}
-    #translate-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #translate-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #translate-table tr:last-child{border-bottom:0;}
-    #translate-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
     #translate-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #translate-table td:nth-child(2)::before{content:"What it measures: ";}
-    #translate-table td:nth-child(3)::before{content:"Who reports it: ";}
-    #translate-table td:nth-child(4)::before{content:"The decision it can settle: ";}
-    #translate-table td:nth-child(5)::before{content:"Where it misleads: ";}
     #translate-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
     #translate-table td:last-child{padding-bottom:0;}
-
-    #ledger-table{min-width:0;font-size:15px;}
-    #ledger-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #ledger-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #ledger-table tr:last-child{border-bottom:0;}
-    #ledger-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
     #ledger-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #ledger-table td:nth-child(2)::before{content:"The question: ";}
-    #ledger-table td:nth-child(3)::before{content:"The arithmetic: ";}
-    #ledger-table td:nth-child(4)::before{content:"The result: ";}
     #ledger-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
     #ledger-table td:last-child{padding-bottom:0;}
-
-    #role-table{min-width:0;font-size:15px;}
-    #role-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-    #role-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
     #role-table tr:last-child{border-bottom:0;}
-    #role-table td{display:block;width:auto!important;padding:0 0 8px;border-bottom:0;border-right:0;}
     #role-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #role-table td:nth-child(2)::before{content:"What the person directly controls: ";}
-    #role-table td:nth-child(3)::before{content:"Where the mix leans: ";}
-    #role-table td:nth-child(4)::before{content:"The failure pattern when it is set wrong: ";}
     #role-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
     #role-table td:last-child{padding-bottom:0;}
   }
@@ -209,8 +173,8 @@
       <h2 id="bls">What the federal wage survey shows for sales roles</h2>
       <p>These pay figures carry a stated sample, a stated period, and a published collection method, and the agency that publishes them sells nothing in this market.</p>
       <p class="artifact-label">The federal wage survey, US sales occupations, May 2025</p>
-      <div class="table-scroll" role="region" aria-label="US national annual wages for sales occupations" tabindex="0">
-        <table class="decision-table" id="bls-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="US national annual wages for sales occupations" tabindex="0">
+        <table class="rb-table decision-table" id="bls-table">
           <caption class="vh">US national annual wages for sales occupations, May 2025 Occupational Employment and Wage Statistics, by percentile</caption>
           <thead>
             <tr>
@@ -226,57 +190,57 @@
           <tbody>
             <tr>
               <td>Sales representatives of services, except advertising, insurance, financial services, and travel</td>
-              <td>1,256,010</td>
-              <td>$37,980</td>
-              <td>$47,670</td>
-              <td>$69,990</td>
-              <td>$100,480</td>
-              <td>$148,840</td>
+              <td data-label="Employed">1,256,010</td>
+              <td data-label="10th percentile">$37,980</td>
+              <td data-label="25th percentile">$47,670</td>
+              <td data-label="Median">$69,990</td>
+              <td data-label="75th percentile">$100,480</td>
+              <td data-label="90th percentile">$148,840</td>
             </tr>
             <tr>
               <td>Sales representatives, wholesale and manufacturing, except technical and scientific products</td>
-              <td>1,238,190</td>
-              <td>$39,090</td>
-              <td>$50,470</td>
-              <td>$72,080</td>
-              <td>$99,640</td>
-              <td>$137,550</td>
+              <td data-label="Employed">1,238,190</td>
+              <td data-label="10th percentile">$39,090</td>
+              <td data-label="25th percentile">$50,470</td>
+              <td data-label="Median">$72,080</td>
+              <td data-label="75th percentile">$99,640</td>
+              <td data-label="90th percentile">$137,550</td>
             </tr>
             <tr>
               <td>Sales representatives, wholesale and manufacturing, technical and scientific products</td>
-              <td>284,800</td>
-              <td>$52,600</td>
-              <td>$75,030</td>
-              <td>$104,920</td>
-              <td>$158,160</td>
-              <td>$200,440</td>
+              <td data-label="Employed">284,800</td>
+              <td data-label="10th percentile">$52,600</td>
+              <td data-label="25th percentile">$75,030</td>
+              <td data-label="Median">$104,920</td>
+              <td data-label="75th percentile">$158,160</td>
+              <td data-label="90th percentile">$200,440</td>
             </tr>
             <tr>
               <td>Sales engineers</td>
-              <td>51,790</td>
-              <td>$73,870</td>
-              <td>$92,890</td>
-              <td>$124,900</td>
-              <td>$161,230</td>
-              <td>$195,270</td>
+              <td data-label="Employed">51,790</td>
+              <td data-label="10th percentile">$73,870</td>
+              <td data-label="25th percentile">$92,890</td>
+              <td data-label="Median">$124,900</td>
+              <td data-label="75th percentile">$161,230</td>
+              <td data-label="90th percentile">$195,270</td>
             </tr>
             <tr>
               <td>First-line supervisors of non-retail sales workers</td>
-              <td>214,390</td>
-              <td>$50,320</td>
-              <td>$63,940</td>
-              <td>$87,520</td>
-              <td>$122,050</td>
-              <td>$164,070</td>
+              <td data-label="Employed">214,390</td>
+              <td data-label="10th percentile">$50,320</td>
+              <td data-label="25th percentile">$63,940</td>
+              <td data-label="Median">$87,520</td>
+              <td data-label="75th percentile">$122,050</td>
+              <td data-label="90th percentile">$164,070</td>
             </tr>
             <tr>
               <td>Sales managers</td>
-              <td>637,080</td>
-              <td>$73,170</td>
-              <td>$100,360</td>
-              <td>$148,270</td>
-              <td>$207,340</td>
-              <td>$290,540</td>
+              <td data-label="Employed">637,080</td>
+              <td data-label="10th percentile">$73,170</td>
+              <td data-label="25th percentile">$100,360</td>
+              <td data-label="Median">$148,270</td>
+              <td data-label="75th percentile">$207,340</td>
+              <td data-label="90th percentile">$290,540</td>
             </tr>
           </tbody>
         </table>
@@ -291,8 +255,8 @@
       <h2 id="translate">Decision artifact #1: Which compensation number settles which decision</h2>
       <p>A buyer pricing a sales role meets five kinds of compensation number. They measure different things, and using one where another belongs produces a mis-set plan.</p>
       <p class="artifact-label">The benchmark-translation table</p>
-      <div class="table-scroll" role="region" aria-label="Kinds of sales compensation benchmark and the decisions they can settle" tabindex="0">
-        <table class="decision-table" id="translate-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Kinds of sales compensation benchmark and the decisions they can settle" tabindex="0">
+        <table class="rb-table decision-table" id="translate-table">
           <caption class="vh">Kinds of sales compensation benchmark, what each measures, and the decision each can settle</caption>
           <thead>
             <tr>
@@ -306,38 +270,38 @@
           <tbody>
             <tr>
               <td>The federal wage survey, the table above</td>
-              <td>Straight-time gross pay, exclusive of premium pay. The survey's technical note defines the measure this way: base rate, cost-of-living allowances, guaranteed pay, hazardous-duty pay, incentive pay including commissions and production bonuses, and tips are included. Overtime pay, severance pay, shift differentials, non-production bonuses, employer cost for supplementary benefits, and tuition reimbursements are excluded. A draw is excluded because the survey defines it as payment based on expected future wages. The figure is what people were paid at whatever attainment they reached. Base salary and on-target earnings are different measures.</td>
-              <td>Employers, through a survey drawn from state unemployment-insurance records under a published method.</td>
-              <td>Whether a proposed range sits inside, above, or below what employers across the country are paying people doing that kind of work.</td>
-              <td>An occupation is not a job title, and the figure carries no company stage, deal size, selling motion, or equity. It also cannot be read as a trend. The statistical agency says its data are not built for comparison over time because each release pools six semiannual panels across three years.</td>
+              <td data-label="What it measures">Straight-time gross pay, exclusive of premium pay. The survey's technical note defines the measure this way: base rate, cost-of-living allowances, guaranteed pay, hazardous-duty pay, incentive pay including commissions and production bonuses, and tips are included. Overtime pay, severance pay, shift differentials, non-production bonuses, employer cost for supplementary benefits, and tuition reimbursements are excluded. A draw is excluded because the survey defines it as payment based on expected future wages. The figure is what people were paid at whatever attainment they reached. Base salary and on-target earnings are different measures.</td>
+              <td data-label="Who reports it">Employers, through a survey drawn from state unemployment-insurance records under a published method.</td>
+              <td data-label="The decision it can settle">Whether a proposed range sits inside, above, or below what employers across the country are paying people doing that kind of work.</td>
+              <td data-label="Where it misleads">An occupation is not a job title, and the figure carries no company stage, deal size, selling motion, or equity. It also cannot be read as a trend. The statistical agency says its data are not built for comparison over time because each release pools six semiannual panels across three years.</td>
             </tr>
             <tr>
               <td>A published on-target-earnings benchmark</td>
-              <td>Target earnings at 100% of plan. It records a design intention. No payment is measured.</td>
-              <td>Companies selling compensation software, recruiting services, or market data.</td>
-              <td>What a competitive offer is likely to look like on paper, if the sample behind it fits the role.</td>
-              <td>Most publish no sample size, collection period, or method, so the figure cannot be checked. Target earnings also overstate what was paid wherever attainment ran below plan.</td>
+              <td data-label="What it measures">Target earnings at 100% of plan. It records a design intention. No payment is measured.</td>
+              <td data-label="Who reports it">Companies selling compensation software, recruiting services, or market data.</td>
+              <td data-label="The decision it can settle">What a competitive offer is likely to look like on paper, if the sample behind it fits the role.</td>
+              <td data-label="Where it misleads">Most publish no sample size, collection period, or method, so the figure cannot be checked. Target earnings also overstate what was paid wherever attainment ran below plan.</td>
             </tr>
             <tr>
               <td>A self-reported earnings panel</td>
-              <td>What people who chose to submit their own numbers say they earn.</td>
-              <td>The people doing the jobs, through a platform that collects the submissions.</td>
-              <td>What candidates in a segment believe the market pays, which is the number that appears in a negotiation.</td>
-              <td>Respondents select themselves, so the sample skews toward the engaged and the successful. Self-reported pay is usually reported at target.</td>
+              <td data-label="What it measures">What people who chose to submit their own numbers say they earn.</td>
+              <td data-label="Who reports it">The people doing the jobs, through a platform that collects the submissions.</td>
+              <td data-label="The decision it can settle">What candidates in a segment believe the market pays, which is the number that appears in a negotiation.</td>
+              <td data-label="Where it misleads">Respondents select themselves, so the sample skews toward the engaged and the successful. Self-reported pay is usually reported at target.</td>
             </tr>
             <tr>
               <td>The company's own offer-and-decline history</td>
-              <td>What this company offered, and what was accepted, countered or refused.</td>
-              <td>The company, from its own records.</td>
-              <td>Whether this company's package clears the market for this company's role, which no external table can answer.</td>
-              <td>The sample is small, it is a year or more old by the time it forms a pattern, and it records the market's answer to the role as it was written then.</td>
+              <td data-label="What it measures">What this company offered, and what was accepted, countered or refused.</td>
+              <td data-label="Who reports it">The company, from its own records.</td>
+              <td data-label="The decision it can settle">Whether this company's package clears the market for this company's role, which no external table can answer.</td>
+              <td data-label="Where it misleads">The sample is small, it is a year or more old by the time it forms a pattern, and it records the market's answer to the role as it was written then.</td>
             </tr>
             <tr>
               <td>Live candidate response during an open search</td>
-              <td>What qualified people will accept this quarter, for this role, in this geography.</td>
-              <td>The candidates, through the search.</td>
-              <td>The final number, because it is the only evidence produced by the actual role.</td>
-              <td>It arrives late, after the range has already been set, and the pool is whoever the search reached.</td>
+              <td data-label="What it measures">What qualified people will accept this quarter, for this role, in this geography.</td>
+              <td data-label="Who reports it">The candidates, through the search.</td>
+              <td data-label="The decision it can settle">The final number, because it is the only evidence produced by the actual role.</td>
+              <td data-label="Where it misleads">It arrives late, after the range has already been set, and the pool is whoever the search reached.</td>
             </tr>
           </tbody>
         </table>
@@ -347,8 +311,8 @@
       <h2 id="ledger">Decision artifact #2: The plan ledger, worked</h2>
       <p>The plan ledger builds the affordability anchor from the company's own numbers. Start with planned new revenue, choose a point inside the working cost range, and test whether headcount, pay, quota, margin, and sales-cycle assumptions hold together.</p>
       <p class="artifact-label">Worked illustration on stated assumptions</p>
-      <div class="table-scroll" role="region" aria-label="Worked sales compensation plan ledger" tabindex="0">
-        <table class="decision-table ledger-table" id="ledger-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Worked sales compensation plan ledger" tabindex="0">
+        <table class="rb-table decision-table ledger-table" id="ledger-table">
           <caption class="vh">Worked illustration of a sales compensation plan ledger using stated assumptions</caption>
           <thead>
             <tr>
@@ -361,33 +325,33 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>What new revenue is planned for the year?</td>
-              <td>The company's own plan</td>
-              <td>$3,000,000</td>
+              <td data-label="The question">What new revenue is planned for the year?</td>
+              <td data-label="The arithmetic">The company's own plan</td>
+              <td data-label="The result">$3,000,000</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>What can selling cost?</td>
-              <td>$3,000,000 x 20%, the midpoint of the 15% to 25% working range</td>
-              <td>$600,000 fully loaded</td>
+              <td data-label="The question">What can selling cost?</td>
+              <td data-label="The arithmetic">$3,000,000 x 20%, the midpoint of the 15% to 25% working range</td>
+              <td data-label="The result">$600,000 fully loaded</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>How does the envelope split?</td>
-              <td>Three sellers at $160,000 OTE, the rest to the management share of selling cost, tools, and recruiting</td>
-              <td>$480,000 + $120,000</td>
+              <td data-label="The question">How does the envelope split?</td>
+              <td data-label="The arithmetic">Three sellers at $160,000 OTE, the rest to the management share of selling cost, tools, and recruiting</td>
+              <td data-label="The result">$480,000 + $120,000</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>What quota does that imply?</td>
-              <td>$3,000,000 across three sellers</td>
-              <td>$1,000,000 per seller</td>
+              <td data-label="The question">What quota does that imply?</td>
+              <td data-label="The arithmetic">$3,000,000 across three sellers</td>
+              <td data-label="The result">$1,000,000 per seller</td>
             </tr>
             <tr>
               <td>5</td>
-              <td>Does the plan hold together?</td>
-              <td>Quota at $1,000,000 against $160,000 OTE, a 6.25x ratio; check it against your gross margin and sales cycle</td>
-              <td>The plan fits the envelope; gross margin and cycle length decide whether it holds</td>
+              <td data-label="The question">Does the plan hold together?</td>
+              <td data-label="The arithmetic">Quota at $1,000,000 against $160,000 OTE, a 6.25x ratio; check it against your gross margin and sales cycle</td>
+              <td data-label="The result">The plan fits the envelope; gross margin and cycle length decide whether it holds</td>
             </tr>
           </tbody>
         </table>
@@ -396,8 +360,8 @@
 
       <h2 id="mix">Decision artifact #3: The role-design table</h2>
       <p>The base-variable mix is a design decision that follows what the person directly controls. The decision requires no dollar figures.</p>
-      <div class="table-scroll" role="region" aria-label="Base-variable role-design table" tabindex="0">
-        <table class="decision-table role-table" id="role-table">
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Base-variable role-design table" tabindex="0">
+        <table class="rb-table decision-table role-table" id="role-table">
           <caption class="vh">Role-design table for setting base-variable mix by direct control</caption>
           <thead>
             <tr>
@@ -410,33 +374,33 @@
           <tbody>
             <tr>
               <td>SDR / BDR</td>
-              <td>Activity volume and meeting quality, rather than deal outcomes</td>
-              <td>Base-heavy, with variable pay on qualified meetings held</td>
-              <td>Paying on booked-but-not-held meetings buys calendar spam.</td>
+              <td data-label="What the person directly controls">Activity volume and meeting quality, rather than deal outcomes</td>
+              <td data-label="Where the mix leans">Base-heavy, with variable pay on qualified meetings held</td>
+              <td data-label="The failure pattern when it is set wrong">Paying on booked-but-not-held meetings buys calendar spam.</td>
             </tr>
             <tr>
               <td>AE, new-logo</td>
-              <td>The deal from first meeting to close</td>
-              <td>The loosest mix on the team, approaching an even split as deal control rises</td>
-              <td>A base-heavy plan pays for effort while the pipeline stalls.</td>
+              <td data-label="What the person directly controls">The deal from first meeting to close</td>
+              <td data-label="Where the mix leans">The loosest mix on the team, approaching an even split as deal control rises</td>
+              <td data-label="The failure pattern when it is set wrong">A base-heavy plan pays for effort while the pipeline stalls.</td>
             </tr>
             <tr>
               <td>AE / AM, retention-heavy</td>
-              <td>Shared outcomes with product, service, and success teams</td>
-              <td>Base-heavy, with variable pay on retention plus expansion</td>
-              <td>A hunter mix on a farmer role pays for churn nobody caused and rewards discounting to hold logos.</td>
+              <td data-label="What the person directly controls">Shared outcomes with product, service, and success teams</td>
+              <td data-label="Where the mix leans">Base-heavy, with variable pay on retention plus expansion</td>
+              <td data-label="The failure pattern when it is set wrong">A hunter mix on a farmer role pays for churn nobody caused and rewards discounting to hold logos.</td>
             </tr>
             <tr>
               <td><a href="how-to-hire-a-vp-of-sales.html">Front-line sales manager</a></td>
-              <td>Coaching, pipeline discipline, and hiring, rather than individual deals</td>
-              <td>Base-heavy, with variable pay on team attainment</td>
-              <td>A manager paid on personal deals competes with their own reps.</td>
+              <td data-label="What the person directly controls">Coaching, pipeline discipline, and hiring, rather than individual deals</td>
+              <td data-label="Where the mix leans">Base-heavy, with variable pay on team attainment</td>
+              <td data-label="The failure pattern when it is set wrong">A manager paid on personal deals competes with their own reps.</td>
             </tr>
             <tr>
               <td>VP / Head of Sales</td>
-              <td>The system: process, hiring, and forecast</td>
-              <td>Base-heavy, with variable pay on the operating plan the board reviews</td>
-              <td>An all-commission leader optimizes this quarter and starves next year's foundation.</td>
+              <td data-label="What the person directly controls">The system: process, hiring, and forecast</td>
+              <td data-label="Where the mix leans">Base-heavy, with variable pay on the operating plan the board reviews</td>
+              <td data-label="The failure pattern when it is set wrong">An all-commission leader optimizes this quarter and starves next year's foundation.</td>
             </tr>
           </tbody>
         </table>
