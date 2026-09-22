@@ -9,3 +9,5 @@ steveswanston.png
 # QA probe output, never published
 _tmpgate/
 deploy/_tmpgate/
+
+__pycache__/
