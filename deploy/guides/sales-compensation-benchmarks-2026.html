@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Sales Compensation Benchmarks for 2026 | Revenue Bench</title>
-<meta name="description" content="US sales pay by percentile from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision." />
+<meta name="description" content="US sales pay by percentile and by industry from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision." />
 <link rel="canonical" href="https://revenuebench.io/guides/sales-compensation-benchmarks-2026" />
 <meta property="og:title" content="Sales Compensation Benchmarks for 2026" />
-<meta property="og:description" content="US sales pay by percentile from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision." />
+<meta property="og:description" content="US sales pay by percentile and by industry from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/sales-compensation-benchmarks-2026.png">
   <meta property="og:image:width" content="1200">
@@ -66,6 +66,7 @@
   .role-table td:last-child{width:35%;color:var(--ink-soft);}
   .artifact-label{margin:12px 0 8px;font-size:13.5px;font-weight:600;color:var(--gold-deep);}
   .table-caption{margin:12px 0 18px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+  .decision-table .mid{display:block;font-size:13px;color:var(--ink-soft);margin-top:2px;}
   .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   .table-scroll:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:28px;}
@@ -120,7 +121,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales compensation benchmarks for 2026</span></div>
     <div class="eyebrow">Compensation</div>
     <h1>Sales compensation benchmarks for 2026</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>11 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>13 min read</span></div>
     <p class="deck"><strong>Every sales compensation plan rests on two numbers: the market rate for the role and what the company can afford per dollar of new revenue.</strong> This guide shows where each number comes from and how to build the plan from them. The page publishes wage data that carries a stated sample, a stated period, and a published method. No vendor earnings table appears here, because a figure without those three cannot price a role. <a href="pe-sales-leader-compensation.html">Sales-leader packages in sponsor-owned companies are a different market with their own guide</a>.</p>
   </div>
 </section>
@@ -133,7 +134,8 @@
       <ul>
         <li>Anchor every plan on two numbers: the market rate for the role and total sales cost as a share of new revenue. Revenue Bench's working range is 15% to 25%.</li>
         <li>The federal wage table reports employer-reported pay received, with commission and incentive pay included. It does not report target earnings.</li>
-        <li>Use the company's offer-and-decline history and live candidate response to move from the published range to the number for the role. A live search is the freshest read of what the role costs.</li>
+        <li>By industry, the federal survey puts sales-manager medians within $30,480 of each other across six industries, while pay inside any one industry spreads at least $81,430 across its middle half.</li>
+        <li>Use the company's offer-and-decline history and live candidate response to move from the published range to the figure for the role. A live search is the freshest read of what the role costs.</li>
         <li>Match the base-variable mix to what the person directly controls.</li>
         <li>Set quota the median performer can meaningfully reach, and pay accelerators above 100% of plan with no cap.</li>
       </ul>
@@ -145,6 +147,7 @@
         <li><a href="#anchors">The two anchors</a></li>
         <li><a href="#market">Where the market number comes from</a></li>
         <li><a href="#bls">What the federal wage survey shows for sales roles</a></li>
+        <li><a href="#by-industry">Sales pay by industry, from the same survey</a></li>
         <li><a href="#translate">Decision artifact #1: Which compensation number settles which decision</a></li>
         <li><a href="#ledger">Decision artifact #2: The plan ledger, worked</a></li>
         <li><a href="#mix">Decision artifact #3: The role-design table</a></li>
@@ -252,6 +255,74 @@
       <p><strong>The spread is the useful part, and the median is the least useful number in the row.</strong> The distance between the 25th and the 75th percentile inside one occupation is wider than the distance between two occupations' medians. Pricing a role means choosing a position in that spread and being able to say why.</p>
       <p><strong>The 90th percentile is not a stretch target.</strong> It marks what the top tenth of people already in that occupation were paid. A plan that pays at the 90th only at full attainment is not paying at the 90th.</p>
 
+      <h2 id="by-industry">Sales pay by industry, from the same survey</h2>
+      <p>The federal wage survey also publishes its sales occupations by industry, free, at the national level only. For sales managers, the May 2025 median runs from $149,980 in wholesale trade to $180,460 in computer systems design and related services, against $148,270 across all industries.</p>
+      <p class="artifact-label">The industry cut, US sales occupations, median annual wage and middle half, May 2025</p>
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="US sales pay by industry, May 2025" tabindex="0">
+        <table class="rb-table decision-table" id="industry-table">
+          <caption class="vh">US annual wages for three sales occupations in six industries, May 2025 Occupational Employment and Wage Statistics, median and middle half</caption>
+          <thead>
+            <tr>
+              <th scope="col">Industry, as the survey names it</th>
+              <th scope="col">Sales managers</th>
+              <th scope="col">Sales representatives, technical and scientific products</th>
+              <th scope="col">Sales representatives of services</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>All industries, the national table above</td>
+              <td data-label="Sales managers">Median $148,270<br><span class="mid">Middle half $100,360 to $207,340</span></td>
+              <td data-label="Sales representatives, technical and scientific products">Median $104,920<br><span class="mid">Middle half $75,030 to $158,160</span></td>
+              <td data-label="Sales representatives of services">Median $69,990<br><span class="mid">Middle half $47,670 to $100,480</span></td>
+            </tr>
+            <tr>
+              <td>Manufacturing, sectors 31 to 33</td>
+              <td data-label="Sales managers">Median $156,150<br><span class="mid">Middle half $113,290 to $204,070</span></td>
+              <td data-label="Sales representatives, technical and scientific products">Median $106,650<br><span class="mid">Middle half $76,610 to $142,050</span></td>
+              <td data-label="Sales representatives of services">Median $76,290<br><span class="mid">Middle half $51,230 to $108,220</span></td>
+            </tr>
+            <tr>
+              <td>Wholesale trade, sector 42</td>
+              <td data-label="Sales managers">Median $149,980<br><span class="mid">Middle half $102,080 to $206,860</span></td>
+              <td data-label="Sales representatives, technical and scientific products">Median $105,910<br><span class="mid">Middle half $75,790 to $160,390</span></td>
+              <td data-label="Sales representatives of services">Median $78,280<br><span class="mid">Middle half $56,410 to $115,850</span></td>
+            </tr>
+            <tr>
+              <td>Finance and insurance, sector 52</td>
+              <td data-label="Sales managers">Median $174,440<br><span class="mid">Middle half $128,460 to $279,290</span></td>
+              <td data-label="Sales representatives, technical and scientific products">No estimate published for this industry</td>
+              <td data-label="Sales representatives of services">Median $75,770<br><span class="mid">Middle half $50,550 to $104,500</span></td>
+            </tr>
+            <tr>
+              <td>Professional, scientific, and technical services, sector 54</td>
+              <td data-label="Sales managers">Median $173,700<br><span class="mid">Middle half $130,020 to $222,840</span></td>
+              <td data-label="Sales representatives, technical and scientific products">Median $108,100<br><span class="mid">Middle half $76,930 to $161,080</span></td>
+              <td data-label="Sales representatives of services">Median $83,880<br><span class="mid">Middle half $60,590 to $126,970</span></td>
+            </tr>
+            <tr>
+              <td>Computer systems design and related services, part of sector 54</td>
+              <td data-label="Sales managers">Median $180,460<br><span class="mid">Middle half $134,650 to $232,520</span></td>
+              <td data-label="Sales representatives, technical and scientific products">Median $103,070<br><span class="mid">Middle half $74,990 to $152,190</span></td>
+              <td data-label="Sales representatives of services">Median $97,780<br><span class="mid">Middle half $66,930 to $140,260</span></td>
+            </tr>
+            <tr>
+              <td>Software publishers</td>
+              <td data-label="Sales managers">Median $168,370<br><span class="mid">Middle half $134,990 to $216,420</span></td>
+              <td data-label="Sales representatives, technical and scientific products">Median $120,620<br><span class="mid">Middle half $79,920 to $166,380</span></td>
+              <td data-label="Sales representatives of services">Median $98,540<br><span class="mid">Middle half $73,110 to $132,820</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">Source: the <a href="https://www.bls.gov/oes/2025/may/oessrci.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics national industry-specific occupational estimates</a>, May 2025, released 15 May 2026 with the national estimates above. Annual wages. The middle half runs from the 25th to the 75th percentile. The agency publishes relative standard errors for the mean wage and for employment, and none for the median. In the six industry rows they run from 0.5% to 5.8% on the mean wage and from 1.2% to 9.3% on employment, against 0.4% to 0.8% and 0.7% to 1.8% in the all-industries row, because each industry sample is smaller. The industry is the industry of the employing establishment, which can differ from the product a person sells. Computer systems design sits inside professional, scientific, and technical services, so that sector row includes it. The services occupation excludes insurance and financial services sales agents, whom the survey counts as separate occupations, so the finance and insurance row does not describe them.</p>
+
+      <h3>How to read the industry cut</h3>
+      <p><strong>Inside any one industry, the spread of pay is wider than the gap between industries.</strong> Across the six industries, sales-manager medians sit within $30,480 of each other, while the middle half of sales-manager pay inside any one of those industries is at least $81,430 wide. The same holds for both representative occupations: technical and scientific sellers' medians sit within $17,550 across the five industries with an estimate, against a middle half at least $65,440 wide, and services sellers' medians sit within $22,770, against a middle half at least $53,950 wide.</p>
+      <p><strong>Read the row for the industry your own establishment is classified in.</strong> A software business may be classified as a software publisher or in computer systems design and related services, and the two sales-manager medians differ by $12,090. The row still carries no company stage, deal size, selling motion, or equity, and an occupation is not a job title.</p>
+      <p><strong>No row describes a trend.</strong> The industry estimates pool the same six semiannual panels as the national table, so the agency's warning against comparison over time applies to them too.</p>
+      <p>The national limits in <a href="#method">Methodology and sources</a> apply to every row.</p>
+
       <h2 id="translate">Decision artifact #1: Which compensation number settles which decision</h2>
       <p>A buyer pricing a sales role meets five kinds of compensation number. They measure different things, and using one where another belongs produces a mis-set plan.</p>
       <p class="artifact-label">The benchmark-translation table</p>
@@ -286,7 +357,7 @@
               <td>A self-reported earnings panel</td>
               <td data-label="What it measures">What people who chose to submit their own numbers say they earn.</td>
               <td data-label="Who reports it">The people doing the jobs, through a platform that collects the submissions.</td>
-              <td data-label="The decision it can settle">What candidates in a segment believe the market pays, which is the number that appears in a negotiation.</td>
+              <td data-label="The decision it can settle">What candidates in a segment believe the market pays, which is the figure that appears in a negotiation.</td>
               <td data-label="Where it misleads">Respondents select themselves, so the sample skews toward the engaged and the successful. Self-reported pay is usually reported at target.</td>
             </tr>
             <tr>
@@ -306,7 +377,7 @@
           </tbody>
         </table>
       </div>
-      <p class="table-caption">The first three sources are external and get you a range. The last two are first-party and get you the number. Revenue Bench is paid to run searches, so publishing that the freshest benchmark arrives through a search aligns with the firm's commercial interest. The evidence in row 5 is the candidate's own answer. A company that reads it can set its own number without engaging anyone.</p>
+      <p class="table-caption">The first three sources are external and get you a range. The last two are first-party and get you the figure for the role. Revenue Bench is paid to run searches, so publishing that the freshest benchmark arrives through a search aligns with the firm's commercial interest. The evidence in row 5 is the candidate's own answer. A company that reads it can set its own number without engaging anyone.</p>
 
       <h2 id="ledger">Decision artifact #2: The plan ledger, worked</h2>
       <p>The plan ledger builds the affordability anchor from the company's own numbers. Start with planned new revenue, choose a point inside the working cost range, and test whether headcount, pay, quota, margin, and sales-cycle assumptions hold together.</p>
@@ -424,8 +495,9 @@
       <div class="method">
         <p>The federal wage survey is a semiannual mail survey of non-farm establishments. Its sampling frame comes from the establishment lists that state workforce agencies maintain for unemployment-insurance purposes.</p>
         <p>Each release combines six semiannual panels collected over three years. The May 2025 estimates use panels with reference dates of May 2025, November 2024, May 2024, November 2023, May 2023, and November 2022. Across those three years, the sample covers 1.1 million establishments, and sampled employment accounts for about 55% of total national employment for this release.</p>
-        <p>The response rate for this release was 66.2% of establishments and 67.2% of weighted sampled employment. The relative standard error on the wage estimates in the table runs from 0.4% to 1.2%, and the relative standard error on the employment estimates runs from 0.6% to 2.8%. Annual wages assume a full-time, year-round schedule of 2,080 hours. The release's <a href="https://www.bls.gov/news.release/ocwage.tn.htm" target="_blank" rel="noopener">technical note</a> carries the wage definition, sample, and response rate.</p>
+        <p>The response rate for this release was 66.2% of establishments and 67.2% of weighted sampled employment. The relative standard error on the wage estimates in the national table runs from 0.4% to 1.2%, and the relative standard error on the employment estimates runs from 0.6% to 2.8%. Annual wages assume a full-time, year-round schedule of 2,080 hours. The release's <a href="https://www.bls.gov/news.release/ocwage.tn.htm" target="_blank" rel="noopener">technical note</a> carries the wage definition, sample, and response rate.</p>
         <p>A percentile is a boundary inside the occupation. The median is the boundary between the highest-paid 50% and the lowest-paid 50% of people in that occupation, and it says nothing about a career path. The survey does not cover the self-employed, owners and partners in unincorporated firms, household workers, or unpaid family workers. Wage estimates exclude benefits entirely. Industry-level estimates are published at the national level only.</p>
+        <p>The industry cut uses the same release's national industry-specific estimates. Each industry row is a subset of the national sample, so its margin of error is wider, and the caption under that table states the range.</p>
         <p>The working ranges on this page, the 15% to 25% envelope and the quota test, are Revenue Bench's own working guidance from sales hiring and selection work. They are not survey findings. The OMG figure is OMG's research. The <a href="../sources.html" class="content-link">Revenue Bench sources page</a> lists every figure on the site with its producer, sample, and period.</p>
         <p>Candidate assessment runs through Swanston Growth Advisors, a Certified Partner of Objective Management Group. Revenue Bench does not design, set, benchmark, or approve compensation; the company and its advisers own those decisions.</p>
       </div>
@@ -475,7 +547,12 @@
 
       <div class="faq-item">
         <h3>Is sales compensation benchmark data available by industry?</h3>
-        <p>Yes. The federal survey publishes occupational wage estimates by industry at the national level only, so there is no industry cut for a single city. One occupation code covers unlike businesses, so the same sales-manager code carries a software services manager and a car dealership manager. A business-to-business selling role also spans several industry codes, which narrows the sample without necessarily matching the job. Use the federal survey's own industry estimates with those limits attached.</p>
+        <p>Yes. The federal wage survey publishes its sales occupations by industry, free, at the national level only, so there is no industry cut for a single city. In the May 2025 estimates, the median for sales managers runs from $149,980 in wholesale trade to $180,460 in computer systems design and related services, against $148,270 across all industries. One occupation code still covers unlike businesses, and each industry's smaller sample carries a wider margin of error than the national figure. The industry cut on this page sets six industries side by side with those limits attached.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How much do sales managers earn at software companies?</h3>
+        <p>In the federal wage survey's May 2025 national estimates, sales managers employed by software publishers had a median annual wage of $168,370, with the middle half between $134,990 and $216,420. Sales managers in computer systems design and related services, where some software businesses are classified, had a median of $180,460. The survey counts commissions and incentive pay and excludes equity and year-end bonuses, so the figure is neither base salary nor on-target earnings. It carries no company stage, deal size, or selling motion.</p>
       </div>
     </div>
 
@@ -525,7 +602,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Sales Compensation Benchmarks for 2026","description":"US sales pay by percentile from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-09-16","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Sales Compensation Benchmarks for 2026","description":"US sales pay by percentile and by industry from the federal wage survey, May 2025, plus which kind of compensation benchmark can settle which pricing decision.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-09-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-compensation-benchmarks-2026"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -535,7 +612,8 @@
 {"@type":"Question","name":"Should I cap sales commission?","acceptedAnswer":{"@type":"Answer","text":"No. Pay accelerators above 100% of plan. A cap prices the marginal effort of your best performers at zero and tells them when to stop selling."}},
 {"@type":"Question","name":"Which sources should set a sales pay range?","acceptedAnswer":{"@type":"Answer","text":"Read them in sequence. The federal wage survey sets the outside range for the occupation. A published earnings benchmark shows what a competitive offer looks like on paper, carrying its sample and date caveats. The company's own offer-and-decline history shows whether this company's package clears the market. Live candidate response during a search gives the freshest read of what the role costs this quarter."}},
 {"@type":"Question","name":"Where can I find sales compensation data with a published sample and method?","acceptedAnswer":{"@type":"Answer","text":"The federal wage survey provides it. The May 2025 estimates combine six semiannual panels collected over three years, with a sample of 1.1 million establishments covering about 55% of total national employment, and a response rate of 66.2% of establishments. The estimates are free and public."}},
-{"@type":"Question","name":"Is sales compensation benchmark data available by industry?","acceptedAnswer":{"@type":"Answer","text":"Yes. The federal survey publishes occupational wage estimates by industry at the national level only, so there is no industry cut for a single city. One occupation code covers unlike businesses, so the same sales-manager code carries a software services manager and a car dealership manager. A business-to-business selling role also spans several industry codes, which narrows the sample without necessarily matching the job. Use the federal survey's own industry estimates with those limits attached."}}
+{"@type":"Question","name":"Is sales compensation benchmark data available by industry?","acceptedAnswer":{"@type":"Answer","text":"Yes. The federal wage survey publishes its sales occupations by industry, free, at the national level only, so there is no industry cut for a single city. In the May 2025 estimates, the median for sales managers runs from $149,980 in wholesale trade to $180,460 in computer systems design and related services, against $148,270 across all industries. One occupation code still covers unlike businesses, and each industry's smaller sample carries a wider margin of error than the national figure. The industry cut on this page sets six industries side by side with those limits attached."}},
+{"@type":"Question","name":"How much do sales managers earn at software companies?","acceptedAnswer":{"@type":"Answer","text":"In the federal wage survey's May 2025 national estimates, sales managers employed by software publishers had a median annual wage of $168,370, with the middle half between $134,990 and $216,420. Sales managers in computer systems design and related services, where some software businesses are classified, had a median of $180,460. The survey counts commissions and incentive pay and excludes equity and year-end bonuses, so the figure is neither base salary nor on-target earnings. It carries no company stage, deal size, or selling motion."}}
 ]}
 </script>
 
