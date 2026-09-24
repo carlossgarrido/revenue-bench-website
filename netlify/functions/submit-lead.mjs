@@ -3,7 +3,17 @@
 // (best effort). The front-end falls back to mailto if this returns non-2xx,
 // so a lead is never lost even before the env vars below are configured.
 //
-// Env: RESEND_API_KEY, DATABASE_URL, LEAD_NOTIFY_EMAIL, LEAD_FROM
+// Env: RESEND_API_KEY, LEADS_DATABASE_URL, LEAD_NOTIFY_EMAIL, LEAD_FROM
+//
+// NOTE (2026-09-20): this used to be DATABASE_URL, but this site's Netlify
+// deploys kept baking in a stale value under that key no matter how many
+// times it was updated or the site redeployed (confirmed via a fingerprint
+// log: the function kept using a password that had already been rotated
+// away). Renaming to LEADS_DATABASE_URL broke whatever was pinning it. If
+// you ever touch this again, edit the value through Netlify's dashboard UI
+// (Project configuration -> Environment variables), not the CLI -- CLI
+// env:set / env:get reported success in this same investigation while the
+// dashboard and the live function both showed the write never landed.
 import { neon } from '@neondatabase/serverless';
 import { escapeHtml } from './_lib/escape.mjs';
 
@@ -117,7 +127,7 @@ export default async (req) => {
   let dbOK = false;
   let emailOK = false;
 
-  const dbUrl = process.env.DATABASE_URL;
+  const dbUrl = process.env.LEADS_DATABASE_URL;
   if (dbUrl) {
     try {
       const sql = neon(dbUrl);
@@ -131,7 +141,7 @@ export default async (req) => {
       console.error('submit-lead: DB insert failed:', err);
     }
   } else {
-    console.warn('submit-lead: DATABASE_URL not set, lead not stored');
+    console.warn('submit-lead: LEADS_DATABASE_URL not set, lead not stored');
   }
 
   try {
