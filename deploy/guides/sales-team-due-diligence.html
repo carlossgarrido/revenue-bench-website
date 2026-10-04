@@ -81,6 +81,336 @@
     .calculation-row{display:block;}
     .calculation-row dt,.calculation-row dd{display:block;padding:12px 14px;}
   }
+  .calc-section {
+    margin: 28px 0;
+    padding: 26px 28px;
+    min-width: 0;
+    max-width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--parchment);
+    color: var(--navy);
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-wrap: anywhere;
+  }
+  .calc-section .calc-title {
+    margin: 0 0 10px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.2;
+    scroll-margin-top: 100px;
+  }
+  .calc-section .calc-intro {
+    margin: 0 0 26px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-mid);
+  }
+  .calc-section .calc-seller,
+  .calc-section .calc-shared {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .calc-section .calc-shared {
+    margin-top: 28px;
+  }
+  .calc-section .calc-legend {
+    padding: 0 0 16px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--navy);
+  }
+  .calc-section .calc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+  }
+  .calc-section .calc-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .calc-section .calc-label {
+    display: flex;
+    align-items: flex-end;
+    min-height: 42px;
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .calc-section .calc-input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    margin: 0;
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--cream);
+    color: var(--navy);
+    font: 400 16px/1.5 'Inter', system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+  .calc-section .calc-input[aria-invalid="true"] {
+    border: 2px solid var(--gold-deep);
+  }
+  .calc-section .calc-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .calc-section .calc-hint {
+    display: block;
+    margin-top: 7px;
+    color: var(--ink-soft);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .calc-section .calc-record-heading {
+    margin: 24px 0 8px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .calc-section .calc-check-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 44px;
+    padding: 10px 0;
+    color: var(--ink-mid);
+    font-size: 13.5px;
+    line-height: 1.6;
+    cursor: pointer;
+  }
+  .calc-section .calc-checkbox {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin: 1px 0 0;
+    accent-color: var(--navy);
+  }
+  .calc-section .calc-record-note {
+    margin: 8px 0 20px;
+    color: var(--ink-soft);
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  .calc-section .calc-second-slot {
+    margin-top: 26px;
+  }
+  .calc-section .calc-second-slot:has(.calc-seller[hidden]) {
+    margin-top: 0;
+  }
+  .calc-section .calc-seller[hidden],
+  .calc-section .calc-manual[hidden] {
+    display: none;
+  }
+  .calc-section .calc-button {
+    box-sizing: border-box;
+    min-height: 46px;
+    max-width: 100%;
+    padding: 12px 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font: 600 14px/1.5 'Inter', system-ui, sans-serif;
+    text-align: left;
+    white-space: normal;
+    cursor: pointer;
+  }
+  .calc-section .calc-secondary {
+    background: var(--cream);
+    color: var(--navy);
+  }
+  .calc-section .calc-secondary:hover {
+    border-color: var(--navy);
+  }
+  .calc-section .calc-primary {
+    background: var(--navy);
+    color: var(--cream);
+  }
+  .calc-section .calc-primary:hover {
+    background: var(--navy-mid);
+  }
+  .calc-section .calc-input:focus-visible,
+  .calc-section .calc-checkbox:focus-visible,
+  .calc-section .calc-button:focus-visible,
+  .calc-section .calc-link:focus-visible {
+    outline: 2px solid var(--gold-deep);
+    outline-offset: 3px;
+  }
+  .calc-section .calc-results {
+    margin: 26px 0 20px;
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    background: var(--cream);
+    overflow: hidden;
+  }
+  .calc-section .calc-result {
+    padding: 20px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .calc-section .calc-result-heading {
+    margin: 0 0 14px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .calc-section .calc-figures {
+    margin: 0;
+  }
+  .calc-section .calc-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .calc-section .calc-row:last-child {
+    border-bottom: 0;
+  }
+  .calc-section .calc-term,
+  .calc-section .calc-value {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .calc-section .calc-term {
+    color: var(--ink-mid);
+  }
+  .calc-section .calc-value {
+    color: var(--navy);
+    font-weight: 600;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .calc-section .calc-exposure-row {
+    display: block;
+    padding: 16px 0;
+  }
+  .calc-section .calc-exposure {
+    display: block;
+    margin: 4px 0 0;
+    color: var(--gold-deep);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 600;
+    line-height: 1.15;
+    text-align: left;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+  .calc-section .calc-flags {
+    margin: 14px 0 0;
+    color: var(--ink-mid);
+    font-size: 12.5px;
+    line-height: 1.8;
+  }
+  .calc-section .calc-flag {
+    display: block;
+  }
+  .calc-section .calc-total {
+    padding: 20px;
+    background: var(--parchment);
+  }
+  .calc-section .calc-total-label {
+    display: block;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .calc-section .calc-caution {
+    margin: 0 0 14px;
+    color: var(--ink-mid);
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .calc-section .calc-copy-status {
+    margin: 8px 0 0;
+    color: var(--ink-mid);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .calc-section .calc-copy-status:empty {
+    display: none;
+  }
+  .calc-section .calc-manual {
+    margin-top: 16px;
+  }
+  .calc-section .calc-memo {
+    min-height: 220px;
+    resize: vertical;
+  }
+  .calc-section .calc-clipboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 16px;
+  }
+  .calc-section .calc-contact {
+    margin: 24px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-mid);
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .calc-section .calc-link {
+    display: inline;
+    padding: 0;
+    border-bottom: 0;
+    color: var(--gold-deep);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  @media (max-width: 760px) {
+    .calc-section {
+      padding: 22px 16px;
+    }
+    .calc-section .calc-grid,
+    .calc-section .calc-row {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .calc-section .calc-row {
+      gap: 3px;
+    }
+    .calc-section .calc-label {
+      min-height: 0;
+    }
+    .calc-section .calc-value {
+      text-align: left;
+    }
+    .calc-section .calc-result,
+    .calc-section .calc-total {
+      padding: 18px 14px;
+    }
+    .calc-section .calc-button {
+      width: 100%;
+    }
+  }
 </style>
 </head>
 <body>
@@ -103,7 +433,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales team due diligence</span></div>
     <div class="eyebrow">Private equity &middot; Due diligence</div>
     <h1>Sales team due diligence for private equity buyers</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>16 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>17 min read</span></div>
     <p class="deck"><strong>The sales team's ability to deliver the plan is priced into the deal before anyone tests it.</strong> Commercial diligence reads the data room: bookings, pipeline, concentration, and churn. The data room shows what the team produced and says nothing about whether the same people can produce the plan under new ownership. This page gives the deal team the pre-LOI checklist, then a five-gate test for how much of a concentrated seller's revenue survives their departure and the arithmetic that turns the answer into an enterprise-value figure.</p>
   </div>
 </section>
@@ -120,6 +450,7 @@
         <li><a href="#checklist">The pre-LOI sales-team checklist</a></li>
         <li><a href="#concentration">The seller-concentration test</a></li>
         <li><a href="#exposure">What the concentration is worth</a></li>
+        <li><a href="#calculator">Run the exposure arithmetic on your target</a></li>
         <li><a href="#confirmatory">Between the LOI and close: assessment evidence</a></li>
         <li><a href="#reading">Reading the results</a></li>
         <li><a href="#math">The turnover math that changes the model</a></li>
@@ -314,6 +645,429 @@
       </dl>
 
       <p>The illustration leaves $4.32 million of the seller's book outside the exposure calculation because it is contract-bound, company-originated, or both. That treatment is why headline revenue share cannot stand alone. Substitute the target's own figures at every step.</p>
+<section class="calc-section" aria-labelledby="calculator">
+  <h3 class="calc-title" id="calculator">Run the arithmetic on your target</h3>
+  <p class="calc-intro">Enter the target's figures for its top seller, and the second seller if one exists. The calculator runs the three steps above in order and applies the cost adjustment where you enter one. The figures you enter stay in your browser.</p>
+
+  <fieldset class="calc-seller" id="calc-seller-1">
+    <legend class="calc-legend">Seller 1</legend>
+    <div class="calc-grid">
+      <div class="calc-field">
+        <label class="calc-label" for="calc-1-revenue">Seller's trailing-12-month revenue ($)</label>
+        <input class="calc-input" id="calc-1-revenue" data-calc-key="revenue" type="text" inputmode="decimal" value="6,000,000" aria-describedby="calc-1-revenue-hint" autocomplete="off">
+        <span class="calc-hint" id="calc-1-revenue-hint">From the revenue-by-seller report, reconciled to the ledger.</span>
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-1-atwill">Share of that revenue renewable at will (%)</label>
+        <input class="calc-input" id="calc-1-atwill" data-calc-key="atWill" type="text" inputmode="decimal" value="40" aria-describedby="calc-1-atwill-hint" autocomplete="off">
+        <span class="calc-hint" id="calc-1-atwill-hint">From the contract schedule. Enter 40 for 40%.</span>
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-1-sourced">Share of the at-will revenue the seller personally sourced (%)</label>
+        <input class="calc-input" id="calc-1-sourced" data-calc-key="sourced" type="text" inputmode="decimal" value="70" aria-describedby="calc-1-sourced-hint" autocomplete="off">
+        <span class="calc-hint" id="calc-1-sourced-hint">From origination and assignment records. Enter 70 for 70%.</span>
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-1-cost">Cost removed if the accounts leave ($, optional)</label>
+        <input class="calc-input" id="calc-1-cost" data-calc-key="costRemoved" type="text" inputmode="decimal" value="0" aria-describedby="calc-1-cost-hint" autocomplete="off">
+        <span class="calc-hint" id="calc-1-cost-hint">Leave at zero unless the cost leaves with the accounts.</span>
+      </div>
+    </div>
+    <h4 class="calc-record-heading">Recorded beside the figure</h4>
+    <label class="calc-check-label" for="calc-1-succession">
+      <input class="calc-checkbox" id="calc-1-succession" data-calc-gate="succession" type="checkbox">
+      <span>Succession gate passed: at every concentrated account, a second company contact met the customer's buyer in the last two quarters</span>
+    </label>
+    <label class="calc-check-label" for="calc-1-restraint">
+      <input class="calc-checkbox" id="calc-1-restraint" data-calc-gate="restraint" type="checkbox">
+      <span>Written restraint: deal counsel supports the reliance the buyer's model places on it</span>
+    </label>
+    <p class="calc-record-note">These two findings are recorded beside the result. No evidence-based percentage converts either into a valuation adjustment.</p>
+  </fieldset>
+
+  <button class="calc-button calc-secondary" id="calc-toggle" type="button" aria-expanded="false" aria-controls="calc-seller-2">Add the second seller</button>
+  <div class="calc-second-slot" id="calc-second-slot"></div>
+
+  <fieldset class="calc-shared">
+    <legend class="calc-legend">Shared inputs</legend>
+    <div class="calc-grid">
+      <div class="calc-field">
+        <label class="calc-label" for="calc-margin">Contribution margin on that revenue (%)</label>
+        <input class="calc-input" id="calc-margin" type="text" inputmode="decimal" value="25" aria-describedby="calc-margin-hint" autocomplete="off">
+        <span class="calc-hint" id="calc-margin-hint">Account-level margin where the record exists. Otherwise, document the estimate. Enter 25 for 25%.</span>
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-multiple">Buyer's entry multiple (x)</label>
+        <input class="calc-input" id="calc-multiple" type="text" inputmode="decimal" value="8" aria-describedby="calc-multiple-hint" autocomplete="off">
+        <span class="calc-hint" id="calc-multiple-hint">Your own entry multiple.</span>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="calc-results" id="calc-results"></div>
+  <p class="calc-live" id="calc-live" aria-live="polite"></p>
+
+  <p class="calc-caution" id="calc-upper-bound">Read the figure as an upper bound. The arithmetic assumes the whole at-risk amount leaves and stays gone, and it does not estimate the probability of a departure.</p>
+  <p class="calc-caution" id="calc-overlap">Customer concentration and seller concentration can name the same accounts. Where the model also discounts a concentrated customer, reconcile the account-level cash flows before using both figures. This page publishes no rule for combining them.</p>
+
+  <button class="calc-button calc-primary" id="calc-copy" type="button" aria-live="polite">Copy the result for the IC memo</button>
+  <p class="calc-copy-status" id="calc-copy-status" role="status"></p>
+  <div class="calc-manual" id="calc-manual" hidden>
+    <label class="calc-label" for="calc-memo">IC memo result</label>
+    <textarea class="calc-input calc-memo" id="calc-memo" readonly></textarea>
+  </div>
+
+  <p class="calc-contact">Revenue Bench runs a separate sales-team assessment between the LOI and close, with management's consent, and is paid when a search after close places a hire. <a class="calc-link" href="../contact.html">Talk to us about a target</a>.</p>
+</section>
+<script>
+(function () {
+  'use strict';
+
+  // Reads one field. Returns NaN for anything it cannot read, so the page can
+  // mark the field; the arithmetic then counts that field as zero.
+  const read = function (value) {
+    if (typeof value === 'number') return Number.isFinite(value) && value >= 0 ? value : NaN;
+    if (typeof value !== 'string') return NaN;
+    const s = value.trim().toLowerCase().replace(/^\$|[%x]$/g, '').replace(/\s/g, '');
+    if (s === '') return 0;
+    if (/,(?!\d{3}(?!\d))/.test(s)) return NaN;
+    const m = s.replace(/,/g, '').match(/^(\d+(?:\.\d*)?|\.\d+)(k|m|mm|mn|b|bn)?$/);
+    if (m === null) return NaN;
+    return Number(m[1]) * ({ k: 1e3, m: 1e6, mm: 1e6, mn: 1e6, b: 1e9, bn: 1e9 }[m[2]] || 1);
+  };
+
+  window.rbExposure = function (input) {
+    const number = function (value) {
+      const n = read(value);
+      return Number.isFinite(n) ? n : 0;
+    };
+
+    const margin = Math.min(100, number(input?.margin)) / 100;
+    const multiple = Math.min(50, number(input?.multiple));
+    const sellers = (Array.isArray(input?.sellers) ? input.sellers : []).map(function (seller) {
+      const revenue = number(seller?.revenue);
+      const atRiskRevenue = revenue *
+        (Math.min(100, number(seller?.atWill)) / 100) *
+        (Math.min(100, number(seller?.sourced)) / 100);
+      const atRiskContribution = atRiskRevenue * margin;
+      const netContribution = Math.max(0, atRiskContribution - number(seller?.costRemoved));
+
+      return {
+        atRiskRevenue: atRiskRevenue,
+        atRiskContribution: atRiskContribution,
+        netContribution: netContribution,
+        exposure: netContribution * multiple,
+        outside: revenue - atRiskRevenue
+      };
+    });
+
+    return {
+      sellers: sellers,
+      total: sellers.reduce(function (sum, seller) {
+        return sum + seller.exposure;
+      }, 0)
+    };
+  };
+  window.rbExposure.read = read;
+
+  const root = document.getElementById('calculator').closest('.calc-section');
+  const find = function (selector) { return root.querySelector(selector); };
+  const first = find('#calc-seller-1');
+  const second = first.cloneNode(true);
+  second.id = 'calc-seller-2';
+  second.hidden = true;
+  second.disabled = true;
+  second.querySelector('.calc-legend').textContent = 'Seller 2';
+
+  second.querySelectorAll('[id], [for], [aria-describedby]').forEach(function (element) {
+    ['id', 'for', 'aria-describedby'].forEach(function (attribute) {
+      if (element.hasAttribute(attribute)) {
+        element.setAttribute(attribute, element.getAttribute(attribute).replace(/calc-1-/g, 'calc-2-'));
+      }
+    });
+  });
+
+  function resetSecond() {
+    second.querySelectorAll('.calc-input').forEach(function (input) {
+      input.value = '0';
+      input.defaultValue = '0';
+    });
+    second.querySelectorAll('.calc-checkbox').forEach(function (input) {
+      input.checked = false;
+    });
+  }
+
+  resetSecond();
+  find('#calc-second-slot').appendChild(second);
+
+  const toggle = find('#calc-toggle');
+  const copy = find('#calc-copy');
+  const results = find('#calc-results');
+  const status = find('#calc-copy-status');
+  const manual = find('#calc-manual');
+  const memoField = find('#calc-memo');
+  const live = find('#calc-live');
+  const overlap = find('#calc-overlap').textContent;
+  let liveTimer;
+  const copyLabel = 'Copy the result for the IC memo';
+  const upperBound = find('#calc-upper-bound').textContent;
+  const money = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
+  let edited = false;
+  let copyTimer;
+  let copyVersion = 0;
+  let snapshot;
+
+  function analytics(action) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'rb_calculator', { action: action });
+      }
+    } catch (error) {}
+  }
+
+  function firstEdit() {
+    if (edited === false) {
+      edited = true;
+      analytics('edit');
+    }
+  }
+
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    node.className = className;
+    if (text === undefined) return node;
+    node.textContent = text;
+    return node;
+  }
+
+  function readSeller(fieldset) {
+    const seller = {};
+    fieldset.querySelectorAll('[data-calc-key]').forEach(function (input) {
+      seller[input.dataset.calcKey] = input.value;
+    });
+    return seller;
+  }
+
+  function readFlags(fieldset) {
+    return {
+      succession: fieldset.querySelector('[data-calc-gate="succession"]').checked
+        ? 'Succession: passed' : 'Succession: not recorded as passed',
+      restraint: fieldset.querySelector('[data-calc-gate="restraint"]').checked
+        ? 'Restraint: counsel support recorded' : 'Restraint: counsel support not recorded'
+    };
+  }
+
+  function figure(list, label, value, exposure) {
+    const row = element('div', exposure ? 'calc-row calc-exposure-row' : 'calc-row');
+    row.appendChild(element('dt', 'calc-term', label));
+    row.appendChild(element('dd', exposure ? 'calc-value calc-exposure' : 'calc-value', money.format(value)));
+    list.appendChild(row);
+  }
+
+  function markFields() {
+    root.querySelectorAll('input.calc-input').forEach(function (field) {
+      const hint = root.querySelector('#' + field.getAttribute('aria-describedby'));
+      if (hint === null) return;
+      if (hint.dataset.calcHint === undefined) hint.dataset.calcHint = hint.textContent;
+      const value = read(field.value);
+      const bad = Number.isFinite(value) === false;
+      const capped = field.id === 'calc-multiple' && value > 50;
+      field.setAttribute('aria-invalid', String(bad));
+      if (bad) {
+        hint.textContent = 'Not read. Enter digits, with k for thousands or m for millions. The field counts as zero until corrected.';
+      } else if (capped) {
+        hint.textContent = 'Above the 50x limit. The calculator uses 50x.';
+      } else {
+        hint.textContent = hint.dataset.calcHint;
+      }
+    });
+  }
+
+  function render() {
+    markFields();
+    const active = second.hidden ? [first] : [first, second];
+    const input = {
+      margin: find('#calc-margin').value,
+      multiple: find('#calc-multiple').value,
+      sellers: active.map(readSeller)
+    };
+    const output = window.rbExposure(input);
+    const flags = active.map(readFlags);
+    snapshot = { input: input, output: output, flags: flags };
+
+    const content = document.createDocumentFragment();
+    output.sellers.forEach(function (seller, index) {
+      const panel = element('div', 'calc-result');
+      panel.appendChild(element('h4', 'calc-result-heading', 'Seller ' + (index + 1)));
+      const list = element('dl', 'calc-figures');
+      figure(list, 'At-risk revenue', seller.atRiskRevenue, false);
+      figure(list, 'At-risk contribution', seller.atRiskContribution, false);
+      if (seller.netContribution !== seller.atRiskContribution) {
+        figure(list, 'Contribution net of cost removed', seller.netContribution, false);
+      }
+      figure(list, 'Enterprise-value exposure', seller.exposure, true);
+      figure(list, 'Revenue outside the calculation', seller.outside, false);
+      panel.appendChild(list);
+      const gateText = element('p', 'calc-flags');
+      gateText.appendChild(element('span', 'calc-flag', flags[index].succession));
+      gateText.appendChild(element('span', 'calc-flag', flags[index].restraint));
+      panel.appendChild(gateText);
+      content.appendChild(panel);
+    });
+
+    const total = element('div', 'calc-total');
+    total.appendChild(element('span', 'calc-total-label', 'Combined enterprise-value exposure'));
+    total.appendChild(element('strong', 'calc-exposure', money.format(output.total)));
+    content.appendChild(total);
+    results.replaceChildren(content);
+    if (edited) {
+      clearTimeout(liveTimer);
+      liveTimer = setTimeout(function () {
+        live.textContent = 'Combined enterprise-value exposure: ' + money.format(output.total) + '.';
+      }, 800);
+    }
+  }
+
+  function clearCopyState() {
+    copyVersion += 1;
+    clearTimeout(copyTimer);
+    copy.textContent = copyLabel;
+    status.textContent = '';
+    manual.hidden = true;
+  }
+
+  root.addEventListener('input', function (event) {
+    if (event.target.matches('.calc-input, .calc-checkbox') === false) return;
+    if (event.target === memoField) return;
+    firstEdit();
+    clearCopyState();
+    render();
+  });
+
+  toggle.addEventListener('click', function () {
+    firstEdit();
+    clearCopyState();
+    const adding = second.hidden;
+    if (adding === false) resetSecond();
+    second.hidden = adding === false;
+    second.disabled = adding === false;
+    toggle.textContent = adding ? 'Remove the second seller' : 'Add the second seller';
+    toggle.setAttribute('aria-expanded', String(adding));
+    render();
+    if (adding) second.querySelector('.calc-input').focus();
+  });
+
+  function memoText() {
+    const lines = [];
+    snapshot.output.sellers.forEach(function (seller, index) {
+      lines.push(
+        'Seller ' + (index + 1) +
+        ': At-risk revenue ' + money.format(seller.atRiskRevenue) +
+        '; At-risk contribution ' + money.format(seller.atRiskContribution) +
+        (seller.netContribution !== seller.atRiskContribution
+          ? '; Contribution net of cost removed ' + money.format(seller.netContribution) : '') +
+        '; Enterprise-value exposure ' + money.format(seller.exposure) +
+        '; Revenue outside the calculation ' + money.format(seller.outside) +
+        '; ' + snapshot.flags[index].succession +
+        '; ' + snapshot.flags[index].restraint + '.'
+      );
+    });
+    lines.push('Combined enterprise-value exposure: ' + money.format(snapshot.output.total) + '.');
+    lines.push('');
+    const dollars = function (v) { return money.format(read(v) || 0); };
+    const percent = function (v) { return Math.min(100, read(v) || 0) + '%'; };
+    lines.push('Inputs used:');
+    snapshot.input.sellers.forEach(function (seller, index) {
+      lines.push(
+        'Seller ' + (index + 1) +
+        ': Trailing-12-month revenue ' + dollars(seller.revenue) +
+        '; At-will share ' + percent(seller.atWill) +
+        '; Personally sourced share of at-will revenue ' + percent(seller.sourced) +
+        '; Cost removed ' + dollars(seller.costRemoved) + '.'
+      );
+    });
+    lines.push(
+      'Contribution margin ' + percent(snapshot.input.margin) +
+      '; Entry multiple ' + Math.min(50, read(snapshot.input.multiple) || 0) + 'x.'
+    );
+    lines.push('Input handling: k denotes thousands and m or mm denotes millions. A field the calculator cannot read counts as zero and is marked on the page. Percentages are limited to 0% to 100%, and the entry multiple to 50x.');
+    lines.push('');
+    lines.push(upperBound);
+    lines.push(overlap);
+    lines.push('Method: Revenue Bench seller-concentration exposure arithmetic, revenuebench.io/guides/sales-team-due-diligence#calculator');
+    return lines.join('\n');
+  }
+
+  function fallbackCopy(text) {
+    const textarea = element('textarea', 'calc-clipboard');
+    textarea.value = text;
+    textarea.readOnly = true;
+    textarea.tabIndex = -1;
+    textarea.setAttribute('aria-label', 'IC memo result');
+    root.appendChild(textarea);
+    const previousFocus = document.activeElement;
+    let succeeded = false;
+    try {
+      textarea.focus({ preventScroll: true });
+      textarea.select();
+      textarea.setSelectionRange(0, textarea.value.length);
+      if (typeof document.execCommand === 'function') {
+        succeeded = document.execCommand('copy');
+      }
+    } catch (error) {
+      succeeded = false;
+    } finally {
+      textarea.remove();
+      if (previousFocus && typeof previousFocus.focus === 'function') {
+        previousFocus.focus({ preventScroll: true });
+      }
+    }
+    return succeeded;
+  }
+
+  copy.addEventListener('click', async function () {
+    analytics('copy');
+    clearCopyState();
+    render();
+    const version = copyVersion;
+    const text = memoText();
+    let succeeded = false;
+
+    try {
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        await navigator.clipboard.writeText(text);
+        succeeded = true;
+      }
+    } catch (error) {
+      succeeded = false;
+    }
+
+    if (version === copyVersion) {
+      if (succeeded === false) succeeded = fallbackCopy(text);
+      if (succeeded) {
+        copy.textContent = 'Copied';
+        copyTimer = setTimeout(function () {
+          copy.textContent = copyLabel;
+        }, 2000);
+      } else {
+        manual.hidden = false;
+        memoField.value = text;
+        status.textContent = 'Copy is unavailable in this browser. The result is selected below for manual copying.';
+        memoField.focus();
+        memoField.select();
+        memoField.setSelectionRange(0, memoField.value.length);
+      }
+    }
+  });
+
+  render();
+})();
+</script>
       <p>Seller concentration has no published valuation convention. Revenue Bench searched for one and found no primary source that quantifies how revenue carried by one or two salespeople affects a private-market multiple.</p>
       <p>In <a href="https://chrismercer.net/the-key-person-discount-in-light-of-the-integrated-theory-of-business-valuation/" target="_blank" rel="noopener">The Key Person Discount in Light of the Integrated Theory of Business Valuation</a>, published May 10, 2021, Z. Christopher Mercer of Mercer Capital writes, "There is no market evidence to provide a basis for assessing the reasonableness of a judgmental key person discount." His position places the effect in expected cash flows and the company-specific risk premium.</p>
       <p>This page therefore publishes no discount range for seller concentration. The calculation above runs on the buyer's own entry multiple and the target's own contribution data. Revenue Bench has nothing to publish here that a study supports.</p>
@@ -416,7 +1170,7 @@
 
       <div class="faq-item">
         <h3>How should a buyer calculate seller-concentration exposure to enterprise value?</h3>
-        <p>Multiply the seller's trailing-12-month revenue by the share renewable at will, then by the share of that at-will revenue the seller personally sourced. Multiply the result by contribution margin, then by the buyer's entry multiple. The multiple step assumes the fixed-cost base does not fall with the lost revenue. Record succession and restraint findings beside the figure because no evidence-based percentage converts either answer into a valuation adjustment.</p>
+        <p>Multiply the seller's trailing-12-month revenue by the share renewable at will, then by the share of that at-will revenue the seller personally sourced. Multiply the result by contribution margin, then by the buyer's entry multiple. The multiple step assumes the fixed-cost base does not fall with the lost revenue. Record succession and restraint findings beside the figure because no evidence-based percentage converts either answer into a valuation adjustment. The calculator on this page runs the same arithmetic on the target's own figures.</p>
       </div>
 
       <div class="faq-item">
@@ -503,7 +1257,7 @@
     "url":"https://revenuebench.io"
   },
   "datePublished":"2026-07-26",
-  "dateModified":"2026-10-01",
+  "dateModified":"2026-10-04",
   "mainEntityOfPage":{
     "@type":"WebPage",
     "@id":"https://revenuebench.io/guides/sales-team-due-diligence"
@@ -577,7 +1331,7 @@
       "name":"How should a buyer calculate seller-concentration exposure to enterprise value?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Multiply the seller's trailing-12-month revenue by the share renewable at will, then by the share of that at-will revenue the seller personally sourced. Multiply the result by contribution margin, then by the buyer's entry multiple. The multiple step assumes the fixed-cost base does not fall with the lost revenue. Record succession and restraint findings beside the figure because no evidence-based percentage converts either answer into a valuation adjustment."
+        "text":"Multiply the seller's trailing-12-month revenue by the share renewable at will, then by the share of that at-will revenue the seller personally sourced. Multiply the result by contribution margin, then by the buyer's entry multiple. The multiple step assumes the fixed-cost base does not fall with the lost revenue. Record succession and restraint findings beside the figure because no evidence-based percentage converts either answer into a valuation adjustment. The calculator on this page runs the same arithmetic on the target's own figures."
       }
     },
     {
@@ -616,7 +1370,7 @@
   "url":"https://revenuebench.io/guides/sales-team-due-diligence",
   "name":"Sales Team Due Diligence for Private Equity Buyers | Revenue Bench",
   "datePublished":"2026-07-26",
-  "dateModified":"2026-10-01",
+  "dateModified":"2026-10-04",
   "breadcrumb":{
     "@type":"BreadcrumbList",
     "itemListElement":[
