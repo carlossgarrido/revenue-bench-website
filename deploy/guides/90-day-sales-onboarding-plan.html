@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>The 90-Day Sales Onboarding Plan: Ramp a New Hire to Quota | Revenue Bench</title>
-<meta name="description" content="The five ramp gates and the manager-side ramp load: what can a hiring manager delegate during a new sales hire's first 90 days, and what stays with them?" />
+<meta name="description" content="A 90-day onboarding plan for sales reps: five stretches, the evidence a rep shows at each gate, and a start-date tool that puts the plan on a calendar." />
 <link rel="canonical" href="https://revenuebench.io/guides/90-day-sales-onboarding-plan" />
 <meta property="og:title" content="The 90-Day Sales Onboarding Plan: Ramp a New Hire to Quota" />
-<meta property="og:description" content="The five ramp gates for a new sales hire's first 90 days, with the correction that works at each one." />
+<meta property="og:description" content="A 90-day onboarding plan for sales reps: five stretches, the evidence a rep shows at each gate, and a start-date tool that puts the plan on a calendar." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/90-day-sales-onboarding-plan.png">
   <meta property="og:image:width" content="1200">
@@ -67,6 +67,48 @@
 .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
 .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
 @media(max-width:640px){.table-scroll{width:calc(100vw - 24px);}.author-box{align-items:flex-start;}}
+.ramp-tool{background:var(--parchment);border-radius:12px;padding:22px 24px;margin:14px 0 18px;}
+.ramp-tool label{display:block;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.ramp-tool input{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;max-width:100%;background:var(--white);color:var(--navy);}
+.ramp-tool .btn{margin-left:10px;}
+.ramp-tool input:focus-visible,.ramp-tool .btn:focus-visible{outline:2px solid var(--navy);outline-offset:3px;}
+.ramp-table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.55;margin-top:20px;}
+.ramp-table th,.ramp-table td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid var(--line);white-space:normal;overflow-wrap:break-word;}
+.ramp-table thead th{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.075em;text-transform:uppercase;line-height:1.4;}
+.ramp-table td{color:var(--ink-mid);}
+.ramp-table td:first-child{color:var(--navy);font-weight:600;width:25%;}
+.ramp-table td:nth-child(2){width:24%;}
+.ramp-table .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;}
+@media screen and (max-width:640px){
+  .ramp-tool .btn{display:flex;justify-content:center;width:100%;margin:12px 0 0;}
+  .ramp-table thead{display:none;}
+  .ramp-table tbody{display:block;}
+  .ramp-table tr{display:block;border-bottom:1px solid var(--line);padding:10px 0;}
+  .ramp-table td,.ramp-table td:first-child,.ramp-table td:nth-child(2){display:block;width:100%;border:0;padding:6px 0;}
+  .ramp-table td[data-label]::before{content:attr(data-label);display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:2px;}
+}
+@media print{
+  body.print-plan{background:#fff!important;color:#000!important;}
+  body.print-plan > :not(section.section.bg-cream){display:none!important;}
+  body.print-plan > section.section.bg-cream{display:block!important;background:#fff!important;padding:0!important;margin:0!important;}
+  body.print-plan > section.section.bg-cream > :not(.container){display:none!important;}
+  body.print-plan > section.section.bg-cream > .container{width:100%!important;max-width:none!important;padding:0!important;margin:0!important;}
+  body.print-plan > section.section.bg-cream > .container > :not(.prose:has(#calendar)){display:none!important;}
+  body.print-plan .prose:has(#calendar) > :not(#calendar):not(.ramp-tool){display:none!important;}
+  body.print-plan #ramp-out caption.vh{position:static;width:auto;height:auto;margin:0 0 8px;overflow:visible;clip:auto;clip-path:none;white-space:normal;text-align:left;font-weight:700;color:#000;}
+  body.print-plan #calendar{margin:0 0 10px!important;color:#000!important;}
+  body.print-plan .ramp-tool{background:#fff!important;color:#000!important;border-radius:0;padding:0;margin:12px 0;}
+  body.print-plan .ramp-tool > :not(#ramp-out){display:none!important;}
+  body.print-plan .ramp-tool button,body.print-plan .ramp-tool input{display:none!important;}
+  body.print-plan #ramp-out{display:table!important;width:100%;border-collapse:collapse;font-size:12px;background:#fff!important;color:#000!important;}
+  body.print-plan #ramp-out thead{display:table-header-group!important;}
+  body.print-plan #ramp-out tbody{display:table-row-group!important;}
+  body.print-plan #ramp-out tr{display:table-row!important;break-inside:avoid;padding:0;border:0;}
+  body.print-plan #ramp-out th,body.print-plan #ramp-out td{display:table-cell!important;width:auto;padding:10px 8px;border:1px solid #000;background:#fff!important;color:#000!important;}
+  body.print-plan #ramp-out td:first-child{width:25%;}
+  body.print-plan #ramp-out td:nth-child(2){width:24%;}
+  body.print-plan #ramp-out td[data-label]::before{display:none!important;}
+}
 </style>
 </head>
 <body>
@@ -89,7 +131,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>The 90-day sales onboarding plan</span></div>
     <div class="eyebrow">Onboarding</div>
     <h1>The 90-day sales onboarding plan: ramp a new hire to quota</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>10 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>13 min read</span></div>
     <p class="deck"><strong>A new sales hire should produce pipeline by day 30 and carry real quota by day 90.</strong> Companies often stop at a week of product training and hope. Onboarding is where hires are won or lost, and a structured first 90 days, with a coach beside the new hire and the manager, is where the return on the whole search is protected.</p>
   </div>
 </section>
@@ -111,6 +153,8 @@
     <div class="toc-inline">
       <h2 class="toc-title">In this guide</h2>
       <ol>
+        <li><a href="#answer">The 90-day onboarding plan for sales reps</a></li>
+        <li><a href="#calendar">Put dates on the plan</a></li>
         <li><a href="#bar">Set the bar at output</a></li>
         <li><a href="#gates">The five ramp gates</a></li>
         <li><a href="#cadence">The weeks 1 to 2, 3 to 6, and 7 to 13 cadence</a></li>
@@ -121,6 +165,68 @@
         <li><a href="#failures">Why many early exits are onboarding failures</a></li>
         <li><a href="#method">Methodology and sources</a></li>
       </ol>
+    </div>
+
+    <div class="prose">
+      <h2 id="answer">The 90-day onboarding plan for sales reps</h2>
+      <p>In Revenue Bench's ramp model, a 90-day onboarding plan moves a sales rep through five gates: market contact by day 14, first self-sourced pipeline by day 30, the company's selling method on live deals by day 42, independent execution by day 60, and real quota by day 90. Two coaching calls run every week of the ramp, one with the rep and one with the manager. A rep who clears day 90 is quota-ready, and full productivity takes longer.</p>
+      <ol class="plan-list">
+        <li><strong>Days 1 to 14: Market contact.</strong> The rep agrees expectations and the comp plan in writing and makes live contact with real prospects or customers. Show by day 14: calls or meetings with names on them, plus the comp plan and expectations agreed in writing.</li>
+        <li><strong>Days 15 to 30: First self-sourced pipeline.</strong> The rep prospects and books discovery calls while learning the company's selling method on real accounts. Show by day 30: pipeline entries with the rep's name in the source field and first discovery calls run.</li>
+        <li><strong>Days 31 to 42: Method on live deals.</strong> The rep runs the company's selling method on real accounts without a script in hand. Show by day 42: call reviews against the method and deal notes that follow the qualification stages.</li>
+        <li><strong>Days 43 to 60: Independent execution.</strong> The rep runs discovery without a chaperone and advances live deals in a CRM clean enough to forecast from. Show by day 60: stage progression on the rep's deals and a pipeline that supports a path to quota.</li>
+        <li><strong>Days 61 to 90: Real quota.</strong> The rep runs deals end to end with light coaching and forecasts honestly. Show by day 90: closed or near-closed first revenue and a forecast the manager trusts. From day 90 the rep carries real quota.</li>
+      </ol>
+
+      <h3 id="rep-day-one">What a new sales rep should have on day one</h3>
+      <p>Before the rep's first day, the company owes the rep <a href="#manager-load">the bar agreed in writing, a defined territory, lead flow, and a working CRM instance</a>. The comp plan is agreed in writing during the first two weeks. A day-30 miss with no territory, no lead flow, or no working CRM is the company's miss.</p>
+
+      <h3 id="calendar">Put dates on the plan</h3>
+      <p class="ramp-intro">Enter the rep's start date to put each of the five gates on a calendar.</p>
+      <div class="ramp-tool">
+        <label for="ramp-start">The rep's start date</label>
+        <input type="date" id="ramp-start">
+        <button type="button" class="btn btn-navy" id="ramp-print">Print or save this plan</button>
+        <table class="ramp-table" id="ramp-out">
+          <caption class="vh">Sales rep onboarding gates with dates and evidence</caption>
+          <thead>
+            <tr>
+              <th scope="col">Gate</th>
+              <th scope="col">Date</th>
+              <th scope="col">The rep can show</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Day 14: Market contact</td>
+              <td data-label="Date">Pick a start date</td>
+              <td data-label="The rep can show">Live calls or meetings with real prospects or customers named, plus the comp plan and expectations agreed in writing.</td>
+            </tr>
+            <tr>
+              <td>Day 30: First self-sourced pipeline</td>
+              <td data-label="Date">Pick a start date</td>
+              <td data-label="The rep can show">Self-sourced opportunities in the CRM with the rep's name in the source field and first discovery calls completed.</td>
+            </tr>
+            <tr>
+              <td>Day 42: Method on live deals</td>
+              <td data-label="Date">Pick a start date</td>
+              <td data-label="The rep can show">Call reviews against the company's selling method and deal notes that follow the qualification stages.</td>
+            </tr>
+            <tr>
+              <td>Day 60: Independent execution</td>
+              <td data-label="Date">Pick a start date</td>
+              <td data-label="The rep can show">Independent discovery, stage progression on live deals, and a clean CRM with pipeline that supports a path to quota.</td>
+            </tr>
+            <tr>
+              <td>Day 90: Real quota</td>
+              <td data-label="Date">Pick a start date</td>
+              <td data-label="The rep can show">Real quota responsibility, deals run end to end with light coaching, closed or near-closed first revenue, and an honest forecast.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The dates count the start date as day 1, and the two coaching calls run weekly across all five stretches.</p>
+      <p>Hiring the rep this plan is for? <a href="../contact.html">Every Revenue Bench placement includes a 90-day onboarding coach</a> who meets the hire weekly and the hiring manager weekly.</p>
     </div>
 
     <div class="prose">
@@ -300,6 +406,8 @@
     <div style="margin-top:48px;">
       <div class="eyebrow">Frequently asked</div>
       <div class="rule"></div>
+      <div class="faq-item"><h3>What is a 90-day onboarding plan for sales reps?</h3><p>In Revenue Bench's ramp model, a 90-day onboarding plan moves a sales rep through five gates: market contact by day 14, first self-sourced pipeline by day 30, the company's selling method on live deals by day 42, independent execution by day 60, and real quota by day 90. Two coaching calls run every week of the ramp, one with the rep and one with the manager. A rep who clears day 90 is quota-ready, and full productivity takes longer.</p></div>
+      <div class="faq-item"><h3>What should a new sales rep accomplish in the first 30 days?</h3><p>A new sales rep should make live contact with real prospects or customers by the end of week 2, with the comp plan and expectations agreed in writing. By day 30, the rep should have self-sourced opportunities in the CRM and have run first discovery calls. The company owes the rep a defined territory, lead flow, and a working CRM before day one.</p></div>
       <div class="faq-item"><h3>How long should sales onboarding take?</h3><p>Plan for a 90-day ramp. A structured hire generates pipeline by day 30 and carries real quota by day 90. Weekly coaching through that window protects the return on the search. Many early exits are onboarding failures rather than hiring failures.</p></div>
       <div class="faq-item"><h3>What does a 30/60/90 sales onboarding plan look like?</h3><p>By day 30 the hire knows the product, process, and ideal customer and is generating pipeline. By day 60 they run discovery independently and advance real deals with a clean CRM. By day 90 they carry real quota, run deals end to end with light coaching, and forecast honestly.</p></div>
       <div class="faq-item"><h3>Why do new sales hires fail in the first 90 days?</h3><p>Often because of the landing rather than the selection. Many early exits are onboarding failures rather than hiring failures. A capable seller given a week of product training and left to figure out the rest can look like a bad hire before the employer has tested the ramp conditions.</p></div>
@@ -365,10 +473,12 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The 90-Day Sales Onboarding Plan: Ramp a New Hire to Quota","description":"The five ramp gates for a new sales hire's first 90 days, with the correction that works at each one.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-09-23","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/90-day-sales-onboarding-plan"}}
+{"@context":"https://schema.org","@type":"Article","headline":"The 90-Day Sales Onboarding Plan: Ramp a New Hire to Quota","description":"A 90-day onboarding plan for sales reps: five stretches, the evidence a rep shows at each gate, and a start-date tool that puts the plan on a calendar.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair."},"publisher":{"@type":"Organization","name":"Revenue Bench"},"datePublished":"2026-06-14","dateModified":"2026-10-03","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/90-day-sales-onboarding-plan"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a 90-day onboarding plan for sales reps?","acceptedAnswer":{"@type":"Answer","text":"In Revenue Bench's ramp model, a 90-day onboarding plan moves a sales rep through five gates: market contact by day 14, first self-sourced pipeline by day 30, the company's selling method on live deals by day 42, independent execution by day 60, and real quota by day 90. Two coaching calls run every week of the ramp, one with the rep and one with the manager. A rep who clears day 90 is quota-ready, and full productivity takes longer."}},
+{"@type":"Question","name":"What should a new sales rep accomplish in the first 30 days?","acceptedAnswer":{"@type":"Answer","text":"A new sales rep should make live contact with real prospects or customers by the end of week 2, with the comp plan and expectations agreed in writing. By day 30, the rep should have self-sourced opportunities in the CRM and have run first discovery calls. The company owes the rep a defined territory, lead flow, and a working CRM before day one."}},
 {"@type":"Question","name":"How long should sales onboarding take?","acceptedAnswer":{"@type":"Answer","text":"Plan for a 90-day ramp. A structured hire generates pipeline by day 30 and carries real quota by day 90. Weekly coaching through that window protects the return on the search. Many early exits are onboarding failures rather than hiring failures."}},
 {"@type":"Question","name":"What does a 30/60/90 sales onboarding plan look like?","acceptedAnswer":{"@type":"Answer","text":"By day 30 the hire knows the product, process, and ideal customer and is generating pipeline. By day 60 they run discovery independently and advance real deals with a clean CRM. By day 90 they carry real quota, run deals end to end with light coaching, and forecast honestly."}},
 {"@type":"Question","name":"Why do new sales hires fail in the first 90 days?","acceptedAnswer":{"@type":"Answer","text":"Often because of the landing rather than the selection. Many early exits are onboarding failures rather than hiring failures. A capable seller given a week of product training and left to figure out the rest can look like a bad hire before the employer has tested the ramp conditions."}},
@@ -385,6 +495,92 @@
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+</script>
+<script>
+(function () {
+  function initRampTool() {
+    var startInput = document.getElementById('ramp-start');
+    var printButton = document.getElementById('ramp-print');
+    var output = document.getElementById('ramp-out');
+    if (!startInput || !printButton || !output || !document.body) return;
+
+    var dateCells = output.querySelectorAll('tbody td[data-label="Date"]');
+    var caption = output.querySelector('caption');
+    var offsets = [13, 29, 41, 59, 89];
+    if (dateCells.length !== offsets.length) return;
+
+    function resetDates() {
+      dateCells.forEach(function (cell) {
+        cell.textContent = 'Pick a start date';
+      });
+      if (caption) caption.textContent = 'Sales rep onboarding gates with dates and evidence';
+    }
+
+    function updateDates() {
+      if (!startInput.value) {
+        resetDates();
+        return;
+      }
+
+      var parts = startInput.value.split('-').map(Number);
+      var y = parts[0];
+      var m = parts[1];
+      var d = parts[2];
+      var start = new Date(y, m - 1, d);
+      if (y >= 0 && y < 100) start.setFullYear(y);
+
+      if (
+        !startInput.validity.valid ||
+        !Number.isFinite(start.getTime()) ||
+        start.getFullYear() !== y ||
+        start.getMonth() !== m - 1 ||
+        start.getDate() !== d
+      ) {
+        resetDates();
+        return;
+      }
+
+      dateCells.forEach(function (cell, index) {
+        var gateDate = new Date(start.getTime());
+        gateDate.setDate(gateDate.getDate() + offsets[index]);
+        cell.textContent = gateDate.toLocaleDateString('en-US', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric'
+        });
+      });
+      if (caption) caption.textContent = 'Sales rep onboarding plan for a start date of ' + start.toLocaleDateString('en-US', {weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'});
+    }
+
+    var printFallback;
+    function clearPrintPlan() {
+      document.body.classList.remove('print-plan');
+      window.clearTimeout(printFallback);
+    }
+
+    startInput.addEventListener('input', updateDates);
+    startInput.addEventListener('change', updateDates);
+    window.addEventListener('afterprint', clearPrintPlan);
+    printButton.addEventListener('click', function () {
+      window.clearTimeout(printFallback);
+      document.body.classList.add('print-plan');
+      try {
+        window.print();
+      } finally {
+        printFallback = window.setTimeout(function () { window.addEventListener('focus', clearPrintPlan, { once: true }); }, 1000);
+      }
+    });
+
+    updateDates();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRampTool, { once: true });
+  } else {
+    initRampTool();
+  }
+})();
 </script>
 <script defer src="../assets/cursor.js"></script>
 </body>
