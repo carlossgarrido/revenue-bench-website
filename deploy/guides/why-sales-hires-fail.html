@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Why Sales Hires Fail: What 2.4 Million Assessments Show | Revenue Bench</title>
-<meta name="description" content="New sales hires rarely fail for lack of effort. An OMG Certified Partner firm's analysis of nearly 2.4 million sales assessments shows five failure patterns, all visible before the offer, and how to hire against each one." />
+<meta name="description" content="Five patterns: weak pool, invisible traits, wrong role, ignored warnings, unmanaged ramp. Use the ten-question hiring-process audit before your next hire." />
 <link rel="canonical" href="https://revenuebench.io/guides/why-sales-hires-fail" />
 <meta property="og:title" content="Why Sales Hires Fail: What 2.4 Million Assessments Show" />
-<meta property="og:description" content="Five failure patterns, all visible before the offer. An OMG Certified Partner firm's analysis of what OMG describes as the largest sales-specific dataset in existence." />
+<meta property="og:description" content="Five patterns: weak pool, invisible traits, wrong role, ignored warnings, unmanaged ramp. Use the ten-question hiring-process audit before your next hire." />
 <meta property="og:type" content="article" />
   <meta property="og:image" content="https://revenuebench.io/og/why-sales-hires-fail.png">
   <meta property="og:image:width" content="1200">
@@ -31,6 +31,7 @@
   <meta property="og:image:alt" content="Why Sales Hires Fail: What 2.4M Assessments Show | Revenue Bench">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://revenuebench.io/og/why-sales-hires-fail.png">
+<meta name="twitter:description" content="Five patterns: weak pool, invisible traits, wrong role, ignored warnings, unmanaged ramp. Use the ten-question hiring-process audit before your next hire." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -43,6 +44,8 @@
   .datatable td:first-child{font-weight:600;color:var(--navy);}
   .datatable td:nth-child(2){white-space:nowrap;font-weight:600;color:var(--gold-deep);}
   .datatable td:last-child{color:var(--ink-soft);font-size:13.5px;}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;}
+  .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;}
   .method{background:var(--parchment);border-radius:12px;padding:26px 28px;margin-top:10px;}
   .method h3{font-size:19px;margin-bottom:10px;}
   .method p{font-size:14.5px;line-height:1.7;color:var(--ink-mid);margin-bottom:10px;}
@@ -51,7 +54,37 @@
   .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
-  @media(max-width:640px){.datatable td:nth-child(2){white-space:normal;}}
+  .audit-tool{background:var(--parchment);border-radius:12px;padding:24px;margin:18px 0;overflow-wrap:break-word;}
+  .audit-tool fieldset{min-width:0;margin:0 0 24px;padding:16px 0 0;border:0;border-top:1px solid var(--line);}
+  .audit-tool legend{max-width:100%;padding:0 10px 0 0;font-weight:700;color:var(--navy);}
+  .audit-question + .audit-question{margin-top:18px;}
+  .audit-question p{margin:0 0 6px;}
+  .audit-options{display:flex;flex-wrap:wrap;gap:8px 20px;}
+  .audit-options label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 10px;cursor:pointer;color:var(--navy);}
+  .audit-options input{width:18px;height:18px;flex-shrink:0;accent-color:var(--navy);}
+  .audit-tool input:focus-visible,.audit-tool button:focus-visible,.audit-tool a:focus-visible{outline:2px solid var(--navy);outline-offset:4px;}
+  .audit-result{border-top:1px solid var(--line);padding-top:18px;font-weight:600;}
+  .audit-tool .btn[hidden]{display:none;}
+  @media screen and (max-width:760px){
+    .datatable td:nth-child(2){white-space:normal;}
+    .audit-tool{padding:18px 16px;}
+    .audit-tool .btn{width:100%;justify-content:center;}
+  }
+  @media print{
+    body.print-audit > :not(section.section.bg-cream){display:none!important;}
+    body.print-audit > section.section.bg-cream{padding:0!important;margin:0!important;background:var(--white)!important;}
+    body.print-audit > section.section.bg-cream > .container{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;}
+    body.print-audit > section.section.bg-cream > .container > :not(.prose){display:none!important;}
+    body.print-audit .prose > :not(#audit):not(.audit-tool){display:none!important;}
+    body.print-audit #audit{margin:0 0 12px!important;}
+    body.print-audit .audit-tool{padding:0;margin:0;background:transparent;font-size:11pt;line-height:1.4;}
+    body.print-audit .audit-tool fieldset{break-inside:avoid;margin-bottom:14px;padding-top:10px;}
+    body.print-audit .audit-question + .audit-question{margin-top:10px;}
+    body.print-audit .audit-options label{min-height:0;padding:4px 0;}
+    body.print-audit .audit-tool button{display:none!important;}
+    body.print-audit .audit-result{break-inside:avoid;}
+    body.print-audit .audit-tool a{color:inherit;text-decoration:none;}
+  }
 </style>
 </head>
 <body>
@@ -74,8 +107,8 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Why sales hires fail</span></div>
     <div class="eyebrow">Original analysis &middot; OMG dataset</div>
     <h1>Why sales hires fail: what 2.4 million assessments show</h1>
-    <div class="art-meta"><span>By Steve Swanston, Co-Founder &middot; Founder, Swanston Growth Advisors, a Certified Partner of Objective Management Group</span><span class="dot"></span><span>8 min read</span></div>
-    <p class="deck"><strong>New sales hires rarely fail for lack of effort. They fail in patterns that were visible before the offer was made.</strong> Objective Management Group had assessed nearly 2.4 million salespeople as of 2023, which OMG describes as the largest sales-specific dataset in existence. Read as a body of evidence on failed hires, it shows five patterns behind most failures: a bottom-heavy talent pool, traits no interview can see, right people in wrong roles, ignored warnings, and a first 90 days that nobody manages. Each one is measurable, and each one has a countermeasure.</p>
+    <div class="art-meta"><span>By Steve Swanston, Co-Founder &middot; Founder, Swanston Growth Advisors, a Certified Partner of Objective Management Group</span><span class="dot"></span><span>9 min read</span></div>
+    <p class="deck"><strong>Before your next sales hire, check which failure patterns your hiring process lets through.</strong> Objective Management Group had assessed nearly 2.4 million salespeople as of 2023, which OMG describes as the largest sales-specific dataset in existence. Steve Swanston's reading of OMG's published data identifies five patterns; our ten-question hiring-process audit helps you locate the gaps in your own process.</p>
   </div>
 </section>
 
@@ -85,22 +118,24 @@
     <div class="takeaways">
       <h2>Key takeaways</h2>
       <ul>
-        <li>Effort is almost never the cause. In OMG's data, 86% of salespeople have strong desire and 88% handle rejection well. The failure lives in traits an interview cannot see.</li>
-        <li>The pool is bottom-heavy: 6% elite, 11% strong, 33% serviceable, 50% weak. Hire without an objective screen and the base rate works against you.</li>
-        <li>The failures were predictable. In OMG's 2024 validation survey, 100% of candidates flagged "not recommended" who were hired anyway landed in the bottom half, and their first-year turnover ran 33% against 9% for recommended hires.</li>
-        <li>Half the problem is placement, not selection: OMG's data puts 57% of salespeople in roles they are not suited for.</li>
-        <li>Many "failed hires" are onboarding failures. Companies reporting that a rep needs 10+ months to reach full productivity run at 40%, yet only 1 in 10 salespeople gets coached more than weekly.</li>
+        <li>The five patterns enter at identifiable steps, from sourcing and screening through the first 90 days. Review those steps before opening another search.</li>
+        <li>A bottom-heavy talent pool and traits an interview cannot reveal call for a sales-specific assessment before the first interview.</li>
+        <li>Define the selling motion before sourcing. A candidate's prior success needs to match the demands of the role you are filling.</li>
+        <li>Agree how assessment warnings will affect the final decision, and assign responsibility for coaching and ramp checkpoints before the hire starts.</li>
+        <li>Use the <a href="#audit">ten-question hiring-process audit</a> to identify exposed patterns and the process steps that need attention.</li>
       </ul>
     </div>
 
     <div class="toc-inline">
       <h2 class="toc-title">In this analysis</h2>
       <ol>
+        <li><a href="#answer">Why do sales hires fail?</a></li>
         <li><a href="#pool">Pattern 1: The pool is bottom-heavy</a></li>
         <li><a href="#invisible">Pattern 2: The failing traits are invisible</a></li>
         <li><a href="#role">Pattern 3: Right person, wrong role</a></li>
         <li><a href="#ignored">Pattern 4: The warning was ignored</a></li>
         <li><a href="#ninety">Pattern 5: The first 90 days go unmanaged</a></li>
+        <li><a href="#audit">Which patterns your hiring process lets through</a></li>
         <li><a href="#cost">What the failure costs</a></li>
         <li><a href="#counter">Hiring against the pattern</a></li>
         <li><a href="#numbers">The numbers at a glance</a></li>
@@ -109,68 +144,171 @@
     </div>
 
     <div class="prose">
+      <h2 id="answer">Why do sales hires fail?</h2>
+      <p>Most failed sales hires trace to five patterns, identified in Steve Swanston's reading of published data from Objective Management Group (OMG): a bottom-heavy talent pool, selling traits an interview cannot reveal, capable people placed in the wrong role, assessment warnings overridden at the offer, and a first 90 days without consistent management. Each pattern enters at a specific step of the hiring process: sourcing and screening, the interview, the role definition, the final decision, or the first 90 days. Checking those five steps before the next search shows where a process lets failures through.</p>
+
       <h2 id="pool">Pattern 1: The pool is bottom-heavy</h2>
-      <p>Start with the shape of the market you are hiring from. Sorted by measured selling ability, OMG's database of assessed salespeople breaks into four tiers: 6% elite, 11% strong, 33% serviceable, and 50% weak. Half the profession is in a role it is not built to win, and only about one in six salespeople is genuinely strong.</p>
-      <p>That distribution explains most failed hires. If you draw from the open market with no objective way to separate the tiers, probability does the rest. You are roughly three times as likely to pull from the bottom half as from the top two tiers combined. No interview process, however disciplined, changes the base rate. It only changes how confident you feel about the draw.</p>
-      <p>We wrote a full analysis of this distribution in <a href="the-6-percent-problem.html">The 6% problem</a>. For this piece, the point is simpler: sales hires fail first because the odds were never even.</p>
+      <p>Sorted by measured selling ability, OMG's database of assessed salespeople breaks into four tiers: 6% elite, 11% strong, 33% serviceable, and 50% weak. A search limited to incoming applicants, with no objective screen for selling ability, leaves the company unable to distinguish those tiers. <a href="the-6-percent-problem.html">The 6% problem</a> explains the distribution and its implications for sourcing.</p>
+      <p>Where it enters the process: sourcing and screening, when the company decides whom the search reaches and what evidence qualifies someone for an interview.</p>
 
       <h2 id="invisible">Pattern 2: The traits that sink a hire are invisible in the interview</h2>
-      <p>The traits leaders blame after a failed hire are usually the visible ones: not enough activity, not enough grit. OMG's data says those are the wrong suspects. Desire is strong in 86% of salespeople, and 88% handle rejection well. Wanting it is rarely the gap.</p>
-      <p>The traits that predict failure sit in what OMG calls Sales DNA, the underlying beliefs and instincts that either support selling or work against it. Here the numbers invert. Only 12% of salespeople are strong on supportive beliefs, meaning 88% carry beliefs that cap their own performance: the seller who thinks price is why deals die, who needs the prospect to like them, who cannot comfortably talk about money. Across 1,500+ evaluations from 2023 to 2025, only 27% of salespeople showed strong Sales DNA overall.</p>
-      <p>None of this is <a href="sales-assessment-vs-interview.html">visible in an interview</a>. A hiring manager's read alone identifies a future top performer about 20% of the time, in research circulated through OMG's partner network by the firm Big Swift Kick rather than an OMG published study, and the miss comes with confidence attached, because interviewing and selling use the same surface skills. The candidate with high need for approval performs beautifully in the meeting. That is the trait failing, disguised as the trait working.</p>
+      <p>In OMG's data, desire is strong in 86% of salespeople, and 88% handle rejection well. Only 12% of salespeople are strong on supportive beliefs, meaning 88% carry beliefs that cap their own performance. Across 1,500+ evaluations from 2023 to 2025, only 27% of salespeople showed strong Sales DNA overall, OMG's term for the beliefs and instincts that support or work against selling. Those limiting beliefs include thinking price is why deals die, needing the prospect's approval, and discomfort discussing money, and an interview cannot establish any of them.</p>
+      <p>A hiring manager's read alone identifies a future top performer about 20% of the time. That figure comes from research by the firm Big Swift Kick, circulated through OMG's partner network; it is not an OMG published study. The miss comes with confidence attached, because interviewing and selling use the same surface skills. Our <a href="sales-assessment-vs-interview.html">assessment and interview guide</a> explains which evidence belongs to each screen. Where it enters the process: the interview, when a persuasive conversation becomes the evidence for selling ability.</p>
 
       <h2 id="role">Pattern 3: Right person, wrong role</h2>
-      <p>A large share of "bad hires" were capable people placed against the wrong problem. OMG's role-fit data puts 57% of salespeople in roles they are not suited for, and 64% of sales teams significantly misaligned between the people they have and the seats they need filled.</p>
-      <p>The classic version is hiring a farmer to hunt: a relationship-builder dropped into a cold-prospecting seat, or an enterprise seller asked to run high-velocity transactional deals. The candidate's history looked strong because the old role fit. The new one does not, and the numbers sag within two quarters. The failure gets filed under "bad hire" when it was a placement error that a role-specific screen would have caught.</p>
-      <p>The same pattern applies one level higher. In OMG's study of 44,493 sales managers, only 9% had all three of the coaching qualities that produce elite salespeople. Promote your best rep into the manager's role without measuring for those qualities and you often lose a strong seller and gain a weak manager in one move.</p>
+      <p>OMG's role-fit data puts 57% of salespeople in roles they are not suited for, and 64% of sales teams significantly misaligned. A seller's success in account expansion does not establish their ability to win new enterprise accounts. The selling motion and buyer level need to be defined before the search begins.</p>
+      <p>In OMG's study of 44,493 sales managers, only 9% had all three of the coaching qualities that develop elite salespeople. The same role-fit question applies when <a href="should-you-promote-your-best-rep.html">promoting your best rep into sales management</a>. Where it enters the process: the role definition, when the company sets requirements without specifying the work and conditions in which the person must succeed.</p>
 
       <h2 id="ignored">Pattern 4: The warning was on the page, and the hire happened anyway</h2>
-      <p>The starkest numbers in the dataset are about what happens when an objective warning exists and gets overridden. In OMG's 2024 validation survey, 72% of candidates the assessment recommended, who were then hired, reached the top half of their sales force within 12 months. Of the candidates flagged "not recommended" who were hired anyway, 100% landed in the bottom half.</p>
-      <p>Turnover tells the same story from the other side: first-year turnover ran 9% for recommended hires against 33% for not-recommended hires. The assessment itself carries predictive validity in the 95 percent range, which is why the override is so expensive. When a company hires against the recommendation, it is usually because the candidate interviewed well. That is Pattern 2 collecting its fee.</p>
-      <p>We treat this pattern as the single most fixable one on the list. The information existed before the offer. The failure was choosing the interview impression over the evidence.</p>
+      <p>In OMG's 2024 validation survey, 72% of candidates the assessment recommended, who were then hired, reached the top half of their sales force within 12 months. Of the candidates flagged "not recommended" who were hired anyway, 100% landed in the bottom half. First-year turnover ran 9% for recommended hires against 33% for not-recommended hires. These are associations between groups; they do not establish that the assessment caused the differences.</p>
+      <p>OMG reports predictive validity "in the 95 percent range," a separate metric from those hiring outcomes. The <a href="sales-assessment-vs-interview.html">assessment and interview guide</a> explains that distinction and the evidence each screen supplies. Agree on an override rule before a preferred candidate reaches the offer stage. Where it enters the process: the final decision, when the team hires against a warning without an agreed review and approval rule.</p>
 
       <h2 id="ninety">Pattern 5: The first 90 days go unmanaged</h2>
-      <p>Some percentage of failed sales hires were good hires. The selection was right, and the landing was botched. Industry data from CSO Insights has 40% of companies saying a new rep needs 10 or more months to reach full productivity, a window in which an unsupported hire looks indistinguishable from a bad one.</p>
-      <p>Coaching cadence is the measurable lever. In OMG's study of 11,078 salespeople and their managers, coaching a rep several times a week lifted their sales percentile by 17 points against never coaching; weekly coaching lifted it 9. Yet only 10% of salespeople get coached several times a week, 20% weekly, and 8% get no coaching at all. Meanwhile 80% to 90% of sales training fails to produce lasting change when it is run without a competency diagnosis first, so the fix most companies reach for, a generic training course, does not catch the falling hire either.</p>
-      <p>This is why early exits get misfiled. The rep who leaves or is managed out at month five is recorded as a hiring mistake, when the selection was sound and the onboarding never happened. We built our <a href="90-day-sales-onboarding-plan.html">90-day onboarding plan</a> around this gap, and its <a href="90-day-sales-onboarding-plan.html#manager-load">manager-side ramp load</a> sets out which parts of the ramp the hiring manager can hand to someone else, and it is why every Revenue Bench placement includes a dedicated onboarding coach meeting the hire weekly and the hiring manager weekly for the first 90 days.</p>
+      <p>Industry data from CSO Insights has 40% of companies saying a new rep needs 10 or more months to reach full productivity. In OMG's study of 11,078 salespeople and their managers, coaching several times a week was associated with a gain of 17 percentile points against never coaching; weekly coaching was associated with a gain of 9. Only 10% of salespeople get coached several times a week, 20% weekly, and 8% get no coaching at all.</p>
+      <p>Meanwhile 80% to 90% of sales training fails to produce lasting change when it is run without a competency diagnosis first, so the fix most companies reach for, a generic training course, does not catch the falling hire either. Our <a href="90-day-sales-onboarding-plan.html">90-day onboarding plan</a> supplies the ramp checkpoints and calendar tool. Where it enters the process: the first 90 days, when coaching has no named owner and the hire has no dated ramp to follow.</p>
+
+      <h2 id="audit">Which patterns your hiring process lets through</h2>
+      <p>Answer for the process your company follows today, using the most recent search as evidence. Each pattern has two questions. Once both are answered, either No marks that pattern as exposed. Your answers stay on this page; nothing is stored or sent anywhere.</p>
+
+      <div class="audit-tool" id="hiring-audit">
+        <fieldset data-pattern="pool" data-name="The pool">
+          <legend>Pattern 1: The pool</legend>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q1">
+            <p id="audit-q1">1. Does every candidate for a selling or sales-leadership role take a sales-specific assessment before the first interview?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q1" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q1" value="no"> No</label>
+            </div>
+          </div>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q2">
+            <p id="audit-q2">2. Does the search reach salespeople who are not applying for jobs this month?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q2" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q2" value="no"> No</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset data-pattern="invisible" data-name="Invisible traits">
+          <legend>Pattern 2: Invisible traits</legend>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q3">
+            <p id="audit-q3">3. Is each candidate scored on a written scorecard agreed before the first interview?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q3" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q3" value="no"> No</label>
+            </div>
+          </div>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q4">
+            <p id="audit-q4">4. Does the decision use evidence on traits an interview cannot show, such as need for approval or comfort discussing money?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q4" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q4" value="no"> No</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset data-pattern="role" data-name="Wrong role">
+          <legend>Pattern 3: Wrong role</legend>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q5">
+            <p id="audit-q5">5. Is the selling motion written down before sourcing starts: hunting or farming, transactional or enterprise, new logo or expansion?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q5" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q5" value="no"> No</label>
+            </div>
+          </div>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q6">
+            <p id="audit-q6">6. Is each finalist's past success checked against that same motion and buyer level?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q6" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q6" value="no"> No</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset data-pattern="ignored" data-name="The ignored warning">
+          <legend>Pattern 4: The ignored warning</legend>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q7">
+            <p id="audit-q7">7. Is there a written rule for what happens when the assessment does not recommend a candidate the team likes?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q7" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q7" value="no"> No</label>
+            </div>
+          </div>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q8">
+            <p id="audit-q8">8. Does someone other than the hiring manager have to approve hiring against a "not recommended" result?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q8" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q8" value="no"> No</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset data-pattern="ninety" data-name="The unmanaged first 90 days">
+          <legend>Pattern 5: The unmanaged first 90 days</legend>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q9">
+            <p id="audit-q9">9. Is one named person responsible for coaching the hire every week for the first 90 days?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q9" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q9" value="no"> No</label>
+            </div>
+          </div>
+          <div class="audit-question" role="radiogroup" aria-labelledby="audit-q10">
+            <p id="audit-q10">10. Is the ramp written down with dated checkpoints, and does the hire see it on day one?</p>
+            <div class="audit-options">
+              <label><input type="radio" name="audit-q10" value="yes"> Yes</label>
+              <label><input type="radio" name="audit-q10" value="no"> No</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <p class="audit-result" id="audit-result" role="status" aria-live="polite" aria-atomic="true">Answer both questions in a pattern to score it.</p>
+        <button type="button" class="btn btn-navy" id="audit-print" hidden>Print questions and result</button>
+        <noscript><p>This checklist works as a printed list without scripting. Use your browser's Print command, answer both questions for each pattern, and mark the pattern exposed if either answer is No.</p></noscript>
+      </div>
+
+      <p>An exposed pattern identifies a process step to review before your next hire. Follow its link, examine the No answers, and assign someone to close the gap. Multiple patterns can be exposed; the checklist does not rank their severity or predict an individual candidate's outcome. A completed pattern with two Yes answers has no exposure on these questions, but the pattern can still occur.</p>
 
       <h2 id="cost">What the failure costs</h2>
-      <p>The most defensible cost figures come from outside the assessment world. DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded. The same DePaul survey found 33% of all sales turnover happening in the first year of tenure, where the denominator is total turnover. In the <a href="https://www.bls.gov/news.release/tenure.t06.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics' Employee Tenure release of September 26, 2024</a>, median tenure in sales and related occupations was 3.3 years against 3.9 years across all wage and salary workers. That measure is median tenure and BLS publishes no first-year rate for any occupation.</p>
+      <p>DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508, rising to roughly $115,000 fully loaded. The same DePaul survey found 33% of all sales turnover happening in the first year of tenure, where the denominator is total turnover. In the <a href="https://www.bls.gov/news.release/tenure.t06.htm" target="_blank" rel="noopener">US Bureau of Labor Statistics' Employee Tenure release of September 26, 2024</a>, median tenure in sales and related occupations was 3.3 years against 3.9 years across all wage and salary workers. That measure is median tenure and BLS publishes no first-year rate for any occupation.</p>
       <p>Our own working figure for a revenue-role mis-hire, counting base, draw, stalled pipeline, the replacement search, and management time, is $200,000 to $250,000. The full breakdown is in <a href="cost-of-a-bad-sales-hire.html">The true cost of a bad sales hire</a>.</p>
 
       <h2 id="counter">Hiring against the pattern</h2>
-      <p>Each failure pattern has a countermeasure, and none of them is "interview harder."</p>
+      <p>The countermeasures below belong in the hiring process.</p>
       <ol>
-        <li><strong>Screen objectively before you fall for anyone.</strong> Put a sales-specific assessment at the front of the process, where it corrects the base rate, not at the end, where it arrives after the decision is emotionally made.</li>
-        <li><strong>Respect the recommendation.</strong> The 2024 numbers are blunt: 100% of overridden "not recommended" hires landed in the bottom half. If you pay for the evidence, use it.</li>
-        <li><strong>Match the person to the seat, not the resume to the title.</strong> Define the selling motion first: hunting or farming, transaction or enterprise, new logo or expansion. Then screen for that role specifically, scoring the conversation against the <a href="account-executive-interview-scorecard.html">account executive interview scorecard</a>. It is the direct counter to the 57% wrong-role figure.</li>
-        <li><strong>Manage the landing like it decides the outcome, because it does.</strong> Weekly coaching for the hire, weekly alignment with the manager, for 90 days. The 17-point coaching lift in OMG's data is the cheapest performance gain in sales management.</li>
+        <li><strong>Screen objectively before the interviews.</strong> Put a sales-specific assessment at the front of the process, while the decision remains open and before the team forms a preference.</li>
+        <li><strong>Respect the recommendation.</strong> In OMG's 2024 validation survey, 100% of overridden "not recommended" hires landed in the bottom half. If you pay for the evidence, use it.</li>
+        <li><strong>Match the person to the role.</strong> Define the selling motion first: hunting or farming, transactional or enterprise, new logo or expansion. Then screen for that role specifically, scoring the conversation against the <a href="account-executive-interview-scorecard.html">account executive interview scorecard</a>. It is the direct counter to the 57% wrong-role figure.</li>
+        <li><strong>Manage the first 90 days.</strong> Weekly coaching for the hire, weekly alignment with the manager, for 90 days. OMG's coaching study associates weekly coaching with a gain of 9 percentile points against never coaching.</li>
       </ol>
       <p>This sequence is <a href="../how-it-works.html">the Revenue Bench process</a>: candidates for selling and sales-leadership roles assessed with OMG before presentation, every candidate screened by a sales operator, matched to the specific selling motion, trained before day one, and coached through the first 90 days, with a 90-day replacement guarantee standing behind the hire.</p>
 
       <h2 id="numbers">The numbers at a glance</h2>
-      <table class="datatable">
-        <thead><tr><th>Measure</th><th>Figure</th><th>Source</th></tr></thead>
-        <tbody>
-          <tr><td>Salespeople assessed</td><td>~2.4 million</td><td>OMG, 2023 figure, since 1990</td></tr>
-          <tr><td>Talent distribution</td><td>6% / 11% / 33% / 50%</td><td>OMG (elite / strong / serviceable / weak)</td></tr>
-          <tr><td>Interview intuition finds a top performer</td><td>~20% of the time</td><td>Big Swift Kick, circulated in OMG's partner network</td></tr>
-          <tr><td>Salespeople strong on supportive beliefs</td><td>12%</td><td>OMG, 2022 to 2025</td></tr>
-          <tr><td>Salespeople in the wrong role</td><td>57%</td><td>OMG</td></tr>
-          <tr><td>Recommended hires reaching top half in 12 months</td><td>72%</td><td>OMG 2024 validation survey</td></tr>
-          <tr><td>Overridden "not recommended" hires landing bottom half</td><td>100%</td><td>OMG 2024 validation survey</td></tr>
-          <tr><td>First-year turnover, recommended vs not</td><td>9% vs 33%</td><td>OMG 2024 validation survey</td></tr>
-          <tr><td>Companies where reps need 10+ months to full productivity</td><td>40%</td><td>CSO Insights</td></tr>
-          <tr><td>Percentile lift from coaching several times weekly</td><td>+17 points</td><td>OMG, n=11,078</td></tr>
-          <tr><td>Fully loaded cost of sales turnover</td><td>~$115,000</td><td>DePaul University, 435 orgs</td></tr>
-        </tbody>
-      </table>
+      <div class="rb-table-wrap tablewrap">
+        <table class="rb-table datatable">
+          <caption class="vh">Figures cited in this analysis, with their sources</caption>
+          <thead><tr><th scope="col">Measure</th><th scope="col">Figure</th><th scope="col">Source</th></tr></thead>
+          <tbody>
+            <tr><td>Salespeople assessed</td><td data-label="Figure">~2.4 million</td><td data-label="Source">OMG, as of 2023</td></tr>
+            <tr><td>Talent distribution</td><td data-label="Figure">6% / 11% / 33% / 50%</td><td data-label="Source">OMG (elite / strong / serviceable / weak)</td></tr>
+            <tr><td>Interview intuition finds a top performer</td><td data-label="Figure">~20% of the time</td><td data-label="Source">Big Swift Kick, circulated in OMG's partner network</td></tr>
+            <tr><td>Salespeople strong on supportive beliefs</td><td data-label="Figure">12%</td><td data-label="Source">OMG, 2022 to 2025</td></tr>
+            <tr><td>Salespeople in the wrong role</td><td data-label="Figure">57%</td><td data-label="Source">OMG</td></tr>
+            <tr><td>Recommended hires reaching top half in 12 months</td><td data-label="Figure">72%</td><td data-label="Source">OMG 2024 validation survey</td></tr>
+            <tr><td>Overridden "not recommended" hires landing bottom half</td><td data-label="Figure">100%</td><td data-label="Source">OMG 2024 validation survey</td></tr>
+            <tr><td>First-year turnover, recommended vs not</td><td data-label="Figure">9% vs 33%</td><td data-label="Source">OMG 2024 validation survey</td></tr>
+            <tr><td>Companies where reps need 10+ months to full productivity</td><td data-label="Figure">40%</td><td data-label="Source">CSO Insights</td></tr>
+            <tr><td>Percentile lift from coaching several times weekly</td><td data-label="Figure">+17 points</td><td data-label="Source">OMG, n=11,078</td></tr>
+            <tr><td>Fully loaded cost of sales turnover</td><td data-label="Figure">~$115,000</td><td data-label="Source">DePaul University, 435 orgs</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2 id="method">Methodology and sources</h2>
       <div class="method">
         <h3>How to read these numbers</h3>
-        <p>The dataset behind this analysis belongs to Objective Management Group (OMG), which has assessed nearly 2.4 million salespeople since 1990 (2023 figure), measuring 21 sales-specific competencies across 400+ data points per person. Figures attributed to OMG are OMG's own published data, analyzed here by a certified partner; they are not independent peer-reviewed research, and we label them accordingly.</p>
+        <p>The dataset behind this analysis belongs to Objective Management Group (OMG), which had assessed nearly 2.4 million salespeople as of 2023, measuring 21 sales-specific competencies across 400+ data points per person. Figures attributed to OMG are OMG's own published data, analyzed here by a certified partner; they are not independent peer-reviewed research, and we label them accordingly.</p>
         <p>Outcome figures (72%, 100%, 9% vs 33%) come from OMG's 2024 validation survey, the current and more conservative of the two eras of OMG outcome data; earlier, widely circulated figures are higher. Predictive validity "in the 95 percent range" is OMG's published accuracy metric and is distinct from the outcome figures. Cost and productivity figures are third-party: DePaul University's Center for Sales Leadership, the US Bureau of Labor Statistics, and CSO Insights. Each source behind a figure on this site is listed with its producer, sample and period in the <a href="../sources.html">provenance index</a>.</p>
+        <p>The hiring-process audit on this page is Revenue Bench's own checklist; it is separate from OMG research, and no statistic is attached to it. Revenue Bench is paid when a company hires through one of its searches, and several audit questions describe steps its own process includes.</p>
         <p>Author: Steve Swanston, co-founder of Revenue Bench and founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group listed on objectivemanagement.com. Across a 30-year career Steve has built revenue teams inside companies that exited for more than $500 million.</p>
       </div>
 
@@ -191,6 +329,7 @@
       <div class="faq-item"><h3>Can you predict whether a sales hire will succeed?</h3><p>To a measurable degree, yes. OMG's sales-specific assessment carries predictive validity in the 95 percent range. In its 2024 validation survey, 72% of recommended candidates who were hired reached the top half of their sales force within 12 months, and first-year turnover for recommended hires was 9% against 33% for not-recommended hires.</p></div>
       <div class="faq-item"><h3>Is effort the reason sales hires fail?</h3><p>Almost never. In OMG's data, 86% of salespeople have strong desire and 88% handle rejection well. The failure traits live in Sales DNA: only 12% are strong on supportive beliefs and only 27% show strong Sales DNA overall. Those traits are invisible in interviews, which is why effort gets blamed and the real cause goes unmeasured.</p></div>
       <div class="faq-item"><h3>What does a failed sales hire cost?</h3><p>DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts average sales turnover cost near $49,508 and roughly $115,000 fully loaded. Revenue Bench's working figure for a revenue-role mis-hire, counting stalled pipeline and management time, is $200,000 to $250,000.</p></div>
+      <div class="faq-item"><h3>Which failure pattern is my hiring process most exposed to?</h3><p>Use the <a href="#audit">ten-question hiring-process audit</a> on this page to check how your company hires. Answer both questions for each pattern; either No marks that pattern as exposed. Unanswered patterns remain unscored. The result links to the relevant sections so you can identify the process step to fix before your next search. Multiple patterns can be exposed, and the checklist does not rank their severity or predict an individual hire's outcome.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -241,7 +380,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Why Sales Hires Fail: What 2.4 Million Assessments Show","description":"An OMG Certified Partner firm's analysis of nearly 2.4 million sales assessments: the five failure patterns behind most failed sales hires, the numbers behind each, and how to hire against them.","author":{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group. Three-time exit executive; built revenue teams behind $500M+ in exits.","affiliation":{"@type":"Organization","name":"Swanston Growth Advisors"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-04","dateModified":"2026-09-23","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/why-sales-hires-fail"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Why Sales Hires Fail: What 2.4 Million Assessments Show","description":"Five patterns: weak pool, invisible traits, wrong role, ignored warnings, unmanaged ramp. Use the ten-question hiring-process audit before your next hire.","author":{"@type":"Person","name":"Steve Swanston","jobTitle":"Co-Founder, Revenue Bench","description":"Founder of Swanston Growth Advisors, a Certified Partner of Objective Management Group. Three-time exit executive; built revenue teams behind $500M+ in exits.","affiliation":{"@type":"Organization","name":"Swanston Growth Advisors"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-04","dateModified":"2026-10-06","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/why-sales-hires-fail"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -249,7 +388,8 @@
 {"@type":"Question","name":"How often do sales hires fail?","acceptedAnswer":{"@type":"Answer","text":"In DePaul University's 2011-2012 Sales Effectiveness Survey, 33% of all sales turnover happened in the first year of tenure, where the denominator is total turnover. In the US Bureau of Labor Statistics' Employee Tenure release of September 26, 2024, median tenure in sales and related occupations was 3.3 years against 3.9 years across all wage and salary workers. For candidates hired against an OMG \"not recommended\" flag, the 2024 validation survey found first-year turnover of 33% and 100% of retained hires landing in the bottom half of the team."}},
 {"@type":"Question","name":"Can you predict whether a sales hire will succeed?","acceptedAnswer":{"@type":"Answer","text":"To a measurable degree, yes. OMG's sales-specific assessment carries predictive validity in the 95 percent range. In its 2024 validation survey, 72% of recommended candidates who were hired reached the top half of their sales force within 12 months, and first-year turnover for recommended hires was 9% against 33% for not-recommended hires."}},
 {"@type":"Question","name":"Is effort the reason sales hires fail?","acceptedAnswer":{"@type":"Answer","text":"Almost never. In OMG's data, 86% of salespeople have strong desire and 88% handle rejection well. The failure traits live in Sales DNA: only 12% are strong on supportive beliefs and only 27% show strong Sales DNA overall. Those traits are invisible in interviews, which is why effort gets blamed and the real cause goes unmeasured."}},
-{"@type":"Question","name":"What does a failed sales hire cost?","acceptedAnswer":{"@type":"Answer","text":"DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts average sales turnover cost near $49,508 and roughly $115,000 fully loaded. Revenue Bench's working figure for a revenue-role mis-hire, counting stalled pipeline and management time, is $200,000 to $250,000."}}
+{"@type":"Question","name":"What does a failed sales hire cost?","acceptedAnswer":{"@type":"Answer","text":"DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts average sales turnover cost near $49,508 and roughly $115,000 fully loaded. Revenue Bench's working figure for a revenue-role mis-hire, counting stalled pipeline and management time, is $200,000 to $250,000."}},
+{"@type":"Question","name":"Which failure pattern is my hiring process most exposed to?","acceptedAnswer":{"@type":"Answer","text":"Use the ten-question hiring-process audit on this page to check how your company hires. Answer both questions for each pattern; either No marks that pattern as exposed. Unanswered patterns remain unscored. The result links to the relevant sections so you can identify the process step to fix before your next search. Multiple patterns can be exposed, and the checklist does not rank their severity or predict an individual hire's outcome."}}
 ]}
 </script>
 
@@ -260,5 +400,106 @@
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 </script>
 <script defer src="../assets/cursor.js"></script>
+<script>
+(function () {
+  var audit = document.getElementById('hiring-audit');
+  var result = document.getElementById('audit-result');
+  var printButton = document.getElementById('audit-print');
+  if (!audit || !result || !printButton) return;
+
+  var patterns = audit.querySelectorAll('fieldset[data-pattern]');
+
+  function updateResult() {
+    var remaining = 0;
+    var completed = 0;
+    var exposed = [];
+
+    patterns.forEach(function (pattern) {
+      var questions = pattern.querySelectorAll('.audit-question');
+      var complete = true;
+      var hasNo = false;
+
+      questions.forEach(function (question) {
+        var answer = question.querySelector('input[type="radio"]:checked');
+        if (!answer) {
+          remaining += 1;
+          complete = false;
+        } else if (answer.value === 'no') {
+          hasNo = true;
+        }
+      });
+
+      if (complete) completed += 1;
+
+      if (complete && hasNo) {
+        exposed.push({
+          id: pattern.getAttribute('data-pattern'),
+          name: pattern.getAttribute('data-name')
+        });
+      }
+    });
+
+    var content = document.createDocumentFragment();
+
+    function addText(text) {
+      content.appendChild(document.createTextNode(text));
+    }
+
+    if (exposed.length) {
+      addText('Exposed patterns: ');
+      exposed.forEach(function (pattern, index) {
+        if (index) addText('; ');
+        var link = document.createElement('a');
+        link.href = '#' + pattern.id;
+        link.textContent = pattern.name;
+        content.appendChild(link);
+      });
+      addText('.');
+    } else if (remaining === 0) {
+      addText('No exposure on these ten questions. The patterns can still occur; the questions only cover the process.');
+    } else if (completed) {
+      addText('No exposure in the completed patterns.');
+    }
+
+    if (remaining > 0) {
+      addText((content.childNodes.length ? ' ' : '') + 'Questions remaining: ' + remaining + '. Patterns with unanswered questions are not scored.');
+    }
+
+    result.replaceChildren(content);
+  }
+
+  function clearPrintMode() {
+    document.body.classList.remove('print-audit');
+  }
+
+  audit.addEventListener('change', function (event) {
+    if (event.target.matches('input[type="radio"]')) updateResult();
+  });
+
+  window.addEventListener('pageshow', updateResult);
+  window.addEventListener('afterprint', clearPrintMode);
+
+  var printMedia = window.matchMedia('print');
+  if (printMedia.addEventListener) {
+    printMedia.addEventListener('change', function (event) {
+      if (!event.matches) clearPrintMode();
+    });
+  }
+
+  printButton.addEventListener('click', function () {
+    updateResult();
+    document.body.classList.add('print-audit');
+    try {
+      window.print();
+    } catch (error) {
+      clearPrintMode();
+      throw error;
+    }
+  });
+
+  printButton.hidden = false;
+  updateResult();
+})();
+</script>
 </body>
 </html>
