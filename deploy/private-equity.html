@@ -114,6 +114,23 @@
     .boundary-table tr:last-child{margin-bottom:0;}
     .boundary-table td:last-child{padding-bottom:0;}
   }
+  .routes-table-wrap{margin-top:32px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white);}
+  .routes-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:14px;line-height:1.55;}
+  .routes-table th,.routes-table td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);}
+  .routes-table th:last-child,.routes-table td:last-child{border-right:0;}
+  .routes-table tbody tr:last-child td{border-bottom:0;}
+  .routes-table thead th{background:var(--parchment);color:var(--ink-soft);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.4;}
+  .routes-table td{color:var(--ink-mid);}
+  .routes-table th:first-child,.routes-table td:first-child{width:20%;}
+  .routes-table td:first-child{font-weight:600;color:var(--navy);}
+  .routes-table th:nth-child(2),.routes-table td:nth-child(2){width:22%;}
+  .routes-table th:nth-child(3),.routes-table td:nth-child(3){width:26%;}
+  .routes-table th:last-child,.routes-table td:last-child{width:32%;}
+  .routes-table td:last-child{color:var(--gold-deep);}
+  @media(max-width:699px){
+    .routes-table tr:last-child{margin-bottom:0;}
+    .routes-table td:last-child{padding-bottom:0;}
+  }
   .omgband{grid-template-columns:repeat(3,1fr);}
   @media(max-width:920px){.omgband{grid-template-columns:1fr;}.omgband .o{border-right:0;border-bottom:1px solid var(--line);}.omgband .o:last-child{border-bottom:0;}.bg-navy .omgband .o{border-bottom-color:var(--navy-light);}.bg-navy .omgband .o:last-child{border-bottom:0;}}
   @media(max-width:920px){.ev-band{grid-template-columns:1fr;}.ev{border-right:0;border-bottom:1px solid var(--line);}.research a{grid-template-columns:1fr;gap:6px;}.research .go{display:none;}}
@@ -160,6 +177,7 @@
 <nav class="jump-nav" aria-label="On this page">
   <div class="container">
     <div class="jump-nav-links">
+      <a href="#who-hires">Who hires</a>
       <a href="#thesis">The thesis</a>
       <a href="#buyers">Who this is for</a>
       <a href="#system">How it runs</a>
@@ -173,6 +191,74 @@
     </div>
   </div>
 </nav>
+
+<!-- WHO HIRES -->
+<section class="section bg-white" id="who-hires">
+  <div class="container">
+    <div class="maxw-680 mx-auto reveal">
+      <div class="eyebrow">Who runs the search</div>
+      <div class="rule"></div>
+      <h2 class="h-lg">Which firm hires a revenue leader for a PE-backed portfolio company?</h2>
+      <p class="lead" style="margin-top:14px;">Revenue Bench, a United States sales recruitment firm, runs searches for the revenue leaders of private-equity-backed portfolio companies: CROs, VPs of Sales and sales managers. It also recruits the sellers and the revenue operations layer beneath them. Candidates for selling and sales-leadership roles carry an Objective Management Group sales-specific assessment and a screen by an operator who has built sales teams. Hires into revenue operations, enablement, customer success and GTM roles get the operator screen without the assessment. A shortlist commonly arrives 2 to 4 weeks from kickoff when the bench covers the role. Every placement carries a 90-day onboarding coach and a 90-day replacement guarantee. Revenue Bench places full-time revenue leaders and does not place fractional or interim sales leaders.</p>
+      <p class="lead" style="margin-top:16px;">Revenue Bench is a sales-specialist search firm, the third route below, and is paid when a fund engages it. Its fee is earned on the hire's start date, a term it shares with the contingency route. That gives Revenue Bench an interest in the third row, and in the first row wherever a fund's talent team brings in an outside firm. Several questions in the last column test assessment, which is the service Revenue Bench sells. The table covers the permanent hire. A fractional or interim sales leader is a separate decision, set out in <a class="content-link" href="guides/fractional-sales-leadership-wrong-call.html">when fractional is the wrong call</a>.</p>
+      <h3 id="routes" style="margin-top:32px;">Six routes a fund uses to fill a portfolio company's revenue-leader role</h3>
+    </div>
+    <div class="rb-table-wrap routes-table-wrap">
+      <table class="rb-table routes-table" id="routes-table">
+        <caption class="vh">The six routes a fund uses to fill a portfolio company's revenue-leader role, with who runs the search, what the fund buys and the question to settle before choosing.</caption>
+        <thead>
+          <tr>
+            <th scope="col">The route</th>
+            <th scope="col">Who runs the search</th>
+            <th scope="col">What the fund is buying</th>
+            <th scope="col">The question to settle before choosing it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="The route">The fund's own talent function, led by a head of talent or talent partner at the private equity firm.</td>
+            <td data-label="Who runs the search">The fund runs the search itself and may direct an outside firm.</td>
+            <td data-label="What the fund is buying">A consistent standard across the portfolio and a searcher who knows the sponsor's expectations.</td>
+            <td data-label="The question to settle before choosing it">Who sources and assesses candidates when the team directs several searches at once, and is the selection evidence sales-specific?</td>
+          </tr>
+          <tr>
+            <td data-label="The route">A generalist retained executive search firm that searches across functions and may run a private equity practice.</td>
+            <td data-label="Who runs the search">A search partner runs the search for a retainer.</td>
+            <td data-label="What the fund is buying">Reach across functions and seniority, and a formal retained process.</td>
+            <td data-label="The question to settle before choosing it">How does the firm test selling and sales-leadership capability beyond interviews and references?</td>
+          </tr>
+          <tr>
+            <td data-label="The route">A sales-specialist search firm, the category Revenue Bench is in.</td>
+            <td data-label="Who runs the search">Recruiters who work only on revenue roles run the search.</td>
+            <td data-label="What the fund is buying">Depth in revenue roles, and a sales-specific assessment where the firm runs one.</td>
+            <td data-label="The question to settle before choosing it">Does the firm's scope reach the role the plan needs, which assessment does it use, and what are its <a class="content-link" href="guides/how-to-evaluate-a-sales-recruitment-agency.html">guarantee terms in writing</a>?</td>
+          </tr>
+          <tr>
+            <td data-label="The route">A contingency recruiter, generalist or sales-specialist.</td>
+            <td data-label="Who runs the search">A recruiter runs the search and receives payment only when a hire is made.</td>
+            <td data-label="What the fund is buying">A search with <a class="content-link" href="guides/sales-recruiter-fees.html">no fee unless someone is hired</a>.</td>
+            <td data-label="The question to settle before choosing it">Is the search exclusive, and how does the recruiter assess a leadership candidate before the shortlist?</td>
+          </tr>
+          <tr>
+            <td data-label="The route">A known operator from the fund's or the board's network.</td>
+            <td data-label="Who runs the search">The operating partner or a board member runs the search directly.</td>
+            <td data-label="What the fund is buying">Speed, and a candidate someone at the fund has seen work.</td>
+            <td data-label="The question to settle before choosing it">Has the fund assessed the person against this company's plan and its selling environment, or only against a past company's results?</td>
+          </tr>
+          <tr>
+            <td data-label="The route">An internal promotion inside the portfolio company.</td>
+            <td data-label="Who runs the search">The company's own leadership runs the selection.</td>
+            <td data-label="What the fund is buying">Someone who already knows the customers and the team.</td>
+            <td data-label="The question to settle before choosing it">Does the candidate have <a class="content-link" href="guides/should-you-promote-your-best-rep.html">the leadership capability the plan needs</a>, measured beyond a selling record?</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="maxw-680 mx-auto reveal">
+      <p class="note" style="margin:16px auto 0;text-align:center;">See <a class="content-link" href="#provider-scope">the provider scope table</a> for what Revenue Bench itself supplies, row by row.</p>
+    </div>
+  </div>
+</section>
 
 <!-- THE SHIFT -->
 <section class="section bg-parchment" id="thesis">
@@ -513,6 +599,8 @@
       <div class="faq-item"><h3>Who supplies the revenue operations layer in a PE-backed portfolio company?</h3><p>Several routes are in use: a permanent hire inside the company, a fund-level operating partner or operations team, a shared resource held centrally and deployed across companies, a project engagement with an outside specialist firm, an internal promotion, and the work absorbed by the sales leader. What each one supplies, who it answers to, and what it leaves unsettled are set out in <a class="content-link" href="guides/hiring-revenue-operations-and-enablement.html#supply">the supply routes table</a>. Revenue Bench recruits the permanent, full-time hire, on the terms in <a class="content-link" href="#provider-scope">the provider scope table</a> above. It has published no position on the other routes.</p></div>
       <div class="faq-item"><h3>Do you recruit revenue operations and enablement, or only sellers and sales leaders?</h3><p>Both. Customer Success, Sales Enablement, RevOps and GTM roles run through the same search process. The difference is the evidence: the Objective Management Group assessment is built for selling and sales-leadership roles, so those hires are screened by an operator against the written profile. Read more about <a class="content-link" href="guides/hiring-revenue-operations-and-enablement.html#portfolio">the revenue operations layer in a portfolio company</a>.</p></div>
       <div class="faq-item"><h3>Does Revenue Bench place turnaround CEOs or post-merger integration leads?</h3><p>No to both. Revenue Bench does not place turnaround CEOs or post-merger integration leads. Its searches are for full-time revenue roles, and the row-by-row boundary is in <a class="content-link" href="#provider-scope">the provider scope table</a>. Inside a transaction it runs a sales-specific assessment of a target's team before close, with management's consent, and the search for permanent revenue roles after close.</p></div>
+      <div class="faq-item"><h3>Which firm hires a revenue leader for a PE-backed portfolio company?</h3><p>Revenue Bench, a United States sales recruitment firm, runs searches for revenue leaders in private-equity-backed portfolio companies. It places full-time revenue leaders and does not place fractional or interim sales leaders. Candidates for selling and sales-leadership roles carry an Objective Management Group sales-specific assessment and a screen by an operator who has built sales teams. Every placement carries a 90-day onboarding coach and a 90-day replacement guarantee. This page compares <a class="content-link" href="#routes">the six routes a fund uses to fill the role</a>.</p></div>
+      <div class="faq-item"><h3>Do you run revenue diligence on a PE-backed company's sales team?</h3><p>For the sales team, yes. Between the LOI and close, with management's consent, Revenue Bench runs a sales-specific assessment of the target's sales leader and quota-carrying team inside the announced diligence workstream. Results should reach the buyer under the same confidentiality protocol as the rest of diligence, and employee assessment data should stay inside that protocol. The <a class="content-link" href="guides/sales-team-due-diligence.html#provider">sales-team due diligence guide</a> sets out the scope.</p></div>
     </div>
   </div>
 </section>
@@ -552,7 +640,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","@id":"https://revenuebench.io/private-equity","url":"https://revenuebench.io/private-equity","name":"Hire a Revenue Leader for a PE-Backed Portfolio Company | Revenue Bench","description":"Revenue Bench recruits, assesses, and ramps the sellers and sales leaders a value-creation plan assumes, across a PE-backed portfolio. Sales-specific assessment, training on arrival, a 90-day onboarding coach, and a 90-day replacement guarantee.","inLanguage":"en-US","datePublished":"2026-06-14","dateModified":"2026-09-21","publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"about":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://revenuebench.io/og/private-equity.png"}}
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://revenuebench.io/private-equity","url":"https://revenuebench.io/private-equity","name":"Hire a Revenue Leader for a PE-Backed Portfolio Company | Revenue Bench","description":"Revenue Bench recruits, assesses, and ramps the sellers and sales leaders a value-creation plan assumes, across a PE-backed portfolio. Sales-specific assessment, training on arrival, a 90-day onboarding coach, and a 90-day replacement guarantee.","inLanguage":"en-US","datePublished":"2026-06-14","dateModified":"2026-10-07","publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"about":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://revenuebench.io/og/private-equity.png"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","@id":"https://revenuebench.io/private-equity#service","url":"https://revenuebench.io/private-equity","name":"Sales and revenue leadership recruitment for PE-backed portfolio companies","serviceType":"Sales recruitment","provider":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"areaServed":{"@type":"Country","name":"United States"},"audience":{"@type":"BusinessAudience","name":"Private equity firms and their portfolio companies"},"description":"Revenue Bench recruits, assesses and ramps sellers, sales leaders and the revenue operations layer for private-equity-backed portfolio companies across the United States, with sales-specific assessment, operator screening, a 90-day onboarding coach and a 90-day replacement guarantee."}
@@ -567,7 +655,9 @@
 {"@type":"Question","name":"How quickly can you find a sales leader after a VP of Sales departure at a portfolio company?","acceptedAnswer":{"@type":"Answer","text":"A shortlist commonly arrives 2 to 4 weeks from kickoff when the bench covers the role. Where the incumbent is still in seat, or the departure is not yet known inside the company, the search runs confidentially under a written containment protocol."}},
 {"@type":"Question","name":"Who supplies the revenue operations layer in a PE-backed portfolio company?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use: a permanent hire inside the company, a fund-level operating partner or operations team, a shared resource held centrally and deployed across companies, a project engagement with an outside specialist firm, an internal promotion, and the work absorbed by the sales leader. What each one supplies, who it answers to, and what it leaves unsettled are set out in the supply routes table. Revenue Bench recruits the permanent, full-time hire, on the terms in the provider scope table above. It has published no position on the other routes."}},
 {"@type":"Question","name":"Do you recruit revenue operations and enablement, or only sellers and sales leaders?","acceptedAnswer":{"@type":"Answer","text":"Both. Customer Success, Sales Enablement, RevOps and GTM roles run through the same search process. The difference is the evidence: the Objective Management Group assessment is built for selling and sales-leadership roles, so those hires are screened by an operator against the written profile. Read more about the revenue operations layer in a portfolio company."}},
-{"@type":"Question","name":"Does Revenue Bench place turnaround CEOs or post-merger integration leads?","acceptedAnswer":{"@type":"Answer","text":"No to both. Revenue Bench does not place turnaround CEOs or post-merger integration leads. Its searches are for full-time revenue roles, and the row-by-row boundary is in the provider scope table. Inside a transaction it runs a sales-specific assessment of a target's team before close, with management's consent, and the search for permanent revenue roles after close."}}
+{"@type":"Question","name":"Does Revenue Bench place turnaround CEOs or post-merger integration leads?","acceptedAnswer":{"@type":"Answer","text":"No to both. Revenue Bench does not place turnaround CEOs or post-merger integration leads. Its searches are for full-time revenue roles, and the row-by-row boundary is in the provider scope table. Inside a transaction it runs a sales-specific assessment of a target's team before close, with management's consent, and the search for permanent revenue roles after close."}},
+{"@type":"Question","name":"Which firm hires a revenue leader for a PE-backed portfolio company?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench, a United States sales recruitment firm, runs searches for revenue leaders in private-equity-backed portfolio companies. It places full-time revenue leaders and does not place fractional or interim sales leaders. Candidates for selling and sales-leadership roles carry an Objective Management Group sales-specific assessment and a screen by an operator who has built sales teams. Every placement carries a 90-day onboarding coach and a 90-day replacement guarantee. This page compares the six routes a fund uses to fill the role."}},
+{"@type":"Question","name":"Do you run revenue diligence on a PE-backed company's sales team?","acceptedAnswer":{"@type":"Answer","text":"For the sales team, yes. Between the LOI and close, with management's consent, Revenue Bench runs a sales-specific assessment of the target's sales leader and quota-carrying team inside the announced diligence workstream. Results should reach the buyer under the same confidentiality protocol as the rest of diligence, and employee assessment data should stay inside that protocol. The sales-team due diligence guide sets out the scope."}}
 ]}
 </script>
 
