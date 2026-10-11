@@ -58,6 +58,12 @@
 .faq-item p{font-size:15.5px;color:var(--ink-mid);line-height:1.7;}
 
 .related{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
+@media(min-width:761px){
+  .related{grid-template-columns:repeat(6,1fr);}
+  .related>.rel{grid-column:span 2;}
+  .related>.rel:first-child:nth-last-child(4),.related>.rel:first-child:nth-last-child(4)~.rel{grid-column:span 3;}
+  .related>.rel:first-child:nth-last-child(5)~.rel:nth-child(n+4){grid-column:span 3;}
+}
 .rel{display:block;background:var(--white);border:1px solid var(--line-soft);border-radius:14px;padding:22px 22px;box-shadow:var(--shadow);transition:transform .15s ease;}
 .rel:hover{transform:translateY(-2px);}
 .rel .k{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);}
