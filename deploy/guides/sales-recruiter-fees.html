@@ -60,6 +60,16 @@
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
   @media(max-width:640px){.datatable td:nth-child(2){white-space:normal;}}
+  .basis-table{width:100%;min-width:760px;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px;line-height:1.55;}
+  .basis-table th,.basis-table td{text-align:left;vertical-align:top;padding:16px 15px;border-bottom:1px solid var(--line);border-right:1px solid var(--line-soft);white-space:normal;}
+  .basis-table th:last-child,.basis-table td:last-child{border-right:0;}
+  .basis-table tbody tr:last-child td{border-bottom:0;}
+  .basis-table th{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;}
+  .basis-table td{color:var(--ink-mid);}
+  .basis-table td:first-child{width:16%;font-weight:600;color:var(--navy);}
+  .basis-table td:nth-child(2){width:26%;}
+  .basis-table td:nth-child(3){width:28%;}
+  .basis-table td:last-child{width:30%;color:var(--ink-soft);}
 </style>
 </head>
 <body>
@@ -82,7 +92,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales recruiter fees</span></div>
     <div class="eyebrow">Buyer guide &middot; Search economics</div>
     <h1>Sales recruiter fees: contingency, retained, and what you pay for</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder</span><span class="dot"></span><span>7 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder</span><span class="dot"></span><span>11 min read</span></div>
     <p class="deck"><strong>A recruiter's fee structure states who carries the risk if the search goes wrong.</strong> The three common models, contingency, container, and retained, move that risk to different places, and the lowest headline percentage is often the most expensive once a mis-hire is priced in. This guide compares the models by the risk each one shifts, then shows the math that decides the real cost of a search.</p>
   </div>
 </section>
@@ -95,6 +105,7 @@
       <ul>
         <li>Three fee models dominate sales recruiting: contingency, paid only if a hire starts; retained, paid in stages whether or not a hire is made; and container or engaged search, with a fixed engagement fee up front and the balance on placement. The difference that matters is who carries the search risk.</li>
         <li>Contingency looks free until it works, because the recruiter carries all the search cost and only earns on a placement. That incentive rewards speed and volume, and it is why the same role often goes to several firms at once.</li>
+        <li>The fee is the percentage multiplied by the calculation base the agreement names: base salary, on-target earnings, or estimated first-year cash. On a commissioned sales role the choice of base can double the fee at the same percentage, and a flat fee removes the link between the fee and the offer.</li>
         <li>Retained and container search move some cost to the employer up front, in exchange for exclusivity, depth, and a recruiter whose incentive is the right hire rather than the fast one. It is the standard for senior, confidential, and hard-to-fill roles.</li>
         <li>The headline percentage is the wrong number to shop. DePaul University research puts the fully loaded cost of sales turnover near $115,000, and Revenue Bench's own working figure puts a revenue-role mis-hire at $200,000 to $250,000 once stalled pipeline and management time are counted. A lower fee on a wrong hire is the most expensive option on offer.</li>
         <li>A replacement guarantee and an objective assessment change the economics. The guarantee moves post-hire risk back to the recruiter, and assessment-led selection lowers the odds of a wrong hire in the first place.</li>
@@ -106,6 +117,8 @@
       <ol>
         <li><a href="#models">The three fee models, in plain terms</a></li>
         <li><a href="#comparison">The fee-structure risk comparison</a></li>
+        <li><a href="#cost-per-placement">What a sales search costs per placement</a></li>
+        <li><a href="#flat-fee">Flat-fee recruiting for a sales team</a></li>
         <li><a href="#real-price">What the fee is really pricing</a></li>
         <li><a href="#guarantee">Where a guarantee changes the math</a></li>
         <li><a href="#reading">How to read a fee structure before you sign</a></li>
@@ -116,9 +129,9 @@
 
     <div class="prose">
       <h2 id="models">The three fee models, in plain terms</h2>
-      <p><strong>Contingency search</strong> carries no fee until a candidate is hired and starts. The fee is a percentage of the hire's first-year cash compensation. In Staffing Industry Analysts' North America Staffing Company Survey 2021, the most common direct-hire fee was 20% of salary, reported by 42% of staffing firms, and 20% was also the median across all segments, with segment midranges of 15% to 20% for commercial staffing, 18% to 22% for professional staffing, and 20% to 25% for direct-hire firms. so the base it is computed on moves with <a href="sales-compensation-benchmarks-2026.html#bls">the market rate for the role</a>. The recruiter funds the whole search and is paid only on success, so the same role is often worked by several firms in parallel.</p>
+      <p><strong>Contingency search</strong> carries no fee until a candidate is hired and starts. The fee is a percentage of a compensation figure the agreement names. In Staffing Industry Analysts' North America Staffing Company Survey 2021, the most common direct-hire fee was 20% of salary, reported by 42% of staffing firms, and 20% was also the median across all segments, with segment midranges of 15% to 20% for commercial staffing, 18% to 22% for professional staffing, and 20% to 25% for direct-hire firms. That compensation figure moves with <a href="sales-compensation-benchmarks-2026.html#bls">the market rate for the role</a>. The recruiter funds the whole search and is paid only on success, so the same role is often worked by several firms in parallel.</p>
       <p><strong>Retained search</strong> is an exclusive search billed in stages regardless of the outcome, commonly in thirds. An engagement fee is due at kickoff, a second payment at shortlist, and the balance at placement. Firms typically use this model for senior, confidential, and scarce roles where depth and discretion matter more than speed.</p>
-      <p><strong>Container or engaged search</strong> is a middle path. A fixed engagement fee up front commits both sides, and the balance is due on placement. It buys exclusivity and priority without a full retainer, and it has grown more common for VP and director roles.</p>
+      <p><strong>Container or engaged search</strong> is a middle path. A fixed engagement fee up front commits both sides, and the balance is due on placement. It buys exclusivity and priority without a full retainer, and it has grown more common for VP and director roles. Some agreements describe it as a retainer plus a placement fee.</p>
       <p>None of these models is better in the abstract. Each prices a different level of commitment and risk. The useful signals are the trigger that determines when the fee is earned and what stands behind the fee after the hire starts.</p>
 
       <h2 id="comparison">The fee-structure risk comparison</h2>
@@ -164,6 +177,56 @@
         </table>
       </div>
       <div class="source-note">Fee percentages and billing splits are common market conventions and vary by firm, role, and region. The column that decides fit is who carries the search risk rather than the headline rate.</div>
+
+      <h2 id="cost-per-placement">What a sales search costs per placement</h2>
+      <p><strong>Under a percentage fee, a sales recruiting firm's cost per placement is the percentage multiplied by the compensation figure the agreement names as the calculation base.</strong> Staffing Industry Analysts' North America Staffing Company Survey 2021 found 20% of salary was the most common direct-hire fee, so a salaried hire at $150,000 with no commission costs $30,000. Retained executive search runs at approximately one third of estimated first-year compensation, so the same hire would cost about $50,000. That one-third standard describes executive search for senior leaders. Both figures are arithmetic on those rates.</p>
+      <p>For a salaried role with no commission, base salary, on-target earnings, and first-year cash are close to the same figure, so the calculation base changes little. For a commissioned seller it matters, because on-target earnings add the commission target to base salary. Read the calculation base before comparing percentages across firms: a lower percentage on a larger base can cost more.</p>
+      <h3 id="fee-basis">The fee-basis table: what the percentage is computed on</h3>
+      <p>The worked column uses one illustrative seller, $90,000 base salary and $180,000 on-target earnings, at a 20% fee. The figures are arithmetic on that example alone.</p>
+      <div class="rb-table-wrap table-scroll">
+        <table class="rb-table basis-table">
+          <thead>
+            <tr>
+              <th>Calculation base</th>
+              <th>Worked fee for the example seller</th>
+              <th>What moves the fee after the offer</th>
+              <th>What to fix in writing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Base salary</td>
+              <td data-label="Worked fee for the example seller">The fee is $18,000 and ignores commission entirely.</td>
+              <td data-label="What moves the fee after the offer">Only a change to the base salary moves the fee. Strong first-year selling leaves the fee unchanged.</td>
+              <td data-label="What to fix in writing">That the base is the salary in the signed offer letter, and that any sign-on or guaranteed draw sits outside it unless the clause says otherwise.</td>
+            </tr>
+            <tr>
+              <td>On-target earnings</td>
+              <td data-label="Worked fee for the example seller">The fee is $36,000, twice the base-salary fee at the same percentage.</td>
+              <td data-label="What moves the fee after the offer">The commission target in the offer sets the fee. A higher target on the same base raises the fee before the seller sells anything.</td>
+              <td data-label="What to fix in writing">The definition of on-target earnings the fee uses, whether it includes a guaranteed draw or accelerators, and which document fixes it.</td>
+            </tr>
+            <tr>
+              <td>Estimated first-year cash</td>
+              <td data-label="Worked fee for the example seller">Set at the offer from base plus expected commission: $36,000 if the estimate equals on-target earnings. If the agreement includes a true-up after year one and the seller earns $220,000, the fee becomes $44,000.</td>
+              <td data-label="What moves the fee after the offer">Any true-up clause. Without one, the estimate at the offer is final.</td>
+              <td data-label="What to fix in writing">Whether a true-up exists, which direction it runs, who measures first-year earnings, and when the final invoice falls due.</td>
+            </tr>
+            <tr>
+              <td>Flat fee</td>
+              <td data-label="Worked fee for the example seller">A fixed dollar amount agreed before the search. The offer does not change it.</td>
+              <td data-label="What moves the fee after the offer">Nothing in the offer. Only a change to the agreed scope of the search.</td>
+              <td data-label="What to fix in writing">What the fixed amount covers, the event that earns it, and whether a replacement guarantee stands behind it.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="source-note">Revenue Bench's own guidance on reading a fee clause, with no study behind it. Calculation bases and true-up terms vary by firm and by agreement; the clause in the signed agreement governs.</div>
+
+      <h2 id="flat-fee">Flat-fee recruiting for a sales team</h2>
+      <p><strong>A flat-fee search charges a fixed price agreed before the search opens, so the cost of each hire is known in advance and does not move with the commission plan or the final offer.</strong> A company hiring several sellers on the same pay plan can budget the search cost per seat. Nobody has to agree on how much commission a new seller will earn before the invoice can be written. The recruiter also gains nothing from a higher offer, so the fee gives the recruiter no stake in the salary negotiation.</p>
+      <p>A flat fee fixes the amount of the fee. The fixed price can still be paid up front, in stages, or only when a hire starts, so the questions in the comparison above apply to it as well: which event earns the fee, who funds the search if no hire is made, and whether a replacement guarantee stands behind the result. On a hard search that runs longer than planned, ask how the firm staffs the search once the fixed price is used up.</p>
+      <p>Revenue Bench prices its searches as a percentage of the hire's first-year compensation, so a higher offer raises its fee. Setting out what a flat fee does well runs against that interest.</p>
 
       <h2 id="real-price">What the fee is really pricing</h2>
       <p>Shopping the headline percentage optimizes the smallest number in the decision. A recruiter's fee is a fraction of what the search puts at risk, because the larger cost arrives when the hire is wrong.</p>
@@ -223,6 +286,9 @@
       <div class="faq-item"><h3>Which fee structure is best?</h3><p>None is best in the abstract. Contingency fits high-volume or individual-contributor roles where the market is deep and speed matters. Retained or engaged search fits senior, confidential, and scarce roles where a wrong hire is expensive and discretion is required. The right choice is the one whose incentive matches the risk in your specific search.</p></div>
       <div class="faq-item"><h3>Why do retained searches cost money up front?</h3><p>Because the fee pays for exclusivity and depth. A retained recruiter's cost is covered whether or not a placement is made, so the incentive shifts to finding the right hire rather than the fastest one. For a senior or confidential role, that alignment is usually worth more than the cash saved by a contingency arrangement.</p></div>
       <div class="faq-item"><h3>Does a placement guarantee reduce the risk of the fee?</h3><p>Yes, when the terms are real. A replacement guarantee means the recruiter runs the search again at no new fee if the hire does not last the window, which moves post-hire risk back to the firm. Revenue Bench places a 90-day replacement guarantee behind every hire and assesses candidates for selling and sales-leadership roles with Objective Management Group before presentation, so the fee is priced against a lower risk of a wrong hire.</p></div>
+      <div class="faq-item"><h3>How much does a sales recruiting firm cost per placement?</h3><p>Under a percentage fee, a sales recruiting firm's cost per placement is the percentage multiplied by the compensation figure the agreement names as the calculation base. Staffing Industry Analysts' North America Staffing Company Survey 2021 found 20% of salary was the most common direct-hire fee, so a salaried hire at $150,000 with no commission costs $30,000. Retained executive search runs at approximately one third of estimated first-year compensation, so the same hire would cost about $50,000. That one-third standard describes executive search for senior leaders. For a commissioned seller, check whether the base is salary or on-target earnings, because that choice can double the fee at the same percentage.</p></div>
+      <div class="faq-item"><h3>What are the benefits of flat-fee recruiting for a sales team?</h3><p>A flat fee fixes the price of each hire before the search opens. A company hiring several sellers on the same pay plan can budget per seat, nobody has to estimate commission before the invoice is written, and the recruiter gains nothing from a higher offer. A flat fee does not settle who carries the search risk: read which event earns the fee and whether a replacement guarantee stands behind it. Revenue Bench prices its searches as a percentage of the hire's first-year compensation, so a higher offer raises its fee, and this answer runs against that interest.</p></div>
+      <div class="faq-item"><h3>Is a recruiter fee calculated on base salary or on-target earnings?</h3><p>The agreement decides. Some fee clauses use base salary, some use on-target earnings, and some use estimated first-year cash with a true-up after year one. On a seller with $90,000 base and $180,000 on-target earnings, a 20% fee is $18,000 on base and $36,000 on on-target earnings. Read the calculation base in the fee clause before comparing percentages across firms.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -272,7 +338,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Sales Recruiter Fees: Contingency, Retained, and What You Pay For","description":"Contingency, retained, and container search fees compared by who carries the search risk. Why the headline percentage is the wrong number to shop, and how a guarantee changes the math.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-25","dateModified":"2026-09-25","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-recruiter-fees"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Sales Recruiter Fees: Contingency, Retained, and What You Pay For","description":"Contingency, retained, and container search fees compared by who carries the search risk. Why the headline percentage is the wrong number to shop, and how a guarantee changes the math.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-25","dateModified":"2026-10-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-recruiter-fees"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -280,7 +346,10 @@
 {"@type":"Question","name":"What is a typical sales recruiter fee?","acceptedAnswer":{"@type":"Answer","text":"In Staffing Industry Analysts' North America Staffing Company Survey 2021, the most common direct-hire fee was 20% of salary, reported by 42% of staffing firms, with direct-hire firms reporting a 20% to 25% midrange. Retained executive search is billed in stages at approximately one third of estimated first-year compensation, the standard described in Korn Ferry's and Heidrick and Struggles' annual reports. The more useful question is what the fee is tied to and what stands behind it, because the headline percentage is a small fraction of what a wrong hire costs."}},
 {"@type":"Question","name":"Which fee structure is best?","acceptedAnswer":{"@type":"Answer","text":"None is best in the abstract. Contingency fits high-volume or individual-contributor roles where the market is deep and speed matters. Retained or engaged search fits senior, confidential, and scarce roles where a wrong hire is expensive and discretion is required. The right choice is the one whose incentive matches the risk in your specific search."}},
 {"@type":"Question","name":"Why do retained searches cost money up front?","acceptedAnswer":{"@type":"Answer","text":"Because the fee pays for exclusivity and depth. A retained recruiter's cost is covered whether or not a placement is made, so the incentive shifts to finding the right hire rather than the fastest one. For a senior or confidential role, that alignment is usually worth more than the cash saved by a contingency arrangement."}},
-{"@type":"Question","name":"Does a placement guarantee reduce the risk of the fee?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the terms are real. A replacement guarantee means the recruiter runs the search again at no new fee if the hire does not last the window, which moves post-hire risk back to the firm. Revenue Bench places a 90-day replacement guarantee behind every hire and assesses candidates for selling and sales-leadership roles with Objective Management Group before presentation, so the fee is priced against a lower risk of a wrong hire."}}
+{"@type":"Question","name":"Does a placement guarantee reduce the risk of the fee?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the terms are real. A replacement guarantee means the recruiter runs the search again at no new fee if the hire does not last the window, which moves post-hire risk back to the firm. Revenue Bench places a 90-day replacement guarantee behind every hire and assesses candidates for selling and sales-leadership roles with Objective Management Group before presentation, so the fee is priced against a lower risk of a wrong hire."}},
+{"@type":"Question","name":"How much does a sales recruiting firm cost per placement?","acceptedAnswer":{"@type":"Answer","text":"Under a percentage fee, a sales recruiting firm's cost per placement is the percentage multiplied by the compensation figure the agreement names as the calculation base. Staffing Industry Analysts' North America Staffing Company Survey 2021 found 20% of salary was the most common direct-hire fee, so a salaried hire at $150,000 with no commission costs $30,000. Retained executive search runs at approximately one third of estimated first-year compensation, so the same hire would cost about $50,000. That one-third standard describes executive search for senior leaders. For a commissioned seller, check whether the base is salary or on-target earnings, because that choice can double the fee at the same percentage."}},
+{"@type":"Question","name":"What are the benefits of flat-fee recruiting for a sales team?","acceptedAnswer":{"@type":"Answer","text":"A flat fee fixes the price of each hire before the search opens. A company hiring several sellers on the same pay plan can budget per seat, nobody has to estimate commission before the invoice is written, and the recruiter gains nothing from a higher offer. A flat fee does not settle who carries the search risk: read which event earns the fee and whether a replacement guarantee stands behind it. Revenue Bench prices its searches as a percentage of the hire's first-year compensation, so a higher offer raises its fee, and this answer runs against that interest."}},
+{"@type":"Question","name":"Is a recruiter fee calculated on base salary or on-target earnings?","acceptedAnswer":{"@type":"Answer","text":"The agreement decides. Some fee clauses use base salary, some use on-target earnings, and some use estimated first-year cash with a true-up after year one. On a seller with $90,000 base and $180,000 on-target earnings, a 20% fee is $18,000 on base and $36,000 on on-target earnings. Read the calculation base in the fee clause before comparing percentages across firms."}}
 ]}
 </script>
 
