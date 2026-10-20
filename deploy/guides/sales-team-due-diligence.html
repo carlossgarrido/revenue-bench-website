@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Sales Team Due Diligence for Private Equity Buyers | Revenue Bench</title>
-<meta name="description" content="Revenue Bench assesses a target's sales leader and team between the LOI and close. The pre-LOI checklist covers the quota-attainment record the deal team reads." />
+<meta name="description" content="Revenue Bench assesses a target's sales leader and team between the LOI and close. The pre-LOI checklist and six pipeline tests cover what the deal team reads." />
 <link rel="canonical" href="https://revenuebench.io/guides/sales-team-due-diligence" />
 <meta property="og:title" content="Sales Team Due Diligence for Private Equity Buyers" />
-<meta property="og:description" content="Revenue Bench assesses sales teams between the LOI and close. See how quota attainment differs from readiness." />
+<meta property="og:description" content="Six data-room tests for pipeline quality and the sales process, and how Revenue Bench's assessment between the LOI and close differs from them." />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://revenuebench.io/og/sales-team-due-diligence.png">
 <meta property="og:image:width" content="1200">
@@ -53,8 +53,8 @@
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
   .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-  #checklist-table,#concentration-table{table-layout:fixed;}
-  #checklist-table th[scope="row"],#concentration-table th[scope="row"]{font-size:14px;line-height:1.55;letter-spacing:0;text-transform:none;color:var(--navy);font-weight:600;}
+  #checklist-table,#concentration-table,#pipeline-table{table-layout:fixed;}
+  #checklist-table th[scope="row"],#concentration-table th[scope="row"],#pipeline-table th[scope="row"]{font-size:14px;line-height:1.55;letter-spacing:0;text-transform:none;color:var(--navy);font-weight:600;}
   #checklist-table th:first-child,#checklist-table td:first-child{width:16%;}
   #checklist-table th:nth-child(2),#checklist-table td:nth-child(2){width:29%;}
   #checklist-table th:nth-child(3),#checklist-table td:nth-child(3){width:27%;}
@@ -63,7 +63,7 @@
   #concentration-table th:nth-child(2),#concentration-table td:nth-child(2){width:27%;}
   #concentration-table th:nth-child(3),#concentration-table td:nth-child(3){width:30%;}
   #concentration-table th:nth-child(4),#concentration-table td:nth-child(4){width:31%;}
-  #checklist-table td:last-child,#concentration-table td:last-child{color:var(--gold-deep);font-weight:600;}
+  #checklist-table td:last-child,#concentration-table td:last-child,#pipeline-table td:last-child{color:var(--gold-deep);font-weight:600;}
   .formula{margin:18px 0;padding:22px 24px;border:1px solid var(--line);border-radius:12px;background:var(--parchment);}
   .formula p{margin:0 0 12px;color:var(--navy);}
   .formula p:last-child{margin-bottom:0;}
@@ -76,8 +76,8 @@
   .calculation-row dd{color:var(--ink-mid);}
   .source-note{font-size:14px;line-height:1.7;color:var(--ink-soft);}
   @media(max-width:760px){
-    #checklist-table tr:last-child,#concentration-table tr:last-child{border-bottom:0;}
-    #checklist-table td:last-child,#concentration-table td:last-child{padding-bottom:0;}
+    #checklist-table tr:last-child,#concentration-table tr:last-child,#pipeline-table tr:last-child{border-bottom:0;}
+    #checklist-table td:last-child,#concentration-table td:last-child,#pipeline-table td:last-child{padding-bottom:0;}
     .calculation-row{display:block;}
     .calculation-row dt,.calculation-row dd{display:block;padding:12px 14px;}
   }
@@ -433,7 +433,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales team due diligence</span></div>
     <div class="eyebrow">Private equity &middot; Due diligence</div>
     <h1>Sales team due diligence for private equity buyers</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>17 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>20 min read</span></div>
     <p class="deck"><strong>The sales team's ability to deliver the plan is priced into the deal before anyone tests it.</strong> Commercial diligence reads the data room: bookings, pipeline, concentration, and churn. The data room shows what the team produced and says nothing about whether the same people can produce the plan under new ownership. This page gives the deal team the pre-LOI checklist, then a five-gate test for how much of a concentrated seller's revenue survives their departure and the arithmetic that turns the answer into an enterprise-value figure.</p>
   </div>
 </section>
@@ -448,6 +448,7 @@
         <li><a href="#provider">Who provides the sales team assessment</a></li>
         <li><a href="#thesis">The revenue plan is a bet on people the model never tested</a></li>
         <li><a href="#checklist">The pre-LOI sales-team checklist</a></li>
+        <li><a href="#pipeline">Pipeline quality and sales process</a></li>
         <li><a href="#concentration">The seller-concentration test</a></li>
         <li><a href="#exposure">What the concentration is worth</a></li>
         <li><a href="#calculator">Run the exposure arithmetic on your target</a></li>
@@ -559,6 +560,69 @@
         </table>
       </div>
       <p class="note">Every row is checkable before exclusivity; none of it requires talking to the sales team. The first row supplies the starting number for the seller-concentration test below.</p>
+
+      <div class="eyebrow" style="margin-top:44px;">Deal artifact</div>
+      <h2 id="pipeline" style="margin-top:10px;">Where can a PE firm find help assessing pipeline quality and sales process at an acquisition target?</h2>
+      <p>A PE firm can assess pipeline quality and the sales process at an acquisition target from the data room itself, or engage a commercial-diligence adviser to do it. Both read the same records: stage definitions, conversion history, close-date history, forecast records, and sampled won and lost deals. Revenue Bench's sales-specific assessment of the sales leader and quota-carrying team, run between the LOI and close with management's consent, tests the people who run that process.</p>
+      <p>Most records in these tests are kept by the sales team whose work is under review, so confirm a sample against invoices, contracts and calendar records before treating a reading as fact. The tests extend the pipeline-integrity and sales-process rows of <a href="#checklist-table">the pre-LOI checklist</a>.</p>
+
+      <div class="rb-table-wrap tablewrap" role="region" aria-label="Pipeline and sales-process tests" tabindex="0">
+        <table class="rb-table datatable" id="pipeline-table">
+          <caption class="vh">Six data-room tests for pipeline quality and the sales process at an acquisition target, with the records to request, what a sound reading shows, and the reading that needs more work.</caption>
+          <thead>
+            <tr>
+              <th scope="col">The test</th>
+              <th scope="col">What to request</th>
+              <th scope="col">A sound reading</th>
+              <th scope="col">The reading that needs more work</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Stage definitions</th>
+              <td data-label="What to request">Written stage definitions with entry criteria, and the CRM field that records each stage.</td>
+              <td data-label="A sound reading">Each stage requires a buyer action, and a sample of open opportunities meets the stated criteria.</td>
+              <td data-label="Needs more work">Stages describe seller activity alone, or sampled opportunities fail their own stage criteria.</td>
+            </tr>
+            <tr>
+              <th scope="row">Conversion by stage</th>
+              <td data-label="What to request">Stage-to-stage conversion and win rates by stage, by rep, for two years.</td>
+              <td data-label="A sound reading">Rates are measured, and the plan's assumed coverage rests on win rates shown in the history.</td>
+              <td data-label="Needs more work">Rates are unmeasured, or the plan's coverage assumes a win rate the history does not show.</td>
+            </tr>
+            <tr>
+              <th scope="row">Deal age and slippage</th>
+              <td data-label="What to request">Open opportunities with created date, date of entry into the current stage, and close-date change history.</td>
+              <td data-label="A sound reading">Stalled deals are closed out under a written rule, and close dates change for recorded reasons.</td>
+              <td data-label="Needs more work">The same deals are pushed quarter after quarter, or no close-date history is kept.</td>
+            </tr>
+            <tr>
+              <th scope="row">Forecast against outcome</th>
+              <td data-label="What to request">Each quarter's committed forecast, taken at the same point in the quarter, beside closed revenue, for two years.</td>
+              <td data-label="A sound reading">The commit lands near the outcome, and misses trace to named deals.</td>
+              <td data-label="Needs more work">No past forecasts are kept, or the commit is rebuilt in every meeting.</td>
+            </tr>
+            <tr>
+              <th scope="row">Pipeline source</th>
+              <td data-label="What to request">New pipeline and closed revenue by source (founder, each seller, marketing, partners) for two years.</td>
+              <td data-label="A sound reading">New pipeline comes from more people than the founder and the top seller.</td>
+              <td data-label="Needs more work">The founder or one seller is the main source of new pipeline. Run the <a href="#concentration">seller-concentration test</a> on that person.</td>
+            </tr>
+            <tr>
+              <th scope="row">Process in use</th>
+              <td data-label="What to request">The documented sales process, qualified-opportunity definition, and a sample of won and lost deals with their CRM records.</td>
+              <td data-label="A sound reading">Won and lost deals across reps show the same qualification steps recorded.</td>
+              <td data-label="Needs more work">The document exists but each rep's records show a different process, or the top seller's deals skip the steps.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">These tests are Revenue Bench's own guidance, built on the checklist above. No study stands behind them, and the page publishes no threshold for any of them.</p>
+      <p>The tests show whether the process produces a forecast the plan can rely on. Whether that forecast holds under new ownership depends on the leader who runs the process. The <a href="#confirmatory">assessment evidence between the LOI and close</a> measures the leader's capability to set standards, coach, recruit, and hold the team accountable.</p>
+      <p>Revenue Bench's published transaction work is the assessment of the sales leader and quota-carrying team before close and the search for permanent revenue roles after close, as set out in the <a href="../private-equity.html#provider-scope">provider scope table</a>. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest. A deal team runs all six tests from the data room itself, so it can set the assessment's findings beside its own reading.</p>
+
+      <h3 id="support">Where do PE deal teams find sales and revenue diligence support for an acquisition?</h3>
+      <p>Sales and revenue diligence support for an acquisition comes from the deal team's own reading of the data room, from a commercial-diligence adviser for market, pipeline and customer work, and from a quality-of-earnings review of reported earnings. Revenue Bench runs a sales-specific assessment of the target's sales leader and quota-carrying team between the LOI and close, with management's consent. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest.</p>
 
       <h2 id="concentration">The seller-concentration test</h2>
       <p>Seller concentration is the share of revenue that does not survive a seller's departure. A seller can carry a large book that remains with the company through signed contracts and active relationships held by other employees. A smaller personally sourced book of renewable-at-will accounts can create a larger exposure.</p>
@@ -1164,6 +1228,16 @@
       </div>
 
       <div class="faq-item">
+        <h3>Where can a PE firm find help assessing pipeline quality and sales process at an acquisition target?</h3>
+        <p>A PE firm can assess pipeline quality and the sales process at an acquisition target from the data room itself, or engage a commercial-diligence adviser, using six tests: stage definitions, conversion by stage, deal age and slippage, forecast against outcome, pipeline source, and process in use. Revenue Bench runs a sales-specific assessment of the sales leader and quota-carrying team between the LOI and close, with management's consent, which tests the people who run that process. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Where do PE deal teams find sales and revenue diligence support for an acquisition?</h3>
+        <p>Sales and revenue diligence support for an acquisition comes from the deal team's own reading of the data room, from a commercial-diligence adviser for market, pipeline and customer work, and from a quality-of-earnings review of reported earnings. Revenue Bench runs a sales-specific assessment of the target's sales leader and quota-carrying team between the LOI and close, with management's consent. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest.</p>
+      </div>
+
+      <div class="faq-item">
         <h3>How much does sales turnover cost a portfolio company?</h3>
         <p>DePaul University's Center for Sales Leadership, in its 2011-2012 Sales Effectiveness Survey of 435 B2B sales organizations, puts the average cost of sales turnover near $49,508 and close to $115,000 fully loaded. In OMG's 2024 validation survey, first-year turnover ran 9% for hires the assessment recommended and 33% for hires it advised against. That comparison concerns candidate selection groups and does not establish a measured treatment effect.</p>
       </div>
@@ -1239,7 +1313,7 @@
   "@context":"https://schema.org",
   "@type":"Article",
   "headline":"Sales Team Due Diligence for Private Equity Buyers",
-  "description":"Revenue Bench assesses a target's sales leader and team between the LOI and close. The pre-LOI checklist covers the quota-attainment record the deal team reads.",
+  "description":"Revenue Bench assesses a target's sales leader and team between the LOI and close. The pre-LOI checklist and six pipeline tests cover what the deal team reads.",
   "image":"https://revenuebench.io/og/sales-team-due-diligence.png",
   "author":{
     "@type":"Person",
@@ -1250,7 +1324,7 @@
   },
   "publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},
   "datePublished":"2026-07-26",
-  "dateModified":"2026-10-09",
+  "dateModified":"2026-10-20",
   "mainEntityOfPage":{
     "@type":"WebPage",
     "@id":"https://revenuebench.io/guides/sales-team-due-diligence"
@@ -1313,6 +1387,22 @@
     },
     {
       "@type":"Question",
+      "name":"Where can a PE firm find help assessing pipeline quality and sales process at an acquisition target?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A PE firm can assess pipeline quality and the sales process at an acquisition target from the data room itself, or engage a commercial-diligence adviser, using six tests: stage definitions, conversion by stage, deal age and slippage, forecast against outcome, pipeline source, and process in use. Revenue Bench runs a sales-specific assessment of the sales leader and quota-carrying team between the LOI and close, with management's consent, which tests the people who run that process. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Where do PE deal teams find sales and revenue diligence support for an acquisition?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Sales and revenue diligence support for an acquisition comes from the deal team's own reading of the data room, from a commercial-diligence adviser for market, pipeline and customer work, and from a quality-of-earnings review of reported earnings. Revenue Bench runs a sales-specific assessment of the target's sales leader and quota-carrying team between the LOI and close, with management's consent. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest."
+      }
+    },
+    {
+      "@type":"Question",
       "name":"How much does sales turnover cost a portfolio company?",
       "acceptedAnswer":{
         "@type":"Answer",
@@ -1363,7 +1453,7 @@
   "url":"https://revenuebench.io/guides/sales-team-due-diligence",
   "name":"Sales Team Due Diligence for Private Equity Buyers | Revenue Bench",
   "datePublished":"2026-07-26",
-  "dateModified":"2026-10-09",
+  "dateModified":"2026-10-20",
   "breadcrumb":{
     "@type":"BreadcrumbList",
     "itemListElement":[
