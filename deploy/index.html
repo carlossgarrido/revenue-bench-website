@@ -34,7 +34,7 @@
   <meta name="twitter:image" content="https://revenuebench.io/og/home.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link href="assets/site.css" rel="stylesheet" />
 <style>
   .faq-item{border-top:1px solid var(--line);padding:24px 0;}
@@ -43,11 +43,11 @@
   .faq-item p{font-size:15.5px;color:var(--ink-mid);line-height:1.7;}
   .form-sent{text-align:center;padding:22px 6px;}
   .form-sent-mark{width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin:0 auto 16px;}
-  .form-sent h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--ink);margin:0 0 8px;}
+  .form-sent h3{font-family:var(--f-display);font-size:26px;color:var(--ink);margin:0 0 8px;}
   .form-sent p{font-size:15px;line-height:1.6;color:var(--ink-soft);margin:0;}
 </style>
 </head>
-<body>
+<body class="dark-top">
 
 <!-- NAV -->
 <header class="site-nav" id="nav">
@@ -66,7 +66,7 @@
 <a id="top"></a>
 
 <!-- HERO -->
-<section class="hero bg-cream">
+<section class="hero bg-navy">
   <div class="container hero-grid">
     <div class="reveal">
       <div class="eyebrow">Sales &amp; Sales Leadership Recruitment</div>
@@ -83,17 +83,24 @@
           <span class="bench-tag">On the bench now</span>
           <span class="note">Representative profiles</span>
         </div>
-        <div class="bench-card"><div class="av">AE</div><div class="ci"><div class="r">Enterprise AE · Cybersecurity SaaS</div><div class="m">Top 5% at a $300M ARR org · 142% of plan</div></div><span class="pill avail">Available</span></div>
-        <div class="bench-card"><div class="av">VP</div><div class="ci"><div class="r">VP Sales · PE-backed FinTech</div><div class="m">Two exits · scaled a team from 6 to 40</div></div><span class="pill review">In review</span></div>
-        <div class="bench-card"><div class="av">RO</div><div class="ci"><div class="r">RevOps Lead · Vertical SaaS</div><div class="m">$40M ARR · HubSpot, Clay, AI workflows</div></div><span class="pill avail">Available</span></div>
-        <div class="bench-card"><div class="av">SM</div><div class="ci"><div class="r">Sales Manager · Industrial</div><div class="m">Built a 12-rep team · 119% in year two</div></div><span class="pill avail">Available</span></div>
+        <a class="bench-card p-sell" href="#contact" data-cursor="Request profile"><div class="av">AE</div><div class="ci"><div class="pr">Sell</div><div class="r">Enterprise AE · Cybersecurity SaaS</div><div class="m">Top 5% at a $300M ARR org · 142% of plan</div></div><span class="pill avail">Available</span></a>
+        <a class="bench-card p-lead" href="#contact" data-cursor="Request profile"><div class="av">VP</div><div class="ci"><div class="pr">Lead</div><div class="r">VP Sales · PE-backed FinTech</div><div class="m">Two exits · scaled a team from 6 to 40</div></div><span class="pill review">In review</span></a>
+        <a class="bench-card p-gtm" href="#contact" data-cursor="Request profile"><div class="av">RO</div><div class="ci"><div class="pr">GTM</div><div class="r">RevOps Lead · Vertical SaaS</div><div class="m">$40M ARR · HubSpot, Clay, AI workflows</div></div><span class="pill avail">Available</span></a>
+        <a class="bench-card p-lead" href="#contact" data-cursor="Request profile"><div class="av">SM</div><div class="ci"><div class="pr">Lead</div><div class="r">Sales Manager · Industrial</div><div class="m">Built a 12-rep team · 119% in year two</div></div><span class="pill avail">Available</span></a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ROLES WE RECRUIT -->
+<div class="roleband" aria-label="Roles we recruit">
+  <ul class="roleband-track">
+    <li class="p-sell">SDR</li><li class="p-sell">BDR</li><li class="p-sell">Account executive</li><li class="p-gtm">Sales enablement</li><li class="p-gtm">RevOps</li><li class="p-gtm">Go-to-market</li><li class="p-lead">Sales manager</li><li class="p-lead">VP of Sales</li><li class="p-lead">CRO</li>
+  </ul>
+</div>
+
 <!-- TRUST BAND -->
-<section class="section tight bg-cream" style="padding-top:0;">
+<section class="section tight bg-cream">
   <div class="container reveal">
     <div class="trust">
       <div class="t"><div class="n">$3B+</div><div class="l">Client revenue supported</div></div>
@@ -120,6 +127,29 @@
           <div class="big">$250K</div>
           <div class="t">The average cost of a single mis-hire in a revenue role, counting base, draw, lost pipeline, and the management time spent on someone who should not have been hired. Revenue Bench was built to solve an expensive problem.</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAILURE CURVE (scroll-pinned; complete and readable without script) -->
+<section class="curve bg-navy" id="failure-curve" aria-labelledby="curve-h">
+  <div class="curve-stick">
+    <div class="container curve-in">
+      <div>
+        <div class="eyebrow">Why we assess and coach</div>
+        <div class="rule"></div>
+        <h2 class="h-lg" id="curve-h">Out of every 100 first-year sales hires</h2>
+        <div class="stages">
+          <button type="button" class="stage on" data-stage="0"><span class="n">33%</span><span class="t"><b>Hired the usual way</b><span>fail in their first year</span></span></button>
+          <button type="button" class="stage" data-stage="1"><span class="n">9%</span><span class="t"><b>Assessed before the offer</b><span>fail when we assess first</span></span></button>
+          <button type="button" class="stage" data-stage="2"><span class="n">&lt;5%</span><span class="t"><b>Assessed, then coached for 90 days</b><span>fail with the onboarding coach</span></span></button>
+        </div>
+      </div>
+      <div class="curve-viz">
+        <div class="bignum" aria-live="polite">33%<small>fail in year one</small></div>
+        <div class="dots" aria-hidden="true"></div>
+        <p class="note">Each dot is one hire. Coral marks a hire that fails in the first year.</p>
       </div>
     </div>
   </div>
@@ -170,7 +200,7 @@
 </section>
 
 <!-- THE BENCH -->
-<section class="section bg-navy" id="bench">
+<section class="section bg-navy wash" id="bench">
   <div class="container">
     <div class="center maxw-680 mx-auto reveal">
       <div class="eyebrow">The Revenue Bench</div>
@@ -179,12 +209,12 @@
       <p class="lead" style="margin-top:14px;">Most companies start every search from zero. Our clients start from a bench of revenue talent we have already sourced, assessed, and vetted. When you need a role filled, the shortlist already exists.</p>
     </div>
     <div class="grid-3 reveal" style="margin-top:48px;">
-      <div class="bench-card"><div class="av">AE</div><div class="ci"><div class="r">Enterprise AE · Cybersecurity</div><div class="m">142% of plan · 6 yrs · $300M ARR org</div></div><span class="pill avail">Available</span></div>
-      <div class="bench-card"><div class="av">VP</div><div class="ci"><div class="r">VP Sales · PE-backed FinTech</div><div class="m">Two exits · scaled 6 to 40 reps</div></div><span class="pill review">In review</span></div>
-      <div class="bench-card"><div class="av">RO</div><div class="ci"><div class="r">RevOps Lead · Vertical SaaS</div><div class="m">$40M ARR · HubSpot, Clay, AI</div></div><span class="pill avail">Available</span></div>
-      <div class="bench-card"><div class="av">SM</div><div class="ci"><div class="r">Sales Manager · Industrial</div><div class="m">Built a 12-rep team · 119% year two</div></div><span class="pill avail">Available</span></div>
-      <div class="bench-card"><div class="av">SE</div><div class="ci"><div class="r">Sales Enablement Dir · SaaS</div><div class="m">Cut ramp time from 6 to 3 months</div></div><span class="pill review">In review</span></div>
-      <div class="bench-card"><div class="av">CR</div><div class="ci"><div class="r">CRO · Growth-stage SaaS</div><div class="m">$8M to $52M ARR · one exit</div></div><span class="pill avail">Available</span></div>
+      <a class="bench-card p-sell" href="#contact" data-cursor="Request profile"><div class="av">AE</div><div class="ci"><div class="pr">Sell</div><div class="r">Enterprise AE · Cybersecurity</div><div class="m">142% of plan · 6 yrs · $300M ARR org</div></div><span class="pill avail">Available</span></a>
+      <a class="bench-card p-lead" href="#contact" data-cursor="Request profile"><div class="av">VP</div><div class="ci"><div class="pr">Lead</div><div class="r">VP Sales · PE-backed FinTech</div><div class="m">Two exits · scaled 6 to 40 reps</div></div><span class="pill review">In review</span></a>
+      <a class="bench-card p-gtm" href="#contact" data-cursor="Request profile"><div class="av">RO</div><div class="ci"><div class="pr">GTM</div><div class="r">RevOps Lead · Vertical SaaS</div><div class="m">$40M ARR · HubSpot, Clay, AI</div></div><span class="pill avail">Available</span></a>
+      <a class="bench-card p-lead" href="#contact" data-cursor="Request profile"><div class="av">SM</div><div class="ci"><div class="pr">Lead</div><div class="r">Sales Manager · Industrial</div><div class="m">Built a 12-rep team · 119% year two</div></div><span class="pill avail">Available</span></a>
+      <a class="bench-card p-gtm" href="#contact" data-cursor="Request profile"><div class="av">SE</div><div class="ci"><div class="pr">GTM</div><div class="r">Sales Enablement Dir · SaaS</div><div class="m">Cut ramp time from 6 to 3 months</div></div><span class="pill review">In review</span></a>
+      <a class="bench-card p-lead" href="#contact" data-cursor="Request profile"><div class="av">CR</div><div class="ci"><div class="pr">Lead</div><div class="r">CRO · Growth-stage SaaS</div><div class="m">$8M to $52M ARR · one exit</div></div><span class="pill avail">Available</span></a>
     </div>
     <div class="center reveal" style="margin-top:40px;">
       <a href="#contact" class="btn btn-gold">Request access to the bench <span class="arrow">&rarr;</span></a>
@@ -483,6 +513,7 @@
     });
   })();
 </script>
+<script defer src="assets/motion.js"></script>
 <script defer src="assets/cursor.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@
   <meta name="twitter:image" content="https://revenuebench.io/og/about.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link href="assets/site.css" rel="stylesheet" />
 <style>
   .eco{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;}
@@ -47,7 +47,7 @@
   .eco-card.is-rb p{color:rgba(255,255,255,.72);}
   .values{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px;}
   .value{background:var(--white);border:1px solid var(--line-soft);border-radius:14px;padding:28px 28px;}
-  .value .vn{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;color:var(--gold);line-height:1;}
+  .value .vn{font-family:var(--f-display);font-weight:700;font-size:28px;color:var(--gold);line-height:1;}
   .value h3{font-size:20px;margin:12px 0 8px;}
   .value p{font-size:14.5px;color:var(--ink-mid);line-height:1.65;}
   @media(max-width:920px){.eco{grid-template-columns:1fr;}.values{grid-template-columns:1fr;}}
@@ -268,6 +268,7 @@
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 </script>
+<script defer src="assets/motion.js"></script>
 <script defer src="assets/cursor.js"></script>
 </body>
 </html>

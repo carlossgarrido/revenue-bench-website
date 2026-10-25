@@ -33,17 +33,17 @@
   <meta name="twitter:image" content="https://revenuebench.io/og/private-equity.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link href="assets/site.css" rel="stylesheet" />
 <style>
   .ev-band{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white);margin-top:36px;}
   .ev{padding:26px 26px;border-right:1px solid var(--line);}
   .ev:last-child{border-right:0;}
-  .ev .n{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:32px;color:var(--gold-deep);line-height:1;}
+  .ev .n{font-family:var(--f-display);font-weight:700;font-size:32px;color:var(--gold-deep);line-height:1;}
   .ev .l{font-size:13.5px;color:var(--ink-mid);margin:8px 0 10px;line-height:1.5;}
   .ev a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:1px;}
   .persona{background:var(--white);border:1px solid var(--line-soft);border-radius:16px;padding:30px 30px;box-shadow:var(--shadow);}
-  .persona .s{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;color:var(--gold);line-height:1;}
+  .persona .s{font-family:var(--f-display);font-weight:700;font-size:26px;color:var(--gold);line-height:1;}
   .persona h3{font-size:21px;margin:12px 0 10px;}
   .persona p{font-size:14.5px;color:var(--ink-mid);line-height:1.65;}
   .persona .need{margin-top:14px;font-size:13.5px;color:var(--navy);border-top:1px solid var(--line);padding-top:14px;}
@@ -52,7 +52,7 @@
   .research a{display:grid;grid-template-columns:150px 1fr auto;gap:22px;align-items:center;padding:22px 26px;background:rgba(255,255,255,.03);transition:background .2s ease;}
   .research a:hover{background:rgba(255,255,255,.06);}
   .research .src{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);}
-  .research .ti{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#fff;}
+  .research .ti{font-family:var(--f-display);font-size:20px;font-weight:600;color:#fff;}
   .research .wh{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.5;margin-top:4px;}
   .research .go{color:var(--gold-light);font-size:18px;}
   .faq-item{border-top:1px solid var(--line);padding:24px 0;}
@@ -763,6 +763,7 @@
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 </script>
+<script defer src="assets/motion.js"></script>
 <script defer src="assets/cursor.js"></script>
 </body>
 </html>

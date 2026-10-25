@@ -33,7 +33,7 @@
   <meta name="twitter:image" content="https://revenuebench.io/og/for-candidates.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link href="assets/site.css" rel="stylesheet" />
 <style>
   .faq-item{border-top:1px solid var(--line);padding:24px 0;}
@@ -42,7 +42,7 @@
   .faq-item p{font-size:15.5px;color:var(--ink-mid);line-height:1.7;}
   .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px;}
   .role{background:var(--white);border:1px solid var(--line-soft);border-radius:14px;padding:22px 24px;}
-  .role .rt{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;color:var(--navy);line-height:1.1;}
+  .role .rt{font-family:var(--f-display);font-weight:700;font-size:20px;color:var(--navy);line-height:1.1;}
   .role .rd{font-size:13.5px;color:var(--ink-soft);margin-top:7px;line-height:1.5;}
   @media(max-width:920px){.role-grid{grid-template-columns:1fr 1fr;}}
   @media(max-width:620px){.role-grid{grid-template-columns:1fr;}}
@@ -212,6 +212,7 @@
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 </script>
+<script defer src="assets/motion.js"></script>
 <script defer src="assets/cursor.js"></script>
 </body>
 </html>
