@@ -412,3 +412,97 @@ html.mo .wash>.container{opacity:calc(.15 + var(--wt,1)*.85);}
 .bench-card .pill{position:absolute;top:17px;right:18px;}
 .bench-card .ci{padding-top:1px;}
 .bench-card .r{padding-right:4px;}
+
+/* ---------------------------------------------------------------------------
+   2026-10 refresh, round two (from the 12 October brand direction)
+--------------------------------------------------------------------------- */
+
+/* people hero: the collage sits behind the headline; navy fades it out under the copy */
+.hero-people{position:relative;overflow:hidden;min-height:min(780px,94vh);display:flex;align-items:center;}
+.hero-people>.container{position:relative;z-index:2;width:100%;}
+.hero-copy{max-width:560px;}
+.hero-art{position:absolute;top:0;bottom:0;right:0;left:34%;z-index:0;}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:45% 45%;transform-origin:60% 40%;}
+html.mo .hero-art img{animation:rb-settle 2.2s var(--ease) both;}
+@keyframes rb-settle{from{transform:scale(1.07);opacity:.35;}to{transform:none;opacity:1;}}
+.hero-people::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--navy) 0%,var(--navy) 35%,rgba(11,26,46,.82) 42%,rgba(11,26,46,.3) 52%,rgba(11,26,46,0) 60%),linear-gradient(0deg,var(--navy) 0%,rgba(11,26,46,0) 20%);}
+@media (max-width:760px){
+  .hero-people{display:block;min-height:0;padding-top:0!important;}
+  .hero-art{position:relative;left:0;height:58vw;min-height:240px;max-height:380px;}
+  .hero-art img{object-position:50% 30%;}
+  .hero-people::after{background:linear-gradient(0deg,var(--navy) 0%,rgba(11,26,46,0) 30%);bottom:auto;height:max(240px,min(58vw,380px));}
+  .hero-people>.container{margin-top:-28px;}
+}
+
+/* Bench portraits */
+.bench-card .av{overflow:hidden;padding:0;}
+.bench-card .av img{width:100%;height:100%;object-fit:cover;}
+
+/* what we recruit: the three practices as solid colour blocks */
+.practices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:48px;}
+.practice{border-radius:var(--r-card);padding:30px 28px 26px;color:#fff;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;}
+.practice.p-sell{background:#D9533A;} .practice.p-gtm{background:#0E8077;} .practice.p-lead{background:#5B4BD8;}
+.practice::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08);}
+.practice .pk{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);}
+.practice h3{color:#fff;font-size:28px;}
+.practice ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:4px;}
+.practice li{font-size:15.5px;color:rgba(255,255,255,.92);padding-left:16px;position:relative;}
+.practice li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:2px;background:rgba(255,255,255,.7);}
+.practice .pg{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.22);font-size:14px;color:rgba(255,255,255,.88);}
+@media (max-width:920px){.practices{grid-template-columns:1fr;}}
+
+/* the nine columns */
+.ninecol{margin:52px auto 0;max-width:980px;}
+.ninecol .roof{background:var(--navy);color:#fff;font-family:var(--f-mono);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;text-align:center;padding:14px 0;border-radius:14px 14px 4px 4px;}
+.ninecol .cols{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;align-items:end;height:280px;margin:8px 0;}
+.ninecol .col{height:82%;background:var(--white);border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:10px 4px;transform-origin:bottom;}
+.ninecol .cn{font-size:13px;font-weight:600;color:var(--navy);text-align:center;line-height:1.25;}
+.ninecol .col.talent{height:100%;background:var(--bench);border-color:var(--bench);flex-direction:column;gap:8px;box-shadow:0 0 0 6px rgba(226,170,60,.16);}
+.ninecol .col.talent .cn{font-family:var(--f-display);font-weight:800;font-size:17px;letter-spacing:.02em;text-transform:uppercase;}
+.ninecol .col.talent .cd{font-size:12px;line-height:1.3;color:var(--navy);text-align:center;max-width:110px;}
+.ninecol .plinth{height:10px;border-radius:4px 4px 14px 14px;background:var(--parchment);border:1px solid var(--line);}
+.ninecol figcaption{margin-top:14px;text-align:center;max-width:none;}
+html.mo .ninecol .col{transform:scaleY(.12);opacity:.3;transition:transform .9s var(--ease),opacity .6s ease;transition-delay:calc(var(--c)*70ms);}
+html.mo .ninecol .col.talent{transition-delay:720ms;}
+html.mo .ninecol.up .col{transform:none;opacity:1;}
+@media (max-width:760px){
+  .ninecol .cols{gap:4px;height:300px;}
+  .ninecol .col{padding:8px 0;}
+  .ninecol .cn{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;}
+  .ninecol .col.talent .cn{font-size:14px;}
+  .ninecol .col.talent .cd{display:none;}
+  .ninecol .roof{letter-spacing:.2em;}
+}
+
+/* the Bench: practice nodes, and the float-and-connect variant */
+.bench-nodes{display:flex;justify-content:center;gap:12px;margin-top:34px;}
+.bench-nodes span{--pc:var(--navy);display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.86);padding:8px 14px;border-radius:999px;border:1px solid var(--line-dark);background:rgba(255,255,255,.05);}
+.bench-nodes span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pc);box-shadow:0 0 0 4px color-mix(in srgb,var(--pc) 25%,transparent);}
+.bench-nodes .p-sell{--pc:var(--sell);} .bench-nodes .p-gtm{--pc:var(--gtm);} .bench-nodes .p-lead{--pc:var(--lead);}
+#bench .container{position:relative;}
+.bench-links{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible;}
+.bench-links path{fill:none;stroke-width:1.5;stroke-linecap:round;opacity:.55;}
+.bench-grid{position:relative;z-index:1;}
+html.mo #bench[data-bench="float"] .bench-grid .bench-card{opacity:0;transform:translateY(46px) rotate(var(--rot,0deg)) scale(.96);transition:opacity .7s ease,transform 1s var(--ease);transition-delay:calc(var(--k,0)*110ms);}
+html.mo #bench[data-bench="float"] .bench-grid.floated .bench-card{opacity:1;transform:none;}
+
+/* closing cylinder */
+.cylinder-sec{padding:84px 0 92px;overflow:hidden;}
+.cylinder{position:relative;height:120px;perspective:1100px;display:flex;align-items:center;justify-content:center;}
+.cyl-static{font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4vw,52px);letter-spacing:-.02em;color:#fff;text-transform:uppercase;text-align:center;}
+.cyl-ring{position:absolute;left:50%;top:50%;transform-style:preserve-3d;width:0;height:0;}
+.cyl-ring span{position:absolute;left:0;top:0;font-family:var(--f-display);font-weight:800;font-size:clamp(34px,5.2vw,72px);line-height:1;text-transform:uppercase;color:#fff;transform-origin:0 0;white-space:pre;backface-visibility:visible;}
+.cyl-ring span.t-sell{color:var(--sell);} .cyl-ring span.t-gtm{color:#3CC7BC;} .cyl-ring span.t-lead{color:var(--lead-lite);}
+@media (max-width:760px){.cylinder{height:84px;} .cylinder-sec{padding:60px 0 66px;}}
+
+/* About: Miami and Austin skylines, line art that draws itself in */
+.skylines{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;}
+.city{margin:0;display:flex;flex-direction:column;gap:12px;align-items:center;}
+.city svg{width:100%;height:auto;overflow:visible;}
+.city path{fill:none;stroke:rgba(255,255,255,.78);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+.city path.p{stroke:#3CC7BC;} .city path.w{stroke:var(--sell);stroke-width:1.2;opacity:.8;} .city path.v{stroke:var(--lead-lite);} .city path.g{stroke:#fff;}
+.city figcaption{font-family:var(--f-mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.66);}
+html.mo .skylines path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--ease);}
+html.mo .skylines.drawn path{stroke-dashoffset:0;}
+html.mo .skylines.drawn .city:nth-child(2) path{transition-delay:.35s;}
+@media (max-width:760px){.skylines{grid-template-columns:1fr;gap:28px;}}
