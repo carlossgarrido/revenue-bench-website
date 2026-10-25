@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Hiring RevOps and Sales Enablement: Scope and Sequence | Revenue Bench</title>
-<meta name="description" content="What a RevOps hire owns, what sales enablement owns, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own." />
+<meta name="description" content="What a RevOps hire owns, what sales or revenue enablement owns, how the two work together, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own." />
 <link rel="canonical" href="https://revenuebench.io/guides/hiring-revenue-operations-and-enablement" />
 <meta property="og:title" content="Hiring RevOps and Sales Enablement: Scope and Sequence" />
-<meta property="og:description" content="What RevOps owns, what enablement owns, and the order that works." />
+<meta property="og:description" content="What RevOps owns, what enablement owns, how the two work together, and the order that works." />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png">
 <meta property="og:image:width" content="1200">
@@ -73,15 +73,19 @@
   .selection-table td:nth-child(2){width:30%;}
   .selection-table td:nth-child(3){width:26%;font-weight:600;color:var(--gold-deep);}
   .selection-table td:last-child{width:24%;color:var(--ink-soft);}
+  .handoff-table td:first-child{width:22%;}
+  .handoff-table td:nth-child(2){width:26%;}
+  .handoff-table td:nth-child(3){width:26%;font-weight:600;color:var(--gold-deep);}
+  .handoff-table td:last-child{width:26%;color:var(--ink-soft);}
   @media(max-width:640px){
     .table-scroll{width:calc(100vw - 24px);}
     .author-box{align-items:flex-start;}
   }
   @media(max-width:760px){
-    #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child,#supply-table tr:last-child,#selection-table tr:last-child{border-bottom:0;}
-    #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child,#supply-table td:first-child,#selection-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before,#supply-table td:nth-child(n+2)::before,#selection-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
-    #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child,#supply-table td:last-child,#selection-table td:last-child{padding-bottom:0;}
+    #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child,#supply-table tr:last-child,#selection-table tr:last-child,#handoff-table tr:last-child{border-bottom:0;}
+    #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child,#supply-table td:first-child,#selection-table td:first-child,#handoff-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before,#supply-table td:nth-child(n+2)::before,#selection-table td:nth-child(n+2)::before,#handoff-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child,#supply-table td:last-child,#selection-table td:last-child,#handoff-table td:last-child{padding-bottom:0;}
   }
 </style>
 </head>
@@ -106,7 +110,7 @@
     <div class="eyebrow">Hiring guides</div>
     <h1>Hiring RevOps and sales enablement: scope and sequence</h1>
     <p class="deck"><strong>The revenue operations layer gives an established sales motion reliable data, process control and planning.</strong> Sales enablement makes the selling method teachable and keeps new sellers improving after onboarding. Either discipline earns a dedicated hire only after the work it operates or enables exists and has outgrown its current owner.</p>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 11, 2026</span><span class="dot"></span><span>16 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 11, 2026</span><span class="dot"></span><span>19 min read</span></div>
   </div>
 </section>
 
@@ -117,6 +121,7 @@
       <h2>Key takeaways</h2>
       <ul>
         <li>While RevOps owns the data, process and planning that make the revenue funnel governable, sales enablement owns the delivery systems that make the selling method teachable.</li>
+        <li>Revenue enablement is the name many companies use for enablement that serves more teams than sellers. Where enablement meets RevOps, each shared point has a RevOps owner and an enablement owner, and the sales leader keeps the policy.</li>
         <li>The next hire should follow the operating gap already affecting management, forecasting, onboarding, or seller performance.</li>
         <li>Neither function replaces a seller or a sales leader, and a combined role should split when either discipline demands sustained attention.</li>
         <li>A portfolio company usually inherits this layer, so the first question after close is what kind of gap the finding names. A gap in authority, governance, or sequence is closed before capacity is bought.</li>
@@ -130,6 +135,7 @@
       <ol>
         <li><a href="#layer">The revenue operations layer</a></li>
         <li><a href="#scope">Ownership by type of work</a></li>
+        <li><a href="#revenue-enablement">Revenue enablement vs revenue operations</a></li>
         <li><a href="#sequence">How the disciplines mature</a></li>
         <li><a href="#sequence-errors">Common sequencing errors</a></li>
         <li><a href="#portfolio">The layer in a portfolio company</a></li>
@@ -217,6 +223,75 @@
       <p class="table-caption">A condition in the third column is a signal to assign clear ownership. It does not automatically call for a new job if the current owner can still carry the work without displacing leadership, coaching, or selling responsibilities.</p>
 
       <div class="eyebrow" style="margin-top:44px;">Decision artifact</div>
+      <h2 id="revenue-enablement" style="margin-top:10px;">Revenue enablement vs revenue operations, and how the two work together</h2>
+      <p>Revenue operations owns the data, process and planning the revenue funnel runs on: definitions, CRM, forecasting mechanics and reporting. Revenue enablement builds the skills of the people who sell to and serve customers, through new-hire onboarding, skills training, content adoption and reinforcement. RevOps reports where deals stall on agreed definitions, enablement turns a stall that recurs across sellers into training, and RevOps reads the same measures afterward as enablement observes whether the skill is in use. The sales leader owns the policy both disciplines serve.</p>
+      <p>Sales enablement and revenue enablement are one discipline serving different audiences. Sales enablement serves sellers and their managers. Revenue enablement is the name many companies use when the same work also serves account management and customer success, and sales development where it sits outside the sales team. A wider audience means more leaders whose methods the function teaches, so each of those leaders needs to own <a href="#sequence-errors" class="content-link">a settled method</a> for their own team.</p>
+      <p>At six points the two disciplines share work. At each one, RevOps and enablement own separate parts, and sales leadership keeps the policy and performance decisions.</p>
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Shared points and ownership across revenue operations, enablement and sales leadership" tabindex="0">
+        <table class="rb-table sequence-table handoff-table" id="handoff-table">
+          <caption class="vh">Six shared points showing what RevOps owns, what enablement owns and what sales leadership keeps</caption>
+          <thead>
+            <tr>
+              <th scope="col">Where the two disciplines meet</th>
+              <th scope="col">What RevOps owns</th>
+              <th scope="col">What enablement owns</th>
+              <th scope="col">What sales leadership keeps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stage definitions and exit criteria</td>
+              <td data-label="RevOps owns">Writes the definitions into the CRM and controls changes to them.</td>
+              <td data-label="Enablement owns">Teaches what each exit criterion requires in a live deal.</td>
+              <td data-label="Sales leadership keeps">Approves the definitions as policy.</td>
+            </tr>
+            <tr>
+              <td>Where deals stall</td>
+              <td data-label="RevOps owns">Reports stage-to-stage conversion by seller and segment on the agreed definitions.</td>
+              <td data-label="Enablement owns">Turns a stall that recurs across sellers into a training priority.</td>
+              <td data-label="Sales leadership keeps">Decides which stall matters most to the revenue target and coaches it in deal reviews.</td>
+            </tr>
+            <tr>
+              <td>A new hire's ramp</td>
+              <td data-label="RevOps owns">Sets up system access, administers the account or territory assignment, and builds the ramp reports the manager reads at each gate.</td>
+              <td data-label="Enablement owns">Delivers <a href="90-day-sales-onboarding-plan.html#training" class="content-link">the onboarding plan</a> and records which skills the new hire has demonstrated.</td>
+              <td data-label="Sales leadership keeps">The hiring manager judges each gate and makes the day-90 decision.</td>
+            </tr>
+            <tr>
+              <td>A new tool or process change</td>
+              <td data-label="RevOps owns">Requirements, configuration and the fields.</td>
+              <td data-label="Enablement owns">Delivers training that shows the change inside selling work and provides reinforcement after launch.</td>
+              <td data-label="Sales leadership keeps">Sets the policy the change serves and the date it becomes the standard.</td>
+            </tr>
+            <tr>
+              <td>Sales content</td>
+              <td data-label="RevOps owns">Where content sits in the systems and any usage data those systems record.</td>
+              <td data-label="Enablement owns">Which content sellers are given, how they find it, and whether it is used in deals.</td>
+              <td data-label="Sales leadership keeps">Decides which messages and claims sellers may use with buyers.</td>
+            </tr>
+            <tr>
+              <td>Whether training changed behavior</td>
+              <td data-label="RevOps owns">The read on the agreed measures before and after the training.</td>
+              <td data-label="Enablement owns">Observes the skill in calls and role plays, with manager reinforcement planned.</td>
+              <td data-label="Sales leadership keeps">Decides whether the standard is met and makes the performance decisions that follow.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">This split is Revenue Bench's own working framework, drawn from its search and assessment work, and no study or statistic stands behind it. Where one person carries both disciplines, the table still shows which discipline each piece of work belongs to. The same reading applies to <a href="#inherited" class="content-link">the one-owner finding</a> in the inherited-layer diagnostic. Under a revenue enablement title, apply the same split to each team in scope, using that team's own stages and measures, and read the last column as that team's leader.</p>
+      <h3 id="job-description">What a revenue enablement job description should state</h3>
+      <p>Write it only after <a href="#scope" class="content-link">the ownership conditions</a> show the work has outgrown its current owner and each team in scope has a settled method. Then set the scope and the standard the hire will answer to before the search opens.</p>
+      <ul>
+        <li>The audience: which roles the function serves, sellers only or also sales development, account management and customer success.</li>
+        <li>The method it teaches, and the name of the leader who owns that method.</li>
+        <li>What it owns: new-hire onboarding, skills training, content adoption and reinforcement.</li>
+        <li>What it hands to RevOps: definitions, CRM, reporting and tool administration.</li>
+        <li>The reporting line, inside the commercial line where the function and the sales leader answer to the same standard.</li>
+        <li>How the hire will be selected and judged: <a href="#selection" class="content-link">a teaching exercise drawn from the company's method</a>, and observed skill in the people it trains.</li>
+      </ul>
+      <p>Revenue Bench recruits enablement roles into permanent, full-time seats and is paid when a role is filled, so its interest points toward a filled role.</p>
+
+      <div class="eyebrow" style="margin-top:44px;">Decision artifact</div>
       <h2 id="sequence" style="margin-top:10px;">How the disciplines mature</h2>
       <p>The sequence begins with founder judgment, moves through repeatable management practices, and ends with specialized functions supporting a broader organization. The level name describes the operating model, while each capability cell describes the maturity expected inside it.</p>
 
@@ -285,7 +360,7 @@
       <p>An enablement hire needs a selling method, manager expectations, and content worth teaching. Without those inputs, the person produces material that sellers ignore because it does not match live customer work. The early warning is steady content production paired with managers who continue teaching from personal notes and deal anecdotes.</p>
 
       <h3>The layer as a substitute for sales leadership</h3>
-      <p>Dashboards and playbooks cannot own the sales number, make performance decisions, or coach managers and sellers. When the company lacks accountable leadership, RevOps reports the symptoms and enablement documents desired behavior without anyone enforcing the standard. The early warning is a full operating cadence with unresolved forecast calls, inconsistent coaching, and unclear performance ownership. That condition calls for <a href="choosing-a-sales-leadership-model.html">choosing a sales leadership model</a> before adding more support infrastructure.</p>
+      <p>Dashboards and playbooks cannot own the revenue target, make performance decisions, or coach managers and sellers. When the company lacks accountable leadership, RevOps reports the symptoms and enablement documents desired behavior without anyone enforcing the standard. The early warning is a full operating cadence with unresolved forecast calls, inconsistent coaching, and unclear performance ownership. That condition calls for <a href="choosing-a-sales-leadership-model.html">choosing a sales leadership model</a> before adding more support infrastructure.</p>
 
       <h2 id="portfolio">The layer in a portfolio company</h2>
       <p>The argument above was written for a company building the layer one decision at a time. A portfolio company usually inherits a layer at close, so the decision changes shape. The question is what the function already in place is worth. The remaining hold period determines whether repairing it or fixing what sits above it is the better use of time.</p>
@@ -487,13 +562,23 @@
       </div>
 
       <div class="faq-item">
+        <h3>What is the difference between revenue enablement and revenue operations?</h3>
+        <p>Revenue operations owns the funnel's data, process and planning: definitions, CRM, forecasting mechanics and reporting. Revenue enablement builds the skills of the people who sell to and serve customers, through new-hire onboarding, skills training, content adoption and reinforcement. RevOps reports where deals stall on agreed definitions, enablement turns a stall that recurs across sellers into training, and RevOps reads the same measures afterward as enablement observes whether the skill is in use. The sales leader owns the policy both disciplines serve.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between sales enablement and revenue enablement?</h3>
+        <p>Sales enablement and revenue enablement are one discipline serving different audiences. Sales enablement serves sellers and their managers. Revenue enablement is the name many companies use when the same work also serves account management and customer success, and sales development where it sits outside the sales team. Each of those teams needs a leader who owns a settled method for enablement to teach.</p>
+      </div>
+
+      <div class="faq-item">
         <h3>Should a company hire RevOps or sales enablement first?</h3>
         <p>Hire against the discipline that is already failing. If numbers are contested and managers spend coaching time repairing reports, the operations gap leads, whereas an enablement gap leads when new hires learn through tribal knowledge and sellers lack a shared method, onboarding path, or reinforcement system. The observable work resolves this decision more reliably than a revenue threshold.</p>
       </div>
 
       <div class="faq-item">
         <h3>What should a sales leader hand off to a revenue operations hire?</h3>
-        <p>A sales leader should hand off CRM governance, reporting mechanics, forecast administration, territory and quota administration, process documentation control, and tool administration under policies the leader approves. The leader retains ownership of the sales number, coaching, performance decisions, strategy, and the commercial judgment behind forecast calls.</p>
+        <p>A sales leader should hand off CRM governance, reporting mechanics, forecast administration, territory and quota administration, process documentation control, and tool administration under policies the leader approves. The leader retains ownership of the revenue target, coaching, performance decisions, strategy, and the commercial judgment behind forecast calls.</p>
       </div>
 
       <div class="faq-item">
@@ -523,7 +608,12 @@
 
       <div class="faq-item">
         <h3>How do you hire a head of revenue enablement?</h3>
-        <p>First confirm that the company has a settled selling method, because enablement teaches a method and cannot supply one. Select on a teaching exercise drawn from that method and a review of a sanitized copy of the onboarding outline, scored the same way for every candidate. Confirm the result with references the candidate has agreed to, from sales leaders whose sellers the candidate trained. The sales-specific assessment measures selling and is not used for this role.</p>
+        <p>First confirm that each team in scope has a settled method, because enablement teaches a method and cannot supply one. Select on a teaching exercise drawn from that method and a review of a sanitized copy of the onboarding outline, scored the same way for every candidate. Confirm the result with references the candidate has agreed to, from leaders whose teams the candidate trained. The sales-specific assessment measures selling and is not used for this role.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What should a revenue enablement job description include?</h3>
+        <p>Write it after the company confirms the work has outgrown its current owner and each team in scope has a settled method. State the audience and the method taught, and name the leader who owns that method. Assign new-hire onboarding, skills training, content adoption and reinforcement to enablement, and hand definitions, CRM, reporting and tool administration to RevOps. Place the role inside the commercial reporting line, where the function and the sales leader answer to the same standard. Select through a teaching exercise drawn from the company's method, and judge the hire by observed skill in the people it trains.</p>
       </div>
 
       <div class="faq-item">
@@ -589,20 +679,23 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Hiring RevOps and Sales Enablement: Scope and Sequence","description":"What a RevOps hire owns, what sales enablement owns, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-11","dateModified":"2026-10-24","image":"https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Hiring RevOps and Sales Enablement: Scope and Sequence","description":"What a RevOps hire owns, what sales or revenue enablement owns, how the two work together, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-11","dateModified":"2026-10-25","image":"https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"}}
 </script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What is the difference between revenue operations and sales operations?","acceptedAnswer":{"@type":"Answer","text":"Sales operations is the older, sales-team-scoped discipline, while revenue operations extends the same data, process and planning work across the broader revenue funnel. A company may still use the sales operations title when the work remains centered on sales leadership, sellers, CRM administration, territories, quotas, and forecasting."}},
+{"@type":"Question","name":"What is the difference between revenue enablement and revenue operations?","acceptedAnswer":{"@type":"Answer","text":"Revenue operations owns the funnel's data, process and planning: definitions, CRM, forecasting mechanics and reporting. Revenue enablement builds the skills of the people who sell to and serve customers, through new-hire onboarding, skills training, content adoption and reinforcement. RevOps reports where deals stall on agreed definitions, enablement turns a stall that recurs across sellers into training, and RevOps reads the same measures afterward as enablement observes whether the skill is in use. The sales leader owns the policy both disciplines serve."}},
+{"@type":"Question","name":"What is the difference between sales enablement and revenue enablement?","acceptedAnswer":{"@type":"Answer","text":"Sales enablement and revenue enablement are one discipline serving different audiences. Sales enablement serves sellers and their managers. Revenue enablement is the name many companies use when the same work also serves account management and customer success, and sales development where it sits outside the sales team. Each of those teams needs a leader who owns a settled method for enablement to teach."}},
 {"@type":"Question","name":"Should a company hire RevOps or sales enablement first?","acceptedAnswer":{"@type":"Answer","text":"Hire against the discipline that is already failing. If numbers are contested and managers spend coaching time repairing reports, the operations gap leads, whereas an enablement gap leads when new hires learn through tribal knowledge and sellers lack a shared method, onboarding path, or reinforcement system. The observable work resolves this decision more reliably than a revenue threshold."}},
-{"@type":"Question","name":"What should a sales leader hand off to a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"A sales leader should hand off CRM governance, reporting mechanics, forecast administration, territory and quota administration, process documentation control, and tool administration under policies the leader approves. The leader retains ownership of the sales number, coaching, performance decisions, strategy, and the commercial judgment behind forecast calls."}},
+{"@type":"Question","name":"What should a sales leader hand off to a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"A sales leader should hand off CRM governance, reporting mechanics, forecast administration, territory and quota administration, process documentation control, and tool administration under policies the leader approves. The leader retains ownership of the revenue target, coaching, performance decisions, strategy, and the commercial judgment behind forecast calls."}},
 {"@type":"Question","name":"When does a dedicated sales enablement hire make sense?","acceptedAnswer":{"@type":"Answer","text":"A dedicated sales enablement hire makes sense when the company has a settled selling method and useful content, yet onboarding, skills reinforcement, and content adoption have outgrown the sales leader’s ability to run them consistently. The signal is repeated variation in how sellers learn and apply an established method, rather than the absence of a method."}},
 {"@type":"Question","name":"Can one person run both revenue operations and enablement?","acceptedAnswer":{"@type":"Answer","text":"Early on, one operations-minded hire often carries both disciplines, and the split comes when either discipline needs full-time attention. The tension is practical: RevOps rewards precision in systems and governance, while enablement requires teaching judgment and reinforcing behavior long after the training ends. A combined role becomes fragile when its owner must choose which discipline receives care."}},
 {"@type":"Question","name":"Where do private equity operating partners find revenue operations and enablement talent for portfolio companies?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use and the supply routes table sets out what each one supplies, who it answers to, and what it leaves unsettled: a permanent hire inside the company, a fund-level operating partner or operations team, a shared resource held centrally, a project engagement with an outside specialist firm, an internal promotion, and the work absorbed by the sales leader. Revenue Bench recruits the permanent roles as part of its searches across the revenue engine through the portfolio route. Selection uses role-appropriate evidence. The sales assessment is reserved for selling and sales leadership roles, for the reason set out in the boundary with sales hiring."}},
 {"@type":"Question","name":"Should a portfolio company hire revenue operations inside the first 100 days?","acceptedAnswer":{"@type":"Answer","text":"There is no default case for the hire. The answer depends on which finding in the diagnostic above is true. Where the finding is an authority or governance gap, assigning ownership and moving the function under the commercial line is the better first move and costs no headcount. Where the finding is genuine capacity, the sequencing argument in this guide still applies and is not suspended by the hold period. The portfolio sales team guide sets the post-close sequence for the leader and team decisions that come before it. Revenue Bench is paid when a role is filled, so publishing the findings where the right answer is to assign ownership and hire nobody runs against that interest."}},
 {"@type":"Question","name":"Does a portfolio company need a revenue operations partner or a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use, and the choice is wider than a partner set against a hire. The supply routes table covers permanent hires, fund-level teams, shared resources held centrally, specialist project engagements, internal promotions, and the work absorbed by the sales leader. The deciding factor is whether the definitions need an owner who is present when they are contested. Pick against the gap the diagnostic identifies, because added capacity does not establish who holds the standard."}},
-{"@type":"Question","name":"How do you hire a head of revenue enablement?","acceptedAnswer":{"@type":"Answer","text":"First confirm that the company has a settled selling method, because enablement teaches a method and cannot supply one. Select on a teaching exercise drawn from that method and a review of a sanitized copy of the onboarding outline, scored the same way for every candidate. Confirm the result with references the candidate has agreed to, from sales leaders whose sellers the candidate trained. The sales-specific assessment measures selling and is not used for this role."}},
+{"@type":"Question","name":"How do you hire a head of revenue enablement?","acceptedAnswer":{"@type":"Answer","text":"First confirm that each team in scope has a settled method, because enablement teaches a method and cannot supply one. Select on a teaching exercise drawn from that method and a review of a sanitized copy of the onboarding outline, scored the same way for every candidate. Confirm the result with references the candidate has agreed to, from leaders whose teams the candidate trained. The sales-specific assessment measures selling and is not used for this role."}},
+{"@type":"Question","name":"What should a revenue enablement job description include?","acceptedAnswer":{"@type":"Answer","text":"Write it after the company confirms the work has outgrown its current owner and each team in scope has a settled method. State the audience and the method taught, and name the leader who owns that method. Assign new-hire onboarding, skills training, content adoption and reinforcement to enablement, and hand definitions, CRM, reporting and tool administration to RevOps. Place the role inside the commercial reporting line, where the function and the sales leader answer to the same standard. Select through a teaching exercise drawn from the company's method, and judge the hire by observed skill in the people it trains."}},
 {"@type":"Question","name":"How do you hire a revenue operations director?","acceptedAnswer":{"@type":"Answer","text":"First decide who holds the definitions and where the role reports, because a new hire inherits any open question of authority. Select on an exercise in which the candidate reconciles a constructed CRM extract and drafts stage definitions. Score whether the candidate separates the sales leader's policy from the role's administration. Confirm the result with references the candidate has agreed to, from sales leaders the candidate worked under. Revenue Bench recruits revenue operations leaders into permanent, full-time seats and is paid when a role is filled."}}
 ]}
 </script>
