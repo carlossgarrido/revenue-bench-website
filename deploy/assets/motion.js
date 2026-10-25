@@ -43,6 +43,22 @@
     heads.forEach(function (h) { hio.observe(h); });
   }
 
+  /* card fly-ins: any card group that starts below the fold arrives card by card */
+  if (!reduce && 'IntersectionObserver' in window) {
+    var groups = [].slice.call(document.querySelectorAll('.grid-2, .grid-3, .steps, .practices, .cadence, .role-grid, .ev-band, .omgband, .trust'))
+      .filter(function (g) { return !g.classList.contains('bench-grid') && g.children.length > 1 && g.getBoundingClientRect().top > window.innerHeight * 0.9; });
+    var fio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fly-go'); fio.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    groups.forEach(function (g) {
+      [].forEach.call(g.children, function (c, k) {
+        c.classList.add('fly'); c.style.setProperty('--k', k);
+        c.style.setProperty('--fr', ((k % 2 ? 1 : -1) * 1.6).toFixed(1) + 'deg');
+      });
+      g.classList.add('fly-arm'); fio.observe(g);
+    });
+  }
+
   /* card spotlight: a soft light follows the pointer */
   [].forEach.call(document.querySelectorAll('.bench-card, .card, .proof-card, .serve-card, .step'), function (c) {
     c.addEventListener('pointermove', function (e) {

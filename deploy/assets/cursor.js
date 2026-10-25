@@ -4,6 +4,7 @@
    - Cards with data-cursor="Label": the ring becomes a pill with that label,
      in the card's practice colour (--pc).
    - Guide cards (.rel): a "Read guide" pill.
+   - Any other link: the ring grows and fills violet, so a link always reads as a link.
    - Dark sections: the dot inverts on its own (mix-blend-mode), the ring turns light.
    Desktop pointer devices only; respects prefers-reduced-motion; off on the
    guides (/guides/), which are reading pages. Self-contained: injects its own
@@ -35,7 +36,10 @@
     '.rb-cursor.is-magnet .rb-cursor-ring { border-color: var(--cb, rgba(14,23,38,.6)); }' +
     '.rb-cursor.is-magnet .rb-cursor-dot { transform: scale(.5); }' +
     '.rb-cursor.is-down .rb-cursor-dot { transform: scale(.5); }' +
-    '.rb-cursor.is-field .rb-cursor-ring, .rb-cursor.is-field .rb-cursor-dot { opacity: 0; }';
+    '.rb-cursor.is-field .rb-cursor-ring, .rb-cursor.is-field .rb-cursor-dot { opacity: 0; }' +
+    '.rb-cursor.is-link .rb-cursor-ring { border-color: #7B6CF0; background: rgba(123,108,240,.16); }' +
+    '.rb-cursor.is-link.on-dark .rb-cursor-ring { border-color: #A79CF8; background: rgba(167,156,248,.2); }' +
+    '.rb-cursor.is-link .rb-cursor-dot { transform: scale(1.5); }';
   document.head.appendChild(style);
 
   var root = document.createElement('div');
@@ -61,6 +65,7 @@
     var field = t.closest('input, textarea, select, [contenteditable="true"]');
     var btn = t.closest('.btn');
     var lab = t.closest('[data-cursor], .rel');
+    var link = t.closest('a, button, [role="button"], summary, label');
     root.classList.toggle('is-field', !!field);
     if (btn && !field) {
       mode = 'magnet';
@@ -74,10 +79,11 @@
         label.textContent = lab.getAttribute('data-cursor') || 'Read guide';
         var pc = getComputedStyle(lab).getPropertyValue('--pc').trim();
         root.style.setProperty('--cc', pc && !lab.classList.contains('rel') ? pc : '#0B1A2E');
-      } else mode = '';
+      } else mode = link ? 'link' : '';
     }
     root.classList.toggle('is-magnet', mode === 'magnet');
     root.classList.toggle('is-label', mode === 'label');
+    root.classList.toggle('is-link', mode === 'link');
   });
   window.addEventListener('mousedown', function () { root.classList.add('is-down'); });
   window.addEventListener('mouseup', function () { root.classList.remove('is-down'); });
@@ -92,6 +98,8 @@
       magnet.style.transform = 'translate(' + (dx * 0.18).toFixed(1) + 'px,' + (dy * 0.28).toFixed(1) + 'px)';
       tx = cx + dx * 0.18; ty = cy + dy * 0.28;
       w = (b.width + 12) + 'px'; h = (b.height + 12) + 'px'; rad = (b.height / 2 + 6) + 'px'; k = 0.25;
+    } else if (mode === 'link') {
+      w = '50px'; h = '50px'; rad = '999px'; k = 0.3;
     } else if (mode === 'label') {
       w = Math.max(96, label.offsetWidth + 30) + 'px'; h = '34px'; rad = '17px'; k = 0.22;
     }
