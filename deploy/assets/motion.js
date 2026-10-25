@@ -45,7 +45,7 @@
 
   /* card fly-ins: any card group that starts below the fold arrives card by card */
   if (!reduce && 'IntersectionObserver' in window) {
-    var groups = [].slice.call(document.querySelectorAll('.grid-2, .grid-3, .steps, .practices, .cadence, .role-grid, .ev-band, .omgband, .trust'))
+    var groups = [].slice.call(document.querySelectorAll('.grid-2, .grid-3, .steps, .practices, .cadence, .role-grid, .ev-band, .omgband, .trust, .read-cards'))
       .filter(function (g) { return !g.classList.contains('bench-grid') && g.children.length > 1 && g.getBoundingClientRect().top > window.innerHeight * 0.9; });
     var fio = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fly-go'); fio.unobserve(e.target); } });
@@ -174,15 +174,32 @@
     }
   }
 
-  /* the nine columns rise when they come into view */
+  /* the nine pillars: as the page scrolls, talent flows out along the base from the
+     center pillar and fills each pillar in turn, nearest first, lifting it to Revenue */
   var nine = document.querySelector('.ninecol');
-  if (nine) {
-    if (reduce || !('IntersectionObserver' in window)) nine.classList.add('up');
+  var pillarsSec = document.querySelector('.pillars-sec');
+  var setPillars = function () {};
+  if (nine && pillarsSec) {
+    var pcols = [].slice.call(nine.querySelectorAll('.col'));
+    var mid = pcols.findIndex(function (c) { return c.classList.contains('talent'); });
+    if (reduce) { nine.classList.add('up'); }
     else {
-      var nio = new IntersectionObserver(function (es) {
-        es.forEach(function (e) { if (e.isIntersecting) { nine.classList.add('up'); nio.disconnect(); } });
-      }, { threshold: 0.35 });
-      nio.observe(nine);
+      pillarsSec.classList.add('pin');
+      pcols.forEach(function (c) { if (!c.classList.contains('talent')) c.style.setProperty('--f', '0'); });
+      nine.style.setProperty('--s', '0');
+      var track = pillarsSec.querySelector('.pillars-track');
+      setPillars = function (vh) {
+        var r = track.getBoundingClientRect(), span = track.offsetHeight - vh;
+        var p = span > 0 ? clamp(-r.top / span) : 1;
+        nine.style.setProperty('--s', clamp(p / 0.5).toFixed(3));
+        pcols.forEach(function (c, i) {
+          if (i === mid) return;
+          var d = Math.abs(i - mid);
+          var start = 0.04 + (d - 1) * 0.12;
+          c.style.setProperty('--f', clamp((p - start) / 0.3).toFixed(3));
+        });
+        nine.classList.toggle('up', p > 0.86);
+      };
     }
   }
 
@@ -265,6 +282,7 @@
       wash.style.setProperty('--wt', t.toFixed(3));
     }
     if (nav && darkHero) nav.classList.toggle('scrolled', darkHero.getBoundingClientRect().bottom < 72);
+    setPillars(vh);
     if (heroArt && !reduce && window.scrollY < vh * 1.2) heroArt.style.transform = 'translate3d(0,' + (window.scrollY * 0.14).toFixed(1) + 'px,0)';
   }
   window.addEventListener('scroll', onScroll, { passive: true });
