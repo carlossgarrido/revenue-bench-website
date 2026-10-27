@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Reference Check Questions for Sales Candidates: What to Ask | Revenue Bench</title>
-<meta name="description" content="Ten reference check questions for sales candidates, plus sales leader questions, a three-reference mix, and consent steps that protect an employed candidate." />
+<meta name="description" content="Ten reference check questions for sales candidates, a free reference check template, leader questions, and consent steps to protect an employed candidate." />
 <link rel="canonical" href="https://revenuebench.io/guides/reference-checks-for-sales-hires" />
 <meta property="og:title" content="Reference Check Questions for Sales Candidates: What to Ask" />
-<meta property="og:description" content="Ten reference check questions for sales candidates, plus leadership questions and consent before every call." />
+<meta property="og:description" content="Ten sales reference questions, a free template, leader questions, and consent steps to protect employed candidates." />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://revenuebench.io/og/reference-checks-for-sales-hires.png">
 <meta property="og:image:width" content="1200">
@@ -62,6 +62,35 @@
   .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+  .template-table th:first-child,.template-table td:first-child{width:24%;}
+  .template-table th:nth-child(2),.template-table td:nth-child(2){width:40%;}
+  .template-table th:nth-child(3),.template-table td:nth-child(3){width:36%;}
+  .refsheet{display:none;}
+  @media print{
+    .no-print{display:none!important;}
+    body.print-sheet > *:not(.refsheet){display:none!important;}
+    body.print-sheet{background:#fff;}
+    body.print-sheet .refsheet{display:block!important;color:#000;font-family:'Inter',Arial,sans-serif;}
+    .refsheet .rs-title{font-size:18px;line-height:1.2;margin:0 0 8px;color:#000;font-weight:700;}
+    .refsheet p{font-size:10.5px;line-height:1.4;margin:0 0 12px;}
+    .refsheet table{width:100%;border-collapse:collapse;margin:12px 0;}
+    .refsheet th,.refsheet td{border:1px solid #000;padding:8px;font-size:10.5px;text-align:left;vertical-align:top;color:#000;background:#fff;}
+    .refsheet .rs-head,.refsheet .rs-q,.refsheet .rs-after{table-layout:fixed;}
+    .refsheet .rs-q th:nth-child(1){width:6%;}
+    .refsheet .rs-q th:nth-child(2){width:36%;}
+    .refsheet .rs-q th:nth-child(3){width:42%;}
+    .refsheet .rs-q th:nth-child(4){width:16%;}
+    .refsheet .rs-after th{width:32%;}
+    .refsheet .rs-head th{width:20%;}
+    .refsheet .rs-head td{width:30%;}
+    .tablewrap{width:100%;margin-left:0;transform:none;border:0;overflow:visible;}
+    .datatable{min-width:0;}
+    .refsheet .rs-head td.blank{height:22px;}
+    .refsheet .rs-q td.blank{height:40px;}
+    .refsheet .rs-after td.blank{height:48px;}
+    .refsheet tr{page-break-inside:avoid;}
+    .refsheet .rs-foot{font-size:9.5px;}
+  }
   @media(max-width:640px){
     .tablewrap{width:calc(100vw - 24px);}
     .author-box{align-items:flex-start;}
@@ -88,7 +117,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Reference check questions for sales candidates</span></div>
     <div class="eyebrow">Selection &middot; Reference protocol</div>
     <h1>Reference check questions for sales candidates: what to ask</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 2, 2026</span><span class="dot"></span><span>11 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 2, 2026</span><span class="dot"></span><span>14 min read</span></div>
     <p class="deck"><strong>A reference call usually returns little because it happens late, draws from a list chosen for praise, and relies on questions a former manager can answer with a formula.</strong> A consistent protocol, run with the candidate's consent and realistic expectations about employer policy, turns final diligence into a useful screen. The questions below test whether prior managers and colleagues support the candidate's account of the work.</p>
   </div>
 </section>
@@ -104,6 +133,7 @@
         <li>Ask about scope, performance conditions, working behavior, and willingness to hire again instead of asking for general impressions.</li>
         <li>Expect some employers to confirm only title and dates, and never count a policy-limited response against the candidate.</li>
         <li>Use reference evidence to support or challenge past-tense claims, while leaving future-role fit to the other selection screens.</li>
+        <li>Record every reference call on the free template, with the same fields before, during, and after each call.</li>
       </ul>
     </div>
 
@@ -114,6 +144,7 @@
         <li><a href="#why">Why reference checks return so little</a></li>
         <li><a href="#consent">Run it with consent, or not at all</a></li>
         <li><a href="#questions">The question protocol</a></li>
+        <li><a href="#template">The reference check template</a></li>
         <li><a href="#reading">Reading the answers</a></li>
         <li><a href="#limits">What a reference check cannot decide</a></li>
         <li><a href="#sources">About the protocol and evidence</a></li>
@@ -251,6 +282,102 @@
       </div>
       <p class="table-caption">These questions are Revenue Bench's own protocol, built from the founders' operating experience. Ask the same core set for every finalist, while allowing each reference to answer only from direct observation.</p>
 
+<div class="eyebrow" style="margin-top:44px;">Selection artifact</div>
+<h2 id="template" style="margin-top:10px;">Free reference check template for a sales representative</h2>
+<p>Revenue Bench's free reference check template for a sales representative is a printable record of one reference call. Before the call, it captures the reference and relationship, the period observed, the candidate's consent, and how identity was confirmed. During the call, it holds the ten answers in the reference's words, with any answer marked unavailable under employer policy. After the call, it logs the hire-again answer, the claims the call supports, and any conflict, with the one follow-up question it raises for the candidate. Use one sheet per reference and the same sheet for every finalist.</p>
+
+<div class="rb-table-wrap tablewrap">
+  <table class="rb-table datatable template-table">
+    <thead>
+      <tr>
+        <th scope="col">The field</th>
+        <th scope="col">What to record</th>
+        <th scope="col">The rule behind it</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="group-row"><th colspan="3" scope="colgroup">Before the call</th></tr>
+      <tr>
+        <td>Candidate and role</td>
+        <td data-label="What to record">The candidate's name, the role, the call date, and the hiring manager who ran the call.</td>
+        <td data-label="The rule behind it">Reference checks run at final diligence before the offer, after the assessment, the structured interview, and any simulation.</td>
+      </tr>
+      <tr>
+        <td>Reference and relationship</td>
+        <td data-label="What to record">The reference's name and title at the time, the relationship (former manager, peer, or former direct report), and the period the two worked together.</td>
+        <td data-label="The rule behind it">Ask only about work the reference observed. Use former managers as the primary source for rank, feedback, and management questions.</td>
+      </tr>
+      <tr>
+        <td>Consent</td>
+        <td data-label="What to record">The date the candidate approved this name, and the call time shared with the candidate.</td>
+        <td data-label="The rule behind it">An employed candidate's current manager or current employer stays off the list by default. Contact requires the candidate's explicit permission for that person and timing.</td>
+      </tr>
+      <tr>
+        <td>Identity check</td>
+        <td data-label="What to record">The independent channel used to confirm the reference, such as the company switchboard or a directory listing that matches the claimed tenure.</td>
+        <td data-label="The rule behind it">Identity confirmation requires an independent check beyond the phone number the candidate supplied.</td>
+      </tr>
+      <tr>
+        <td>Notes and policy</td>
+        <td data-label="What to record">Whether the company's own policy requires a release or another consent record, and what the reference was told about how the notes will be used and stored.</td>
+        <td data-label="The rule behind it">A company may need a release or another consent record under its own policy. Confirm it before dialing.</td>
+      </tr>
+      <tr class="group-row"><th colspan="3" scope="colgroup">During the call</th></tr>
+      <tr>
+        <td>Questions 1 and 2: verification</td>
+        <td data-label="What to record">Each answer in the reference's own words, marked observed directly or unavailable under employer policy.</td>
+        <td data-label="The rule behind it">Many employers confirm only title and dates. Plan the rest of the diligence around that limit.</td>
+      </tr>
+      <tr>
+        <td>Questions 3 to 5: performance context</td>
+        <td data-label="What to record">What the candidate inherited and built; the buyers, deal-size range, and sales-cycle pattern; and what the candidate contributed personally.</td>
+        <td data-label="The rule behind it">Set the reference's account beside the candidate's interview account of the same period.</td>
+      </tr>
+      <tr>
+        <td>Questions 6 to 8: working reality</td>
+        <td data-label="What to record">The feedback example and what changed after it, how the candidate won deals, and what the manager had to manage most closely.</td>
+        <td data-label="The rule behind it">Record events and actions. Leave out adjectives with no example behind them.</td>
+      </tr>
+      <tr>
+        <td>Questions 9 and 10: closing</td>
+        <td data-label="What to record">The hire-again answer word for word, with any condition attached, and anything the reference raised that the earlier questions missed.</td>
+        <td data-label="The rule behind it">A condition can describe the setting in which the candidate performs well.</td>
+      </tr>
+      <tr>
+        <td>Leader questions (sales manager or VP of Sales)</td>
+        <td data-label="What to record">The answers to the four leader questions, each asked of the reference type it names.</td>
+        <td data-label="The rule behind it">Each leader question names its reference: a former manager for the lead-again and inherited-team questions, a former direct report for the other two.</td>
+      </tr>
+      <tr class="group-row"><th colspan="3" scope="colgroup">After the call</th></tr>
+      <tr>
+        <td>Claims supported</td>
+        <td data-label="What to record">Each interview claim this call supports, with the event the reference described.</td>
+        <td data-label="The rule behind it">Connect each supported claim to work the reference observed.</td>
+      </tr>
+      <tr>
+        <td>Claims in conflict</td>
+        <td data-label="What to record">Each point where the reference's account differs from the candidate's, and the one specific follow-up question for the candidate.</td>
+        <td data-label="The rule behind it">A conflict prompts that follow-up question before the offer. The decision weighs it with the assessment and the structured interview.</td>
+      </tr>
+      <tr>
+        <td>Unavailable</td>
+        <td data-label="What to record">Each question that policy or the reference's role left unanswered.</td>
+        <td data-label="The rule behind it">An unanswered question is recorded as unavailable and carries no weight.</td>
+      </tr>
+      <tr>
+        <td>Job-related check</td>
+        <td data-label="What to record">A check that the notes hold job-related conduct only, and that protected information the reference volunteered was redirected, left out, and given no weight.</td>
+        <td data-label="The rule behind it">Exclude family, health, age, origin, disability, religion, and other protected characteristics. Exclude attendance and leave history, complaints or claims, and criminal history.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="table-caption">The template is Revenue Bench's own, built from the protocol above and the founders' operating experience, with no research basis claimed. Use the same sheet for every finalist, and have employment counsel review it before adopting it as standing policy.</p>
+<p class="no-print" style="margin:6px 0 26px;"><a href="#" class="btn btn-ghost" onclick="document.body.classList.add('print-sheet');window.print();return false;" style="font-size:13.5px;padding:10px 18px;">Print or save the blank template as PDF</a></p>
+
+<h3 id="three-calls">After the three reference calls</h3>
+<p>Lay the three sheets side by side against the candidate's interview account. Mark a claim supported where a reference describes an event the way the candidate did in interview, and note where two references describe the same event. A conflict produces one specific follow-up question for the candidate before the offer. Policy-limited silence is no evidence at all. Then weigh the references with the assessment and the structured interview by what each screen was built to decide. A strong reference does not offset weak selling evidence, as <a href="#limits">what a reference check cannot decide</a> sets out.</p>
+
       <h2 id="reading">Reading the answers</h2>
       <p>Useful answers contain events, responsibilities, choices, and consequences. They distinguish what the candidate owned from what the territory, team, or manager supplied. They also stay consistent with the candidate's interview account without sounding copied from it.</p>
       <p>The hire-again question compresses the reference's judgment into a commitment. An unqualified yes followed by a role-specific reason carries stronger support than a policy formula or praise that avoids the decision. When the answer is conditional, record the condition because it may identify the environment in which the candidate performed well or struggled.</p>
@@ -269,7 +396,7 @@
       <div class="method">
         <h3>Methodology note</h3>
         <p>The hiring-manager intuition figure comes from research circulated through Objective Management Group's partner network, including the firm Big Swift Kick. It is not an OMG published study.</p>
-        <p>The reference questions, consent sequence, answer guidance, and decision boundaries are Revenue Bench's own protocol, built from the founders' operating experience. Revenue Bench claims no research basis for the question set.</p>
+        <p>The reference questions, consent sequence, call template, answer guidance, and decision boundaries are Revenue Bench's own protocol, built from the founders' operating experience. Revenue Bench claims no research basis for the question set.</p>
         <p>Assessment methodology is applied through Swanston Growth Advisors, a Certified Partner of Objective Management Group.</p>
       </div>
 
@@ -325,6 +452,9 @@
         <h3>What does a good answer to “would you hire this person again” sound like?</h3>
         <p>A useful answer makes a direct commitment and explains why the candidate fits the role being discussed. Conditions can also help when the reference describes the manager, sales motion, support, or expectations the candidate needs to perform well.</p>
       </div>
+
+      <div class="faq-item"><h3>Is there a free reference check template for a sales representative?</h3><p>Revenue Bench publishes a free reference check template for a sales representative to use and print. Use one sheet per reference call. Before the call, note the relationship, the period observed, the candidate's consent, and how identity was confirmed. During the call, write each answer in the reference's words or mark it unavailable under employer policy. After the call, note the hire-again answer, the claims supported, and any conflict with its follow-up question. Get the candidate's consent before every call.</p></div>
+      <div class="faq-item"><h3>How do you compare references for a sales candidate?</h3><p>Compare the reference sheets against the candidate's interview account. Mark a claim supported where a reference describes an event the way the candidate did in interview, and note where two references describe the same event. A conflict prompts one specific follow-up question for the candidate before the offer. Policy-limited silence carries no weight. Weigh references alongside the assessment and interview according to what each screen decides.</p></div>
     </div>
 
   </div>
@@ -355,6 +485,53 @@
   </div>
 </section>
 
+<div class="refsheet" aria-hidden="true">
+  <div class="rs-title">Reference check template: sales representative</div>
+  <p>One sheet per reference. Use the same sheet for every finalist.</p>
+  <table class="rs-head">
+    <tbody>
+      <tr><th>Candidate</th><td class="blank"></td><th>Role</th><td class="blank"></td></tr>
+      <tr><th>Reference</th><td class="blank"></td><th>Title at the time</th><td class="blank"></td></tr>
+      <tr><th>Relationship (former manager / peer / former direct report)</th><td class="blank"></td><th>Period worked together</th><td class="blank"></td></tr>
+      <tr><th>Candidate approved this name on</th><td class="blank"></td><th>Call time shared with candidate</th><td class="blank"></td></tr>
+      <tr><th>Identity confirmed through</th><td class="blank"></td><th>Release or consent record required (yes / no)</th><td class="blank"></td></tr>
+      <tr><th>Called by</th><td class="blank"></td><th>Date</th><td class="blank"></td></tr>
+    </tbody>
+  </table>
+  <table class="rs-q">
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">Question</th><th scope="col">Answer in the reference's words</th><th scope="col">Observed / Unavailable</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>How did [name]'s responsibilities compare with the rest of the team?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>2</td><td>Where did [name] rank on the team while you worked together?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>3</td><td>What business did [name] inherit, and what pipeline or customer base did [name] build?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>4</td><td>What kinds of deals did [name] handle, including the buyers, deal-size range, and sales-cycle pattern?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>5</td><td>How much of [name]'s result came from the territory, product, market timing, or team, and what did [name] contribute personally?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>6</td><td>Tell me about a time you gave [name] difficult feedback. What happened next?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>7</td><td>How did [name] win deals when performing at their best?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>8</td><td>What did you have to manage most closely with [name]?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>9</td><td>Would you hire [name] again for this role?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>10</td><td>Is there anything I should have asked that I did not?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr class="group-row"><th colspan="4" scope="colgroup">Sales manager or VP of Sales only</th></tr>
+      <tr><td>L1</td><td>Former manager: Would you hire [name] to lead a team again, and why?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>L2</td><td>Former direct report: Did [name] make you better, and would you work for [name] again?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>L3</td><td>Former direct report: How did [name] coach the team, and what standards did [name] hold it to?</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>L4</td><td>Former manager: What team and pipeline did [name] inherit, and what did [name] build?</td><td class="blank"></td><td class="blank"></td></tr>
+    </tbody>
+  </table>
+  <table class="rs-after">
+    <tbody>
+      <tr><th scope="row">Hire again (word for word, with any condition)</th><td class="blank"></td></tr>
+      <tr><th scope="row">Claims supported</th><td class="blank"></td></tr>
+      <tr><th scope="row">Claims in conflict, and the follow-up question for the candidate</th><td class="blank"></td></tr>
+      <tr><th scope="row">Unavailable (no weight)</th><td class="blank"></td></tr>
+      <tr><th scope="row">Notes hold job-related conduct only (initial)</th><td class="blank"></td></tr>
+    </tbody>
+  </table>
+  <p class="rs-foot">Revenue Bench's own reference check template, built from the founders' operating experience, with no research basis claimed. Have employment counsel review it before standing use. Revenue Bench, revenuebench.io.</p>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
@@ -378,7 +555,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Reference Check Questions for Sales Candidates: What to Ask","description":"Ten reference check questions for sales candidates, plus sales leader questions, a three-reference mix, and consent steps that protect an employed candidate.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-02","dateModified":"2026-10-02","image":"https://revenuebench.io/og/reference-checks-for-sales-hires.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/reference-checks-for-sales-hires"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Reference Check Questions for Sales Candidates: What to Ask","description":"Ten reference check questions for sales candidates, a free reference check template, leader questions, and consent steps to protect an employed candidate.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-02","dateModified":"2026-10-27","image":"https://revenuebench.io/og/reference-checks-for-sales-hires.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/reference-checks-for-sales-hires"}}
 </script>
 
 <script type="application/ld+json">
@@ -390,7 +567,9 @@
 {"@type":"Question","name":"Can a reference confirm a salesperson's quota attainment?","acceptedAnswer":{"@type":"Answer","text":"Many employers will not confirm quota or attainment because their policy limits responses to title and dates. Verify the candidate's account during the interview and through attainment evidence the candidate volunteers, such as rankings or plan letters that describe scope rather than pay. Several US states and cities restrict requesting prior compensation records, and a third party's refusal to confirm figures is not negative candidate evidence."}},
 {"@type":"Question","name":"When should reference checks happen in the hiring process?","acceptedAnswer":{"@type":"Answer","text":"Reference checks belong at final diligence before the offer, after the assessment, structured interview, and any simulation. At that stage, the hiring team has specific claims and role requirements for a former manager or colleague to address."}},
 {"@type":"Question","name":"What if a former employer will only confirm title and dates?","acceptedAnswer":{"@type":"Answer","text":"Record the policy-limited response as unavailable information and continue with the evidence the hiring team can control. Do not lower the candidate's standing because an employer refuses to discuss performance, and rely on interview evidence plus any attainment evidence the candidate volunteers."}},
-{"@type":"Question","name":"What does a good answer to “would you hire this person again” sound like?","acceptedAnswer":{"@type":"Answer","text":"A useful answer makes a direct commitment and explains why the candidate fits the role being discussed. Conditions can also help when the reference describes the manager, sales motion, support, or expectations the candidate needs to perform well."}}
+{"@type":"Question","name":"What does a good answer to “would you hire this person again” sound like?","acceptedAnswer":{"@type":"Answer","text":"A useful answer makes a direct commitment and explains why the candidate fits the role being discussed. Conditions can also help when the reference describes the manager, sales motion, support, or expectations the candidate needs to perform well."}},
+{"@type":"Question","name":"Is there a free reference check template for a sales representative?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench publishes a free reference check template for a sales representative to use and print. Use one sheet per reference call. Before the call, note the relationship, the period observed, the candidate's consent, and how identity was confirmed. During the call, write each answer in the reference's words or mark it unavailable under employer policy. After the call, note the hire-again answer, the claims supported, and any conflict with its follow-up question. Get the candidate's consent before every call."}},
+{"@type":"Question","name":"How do you compare references for a sales candidate?","acceptedAnswer":{"@type":"Answer","text":"Compare the reference sheets against the candidate's interview account. Mark a claim supported where a reference describes an event the way the candidate did in interview, and note where two references describe the same event. A conflict prompts one specific follow-up question for the candidate before the offer. Policy-limited silence carries no weight. Weigh references alongside the assessment and interview according to what each screen decides."}}
 ]}
 </script>
 
@@ -441,6 +620,7 @@
   document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open');});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  window.addEventListener('afterprint',function(){document.body.classList.remove('print-sheet');});
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 </script>
 <script defer src="../assets/cursor.js"></script>
