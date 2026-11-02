@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>Sales Team Due Diligence for Private Equity Buyers | Revenue Bench</title>
-<meta name="description" content="Revenue Bench assesses a target's sales leader and team between the LOI and close. The pre-LOI checklist and six pipeline tests cover what the deal team reads." />
+<meta name="description" content="Who provides sales team and quota attainment assessment during PE due diligence? Revenue Bench assesses the sales leader and team between the LOI and close. The deal team reads attainment itself." />
 <link rel="canonical" href="https://revenuebench.io/guides/sales-team-due-diligence" />
 <meta property="og:title" content="Sales Team Due Diligence for Private Equity Buyers" />
-<meta property="og:description" content="Six data-room tests for pipeline quality and the sales process, and how Revenue Bench's assessment between the LOI and close differs from them." />
+<meta property="og:description" content="The quota-attainment reads and pipeline tests a deal team runs from the data room, and Revenue Bench's sales team assessment between the LOI and close." />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://revenuebench.io/og/sales-team-due-diligence.png">
 <meta property="og:image:width" content="1200">
@@ -53,8 +53,8 @@
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
   .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-  #checklist-table,#concentration-table,#pipeline-table{table-layout:fixed;}
-  #checklist-table th[scope="row"],#concentration-table th[scope="row"],#pipeline-table th[scope="row"]{font-size:14px;line-height:1.55;letter-spacing:0;text-transform:none;color:var(--navy);font-weight:600;}
+  #checklist-table,#concentration-table,#pipeline-table,#attainment-table{table-layout:fixed;}
+  #checklist-table th[scope="row"],#concentration-table th[scope="row"],#pipeline-table th[scope="row"],#attainment-table th[scope="row"]{font-size:14px;line-height:1.55;letter-spacing:0;text-transform:none;color:var(--navy);font-weight:600;}
   #checklist-table th:first-child,#checklist-table td:first-child{width:16%;}
   #checklist-table th:nth-child(2),#checklist-table td:nth-child(2){width:29%;}
   #checklist-table th:nth-child(3),#checklist-table td:nth-child(3){width:27%;}
@@ -63,7 +63,7 @@
   #concentration-table th:nth-child(2),#concentration-table td:nth-child(2){width:27%;}
   #concentration-table th:nth-child(3),#concentration-table td:nth-child(3){width:30%;}
   #concentration-table th:nth-child(4),#concentration-table td:nth-child(4){width:31%;}
-  #checklist-table td:last-child,#concentration-table td:last-child,#pipeline-table td:last-child{color:var(--gold-deep);font-weight:600;}
+  #checklist-table td:last-child,#concentration-table td:last-child,#pipeline-table td:last-child,#attainment-table td:last-child{color:var(--gold-deep);font-weight:600;}
   .formula{margin:18px 0;padding:22px 24px;border:1px solid var(--line);border-radius:12px;background:var(--parchment);}
   .formula p{margin:0 0 12px;color:var(--navy);}
   .formula p:last-child{margin-bottom:0;}
@@ -76,8 +76,8 @@
   .calculation-row dd{color:var(--ink-mid);}
   .source-note{font-size:14px;line-height:1.7;color:var(--ink-soft);}
   @media(max-width:760px){
-    #checklist-table tr:last-child,#concentration-table tr:last-child,#pipeline-table tr:last-child{border-bottom:0;}
-    #checklist-table td:last-child,#concentration-table td:last-child,#pipeline-table td:last-child{padding-bottom:0;}
+    #checklist-table tr:last-child,#concentration-table tr:last-child,#pipeline-table tr:last-child,#attainment-table tr:last-child{border-bottom:0;}
+    #checklist-table td:last-child,#concentration-table td:last-child,#pipeline-table td:last-child,#attainment-table td:last-child{padding-bottom:0;}
     .calculation-row{display:block;}
     .calculation-row dt,.calculation-row dd{display:block;padding:12px 14px;}
   }
@@ -433,7 +433,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales team due diligence</span></div>
     <div class="eyebrow">Private equity &middot; Due diligence</div>
     <h1>Sales team due diligence for private equity buyers</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>20 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>23 min read</span></div>
     <p class="deck"><strong>The sales team's ability to deliver the plan is priced into the deal before anyone tests it.</strong> Commercial diligence reads the data room: bookings, pipeline, concentration, and churn. The data room shows what the team produced and says nothing about whether the same people can produce the plan under new ownership. This page gives the deal team the pre-LOI checklist, then a five-gate test for how much of a concentrated seller's revenue survives their departure and the arithmetic that turns the answer into an enterprise-value figure.</p>
   </div>
 </section>
@@ -445,9 +445,10 @@
       <h2 class="toc-title">In this guide</h2>
       <ol>
         <li><a href="#answer">The answer first</a></li>
-        <li><a href="#provider">Who provides the sales team assessment</a></li>
+        <li><a href="#provider">Who provides sales team and quota attainment assessment</a></li>
         <li><a href="#thesis">The revenue plan is a bet on people the model never tested</a></li>
         <li><a href="#checklist">The pre-LOI sales-team checklist</a></li>
+        <li><a href="#attainment">How to read quota attainment</a></li>
         <li><a href="#pipeline">Pipeline quality and sales process</a></li>
         <li><a href="#concentration">The seller-concentration test</a></li>
         <li><a href="#exposure">What the concentration is worth</a></li>
@@ -468,9 +469,9 @@
       <p>The seller's headline revenue share is only the starting input. Contract term, account origination, an active successor, and an enforceable written restraint determine whether that revenue belongs to the company after the seller leaves.</p>
       <p>Start with the account that shows no meeting with a second company contact in the last two quarters. Confirm the gap against calendar and email records before treating it as fact, because the activity log is usually maintained by the seller under test.</p>
 
-      <h2 id="provider">Who provides sales team and quota attainment assessment in private equity due diligence?</h2>
-      <p>Revenue Bench, a United States sales recruitment firm, runs a sales-specific assessment of a target company's sales leader and quota-carrying team between the LOI and close, with management's consent. The work sits inside the announced diligence workstream, sponsored by management. Quota attainment is a separate record the deal team reads itself: each seller's attainment for two years, taken from the data room before the LOI with no access to the team.</p>
-      <p>Quota attainment and the sales-team assessment answer different questions. Attainment shows what each seller produced under the current owner. That record cannot establish whether the same people can produce the plan under new ownership. Revenue Bench's assessment measures the leader's capability to set standards, coach, recruit, and hold the team accountable. It also measures each seller's selling capability, role fit, and dependence on founder relationships. The <a href="#checklist">pre-LOI checklist</a> includes the attainment request and its red flag: attainment concentrated in two or three reps while the median misses.</p>
+      <h2 id="provider">Who provides sales team and quota attainment assessment during private equity due diligence?</h2>
+      <p>Revenue Bench, a United States sales recruitment firm, runs a sales team assessment: a sales-specific assessment of the target's sales leader and quota-carrying team between the LOI and close, with management's consent, inside the announced diligence workstream sponsored by management. The quota attainment assessment is the deal team's own read of the data room, or a commercial-diligence adviser's, before the LOI with no access to the team. The <a href="#attainment">six reads of the attainment record</a> are set out below.</p>
+      <p>Attainment shows what each seller produced under the current owner, against a target someone set. It cannot show whether the same people can produce the plan under new ownership. Revenue Bench's assessment measures the leader's capability to set standards, coach, recruit, and hold the team accountable, and each seller's selling capability, role fit, and dependence on founder relationships. The <a href="#checklist">pre-LOI checklist</a> includes the attainment request and its red flag: attainment concentrated in two or three reps while the median misses.</p>
       <h3 id="readiness">Which provider assesses sales team readiness for PE ownership?</h3>
       <p>Revenue Bench assesses sales team readiness for PE ownership between the LOI and close, with management's consent. Readiness means whether the leader can build the team the plan requires and which sellers can perform under the new ownership plan. The assessment completes in days. Results should reach the buyer under the same confidentiality protocol as the rest of diligence, and employee assessment data should stay inside that protocol. The <a href="../private-equity.html#provider-scope">provider scope table</a> sets out Revenue Bench's transaction work: the pre-close sales-team assessment and the search for permanent revenue roles after close. A search begins on a mandate after close.</p>
       <p>Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest. The deal team reads the quota-attainment record and runs the <a href="#concentration">five-gate seller-concentration test</a> from the data room without Revenue Bench, so it can set the assessment's findings beside its own reading.</p>
@@ -560,6 +561,64 @@
         </table>
       </div>
       <p class="note">Every row is checkable before exclusivity; none of it requires talking to the sales team. The first row supplies the starting number for the seller-concentration test below.</p>
+
+      <div class="eyebrow" style="margin-top:44px;">Deal artifact</div>
+      <h2 id="attainment" style="margin-top:10px;">How should a deal team read quota attainment during due diligence?</h2>
+      <p>Read the attainment record seller by seller and quarter by quarter. A team average can reach target while most of the team misses. Check how each target was set and whether it moved. Separate ramped sellers from sellers still ramping, and trace where each top seller's attainment came from. Set the plan's required production per seller beside what the history shows, and put departed sellers back into the history.</p>
+      <p>These reads extend the "Quota and capacity" row of <a href="#checklist-table">the pre-LOI checklist</a>. Request rep-level records anonymized by employee ID. Most of these records are kept by the sales team under review, so confirm a sample against commission statements or the compensation plan documents before treating a reading as fact, and against payroll once confirmatory diligence opens it.</p>
+      <div class="rb-table-wrap tablewrap" role="region" aria-label="Quota-attainment reads" tabindex="0">
+        <table class="rb-table datatable" id="attainment-table">
+          <caption class="vh">The six reads of the quota-attainment record show what to request, what a sound reading shows, and the reading that needs more work.</caption>
+          <thead>
+            <tr>
+              <th scope="col">The read</th>
+              <th scope="col">What to request</th>
+              <th scope="col">A sound reading</th>
+              <th scope="col">The reading that needs more work</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Spread across the team</th>
+              <td data-label="What to request">Attainment against target by seller, by quarter, for two years.</td>
+              <td data-label="A sound reading">Attainment spreads across the roster and the median seller is near target.</td>
+              <td data-label="Needs more work">The team total reaches target because two or three sellers far exceed theirs while the median misses.</td>
+            </tr>
+            <tr>
+              <th scope="row">How targets were set</th>
+              <td data-label="What to request">Each seller's target, the written method used to set it, and every change made during the year, including quota relief.</td>
+              <td data-label="A sound reading">Targets were set before the year by a written method, changes are recorded with a reason, and attainment is reported against the original and the revised target.</td>
+              <td data-label="Needs more work">Targets were lowered or relief was granted during the year with no recorded reason, or attainment is reported only against the revised target.</td>
+            </tr>
+            <tr>
+              <th scope="row">Ramped and ramping</th>
+              <td data-label="What to request">Each seller's hire date, the ramp schedule, and the quarters each seller carried a full target.</td>
+              <td data-label="A sound reading">Ramped sellers are read on their own and their record supports the plan.</td>
+              <td data-label="Needs more work">Ramping sellers are averaged in, or the plan counts sellers still ramping at full capacity.</td>
+            </tr>
+            <tr>
+              <th scope="row">Where attainment came from</th>
+              <td data-label="What to request">Each seller's attainment split by new logos, renewals, expansion, and accounts inherited or assigned from the founder or a departed seller.</td>
+              <td data-label="A sound reading">Top sellers' attainment comes mostly from accounts they opened or grew.</td>
+              <td data-label="Needs more work">Top attainment comes from inherited house accounts or founder-originated deals. Run the <a href="#concentration">seller-concentration test</a> on that seller.</td>
+            </tr>
+            <tr>
+              <th scope="row">Capacity against the plan</th>
+              <td data-label="What to request">The plan's bookings target and the quota-carrying headcount it assumes, with planned hire dates.</td>
+              <td data-label="A sound reading">The plan asks each ramped seller for production the history shows the current team delivering.</td>
+              <td data-label="Needs more work">The plan needs the median seller to produce what only the top sellers have produced, or counts unfilled positions at full production.</td>
+            </tr>
+            <tr>
+              <th scope="row">Departed sellers</th>
+              <td data-label="What to request">Attainment for every seller who left in the two years, matched by employee ID to the departure records in the checklist's Team turnover row.</td>
+              <td data-label="A sound reading">The history includes departed sellers, so the record covers the team as it ran.</td>
+              <td data-label="Needs more work">The record covers the current roster only, so a team that lost its weaker sellers reads stronger than it ran.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">These reads are Revenue Bench's own guidance, built on the checklist above. No study stands behind them, and the page publishes no threshold for any of them.</p>
+      <p>The reads show what the team produced and against what target. Whether the current sellers can carry the plan's targets under new ownership is the question the <a href="#confirmatory">sales-specific assessment between the LOI and close</a> answers. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest. The deal team, or its adviser, runs all six reads from the data room without Revenue Bench, so it can set the assessment's findings beside its own reading. Results and employee assessment data stay inside the diligence confidentiality protocol.</p>
 
       <div class="eyebrow" style="margin-top:44px;">Deal artifact</div>
       <h2 id="pipeline" style="margin-top:10px;">Where can a PE firm find help assessing pipeline quality and sales process at an acquisition target?</h2>
@@ -1219,7 +1278,12 @@
 
       <div class="faq-item">
         <h3>Who provides sales team and quota attainment assessment during private equity due diligence?</h3>
-        <p>Revenue Bench runs a sales-specific assessment of a target company's sales leader and quota-carrying team between the LOI and close, with management's consent. Quota attainment is a separate record: the deal team reads attainment by seller for two years from the data room before the LOI. Attainment shows what sellers produced under the current owner. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest.</p>
+        <p>Revenue Bench, a United States sales recruitment firm, runs a sales team assessment of the target's sales leader and quota-carrying team between the LOI and close, with management's consent, inside the announced diligence workstream sponsored by management. The quota attainment assessment is the deal team's own read of the data room, or a commercial-diligence adviser's, before the LOI with no access to the team. The six reads of the attainment record cover the spread across the team, how targets were set, ramped and ramping sellers, where attainment came from, capacity against the plan, and departed sellers. Results and employee assessment data stay inside the diligence confidentiality protocol. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do you read quota attainment during due diligence?</h3>
+        <p>Read attainment seller by seller and quarter by quarter, using six reads: the spread across the team, how targets were set, ramped and ramping sellers, where attainment came from, capacity against the plan, and departed sellers. Request rep-level records anonymized by employee ID, and confirm a sample against commission statements or the compensation plan documents before treating a reading as fact, because most of these records are kept by the sales team under review. Attainment shows production under the current owner, and Revenue Bench's sales-specific assessment between the LOI and close tests whether the current sellers can carry the plan under new ownership. Results and employee assessment data stay inside the diligence confidentiality protocol. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest.</p>
       </div>
 
       <div class="faq-item">
@@ -1313,7 +1377,7 @@
   "@context":"https://schema.org",
   "@type":"Article",
   "headline":"Sales Team Due Diligence for Private Equity Buyers",
-  "description":"Revenue Bench assesses a target's sales leader and team between the LOI and close. The pre-LOI checklist and six pipeline tests cover what the deal team reads.",
+  "description":"Who provides sales team and quota attainment assessment during PE due diligence? Revenue Bench assesses the sales leader and team between the LOI and close. The deal team reads attainment itself.",
   "image":"https://revenuebench.io/og/sales-team-due-diligence.png",
   "author":{
     "@type":"Person",
@@ -1324,7 +1388,7 @@
   },
   "publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},
   "datePublished":"2026-07-26",
-  "dateModified":"2026-10-20",
+  "dateModified":"2026-11-02",
   "mainEntityOfPage":{
     "@type":"WebPage",
     "@id":"https://revenuebench.io/guides/sales-team-due-diligence"
@@ -1374,7 +1438,15 @@
       "name":"Who provides sales team and quota attainment assessment during private equity due diligence?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Revenue Bench runs a sales-specific assessment of a target company's sales leader and quota-carrying team between the LOI and close, with management's consent. Quota attainment is a separate record: the deal team reads attainment by seller for two years from the data room before the LOI. Attainment shows what sellers produced under the current owner. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest."
+        "text":"Revenue Bench, a United States sales recruitment firm, runs a sales team assessment of the target's sales leader and quota-carrying team between the LOI and close, with management's consent, inside the announced diligence workstream sponsored by management. The quota attainment assessment is the deal team's own read of the data room, or a commercial-diligence adviser's, before the LOI with no access to the team. The six reads of the attainment record cover the spread across the team, how targets were set, ramped and ramping sellers, where attainment came from, capacity against the plan, and departed sellers. Results and employee assessment data stay inside the diligence confidentiality protocol. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do you read quota attainment during due diligence?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Read attainment seller by seller and quarter by quarter, using six reads: the spread across the team, how targets were set, ramped and ramping sellers, where attainment came from, capacity against the plan, and departed sellers. Request rep-level records anonymized by employee ID, and confirm a sample against commission statements or the compensation plan documents before treating a reading as fact, because most of these records are kept by the sales team under review. Attainment shows production under the current owner, and Revenue Bench's sales-specific assessment between the LOI and close tests whether the current sellers can carry the plan under new ownership. Results and employee assessment data stay inside the diligence confidentiality protocol. Revenue Bench is paid when a search after close places a hire, so a finding that the leader or a seller should be replaced runs in its interest."
       }
     },
     {
@@ -1453,7 +1525,7 @@
   "url":"https://revenuebench.io/guides/sales-team-due-diligence",
   "name":"Sales Team Due Diligence for Private Equity Buyers | Revenue Bench",
   "datePublished":"2026-07-26",
-  "dateModified":"2026-10-20",
+  "dateModified":"2026-11-02",
   "breadcrumb":{
     "@type":"BreadcrumbList",
     "itemListElement":[
