@@ -77,15 +77,19 @@
   .handoff-table td:nth-child(2){width:26%;}
   .handoff-table td:nth-child(3){width:26%;font-weight:600;color:var(--gold-deep);}
   .handoff-table td:last-child{width:26%;color:var(--ink-soft);}
+  .operating-table td:first-child{width:21%;}
+  .operating-table td:nth-child(2){width:28%;}
+  .operating-table td:nth-child(3){width:26%;font-weight:600;color:var(--gold-deep);}
+  .operating-table td:last-child{width:25%;color:var(--ink-soft);}
   @media(max-width:640px){
     .table-scroll{width:calc(100vw - 24px);}
     .author-box{align-items:flex-start;}
   }
   @media(max-width:760px){
-    #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child,#supply-table tr:last-child,#selection-table tr:last-child,#handoff-table tr:last-child{border-bottom:0;}
-    #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child,#supply-table td:first-child,#selection-table td:first-child,#handoff-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
-    #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before,#supply-table td:nth-child(n+2)::before,#selection-table td:nth-child(n+2)::before,#handoff-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
-    #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child,#supply-table td:last-child,#selection-table td:last-child,#handoff-table td:last-child{padding-bottom:0;}
+    #scope-table tr:last-child,#maturity-table tr:last-child,#inherited-table tr:last-child,#supply-table tr:last-child,#selection-table tr:last-child,#handoff-table tr:last-child,#operating-partner-table tr:last-child{border-bottom:0;}
+    #scope-table td:first-child,#maturity-table td:first-child,#inherited-table td:first-child,#supply-table td:first-child,#selection-table td:first-child,#handoff-table td:first-child,#operating-partner-table td:first-child{font-size:17px;color:var(--navy);font-weight:600;padding:0 0 10px;}
+    #scope-table td:nth-child(n+2)::before,#maturity-table td:nth-child(n+2)::before,#inherited-table td:nth-child(n+2)::before,#supply-table td:nth-child(n+2)::before,#selection-table td:nth-child(n+2)::before,#handoff-table td:nth-child(n+2)::before,#operating-partner-table td:nth-child(n+2)::before{font-weight:700;color:var(--navy);}
+    #scope-table td:last-child,#maturity-table td:last-child,#inherited-table td:last-child,#supply-table td:last-child,#selection-table td:last-child,#handoff-table td:last-child,#operating-partner-table td:last-child{padding-bottom:0;}
   }
 </style>
 </head>
@@ -110,7 +114,7 @@
     <div class="eyebrow">Hiring guides</div>
     <h1>Hiring RevOps and sales enablement: scope and sequence</h1>
     <p class="deck"><strong>The revenue operations layer gives an established sales motion reliable data, process control and planning.</strong> Sales enablement makes the selling method teachable and keeps new sellers improving after onboarding. Either discipline earns a dedicated hire only after the work it operates or enables exists and has outgrown its current owner.</p>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 11, 2026</span><span class="dot"></span><span>19 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published August 11, 2026</span><span class="dot"></span><span>23 min read</span></div>
   </div>
 </section>
 
@@ -126,6 +130,7 @@
         <li>Neither function replaces a seller or a sales leader, and a combined role should split when either discipline demands sustained attention.</li>
         <li>A portfolio company usually inherits this layer, so the first question after close is what kind of gap the finding names. A gap in authority, governance, or sequence is closed before capacity is bought.</li>
         <li>Where the capability comes from is a separate decision from whether it is needed. The routes differ most in who the capability answers to, which decides whose call holds when a definition is contested.</li>
+        <li>A revenue operating partner can set the standard and support the leader search. The revenue target, the daily coaching of managers and sellers, and performance decisions still need a leader inside the company, hired by a target date.</li>
         <li>Hire a RevOps or enablement leader on work samples that reproduce the role's hardest decision, scored the same way for every candidate and confirmed by references the candidate has agreed to, from sales leaders the candidate supported.</li>
       </ul>
     </div>
@@ -138,9 +143,10 @@
         <li><a href="#revenue-enablement">Revenue enablement vs revenue operations</a></li>
         <li><a href="#sequence">How the disciplines mature</a></li>
         <li><a href="#sequence-errors">Common sequencing errors</a></li>
-        <li><a href="#portfolio">The layer in a portfolio company</a></li>
+        <li><a href="#portfolio">RevOps for PE-backed companies</a></li>
         <li><a href="#inherited">The inherited-layer diagnostic</a></li>
         <li><a href="#supply">Who supplies the RevOps layer in a portfolio company</a></li>
+        <li><a href="#operating-partner">Revenue operating partners</a></li>
         <li><a href="#boundary">The boundary with sales hiring</a></li>
         <li><a href="#selection">How to hire a RevOps or enablement leader</a></li>
         <li><a href="#questions">Questions about RevOps and enablement hiring</a></li>
@@ -359,10 +365,10 @@
       <h3>Enablement before a settled method</h3>
       <p>An enablement hire needs a selling method, manager expectations, and content worth teaching. Without those inputs, the person produces material that sellers ignore because it does not match live customer work. The early warning is steady content production paired with managers who continue teaching from personal notes and deal anecdotes.</p>
 
-      <h3>The layer as a substitute for sales leadership</h3>
+      <h3 id="substitute">The layer as a substitute for sales leadership</h3>
       <p>Dashboards and playbooks cannot own the revenue target, make performance decisions, or coach managers and sellers. When the company lacks accountable leadership, RevOps reports the symptoms and enablement documents desired behavior without anyone enforcing the standard. The early warning is a full operating cadence with unresolved forecast calls, inconsistent coaching, and unclear performance ownership. That condition calls for <a href="choosing-a-sales-leadership-model.html">choosing a sales leadership model</a> before adding more support infrastructure.</p>
 
-      <h2 id="portfolio">The layer in a portfolio company</h2>
+      <h2 id="portfolio">RevOps for PE-backed companies: the layer a portfolio company inherits</h2>
       <p>The argument above was written for a company building the layer one decision at a time. A portfolio company usually inherits a layer at close, so the decision changes shape. The question is what the function already in place is worth. The remaining hold period determines whether repairing it or fixing what sits above it is the better use of time.</p>
       <p>A fixed exit date makes the substitution error described above more likely. That is Revenue Bench's judgment, and the page publishes no figure behind it. The layer is visible infrastructure a board can be shown inside a quarter. The gaps it most often covers, accountable sales leadership and a settled selling motion, take longer than that to close.</p>
 
@@ -483,8 +489,67 @@
       </div>
       <p class="table-caption">More than one route is often in use at once. The routes are unranked here because the right one follows the gap, and budget alone cannot establish the authority the work requires. A route chosen to supply capacity while the gap is authority leaves the company paying for the capacity and still holding the gap. The routes, and the column that reads them by reporting line, are Revenue Bench’s own framework, drawn from its search and assessment work. The framework carries no external statistic, and no independent measure of these routes’ outcomes is published here.</p>
 
-      <p>Revenue Bench recruits revenue operations and sales enablement roles into permanent, full-time seats through its searches across the revenue engine, run as targeted search and screened by an operator against the written profile, as the <a href="../private-equity.html#provider-scope" class="content-link">provider scope table</a> sets out. Where a company’s answer is one of the other routes in this table, Revenue Bench has published no position on it. The Objective Management Group assessment is reserved for selling and sales-leadership roles. For the sales leader's own role, the routes a fund uses are compared in <a href="../private-equity.html#routes" class="content-link">the revenue-leader routes table</a>.</p>
+      <p>Revenue Bench recruits revenue operations and sales enablement roles into permanent, full-time seats through its searches across the revenue engine, run as targeted search and screened by an operator against the written profile, as the <a href="../private-equity.html#provider-scope" class="content-link">provider scope table</a> sets out. Revenue Bench does not rank the other routes in this table. The Objective Management Group assessment is reserved for selling and sales-leadership roles. For the sales leader's own role, the routes a fund uses are compared in <a href="../private-equity.html#routes" class="content-link">the revenue-leader routes table</a>.</p>
       <p>Revenue Bench is paid when a role is filled, and the first route in this table is the one it sells.</p>
+
+      <div class="eyebrow" style="margin-top:44px;">Decision artifact</div>
+      <h2 id="operating-partner" style="margin-top:10px;">Revenue operating partners: what one supplies and what it cannot replace</h2>
+      <p>Yes, revenue operating partner services exist for a company without a senior revenue leader. A partner can set the standard and operating cadence with the CEO, read the forecast, and run or support the leader search with the board. It cannot own the revenue target day to day, carry the daily coaching of managers and sellers, or make performance decisions as their line manager. A partner engaged as that owner repeats the sequencing error this guide calls <a href="#substitute" class="content-link">the layer as a substitute for sales leadership</a>. Before engaging one, settle whether the engagement is a bridge to a permanent leader hire with a target date, or a standing replacement for one. Where the gap is the leader seat itself, compare the models in <a href="choosing-a-sales-leadership-model.html" class="content-link">choosing a sales leadership model</a> and <a href="fractional-sales-leadership-wrong-call.html" class="content-link">when fractional is the wrong call</a>.</p>
+      <p>A revenue operating partner is an operator whose remit is a company's revenue engine: go-to-market, sales leadership and the operations layer around them. The title covers two arrangements: an operating partner on a fund's portfolio operations team whose remit is go-to-market, and an outside advisor engaged by a fund or company to work on one company's revenue engine.</p>
+      <p>The two answer to different people. A fund's operating partner answers to the fund. An outside advisor answers to whoever signed the engagement, the fund or the company. Settle which before the engagement starts, because it decides whose call holds when the partner and the CEO disagree.</p>
+      <p>Read the company's situation against what the partner can supply and the ownership that must remain inside the company.</p>
+
+      <div class="rb-table-wrap table-scroll" role="region" aria-label="Revenue operating partner scope and ownership inside the company" tabindex="0">
+        <table class="rb-table sequence-table operating-table" id="operating-partner-table">
+          <caption class="vh">Revenue operating partner scope by company situation, with the owner still needed inside the company and the question to settle before engagement.</caption>
+          <thead>
+            <tr>
+              <th scope="col">The company's situation</th>
+              <th scope="col">What an operating partner can do</th>
+              <th scope="col">What still needs an owner inside the company</th>
+              <th scope="col">The question to settle before engaging one</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No senior revenue leader in place</td>
+              <td data-label="Partner can do">Set the standard and operating cadence with the CEO, read the forecast, and run or support the leader search with the board.</td>
+              <td data-label="Needs an owner">The revenue target day to day, the daily coaching of managers and sellers, and performance decisions inside the company.</td>
+              <td data-label="Settle first">Is the engagement a bridge to a permanent leader hire with a target date, or a standing replacement for one?</td>
+            </tr>
+            <tr>
+              <td>A sales leader in place and no operations layer</td>
+              <td data-label="Partner can do">Scope the function, write the definitions with the leader, and choose the route from <a href="#supply" class="content-link">the supply routes table</a>.</td>
+              <td data-label="Needs an owner">An owner who holds the definitions on the day they are contested.</td>
+              <td data-label="Settle first">Who owns the definitions when the engagement ends?</td>
+            </tr>
+            <tr>
+              <td>An inherited layer with a gap in authority or governance</td>
+              <td data-label="Partner can do">Recommend to the CEO and board who owns the definitions, and recommend moving the function under the commercial reporting line.</td>
+              <td data-label="Needs an owner">One person who owns the definitions, with that ownership written into the role.</td>
+              <td data-label="Settle first">Whose approval does a stage-definition change require today?</td>
+            </tr>
+            <tr>
+              <td>Several portfolio companies that need one comparable standard</td>
+              <td data-label="Partner can do">Set the scope definition and selection standard once at fund level.</td>
+              <td data-label="Needs an owner">An owner in each company who applies the standard.</td>
+              <td data-label="Settle first">Which companies have that owner present?</td>
+            </tr>
+            <tr>
+              <td>A defined build, such as a CRM rebuild or a forecast model</td>
+              <td data-label="Partner can do">Scope the build and sponsor a project engagement.</td>
+              <td data-label="Needs an owner">An owner for what was built after delivery.</td>
+              <td data-label="Settle first">Who owns it when the statement of work ends?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">This table is Revenue Bench's own framework, and no study or statistic stands behind it. A partner engagement and a permanent owner are often in use together. Revenue Bench is paid when a role is filled, and it recruits both the permanent leader in the first row and the permanent owners the other rows call for, so its interest points toward every answer in this table that ends in a permanent hire. Where a partner runs the leader search through its own network, Revenue Bench is not paid, so its interest points toward a search Revenue Bench runs.</p>
+
+      <h3 id="source-operating-partner">Where investors source a revenue operating partner</h3>
+      <p>A fund can hire an operating partner onto its portfolio operations team or engage an outside advisor or specialist firm under a defined scope. These routes correspond to the fund-level and project rows in <a href="#supply" class="content-link">the supply routes table</a>. A fund can also draw on a known operator from the fund's or the board's network. The same network appears as a route to the leader seat itself in <a href="../private-equity.html#routes" class="content-link">the revenue-leader routes table</a>.</p>
+      <p>Choose candidates against the gap <a href="#inherited" class="content-link">the inherited-layer diagnostic</a> names. Ask each candidate to name the decision the engagement must make and show relevant work: a forecast they governed, or a leader search they ran and what happened to that hire. Take references the candidate has agreed to, from CEOs and sales leaders they worked with.</p>
+      <p>Revenue Bench recruits permanent, full-time revenue roles inside the portfolio company, including the sales leader and the operations and enablement roles, as <a href="../private-equity.html#provider-scope" class="content-link">the provider scope table</a> sets out. Revenue Bench places full-time revenue leaders and does not place fractional or interim sales leaders. This guide names no provider of operating partner engagements.</p>
 
       <h2 id="boundary">The boundary with sales hiring</h2>
       <p>RevOps and sales enablement are operating roles rather than selling roles, so they should be selected against the work and judgment their disciplines require. Revenue Bench recruits across the revenue engine, including enablement and RevOps roles, and applies the sales-specific assessment through co-founder Steve Swanston’s firm, Swanston Growth Advisors, a Certified Partner of Objective Management Group, where the instrument fits the job: selling and sales leadership roles.</p>
@@ -607,6 +672,11 @@
       </div>
 
       <div class="faq-item">
+        <h3>Is there a revenue operating partner service for a company without a senior revenue leader?</h3>
+        <p>Yes, revenue operating partner services exist. A partner can set the standard and cadence with the CEO, read the forecast, and run or support the leader search with the board. It cannot own the revenue target day to day, carry the daily coaching of managers and sellers, or make performance decisions as their line manager. Use <a href="#operating-partner" class="content-link">the revenue operating partner check</a> to settle whether the engagement is a bridge to a permanent leader hire with a target date, or a standing replacement for one. Revenue Bench is paid when a role is filled, so its interest points toward a permanent leader hire.</p>
+      </div>
+
+      <div class="faq-item">
         <h3>How do you hire a head of revenue enablement?</h3>
         <p>First confirm that each team in scope has a settled method, because enablement teaches a method and cannot supply one. Select on a teaching exercise drawn from that method and a review of a sanitized copy of the onboarding outline, scored the same way for every candidate. Confirm the result with references the candidate has agreed to, from leaders whose teams the candidate trained. The sales-specific assessment measures selling and is not used for this role.</p>
       </div>
@@ -679,7 +749,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Hiring RevOps and Sales Enablement: Scope and Sequence","description":"What a RevOps hire owns, what sales or revenue enablement owns, how the two work together, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-11","dateModified":"2026-10-25","image":"https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Hiring RevOps and Sales Enablement: Scope and Sequence","description":"What a RevOps hire owns, what sales or revenue enablement owns, how the two work together, and the order that works. A scope-and-sequence guide for founders, CEOs, and private equity operating partners deciding what the layer around a sales team should own.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-08-11","dateModified":"2026-11-09","image":"https://revenuebench.io/og/hiring-revenue-operations-and-enablement.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/hiring-revenue-operations-and-enablement"}}
 </script>
 
 <script type="application/ld+json">
@@ -694,6 +764,7 @@
 {"@type":"Question","name":"Where do private equity operating partners find revenue operations and enablement talent for portfolio companies?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use and the supply routes table sets out what each one supplies, who it answers to, and what it leaves unsettled: a permanent hire inside the company, a fund-level operating partner or operations team, a shared resource held centrally, a project engagement with an outside specialist firm, an internal promotion, and the work absorbed by the sales leader. Revenue Bench recruits the permanent roles as part of its searches across the revenue engine through the portfolio route. Selection uses role-appropriate evidence. The sales assessment is reserved for selling and sales leadership roles, for the reason set out in the boundary with sales hiring."}},
 {"@type":"Question","name":"Should a portfolio company hire revenue operations inside the first 100 days?","acceptedAnswer":{"@type":"Answer","text":"There is no default case for the hire. The answer depends on which finding in the diagnostic above is true. Where the finding is an authority or governance gap, assigning ownership and moving the function under the commercial line is the better first move and costs no headcount. Where the finding is genuine capacity, the sequencing argument in this guide still applies and is not suspended by the hold period. The portfolio sales team guide sets the post-close sequence for the leader and team decisions that come before it. Revenue Bench is paid when a role is filled, so publishing the findings where the right answer is to assign ownership and hire nobody runs against that interest."}},
 {"@type":"Question","name":"Does a portfolio company need a revenue operations partner or a revenue operations hire?","acceptedAnswer":{"@type":"Answer","text":"Several routes are in use, and the choice is wider than a partner set against a hire. The supply routes table covers permanent hires, fund-level teams, shared resources held centrally, specialist project engagements, internal promotions, and the work absorbed by the sales leader. The deciding factor is whether the definitions need an owner who is present when they are contested. Pick against the gap the diagnostic identifies, because added capacity does not establish who holds the standard."}},
+{"@type":"Question","name":"Is there a revenue operating partner service for a company without a senior revenue leader?","acceptedAnswer":{"@type":"Answer","text":"Yes, revenue operating partner services exist. A partner can set the standard and cadence with the CEO, read the forecast, and run or support the leader search with the board. It cannot own the revenue target day to day, carry the daily coaching of managers and sellers, or make performance decisions as their line manager. Use the revenue operating partner check to settle whether the engagement is a bridge to a permanent leader hire with a target date, or a standing replacement for one. Revenue Bench is paid when a role is filled, so its interest points toward a permanent leader hire."}},
 {"@type":"Question","name":"How do you hire a head of revenue enablement?","acceptedAnswer":{"@type":"Answer","text":"First confirm that each team in scope has a settled method, because enablement teaches a method and cannot supply one. Select on a teaching exercise drawn from that method and a review of a sanitized copy of the onboarding outline, scored the same way for every candidate. Confirm the result with references the candidate has agreed to, from leaders whose teams the candidate trained. The sales-specific assessment measures selling and is not used for this role."}},
 {"@type":"Question","name":"What should a revenue enablement job description include?","acceptedAnswer":{"@type":"Answer","text":"Write it after the company confirms the work has outgrown its current owner and each team in scope has a settled method. State the audience and the method taught, and name the leader who owns that method. Assign new-hire onboarding, skills training, content adoption and reinforcement to enablement, and hand definitions, CRM, reporting and tool administration to RevOps. Place the role inside the commercial reporting line, where the function and the sales leader answer to the same standard. Select through a teaching exercise drawn from the company's method, and judge the hire by observed skill in the people it trains."}},
 {"@type":"Question","name":"How do you hire a revenue operations director?","acceptedAnswer":{"@type":"Answer","text":"First decide who holds the definitions and where the role reports, because a new hire inherits any open question of authority. Select on an exercise in which the candidate reconciles a constructed CRM extract and drafts stage definitions. Score whether the candidate separates the sales leader's policy from the role's administration. Confirm the result with references the candidate has agreed to, from sales leaders the candidate worked under. Revenue Bench recruits revenue operations leaders into permanent, full-time seats and is paid when a role is filled."}}
