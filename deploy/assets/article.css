@@ -6,8 +6,9 @@
 .art-hero{padding:140px 0 40px;}
 .art-hero .eyebrow{display:block;margin-bottom:14px;}
 .art-hero h1{font-size:clamp(32px,4.2vw,50px);line-height:1.06;}
-.art-meta{display:flex;gap:18px;align-items:center;margin-top:18px;font-size:13.5px;color:var(--ink-soft);}
-.art-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--ink-soft);}
+.art-meta{display:flex;flex-wrap:wrap;gap:18px;row-gap:6px;align-items:center;margin-top:18px;font-size:13.5px;color:var(--ink-soft);}
+.art-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--ink-soft);flex-shrink:0;}
+@media screen and (max-width:600px){.art-meta .dot{display:none;}}
 .deck{font-size:21px;line-height:1.55;color:var(--ink-mid);margin-top:24px;max-width:720px;}
 .deck strong{color:var(--navy);}
 
