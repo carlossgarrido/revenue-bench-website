@@ -20,10 +20,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <title>The Sales Leader Interview Scorecard | Revenue Bench</title>
-<meta name="description" content="Score VP of Sales, Head of Sales, and CRO interviews with seven weighted dimensions, anchored descriptors, independent scoring, and clear disqualifiers." />
+<meta name="description" content="Score VP of Sales, Head of Sales, and CRO interviews with seven weighted dimensions, anchored descriptors, two disqualifiers, and a printable two-page score sheet." />
 <link rel="canonical" href="https://revenuebench.io/guides/sales-leader-interview-scorecard" />
 <meta property="og:title" content="The Sales Leader Interview Scorecard" />
-<meta property="og:description" content="Score VP of Sales, Head of Sales, and CRO interviews with seven weighted dimensions, anchored descriptors, independent scoring, and clear disqualifiers." />
+<meta property="og:description" content="Score VP of Sales, Head of Sales, and CRO interviews with seven weighted dimensions, anchored descriptors, two disqualifiers, and a printable two-page score sheet." />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://revenuebench.io/og/sales-leader-interview-scorecard.png">
 <meta property="og:image:width" content="1200">
@@ -63,6 +63,42 @@
   .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   .author-box .an{font-weight:600;color:var(--navy);font-size:15.5px;}
   .author-box .at{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:3px;}
+.lsheet{display:none;}
+@media print{
+  @page{size:Letter portrait;margin:0.5in;}
+  body.print-sheet > *:not(.lsheet){display:none!important;}
+  body.print-sheet{background:#fff;margin:0;padding:0;}
+  body.print-sheet .lsheet{display:block!important;color:#000;font-family:'Inter',Arial,sans-serif;}
+  .lsheet{line-height:1.4;}
+  .lsheet .ls-title{font-size:18px;line-height:1.2;margin:0 0 8px;color:#000;font-weight:700;}
+  .lsheet p{font-size:10.5px;line-height:1.4;margin:0 0 12px;}
+  .lsheet table{width:100%;border-collapse:collapse;margin:12px 0;table-layout:fixed;}
+  .lsheet th,.lsheet td{border:1px solid #000;padding:7px;font-size:10.5px;text-align:left;vertical-align:top;color:#000;background:#fff;overflow-wrap:break-word;}
+  .lsheet .ls-head th{width:20%;}
+  .lsheet .ls-head td{width:30%;}
+  .lsheet .ls-score th:nth-child(1){width:26%;}
+  .lsheet .ls-score th:nth-child(2){width:8%;}
+  .lsheet .ls-score th:nth-child(3){width:12%;}
+  .lsheet .ls-score th:nth-child(4){width:14%;}
+  .lsheet .ls-score th:nth-child(5){width:40%;}
+  .lsheet .ls-checks th:first-child{width:68%;}
+  .lsheet .ls-checks thead th:last-child,.lsheet .ls-checks td{width:32%;}
+  .lsheet .ls-anchors th:nth-child(1){width:19%;}
+  .lsheet .ls-anchors th:nth-child(2){width:27%;}
+  .lsheet .ls-anchors th:nth-child(3){width:25%;}
+  .lsheet .ls-anchors th:nth-child(4){width:29%;}
+  .lsheet .ls-head td.blank{height:22px;}
+  .lsheet .ls-score td.blank{height:46px;}
+  .lsheet .ls-score tr:last-child td.blank{height:22px;}
+  .lsheet .ls-checks td.blank{height:28px;}
+  .lsheet tr{page-break-inside:avoid;}
+  .lsheet .ls-page2{page-break-before:always;}
+  .lsheet .ls-foot{font-size:9.5px;}
+  body:not(.print-sheet) .site-nav,body:not(.print-sheet) .crumb,body:not(.print-sheet) .cta-band,body:not(.print-sheet) .footer,body:not(.print-sheet) .related,.no-print{display:none!important;}
+  .tablewrap{width:100%;margin-left:0;transform:none;border:0;overflow:visible;}
+  .datatable{min-width:0;font-size:11px;}
+  .datatable th{background:#fff!important;color:#000!important;border-bottom:2px solid #000;}
+}
 </style>
 </head>
 <body>
@@ -85,7 +121,7 @@
     <div class="crumb"><a href="../index.html">Home</a> / <a href="../guides.html">Insights</a> / <span>Sales leader interview scorecard</span></div>
     <div class="eyebrow">Selection tools &middot; Interview scorecard</div>
     <h1>The sales leader interview scorecard</h1>
-    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published July 31, 2026</span><span class="dot"></span><span>5 min read</span></div>
+    <div class="art-meta"><span>By Carlos Garrido, Co-Founder, Revenue Bench</span><span class="dot"></span><span>Published July 31, 2026</span><span class="dot"></span><span>6 min read</span></div>
     <p class="deck"><strong>The scorecard turns leadership interviews into comparable evidence.</strong> It gives the panel seven weighted dimensions, anchored 1-to-5 descriptors, independent scoring, and two disqualifiers that end a candidacy regardless of the total.</p>
   </div>
 </section>
@@ -100,6 +136,7 @@
         <li>Anchored answer patterns give every interviewer a shared basis for assigning a score from 1 to 5.</li>
         <li>Each panelist scores independently before the debrief, so confidence and seniority do not set the result.</li>
         <li>Weak coaching evidence or weak accountability evidence ends the candidacy even when the weighted total clears the advancement threshold.</li>
+        <li>Print the blank score sheet so every panelist scores on paper and records the evidence behind each dimension before the debrief.</li>
       </ul>
     </div>
 
@@ -108,6 +145,7 @@
       <ol>
         <li><a href="#why">Why unscored interviews miss</a></li>
         <li><a href="#scorecard">The scorecard</a></li>
+        <li><a href="#score-sheet">The printable score sheet</a></li>
         <li><a href="#protocol">How to run it</a></li>
         <li><a href="#limits">What the interview cannot measure</a></li>
         <li><a href="#sources">Where these figures come from</a></li>
@@ -187,29 +225,34 @@
           </tbody>
         </table>
       </div>
-      <p class="table-caption">Every anchor describes an answer pattern, so panelists score against the same reference rather than against a private standard. A 3 describes evidence matching part of the 5 pattern with specifics but with gaps, and a 2 or a 4 sits closer to one anchor than to that midpoint.</p>
+      <p class="table-caption">Every anchor describes an answer pattern, so every panelist scores against the same reference. A 3 describes evidence matching part of the 5 pattern with specifics but with gaps, and a 2 or a 4 sits closer to one anchor than to that midpoint.</p>
+
+      <h2 id="score-sheet">Printable sales leader interview score sheet</h2>
+      <p>The blank score sheet prints on two Letter pages. Page one holds the header fields, the seven weighted dimensions with a score box, a score-times-weight box, and an evidence box for each, the weighted total, the two disqualifier checks, and the result. Its debrief line records any dimension where panel scores differ by more than two points. Page two carries the 1 and 5 answer patterns for every dimension, so each panelist scores against the anchors.</p>
+      <p>Each panelist fills in their own sheet within an hour of the interview and hands it in before the debrief.</p>
+      <p class="no-print" style="margin:6px 0 26px;"><a href="#" class="btn btn-ghost" onclick="document.body.classList.add('print-sheet');window.print();return false;" style="font-size:13.5px;padding:10px 18px;">Print or save the blank score sheet as PDF</a></p>
 
       <h2 id="protocol">How to run it</h2>
       <p>Revenue Bench recommends the following protocol to hiring panels. The thresholds are judgment rules for this instrument. They are not research findings.</p>
       <ol class="protocol">
         <li>Every interviewer scores every dimension within an hour of the interview, before any discussion.</li>
-        <li>Scores are submitted before the panel debrief. The debrief reconciles evidence. When scores differ by more than two points, the panel re-interviews on that dimension rather than averaging away the disagreement.</li>
-        <li>The weighted total is each dimension's score multiplied by its weight, added together, which returns a figure on the same 1-to-5 scale. A weighted total of 4.0 or above advances a finalist. A total from 3.0 to 3.9 calls for a targeted follow-up interview on the weak dimensions. A total below 3.0 exits.</li>
+        <li>Scores are submitted before the panel debrief. The debrief reconciles evidence. When scores on a dimension differ by more than two points, the panel re-interviews on that dimension and scores it again.</li>
+        <li>The weighted total is each dimension's score multiplied by its weight, added together, which returns a figure on the same 1-to-5 scale. A weighted total of 4.0 or above advances a finalist. A total of 3.0 or above and below 4.0 calls for a targeted follow-up interview on the weak dimensions. A total below 3.0 exits. As a worked example, scores of 4, 4, 3, 4, 3, 4, and 5 down the table return a weighted total of 3.82, which calls for a targeted follow-up.</li>
         <li>Two disqualifiers override any total: a 1 or 2 on coaching evidence, or a 1 or 2 on accountability and standard setting.</li>
         <li>The scorecard covers the interview only. Assessment evidence and reference checks carry their own decisions.</li>
       </ol>
-      <p>One more rule keeps the instrument defensible. A scorecard with cut scores is a selection procedure, so apply the same dimensions, anchors, and weights to every candidate for the role, record the evidence behind each score, and change nothing mid-process, since the score sheets become the employer's record of how the decision was made. Keep probes on the candidate's own decisions rather than the personal circumstances of anyone in their stories, and have employment counsel review the scorecard before adopting it as a standing procedure.</p>
+      <p>One more rule keeps the instrument defensible. A scorecard with cut scores is a selection procedure, so apply the same dimensions, anchors, and weights to every candidate for the role, record the evidence behind each score, and change nothing mid-process, since the score sheets become the employer's record of how the decision was made. Keep probes on the candidate's own decisions, leave out the personal circumstances of anyone in their stories, and have employment counsel review the scorecard before adopting it as a standing procedure.</p>
 
       <h2 id="limits">What the interview cannot measure</h2>
       <p>An interview cannot measure the drive to do the work or the underlying Sales DNA. That is assessment territory, measured before finalists reach the panel. The guide to <a href="sales-assessment-vs-interview.html">sales assessment versus interview evidence</a> defines which screen decides each question.</p>
-      <p>In OMG's study of 44,493 sales managers, only 9% were strong in all three key coaching qualities. Managers strong in all three produced 80% more elite salespeople than managers who did not, according to OMG's data. The scorecard can only grade how the coaching evidence sounded in the interview, which is why the assessment, run beforehand, carries the question of whether the capability behind it is there.</p>
+      <p>In OMG's study of 44,493 sales managers, only 9% were strong in all three key coaching qualities. According to OMG's data, managers strong in all three have 80% more elite salespeople on their teams than managers who are not. The comparison describes the two groups of managers and does not show that the coaching qualities cause the difference. The scorecard can only grade how the coaching evidence sounded in the interview, which is why the assessment, run beforehand, carries the question of whether the capability behind it is there.</p>
       <p>The <a href="will-to-sell.html">Will to Sell guide</a> explains the drive layer that interviews cannot establish. Revenue Bench applies that assessment evidence through co-founder Steve Swanston's OMG Certified Partner firm before the panel evaluates finalist interviews.</p>
 
       <h2 id="sources">Where these figures come from</h2>
       <div class="method">
         <h3>About the evidence and the instrument</h3>
         <p>The hiring-manager intuition figure is research circulated through Objective Management Group's partner network, including the firm Big Swift Kick, rather than a figure from OMG's published studies.</p>
-        <p>The manager sample and coaching findings are OMG's own study data. They describe OMG's evaluation of sales managers and the relationship between coaching qualities and elite sellers.</p>
+        <p>The manager sample and coaching findings are OMG's own study data. They describe OMG's evaluation of sales managers and how the share of elite sellers differs between managers with and without the three coaching qualities, with no cause established.</p>
         <p>The scorecard's dimensions, anchors, weights, thresholds, panel design, and protocol are Revenue Bench's own instrument, built from the founders' operating experience. Revenue Bench claims no research basis for those design choices.</p>
         <p>Assessment methodology is applied through Swanston Growth Advisors, a Certified Partner of Objective Management Group.</p>
       </div>
@@ -232,6 +275,7 @@
       <div class="faq-item"><h3>What interview score should disqualify a sales leadership candidate?</h3><p>Under this instrument, a weighted total below 3.0 exits. A 1 or 2 on coaching evidence also disqualifies the candidate, as does a 1 or 2 on accountability and standard setting, regardless of the weighted total.</p></div>
       <div class="faq-item"><h3>Does the panel still need an assessment if it scores the interview?</h3><p>Yes. The scorecard evaluates what the interview can decide, while the assessment measures drive and Sales DNA before finalists reach the panel. The outcome evidence behind the assessment screen is in the guide to <a href="sales-assessment-vs-interview.html">sales assessment versus interview evidence</a>.</p></div>
       <div class="faq-item"><h3>Who should sit on the interview panel for a sales leader?</h3><p>Revenue Bench recommends a panel of the CEO or the leader the role reports to, one peer executive, and whoever owns revenue operations or the board director closest to go-to-market. Every panelist scores every dimension independently.</p></div>
+      <div class="faq-item"><h3>Is there a printable sales leader interview scorecard?</h3><p>Yes. A blank two-page score sheet prints from the guide, or saves as PDF. Page one scores the seven weighted dimensions with evidence boxes, the weighted total, both disqualifiers, and the result. Page two carries the 1 and 5 answer patterns for every dimension. Each panelist completes their own sheet before the debrief.</p></div>
     </div>
 
     <div style="margin-top:48px;">
@@ -282,8 +326,100 @@
   </div>
 </footer>
 
+<div class="lsheet" aria-hidden="true">
+  <div class="ls-title">Sales leader interview score sheet</div>
+  <p>Score each dimension from 1 to 5 within an hour of the interview, before any discussion with another panelist. Record the evidence behind each score, then hand this sheet in before the debrief.</p>
+  <table class="ls-head">
+    <tbody>
+      <tr><th>Candidate</th><td class="blank"></td><th>Role</th><td class="blank"></td></tr>
+      <tr><th>Interviewer</th><td class="blank"></td><th>Interview date</th><td class="blank"></td></tr>
+      <tr><th>Time scored</th><td class="blank"></td><th>Handed in before the debrief (yes or no)</th><td class="blank"></td></tr>
+    </tbody>
+  </table>
+  <table class="ls-score">
+    <thead>
+      <tr><th scope="col">Dimension</th><th scope="col">Weight</th><th scope="col">Score (1 to 5)</th><th scope="col">Score &times; weight</th><th scope="col">Evidence that supports the score</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Coaching evidence</td><td>20%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Team building and recruiting habit</td><td>18%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Accountability and standard setting</td><td>16%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Pipeline and forecast discipline</td><td>14%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Stage and model fit</td><td>12%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Process and playbook ownership</td><td>10%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Self-awareness and coachability</td><td>10%</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><th colspan="3" scope="row">Weighted total (add the score &times; weight column; a 4 at 20% adds 0.80)</th><td class="blank"></td><td></td></tr>
+    </tbody>
+  </table>
+  <table class="ls-checks">
+    <thead>
+      <tr><th scope="col">Check</th><th scope="col">Answer</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Coaching evidence scored 1 or 2? (disqualifies, whatever the total)</th><td class="blank"></td></tr>
+      <tr><th scope="row">Accountability and standard setting scored 1 or 2? (disqualifies, whatever the total)</th><td class="blank"></td></tr>
+      <tr><th scope="row">Result (circle one): Advance, at 4.0 or above with no disqualifier / Targeted follow-up on the weak dimensions, at 3.0 or above and below 4.0 / Exit, below 3.0 or any disqualifier</th><td class="blank"></td></tr>
+      <tr><th scope="row">Dimensions where panel scores differ by more than two points (the panel re-interviews on these)</th><td class="blank"></td></tr>
+    </tbody>
+  </table>
+  <div class="ls-page2">
+    <div class="ls-title">Answer patterns</div>
+    <table class="ls-anchors">
+      <thead>
+        <tr><th scope="col">Dimension</th><th scope="col">What to probe</th><th scope="col">What a 1 sounds like</th><th scope="col">What a 5 sounds like</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Coaching evidence</td>
+          <td>A rep they developed from mid-pack to strong, and the cadence they ran.</td>
+          <td>Talks about coaching in the abstract, gives no named example, and says the cadence was &quot;when needed.&quot;</td>
+          <td>Names a specific rep, the specific deficiency, the weekly cadence, and where that rep is now.</td>
+        </tr>
+        <tr>
+          <td>Team building and recruiting habit</td>
+          <td>How many of their last team they hired versus inherited, and where their last two strong hires came from.</td>
+          <td>Inherited the team and treated recruiting as HR's job.</td>
+          <td>Names their sources, interviews continuously, and has hired people twice.</td>
+        </tr>
+        <tr>
+          <td>Accountability and standard setting</td>
+          <td>A time they raised a standard and a time they removed an underperformer, including how long it took.</td>
+          <td>Avoids the removal story or blames circumstances.</td>
+          <td>Names the standard, the support given first, the timeline, and what the team learned.</td>
+        </tr>
+        <tr>
+          <td>Pipeline and forecast discipline</td>
+          <td>How they inspected pipeline and what their forecast missed by, in numbers, in their last role.</td>
+          <td>Reviewed the pipeline monthly in a spreadsheet they were handed.</td>
+          <td>Describes their inspection rhythm, the leading indicators they used, and their miss range without flinching.</td>
+        </tr>
+        <tr>
+          <td>Stage and model fit</td>
+          <td>The revenue range and sales motion they operated in when they were most effective.</td>
+          <td>Pattern-matches from a much larger or much smaller company and cannot explain why it transfers.</td>
+          <td>Has operated within your range and motion, and names what changes outside it.</td>
+        </tr>
+        <tr>
+          <td>Process and playbook ownership</td>
+          <td>What they built versus what they ran that someone else built.</td>
+          <td>Ran the playbook they were given.</td>
+          <td>Built or materially rebuilt the process and can show the before and after.</td>
+        </tr>
+        <tr>
+          <td>Self-awareness and coachability</td>
+          <td>The hire they got wrong and what they changed afterward.</td>
+          <td>Has no wrong hire to describe.</td>
+          <td>Names the miss, the cost, and the specific change to how they select now.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Every anchor describes an answer pattern, so every panelist scores against the same reference. A 3 describes evidence matching part of the 5 pattern with specifics but with gaps, and a 2 or a 4 sits closer to one anchor than to that midpoint.</p>
+    <p class="ls-foot">The dimensions, anchors, weights, thresholds, and protocol are Revenue Bench's own instrument, built from the founders' operating experience, with no research basis claimed for those design choices. Have employment counsel review the sheet before adopting it as a standing procedure. Revenue Bench, revenuebench.io/guides/sales-leader-interview-scorecard</p>
+  </div>
+</div>
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The sales leader interview scorecard","description":"Score VP of Sales, Head of Sales, and CRO interviews with seven weighted dimensions, anchored descriptors, independent scoring, and clear disqualifiers.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-31","dateModified":"2026-08-19","image":"https://revenuebench.io/og/sales-leader-interview-scorecard.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-leader-interview-scorecard"}}
+{"@context":"https://schema.org","@type":"Article","headline":"The sales leader interview scorecard","description":"Score VP of Sales, Head of Sales, and CRO interviews with seven weighted dimensions, anchored descriptors, two disqualifiers, and a printable two-page score sheet.","author":{"@type":"Person","name":"Carlos Garrido","jobTitle":"Co-Founder, Revenue Bench","description":"An investment banker and growth advisor for more than 30 years. His work has supported $3B+ in client revenue and $6B+ in client exits. Founder of Performance Edge, owner of Sandler Miami, a Vistage Chair.","affiliation":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"}},"publisher":{"@type":"Organization","@id":"https://revenuebench.io/#organization","name":"Revenue Bench","url":"https://revenuebench.io"},"datePublished":"2026-07-31","dateModified":"2026-11-18","image":"https://revenuebench.io/og/sales-leader-interview-scorecard.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://revenuebench.io/guides/sales-leader-interview-scorecard"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -292,7 +428,8 @@
 {"@type":"Question","name":"How many interviewers should score a sales leadership candidate?","acceptedAnswer":{"@type":"Answer","text":"Under this instrument, three to five interviewers score each candidate independently, and more than five dilutes accountability for the decision. Every panelist records scores before the debrief so the group can compare evidence without allowing the first opinion to set the result."}},
 {"@type":"Question","name":"What interview score should disqualify a sales leadership candidate?","acceptedAnswer":{"@type":"Answer","text":"Under this instrument, a weighted total below 3.0 exits. A 1 or 2 on coaching evidence also disqualifies the candidate, as does a 1 or 2 on accountability and standard setting, regardless of the weighted total."}},
 {"@type":"Question","name":"Does the panel still need an assessment if it scores the interview?","acceptedAnswer":{"@type":"Answer","text":"Yes. The scorecard evaluates what the interview can decide, while the assessment measures drive and Sales DNA before finalists reach the panel. The outcome evidence behind the assessment screen is in the guide to sales assessment versus interview evidence."}},
-{"@type":"Question","name":"Who should sit on the interview panel for a sales leader?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench recommends a panel of the CEO or the leader the role reports to, one peer executive, and whoever owns revenue operations or the board director closest to go-to-market. Every panelist scores every dimension independently."}}
+{"@type":"Question","name":"Who should sit on the interview panel for a sales leader?","acceptedAnswer":{"@type":"Answer","text":"Revenue Bench recommends a panel of the CEO or the leader the role reports to, one peer executive, and whoever owns revenue operations or the board director closest to go-to-market. Every panelist scores every dimension independently."}},
+{"@type":"Question","name":"Is there a printable sales leader interview scorecard?","acceptedAnswer":{"@type":"Answer","text":"Yes. A blank two-page score sheet prints from the guide, or saves as PDF. Page one scores the seven weighted dimensions with evidence boxes, the weighted total, both disqualifiers, and the result. Page two carries the 1 and 5 answer patterns for every dimension. Each panelist completes their own sheet before the debrief."}}
 ]}
 </script>
 <script type="application/ld+json">
@@ -314,13 +451,13 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Submit scores before the debrief",
-      "description": "The debrief reconciles evidence. When scores differ by more than two points, the panel re-interviews on that dimension rather than averaging away the disagreement."
+      "description": "The debrief reconciles evidence. When scores on a dimension differ by more than two points, the panel re-interviews on that dimension and scores it again."
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Apply the weighted thresholds",
-      "description": "The weighted total is each dimension's score multiplied by its weight, added together, which returns a figure on the same 1-to-5 scale. A weighted total of 4.0 or above advances a finalist. A total from 3.0 to 3.9 calls for a targeted follow-up interview on the weak dimensions. A total below 3.0 exits."
+      "description": "The weighted total is each dimension's score multiplied by its weight, added together, which returns a figure on the same 1-to-5 scale. A weighted total of 4.0 or above advances a finalist. A total of 3.0 or above and below 4.0 calls for a targeted follow-up interview on the weak dimensions. A total below 3.0 exits. As a worked example, scores of 4, 4, 3, 4, 3, 4, and 5 down the table return a weighted total of 3.82, which calls for a targeted follow-up."
     },
     {
       "@type": "ListItem",
@@ -342,6 +479,7 @@
   document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open');});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  window.addEventListener('afterprint',function(){document.body.classList.remove('print-sheet');});
   if(location.search.indexOf('shot')>-1){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 </script>
 <script defer src="../assets/cursor.js"></script>
